@@ -26,7 +26,6 @@
   ]
  ],
  "brands": [
-  "generic.json",
   "kennametal.json",
   "sandvik.json",
   "iscar.json"
@@ -35,5 +34,14 @@
   "flood",
   "air",
   "dry"
+ ],
+ "drill": [
+  "drill-allied.json"
+ ],
+ "turn": [
+  "turn.json"
+ ],
+ "tap": [
+  "tap.json"
  ]
 }

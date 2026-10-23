@@ -1,0 +1,198 @@
+{
+ "brand": "turning",
+ "tools": [
+  {
+   "mode": "turn",
+   "brand": "Iscar",
+   "series": "VNMG-NF IC807",
+   "conditions": [
+    {
+     "label": "VNMG 160404-NF (any ISO; feed/ap only)",
+     "iso": "*",
+     "coolant": null,
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.07,
+       "max": 0.24
+      }
+     },
+     "ap": {
+      "min": 0.7,
+      "max": 2.5,
+      "unit": "mm"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, p.165 (VNMG-NF)",
+      "edition": "2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page167.html"
+     }
+    },
+    {
+     "label": "VNMG 160408-NF (any ISO; feed/ap only)",
+     "iso": "*",
+     "coolant": null,
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.08,
+       "max": 0.25
+      }
+     },
+     "ap": {
+      "min": 1.0,
+      "max": 3.0,
+      "unit": "mm"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, p.165 (VNMG-NF)",
+      "edition": "2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page167.html"
+     }
+    },
+    {
+     "label": "VNMG 12T304-NF (any ISO; feed/ap only)",
+     "iso": "*",
+     "coolant": null,
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.07,
+       "max": 0.24
+      }
+     },
+     "ap": {
+      "min": 0.7,
+      "max": 2.0,
+      "unit": "mm"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, p.165 (VNMG-NF)",
+      "edition": "2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page167.html"
+     }
+    },
+    {
+     "label": "VNMG 12T308-NF (any ISO; feed/ap only)",
+     "iso": "*",
+     "coolant": null,
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.08,
+       "max": 0.24
+      }
+     },
+     "ap": {
+      "min": 1.0,
+      "max": 3.0,
+      "unit": "mm"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, p.165 (VNMG-NF)",
+      "edition": "2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page167.html"
+     }
+    }
+   ],
+   "notes": "Catalog gives ap and feed per insert; cutting speed is on catalog grade pages not yet transcribed: No manufacturer data for Vc."
+  },
+  {
+   "mode": "turn",
+   "brand": "Iscar",
+   "series": "VNMG F3M IC806",
+   "conditions": [],
+   "notes": "Not yet sourced."
+  },
+  {
+   "mode": "turn",
+   "brand": "Iscar",
+   "series": "CNMG (chipformer/grade TBD)",
+   "conditions": [],
+   "notes": "Not yet sourced; need exact chipformer and grade."
+  },
+  {
+   "mode": "turn",
+   "brand": "Iscar",
+   "series": "PENTA grooving IC1008",
+   "conditions": [],
+   "notes": "Only reseller copies found; not loaded."
+  },
+  {
+   "mode": "turn",
+   "brand": "Iscar",
+   "series": "Tang-Grip TGSU",
+   "conditions": [],
+   "notes": "Not yet sourced."
+  },
+  {
+   "mode": "turn",
+   "brand": "Iscar",
+   "series": "Threading IC908",
+   "conditions": [],
+   "notes": "Not yet sourced."
+  },
+  {
+   "mode": "turn",
+   "brand": "Mitsubishi",
+   "series": "BC8110 CBN (requested as 'Sumitomo BC8110'; BC8110 is a Mitsubishi grade)",
+   "conditions": [],
+   "notes": "Mitsubishi B215E brochure shows test conditions and charts only (e.g. 250 m/min, 0.10 mm/rev, ap 0.2, 60 HRC) - not a published recommendation table. Not loaded."
+  },
+  {
+   "mode": "turn",
+   "brand": "Sumitomo",
+   "series": "SUMIBORON BNC8115 CBN (hardened steel)",
+   "conditions": [
+    {
+     "label": "Hardened steel",
+     "iso": "H",
+     "coolant": "flood",
+     "sfm": {
+      "min": 50,
+      "start": 100,
+      "max": 150,
+      "unit": "m/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.1,
+       "start": 0.25,
+       "max": 0.4
+      }
+     },
+     "ap": {
+      "max": 3.0,
+      "unit": "mm"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Sumitomo Electric",
+      "catalog": "SUMIBORON BNC8115/BNS8125 flyer E-163, Recommended Cutting Conditions (Turning), Hardened Steel",
+      "edition": "E-163",
+      "url": "https://api.sumitomotool.com/media/roweb/publication/files/e/-/e-163_bnc8115-bns8125.pdf",
+      "notes": "Source says 'Coolant: wet'; recorded as flood. Values are Min-Optimum-Max; Optimum used as start."
+     }
+    }
+   ]
+  }
+ ]
+}

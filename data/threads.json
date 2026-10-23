@@ -1,0 +1,229 @@
+{
+ "source": {
+  "formula": "75% tap drill = D - 0.01299 x 75 x P (Machinery's Handbook tap-drill formula; geometry, not a speed)",
+  "chart": "Inch drill picks: Drill-HQ 'Tap and Drill Chart (Recommended tap drill to use for 75% depth of thread)'",
+  "chart_url": "https://www.drill-hq.com/wp-content/uploads/2022/04/TapandDrillChart.pdf"
+ },
+ "threads": [
+  {
+   "name": "#4-40",
+   "d_in": 0.112,
+   "pitch_in": 0.025,
+   "drill75_in": 0.0877,
+   "chart": "#43 (.0890)"
+  },
+  {
+   "name": "#6-32",
+   "d_in": 0.138,
+   "pitch_in": 0.03125,
+   "drill75_in": 0.1076,
+   "chart": "#35 (.1100)"
+  },
+  {
+   "name": "#8-32",
+   "d_in": 0.164,
+   "pitch_in": 0.03125,
+   "drill75_in": 0.1336,
+   "chart": "#29 (.1360)"
+  },
+  {
+   "name": "#10-24",
+   "d_in": 0.19,
+   "pitch_in": 0.04167,
+   "drill75_in": 0.1494,
+   "chart": "#25 (.1495)"
+  },
+  {
+   "name": "#10-32",
+   "d_in": 0.19,
+   "pitch_in": 0.03125,
+   "drill75_in": 0.1596,
+   "chart": "#21 (.1590)"
+  },
+  {
+   "name": "1/4-20",
+   "d_in": 0.25,
+   "pitch_in": 0.05,
+   "drill75_in": 0.2013,
+   "chart": "#7 (.2010)"
+  },
+  {
+   "name": "1/4-28",
+   "d_in": 0.25,
+   "pitch_in": 0.03571,
+   "drill75_in": 0.2152,
+   "chart": "#3 (.2130)"
+  },
+  {
+   "name": "5/16-18",
+   "d_in": 0.3125,
+   "pitch_in": 0.05556,
+   "drill75_in": 0.2584,
+   "chart": "F (.2570)"
+  },
+  {
+   "name": "5/16-24",
+   "d_in": 0.3125,
+   "pitch_in": 0.04167,
+   "drill75_in": 0.2719,
+   "chart": "I (.2720)"
+  },
+  {
+   "name": "3/8-16",
+   "d_in": 0.375,
+   "pitch_in": 0.0625,
+   "drill75_in": 0.3141,
+   "chart": "5/16 (.3125)"
+  },
+  {
+   "name": "3/8-24",
+   "d_in": 0.375,
+   "pitch_in": 0.04167,
+   "drill75_in": 0.3344,
+   "chart": "Q (.3320)"
+  },
+  {
+   "name": "7/16-14",
+   "d_in": 0.4375,
+   "pitch_in": 0.07143,
+   "drill75_in": 0.3679,
+   "chart": "U (.3680)"
+  },
+  {
+   "name": "7/16-20",
+   "d_in": 0.4375,
+   "pitch_in": 0.05,
+   "drill75_in": 0.3888,
+   "chart": "25/64 (.3906)"
+  },
+  {
+   "name": "1/2-13",
+   "d_in": 0.5,
+   "pitch_in": 0.07692,
+   "drill75_in": 0.4251,
+   "chart": "27/64 (.4219)"
+  },
+  {
+   "name": "1/2-20",
+   "d_in": 0.5,
+   "pitch_in": 0.05,
+   "drill75_in": 0.4513,
+   "chart": "29/64 (.4531)"
+  },
+  {
+   "name": "5/8-11",
+   "d_in": 0.625,
+   "pitch_in": 0.09091,
+   "drill75_in": 0.5365,
+   "chart": "17/32 (.5312)"
+  },
+  {
+   "name": "5/8-18",
+   "d_in": 0.625,
+   "pitch_in": 0.05556,
+   "drill75_in": 0.5709,
+   "chart": "37/64 (.5781)"
+  },
+  {
+   "name": "3/4-10",
+   "d_in": 0.75,
+   "pitch_in": 0.1,
+   "drill75_in": 0.6526,
+   "chart": "21/32 (.6562)"
+  },
+  {
+   "name": "3/4-16",
+   "d_in": 0.75,
+   "pitch_in": 0.0625,
+   "drill75_in": 0.6891,
+   "chart": "11/16 (.6875)"
+  },
+  {
+   "name": "1-8",
+   "d_in": 1.0,
+   "pitch_in": 0.125,
+   "drill75_in": 0.8782,
+   "chart": "7/8 (.8750)"
+  },
+  {
+   "name": "M3x0.5",
+   "d_in": 0.1181,
+   "pitch_in": 0.01969,
+   "drill75_mm": 2.51,
+   "drill75_in": 0.0989,
+   "chart": null
+  },
+  {
+   "name": "M4x0.7",
+   "d_in": 0.1575,
+   "pitch_in": 0.02756,
+   "drill75_mm": 3.32,
+   "drill75_in": 0.1306,
+   "chart": null
+  },
+  {
+   "name": "M5x0.8",
+   "d_in": 0.1969,
+   "pitch_in": 0.0315,
+   "drill75_mm": 4.22,
+   "drill75_in": 0.1662,
+   "chart": null
+  },
+  {
+   "name": "M6x1",
+   "d_in": 0.2362,
+   "pitch_in": 0.03937,
+   "drill75_mm": 5.03,
+   "drill75_in": 0.1979,
+   "chart": null
+  },
+  {
+   "name": "M8x1.25",
+   "d_in": 0.315,
+   "pitch_in": 0.04921,
+   "drill75_mm": 6.78,
+   "drill75_in": 0.267,
+   "chart": null
+  },
+  {
+   "name": "M10x1.5",
+   "d_in": 0.3937,
+   "pitch_in": 0.05906,
+   "drill75_mm": 8.54,
+   "drill75_in": 0.3362,
+   "chart": null
+  },
+  {
+   "name": "M12x1.75",
+   "d_in": 0.4724,
+   "pitch_in": 0.0689,
+   "drill75_mm": 10.3,
+   "drill75_in": 0.4053,
+   "chart": null
+  },
+  {
+   "name": "M16x2",
+   "d_in": 0.6299,
+   "pitch_in": 0.07874,
+   "drill75_mm": 14.05,
+   "drill75_in": 0.5532,
+   "chart": null
+  },
+  {
+   "name": "M20x2.5",
+   "d_in": 0.7874,
+   "pitch_in": 0.09843,
+   "drill75_mm": 17.57,
+   "drill75_in": 0.6915,
+   "chart": null
+  },
+  {
+   "name": "M24x3",
+   "d_in": 0.9449,
+   "pitch_in": 0.11811,
+   "drill75_mm": 21.08,
+   "drill75_in": 0.8298,
+   "chart": null
+  }
+ ]
+}

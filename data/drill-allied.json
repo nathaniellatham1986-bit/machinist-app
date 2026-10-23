@@ -1,0 +1,5823 @@
+{
+ "brand": "Allied",
+ "tools": [
+  {
+   "mode": "drill",
+   "brand": "Allied",
+   "series": "T-A carbide insert (e.g. 1C21T-0030 = series 1, C2 carbide, TiN, 15/16\")",
+   "conditions": [
+    {
+     "label": "Free-machining steel 1118/1215/12L14 100-150 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 320,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.008
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.012
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.015
+       ],
+       [
+        0.96875,
+        1.375,
+        0.018
+       ],
+       [
+        1.40625,
+        1.875,
+        0.021
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Free-machining steel 1118/1215/12L14 100-150 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 420,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.008
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.012
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.015
+       ],
+       [
+        0.96875,
+        1.375,
+        0.018
+       ],
+       [
+        1.40625,
+        1.875,
+        0.021
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Free-machining steel 1118/1215/12L14 100-150 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 375,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.008
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.012
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.015
+       ],
+       [
+        0.96875,
+        1.375,
+        0.018
+       ],
+       [
+        1.40625,
+        1.875,
+        0.021
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Free-machining steel 1118/1215/12L14 150-200 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 280,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.011
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.014
+       ],
+       [
+        0.96875,
+        1.375,
+        0.016
+       ],
+       [
+        1.40625,
+        1.875,
+        0.019
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Free-machining steel 1118/1215/12L14 150-200 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 360,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.011
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.014
+       ],
+       [
+        0.96875,
+        1.375,
+        0.016
+       ],
+       [
+        1.40625,
+        1.875,
+        0.019
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Free-machining steel 1118/1215/12L14 150-200 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 325,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.011
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.014
+       ],
+       [
+        0.96875,
+        1.375,
+        0.016
+       ],
+       [
+        1.40625,
+        1.875,
+        0.019
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Free-machining steel 1118/1215/12L14 200-250 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 260,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.013
+       ],
+       [
+        0.96875,
+        1.375,
+        0.015
+       ],
+       [
+        1.40625,
+        1.875,
+        0.017
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Free-machining steel 1118/1215/12L14 200-250 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 340,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.013
+       ],
+       [
+        0.96875,
+        1.375,
+        0.015
+       ],
+       [
+        1.40625,
+        1.875,
+        0.017
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Free-machining steel 1118/1215/12L14 200-250 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 295,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.013
+       ],
+       [
+        0.96875,
+        1.375,
+        0.015
+       ],
+       [
+        1.40625,
+        1.875,
+        0.017
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 85-125 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 300,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.008
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.013
+       ],
+       [
+        0.96875,
+        1.375,
+        0.017
+       ],
+       [
+        1.40625,
+        1.875,
+        0.019
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 85-125 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 390,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.008
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.013
+       ],
+       [
+        0.96875,
+        1.375,
+        0.017
+       ],
+       [
+        1.40625,
+        1.875,
+        0.019
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 85-125 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 360,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.008
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.013
+       ],
+       [
+        0.96875,
+        1.375,
+        0.017
+       ],
+       [
+        1.40625,
+        1.875,
+        0.019
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 125-175 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 260,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.013
+       ],
+       [
+        0.96875,
+        1.375,
+        0.016
+       ],
+       [
+        1.40625,
+        1.875,
+        0.018
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 125-175 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 340,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.013
+       ],
+       [
+        0.96875,
+        1.375,
+        0.016
+       ],
+       [
+        1.40625,
+        1.875,
+        0.018
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 125-175 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 295,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.013
+       ],
+       [
+        0.96875,
+        1.375,
+        0.016
+       ],
+       [
+        1.40625,
+        1.875,
+        0.018
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 175-225 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 240,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.012
+       ],
+       [
+        0.96875,
+        1.375,
+        0.015
+       ],
+       [
+        1.40625,
+        1.875,
+        0.017
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 175-225 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 310,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.012
+       ],
+       [
+        0.96875,
+        1.375,
+        0.015
+       ],
+       [
+        1.40625,
+        1.875,
+        0.017
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 175-225 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 270,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.012
+       ],
+       [
+        0.96875,
+        1.375,
+        0.015
+       ],
+       [
+        1.40625,
+        1.875,
+        0.017
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 225-275 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 210,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.012
+       ],
+       [
+        0.96875,
+        1.375,
+        0.015
+       ],
+       [
+        1.40625,
+        1.875,
+        0.017
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 225-275 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 270,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.012
+       ],
+       [
+        0.96875,
+        1.375,
+        0.015
+       ],
+       [
+        1.40625,
+        1.875,
+        0.017
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 225-275 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 245,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.012
+       ],
+       [
+        0.96875,
+        1.375,
+        0.015
+       ],
+       [
+        1.40625,
+        1.875,
+        0.017
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 125-175 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 250,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.013
+       ],
+       [
+        0.96875,
+        1.375,
+        0.016
+       ],
+       [
+        1.40625,
+        1.875,
+        0.018
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 125-175 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 325,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.013
+       ],
+       [
+        0.96875,
+        1.375,
+        0.016
+       ],
+       [
+        1.40625,
+        1.875,
+        0.018
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 125-175 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 285,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.013
+       ],
+       [
+        0.96875,
+        1.375,
+        0.016
+       ],
+       [
+        1.40625,
+        1.875,
+        0.018
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 175-225 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 230,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.012
+       ],
+       [
+        0.96875,
+        1.375,
+        0.015
+       ],
+       [
+        1.40625,
+        1.875,
+        0.017
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 175-225 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 300,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.012
+       ],
+       [
+        0.96875,
+        1.375,
+        0.015
+       ],
+       [
+        1.40625,
+        1.875,
+        0.017
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 175-225 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 260,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.012
+       ],
+       [
+        0.96875,
+        1.375,
+        0.015
+       ],
+       [
+        1.40625,
+        1.875,
+        0.017
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 225-275 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 210,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.012
+       ],
+       [
+        0.96875,
+        1.375,
+        0.015
+       ],
+       [
+        1.40625,
+        1.875,
+        0.017
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 225-275 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 270,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.012
+       ],
+       [
+        0.96875,
+        1.375,
+        0.015
+       ],
+       [
+        1.40625,
+        1.875,
+        0.017
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 225-275 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 235,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.012
+       ],
+       [
+        0.96875,
+        1.375,
+        0.015
+       ],
+       [
+        1.40625,
+        1.875,
+        0.017
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 275-325 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 200,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.011
+       ],
+       [
+        0.96875,
+        1.375,
+        0.014
+       ],
+       [
+        1.40625,
+        1.875,
+        0.016
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 275-325 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 250,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.011
+       ],
+       [
+        0.96875,
+        1.375,
+        0.014
+       ],
+       [
+        1.40625,
+        1.875,
+        0.016
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 275-325 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 225,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.011
+       ],
+       [
+        0.96875,
+        1.375,
+        0.014
+       ],
+       [
+        1.40625,
+        1.875,
+        0.016
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 325-375 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 170,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.01
+       ],
+       [
+        0.96875,
+        1.375,
+        0.013
+       ],
+       [
+        1.40625,
+        1.875,
+        0.015
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 325-375 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 220,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.01
+       ],
+       [
+        0.96875,
+        1.375,
+        0.013
+       ],
+       [
+        1.40625,
+        1.875,
+        0.015
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 325-375 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 195,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.01
+       ],
+       [
+        0.96875,
+        1.375,
+        0.013
+       ],
+       [
+        1.40625,
+        1.875,
+        0.015
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 225-300 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 160,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.01
+       ],
+       [
+        0.96875,
+        1.375,
+        0.012
+       ],
+       [
+        1.40625,
+        1.875,
+        0.015
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 225-300 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 200,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.01
+       ],
+       [
+        0.96875,
+        1.375,
+        0.012
+       ],
+       [
+        1.40625,
+        1.875,
+        0.015
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 225-300 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 180,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.01
+       ],
+       [
+        0.96875,
+        1.375,
+        0.012
+       ],
+       [
+        1.40625,
+        1.875,
+        0.015
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 300-350 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 140,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.009
+       ],
+       [
+        0.96875,
+        1.375,
+        0.011
+       ],
+       [
+        1.40625,
+        1.875,
+        0.014
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 300-350 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 180,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.009
+       ],
+       [
+        0.96875,
+        1.375,
+        0.011
+       ],
+       [
+        1.40625,
+        1.875,
+        0.014
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 300-350 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 160,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.009
+       ],
+       [
+        0.96875,
+        1.375,
+        0.011
+       ],
+       [
+        1.40625,
+        1.875,
+        0.014
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 350-400 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 120,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.008
+       ],
+       [
+        0.96875,
+        1.375,
+        0.01
+       ],
+       [
+        1.40625,
+        1.875,
+        0.012
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 350-400 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 160,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.008
+       ],
+       [
+        0.96875,
+        1.375,
+        0.01
+       ],
+       [
+        1.40625,
+        1.875,
+        0.012
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 350-400 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 140,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.008
+       ],
+       [
+        0.96875,
+        1.375,
+        0.01
+       ],
+       [
+        1.40625,
+        1.875,
+        0.012
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Stainless 300 series (304/316/17-4PH) 135-185 BHN \u00b7 TiN",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "value": 160,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.009
+       ],
+       [
+        0.96875,
+        1.375,
+        0.01
+       ],
+       [
+        1.40625,
+        1.875,
+        0.012
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Stainless 300 series (304/316/17-4PH) 135-185 BHN \u00b7 TiAlN",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "value": 210,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.009
+       ],
+       [
+        0.96875,
+        1.375,
+        0.01
+       ],
+       [
+        1.40625,
+        1.875,
+        0.012
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Stainless 300 series (304/316/17-4PH) 135-185 BHN \u00b7 TiCN",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "value": 185,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.009
+       ],
+       [
+        0.96875,
+        1.375,
+        0.01
+       ],
+       [
+        1.40625,
+        1.875,
+        0.012
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Stainless 300 series (304/316/17-4PH) 185-275 BHN \u00b7 TiN",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "value": 120,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.006
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.008
+       ],
+       [
+        0.96875,
+        1.375,
+        0.009
+       ],
+       [
+        1.40625,
+        1.875,
+        0.01
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Stainless 300 series (304/316/17-4PH) 185-275 BHN \u00b7 TiAlN",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "value": 160,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.006
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.008
+       ],
+       [
+        0.96875,
+        1.375,
+        0.009
+       ],
+       [
+        1.40625,
+        1.875,
+        0.01
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Stainless 300 series (304/316/17-4PH) 185-275 BHN \u00b7 TiCN",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "value": 140,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.006
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.008
+       ],
+       [
+        0.96875,
+        1.375,
+        0.009
+       ],
+       [
+        1.40625,
+        1.875,
+        0.01
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    }
+   ],
+   "notes": "Allied tables say to refer to the coolant charts (catalog pp.126-127) to run at these values; coolant condition not transcribed, so coolant = not stated. 303 is not listed by Allied; it is not mapped. Allied lists C5 grade for ISO P rows and C2 for ISO M; 1C21T is C2."
+  },
+  {
+   "mode": "drill",
+   "brand": "Allied",
+   "series": "GEN2 T-A carbide AM300 (4C21P / 4C11P)",
+   "conditions": [
+    {
+     "label": "Free-machining steel 1118/1215/12L14 100-150 BHN \u00b7 AM300",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 480,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.008
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.012
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.016
+       ],
+       [
+        0.96875,
+        1.375,
+        0.019
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Free-machining steel 1118/1215/12L14 150-200 BHN \u00b7 AM300",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 415,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.011
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.015
+       ],
+       [
+        0.96875,
+        1.375,
+        0.017
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Free-machining steel 1118/1215/12L14 200-250 BHN \u00b7 AM300",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 390,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.014
+       ],
+       [
+        0.96875,
+        1.375,
+        0.016
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 85-125 BHN \u00b7 AM300",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 450,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.008
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.014
+       ],
+       [
+        0.96875,
+        1.375,
+        0.018
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 125-175 BHN \u00b7 AM300",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 390,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.014
+       ],
+       [
+        0.96875,
+        1.375,
+        0.017
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 175-225 BHN \u00b7 AM300",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 355,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.013
+       ],
+       [
+        0.96875,
+        1.375,
+        0.016
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 225-275 BHN \u00b7 AM300",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 310,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.013
+       ],
+       [
+        0.96875,
+        1.375,
+        0.016
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 125-175 BHN \u00b7 AM300",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 375,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.014
+       ],
+       [
+        0.96875,
+        1.375,
+        0.017
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 175-225 BHN \u00b7 AM300",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 345,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.013
+       ],
+       [
+        0.96875,
+        1.375,
+        0.016
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 225-275 BHN \u00b7 AM300",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 310,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.013
+       ],
+       [
+        0.96875,
+        1.375,
+        0.016
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 275-325 BHN \u00b7 AM300",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 285,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.012
+       ],
+       [
+        0.96875,
+        1.375,
+        0.015
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 325-375 BHN \u00b7 AM300",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 255,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.011
+       ],
+       [
+        0.96875,
+        1.375,
+        0.014
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 225-300 BHN \u00b7 AM300",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 230,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.011
+       ],
+       [
+        0.96875,
+        1.375,
+        0.013
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 300-350 BHN \u00b7 AM300",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 205,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.01
+       ],
+       [
+        0.96875,
+        1.375,
+        0.012
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 350-400 BHN \u00b7 AM300",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 185,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.009
+       ],
+       [
+        0.96875,
+        1.375,
+        0.011
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Stainless 300 series (304/316/17-4PH) 135-185 BHN \u00b7 AM300",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "value": 240,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.009
+       ],
+       [
+        0.96875,
+        1.375,
+        0.012
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Stainless 300 series (304/316/17-4PH) 185-275 BHN \u00b7 AM300",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "value": 180,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.006
+       ],
+       [
+        0.703125,
+        0.9375,
+        0.008
+       ],
+       [
+        0.96875,
+        1.375,
+        0.009
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+     }
+    }
+   ],
+   "notes": "Allied tables say to refer to the coolant charts (catalog pp.126-127) to run at these values; coolant condition not transcribed, so coolant = not stated. 303 is not listed by Allied; it is not mapped."
+  },
+  {
+   "mode": "drill",
+   "brand": "Allied",
+   "series": "GEN2 T-A HSS / super cobalt (TiN or AM200)",
+   "conditions": [
+    {
+     "label": "Free-machining steel 1118/1215/12L14 100-150 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 200,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.008
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.012
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Free-machining steel 1118/1215/12L14 100-150 BHN \u00b7 AM200",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 325,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.008
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.012
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Free-machining steel 1118/1215/12L14 150-200 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 180,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.011
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Free-machining steel 1118/1215/12L14 150-200 BHN \u00b7 AM200",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 300,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.011
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Free-machining steel 1118/1215/12L14 200-250 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 160,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Free-machining steel 1118/1215/12L14 200-250 BHN \u00b7 AM200",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 280,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 85-125 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 170,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.008
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 85-125 BHN \u00b7 AM200",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 290,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.008
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 125-175 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 160,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 125-175 BHN \u00b7 AM200",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 275,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 175-225 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 150,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 175-225 BHN \u00b7 AM200",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 260,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 225-275 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 140,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 225-275 BHN \u00b7 AM200",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 240,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 125-175 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 150,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 125-175 BHN \u00b7 AM200",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 240,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 175-225 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 140,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 175-225 BHN \u00b7 AM200",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 225,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 225-275 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 130,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 225-275 BHN \u00b7 AM200",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 210,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 275-325 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 120,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 275-325 BHN \u00b7 AM200",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 195,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 325-375 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 110,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 325-375 BHN \u00b7 AM200",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 180,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 225-300 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 80,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 225-300 BHN \u00b7 AM200",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 125,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 300-350 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 60,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 300-350 BHN \u00b7 AM200",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 100,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 350-400 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 50,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 350-400 BHN \u00b7 AM200",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 80,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Stainless 300 series (304/316/17-4PH) 135-185 BHN \u00b7 TiN",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "value": 75,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.003
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Stainless 300 series (304/316/17-4PH) 135-185 BHN \u00b7 AM200",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "value": 110,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.003
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Stainless 300 series (304/316/17-4PH) 185-275 BHN \u00b7 TiN",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "value": 60,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.003
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.006
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    },
+    {
+     "label": "Stainless 300 series (304/316/17-4PH) 185-275 BHN \u00b7 AM200",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "value": 100,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.003
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.006
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+     }
+    }
+   ],
+   "notes": "Allied tables say to refer to the coolant charts (catalog pp.126-127) to run at these values; coolant condition not transcribed, so coolant = not stated. 303 is not listed by Allied; it is not mapped. Only 3/8\"-11/16\" feed columns transcribed."
+  },
+  {
+   "mode": "drill",
+   "brand": "Allied",
+   "series": "T-A HSS insert (TiN/TiAlN/TiCN)",
+   "conditions": [
+    {
+     "label": "Free-machining steel 1118/1215/12L14 100-150 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 200,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Free-machining steel 1118/1215/12L14 100-150 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 280,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Free-machining steel 1118/1215/12L14 100-150 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 260,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.01
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 85-125 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 170,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 85-125 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 250,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 85-125 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 220,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 125-175 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 160,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 125-175 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 240,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 125-175 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 210,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.009
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 175-225 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 150,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 175-225 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 225,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 175-225 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 195,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 225-275 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 140,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 225-275 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 210,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Low-carbon 1010/1020 (mild) 225-275 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 180,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 125-175 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 150,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 125-175 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 210,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 125-175 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 195,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 175-225 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 140,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 175-225 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 195,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 175-225 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 180,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.008
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 225-275 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 130,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 225-275 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 180,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 225-275 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 170,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 275-325 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 120,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.006
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 275-325 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 170,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.006
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 275-325 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 155,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.006
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 325-375 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 110,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.003
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.006
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 325-375 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 155,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.003
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.006
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Alloy 4140/5140/8640 325-375 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 145,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.003
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.006
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 225-300 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 80,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 225-300 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 110,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 225-300 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 100,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.005
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 300-350 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 60,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 300-350 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 85,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 300-350 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 80,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.004
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 350-400 BHN \u00b7 TiN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 50,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.003
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.006
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 350-400 BHN \u00b7 TiAlN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 70,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.003
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.006
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "High-strength 4340/300M 350-400 BHN \u00b7 TiCN",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "value": 65,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.003
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.006
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Stainless 300 series (304/316/17-4PH) 135-185 BHN \u00b7 TiN",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "value": 75,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Stainless 300 series (304/316/17-4PH) 135-185 BHN \u00b7 TiAlN",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "value": 105,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Stainless 300 series (304/316/17-4PH) 135-185 BHN \u00b7 TiCN",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "value": 95,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.007
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.007
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Stainless 300 series (304/316/17-4PH) 185-275 BHN \u00b7 TiN",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "value": 60,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.006
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Stainless 300 series (304/316/17-4PH) 185-275 BHN \u00b7 TiAlN",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "value": 90,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.006
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    },
+    {
+     "label": "Stainless 300 series (304/316/17-4PH) 185-275 BHN \u00b7 TiCN",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "value": 80,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "bands": [
+       [
+        0.375,
+        0.5,
+        0.006
+       ],
+       [
+        0.515625,
+        0.6875,
+        0.006
+       ]
+      ]
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Allied Machine & Engineering",
+      "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
+      "edition": "A30-TAS (PDF copy on box)",
+      "url": "https://www.alliedmachine.com/",
+      "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116"
+     }
+    }
+   ],
+   "notes": "Allied tables say to refer to the coolant charts (catalog pp.126-127) to run at these values; coolant condition not transcribed, so coolant = not stated. 303 is not listed by Allied; it is not mapped. Only 3/8\"-11/16\" feed columns transcribed."
+  }
+ ]
+}
