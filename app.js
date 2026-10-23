@@ -88,8 +88,18 @@ function fill() {
     h += `<br><b>Tap drill 75%:</b> ${th.drill75_mm ? th.drill75_mm + ' mm / ' : ''}${th.drill75_in.toFixed(4)} in (geometry)${th.chart ? ' · chart pick ' + th.chart : ''}<br><small>${threads.source.formula}. ${th.chart ? threads.source.chart : ''}</small>`; }
   $('src').innerHTML = h; run();
 }
+// Mill engagement: stored as fraction of D; shown in % / xD or inches.
+const frac = { ae: 0.25, ap: 1 };
+const D = () => +$('d').value || 0;
+function readEng() { const d = D(); frac.ae = $('aeU').value === 'pct' ? +$('ae').value / 100 : (d ? +$('ae').value / d : 0);
+  frac.ap = $('apU').value === 'xd' ? +$('ap').value : (d ? +$('ap').value / d : 0);
+  $('aeX').textContent = $('aeU').value === 'pct' ? `= ${(frac.ae * d).toFixed(4)} in` : `= ${(frac.ae * 100).toFixed(1)}% of D`;
+  $('apX').textContent = $('apU').value === 'xd' ? `= ${(frac.ap * d).toFixed(4)} in` : `= ${frac.ap.toFixed(2)}×D`; }
+function showEng() { const d = D(); $('ae').value = $('aeU').value === 'pct' ? +(frac.ae * 100).toFixed(2) : +(frac.ae * d).toFixed(4);
+  $('ap').value = $('apU').value === 'xd' ? +frac.ap.toFixed(3) : +(frac.ap * d).toFixed(4); readEng(); }
+$('aeU').onchange = () => { showEng(); run(); }; $('apU').onchange = () => { showEng(); run(); };
 const mine = k => defs[k] == null || Math.abs(+$(k).value - defs[k]) > (k === 'sfm' ? 0.5 : 5e-5);
-function run() {
+function run() { if (mode === 'mill') readEng();
   const v = k => +$(k).value, tag = k => mine(k) && $(k).value ? ' <span class="tag warn">YOUR VALUE, NOT MANUFACTURER</span>' : '';
   const c = TOOLS[mode][$('tool').value]?.conditions[$('cond').value];
   let w = '';
@@ -99,7 +109,7 @@ function run() {
   }
   if (!v('sfm') || !v('fpt') || !v('d')) { $('out').innerHTML = w + '<span class="warn">No manufacturer data</span> — results need SFM and feed. You may type your own (it will be labeled as yours).'; return; }
   let o, h = '';
-  if (mode === 'mill') { o = compute({ sfm: v('sfm'), d: v('d'), fpt: v('fpt'), z: v('z'), ae: v('ae'), ap: v('ap'), stickout: v('so'), maxRpm: v('maxRpm'), maxHp: v('maxHp'), iso: c?.iso });
+  if (mode === 'mill') { readEng(); o = compute({ sfm: v('sfm'), d: v('d'), fpt: v('fpt'), z: v('z'), ae: frac.ae * v('d'), ap: frac.ap * v('d'), stickout: v('so'), maxRpm: v('maxRpm'), maxHp: v('maxHp'), iso: c?.iso });
     h = `Feed IPM<div class="big">${o.ipm.toFixed(1)}</div>${o.hpCapped ? '<div class="warn">Feed cut to fit machine HP</div>' : ''}Adjusted chip load ${o.fpt.toFixed(4)} in/t <span class="tag">thinning + stickout (derived)</span><br>Est. power ${o.hp.toFixed(1)} HP <span class="tag">DERIVED</span>`; }
   if (mode === 'drill') { o = drill({ sfm: v('sfm'), d: v('d'), ipr: v('fpt'), maxRpm: v('maxRpm') }); h = `Feed IPM<div class="big">${o.ipm.toFixed(2)}</div>`; }
   if (mode === 'turn') { o = turn({ sfm: v('sfm'), d: v('d'), ipr: v('fpt'), ap: v('apT'), maxRpm: v('maxRpm') });
@@ -108,7 +118,7 @@ function run() {
   $('out').innerHTML = w + `RPM<div class="big">${Math.round(o.rpm)}</div>${o.capped ? '<div class="warn">Capped at machine max RPM</div>' : ''}${!v('maxRpm') ? '<div class="warn">No machine max RPM set</div>' : ''}${h}<br>SFM ${v('sfm')}${tag('sfm')}${mode === 'tap' ? '' : '<br>Feed ' + v('fpt') + tag('fpt')}`;
 }
 // Favorites & recent setups
-const FIELDS = ['iso', 'brand', 'tool', 'cond', 'thr', 'd', 'z', 'sfm', 'fpt', 'ae', 'ap', 'apT', 'so', 'nose', 'cb', 'len', 'sup', 'cool'];
+const FIELDS = ['iso', 'brand', 'tool', 'cond', 'thr', 'd', 'z', 'sfm', 'fpt', 'aeU', 'apU', 'ae', 'ap', 'apT', 'so', 'nose', 'cb', 'len', 'sup', 'cool'];
 const snap = () => { const t = TOOLS[mode][$('tool').value], c = t?.conditions[$('cond').value];
   return { mode, name: `${mode} · ${t ? t.brand + ' ' + t.series : '?'} · ${c?.label ?? ''}${$('cb').value ? ' · ' + $('cb').value : ''}`, v: Object.fromEntries(FIELDS.map(k => [k, $(k).value])) }; };
 function recent() { const t = TOOLS[mode][$('tool').value]; if (!t) return; const s = snap(), r = LS.get('recent', []).filter(x => x.name !== s.name); r.unshift(s); LS.set('recent', r.slice(0, 8)); recallList(); }
@@ -121,7 +131,7 @@ $('recall').onchange = () => { const k = $('recall').value; if (!k) return; cons
   fill(); $('sfm').value = s.v.sfm; $('fpt').value = s.v.fpt; run(); $('recall').value = ''; };
 document.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => setMode(b.dataset.mode));
 $('iso').onchange = fillBrand; $('onlyData').onchange = fillBrand; $('brand').onchange = fillTool; $('tool').onchange = fillCond; $('mach').onchange = applyMachine;
-$('cond').onchange = () => { fill(); recent(); }; ['d', 'cool', 'thr'].forEach(k => $(k).onchange = fill);
+$('cond').onchange = () => { fill(); recent(); }; ['cool', 'thr'].forEach(k => $(k).onchange = fill); $('d').onchange = () => { if (mode === 'mill') showEng(); fill(); };
 ['z', 'sfm', 'fpt', 'ae', 'ap', 'apT', 'so', 'maxRpm', 'maxHp', 'len', 'nose'].forEach(k => $(k).oninput = run); $('sup').onchange = run;
 $('cool').value = LS.get('lastCoolant', 'flood'); machines(); { const m = LS.get('machines', [])[$('mach').value]; if (m) { $('maxRpm').value = m.rpm || ''; $('maxHp').value = m.hp || ''; } }
 recallList();
