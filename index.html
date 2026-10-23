@@ -7,18 +7,21 @@ select,input{width:100%;box-sizing:border-box;min-height:56px;font-size:22px;bac
 .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .out{margin-top:14px;border:3px solid #ffd400;border-radius:8px;padding:10px}.big{font-size:40px;font-weight:800;color:#ffd400}
 .src{font-size:15px;color:#ccc;margin-top:8px}.warn{color:#ff6b6b;font-weight:700}.tag{border:2px solid;padding:0 6px;border-radius:6px;font-size:14px}
-</style></head><body><main><h1>Feeds &amp; Speeds v0</h1>
+nav{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}nav button{min-height:56px;font-size:20px;font-weight:800;background:#111;color:#fff;border:3px solid #fff;border-radius:8px}nav button.on{background:#ffd400;color:#000;border-color:#ffd400}[hidden]{display:none!important}
+</style></head><body><main><h1>Feeds &amp; Speeds v1</h1>
+<nav><button data-mode="mill">Mill</button><button data-mode="drill">Drill</button><button data-mode="turn">Turn</button><button data-mode="tap">Tap</button></nav>
 <label>Tool<select id="tool"></select></label>
-<label>Material<select id="mat"></select></label>
+<label>Material / condition<select id="cond"></select></label>
+<label data-show="tap">Thread<select id="thr"></select></label>
 <label>Coolant<select id="cool"><option value="flood">Flood</option><option value="air">Air blast</option><option value="dry">Dry</option></select></label>
-<div class="row"><label>Dia (in)<input id="d" type="number" inputmode="decimal" step="any" value="0.5"></label>
-<label>Flutes<input id="z" type="number" inputmode="numeric" value="4"></label></div>
+<div class="row"><label id="dLbl">Dia (in)<input id="d" type="number" inputmode="decimal" step="any" value="0.5"></label>
+<label data-show="mill">Flutes<input id="z" type="number" inputmode="numeric" value="4"></label></div>
 <div class="row"><label>SFM<input id="sfm" type="number" inputmode="decimal"></label>
-<label>Chip load (in/t)<input id="fpt" type="number" inputmode="decimal" step="any"></label></div>
-<div class="row"><label>WOC ae (in)<input id="ae" type="number" inputmode="decimal" step="any" value="0.25"></label>
+<label id="feedLbl">Chip load (in/t)<input id="fpt" type="number" inputmode="decimal" step="any"></label></div>
+<div class="row" data-show="mill"><label>WOC ae (in)<input id="ae" type="number" inputmode="decimal" step="any" value="0.25"></label>
 <label>DOC ap (in)<input id="ap" type="number" inputmode="decimal" step="any" value="0.5"></label></div>
-<div class="row"><label>Stickout (in)<input id="so" type="number" inputmode="decimal" step="any" value="1.5"></label>
+<div class="row"><label data-show="mill">Stickout (in)<input id="so" type="number" inputmode="decimal" step="any" value="1.5"></label><label data-show="turn">DOC ap (in)<input id="apT" type="number" inputmode="decimal" step="any" value="0.04"></label>
 <label>Max RPM<input id="maxRpm" type="number" inputmode="numeric" value="10000"></label></div>
-<label>Machine HP<input id="maxHp" type="number" inputmode="decimal" value="15"></label>
+<label data-show="mill">Machine HP<input id="maxHp" type="number" inputmode="decimal" value="15"></label>
 <div class="out" id="out"></div><div class="src" id="src"></div></main>
 <script type="module" src="app.js"></script></body></html>
