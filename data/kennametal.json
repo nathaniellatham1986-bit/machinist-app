@@ -44,7 +44,8 @@
       "url": "https://www.sumecsl.com/docs/Kennametal/Kennametal-Innovations-2020%5F2.pdf",
       "edition": "Innovations 2020 (distributor-hosted copy)",
       "notes": "Slotting: reduce fz 20%."
-     }
+     },
+     "coolant": null
     },
     {
      "iso": "P",
@@ -74,7 +75,8 @@
       "url": "https://www.sumecsl.com/docs/Kennametal/Kennametal-Innovations-2020%5F2.pdf",
       "edition": "Innovations 2020 (distributor-hosted copy)",
       "notes": "Slotting: reduce fz 20%."
-     }
+     },
+     "coolant": null
     },
     {
      "iso": "P",
@@ -104,7 +106,8 @@
       "url": "https://www.sumecsl.com/docs/Kennametal/Kennametal-Innovations-2020%5F2.pdf",
       "edition": "Innovations 2020 (distributor-hosted copy)",
       "notes": "Slotting: reduce fz 20%."
-     }
+     },
+     "coolant": null
     },
     {
      "iso": "M",
@@ -134,7 +137,8 @@
       "url": "https://www.sumecsl.com/docs/Kennametal/Kennametal-Innovations-2020%5F2.pdf",
       "edition": "Innovations 2020 (distributor-hosted copy)",
       "notes": "Slotting: reduce fz 20%."
-     }
+     },
+     "coolant": null
     },
     {
      "iso": "M",
@@ -164,7 +168,8 @@
       "url": "https://www.sumecsl.com/docs/Kennametal/Kennametal-Innovations-2020%5F2.pdf",
       "edition": "Innovations 2020 (distributor-hosted copy)",
       "notes": "Slotting: reduce fz 20%."
-     }
+     },
+     "coolant": null
     },
     {
      "iso": "K",
@@ -194,7 +199,8 @@
       "url": "https://www.sumecsl.com/docs/Kennametal/Kennametal-Innovations-2020%5F2.pdf",
       "edition": "Innovations 2020 (distributor-hosted copy)",
       "notes": "Slotting: reduce fz 20%."
-     }
+     },
+     "coolant": null
     },
     {
      "iso": "S",
@@ -224,7 +230,8 @@
       "url": "https://www.sumecsl.com/docs/Kennametal/Kennametal-Innovations-2020%5F2.pdf",
       "edition": "Innovations 2020 (distributor-hosted copy)",
       "notes": "Slotting: reduce fz 20%."
-     }
+     },
+     "coolant": null
     },
     {
      "iso": "S",
@@ -254,7 +261,8 @@
       "url": "https://www.sumecsl.com/docs/Kennametal/Kennametal-Innovations-2020%5F2.pdf",
       "edition": "Innovations 2020 (distributor-hosted copy)",
       "notes": "Slotting: reduce fz 20%."
-     }
+     },
+     "coolant": null
     },
     {
      "iso": "H",
@@ -284,7 +292,8 @@
       "url": "https://www.sumecsl.com/docs/Kennametal/Kennametal-Innovations-2020%5F2.pdf",
       "edition": "Innovations 2020 (distributor-hosted copy)",
       "notes": "Slotting: reduce fz 20%."
-     }
+     },
+     "coolant": null
     }
    ]
   },
@@ -331,7 +340,8 @@
       "url": "https://content.syndigo.com/asset/d902ad4e-2fb6-4c92-87fd-d066ce458fca/original.pdf",
       "edition": "date not printed in extract",
       "notes": "Slotting: reduce fz 10%."
-     }
+     },
+     "coolant": null
     },
     {
      "iso": "P",
@@ -361,7 +371,8 @@
       "url": "https://content.syndigo.com/asset/d902ad4e-2fb6-4c92-87fd-d066ce458fca/original.pdf",
       "edition": "date not printed in extract",
       "notes": "Slotting: reduce fz 10%."
-     }
+     },
+     "coolant": null
     },
     {
      "iso": "M",
@@ -391,7 +402,8 @@
       "url": "https://content.syndigo.com/asset/d902ad4e-2fb6-4c92-87fd-d066ce458fca/original.pdf",
       "edition": "date not printed in extract",
       "notes": "Slotting: reduce fz 10%."
-     }
+     },
+     "coolant": null
     },
     {
      "iso": "K",
@@ -421,7 +433,8 @@
       "url": "https://content.syndigo.com/asset/d902ad4e-2fb6-4c92-87fd-d066ce458fca/original.pdf",
       "edition": "date not printed in extract",
       "notes": "Slotting: reduce fz 10%."
-     }
+     },
+     "coolant": null
     },
     {
      "iso": "S",
@@ -451,7 +464,8 @@
       "url": "https://content.syndigo.com/asset/d902ad4e-2fb6-4c92-87fd-d066ce458fca/original.pdf",
       "edition": "date not printed in extract",
       "notes": "Slotting: reduce fz 10%."
-     }
+     },
+     "coolant": null
     },
     {
      "iso": "H",
@@ -481,7 +495,8 @@
       "url": "https://content.syndigo.com/asset/d902ad4e-2fb6-4c92-87fd-d066ce458fca/original.pdf",
       "edition": "date not printed in extract",
       "notes": "Slotting: reduce fz 10%."
-     }
+     },
+     "coolant": null
     }
    ]
   }

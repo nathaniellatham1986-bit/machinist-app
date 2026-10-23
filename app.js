@@ -14,7 +14,8 @@ function nearest(byD, unit, dIn) {
 function fillFromData() {
   const t = tools[$('tool').value], iso = $('mat').value, d = +$('d').value;
   if (t.flutes) $('z').value = t.flutes;
-  const r = t.recommendations.find(r => r.iso === iso);
+  const cool = $('cool').value;
+  const r = t.recommendations.find(r => r.iso === iso && r.coolant === cool) || t.recommendations.find(r => r.iso === iso && r.coolant == null);
   let note = t.notes ? `<span class="tag">GUIDELINE</span> ${t.notes}` : '';
   $('sfm').value = ''; $('fpt').value = '';
   if (r) {
@@ -26,7 +27,7 @@ function fillFromData() {
     note = `<span class="tag">${r.status.toUpperCase()}</span> ${s.manufacturer} · ${s.catalog} · ${s.edition} · <a style="color:#9cf" href="${s.url}">source</a>`
       + (vc ? `<br>vc range: ${vc.min ?? vc.start}–${vc.max ?? vc.start} ${vc.unit} (midpoint shown)` : '<br><span class="warn">No cutting speed published in source — enter SFM.</span>')
       + (m ? `<br>fz @ ${m[0]} ${r.fz.unit === 'mm' ? 'mm' : 'in'} catalog size` : '<br><span class="warn">No catalog fz at this exact diameter — enter chip load.</span>')
-      + (r.ap_xD ? `<br>ap ${r.ap_xD}×D, ae ${r.ae_xD}×D` : '') + (s.notes ? `<br>${s.notes}` : '');
+      + (r.ap_xD ? `<br>ap ${r.ap_xD}×D, ae ${r.ae_xD}×D` : '') + (r.coolant ? `<br>Coolant: ${r.coolant} (manufacturer stated)` : `<br><span class="warn">Coolant condition not stated in source; values not adjusted for ${cool}.</span>`) + (s.notes ? `<br>${s.notes}` : '');
   } else if (!t.notes) note = '<span class="warn">No sourced data for this tool/material — enter values.</span>';
   $('src').innerHTML = note; run();
 }
@@ -39,7 +40,7 @@ function run() {
   Adjusted chip load ${o.fpt.toFixed(4)} in/t <span class="tag">thinning + stickout (derived)</span><br>
   Est. power ${o.hp.toFixed(1)} HP <span class="tag">DERIVED</span>`;
 }
-['tool', 'mat', 'd'].forEach(k => $(k).onchange = fillFromData);
+['tool', 'mat', 'd', 'cool'].forEach(k => $(k).onchange = fillFromData);
 ['z', 'sfm', 'fpt', 'ae', 'ap', 'so', 'maxRpm', 'maxHp'].forEach(k => $(k).oninput = run);
 fillFromData();
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');

@@ -53,7 +53,8 @@
       "catalog": "Sandvik Coromant catalog \u2014 CoroMill Plura cutting data, starting values (Roughing, ap x ae > Dc)",
       "url": "https://www.directools.com/documents/all/Sandvik_5739942_Catalog.pdf",
       "edition": "edition not stated (distributor-hosted)"
-     }
+     },
+     "coolant": null
     },
     {
      "iso": "M",
@@ -93,7 +94,8 @@
       "catalog": "Sandvik Coromant catalog \u2014 CoroMill Plura cutting data, starting values (Roughing, ap x ae > Dc)",
       "url": "https://www.directools.com/documents/all/Sandvik_5739942_Catalog.pdf",
       "edition": "edition not stated (distributor-hosted)"
-     }
+     },
+     "coolant": null
     },
     {
      "iso": "K",
@@ -133,7 +135,8 @@
       "catalog": "Sandvik Coromant catalog \u2014 CoroMill Plura cutting data, starting values (Roughing, ap x ae > Dc)",
       "url": "https://www.directools.com/documents/all/Sandvik_5739942_Catalog.pdf",
       "edition": "edition not stated (distributor-hosted)"
-     }
+     },
+     "coolant": null
     },
     {
      "iso": "N",
@@ -173,7 +176,8 @@
       "catalog": "Sandvik Coromant catalog \u2014 CoroMill Plura cutting data, starting values (Roughing, ap x ae > Dc)",
       "url": "https://www.directools.com/documents/all/Sandvik_5739942_Catalog.pdf",
       "edition": "edition not stated (distributor-hosted)"
-     }
+     },
+     "coolant": null
     },
     {
      "iso": "S",
@@ -213,7 +217,8 @@
       "catalog": "Sandvik Coromant catalog \u2014 CoroMill Plura cutting data, starting values (Roughing, ap x ae > Dc)",
       "url": "https://www.directools.com/documents/all/Sandvik_5739942_Catalog.pdf",
       "edition": "edition not stated (distributor-hosted)"
-     }
+     },
+     "coolant": null
     },
     {
      "iso": "H",
@@ -253,7 +258,8 @@
       "catalog": "Sandvik Coromant catalog \u2014 CoroMill Plura cutting data, starting values (Roughing, ap x ae > Dc)",
       "url": "https://www.directools.com/documents/all/Sandvik_5739942_Catalog.pdf",
       "edition": "edition not stated (distributor-hosted)"
-     }
+     },
+     "coolant": null
     }
    ]
   }

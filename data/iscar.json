@@ -56,7 +56,8 @@
       "url": "https://www.mecha.lt/uploads/Products/product_132/NPA24_54.pdf",
       "edition": "NPA 54-2024, Oct 2024 (distributor-hosted)",
       "notes": "fz only; no cutting speed published in this source. Application: titanium (ISO S)."
-     }
+     },
+     "coolant": null
     }
    ]
   }
