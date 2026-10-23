@@ -30,6 +30,6 @@ nav{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}nav button{min-heig
 <label>Max RPM<input id="maxRpm" type="number" inputmode="numeric" placeholder="machine max"></label></div>
 <div class="row" data-show="turn"><label>Nose radius (in)<input id="nose" type="number" inputmode="decimal" step="any"></label><label>Chipbreaker<input id="cb" placeholder="e.g. NF, F3M"></label></div>
 <div class="row" data-show="turn"><label>Length out of chuck (in)<input id="len" type="number" inputmode="decimal" step="any"></label><label>Support<select id="sup"><option value="none">None</option><option value="tail">Tailstock</option><option value="steady">Steady rest</option></select></label></div>
-<label>Machine HP<input id="maxHp" type="number" inputmode="decimal" value="15"></label>
+<label>Machine HP<input id="maxHp" type="number" inputmode="decimal" placeholder="machine HP"></label>
 <div class="out" id="out"></div><button class="sm" id="fav" style="margin-top:10px;width:100%">★ Save setup as favorite</button><div class="src" id="src"></div></main>
 <script type="module" src="app.js"></script></body></html>

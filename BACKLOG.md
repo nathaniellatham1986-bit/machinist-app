@@ -16,3 +16,5 @@ Data gaps: Iscar ECK-H4M vc; Sandvik Plura per-series data; Kennametal P/M grade
 ## Phase 3 (2026-10-23)
 - Done: Iscar IC807 Vc (p.246), TGSU groove-turn Vc for IC807/808/908/830 (pp.432-433), IC908 threading Vc (pp.710-711), Mitsubishi BC8110 feed/ap/coolant (Tool News B215G), Allied through-tool coolant (A30 pp.126-127), Emuge Rekord 2-KEG R15-VA NPT SFM (Cat. 510).
 - Gaps: IC806 P/M Vc, IC1008 PENTA Vc, BC8110 Vc, CNMG chipformer/grade, GEN2 coolant charts, 303 not in Allied's table, calculator spot-check (NOVO/CoroPlus need login; Allied's calculator is only a mobile app).
+- v3/v4 UI: material -> brand -> tool chain with a data filter, machine profiles (localStorage), turn nose radius/chipbreaker, DOC range warning, slender L/D>4 warning (general guideline), source badges, favorites/recents, remembered coolant and machine. Data: Iscar box labels (PENTA IC1008, VNMG 12T308-NF ISO M), a separate shop-proven record type (shop.json).
+- Open: BC8110 is a Mitsubishi grade per Sumitomo's own comparison chart. No Sumitomo BC8110 data exists, so it was kept as Mitsubishi.
