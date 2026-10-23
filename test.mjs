@@ -24,3 +24,10 @@ const th = J('./data/threads.json').threads; assert.equal(th.find(x => x.name ==
 for (const f of ['drill-allied', 'turn', 'tap']) for (const tl of J(`./data/${f}.json`).tools) { assert.ok(!/generic/i.test(tl.brand)); for (const c of tl.conditions) assert.ok(c.source?.url, tl.series); }
 assert.ok(!J('./data/index.json').brands.includes('generic.json'));
 console.log('all tests pass');
+const TJ = J('./data/turn.json').tools;
+const thr = TJ.find(x => x.series === 'Threading IC908').conditions.find(c => c.label.startsWith('Grp 6')); assert.deepEqual([thr.sfm.min, thr.sfm.max], [100, 180]);
+const nf = TJ.find(x => x.series === 'VNMG-NF IC807').conditions.find(c => c.label.startsWith('Grp 14')); assert.deepEqual([nf.sfm.min, nf.sfm.max], [100, 200]); assert.match(pick(nf.sfm).basis, /MIDPOINT/);
+assert.equal(TJ.find(x => x.series.startsWith('BC8110')).conditions[0].sfm, null);
+const em = J('./data/tap.json').tools.find(x => x.brand === 'Emuge').conditions.find(c => c.label.startsWith('P2.1')); assert.deepEqual([em.sfm.min, em.sfm.max], [7, 20]);
+assert.equal(J('./data/drill-allied.json').tools[0].conditions[0].coolant, 'through-tool');
+console.log('phase3 tests pass');

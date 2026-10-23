@@ -109,16 +109,124 @@
       "edition": "2022 (distributor mirror cata.supratool.com.mx)",
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page167.html"
      }
+    },
+    {
+     "label": "Grp 1 Non-alloy <0.25%C (mild steel) \u00b7 IC807 Vc",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 140,
+      "max": 230,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, p.246 ISO turning cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page248.html",
+      "page": "246"
+     }
+    },
+    {
+     "label": "Grp 6 Low alloy annealed (4140/4340) \u00b7 IC807 Vc",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 100,
+      "max": 180,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, p.246 ISO turning cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page248.html",
+      "page": "246"
+     }
+    },
+    {
+     "label": "Grp 7 Low alloy Q&T 275HB (4140/4340) \u00b7 IC807 Vc",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 95,
+      "max": 170,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, p.246 ISO turning cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page248.html",
+      "page": "246"
+     }
+    },
+    {
+     "label": "Grp 8 Low alloy Q&T 300HB (4140/4340) \u00b7 IC807 Vc",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 85,
+      "max": 150,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, p.246 ISO turning cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page248.html",
+      "page": "246"
+     }
+    },
+    {
+     "label": "Grp 9 Low alloy Q&T 350HB (4140/4340) \u00b7 IC807 Vc",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 70,
+      "max": 130,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, p.246 ISO turning cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page248.html",
+      "page": "246"
+     }
+    },
+    {
+     "label": "Grp 14 Austenitic stainless (303/304) \u00b7 IC807 Vc",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "min": 100,
+      "max": 200,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, p.246 ISO turning cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page248.html",
+      "page": "246"
+     }
     }
    ],
-   "notes": "Catalog gives ap and feed per insert; cutting speed is on catalog grade pages not yet transcribed: No manufacturer data for Vc."
+   "notes": "Insert rows give ap/feed (p.165). Vc rows are the IC807/IC907 column of the p.246 grade table (no feed in that table). Iscar gives a range only, so the default is the MIDPOINT. 303 and 304 both fall in Iscar group 14."
   },
   {
    "mode": "turn",
    "brand": "Iscar",
    "series": "VNMG F3M IC806",
    "conditions": [],
-   "notes": "Not yet sourced."
+   "notes": "No manufacturer data for P/M: the p.246 turning table lists IC806 only for ISO S (heat-resistant alloys). (In the groove-turn table pp.432-433, IC806 is 110-205 m/min for group 14, but that is grooving, not F3M turning.)"
   },
   {
    "mode": "turn",
@@ -132,28 +240,596 @@
    "brand": "Iscar",
    "series": "PENTA grooving IC1008",
    "conditions": [],
-   "notes": "Only reseller copies found; not loaded."
+   "notes": "No manufacturer data for Vc: IC1008 is not in the groove-turn speed table (pp.432-433), and the PENTA page gives only ap/feed."
   },
   {
    "mode": "turn",
    "brand": "Iscar",
-   "series": "Tang-Grip TGSU",
-   "conditions": [],
-   "notes": "Not yet sourced."
+   "series": "Tang-Grip TGSU (groove-turn)",
+   "conditions": [
+    {
+     "label": "Grp 1 Non-alloy <0.25%C (mild steel) \u00b7 IC807",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 160,
+      "max": 240,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 6 Low alloy annealed (4140/4340) \u00b7 IC807",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 125,
+      "max": 195,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 7 Low alloy Q&T 275HB (4140/4340) \u00b7 IC807",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 105,
+      "max": 170,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 8 Low alloy Q&T 300HB (4140/4340) \u00b7 IC807",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 105,
+      "max": 160,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 9 Low alloy Q&T 350HB (4140/4340) \u00b7 IC807",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 90,
+      "max": 150,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 14 Austenitic stainless (303/304) \u00b7 IC807",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "min": 105,
+      "max": 195,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 1 Non-alloy <0.25%C (mild steel) \u00b7 IC808",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 145,
+      "max": 220,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 6 Low alloy annealed (4140/4340) \u00b7 IC808",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 115,
+      "max": 180,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 7 Low alloy Q&T 275HB (4140/4340) \u00b7 IC808",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 95,
+      "max": 155,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 8 Low alloy Q&T 300HB (4140/4340) \u00b7 IC808",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 95,
+      "max": 145,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 9 Low alloy Q&T 350HB (4140/4340) \u00b7 IC808",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 85,
+      "max": 135,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 14 Austenitic stainless (303/304) \u00b7 IC808",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "min": 95,
+      "max": 180,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 1 Non-alloy <0.25%C (mild steel) \u00b7 IC908",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 140,
+      "max": 210,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 6 Low alloy annealed (4140/4340) \u00b7 IC908",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 110,
+      "max": 170,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 7 Low alloy Q&T 275HB (4140/4340) \u00b7 IC908",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 90,
+      "max": 150,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 8 Low alloy Q&T 300HB (4140/4340) \u00b7 IC908",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 90,
+      "max": 140,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 9 Low alloy Q&T 350HB (4140/4340) \u00b7 IC908",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 80,
+      "max": 130,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 14 Austenitic stainless (303/304) \u00b7 IC908",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "min": 90,
+      "max": 170,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 1 Non-alloy <0.25%C (mild steel) \u00b7 IC830",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 105,
+      "max": 155,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 6 Low alloy annealed (4140/4340) \u00b7 IC830",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 80,
+      "max": 125,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 7 Low alloy Q&T 275HB (4140/4340) \u00b7 IC830",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 65,
+      "max": 110,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 8 Low alloy Q&T 300HB (4140/4340) \u00b7 IC830",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 65,
+      "max": 105,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 9 Low alloy Q&T 350HB (4140/4340) \u00b7 IC830",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 60,
+      "max": 95,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    },
+    {
+     "label": "Grp 14 Austenitic stainless (303/304) \u00b7 IC830",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "min": 65,
+      "max": 125,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table",
+      "edition": "42-2022 (distributor mirror cata.supratool.com.mx)",
+      "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
+      "page": "432-433"
+     }
+    }
+   ],
+   "notes": "Groove-turn Vc by grade (choose your insert grade). Feed is not in this table. The default is the MIDPOINT of the range."
   },
   {
    "mode": "turn",
    "brand": "Iscar",
    "series": "Threading IC908",
-   "conditions": [],
-   "notes": "Not yet sourced."
+   "conditions": [
+    {
+     "label": "Grp 1 Non-alloy <0.25%C (mild steel) \u00b7 IC908 threading",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 115,
+      "max": 190,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Threading catalog 42-2022, Machining Data for Threading (user guide)",
+      "edition": "42-2022 pp.635-848 (PDF hosted by werkzeugservice.at)",
+      "url": "https://www.werkzeugservice.at/uploads/downloads/ISCAR_Gewindewerkzeuge%20und%20Eins%C3%A4tze-nicht%20rotierende%20Werkezughalter-42_2022-p635-848_2022.pdf",
+      "page": "710-711"
+     }
+    },
+    {
+     "label": "Grp 6 Low alloy annealed (4140/4340) \u00b7 IC908 threading",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 100,
+      "max": 180,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Threading catalog 42-2022, Machining Data for Threading (user guide)",
+      "edition": "42-2022 pp.635-848 (PDF hosted by werkzeugservice.at)",
+      "url": "https://www.werkzeugservice.at/uploads/downloads/ISCAR_Gewindewerkzeuge%20und%20Eins%C3%A4tze-nicht%20rotierende%20Werkezughalter-42_2022-p635-848_2022.pdf",
+      "page": "710-711"
+     }
+    },
+    {
+     "label": "Grp 7 Low alloy Q&T 275HB (4140/4340) \u00b7 IC908 threading",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 75,
+      "max": 140,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Threading catalog 42-2022, Machining Data for Threading (user guide)",
+      "edition": "42-2022 pp.635-848 (PDF hosted by werkzeugservice.at)",
+      "url": "https://www.werkzeugservice.at/uploads/downloads/ISCAR_Gewindewerkzeuge%20und%20Eins%C3%A4tze-nicht%20rotierende%20Werkezughalter-42_2022-p635-848_2022.pdf",
+      "page": "710-711"
+     }
+    },
+    {
+     "label": "Grp 8 Low alloy Q&T 300HB (4140/4340) \u00b7 IC908 threading",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 70,
+      "max": 135,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Threading catalog 42-2022, Machining Data for Threading (user guide)",
+      "edition": "42-2022 pp.635-848 (PDF hosted by werkzeugservice.at)",
+      "url": "https://www.werkzeugservice.at/uploads/downloads/ISCAR_Gewindewerkzeuge%20und%20Eins%C3%A4tze-nicht%20rotierende%20Werkezughalter-42_2022-p635-848_2022.pdf",
+      "page": "710-711"
+     }
+    },
+    {
+     "label": "Grp 9 Low alloy Q&T 350HB (4140/4340) \u00b7 IC908 threading",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 70,
+      "max": 135,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Threading catalog 42-2022, Machining Data for Threading (user guide)",
+      "edition": "42-2022 pp.635-848 (PDF hosted by werkzeugservice.at)",
+      "url": "https://www.werkzeugservice.at/uploads/downloads/ISCAR_Gewindewerkzeuge%20und%20Eins%C3%A4tze-nicht%20rotierende%20Werkezughalter-42_2022-p635-848_2022.pdf",
+      "page": "710-711"
+     }
+    },
+    {
+     "label": "Grp 14 Austenitic stainless (303/304) \u00b7 IC908 threading",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "min": 90,
+      "max": 140,
+      "unit": "m/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "ISCAR Threading catalog 42-2022, Machining Data for Threading (user guide)",
+      "edition": "42-2022 pp.635-848 (PDF hosted by werkzeugservice.at)",
+      "url": "https://www.werkzeugservice.at/uploads/downloads/ISCAR_Gewindewerkzeuge%20und%20Eins%C3%A4tze-nicht%20rotierende%20Werkezughalter-42_2022-p635-848_2022.pdf",
+      "page": "710-711"
+     }
+    }
+   ],
+   "notes": "Machining Data for Threading table. Group 1 is listed at 125HB, group 6 at 200HB, group 14 (austenitic/duplex) at 180HB. Infeed and passes are not loaded. The default is the MIDPOINT."
   },
   {
    "mode": "turn",
    "brand": "Mitsubishi",
    "series": "BC8110 CBN (requested as 'Sumitomo BC8110'; BC8110 is a Mitsubishi grade)",
-   "conditions": [],
-   "notes": "Mitsubishi B215E brochure shows test conditions and charts only (e.g. 250 m/min, 0.10 mm/rev, ap 0.2, 60 HRC) - not a published recommendation table. Not loaded."
+   "conditions": [
+    {
+     "label": "Hardened steel, external continuous cutting",
+     "iso": "H",
+     "coolant": "dry or wet (stated)",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "max": 0.2
+      }
+     },
+     "ap": {
+      "max": 0.35,
+      "unit": "mm"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Mitsubishi Materials",
+      "catalog": "Tool News B215G BC8100/MB8100 series, Recommended Cutting Conditions",
+      "edition": "2018.12 update (2017.9.E)",
+      "url": "https://www.mmc-carbide.com/download_file/f7122c42-eec6-43d1-a937-0b7bc5ccfb12/2021",
+      "notes": "States f < 0.20 mm/rev, ap < 0.35 mm, cutting mode Dry/Wet. Vc is shown only as a bar chart with no numbers, so: No manufacturer data for Vc. 250 m/min appears only as a test example."
+     }
+    }
+   ],
+   "notes": "Only an upper limit is published for feed. With no min, no default is invented. Enter YOUR VALUE."
   },
   {
    "mode": "turn",

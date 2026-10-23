@@ -12,3 +12,7 @@ Data gaps: Iscar ECK-H4M vc; Sandvik Plura per-series data; Kennametal P/M grade
 - Emuge tap speeds: not sourced. Guhring 3909 sheet covers stainless only.
 - Allied coolant charts (pp.126-127) not transcribed; 303 not listed by Allied (not mapped).
 - Generic carbide end mill and generic 135° cobalt drill removed per owner rule.
+
+## Phase 3 (2026-10-23)
+- Done: Iscar IC807 Vc (p.246), TGSU groove-turn Vc for IC807/808/908/830 (pp.432-433), IC908 threading Vc (pp.710-711), Mitsubishi BC8110 feed/ap/coolant (Tool News B215G), Allied through-tool coolant (A30 pp.126-127), Emuge Rekord 2-KEG R15-VA NPT SFM (Cat. 510).
+- Gaps: IC806 P/M Vc, IC1008 PENTA Vc, BC8110 Vc, CNMG chipformer/grade, GEN2 coolant charts, 303 not in Allied's table, calculator spot-check (NOVO/CoroPlus need login; Allied's calculator is only a mobile app).
