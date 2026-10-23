@@ -21,7 +21,7 @@ assert.equal(+t.mrr.toFixed(3), +(500 * 2 / 3.82 * 12 * .04 * .00984).toFixed(3)
 const tp = tap({ sfm: 60, d: .25, pitch: .05 }); assert.equal(Math.round(tp.rpm), 917); assert.equal(+tp.ipm.toFixed(2), 45.84);
 const th = J('./data/threads.json').threads; assert.equal(th.find(x => x.name === '1/4-20').drill75_in, .2013); assert.equal(th.find(x => x.name === 'M6x1').drill75_mm, 5.03);
 // every loaded condition has a source and a feed/speed or explicit absence; no generic tools
-for (const f of ['drill-allied', 'turn', 'tap']) for (const tl of J(`./data/${f}.json`).tools) { assert.ok(!/generic/i.test(tl.brand)); for (const c of tl.conditions) assert.ok(c.source?.url, tl.series); }
+for (const f of ['drill-allied', 'turn', 'tap']) for (const tl of J(`./data/${f}.json`).tools) { assert.ok(!/generic/i.test(tl.brand)); for (const c of tl.conditions) assert.ok(c.source?.url || ["label","shop"].includes(c.source?.kind), tl.series); }
 assert.ok(!J('./data/index.json').brands.includes('generic.json'));
 console.log('all tests pass');
 const TJ = J('./data/turn.json').tools;
@@ -31,3 +31,6 @@ assert.equal(TJ.find(x => x.series.startsWith('BC8110')).conditions[0].sfm, null
 const em = J('./data/tap.json').tools.find(x => x.brand === 'Emuge').conditions.find(c => c.label.startsWith('P2.1')); assert.deepEqual([em.sfm.min, em.sfm.max], [7, 20]);
 assert.equal(J('./data/drill-allied.json').tools[0].conditions[0].coolant, 'through-tool');
 console.log('phase3 tests pass');
+const sh = J('./data/shop.json').tools[0].conditions[0]; assert.equal(sh.status, 'shop-proven'); assert.notEqual(sh.status, 'verified');
+assert.ok(TJ.every(t => t.conditions.every(c => c.status !== 'shop-proven')));
+const pe = TJ.find(x => x.series.startsWith('PENTA')).conditions[0]; assert.deepEqual([pe.sfm.min, pe.sfm.max, pe.feed.range.max], [60, 150, .05]);

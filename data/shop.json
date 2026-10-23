@@ -1,0 +1,37 @@
+{
+ "brand": "shop-proven",
+ "tools": [
+  {
+   "mode": "turn",
+   "brand": "Shop-proven (not manufacturer)",
+   "series": "4 mm carbide parting tool",
+   "conditions": [
+    {
+     "label": "304 SS \u00b7 Mazak QT 350 MY \u00b7 good finish",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "value": 180,
+      "unit": "ft/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "range": {
+       "value": 0.0018
+      }
+     },
+     "status": "shop-proven",
+     "source": {
+      "kind": "shop",
+      "manufacturer": "Shop record",
+      "catalog": "Run on Mazak QT 350 MY, 304 stainless, good finish",
+      "edition": "Oct 15 2026",
+      "url": null
+     }
+    }
+   ],
+   "notes": "A setup that worked at one shop. This is not manufacturer data."
+  }
+ ]
+}

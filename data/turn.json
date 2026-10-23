@@ -111,6 +111,38 @@
      }
     },
     {
+     "label": "VNMG 12T308-NF (2.5-2-NF) ISO M \u00b7 box label",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "min": 200,
+      "max": 300,
+      "unit": "m/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.08,
+       "max": 0.24
+      }
+     },
+     "ap": {
+      "min": 1.0,
+      "max": 3.0,
+      "unit": "mm"
+     },
+     "status": "verified",
+     "source": {
+      "kind": "label",
+      "manufacturer": "Iscar",
+      "catalog": "Iscar box label, photographed by user",
+      "edition": "Oct 2026",
+      "url": null,
+      "notes": "Box label: Vc 200-300 m/min (660-990 SFM), f 0.080-0.240 mm/rev, ap 1.00-3.00 mm, ISO M. Catalog p.246 gives 100-200 m/min for group 14; the two sources differ, so both are shown."
+     }
+    },
+    {
      "label": "Grp 1 Non-alloy <0.25%C (mild steel) \u00b7 IC807 Vc",
      "iso": "P",
      "coolant": null,
@@ -239,8 +271,36 @@
    "mode": "turn",
    "brand": "Iscar",
    "series": "PENTA grooving IC1008",
-   "conditions": [],
-   "notes": "No manufacturer data for Vc: IC1008 is not in the groove-turn speed table (pp.432-433), and the PENTA page gives only ap/feed."
+   "conditions": [
+    {
+     "label": "PENTA 17N120P010RS IC1008 \u00b7 box label (material not stated)",
+     "iso": "*",
+     "coolant": null,
+     "sfm": {
+      "min": 60,
+      "max": 150,
+      "unit": "m/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "status": "verified",
+     "source": {
+      "kind": "label",
+      "manufacturer": "Iscar",
+      "catalog": "Iscar box label, photographed by user",
+      "edition": "Oct 2026",
+      "url": null,
+      "notes": "Box label: Vc 60-150 m/min (200-500 SFM), f 0.02-0.05 mm/rev."
+     }
+    }
+   ],
+   "notes": "Box label data only. Catalog: no manufacturer data for Vc: IC1008 is not in the groove-turn speed table (pp.432-433), and the PENTA page gives only ap/feed."
   },
   {
    "mode": "turn",
@@ -801,7 +861,7 @@
   {
    "mode": "turn",
    "brand": "Mitsubishi",
-   "series": "BC8110 CBN (requested as 'Sumitomo BC8110'; BC8110 is a Mitsubishi grade)",
+   "series": "BC8110 CBN (Mitsubishi grade; Sumitomo's own comparison chart lists BC8110 under Mitsubishi, Sumitomo equivalents BNC2010/BN1000)",
    "conditions": [
     {
      "label": "Hardened steel, external continuous cutting",

@@ -39,7 +39,8 @@
   "drill-allied.json"
  ],
  "turn": [
-  "turn.json"
+  "turn.json",
+  "shop.json"
  ],
  "tap": [
   "tap.json"
