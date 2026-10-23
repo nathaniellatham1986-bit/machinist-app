@@ -4,7 +4,7 @@ const idx = await (await fetch('data/index.json')).json();
 const tools = (await Promise.all(idx.brands.map(b => fetch('data/' + b).then(r => r.json())))).flatMap(b => b.tools);
 tools.forEach((t, i) => $('tool').add(new Option(`${t.brand} — ${t.series}`, i)));
 idx.materialGroups.forEach(([k, v]) => $('mat').add(new Option(`${k} — ${v}`, k)));
-const q=new URLSearchParams(location.search); if(q.get("tool")) $("tool").value=q.get("tool"); if(q.get("mat")) $("mat").value=q.get("mat");
+const q=new URLSearchParams(location.search); if(q.get("tool")) $("tool").value=q.get("tool"); if(q.get("mat")) $("mat").value=q.get("mat"); if(q.get("d")) $("d").value=q.get("d");
 const MM = 25.4, toIn = (v, u) => u === 'mm' ? v / MM : v;
 function nearest(byD, unit, dIn) {
   let best = null, err = 1e9;
