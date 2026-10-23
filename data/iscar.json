@@ -1,0 +1,64 @@
+{
+ "brand": "Iscar",
+ "tools": [
+  {
+   "brand": "Iscar",
+   "series": "ECK-H4M-CFR",
+   "type": "solid carbide end mill",
+   "flutes": 4,
+   "coating": "IC900",
+   "diameters_mm": [
+    6,
+    8,
+    10,
+    12,
+    16,
+    20
+   ],
+   "recommendations": [
+    {
+     "iso": "S",
+     "subgroup": "Ti",
+     "vc": null,
+     "fz": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "min": 0.03,
+        "max": 0.06
+       },
+       "8": {
+        "min": 0.03,
+        "max": 0.06
+       },
+       "10": {
+        "min": 0.03,
+        "max": 0.07
+       },
+       "12": {
+        "min": 0.04,
+        "max": 0.08
+       },
+       "16": {
+        "min": 0.05,
+        "max": 0.08
+       },
+       "20": {
+        "min": 0.05,
+        "max": 0.08
+       }
+      }
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Iscar",
+      "catalog": "Iscar New Product Announcement 54-2024 \u2014 ECK-H4M-CFR (IC900) Recommended Machining Data",
+      "url": "https://www.mecha.lt/uploads/Products/product_132/NPA24_54.pdf",
+      "edition": "NPA 54-2024, Oct 2024 (distributor-hosted)",
+      "notes": "fz only; no cutting speed published in this source. Application: titanium (ISO S)."
+     }
+    }
+   ]
+  }
+ ]
+}
