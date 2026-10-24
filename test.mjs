@@ -101,3 +101,21 @@ const pe = TJ.find(x => x.series.startsWith('PENTA')).conditions[0]; assert.deep
   assert.equal(matchMat(h13h, { iso: 'H', label: 'H13 48 HRC' }), 'named');
   const c = css({ sfm: 500, d0: 4, d1: 0.5, maxRpm: 3000 }); assert.equal(c.rpm1, 3000); assert.ok(Math.abs(c.clampDia - 0.6366) < 1e-3);
   assert.equal(boreLimit('steel'), 4); assert.equal(boreLimit('carbide'), 6); console.log('review1 tests pass'); }
+{ const { gradeList, pickGrade, geoName } = await import('./calc.js');
+  const T = { conditions: [
+    { grade: 'A1', iso: 'K', label: 'cast iron', sfm: 1 },
+    { grade: 'B2', iso: 'P', label: 'steel', sfm: 1 },
+    { grade: 'C3, D4', iso: 'P', label: 'steel · Priority: First choice', sfm: 1 },
+    { grade: 'E5', iso: 'P', label: 'steel', sfm: null } ] };
+  const ok = c => c.iso === 'P' && !!c.sfm, L = gradeList([{ key: 'f#0', tool: T }], ok);
+  assert.deepEqual(L.map(o => o.g), ['B2', 'C3', 'D4', 'A1', 'E5'], 'data grades first in record order, no-data last');
+  assert.deepEqual(L.map(o => o.has), [true, true, true, false, false]);
+  assert.equal(pickGrade(L, '').pick.g, 'C3'); assert.equal(pickGrade(L, '').why, 'rec');
+  assert.equal(pickGrade(L, 'f#0|B2').why, 'kept', 'user choice survives');
+  assert.equal(pickGrade(L, 'f#0|A1').pick.g, 'C3', 'no-data choice not kept');
+  const N = gradeList([{ key: 'k', tool: { conditions: [{ grade: 'X', label: 'steel', sfm: 1 }, { grade: 'Y', label: 'steel', sfm: 1 }] } }], () => true);
+  assert.deepEqual(pickGrade(N, '').why, 'auto'); assert.equal(pickGrade(N, '').pick.g, 'X');
+  assert.equal(pickGrade(gradeList([{ key: 'k', tool: T }], () => false), '').pick, null);
+  assert.equal(geoName({ series: 'CB7015 turning grade (2015 catalogue, inch start values)', type: 'Turning insert grade — general turning', grade: 'CB7015' }), 'Turning insert grades · 2015 catalogue, inch start values');
+  assert.equal(geoName({ series: 'TungCut AH7025', grade: 'AH7025' }), 'TungCut');
+  console.log('grade tests pass'); }

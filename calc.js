@@ -93,3 +93,23 @@ export const tapTypeOf = t => { const s = `${t.type ?? ''} ${t.series}`; return 
 export const boreLimit = shank => shank === 'carbide' ? 6 : 4;
 export const css = ({ sfm, d0, d1, maxRpm }) => { const r = d => (sfm * 12) / (Math.PI * d), at = d => maxRpm ? Math.min(r(d), maxRpm) : r(d);
   return { rpm0: at(d0), rpm1: at(d1), clampDia: maxRpm ? (sfm * 12) / (Math.PI * maxRpm) : null }; };
+// Grade/coating split (pure). Order = record order; never our own ranking.
+export const REC = /first.?choice|recommended grade|preferred grade/i;
+export const gradesOf = (t, c) => String(c.grade ?? t.grade ?? t.coating ?? '').split(/,\s*/).map(x => x.trim()).filter(Boolean);
+// members: [{ key, tool }]; ok(c): condition matches material & has data. Returns grades with data first, then no-data ones.
+export const gradeList = (members, ok) => { const opts = new Map();
+  for (const { key, tool } of members) for (const c of tool.conditions) for (const g of gradesOf(tool, c)) {
+    const o = opts.get(g) ?? { g, id: key + '|' + g, has: false, rec: false }; opts.set(g, o);
+    if (ok(c)) { if (!o.has) o.id = key + '|' + g; o.has = true; if (REC.test(`${c.label ?? ''} ${c.note ?? ''}`)) o.rec = true; } }
+  const L = [...opts.values()]; return [...L.filter(o => o.has), ...L.filter(o => !o.has)]; };
+// cur: previously chosen id (kept if it still has data). why: 'kept' | 'rec' | 'auto' | null
+export const pickGrade = (list, cur) => { const has = list.filter(o => o.has);
+  const k = has.find(o => o.id === cur); if (k) return { pick: k, why: k.rec ? 'rec' : 'kept' };
+  const r = has.find(o => o.rec); if (r) return { pick: r, why: 'rec' };
+  return has[0] ? { pick: has[0], why: 'auto' } : { pick: null, why: null }; };
+// Display name for a tool with the grade stripped; grade-only records fall back to the record's own series qualifier / type.
+export const geoName = t => { const short = s => s.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim().slice(0, 48);
+  let s = t.series; if (t.grade) for (const g of t.grade.split(/[,/]\s*/)) s = s.split(g).join(' ');
+  const n = short(s.replace(/\b(turning|parting|grooving|threading|milling|drilling|insert)?\s*grade\b/gi, ' ').replace(/\s*[—–-]\s*$/, '').replace(/^\s*[—–-]\s*/, ''));
+  if (n) return n; const q = (t.series.match(/\(([^)]*)\)/) ?? [])[1], ty = (t.type ?? '').split(/\s+[—–-]\s+/)[0];
+  return [ty ? ty.replace(/grade$/i, 'grades') : 'Grades', q].filter(Boolean).join(' · ').slice(0, 70); };

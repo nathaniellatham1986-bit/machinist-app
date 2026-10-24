@@ -1,5 +1,5 @@
 import { MODES, migrate, forMode } from './recall.js';
-import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, kindOf, tapTypeOf, boreLimit, css, stickoutFactor } from './calc.js';
+import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor } from './calc.js';
 const $ = id => document.getElementById(id);
 const J = u => fetch(u).then(r => r.json());
 const idx = await J('data/index.json');
@@ -64,8 +64,8 @@ const toolOk = t => { const m = matSel(); if (m && !(t.mats.includes(m.id) || t.
   return !$('onlyData').checked || t.dataIsos.some(i => i === '*' || !(m?.iso || $('iso').value) || i === (m?.iso || $('iso').value)); };
 const inMode = () => SUM.filter(t => t.mode === mode && toolOk(t) && (mode !== 'tap' || !$('tapT').value || tapTypeOf(t) === $('tapT').value)
   && (mode !== 'turn' || (() => { const o = turnOpOf(t); const want = $('top').value; return o === want; })()));
-let GROUPS = {};
-const geo = t => { let s = t.series; if (t.grade) for (const g of t.grade.split(/[,/]\s*/)) s = s.split(g).join(' '); s = short(s.replace(/\b(turning|parting|grooving|threading|milling|drilling|insert)?\s*grade\b/gi, ' ').replace(/\s*[—–-]\s*$/, '').replace(/^\s*[—–-]\s*/, '')); return s || (t.mode === 'turn' ? 'Insert' : 'Tool'); };
+let GROUPS = {}, GUSER = false;
+const geo = geoName;
 const short = s => s.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim().slice(0, 48);
 function fillBrand() { const cur = $('brand').value; $('brand').length = 0; $('brand').add(new Option('All brands', ''));
   [...new Set(inMode().map(t => t.brand))].sort().forEach(b => $('brand').add(new Option(b, b)));
@@ -86,22 +86,17 @@ function fillTool() { const cur = $('tool').value, b = $('brand').value, words =
   $('tool').length = 0; list.slice(0, MAXOPT).forEach(([t, g]) => $('tool').add(new Option(b ? g : `${t.brand} — ${g}`, t.key)));
   $('tn').textContent = !hits.length && mode === 'turn' && $('top').value === 'Face' ? '(none: no record says facing)' : hits.length > MAXOPT ? `(${MAXOPT} of ${hits.length}; refine search)` : `(${hits.length})`;
   if (cur && !GROUPS[cur]) { const g = Object.keys(GROUPS).find(k => GROUPS[k].includes(cur)); if (g) $('tool').value = g; } else if ([...$('tool').options].some(o => o.value === cur)) $('tool').value = cur; return fillGrade(); }
-const REC = /first.?choice|recommended grade|preferred grade/i;
-const gradesOf = (t, c) => String(c.grade ?? t.grade ?? t.coating ?? '').split(/,\s*/).map(x => x.trim()).filter(Boolean);
 async function fillGrade(keep) { const keys = GROUPS[$('tool').value] ?? ($('tool').value ? [$('tool').value] : []); await Promise.all(keys.map(ensure));
-  const cur = keep ?? $('grade').value, opts = new Map();
-  for (const k of keys) { const t = toolBy(k); if (!t) continue; for (const c of t.conditions) for (const g of gradesOf(t, c)) { const o = opts.get(g) ?? { g, id: k + '|' + g, has: false, rec: false }; opts.set(g, o);
-    if (isoOk(c) && hasData(c)) { if (!o.has) o.id = k + '|' + g; o.has = true; if (REC.test(`${c.label} ${c.note ?? ''}`)) o.rec = true; } } }
-  const L = [...opts.values()], s = $('grade'); s.length = 0; const kd = kindOf(SUM.find(x => x.key === keys[0]) ?? {});
+  const cur = keep ?? (GUSER ? $('grade').value : ''), L = gradeList(keys.map(k => ({ key: k, tool: toolBy(k) })).filter(m => m.tool), c => isoOk(c) && !!hasData(c));
+  const s = $('grade'); s.length = 0; const kd = kindOf(SUM.find(x => x.key === keys[0]) ?? {});
   const ts = SUM.find(x => x.key === keys[0]) ?? {}, tx = `${ts.type ?? ''} ${ts.series ?? ''}`;
   $('gradeT').textContent = kd === 'Tap' || ts.coating || (!/Insert|Boring/.test(kd) && !/insert|indexable/i.test(tx) && /solid|end ?mill|HSS|twist|carbide drill/i.test(tx)) ? 'Coating' : 'Grade';
   $('gradeL').hidden = L.length < 2 && keys.length < 2; if ($('gradeL').hidden) { $('gNote').textContent = ''; return fillCond(); }
   L.filter(o => o.has).forEach(o => s.add(new Option(o.g, o.id)));
   L.filter(o => !o.has).forEach(o => { const x = new Option(`${o.g} · No mfr data for this material`, o.id); x.disabled = true; x.style.color = '#777'; s.add(x); });
-  const mat = matSel()?.name ?? (idx.materialGroups.find(([k]) => k === $('iso').value)?.[1]) ?? 'this material', has = L.filter(o => o.has);
-  const pick = has.find(o => o.id === cur) ?? has.find(o => o.rec) ?? has[0];
-  if (pick) s.value = pick.id; else s.value = '';
-  $('gNote').textContent = !pick ? 'No grade has manufacturer data for this material' : pick.id === cur && keep == null && !pick.rec ? 'Your pick' : pick.rec ? `Mfr recommended for ${mat}` : 'Auto-picked, not a manufacturer recommendation';
+  const mat = matSel()?.name ?? (idx.materialGroups.find(([k]) => k === $('iso').value)?.[1]) ?? 'this material', { pick: P, why } = pickGrade(L, cur);
+  s.value = P ? P.id : '';
+  $('gNote').textContent = !P ? 'No grade has manufacturer data for this material' : why === 'rec' ? `Mfr recommended for ${mat}` : why === 'kept' ? 'Your pick' : 'Auto-picked, not a manufacturer recommendation';
   return fillCond(); }
 const nrKey = c => c.noseRadius ? `${c.noseRadius.value ?? c.noseRadius.label} ${c.noseRadius.unit}` : '';
 // Turn nose radius / chipbreaker: only the values published in this tool's matching records; read-only when there is one.
@@ -297,7 +292,7 @@ $('unit').onclick = () => { const KS = [...LEN, 'sfm', 'fpt'], x = Object.fromEn
   KS.forEach(k => setIn(k, x[k])); $('aeU').options[1].text = $('apU').options[1].text = UL(); showEng(); $('sfmLbl').firstChild.textContent = metric ? 'Speed (m/min)' : 'SFM';
   $('feedLbl').firstChild.textContent = $('feedLbl').firstChild.textContent.replace(/\b(in|mm)\//, UL() + '/').replace(/\((in|mm)\)/, `(${UL()})`); $('unit').textContent = metric ? 'mm' : 'inch'; document.querySelectorAll('.u').forEach(e => e.textContent = `(${UL()})`);
   $('dLbl').firstChild.textContent = $('dLbl').firstChild.textContent.replace(/\((in|mm)\)/, `(${UL()})`); run(); };
-$('matPick').onchange = () => { const [i, m] = $('matPick').value.split(':'); $('iso').value = i; $('mat').value = m ?? ''; fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillTool; $('tq').oninput = fillTool; $('cq').oninput = fillCond; $('tool').onchange = () => { $('cq').value = ''; fillGrade(''); }; $('grade').onchange = () => { $('gNote').textContent = 'Your pick'; fillCond(); }; $('mach').onchange = applyMachine;
+$('matPick').onchange = () => { const [i, m] = $('matPick').value.split(':'); $('iso').value = i; $('mat').value = m ?? ''; fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillTool; $('tq').oninput = fillTool; $('cq').oninput = fillCond; $('tool').onchange = () => { GUSER = false; $('cq').value = ''; fillGrade(''); }; $('grade').onchange = () => { GUSER = true; fillGrade(); }; $('mach').onchange = applyMachine;
 $('cond').onchange = () => { fill(); recent(); }; ['cool', 'thr'].forEach(k => $(k).onchange = fill); $('d').onchange = () => { if (mode === 'mill') showEng(); fill(); };
 ['ae', 'aeU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ae') ENG.ae = 'yours'; readEng(); }));
 ['ap', 'apU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ap') ENG.ap = 'yours'; readEng(); }));
@@ -311,7 +306,7 @@ if (q.get('mat')) $('mat').value = q.get('mat'); fillMat();
 if (q.get('d')) $('d').value = q.get('d');
 for (const k of ['len', 'sup', 'apT', 'maxRpm']) if (q.get(k)) $(k).value = q.get(k);
 await setMode(mode);
-if (q.get('tool')) { const t = SUM.find(x => x.key === q.get('tool')); if (t) { $('onlyData').checked = false; await fillBrand(); $('brand').value = t.brand; await fillTool(); const g = Object.keys(GROUPS).find(k => GROUPS[k].includes(t.key)) ?? t.key; $('tool').value = g; await fillGrade(''); if ([...$('grade').options].some(o => o.value.startsWith(t.key + '|') && !o.disabled) && !$('grade').value.startsWith(t.key + '|')) { $('grade').value = [...$('grade').options].find(o => o.value.startsWith(t.key + '|') && !o.disabled).value; await fillCond(); } } }
+if (q.get('tool')) { const t = SUM.find(x => x.key === q.get('tool')); if (t) { $('onlyData').checked = false; if (t.mode !== mode) await setMode(t.mode); await fillBrand(); $('brand').value = t.brand; await fillTool(); const g = Object.keys(GROUPS).find(k => GROUPS[k].includes(t.key)) ?? t.key; $('tool').value = g; await fillGrade(''); if ([...$('grade').options].some(o => o.value.startsWith(t.key + '|') && !o.disabled) && !$('grade').value.startsWith(t.key + '|')) { $('grade').value = [...$('grade').options].find(o => o.value.startsWith(t.key + '|') && !o.disabled).value; await fillCond(); } } }
 if (q.get('cond')) { $('cond').value = q.get('cond'); fill(); }
 if (q.get('thr')) { $('thr').value = q.get('thr'); fill(); }
 if (q.get('d')) { $('d').value = q.get('d'); fill(); }
