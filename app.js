@@ -53,7 +53,7 @@ $('mSave').onclick = () => { const n = $('mName').value.trim(); if (!n) return; 
 $('mDel').onclick = () => { const m = LS.get('machines', []); if ($('mach').value === '') return; m.splice(+$('mach').value, 1); LS.set('machines', m); $('mach').value = ''; machines(); };
 // Selection chain: material -> brand -> tool -> condition
 function setMode(m) {
-  mode = m; Object.assign(ENG, { key: '', ae: 'default', ap: 'default' }); // YOUR VALUE tags belong to one tab
+  mode = m; TUSER = false; Object.assign(ENG, { key: '', ae: 'default', ap: 'default' }); // YOUR VALUE tags belong to one tab
   recallList(); document.querySelectorAll('[data-mode]').forEach(b => b.classList.toggle('on', b.dataset.mode === m));
   document.querySelectorAll('[data-show]').forEach(e => e.hidden = !e.dataset.show.split(' ').includes(m));
   $('feedLbl').firstChild.textContent = m === 'mill' ? `Chip load (${UL()}/tooth)` : m === 'tap' ? `Pitch (${UL()})` : m === 'bore' ? `Feed (${UL()}, per tooth or per rev as printed)` : `Feed (${UL()}/rev)`;
@@ -66,7 +66,7 @@ const toolOk = t => { const m = matSel(); if (m && !(t.mats.includes(m.id) || t.
 const inMode = () => SUM.filter(t => t.mode === mode && toolOk(t) && (mode !== 'tap' || (!$('tapT').value || tapTypeOf(t) === $('tapT').value) && isTaperThread(`${t.series} ${t.type ?? ''}`) === isTaperThread(threads.threads[$('thr').value]?.name))
   && (mode !== 'turn' || (() => { return turnOpsOf(t).includes($('top').value); })())
   && (mode !== 'turn' || !$('pass').value || (t.ps ?? []).includes($('pass').value))); // Turn: a set Pass lists only tools with data for it
-let GROUPS = {}, GUSER = false;
+let GROUPS = {}, GUSER = false, TUSER = false; // TUSER: user picked the tool by hand, so a coolant change keeps it
 const geo = geoName;
 // Part and Groove: depth of cut and MRR do not apply; Part runs to center (finish Ø 0).
 const PG = () => mode === 'turn' && /Groove|Part/.test($('top').value), PART = () => mode === 'turn' && /Part/.test($('top').value);
@@ -318,8 +318,8 @@ $('unit').onclick = () => { const KS = [...LEN, 'sfm', 'fpt'], x = Object.fromEn
   KS.forEach(k => setIn(k, x[k])); $('aeU').options[1].text = $('apU').options[1].text = UL(); showEng(); $('sfmLbl').firstChild.textContent = metric ? 'Speed (m/min)' : 'SFM';
   $('feedLbl').firstChild.textContent = $('feedLbl').firstChild.textContent.replace(/\b(in|mm)\//, UL() + '/').replace(/\((in|mm)\)/, `(${UL()})`); $('unit').textContent = metric ? 'mm' : 'inch'; document.querySelectorAll('.u').forEach(e => e.textContent = `(${UL()})`);
   $('dLbl').firstChild.textContent = $('dLbl').firstChild.textContent.replace(/\((in|mm)\)/, `(${UL()})`); run(); };
-$('matPick').onchange = () => { const [i, m] = $('matPick').value.split(':'); $('iso').value = i; $('mat').value = m ?? ''; fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillTool; $('tq').oninput = fillTool; $('cq').oninput = fillCond; $('tool').onchange = () => { GUSER = false; $('cq').value = ''; fillGrade(''); }; $('grade').onchange = () => { GUSER = true; fillGrade(); }; $('mach').onchange = applyMachine;
-$('cond').onchange = () => { fill(); recent(); }; $('cool').onchange = () => { if (mode === 'drill') { const k = $('tool').value; fillTool(); if ($('tool').value === k) fill(); } else fill(); }; $('thr').onchange = fillBrand; $('d').onchange = () => { if (mode === 'mill') showEng(); if (mode === 'drill') { const k = $('tool').value; fillTool(); if ($('tool').value === k) return fill(); return; } fill(); };
+$('matPick').onchange = () => { TUSER = false; const [i, m] = $('matPick').value.split(':'); $('iso').value = i; $('mat').value = m ?? ''; fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillTool; $('tq').oninput = fillTool; $('cq').oninput = fillCond; $('tool').onchange = () => { TUSER = true; GUSER = false; $('cq').value = ''; fillGrade(''); }; $('grade').onchange = () => { GUSER = true; fillGrade(); }; $('mach').onchange = applyMachine;
+$('cond').onchange = () => { fill(); recent(); }; $('cool').onchange = () => { if (mode === 'drill') { const k = $('tool').value; if (!TUSER) $('tool').value = ''; fillTool(); if ($('tool').value === k) fill(); } else fill(); }; $('thr').onchange = fillBrand; $('d').onchange = () => { TUSER = false; if (mode === 'mill') showEng(); if (mode === 'drill') { const k = $('tool').value; fillTool(); if ($('tool').value === k) return fill(); return; } fill(); };
 ['ae', 'aeU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ae') ENG.ae = 'yours'; readEng(); }));
 ['ap', 'apU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ap') ENG.ap = 'yours'; readEng(); }));
 $('apT').addEventListener('input', () => { ENG.ap = 'yours'; engTags(); });
