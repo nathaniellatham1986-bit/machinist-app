@@ -1,0 +1,42 @@
+{
+ "schema": 1,
+ "builder": "Makino",
+ "models": [
+  {
+   "model": "a51nx",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Standard 14000",
+     "rpm": 14000,
+     "taper": "BT40 / CAT40",
+     "kw_peak": 30,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 303,
+     "rating_note": null
+    },
+    {
+     "option": "Optional 20000",
+     "rpm": 20000,
+     "taper": "HSK-A63",
+     "kw_peak": null,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.makino.com/en-us/machine-technology/machines/horizontal-4-axis/a51nx",
+    "title": "Makino a51nx",
+    "accessed": "2026-10-24"
+   }
+  }
+ ]
+}
