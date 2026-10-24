@@ -1,5 +1,5 @@
 {
- "note": "Specific materials shown in the Material picker. Map a record here ONLY when its source names that material (or a group that plainly covers it, e.g. 'austenitic stainless'). 303 stays separate from 304/316.",
+ "note": "Specific materials shown in the Material picker. Map a record here ONLY when its source names that material (or a group that plainly covers it, e.g. 'austenitic stainless'). 303 stays separate from 304/316. Entries with 'named' (regex) link a record only when its own text names the alloy; otherwise the app shows the ISO group whose printed description ('group' regex) and printed hardness ('hb', HB range) fit, labeled 'matched by group'.",
  "materials": [
   {
    "id": "p-mild",
@@ -30,6 +30,135 @@
    "id": "ss400",
    "iso": "M",
    "name": "Stainless, 400 series"
+  },
+  {
+   "id": "al6061",
+   "iso": "N",
+   "name": "Aluminum 6061",
+   "named": "\\b6061\\b",
+   "group": "alumin|\\bAl\\b|wrought"
+  },
+  {
+   "id": "brass-c360",
+   "iso": "N",
+   "name": "Brass C360 (free-cutting)",
+   "named": "C360|C36000|360 brass|free.?cutting brass",
+   "group": "brass|copper alloy|copper"
+  },
+  {
+   "id": "plastic",
+   "iso": "O",
+   "name": "Plastics (acetal, nylon, PEEK…)",
+   "named": "plastic|acetal|delrin|nylon|PEEK|acrylic|UHMW|polycarb|thermoplastic",
+   "group": "plastic|acetal|delrin|nylon|PEEK|acrylic|UHMW|polycarb|thermoplastic"
+  },
+  {
+   "id": "gray-iron",
+   "iso": "K",
+   "name": "Gray cast iron",
+   "named": "gr[ae]y (cast )?iron|\\bGG ?\\d|\\bFC ?\\d|class ?[2-6]0\\b",
+   "group": "gr[ae]y|lamellar|cast iron(?!.*(ductile|nodular))"
+  },
+  {
+   "id": "ductile-iron",
+   "iso": "K",
+   "name": "Ductile (nodular) iron",
+   "named": "ductile|nodular|\\bGGG|\\bFCD|65-45-12|80-55-06",
+   "group": "ductile|nodular|spheroid|cast iron(?!.*(gr[ae]y|lamellar))"
+  },
+  {
+   "id": "ti64",
+   "iso": "S",
+   "name": "Titanium Ti-6Al-4V",
+   "named": "Ti-?6Al-?4V|Ti ?6-?4\\b|grade 5",
+   "group": "titan"
+  },
+  {
+   "id": "in718",
+   "iso": "S",
+   "name": "Inconel 718",
+   "named": "Inconel ?718|\\bIN ?718|alloy 718",
+   "group": "nickel|inconel|heat.?res|HRSA|super ?alloy|Ni.?based"
+  },
+  {
+   "id": "h13-ann",
+   "iso": "P",
+   "name": "H13 · annealed (≤ ~20 HRC)",
+   "named": "\\bH13\\b|1\\.2344|SKD ?61",
+   "hb": [
+    0,
+    235
+   ]
+  },
+  {
+   "id": "h13-hard",
+   "iso": "H",
+   "name": "H13 · hardened 44–52 HRC",
+   "named": "\\bH13\\b|1\\.2344|SKD ?61",
+   "hb": [
+    409,
+    500
+   ]
+  },
+  {
+   "id": "p20-pre",
+   "iso": "P",
+   "name": "P20 · pre-hard 28–32 HRC",
+   "named": "\\bP20\\b|1\\.2311|1\\.2738",
+   "hb": [
+    271,
+    301
+   ]
+  },
+  {
+   "id": "p20-ann",
+   "iso": "P",
+   "name": "P20 · annealed",
+   "named": "\\bP20\\b|1\\.2311|1\\.2738",
+   "hb": [
+    0,
+    235
+   ]
+  },
+  {
+   "id": "4140-ann",
+   "iso": "P",
+   "name": "4140 · annealed",
+   "named": "\\b4140\\b|42CrMo4|SCM ?440",
+   "hb": [
+    0,
+    235
+   ]
+  },
+  {
+   "id": "4140-ht",
+   "iso": "P",
+   "name": "4140 · pre-hard / heat-treated (28–40 HRC)",
+   "named": "\\b4140\\b|42CrMo4|SCM ?440",
+   "hb": [
+    271,
+    371
+   ]
+  },
+  {
+   "id": "4340-ann",
+   "iso": "P",
+   "name": "4340 · annealed",
+   "named": "\\b4340\\b|34CrNiMo6|SNCM ?439",
+   "hb": [
+    0,
+    235
+   ]
+  },
+  {
+   "id": "4340-ht",
+   "iso": "P",
+   "name": "4340 · pre-hard / heat-treated (28–40 HRC)",
+   "named": "\\b4340\\b|34CrNiMo6|SNCM ?439",
+   "hb": [
+    271,
+    371
+   ]
   }
  ],
  "groups": {
