@@ -1,0 +1,192 @@
+{
+ "schema": 1,
+ "builder": "Cheto",
+ "models": [
+  {
+   "model": "IXN 1000",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Main spindle",
+     "rpm": 6000,
+     "taper": "ISO 50 DIN 69871",
+     "kw_peak": 25,
+     "kw_cont": 15,
+     "hp_peak": 33,
+     "hp_cont": 20,
+     "torque_nm": 223,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.cheto.eu/download/251014135852.pdf",
+    "title": "CHETO catalogue Rev.A V4 2025",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "IXN 2000",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Main spindle",
+     "rpm": 6000,
+     "taper": "ISO 50 DIN 69871",
+     "kw_peak": 30,
+     "kw_cont": 20,
+     "hp_peak": 40,
+     "hp_cont": 26,
+     "torque_nm": 267,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.cheto.eu/download/251014135852.pdf",
+    "title": "CHETO catalogue Rev.A V4 2025",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "IXN 3000",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Main spindle",
+     "rpm": 6000,
+     "taper": "ISO 50 DIN 69871",
+     "kw_peak": 38,
+     "kw_cont": 24,
+     "hp_peak": 51,
+     "hp_cont": 32,
+     "torque_nm": 338,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.cheto.eu/download/251014135852.pdf",
+    "title": "CHETO catalogue Rev.A V4 2025",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "SiC 650 / 1000",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "HSK63 spindle",
+     "rpm": 11820,
+     "taper": "HSK63",
+     "kw_peak": 26,
+     "kw_cont": 21,
+     "hp_peak": 35,
+     "hp_cont": 28,
+     "torque_nm": 101.7,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.cheto.eu/en/products/cnc-deep-hole-drilling-with-milling/sic",
+    "title": "CHETO SiC",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "SiC 1000 HD",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "HSK63 spindle",
+     "rpm": 11820,
+     "taper": "HSK63",
+     "kw_peak": 26,
+     "kw_cont": 21,
+     "hp_peak": 35,
+     "hp_cont": 28,
+     "torque_nm": 101.7,
+     "rating_note": null
+    },
+    {
+     "option": "HSK100 spindle",
+     "rpm": 12000,
+     "taper": "HSK100",
+     "kw_peak": 49.5,
+     "kw_cont": 45,
+     "hp_peak": 66.4,
+     "hp_cont": 60.3,
+     "torque_nm": 315,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.cheto.eu/en/products/cnc-deep-hole-drilling-with-milling/sic",
+    "title": "CHETO SiC",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "TS 25 kW (deep-hole drilling)",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Each spindle",
+     "rpm": 4500,
+     "taper": null,
+     "kw_peak": 25,
+     "kw_cont": null,
+     "hp_peak": 34,
+     "hp_cont": null,
+     "torque_nm": 272,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.cheto.eu/en/products/cnc-deep-hole-drilling-with-milling/ts/",
+    "title": "CHETO TS",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "TS 37 kW (deep-hole drilling)",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Each spindle",
+     "rpm": 4500,
+     "taper": null,
+     "kw_peak": 37,
+     "kw_cont": null,
+     "hp_peak": 50,
+     "hp_cont": null,
+     "torque_nm": 330,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.cheto.eu/en/products/cnc-deep-hole-drilling-with-milling/ts/",
+    "title": "CHETO TS",
+    "accessed": "2026-10-24"
+   }
+  }
+ ]
+}
