@@ -394,5 +394,5 @@ function updateFindLink() {
   const a = $('findTool'); if (!a) return; const p = $('tool').value ? findQuery() : null;
   if (!p) { a.hidden = true; return; }
   const q = p.filter(x => x && !/^(undefined|null|NaN)$/.test(x) && !/DERIVED|MFR|YOUR VALUE/i.test(x)).join(' ').replace(/\s+/g, ' ').trim();
-  a.href = 'https://www.mscdirect.com/browse/tn?searchterm=' + encodeURIComponent(q); a.dataset.q = q; a.textContent = `Find this tool: ${q}`; a.hidden = false;
+  a.href = 'https://www.mscdirect.com/browse/tn?searchterm=' + encodeURIComponent(q); a.dataset.q = q; a.textContent = 'Find this tool ↗'; a.title = 'MSC search: ' + q; a.hidden = false;
 }
