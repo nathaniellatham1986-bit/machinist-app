@@ -44,9 +44,9 @@ function feedAt(f, dIn) {
 }
 const fmt = (p, dp) => p ? (p.min != null ? `${p.min.toFixed(dp)} – ${p.def.toFixed(dp)} – ${p.max.toFixed(dp)}` : p.def.toFixed(dp)) : '';
 // Machines
-function machines() { const m = LS.get('machines', []); const sel = $('mach'), cur = sel.value || LS.get('lastMachine', '');
-  sel.length = 1; m.forEach((x, i) => (mode === 'bore' || (x.type === 'lathe') === (mode === 'turn')) && sel.add(new Option(`${x.name} (${x.type}, ${x.rpm || '?'} RPM, ${x.hp || '?'} HP)`, i))); sel.value = [...sel.options].some(o => o.value === String(cur)) ? cur : ''; if (sel.value === '') { $('maxRpm').value = ''; $('maxHp').value = ''; } else { $('maxRpm').value = m[sel.value].rpm || ''; $('maxHp').value = m[sel.value].hp || ''; } return m; }
-function applyMachine() { const m = LS.get('machines', [])[$('mach').value]; LS.set('lastMachine', $('mach').value);
+function machines() { const m = LS.get('machines', []); const sel = $('mach'); let cur = LS.get('lastMachine:' + mode, '');
+  sel.length = 1; m.forEach((x, i) => (mode === 'bore' || (x.type === 'lathe') === (mode === 'turn')) && sel.add(new Option(`${x.name} (${x.type}, ${x.rpm || '?'} RPM, ${x.hp || '?'} HP)`, i))); if (![...sel.options].some(o => o.value !== '' && o.value === String(cur))) cur = sel.length === 2 ? sel.options[1].value : ''; sel.value = cur; if (sel.value === '') { $('maxRpm').value = ''; $('maxHp').value = ''; } else { $('maxRpm').value = m[sel.value].rpm || ''; $('maxHp').value = m[sel.value].hp || ''; } return m; }
+function applyMachine() { const m = LS.get('machines', [])[$('mach').value]; LS.set('lastMachine:' + mode, $('mach').value);
   $('maxRpm').value = m?.rpm || ''; $('maxHp').value = m?.hp || ''; run(); }
 $('mSave').onclick = () => { const n = $('mName').value.trim(); if (!n) return; const m = LS.get('machines', []);
   m.push({ name: n, type: $('mType').value, rpm: +$('mRpm').value || null, hp: +$('mHp').value || null }); LS.set('machines', m); machines(); $('mach').value = m.length - 1; applyMachine(); };
