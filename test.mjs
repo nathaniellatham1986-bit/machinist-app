@@ -204,3 +204,13 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   assert.equal(rangeText(lowEnd(pick({ min: 164, max: 656 })), 0), '164–656 · using low end'); assert.equal(rangeText(pick({ min: 1, max: 3 }), 0), '1–3 · using midpoint');
   assert.equal(rangeText(pick({ min: 1, max: 3, start: 2 }), 0), '1 – 2 – 3');
   console.log('ME11 #4 range text tests pass'); }
+{ const { drillSpans, drillTier, drillRank } = await import('./calc.js');
+  const withData = { mode: 'drill', series: 'A', conditions: [{ iso: 'P', sfm: { min: 1, max: 2 }, feed: { unit: 'mm', bands: [[12, 13, 0.2]] } }] };
+  const rangeOnly = { mode: 'drill', series: 'B', dr: [0.3, 0.8], conditions: [{ iso: 'P', sfm: { min: 1, max: 2 }, feed: { unit: 'mm', bands: [[3, 4, 0.1]] } }] };
+  withData.dd = drillSpans(withData); rangeOnly.dd = drillSpans(rangeOnly);
+  assert.equal(drillTier(withData, 0.5, 'P'), 0); assert.equal(drillTier(rangeOnly, 0.5, 'P'), 1); assert.equal(drillTier({ dr: [1, 2] }, 0.5, 'P'), 2);
+  assert.equal(drillTier(withData, 0.5, 'M'), 2);
+  const gunData = { ...withData, series: 'SUMOGUN', type: 'gundrill' }; // inside a tier, specials still sort after
+  assert.ok(20 * drillTier(gunData, 0.5, 'P') + drillRank(gunData, 'flood') < 20 * drillTier(rangeOnly, 0.5, 'P') + drillRank(rangeOnly, 'flood'));
+  assert.ok(drillRank(gunData, 'flood') > drillRank(withData, 'flood'));
+  console.log('ME11 #6 drill data tier tests pass'); }

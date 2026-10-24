@@ -173,3 +173,14 @@ export const DRILL_SPECIAL = /gun.?drill|SUMOGUN|flat.?bottom|\bFBD|spade|counte
 export const drillRank = (t, cool) => (!t.cl?.length ? .1 : t.cl.includes(cool) ? 0 : .2) + (DRILL_SPECIAL.test(`${t.series} ${t.type ?? ''}`) ? .4 : 0);
 // Range text: when the app filled the start (low end / midpoint), print 'min–max · using …' instead of a fake 'min – start – max'.
 export const rangeText = (p, dp) => !p ? '' : p.min == null ? p.def.toFixed(dp) : /^LOW END/.test(p.basis ?? '') ? `${p.min.toFixed(dp)}–${p.max.toFixed(dp)} · using low end` : /^MIDPOINT/.test(p.basis ?? '') ? `${p.min.toFixed(dp)}–${p.max.toFixed(dp)} · using midpoint` : `${p.min.toFixed(dp)} – ${p.def.toFixed(dp)} – ${p.max.toFixed(dp)}`;
+// Drill: diameter spans (inches) where a record prints SFM + feed, per ISO group: [[iso, lo, hi], ...]. Range/formula feeds cover the tool's stated size range.
+export function drillSpans(t) { const out = new Set(), sr = sizeRange(t), toIn = (v, u) => (u === 'mm' ? v / 25.4 : v), r4 = x => Math.round(x * 1e4) / 1e4;
+  for (const c of t.conditions) { const f = c.feed; if (!c.sfm || c.status === 'shop-proven') continue; const u = f?.unit ? toIn(1, f.unit) : 1, add = (a, b) => out.add(JSON.stringify([c.iso, r4(a), r4(b)]));
+    if (f?.bands) f.bands.forEach(([a, z]) => add(a * u - 1e-4, z * u + 1e-4));
+    else if (f?.byDiameter) Object.keys(f.byDiameter).forEach(k => add(toIn(+k, f.unit) - 0.02, toIn(+k, f.unit) + 0.02));
+    else if ((f?.range || c.fzPerD) && sr) add(sr[0] - 1e-4, sr[1] + 1e-4);
+    else if (f?.range || c.fzPerD) add(0, 99); }
+  return [...out].map(s => JSON.parse(s)); }
+export const dataAt = (t, d, iso) => !!t.dd?.some(([i, a, b]) => (!iso || i === iso || i === '*') && d >= a && d <= b);
+// Tier: 0 data at the entered Ø, 1 published size range covers it, 2 the rest (coolant/specials order stays inside a tier).
+export const drillTier = (t, d, iso) => !d ? 0 : dataAt(t, d, iso) ? 0 : inRange(t.dr, d) ? 1 : 2;
