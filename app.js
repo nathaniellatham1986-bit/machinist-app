@@ -149,7 +149,7 @@ const ENG = { key: '', ae: 'default', ap: 'default' };
 function mfgEng(c, d) { if (!c) return {}; const r = {}, u = c.ap ? toIn(1, c.ap.unit) : 1;
   const apIn = c.ap ? (c.ap.value ?? (c.ap.min != null ? (c.ap.min + c.ap.max) / 2 : c.ap.max)) * u : null;
   if (c.apx) r.ap = c.apx; else if (apIn != null && d) r.ap = apIn / d; if (apIn != null) r.apIn = apIn;
-  if (c.woc) r.ae = c.woc; else if (c.aex) r.ae = c.aex; return r; }
+  if (c.woc) r.ae = c.woc; else if (c.aex) r.ae = c.aex; else if (cutOf(c) === 'Slot') r.ae = 1; return r; }
 function prefillEng(t, c, d) { const k = `${$('tool').value}|${$('cond').value}|${d}`; if (k === ENG.key) return; ENG.key = k;
   const m = mfgEng(c, d);
   if (mode === 'mill') { if (m.ae != null) { frac.ae = m.ae; ENG.ae = 'mfg'; } else if (ENG.ae === 'mfg') { frac.ae = 0.25; ENG.ae = 'default'; }
