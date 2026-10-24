@@ -251,7 +251,7 @@ function run() { updateFindLink(); favMark(); if (PART()) $('fD').value = '0'; i
     w += `<div class="${r > lim ? 'warn' : 'out'}">Bar L/D ${r.toFixed(1)}:1 (${$('shk').value} shank, limit ~${lim}×D)${r > lim ? ' · past the usual limit: expect chatter; shorten stickout, use a ' + ($('shk').value === 'steel' ? 'carbide or ' : '') + 'damped bar, or reduce speed/feed' : ''} <span class="tag">GENERAL GUIDANCE, not manufacturer data</span></div>`; }
   const t = curTool(), src = c ? (c.status === 'shop-proven' ? '⚠ SHOP-PROVEN, not manufacturer' : `${c.source.manufacturer} ${c.source.kind === 'label' ? 'box label' : 'catalog'}${c.source.page ? ' p.' + c.source.page : ''} ✓`) : '';
   const YOURS = '<span class="warn">YOUR VALUE, NOT MANUFACTURER</span>';
-  const BAR = []; const card = (k, val, b, cls = '') => `<div class="card ${cls}"><div class="k">${k}</div><div class="v">${val}</div><div class="b">${b}</div></div>`;
+  const BAR = []; const card = (k, val, b, cls = '', ov) => `<div class="card ${cls}"${ov ? ` data-ov="${ov}"` : ''}><div class="k">${k}${ov ? ' <span class="tap">✎ tap to change</span>' : ''}</div><div class="v">${val}</div><div class="b">${b}</div>${ov && cls === 'mine' ? '<button class="sm rst" data-reset="' + ov + '">Reset to manufacturer</button>' : ''}</div>`;
   const boreFz = mode === 'bore' && c?.feed?.kind === 'fz', fk = (mode === 'mill' ? 'Chip load' : mode === 'tap' ? 'Pitch' : 'Feed') + ` (${UL()}/${mode === 'mill' || boreFz ? 'tooth' : 'rev'})`, SPL = metric ? 'm/min' : 'SFM', FPL = metric ? 'Feed mm/min' : 'Feed IPM';
   let cards = '';
   const tl = toolLifeOf(c), sfmB = mine('sfm') && v('sfm') ? YOURS : SP ? `${src} · ${SP.basis}${SP.min != null ? ` · range ${fmt(SP, 0)}` : ''}${tl ? ` · <b>at ${tl} min tool life</b> (source)` : ''}` : '';
@@ -262,8 +262,8 @@ function run() { updateFindLink(); favMark(); if (PART()) $('fD').value = '0'; i
     BAR.push(['RPM', Math.round(r.rpm)], [metric ? 'mm/min' : 'IPM', r.ipm != null ? uIpm(r.ipm) : '—']); cards += card('RPM', Math.round(r.rpm), capT + 'MANUFACTURER PRINTED · ' + ps) + (r.ipm != null ? card(FPL, uIpm(r.ipm), capT + 'MANUFACTURER PRINTED table feed' + (PR.tableFeed.unit === 'mm/min' ? ` (${PR.tableFeed.value} mm/min)` : '') + ' · ' + ps) : card(FPL, 'No manufacturer data', '', 'none'))
       + card(SPL, uSp(r.sfm), 'DERIVED from printed RPM × diameter') + (r.fz != null ? card(mode === 'drill' ? 'IPR' : 'Chip load', uFeed(mode === 'drill' ? r.ipm / r.rpm : r.fz), 'DERIVED from printed feed ÷ (RPM' + (mode === 'drill' ? ')' : ' × flutes)')) : ''); }
   else {
-  cards += v('sfm') ? card(SPL, uSp(v('sfm')), sfmB, mine('sfm') ? 'mine' : '') : card(SPL, 'No manufacturer data', c && allMat(c) ? 'Feed table, all materials: no speed printed' : '', 'none');
-  cards += v('fpt') ? card(fk, uFeed(v('fpt')), fB, mode !== 'tap' && mine('fpt') ? 'mine' : '') : card(fk, 'No manufacturer data' + (c?.feed ? ' at this diameter' : ''), '', 'none');
+  cards += v('sfm') ? card(SPL, uSp(v('sfm')), sfmB + (mine('sfm') && SP ? ` · manufacturer ${fmt(SP, 0)}` : ''), mine('sfm') ? 'mine' : '', SP ? 'sfm' : '') : card(SPL, 'No manufacturer data', c && allMat(c) ? 'Feed table, all materials: no speed printed' : '', 'none');
+  cards += v('fpt') ? card(fk, uFeed(v('fpt')), fB + (mode !== 'tap' && !TH() && mine('fpt') && FD ? ` · manufacturer ${fmt(FD, 4)}` : ''), mode !== 'tap' && mine('fpt') ? 'mine' : '', FD && mode !== 'tap' && !TH() ? 'fpt' : '') : card(fk, 'No manufacturer data' + (c?.feed ? ' at this diameter' : ''), '', 'none');
   let o = null, extra = '';
   if (v('sfm') && v('fpt') && v('d')) {
     if (mode === 'mill') { o = compute({ sfm: v('sfm'), d: v('d'), fpt: v('fpt'), z: v('z'), ae: frac.ae * v('d'), ap: frac.ap * v('d'), stickout: v('so'), maxRpm: v('maxRpm'), maxHp: v('maxHp'), iso: c?.iso });
@@ -310,7 +310,12 @@ function run() { updateFindLink(); favMark(); if (PART()) $('fD').value = '0'; i
   $('bar').innerHTML = BAR.length ? BAR.map(([k, x]) => `<span>${x} <small>${k}</small></span>`).join('') + `<small>${t ? (mode === 'tap' ? geo(t) : short(t.series)) : ''}</small>` : '<small>No manufacturer data for this combo</small>';
   if (!$('mach').value) $('bar').innerHTML += '<span class="warn" style="font-size:15px;width:100%">⚠ Pick a machine for RPM limits</span>';
 }
-$('cards').onclick = e => { const k = e.target.closest('.chip')?.dataset.k; if (!k) return; const [ty, x] = k.split(/:(.*)/);
+$('cards').onclick = e => { const rs = e.target.closest('[data-reset]')?.dataset.reset; if (rs) { setIn(rs, defs[rs]); return run(); }
+  const ov = e.target.closest('[data-ov]'); if (ov && !ov.querySelector('input')) { const f = ov.dataset.ov, box = ov.querySelector('.v'), x = document.createElement('input');
+    x.type = 'number'; x.inputMode = 'decimal'; x.step = 'any'; x.value = $(f).value; box.replaceChildren(x); x.focus(); x.select(); let done = false;
+    const end = ok => { if (done) return; done = true; if (ok && +x.value > 0) $(f).value = x.value; run(); };
+    x.onkeydown = ev => { if (ev.key === 'Enter') end(true); if (ev.key === 'Escape') end(false); }; x.onblur = () => end(true); return; }
+  const k = e.target.closest('.chip')?.dataset.k; if (!k) return; const [ty, x] = k.split(/:(.*)/);
   if (ty === 'd') { setIn('d', +x); if (mode === 'mill') showEng(); fill(); }
   if (ty === 'c') { $('cond').value = x; fill(); recent(); }
   if (ty === 'm') { $('iso').value = ''; $('mat').value = ''; syncPick(); fillCond().then(() => { $('cond').value = x; fill(); recent(); }); } };
