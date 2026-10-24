@@ -1,0 +1,3029 @@
+{
+ "schema": 1,
+ "brand": "ISCAR",
+ "tools": [
+  {
+   "mode": "turn",
+   "brand": "ISCAR",
+   "series": "PICCO PICJ R/LF-D6/8-T face grooving",
+   "type": "face grooving insert (small bore)",
+   "conditions": [
+    {
+     "label": "PICJ RF10D6T1.5-10 IC908 \u2013 face grooving, min. axial dia 6 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF10D6T1.5-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ R/LF-D6/8-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.28 (printed p.26)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF15D6T2.0-10 IC908 \u2013 face grooving, min. axial dia 6 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF15D6T2.0-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ R/LF-D6/8-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.28 (printed p.26)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ LF15D8T2.5-20 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ LF15D8T2.5-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ R/LF-D6/8-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.28 (printed p.26)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF10D8T1.5-10-6 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF10D8T1.5-10-6",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ R/LF-D6/8-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.28 (printed p.26)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF10D8T1.5-20-7 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF10D8T1.5-20-7",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ R/LF-D6/8-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.28 (printed p.26)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF10D8T1.5-30-7 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF10D8T1.5-30-7",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ R/LF-D6/8-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.28 (printed p.26)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF15D8T2.5-10-6 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF15D8T2.5-10-6",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ R/LF-D6/8-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.28 (printed p.26)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF15D8T2.5-20-6 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF15D8T2.5-20-6",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ R/LF-D6/8-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.28 (printed p.26)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF15D8T2.5-30-7 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF15D8T2.5-30-7",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ R/LF-D6/8-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.28 (printed p.26)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF20D8T3.0-10-6 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF20D8T3.0-10-6",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ R/LF-D6/8-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.28 (printed p.26)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF20D8T3.0-20-6 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF20D8T3.0-20-6",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ R/LF-D6/8-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.28 (printed p.26)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ R/LF20D8T3.0-30-7 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ R/LF20D8T3.0-30-7",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ R/LF-D6/8-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.28 (printed p.26)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF25D8T3.5-10-6 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF25D8T3.5-10-6",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ R/LF-D6/8-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.28 (printed p.26)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF25D8T3.5-20-7 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF25D8T3.5-20-7",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ R/LF-D6/8-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.28 (printed p.26)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF30D8T3.5-10-6 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF30D8T3.5-10-6",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ R/LF-D6/8-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.28 (printed p.26)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF30D8T3.5-20-6 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF30D8T3.5-20-6",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ R/LF-D6/8-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.28 (printed p.26)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF30D8T3.5-30-7 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF30D8T3.5-30-7",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ R/LF-D6/8-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.28 (printed p.26)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "turn",
+   "brand": "ISCAR",
+   "series": "PICCO PICCO-010/610 face grooving",
+   "type": "face grooving insert (small bore)",
+   "conditions": [
+    {
+     "label": "PICCO R 010.1006-10 IC228 \u2013 face grooving, min. axial dia 6 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.1006-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.1506-10 IC228 \u2013 face grooving, min. axial dia 6 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.1506-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R/L 010.1508-20 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R/L 010.1508-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R/L 010.1508-30 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R/L 010.1508-30",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R/L 010.2008-30 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R/L 010.2008-30",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.1008-10 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.1008-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.1008-20 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.1008-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.1008-30 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.1008-30",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.1508-10 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.1508-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.2008-10 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.2008-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.2008-20 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.2008-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.2508-10 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.2508-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.2508-20 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.2508-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.2508-30 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.2508-30",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.3008-10 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.3008-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.3008-20 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.3008-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.3008-30 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.3008-30",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 610.1008-10 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 610.1008-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 610.1008-20 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 610.1008-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 610.1508-10 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 610.1508-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 610.1508-20 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 610.1508-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 610.2008-10 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 610.2008-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 610.2008-20 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 610.2008-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 610.2508-10 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 610.2508-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 610.2508-20 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 610.2508-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 610.3008-10 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 610.3008-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 610.3008-20 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 610.3008-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010/610 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.29 (printed p.27)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "turn",
+   "brand": "ISCAR",
+   "series": "PICCO PICJ RF-T face grooving",
+   "type": "face grooving insert (small bore)",
+   "conditions": [
+    {
+     "label": "PICJ RF10D8T2.0-10 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF10D8T2.0-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.30 (printed p.28)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF10D8T2.0-20 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF10D8T2.0-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.30 (printed p.28)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RFP16D8T3-10 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RFP16D8T3-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.30 (printed p.28)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RFP16D8T3-20 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RFP16D8T3-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.30 (printed p.28)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RFP20D8T4-10 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RFP20D8T4-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.30 (printed p.28)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RFP20D8T4-20 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RFP20D8T4-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.30 (printed p.28)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RFP25D8T5-10 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RFP25D8T5-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.30 (printed p.28)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RFP30D8T6-10 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RFP30D8T6-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.30 (printed p.28)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RFP30D8T6-20 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RFP30D8T6-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.30 (printed p.28)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "turn",
+   "brand": "ISCAR",
+   "series": "PICCO PICCO-010 face grooving",
+   "type": "face grooving insert (small bore)",
+   "conditions": [
+    {
+     "label": "PICCO R 010.1005-10 IC1008 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.1005-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.31 (printed p.29)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.1005-20 IC1008 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.1005-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.31 (printed p.29)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.1608-10 IC1008 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.1608-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.31 (printed p.29)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.1608-20 IC1008 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.1608-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.31 (printed p.29)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.2010-10 IC1008 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.2010-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.31 (printed p.29)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.2010-20 IC1008 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.2010-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.31 (printed p.29)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.2512-10 IC1008 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.2512-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.31 (printed p.29)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.2512-20 IC1008 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.2512-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.31 (printed p.29)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.3015-10 IC1008 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.3015-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.31 (printed p.29)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 010.3015-20 IC1008 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 010.3015-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-010 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.31 (printed p.29)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "turn",
+   "brand": "ISCAR",
+   "series": "PICCO PICJ RF-T-20 face grooving",
+   "type": "face grooving insert (small bore)",
+   "conditions": [
+    {
+     "label": "PICJ RF10D6T2.0-20 IC908 \u2013 face grooving, min. axial dia 6 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF10D6T2.0-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-T-20 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.31 (printed p.29)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF15D6T3.0-20 IC908 \u2013 face grooving, min. axial dia 6 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF15D6T3.0-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-T-20 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.31 (printed p.29)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF20D6T4.0-20 IC908 \u2013 face grooving, min. axial dia 6 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF20D6T4.0-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-T-20 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.31 (printed p.29)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF25D6T5.0-20 IC908 \u2013 face grooving, min. axial dia 6 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF25D6T5.0-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-T-20 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.31 (printed p.29)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF30D6T6.0-20 IC908 \u2013 face grooving, min. axial dia 6 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF30D6T6.0-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-T-20 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.31 (printed p.29)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "turn",
+   "brand": "ISCAR",
+   "series": "PICCO PICCO-620 face grooving",
+   "type": "face grooving insert (small bore)",
+   "conditions": [
+    {
+     "label": "PICCO R 620.1006-20 IC1008 \u2013 face grooving, min. axial dia 6 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 620.1006-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-620 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.32 (printed p.30)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 620.1506-20 IC1008 \u2013 face grooving, min. axial dia 6 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 620.1506-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-620 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.32 (printed p.30)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 620.2006-20 IC1008 \u2013 face grooving, min. axial dia 6 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 620.2006-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-620 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.32 (printed p.30)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 620.2506-20 IC1008 \u2013 face grooving, min. axial dia 6 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 620.2506-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-620 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.32 (printed p.30)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 620.3006-20 IC1008 \u2013 face grooving, min. axial dia 6 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 620.3006-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-620 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.32 (printed p.30)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "turn",
+   "brand": "ISCAR",
+   "series": "PICCO PICJ RF-D16/20-T face grooving",
+   "type": "face grooving insert (small bore)",
+   "conditions": [
+    {
+     "label": "PICJ RF30D16T10-10 IC908 \u2013 face grooving, min. axial dia 16 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF30D16T10-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-D16/20-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.32 (printed p.30)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF30D16T20-20 IC908 \u2013 face grooving, min. axial dia 16 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF30D16T20-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-D16/20-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.32 (printed p.30)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF40D16T20-20 IC908 \u2013 face grooving, min. axial dia 16 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF40D16T20-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-D16/20-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.32 (printed p.30)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF30D20T25-25 IC908 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF30D20T25-25",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-D16/20-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.32 (printed p.30)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF30D20T30-30 IC908 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF30D20T30-30",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-D16/20-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.32 (printed p.30)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF30D20T40-40 IC908 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF30D20T40-40",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-D16/20-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.32 (printed p.30)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF40D20T25-25 IC908 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF40D20T25-25",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-D16/20-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.32 (printed p.30)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF40D20T30-30 IC908 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF40D20T30-30",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-D16/20-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.32 (printed p.30)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF40D20T40-40 IC908 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF40D20T40-40",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-D16/20-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.32 (printed p.30)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF50D20T25-25 IC908 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF50D20T25-25",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-D16/20-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.32 (printed p.30)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF50D20T30-30 IC908 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF50D20T30-30",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-D16/20-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.32 (printed p.30)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF50D20T35-35 IC908 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF50D20T35-35",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-D16/20-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.32 (printed p.30)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF50D20T40-40 IC908 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF50D20T40-40",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-D16/20-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.32 (printed p.30)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "turn",
+   "brand": "ISCAR",
+   "series": "PICCO PICCO-016/020 face grooving",
+   "type": "face grooving insert (small bore)",
+   "conditions": [
+    {
+     "label": "PICCO R 016.0300-10 IC1008 \u2013 face grooving, min. axial dia 16 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 016.0300-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-016/020 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.33 (printed p.31)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 016.0300-20 IC1008 \u2013 face grooving, min. axial dia 16 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 016.0300-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-016/020 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.33 (printed p.31)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 016.0400-10 IC1008 \u2013 face grooving, min. axial dia 16 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 016.0400-10",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-016/020 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.33 (printed p.31)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 016.0400-20 IC1008 \u2013 face grooving, min. axial dia 16 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 016.0400-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-016/020 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.33 (printed p.31)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 020.0300-25 IC1008 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 020.0300-25",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-016/020 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.33 (printed p.31)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 020.0300-30 IC1008 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 020.0300-30",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-016/020 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.33 (printed p.31)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 020.0300-35 IC1008 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 020.0300-35",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-016/020 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.33 (printed p.31)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 020.0300-40 IC1008 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 020.0300-40",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-016/020 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.33 (printed p.31)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 020.0400-25 IC1008 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 020.0400-25",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-016/020 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.33 (printed p.31)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 020.0400-30 IC1008 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 020.0400-30",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-016/020 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.33 (printed p.31)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 020.0400-35 IC1008 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 020.0400-35",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-016/020 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.33 (printed p.31)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 020.0400-40 IC1008 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 020.0400-40",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-016/020 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.33 (printed p.31)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 020.0500-20 IC1008 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 020.0500-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-016/020 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.33 (printed p.31)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 020.0500-25 IC1008 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 020.0500-25",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-016/020 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.33 (printed p.31)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 020.0500-30 IC1008 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 020.0500-30",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.06
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-016/020 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.33 (printed p.31)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 020.0500-35 IC1008 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 020.0500-35",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-016/020 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.33 (printed p.31)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 020.0500-40 IC1008 \u2013 face grooving, min. axial dia 20 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 020.0500-40",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-016/020 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.33 (printed p.31)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC1008. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "turn",
+   "brand": "ISCAR",
+   "series": "PICCO PICJ RF-D8-T face grooving",
+   "type": "face grooving insert (small bore)",
+   "conditions": [
+    {
+     "label": "PICJ RF25D8T20-20 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF25D8T20-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-D8-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.33 (printed p.31)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF30D8T20-20 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF30D8T20-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-D8-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.33 (printed p.31)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICJ RF30D8T30-30 IC908 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICJ RF30D8T30-30",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICJ RF-D8-T face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.33 (printed p.31)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC908. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "turn",
+   "brand": "ISCAR",
+   "series": "PICCO PICCO-015 face grooving",
+   "type": "face grooving insert (small bore)",
+   "conditions": [
+    {
+     "label": "PICCO R/L 015.3015-20 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R/L 015.3015-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.02,
+       "max": 0.05
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-015 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.34 (printed p.32)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 015.2515-20 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 015.2515-20",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-015 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.34 (printed p.32)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    },
+    {
+     "label": "PICCO R 015.3015-30 IC228 \u2013 face grooving, min. axial dia 8 mm (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "PICCO R 015.3015-30",
+     "operation": "face grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.01,
+       "max": 0.04
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "PICCO Lines Metric Catalog Version 3 \u2013 PICCO-015 face grooving inserts, Recommended Machining Data (f face-groove)",
+      "edition": "Version 3, PDF created 2025-02-05",
+      "url": "https://www.iscar.com/Catalogs/Publication/Catalogs_Mm/english_1/PICCO_Catalog/PICCO_CATALOG.pdf",
+      "page": "PDF p.34 (printed p.32)",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC228. Catalog prints feed only (mm/rev); no cutting speed or workpiece material in this table."
+     }
+    }
+   ]
+  }
+ ]
+}
