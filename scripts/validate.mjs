@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 export const NON_BRAND = new Set(['index.json', 'threads.json', 'materials.json']);
 export const MATERIALS = JSON.parse(fs.readFileSync(new URL('../data/materials.json', import.meta.url))).materials;
 const MAT = Object.fromEntries(MATERIALS.map(m => [m.id, m]));
-const MODES = ['mill', 'drill', 'turn', 'tap'];
+const MODES = ['mill', 'drill', 'turn', 'tap', 'bore'];
 const ISO = ['P', 'M', 'K', 'N', 'S', 'H', 'O', '*'];
 const STATUS = ['verified', 'derived', 'shop-proven'];
 const KINDS = ['catalog', 'label', 'calculator', 'shop'];
@@ -135,7 +135,7 @@ export function validate(doc, name = 'file') {
       if ('feed' in c) feed(c.feed, w + '.feed', err, t);
       if (c.printed) printed(c.printed, w + '.printed', err, t);
       if (c.sfm === null && c.feed == null && !c.ap && !c.coolant && !c.printed) err(w, 'condition carries no data (no speed, feed, depth or coolant)');
-      if (c.feed?.kind === 'fz' && t.mode !== 'mill') err(w, 'feed.kind "fz" is for mill tools');
+      if (c.feed?.kind === 'fz' && !['mill', 'bore'].includes(t.mode)) err(w, 'feed.kind "fz" is for mill and bore tools');
       if (c.feed?.kind === 'ipr' && t.mode === 'mill') err(w, 'mill tools use feed.kind "fz"');
       if (c.ap) depth(c.ap, w + '.ap', err); if (c.ae) depth(c.ae, w + '.ae', err);
       for (const k of ['apx', 'aex']) if (k in c && !(isNum(c[k]) && c[k] > 0)) err(w, `${k} must be a positive number (multiple of D)`);

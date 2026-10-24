@@ -87,3 +87,9 @@ const pe = TJ.find(x => x.series.startsWith('PENTA')).conditions[0]; assert.deep
   const doc = { tools: [{ mode: 'mill', brand: 'X', series: 'S', type: 'Solid carbide end mill', flutes: 2, conditions: [{ label: 'P', iso: 'P', status: 'manufacturer', coolant: null, sfm: null, ...c,
     source: { kind: 'catalog', manufacturer: 'X', catalog: 'C', url: 'https://x', page: '1', retrieved: '2026-10-23' } }] }] };
   const errs = validate(doc, 't'); assert.deepEqual(errs.filter(x => /printed|no data/.test(x)), []); }
+// Bore mode: fz and ipr both valid; fz still rejected on drills.
+{ const { validate } = await import('./scripts/validate.mjs');
+  const mk = (mode, kind) => ({ schema: 1, brand: 'X', tools: [{ mode, brand: 'X', series: 'S', type: 'boring head', conditions: [{ label: 'P', iso: 'P', status: 'verified', coolant: null, sfm: { min: 475, max: 925, unit: 'ft/min' }, feed: { kind, unit: 'in', range: { min: 0.001, max: 0.003 } },
+    source: { kind: 'catalog', manufacturer: 'X', catalog: 'C', edition: 'e', url: 'https://x', page: '1', retrieved: '2026-10-23' } }] }] });
+  assert.deepEqual(validate(mk('bore', 'fz'), 't'), []); assert.deepEqual(validate(mk('bore', 'ipr'), 't'), []);
+  assert.ok(validate(mk('drill', 'fz'), 't').some(e => /fz/.test(e))); }

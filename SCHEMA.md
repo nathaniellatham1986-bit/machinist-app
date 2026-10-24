@@ -22,3 +22,7 @@ Other sources that publish the same values; each is `{ source, label?, sfm?, fee
 
 ## Diameter sanity (`diaProblem`)
 Limits by tool type: solid end mills/drills 2.05 in; drill 7 in; tap 4 in; mill, bore, turn and thread 14 in. A key more than 2× above or below the tool's own `diameters_in`/`diameters_mm` range is rejected as a likely lost decimal point.
+
+## Tool mode `bore`
+Boring heads and boring bars. `feed.kind` is `fz` (per tooth / per cutting edge, as printed for boring heads) or `ipr` (where the catalog prints per rev). Diameter keys/ranges are the bore diameter. Tool `flutes` = number of effective cutting edges (default 1 in the app).
+App: RPM from SFM at the bore diameter (capped by machine max); IPM = RPM × fz × edges, or RPM × ipr. Nose-radius columns go in separate conditions with `noseRadius`.

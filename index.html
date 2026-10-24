@@ -10,7 +10,7 @@ select,input{width:100%;box-sizing:border-box;min-height:56px;font-size:22px;bac
 nav{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}nav button{min-height:56px;font-size:20px;font-weight:800;background:#111;color:#fff;border:3px solid #fff;border-radius:8px}button.sm{min-height:48px;font-size:18px;font-weight:700;background:#111;color:#fff;border:3px solid #fff;border-radius:8px;padding:0 10px}summary{cursor:pointer;font-weight:800;font-size:18px;color:#7f7}.shop{color:#ffa500!important}nav button.on{background:#ffd400;color:#000;border-color:#ffd400}[hidden]{display:none!important}
 .cards{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}.card{border:3px solid #ffd400;border-radius:8px;padding:8px}.card .k{font-size:16px;font-weight:700;color:#ccc}.card .v{font-size:34px;font-weight:800;color:#ffd400;line-height:1.1}.card .b{font-size:13px;color:#bbb;margin-top:4px}.card.wide{grid-column:1/-1}.card.mine{border-color:#ff6b6b}.card.none .v{font-size:20px;color:#ff6b6b}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}.chip{min-height:44px;font-size:17px;background:#111;color:#fff;border:2px solid #7f7;border-radius:22px;padding:4px 12px}
 </style></head><body><main><h1>Feeds &amp; Speeds v3</h1>
-<nav><button data-mode="mill">Mill</button><button data-mode="drill">Drill</button><button data-mode="turn">Turn</button><button data-mode="tap">Tap</button></nav>
+<nav><button data-mode="mill">Mill</button><button data-mode="drill">Drill</button><button data-mode="turn">Turn</button><button data-mode="tap">Tap</button><button data-mode="bore">Bore</button></nav>
 <label>Recall (favorites / recent)<select id="recall"><option value="">—</option></select></label>
 <label>Material (catalog group)<select id="matPick"></select><input type="hidden" id="iso"><input type="hidden" id="mat"></label>
 <label>Brand<select id="brand"></select></label>
@@ -25,7 +25,7 @@ nav{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}nav button{min-heig
 <label>Coolant<select id="cool"><option value="flood">Flood</option><option value="through">Through-tool</option><option value="air">Air blast</option><option value="dry">Dry</option></select></label>
 <label id="dPickL" hidden>Published diameters<select id="dPick"></select></label>
 <div class="row"><label id="dLbl">Dia (in)<input id="d" type="number" inputmode="decimal" step="any" value="0.5"></label>
-<label data-show="mill">Flutes<input id="z" type="number" inputmode="numeric" value="4"></label></div>
+<label data-show="mill bore" id="zLbl">Flutes<input id="z" type="number" inputmode="numeric" value="4"></label></div>
 <div class="row" data-show="mill"><label>WOC / stepover<input id="ae" type="number" inputmode="decimal" step="any" value="25"><select id="aeU"><option value="pct">% of D</option><option value="in">in</option></select><small id="aeX"></small></label>
 <label>DOC ap<input id="ap" type="number" inputmode="decimal" step="any" value="1"><select id="apU"><option value="xd">×D</option><option value="in">in</option></select><small id="apX"></small></label></div>
 <div class="row"><label data-show="mill">Stickout (in)<input id="so" type="number" inputmode="decimal" step="any" value="1.5"></label><label data-show="turn">DOC ap (in)<input id="apT" type="number" inputmode="decimal" step="any" value="0.04"><small id="apTX"></small></label>
