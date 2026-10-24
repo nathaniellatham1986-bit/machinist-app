@@ -200,3 +200,7 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   const tt = j.files.flatMap(f => f.tools).filter(t => t.mode === 'turn'); assert.ok(tt.filter(t => t.ps?.includes('Finish')).length > 10);
   assert.ok(tt.some(t => t.ps && !t.ps.includes('Finish')));
   console.log('ME11 #3 turn pass index tests pass'); }
+{ const { rangeText, lowEnd, pick } = await import('./calc.js');
+  assert.equal(rangeText(lowEnd(pick({ min: 164, max: 656 })), 0), '164–656 · using low end'); assert.equal(rangeText(pick({ min: 1, max: 3 }), 0), '1–3 · using midpoint');
+  assert.equal(rangeText(pick({ min: 1, max: 3, start: 2 }), 0), '1 – 2 – 3');
+  console.log('ME11 #4 range text tests pass'); }

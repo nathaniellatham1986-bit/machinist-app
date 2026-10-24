@@ -171,3 +171,5 @@ export const lowEnd = r => r && /^MIDPOINT/.test(r.basis ?? '') && r.min != null
 export const GUN = /gun.?drill|SUMOGUN/i, isGun = t => t.mode === 'drill' && GUN.test(`${t.series} ${t.type ?? ''}`);
 export const DRILL_SPECIAL = /gun.?drill|SUMOGUN|flat.?bottom|\bFBD|spade|counterbor|chamfer|step drill/i;
 export const drillRank = (t, cool) => (!t.cl?.length ? .1 : t.cl.includes(cool) ? 0 : .2) + (DRILL_SPECIAL.test(`${t.series} ${t.type ?? ''}`) ? .4 : 0);
+// Range text: when the app filled the start (low end / midpoint), print 'min–max · using …' instead of a fake 'min – start – max'.
+export const rangeText = (p, dp) => !p ? '' : p.min == null ? p.def.toFixed(dp) : /^LOW END/.test(p.basis ?? '') ? `${p.min.toFixed(dp)}–${p.max.toFixed(dp)} · using low end` : /^MIDPOINT/.test(p.basis ?? '') ? `${p.min.toFixed(dp)}–${p.max.toFixed(dp)} · using midpoint` : `${p.min.toFixed(dp)} – ${p.def.toFixed(dp)} – ${p.max.toFixed(dp)}`;
