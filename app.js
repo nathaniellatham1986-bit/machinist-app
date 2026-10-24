@@ -163,8 +163,182 @@ function mfgEng(c, d) { if (!c) return {}; const r = {}, u = c.ap ? toIn(1, c.ap
 function prefillEng(t, c, d) { const k = `${$('tool').value}|${$('cond').value}|${d}`; if (k === ENG.key) return; ENG.key = k;
   const m = mfgEng(c, d);
   if (mode === 'mill') { if (m.ae != null) { frac.ae = m.ae; ENG.ae = 'mfg'; } else if (ENG.ae === 'mfg') { frac.ae = 0.25; ENG.ae = 'default'; }
-  if (m.ap != null) { frac.ap = m.ap; ENG.ap = 'mfg'; } else if (ENG.ap === 'mfg') { frac.ap = 1; ENG.ap = 'default'; } }
+    if (m.ap != null) { frac.ap = m.ap; ENG.ap = 'mfg'; } else if (ENG.ap === 'mfg') { frac.ap = 1; ENG.ap = 'default'; } showEng(); }
+  if (mode === 'turn') { if (m.apIn != null) { setIn('apT', m.apIn); ENG.ap = 'mfg'; } else if (ENG.ap === 'mfg') { setIn('apT', 0.04); ENG.ap = 'default'; } }
+  if (mode === 'turn') engTags(); }
+const TAG = { mfg: ' · MANUFACTURER value', yours: ' · YOUR VALUE, NOT MANUFACTURER', default: ' · default (no manufacturer value)' };
+function engTags() { if ($('aeX')) $('aeX').textContent += TAG[ENG.ae]; if ($('apX')) $('apX').textContent += TAG[ENG.ap];
+  const tl = $('apTX'); if (tl) tl.textContent = TAG[ENG.ap].slice(3); }
+function fill() {
+  const t = curTool(), c = t?.conditions[$('cond').value];
+  fillDia(c);
+  if (mode === 'tap') { const th = threads.threads[$('thr').value]; setIn('d', th.d_in); setIn('fpt', th.pitch_in); }
+  const d = inV('d'), cool = $('cool').value; LS.set('lastCoolant', cool);
+  const shop = c?.status === 'shop-proven';
+  let sp = c && pick(c.sfm, spdK(c.sfm?.unit)), fd = mode === 'tap' ? null : c && (feedAt(c.feed, d) ?? (c.feed == null && c.fzPerD ? fzFromPerD(c.fzPerD, d) : null));
+  sp = lowEnd(sp); fd = lowEnd(fd); // every mode: range-only records start at the LOW end (labeled)
+  OUTROW = mode === 'drill' && c && rowExcludes(c, d); if (OUTROW) { sp = null; fd = null; } // never borrow an out-of-size printed row
+  if (shop) { if (sp) sp.basis = 'SHOP-PROVEN value, not manufacturer'; if (fd) fd.basis = 'SHOP-PROVEN value, not manufacturer'; }
+  SP = sp; FD = fd; defs = { sfm: sp?.def ?? null, fpt: mode === 'tap' ? inV('fpt') : fd?.def ?? null };
+  prefillEng(t, c, d);
+  setIn('sfm', sp ? sp.def : ''); if (mode !== 'tap') setIn('fpt', fd ? fd.def : '');
+  $('thrL').hidden = !TH(); if (TH()) { const p = threadPitchIn(+$('tpi').value, $('pitchU').value); setIn('fpt', p ?? ''); FD = p ? { def: p, min: null, basis: 'feed/rev = thread pitch (geometry)' } : null; defs.fpt = p; }
+  const NO = '<span class="warn">No manufacturer data</span>';
+  let h = '';
+  if (!c) h = `${NO} for ${t ? t.brand + ' ' + t.series : 'this selection'}.` + (t?.notes ? `<br>${t.notes}` : '');
+  else {
+    const s = c.source, apU = c.ap ? toIn(1, c.ap.unit) : 1;
+    const gun = !!t && isGun(t), thru = !gun && mode === 'drill' && cool === 'flood' && (m => m.includes('through') && !m.includes('flood'))(coolModes(c.coolant ?? '')); h = `<details><summary>${badge(c)}</summary><span class="tag">${c.status.toUpperCase()}</span> ${s.manufacturer} · ${s.catalog} · ${s.edition}${s.page ? ' · p.' + s.page : ''}${s.url ? ` · <a style="color:#9cf" href="${s.url}">source</a>` : ''}`
+      + (c.sourceGroup ? `<br>Source material group: “${c.sourceGroup}”` : '') + (s.notes ? `<br>${s.notes}` : '') + (t.notes ? `<br>${t.notes}` : '')
+      + (c.altSources || []).map(a => `<br><b>Also published:</b> ${a.source.catalog}${a.source.page ? ' · p.' + a.source.page : ''}${a.sfm ? ` · speed ${a.sfm.value ?? a.sfm.start ?? `${a.sfm.min}–${a.sfm.max}`} ${a.sfm.unit}` : ''}${a.feed?.range ? ` · feed ${a.feed.range.value ?? `${a.feed.range.min}–${a.feed.range.max}`} ${a.feed.unit}` : ''}${a.source.url ? ` · <a style="color:#9cf" href="${a.source.url}">source</a>` : ''}`).join('') + '</details>'
+      + (c.ap?.value != null ? `<b>DOC ${shop ? '' : 'manufacturer '}stated:</b> ${(c.ap.value * apU).toFixed(3)} in (${c.ap.value} ${c.ap.unit})` : c.ap ? `<br><b>DOC ${shop ? '' : 'manufacturer '}${c.ap.min != null ? 'min–max' : 'max'}:</b> ${c.ap.min != null ? (c.ap.min * apU).toFixed(3) + ' – ' : '≤ '}${(c.ap.max * apU).toFixed(3)} in (${c.ap.min ?? ''}${c.ap.min != null ? '–' : '≤'}${c.ap.max} ${c.ap.unit})` : (mode === 'turn' ? `<br><b>DOC:</b> ${NO}` : ''))
+      + (c.apx || c.aex ? `<br>${c.apx ? `ap ${c.apx}×D` : ''}${c.apx && c.aex ? ', ' : ''}${c.aex ? `ae ${c.aex}×D` : ''} (manufacturer)` : '')
+      + (c.woc ? `<br>Speed stated for ae = ${(c.woc * 100).toFixed(0)}% of D` : '')
+      + (c.feed?.byWoc ? `<br>Chip load published at ae = ${Object.entries(c.feed.byWoc).map(([k, v]) => `${(+k * 100).toFixed(0)}%: ${typeof v === 'object' ? (v.value ?? `${v.min}–${v.max}`) : v} ${c.feed.unit}`).join(', ')}${fd ? '' : ' — set WOC to one of these'}` : '')
+      + (c.noseRadius ? `<br>Nose radius ${c.noseRadius.value ?? c.noseRadius.label} ${c.noseRadius.unit}` : '') + (c.leadAngle ? ` · ${c.leadAngle.convention} ${c.leadAngle.deg}°` : '') + (c.toolLife ? ` · tool life ${c.toolLife} min` : '')
+      + (c.insertWidth ? `<br>Insert width ${c.insertWidth.value ?? c.insertWidth.label} ${c.insertWidth.unit}` : '')
+      + (c.note ? `<br><small>${c.note}</small>` : '') + (c.coolantNote ? `<br><small>${c.coolantNote}</small>` : '')
+      + (thru ? `<br><span class="warn">Flood selected, but this drill's record calls for internal/through-tool coolant.</span> Record states: “${c.coolant}” (manufacturer)` : '')
+      + (gun ? `<br><span class="warn">Gun drill: needs high-pressure through-tool coolant.</span> ${c.coolant ? `Record states: “${c.coolant}” (manufacturer)` : 'APP GUIDANCE, not manufacturer data'}` : '')
+      + (c.coolant ? `<br>Coolant: ${c.coolant} (${shop ? 'shop record' : 'manufacturer stated'})` + (() => { const m = coolModes(c.coolant); return !m.length || gun || thru ? '' : m.includes(cool) ? ` · matches ${COOL_NAMES[cool]}` : `<br><span class="warn">Source states ${m.map(x => COOL_NAMES[x]).join('/')}; you selected ${COOL_NAMES[cool]}. Values are NOT converted between coolant modes.</span>`; })() : `<br><span class="warn">Coolant not stated in source; values not adjusted for ${COOL_NAMES[cool]}.</span>`);
+  }
+  if (mode === 'tap') { const th = threads.threads[$('thr').value];
+    h += `<br><b>Tap drill 75%:</b> ${th.drill75_mm ? th.drill75_mm + ' mm / ' : ''}${th.drill75_in.toFixed(4)} in (geometry)${th.chart ? ' · chart pick ' + th.chart : ''}<br><small>${threads.source.formula}. ${th.chart ? threads.source.chart : ''}</small>`
+    + ((t ? tapTypeOf(t) === 'form' : $('tapT').value === 'form') ? `<br><b>Form-tap drill:</b> ${c?.formDrill ? c.formDrill + ' (manufacturer chart)' : NO} <small>(the 75% chart above is for cutting taps)</small>` : '')
+    + `<br><b>Rigid tap:</b> feed per rev = pitch (${th.pitch_in.toFixed(4)} in); IPM = RPM × pitch.`; }
+  $('src').innerHTML = h; coolNote(); run();
 }
+// Mill engagement: stored as fraction of D; shown in % / xD or inches.
+const frac = { ae: 0.25, ap: 1 };
+const D = () => inV('d');
+const LK = () => metric ? 25.4 : 1;
+function readEng() { const d = D(); frac.ae = $('aeU').value === 'pct' ? +$('ae').value / 100 : (d ? +$('ae').value / LK() / d : 0);
+  frac.ap = $('apU').value === 'xd' ? +$('ap').value : (d ? +$('ap').value / LK() / d : 0);
+  $('aeX').textContent = $('aeU').value === 'pct' ? `= ${uLen(frac.ae * d)}` : `= ${(frac.ae * 100).toFixed(1)}% of D`;
+  $('apX').textContent = $('apU').value === 'xd' ? `= ${uLen(frac.ap * d)}` : `= ${frac.ap.toFixed(2)}×D`; engTags(); }
+function showEng() { const d = D(); $('ae').value = $('aeU').value === 'pct' ? +(frac.ae * 100).toFixed(2) : +(frac.ae * d * LK()).toFixed(metric ? 3 : 4);
+  $('ap').value = $('apU').value === 'xd' ? +frac.ap.toFixed(3) : +(frac.ap * d * LK()).toFixed(metric ? 3 : 4); readEng(); }
+$('aeU').onchange = () => { showEng(); run(); }; $('apU').onchange = () => { showEng(); run(); };
+const mine = k => defs[k] == null || Math.abs(inV(k) - defs[k]) > (k === 'sfm' ? 2 : 5e-5);
+function run() { if (PART()) $('fD').value = '0'; if (mode === 'mill') readEng();
+  const v = inV, tag = k => mine(k) && $(k).value ? ' <span class="tag warn">YOUR VALUE, NOT MANUFACTURER</span>' : '';
+  const c = curTool()?.conditions[$('cond').value];
+  let w = '';
+  if (mode === 'turn') {
+    if (c?.ap && v('apT')) { const u = toIn(1, c.ap.unit), a = v('apT'); if ((c.ap.min != null && a < c.ap.min * u - 1e-6) || a > c.ap.max * u + 1e-6) w += `<div class="warn">DOC ${a} in is outside the ${c.status === 'shop-proven' ? 'recorded' : 'manufacturer'} range</div>`; }
+    if (/Groove|Part/.test($('top').value)) w += `<div class="out">${c?.insertWidth ? `Blade / insert width: ${c.insertWidth.value ?? c.insertWidth.label} ${c.insertWidth.unit} (manufacturer)<br>` : ''}Reduce feed near center${$('top').value === 'Part' ? ' (last ~0.1 in before part-off)' : ''}. <span class="tag">GENERAL GUIDANCE, not manufacturer data</span></div>`;
+    if (v('len') && v('d') && v('len') / v('d') > 4 && $('sup').value === 'none') w += `<div class="warn">Slender part: L/D ${(v('len') / v('d')).toFixed(1)} > 4 with no support. Consider a tailstock or steady rest. <span class="tag">GENERAL GUIDELINE, not manufacturer data</span></div>`;
+  }
+  if (mode === 'drill' && v('hd') && v('d')) { const r = v('hd') / v('d'); w += `<div class="out">Hole depth ${uLen(v('hd'), 3)} = ${r.toFixed(1)}×D${r > 3 ? ' · <span class="warn">past ~3×D: consider peck drilling / chip clearing</span>' : ''} <span class="tag">GENERAL GUIDANCE, not manufacturer</span></div>`; }
+  if (mode === 'bore' && v('so')) { const bd = v('bd') || v('d'), lim = boreLimit($('shk').value), r = v('so') / bd;
+    w += `<div class="${r > lim ? 'warn' : 'out'}">Bar L/D ${r.toFixed(1)}:1 (${$('shk').value} shank, limit ~${lim}×D)${r > lim ? ' · past the usual limit: expect chatter; shorten stickout, use a ' + ($('shk').value === 'steel' ? 'carbide or ' : '') + 'damped bar, or reduce speed/feed' : ''} <span class="tag">GENERAL GUIDANCE, not manufacturer data</span></div>`; }
+  const t = curTool(), src = c ? (c.status === 'shop-proven' ? '⚠ SHOP-PROVEN, not manufacturer' : `${c.source.manufacturer} ${c.source.kind === 'label' ? 'box label' : 'catalog'}${c.source.page ? ' p.' + c.source.page : ''} ✓`) : '';
+  const YOURS = '<span class="warn">YOUR VALUE, NOT MANUFACTURER</span>';
+  const BAR = []; const card = (k, val, b, cls = '') => `<div class="card ${cls}"><div class="k">${k}</div><div class="v">${val}</div><div class="b">${b}</div></div>`;
+  const boreFz = mode === 'bore' && c?.feed?.kind === 'fz', fk = (mode === 'mill' ? 'Chip load' : mode === 'tap' ? 'Pitch' : 'Feed') + ` (${UL()}/${mode === 'mill' || boreFz ? 'tooth' : 'rev'})`, SPL = metric ? 'm/min' : 'SFM', FPL = metric ? 'Feed mm/min' : 'Feed IPM';
+  let cards = '';
+  const tl = toolLifeOf(c), sfmB = mine('sfm') && v('sfm') ? YOURS : SP ? `${src} · ${SP.basis}${SP.min != null ? ` · range ${fmt(SP, 0)}` : ''}${tl ? ` · <b>at ${tl} min tool life</b> (source)` : ''}` : '';
+  const fB = mode === 'tap' || TH() ? (TH() && !v('fpt') ? 'enter TPI or pitch' : 'feed/rev = thread pitch (geometry)') : false ? '' : mode === 'tap' ? 'thread pitch (geometry)' : mine('fpt') && v('fpt') ? YOURS : FD ? `${src} · ${FD.basis}${FD.min != null ? ` · range ${fmt(FD, 4)}` : ''}` : '';
+  const PR = mode === 'mill' || mode === 'drill' || mode === 'bore' ? printedAt(c, v('d')) : null;
+  if (PR) { const r = printedRun(PR, { dIn: v('d'), z: v('z'), maxRpm: v('maxRpm') }), ps = `${src} · printed for Ø${PR.key} ${PR.unit}`;
+    const capT = r.capped ? `<span class="warn">CAPPED: printed ${PR.rpm} RPM scaled to machine max; feed scaled by the same ratio</span> · ` : '';
+    BAR.push(['RPM', Math.round(r.rpm)], [metric ? 'mm/min' : 'IPM', r.ipm != null ? uIpm(r.ipm) : '—']); cards += card('RPM', Math.round(r.rpm), capT + 'MANUFACTURER PRINTED · ' + ps) + (r.ipm != null ? card(FPL, uIpm(r.ipm), capT + 'MANUFACTURER PRINTED table feed' + (PR.tableFeed.unit === 'mm/min' ? ` (${PR.tableFeed.value} mm/min)` : '') + ' · ' + ps) : card(FPL, 'No manufacturer data', '', 'none'))
+      + card(SPL, uSp(r.sfm), 'DERIVED from printed RPM × diameter') + (r.fz != null ? card(mode === 'drill' ? 'IPR' : 'Chip load', uFeed(mode === 'drill' ? r.ipm / r.rpm : r.fz), 'DERIVED from printed feed ÷ (RPM' + (mode === 'drill' ? ')' : ' × flutes)')) : ''); }
+  else {
+  cards += v('sfm') ? card(SPL, uSp(v('sfm')), sfmB, mine('sfm') ? 'mine' : '') : card(SPL, 'No manufacturer data', c && allMat(c) ? 'Feed table, all materials: no speed printed' : '', 'none');
+  cards += v('fpt') ? card(fk, uFeed(v('fpt')), fB, mode !== 'tap' && mine('fpt') ? 'mine' : '') : card(fk, 'No manufacturer data' + (c?.feed ? ' at this diameter' : ''), '', 'none');
+  let o = null, extra = '';
+  if (v('sfm') && v('fpt') && v('d')) {
+    if (mode === 'mill') { o = compute({ sfm: v('sfm'), d: v('d'), fpt: v('fpt'), z: v('z'), ae: frac.ae * v('d'), ap: frac.ap * v('d'), stickout: v('so'), maxRpm: v('maxRpm'), maxHp: v('maxHp'), iso: c?.iso });
+      extra = card('Est. power', (o.hp < 1 ? o.hp.toFixed(2) : o.hp.toFixed(1)) + ' HP', `DERIVED · DOC ${ENG.ap === 'mfg' ? 'manufacturer' : ENG.ap === 'yours' ? 'YOUR VALUE' : 'default'}, WOC ${ENG.ae === 'mfg' ? 'manufacturer' : ENG.ae === 'yours' ? 'YOUR VALUE' : 'default 25%'} · MRR ${o.mrr.toFixed(3)} in³/min at WOC ${(frac.ae * v('d')).toFixed(3)} × DOC ${(frac.ap * v('d')).toFixed(3)} in`) + `<div class="card wide"><div class="b">Chip load used for IPM: ${o.fpt.toFixed(4)} in/t (chip thinning + stickout, DERIVED)${o.hpCapped ? ' · <span class="warn">feed cut to fit machine HP</span>' : ''}</div></div>`; }
+    if (mode === 'drill') o = drill({ sfm: v('sfm'), d: v('d'), ipr: v('fpt'), maxRpm: v('maxRpm') });
+    if (mode === 'turn') { o = turn({ sfm: v('sfm'), d: v('d'), ipr: v('fpt'), ap: v('apT'), maxRpm: v('maxRpm') }); extra = TH() || PG() ? '' : card('MRR', metric ? (o.mrr * 16.387).toFixed(1) + ' cm³/min' : o.mrr.toFixed(2) + ' in³/min', 'DERIVED' + (o.capped ? ` at capped ${Math.round(o.sfmActual)} SFM` : ''));
+      const d1 = PART() ? 0 : v('fD') || v('d'), cs = css({ sfm: v('sfm'), d0: v('d'), d1, maxRpm: v('maxRpm') });
+      if (TH()) { const tf = threadFeed({ rpm: o.rpm, lead: v('fpt'), maxIpm: LS.get('machines', [])[$('mach').value]?.thrIpm }); o.rpm = tf.rpm; o.ipm = tf.ipm; const mx = LS.get('machines', [])[$('mach').value]?.thrIpm; o.thrW = tf.capped ? `<span class="warn">RPM capped by machine max threading feed ${mx} IPM</span> (your machine profile; replaces the 200 IPM rule of thumb) · ` : tf.high ? `<span class="warn">Threading feed ${Math.round(tf.ipm)} IPM is over ~200 IPM.</span> Shop rule of thumb (fallback, not manufacturer data) used because no machine max threading feed is set. Set it in the machine profile to replace this check. · ` : mx > 0 ? `within machine max threading feed ${mx} IPM · ` : ''; }
+      if (TH()) extra = card('Constant RPM (G97)', `<span style="font-size:22px">G97 S${Math.round(o.rpm)}</span>`, (o.thrW || '') + `threading feed ${Math.round(o.ipm)} IPM (RPM × lead) · threading runs at a locked RPM · manufacturer SFM at part Ø${uLen(v('d'), 3)}` + (o.capped ? ' · <span class="warn">capped at machine max RPM</span>' : '') + ' · DERIVED'); else
+      extra += card('RPM start → finish', `${Math.round(cs.rpm0)} → ${isFinite(cs.rpm1) ? Math.round(cs.rpm1) : '— (set a lathe profile for G50)'}`, `at Ø${uLen(v('d'), 3)} → Ø${uLen(d1, 3)}${PART() ? ' (part-off to center)' : ''} · DERIVED`)
+        + card('CSS (G96)', `<span style="font-size:22px">G96 S${metric ? uSp(v('sfm')) : Math.round(v('sfm'))}<br>G50 S${v('maxRpm') || '—'}</span>`, (metric ? 'S in m/min (G21)' : 'S in SFM (G20)') + (cs.clampDia ? ` · RPM clamps at G50 below Ø${uLen(cs.clampDia, 3)}` : ' · <span class="warn">set a lathe profile for the G50 clamp</span>') + ' · DERIVED'); BAR.ipr = true; }
+    if (mode === 'bore') { o = drill({ sfm: v('sfm'), d: v('d'), ipr: boreFz ? v('fpt') * (v('z') || 1) : v('fpt'), maxRpm: v('maxRpm') });
+      extra = `<div class="card wide"><div class="b">Bore: RPM from SFM at bore Ø ${v('d')} in; ${boreFz ? `IPM = RPM × feed/tooth × ${v('z') || 1} cutting edge(s) (manufacturer prints per tooth)` : 'IPM = RPM × feed/rev (manufacturer prints per rev)'} · DERIVED</div></div>`; }
+    if (mode === 'tap') o = tap({ sfm: v('sfm'), d: v('d'), pitch: v('fpt'), maxRpm: v('maxRpm') });
+    const calc = 'CALCULATED from the values above' + (!v('maxRpm') ? ' · <span class="warn">no machine max RPM set</span>' : '');
+    const soN = mode === 'mill' && stickoutFactor(v('so'), v('d')) < 1 ? ` · <span class="warn">feed reduced ${Math.round((1 - stickoutFactor(v('so'), v('d'))) * 100)}% for stickout</span> (DERIVED)` : '';
+    cards += card('RPM', Math.round(o.rpm), (o.capped ? '<span class="warn">capped at machine max RPM</span> · ' : '') + calc) + (TH() ? '' : card(FPL, uIpm(o.ipm, mode === 'mill' ? 1 : 2), calc + soN)) + extra;
+    BAR.push(['RPM', Math.round(o.rpm)], BAR.ipr ? [metric ? 'mm/rev' : 'IPR', uFeed(v('fpt'))] : [metric ? 'mm/min' : 'IPM', uIpm(o.ipm, mode === 'mill' ? 1 : 2)]);
+  }
+  }
+  $('apT').closest('label').style.display = PG() ? 'none' : '';
+  if (c && !PG()) { const apU = c.ap ? toIn(1, c.ap.unit) : 1, d = v('d'); let doc = [];
+    if (c.ap?.value != null) doc.push(`DOC ${(c.ap.value * apU).toFixed(3)} in`); else if (c.ap) doc.push(`DOC ${c.ap.min != null ? (c.ap.min * apU).toFixed(3) + '–' : '≤ '}${(c.ap.max * apU).toFixed(3)} in`);
+    if (c.apx) doc.push(`DOC ${c.apx}×D${d ? ` = ${(c.apx * d).toFixed(3)} in` : ''}`); if (c.aex) doc.push(`WOC ${c.aex}×D${d ? ` = ${(c.aex * d).toFixed(3)} in` : ''}`);
+    if (PR?.ap) doc.push(`DOC ${PR.ap.value} ${PR.ap.unit} (printed for Ø${PR.key} ${PR.unit})`); if (PR?.ae) doc.push(`WOC ${PR.ae.value} ${PR.ae.unit} (printed for Ø${PR.key} ${PR.unit})`);
+    if (c.woc) doc.push(`WOC ${(c.woc * 100).toFixed(0)}% of D`);
+    if (c.feed?.byWoc) doc.push('WOC published at ' + Object.keys(c.feed.byWoc).map(k => (+k * 100).toFixed(0) + '%').join(', '));
+    if (doc.length) cards += card('DOC / WOC', `<span style="font-size:22px">${doc.join('<br>')}</span>`, src, 'wide'); } // no card when it would only say No manufacturer data
+  // nearest options with data, as chips
+  let chips = []; const sig = x => JSON.stringify([x.iso, x.sfm, x.feed, x.ap, x.source?.catalog, x.source?.page]), seen = new Set(c ? [sig(c), c.label] : []);
+  const fresh = x => { const s = sig(x); if (seen.has(s) || seen.has(x.label)) return false; seen.add(s); seen.add(x.label); return true; };
+  if (t && (!c || !SP || !FD)) {
+    if (OUTROW) t.conditions.map((x, i) => [x, i, rowDia(x)]).filter(([x, i, r]) => r && isoOk(x) && x.sfm && x.feed && String(i) !== $('cond').value && fresh(x)).sort((a, b) => Math.min(Math.abs(a[2][0] - inV('d')), Math.abs(a[2][1] - inV('d'))) - Math.min(Math.abs(b[2][0] - inV('d')), Math.abs(b[2][1] - inV('d')))).slice(0, 8).forEach(([x, i]) => chips.push([x.label, `c:${i}`]));
+    if (c && !FD && c.feed && mode !== 'tap' && !OUTROW) diaList(c).slice(0, 12).forEach(x => chips.push([`Ø ${x.toFixed(4)} in`, `d:${x}`]));
+    t.conditions.forEach((x, i) => { if (chips.length < 12 && String(i) !== $('cond').value && x.sfm && (mode === 'tap' || x.feed) && isoOk(x) && fresh(x)) chips.push([x.label, `c:${i}`]); });
+    t.conditions.forEach((x, i) => { if (chips.length < 16 && x.sfm && (mode === 'tap' || x.feed) && !isoOk(x) && fresh(x)) chips.push([x.label + ' (other material)', `m:${i}`]); });
+  }
+  const miss = !c || (!PR && (!v('sfm') || !v('fpt')));
+  $('cards').innerHTML = w + (miss ? `<div class="out"><span class="warn">${OUTROW ? 'No mfr data at this size.' : 'No manufacturer data for this combo.'}</span>${chips.length ? '<br>Nearest options from this tool with data:<div class="chips">' + chips.map(([l, k]) => `<button class="chip" data-k="${k}">${l}</button>`).join('') + '</div>' : ''}</div>` : '') + `<div class="cards">${cards}</div>`;
+  if (mode === 'turn' && $('top').value === 'Face' && !c) { // no facing record: point to Turn, invent nothing
+    $('cards').innerHTML = `<div class="out"><span class="warn">Catalogs don't print facing separately. Use the Turn numbers for the same insert.</span><br><button id="faceTurn" class="chip">Switch Operation to Turn</button></div>`;
+    $('faceTurn').onclick = () => { $('top').value = 'Turn'; fillBrand(); }; }
+  $('out').hidden = true;
+  $('bar').innerHTML = BAR.length ? BAR.map(([k, x]) => `<span>${x} <small>${k}</small></span>`).join('') + `<small>${t ? (mode === 'tap' ? geo(t) : short(t.series)) : ''}</small>` : '<small>No manufacturer data for this combo</small>';
+  if (!$('mach').value) $('bar').innerHTML += '<span class="warn" style="font-size:15px;width:100%">⚠ Pick a machine for RPM limits</span>';
+}
+$('cards').onclick = e => { const k = e.target.closest('.chip')?.dataset.k; if (!k) return; const [ty, x] = k.split(/:(.*)/);
+  if (ty === 'd') { setIn('d', +x); if (mode === 'mill') showEng(); fill(); }
+  if (ty === 'c') { $('cond').value = x; fill(); recent(); }
+  if (ty === 'm') { $('iso').value = ''; $('mat').value = ''; syncPick(); fillCond().then(() => { $('cond').value = x; fill(); recent(); }); } };
+$('dPick').onchange = () => { setIn('d', +$('dPick').value); if (mode === 'mill') showEng(); fill(); };
+// Favorites & recent setups
+const FIELDS = ['iso', 'mat', 'brand', 'kind', 'top', 'tapT', 'hole', 'pass', 'cut', 'tool', 'cond', 'thr', 'd', 'z', 'sfm', 'fpt', 'aeU', 'apU', 'ae', 'ap', 'apT', 'so', 'nose', 'cb', 'len', 'sup', 'cool', 'fD', 'hd', 'bd', 'shk'];
+const snap = () => { const t = curTool(), c = t?.conditions[$('cond').value];
+  return { mode, name: `${mode} · ${t ? t.brand + ' ' + t.series : '?'} · ${c?.label ?? ''}${$('cb').value ? ' · ' + $('cb').value : ''}`, v: Object.fromEntries(FIELDS.map(k => [k, $(k).value])) }; };
+function recent() { const t = curTool(); if (!t) return; const s = snap(), r = LS.get('recent', []).filter(x => x.name !== s.name); r.unshift(s); LS.set('recent', r.slice(0, 8)); recallList(); }
+function recallList() { const sel = $('recall'); if (!sel) return; sel.length = 1;
+  for (const k of ['fav', 'recent']) { const l = LS.get(k, []); if (l.some(x => !MODES.includes(x.mode))) LS.set(k, migrate(l, SUM)); }
+  forMode(LS.get('fav', []), mode).forEach(([x, i]) => sel.add(new Option('★ ' + x.name, 'f' + i))); forMode(LS.get('recent', []), mode).forEach(([x, i]) => sel.add(new Option('↺ ' + x.name, 'r' + i))); }
+$('fav').onclick = () => { const f = LS.get('fav', []); f.unshift(snap()); LS.set('fav', f.slice(0, 30)); recallList(); $('fav').textContent = '★ Saved'; setTimeout(() => $('fav').textContent = '★ Save setup as favorite', 1200); };
+$('recall').onchange = async () => { const k = $('recall').value; if (!k) return; const s = LS.get(k[0] === 'f' ? 'fav' : 'recent', [])[+k.slice(1)]; if (!s) return;
+  await setMode(s.mode); $('iso').value = s.v.iso; $('mat').value = s.v.mat ?? ''; fillMat(); $('onlyData').checked = false; await fillBrand(); $('brand').value = s.v.brand; await fillTool(); $('tool').value = s.v.tool; await fillCond();
+  for (const k2 of FIELDS) if (!['iso', 'mat', 'brand', 'tool', 'sfm', 'fpt'].includes(k2)) $(k2).value = s.v[k2];
+  fill(); $('sfm').value = s.v.sfm; $('fpt').value = s.v.fpt; run(); $('recall').value = ''; };
+document.querySelectorAll('[data-mode]').forEach(b => { b.onclick = () => setMode(b.dataset.mode); b.hidden = !SUM.some(t => t.mode === b.dataset.mode); });
+['top', 'tapT'].forEach(k => $(k).onchange = fillBrand); $('kind').onchange = fillTool; ['pass', 'cut', 'nose', 'cb'].forEach(k => $(k).onchange = fillCond); $('pass').onchange = () => mode === 'turn' ? fillTool() : fillCond();
+['fD', 'hd', 'bd', 'so'].forEach(k => $(k).oninput = run); $('tpi').oninput = $('pitchU').onchange = () => fillCond(); $('shk').onchange = run; $('hole').onchange = () => { const k = $('tool').value; fillTool(); if ($('tool').value === k) fill(); };
+$('unit').onclick = () => { const KS = [...LEN, 'sfm', 'fpt'], x = Object.fromEntries(KS.map(k => [k, $(k).value === '' ? '' : inV(k)])); metric = !metric; LS.set('metric', metric);
+  KS.forEach(k => setIn(k, x[k])); $('aeU').options[1].text = $('apU').options[1].text = UL(); showEng(); $('sfmLbl').firstChild.textContent = metric ? 'Speed (m/min)' : 'SFM';
+  $('feedLbl').firstChild.textContent = $('feedLbl').firstChild.textContent.replace(/\b(in|mm)\//, UL() + '/').replace(/\((in|mm)\)/, `(${UL()})`); $('unit').textContent = metric ? 'mm' : 'inch'; document.querySelectorAll('.u').forEach(e => e.textContent = `(${UL()})`);
+  $('dLbl').firstChild.textContent = $('dLbl').firstChild.textContent.replace(/\((in|mm)\)/, `(${UL()})`); run(); };
+$('matPick').onchange = () => { TUSER = false; const [i, m] = $('matPick').value.split(':'); $('iso').value = i; $('mat').value = m ?? ''; fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillTool; $('tq').oninput = fillTool; $('cq').oninput = fillCond; $('tool').onchange = () => { TUSER = true; GUSER = false; $('cq').value = ''; fillGrade(''); }; $('grade').onchange = () => { GUSER = true; fillGrade(); }; $('mach').onchange = applyMachine;
+$('cond').onchange = () => { fill(); recent(); }; $('cool').onchange = () => { if (mode === 'drill') { const k = $('tool').value; if (!TUSER) $('tool').value = ''; fillTool(); if ($('tool').value === k) fill(); } else fill(); }; $('thr').onchange = fillBrand; $('d').onchange = () => { TUSER = false; if (mode === 'mill') showEng(); if (mode === 'drill') { const k = $('tool').value; fillTool(); if ($('tool').value === k) return fill(); return; } fill(); };
+['ae', 'aeU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ae') ENG.ae = 'yours'; readEng(); }));
+['ap', 'apU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ap') ENG.ap = 'yours'; readEng(); }));
+$('apT').addEventListener('input', () => { ENG.ap = 'yours'; engTags(); });
+$('ae').onchange = () => { if (curTool()?.conditions[$('cond').value]?.feed?.byWoc) { readEng(); fill(); } };
+['z', 'sfm', 'fpt', 'ae', 'ap', 'apT', 'len'].forEach(k => $(k).oninput = run); $('sup').onchange = run;
+if (LS.get('metric', false)) $('unit').onclick(); $('cool').value = LS.get('lastCoolant', 'flood'); machines(); { const m = LS.get('machines', [])[$('mach').value]; if (m) { $('maxRpm').value = m.rpm || ''; $('maxHp').value = m.hp || ''; } }
+recallList();
+if (q.get('iso')) $('iso').value = q.get('iso');
+if (q.get('mat')) $('mat').value = q.get('mat'); fillMat();
+if (q.get('d')) $('d').value = q.get('d');
+for (const k of ['len', 'sup', 'apT', 'maxRpm']) if (q.get(k)) $(k).value = q.get(k);
+await setMode(mode);
+if (q.get('tool')) { const t = SUM.find(x => x.key === q.get('tool')); if (t) { $('onlyData').checked = false; if (t.mode !== mode) await setMode(t.mode); await fillBrand(); $('brand').value = t.brand; await fillTool(); const g = Object.keys(GROUPS).find(k => GROUPS[k].includes(t.key)) ?? t.key; $('tool').value = g; await fillGrade(''); if ([...$('grade').options].some(o => o.value.startsWith(t.key + '|') && !o.disabled) && !$('grade').value.startsWith(t.key + '|')) { $('grade').value = [...$('grade').options].find(o => o.value.startsWith(t.key + '|') && !o.disabled).value; await fillCond(); } } }
+if (q.get('cond')) { $('cond').value = q.get('cond'); fill(); }
+if (q.get('thr')) { $('thr').value = q.get('thr'); fill(); }
+if (q.get('d')) { $('d').value = q.get('d'); fill(); }
+if (q.get('open')) document.querySelector('#src details')?.setAttribute('open', '');
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+
 function updateFindLink() {
   const a = $('findTool');
   if (!a) return;
