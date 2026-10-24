@@ -27,7 +27,9 @@ const hasData = c => c.sfm || c.feed;
 function feedAt(f, dIn) {
   if (!f) return null;
   if (f.range) return pick(f.range, toIn(1, f.unit));
-  if (f.bands) { const b = f.bands.find(([a, z]) => dIn >= a - 1e-4 && dIn <= z + 1e-4); return b ? pick({ value: b[2] }) : null; }
+  if (f.bands) { const u = toIn(1, f.unit), b = f.bands.find(([a, z]) => dIn >= a * u - 1e-4 && dIn <= z * u + 1e-4); return b ? pick({ value: b[2] }, u) : null; }
+  if (f.byWoc) { const e = Object.entries(f.byWoc).find(([k]) => Math.abs(+k - frac.ae) < 0.005);
+    return e ? pick(typeof e[1] === 'object' ? e[1] : { value: e[1] }, toIn(1, f.unit)) : null; }
   for (const [k, v] of Object.entries(f.byDiameter || {})) if (Math.abs(toIn(+k, f.unit) - dIn) < 0.02)
     return pick(typeof v === 'object' ? v : { value: v }, toIn(1, f.unit));
   return null;
@@ -47,7 +49,7 @@ function setMode(m) {
   document.querySelectorAll('[data-show]').forEach(e => e.hidden = !e.dataset.show.split(' ').includes(m));
   $('feedLbl').firstChild.textContent = m === 'mill' ? 'Chip load (in/tooth)' : m === 'tap' ? 'Pitch (in)' : 'Feed (in/rev)';
   $('dLbl').firstChild.textContent = m === 'turn' ? 'Work dia (in)' : m === 'tap' ? 'Tap dia (in)' : 'Tool dia (in)';
-  $('brand').length = 0; $('tool').length = 0; $('tq').value = ''; return fillBrand();
+  $('brand').length = 0; $('tool').length = 0; $('tq').value = ''; $('cq').value = ''; return fillBrand();
 }
 const toolOk = t => { const m = matSel(); if (m && !(t.mats.includes(m.id) || t.isos.includes(m.iso) || t.isos.includes('*'))) return false;
   return !$('onlyData').checked || t.dataIsos.some(i => i === '*' || !(m?.iso || $('iso').value) || i === (m?.iso || $('iso').value)); };
@@ -64,7 +66,9 @@ function fillTool() { const cur = $('tool').value, b = $('brand').value, words =
 async function fillCond() {
   await ensure($('tool').value);
   const t = curTool(); $('cond').length = 0;
-  (t?.conditions || []).forEach((c, i) => { if (isoOk(c)) $('cond').add(new Option(c.label + (c.status === 'shop-proven' ? ' · SHOP-PROVEN' : '') + (matSel() && !c.materials ? ' · ISO group only' : ''), i)); });
+  const cw = $('cq').value.toLowerCase().split(/\s+/).filter(Boolean); let nc = 0;
+  $('cqL').hidden = (t?.conditions.length ?? 0) < 25 && !cw.length;
+  (t?.conditions || []).forEach((c, i) => { if (isoOk(c) && cw.every(w => c.label.toLowerCase().includes(w)) && nc++ < 400) $('cond').add(new Option(c.label + (c.status === 'shop-proven' ? ' · SHOP-PROVEN' : '') + (matSel() && !c.materials ? ' · ISO group only' : ''), i)); });
   if (t?.flutes) $('z').value = t.flutes;
   fill(); recent();
 }
@@ -92,8 +96,13 @@ function fill() {
       + (c.sourceGroup ? `<br>Source material group: “${c.sourceGroup}”` : '') + (s.notes ? `<br>${s.notes}` : '') + (t.notes ? `<br>${t.notes}` : '') + '</details>'
       + `<b>SFM:</b> ${sp ? fmt(sp, 0) + ' ft/min — default = ' + sp.basis : NO}`
       + (mode === 'tap' ? '' : `<br><b>${mode === 'mill' ? 'Chip load' : 'Feed/rev'}:</b> ${fd ? fmt(fd, 4) + ' in — default = ' + fd.basis : NO + ' at this diameter'}`)
-      + (c.ap ? `<br><b>DOC ${shop ? '' : 'manufacturer '}${c.ap.min != null ? 'min–max' : 'max'}:</b> ${c.ap.min != null ? (c.ap.min * apU).toFixed(3) + ' – ' : '≤ '}${(c.ap.max * apU).toFixed(3)} in (${c.ap.min ?? ''}${c.ap.min != null ? '–' : '≤'}${c.ap.max} ${c.ap.unit})` : (mode === 'turn' ? `<br><b>DOC:</b> ${NO}` : ''))
-      + (c.apx ? `<br>ap ${c.apx}×D, ae ${c.aex}×D` : '')
+      + (c.ap?.value != null ? `<br><b>DOC ${shop ? '' : 'manufacturer '}stated:</b> ${(c.ap.value * apU).toFixed(3)} in (${c.ap.value} ${c.ap.unit})` : c.ap ? `<br><b>DOC ${shop ? '' : 'manufacturer '}${c.ap.min != null ? 'min–max' : 'max'}:</b> ${c.ap.min != null ? (c.ap.min * apU).toFixed(3) + ' – ' : '≤ '}${(c.ap.max * apU).toFixed(3)} in (${c.ap.min ?? ''}${c.ap.min != null ? '–' : '≤'}${c.ap.max} ${c.ap.unit})` : (mode === 'turn' ? `<br><b>DOC:</b> ${NO}` : ''))
+      + (c.apx || c.aex ? `<br>${c.apx ? `ap ${c.apx}×D` : ''}${c.apx && c.aex ? ', ' : ''}${c.aex ? `ae ${c.aex}×D` : ''} (manufacturer)` : '')
+      + (c.woc ? `<br>Speed stated for ae = ${(c.woc * 100).toFixed(0)}% of D` : '')
+      + (c.feed?.byWoc ? `<br>Chip load published at ae = ${Object.entries(c.feed.byWoc).map(([k, v]) => `${(+k * 100).toFixed(0)}%: ${typeof v === 'object' ? (v.value ?? `${v.min}–${v.max}`) : v} ${c.feed.unit}`).join(', ')}${fd ? '' : ' — set WOC to one of these'}` : '')
+      + (c.noseRadius ? `<br>Nose radius ${c.noseRadius.value ?? c.noseRadius.label} ${c.noseRadius.unit}` : '') + (c.leadAngle ? ` · ${c.leadAngle.convention} ${c.leadAngle.deg}°` : '') + (c.toolLife ? ` · tool life ${c.toolLife} min` : '')
+      + (c.insertWidth ? `<br>Insert width ${c.insertWidth.value ?? c.insertWidth.label} ${c.insertWidth.unit}` : '')
+      + (c.note ? `<br><small>${c.note}</small>` : '') + (c.coolantNote ? `<br><small>${c.coolantNote}</small>` : '')
       + (c.coolant ? `<br>Coolant: ${c.coolant} (${shop ? 'shop record' : 'manufacturer stated'})` : `<br><span class="warn">Coolant not stated in source; values not adjusted for ${cool}.</span>`);
   }
   if (mode === 'tap') { const th = threads.threads[$('thr').value];
@@ -142,8 +151,9 @@ $('recall').onchange = async () => { const k = $('recall').value; if (!k) return
   for (const k2 of FIELDS) if (!['iso', 'mat', 'brand', 'tool', 'sfm', 'fpt'].includes(k2)) $(k2).value = s.v[k2];
   fill(); $('sfm').value = s.v.sfm; $('fpt').value = s.v.fpt; run(); $('recall').value = ''; };
 document.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => setMode(b.dataset.mode));
-$('matPick').onchange = () => { const [i, m] = $('matPick').value.split(':'); $('iso').value = i; $('mat').value = m ?? ''; fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillTool; $('tq').oninput = fillTool; $('tool').onchange = fillCond; $('mach').onchange = applyMachine;
+$('matPick').onchange = () => { const [i, m] = $('matPick').value.split(':'); $('iso').value = i; $('mat').value = m ?? ''; fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillTool; $('tq').oninput = fillTool; $('cq').oninput = fillCond; $('tool').onchange = () => { $('cq').value = ''; fillCond(); }; $('mach').onchange = applyMachine;
 $('cond').onchange = () => { fill(); recent(); }; ['cool', 'thr'].forEach(k => $(k).onchange = fill); $('d').onchange = () => { if (mode === 'mill') showEng(); fill(); };
+$('ae').onchange = () => { if (curTool()?.conditions[$('cond').value]?.feed?.byWoc) { readEng(); fill(); } };
 ['z', 'sfm', 'fpt', 'ae', 'ap', 'apT', 'so', 'maxRpm', 'maxHp', 'len', 'nose'].forEach(k => $(k).oninput = run); $('sup').onchange = run;
 $('cool').value = LS.get('lastCoolant', 'flood'); machines(); { const m = LS.get('machines', [])[$('mach').value]; if (m) { $('maxRpm').value = m.rpm || ''; $('maxHp').value = m.hp || ''; } }
 recallList();

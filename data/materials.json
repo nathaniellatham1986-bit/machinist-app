@@ -38,6 +38,7 @@
   "K": "Cast iron",
   "N": "Aluminum / non-ferrous",
   "S": "High-temp alloy / titanium",
-  "H": "Hardened steel"
+  "H": "Hardened steel",
+  "O": "Other (composites, graphite, plastics)"
  }
 }

@@ -74,3 +74,12 @@ Suggested name: `<brand>-<mode>[-<series>].json`, e.g. `iscar-mill.json`.
 
 ## Materials
 `data/materials.json` lists specific materials. 303 (free-machining, sulfurized) is its own entry. 304 and 316 (standard austenitic, work-hardening) share the entry ss304. `groups` holds the plain ISO group names used by the picker. To add a material, add it to that file with its ISO group.
+
+## Schema 1 additions (Seco merge)
+- `iso: "O"` — non-ISO manufacturer groups (composites, graphite, plastics). The manufacturer code stays in `subgroup` (e.g. `SMG v2 GR1`).
+- `subgroup` keeps the manufacturer's own group code (Seco SMG P1–P12, M1–M5, …). `materials[]` is added only where the source names the alloy.
+- `feed.byWoc`: `{ "<ae/D 0–1>": number | {value} | {min,max} }`. The app uses only an exact WOC match and otherwise lists the published values.
+- `feed.byDiameter` values may be a number, `{value}` or `{min,max}` (Garr/YG-1). Seco diameter-range keys are converted to `feed.bands`.
+- `ap: {value, unit}` — a single stated depth.
+- Optional condition fields: `noseRadius`/`insertWidth` `{value|label, unit}`, `leadAngle {deg, convention}`, `toolLife` (min), `woc` (the ae/D the speed is stated for), and the strings `chipbreaker`, `geometry`, `kind`, `table`, `operation`, `insert`, `grade`, `note`, `coolantNote`.
+- Flat drops `{brand, family, records[]}` are converted by `scripts/convert-flat.mjs`. `scripts/merge-incoming.mjs <incoming> <brand>` validates them, writes `data/<brand>-<family>.json` (one shard per family, lazy-loaded) and moves rejects to `_rejected/<brand>/` with `.reason.txt`.

@@ -8,14 +8,15 @@ export const NON_BRAND = new Set(['index.json', 'threads.json', 'materials.json'
 export const MATERIALS = JSON.parse(fs.readFileSync(new URL('../data/materials.json', import.meta.url))).materials;
 const MAT = Object.fromEntries(MATERIALS.map(m => [m.id, m]));
 const MODES = ['mill', 'drill', 'turn', 'tap'];
-const ISO = ['P', 'M', 'K', 'N', 'S', 'H', '*'];
+const ISO = ['P', 'M', 'K', 'N', 'S', 'H', 'O', '*'];
 const STATUS = ['verified', 'derived', 'shop-proven'];
 const KINDS = ['catalog', 'label', 'calculator', 'shop'];
 const SPEED_UNITS = ['ft/min', 'm/min'];
 const LEN_UNITS = ['in', 'mm'];
 const FEED_KINDS = ['fz', 'ipr', 'pitch'];
 const TOOL_KEYS = new Set(['mode', 'brand', 'series', 'type', 'flutes', 'coating', 'grade', 'diameters_in', 'diameters_mm', 'notes', 'conditions']);
-const COND_KEYS = new Set(['label', 'iso', 'subgroup', 'material', 'status', 'coolant', 'sfm', 'feed', 'ap', 'ae', 'apx', 'aex', 'source', 'materials', 'sourceGroup']);
+const COND_KEYS = new Set(['label', 'iso', 'subgroup', 'material', 'status', 'coolant', 'sfm', 'feed', 'ap', 'ae', 'apx', 'aex', 'source', 'materials', 'sourceGroup',
+  'noseRadius', 'leadAngle', 'toolLife', 'insertWidth', 'chipbreaker', 'geometry', 'kind', 'table', 'woc', 'operation', 'insert', 'grade', 'note', 'coolantNote']);
 const SRC_KEYS = new Set(['kind', 'manufacturer', 'catalog', 'edition', 'url', 'page', 'notes', 'derivation', 'retrieved']);
 
 const isNum = v => typeof v === 'number' && Number.isFinite(v) && v >= 0;
@@ -53,13 +54,16 @@ function feed(f, where, err) {
   if (!f || typeof f !== 'object') return err(where, 'feed must be an object or null');
   if (!FEED_KINDS.includes(f.kind)) err(where, `feed.kind must be one of ${FEED_KINDS.join('|')}`);
   if (!LEN_UNITS.includes(f.unit)) err(where, `feed.unit must be one of ${LEN_UNITS.join('|')}`);
-  const forms = ['range', 'bands', 'byDiameter'].filter(k => k in f);
-  if (forms.length !== 1) return err(where, 'feed needs exactly one of range | bands | byDiameter');
+  const forms = ['range', 'bands', 'byDiameter', 'byWoc'].filter(k => k in f);
+  if (forms.length !== 1) return err(where, 'feed needs exactly one of range | bands | byDiameter | byWoc');
   if (f.range) range(f.range, where + '.range', err);
   if (f.bands) {
     if (!Array.isArray(f.bands) || !f.bands.length) err(where, 'feed.bands must be a non-empty array');
     else f.bands.forEach((b, i) => { if (!Array.isArray(b) || b.length !== 3 || !b.every(isNum) || b[0] > b[1]) err(`${where}.bands[${i}]`, 'must be [dMin, dMax, feed] with dMin <= dMax'); });
   }
+  if (f.byWoc) { const e = Object.entries(f.byWoc); if (!e.length) err(where, 'feed.byWoc is empty');
+    for (const [k, v] of e) { if (!(+k > 0 && +k <= 1)) err(`${where}.byWoc`, `key "${k}" must be ae/D as a fraction 0-1`);
+      if (typeof v === 'number') { if (!isNum(v)) err(`${where}.byWoc.${k}`, 'must be a number'); } else range(v, `${where}.byWoc.${k}`, err); } }
   if (f.byDiameter) {
     const e = Object.entries(f.byDiameter); if (!e.length) err(where, 'feed.byDiameter is empty');
     for (const [d, v] of e) { if (!isNum(+d) || +d === 0) err(`${where}.byDiameter`, `key "${d}" must be a diameter number`);
@@ -70,10 +74,11 @@ function feed(f, where, err) {
 function depth(a, where, err) {
   if (!a || typeof a !== 'object') return err(where, 'must be an object');
   if (!LEN_UNITS.includes(a.unit)) err(where, `unit must be one of ${LEN_UNITS.join('|')}`);
-  if (!isNum(a.max)) err(where, 'max is required');
+  if ('value' in a) { if (!isNum(a.value) || 'max' in a || 'min' in a) err(where, 'value is a single stated depth; use it alone'); }
+  else if (!isNum(a.max)) err(where, 'max (or value) is required');
   if ('min' in a && !isNum(a.min)) err(where, 'min must be a number');
   if (isNum(a.min) && isNum(a.max) && a.min > a.max) err(where, 'min > max');
-  for (const k of Object.keys(a)) if (!['min', 'max', 'unit'].includes(k)) err(where, `unknown key "${k}"`);
+  for (const k of Object.keys(a)) if (!['min', 'max', 'value', 'unit'].includes(k)) err(where, `unknown key "${k}"`);
 }
 
 export function validate(doc, name = 'file') {
@@ -115,7 +120,13 @@ export function validate(doc, name = 'file') {
         if (c.materials?.includes('ss303') && !/303|free.?machin|sulph|sulfur|austenitic/i.test(c.sourceGroup ?? '')) err(w, 'ss303 only when the source names 303, free-machining stainless, or austenitic stainless as a group');
         if (c.materials?.includes('ss304') && !/304|316|austenitic/i.test(c.sourceGroup ?? '')) err(w, 'ss304 only when the source names 304 or austenitic stainless');
       }
-      if (/free.?machin/i.test(c.label) && c.iso === 'M' && !/free.?machin|sulph|sulfur/i.test(c.sourceGroup ?? '')) err(w, 'do not label stainless as free-machining unless the source says so');
+      if (c.iso === 'M' && /free.?machin/i.test(c.label) && /30[4]|316/.test(c.label) && !/303/.test(c.label)) err(w, '304/316 are not free-machining; keep 303 separate');
+      if (c.materials?.includes('ss304') && /free.?machin|sulph|sulfur/i.test(c.sourceGroup ?? '') && !/304|316|austenitic/i.test(c.sourceGroup)) err(w, 'free-machining source group maps to ss303, not ss304');
+      for (const k of ['noseRadius', 'insertWidth']) if (k in c) { const v = c[k]; if (!v || !LEN_UNITS.includes(v.unit) || !(isNum(v.value) || isStr(v.label))) err(w, `${k} must be {value|label, unit: in|mm}`); }
+      if ('leadAngle' in c && !(isNum(c.leadAngle?.deg) && isStr(c.leadAngle?.convention))) err(w, 'leadAngle must be {deg, convention} (e.g. convention "entering angle kr")');
+      if ('toolLife' in c && !(isNum(c.toolLife) && c.toolLife > 0)) err(w, 'toolLife must be minutes (number)');
+      if ('woc' in c && !(isNum(c.woc) && c.woc > 0 && c.woc <= 1)) err(w, 'woc must be ae/D as a fraction 0-1');
+      for (const k of ['chipbreaker', 'geometry', 'kind', 'table', 'operation', 'insert', 'grade', 'note', 'coolantNote']) if (k in c && !isStr(c[k])) err(w, `${k} must be a non-empty string`);
       source(c.source, c, w + '.source', err);
     });
   });
