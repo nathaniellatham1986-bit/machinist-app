@@ -193,3 +193,6 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   const g = { mode: 'drill', series: 'SUMOGUN MNSNT', type: 'modular gundrill head', cl: ['flood'] };
   assert.ok(isGun(g)); assert.ok(drillRank(g, 'flood') > drillRank({ mode: 'drill', series: 'DE10' }, 'flood'));
   console.log('ME11 #1 gundrill tests pass'); }
+{ const { geoName, isMFDrill } = await import('./calc.js');
+  const x = { mode: 'turn', series: 'XCMT-MF insert - grooving' }; assert.ok(isMFDrill(x)); assert.equal(geoName(x), 'XCMT-MF (multi-function drill insert)');
+  console.log('ME11 #2 XCMT-MF tests pass'); }
