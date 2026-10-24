@@ -1,0 +1,75 @@
+{
+ "schema": 1,
+ "builder": "Hermle",
+ "models": [
+  {
+   "model": "C 42 U",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "15000 rpm HSK-A63",
+     "rpm": 15000,
+     "taper": "HSK-A63",
+     "kw_peak": 31,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 194,
+     "rating_note": "20% duty"
+    },
+    {
+     "option": "15000 rpm SK40",
+     "rpm": 15000,
+     "taper": "SK40",
+     "kw_peak": 42,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 148,
+     "rating_note": "20% duty"
+    },
+    {
+     "option": "18000 rpm HSK-A63",
+     "rpm": 18000,
+     "taper": "HSK-A63",
+     "kw_peak": 42,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 148,
+     "rating_note": "20% duty"
+    },
+    {
+     "option": "25000 rpm HSK-A63",
+     "rpm": 25000,
+     "taper": "HSK-A63",
+     "kw_peak": 31,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 98,
+     "rating_note": "20% duty"
+    },
+    {
+     "option": "42000 rpm HSK-E40",
+     "rpm": 42000,
+     "taper": "HSK-E40",
+     "kw_peak": 35,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 17.5,
+     "rating_note": "20% duty"
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.hermle.de/fileadmin/website/5_NEWS-UND-MEDIA/5_2_Mediathek/Technische_Daten/Englisch/hermle_technical_data_c42_en.pdf",
+    "title": "Hermle Technical data C 42",
+    "accessed": "2026-10-24"
+   }
+  }
+ ]
+}
