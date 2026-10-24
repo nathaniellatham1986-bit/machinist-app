@@ -143,3 +143,7 @@ export const sizeRange = t => { const v = [];
 export const inRange = (r, d) => !r || !(d > 0) ? null : d >= r[0] - 1e-6 && d <= r[1] + 1e-6;
 // Tapered pipe threads (NPT/NPTF/BSPT/Rc). A taper tap only cuts a taper thread and vice versa.
 export const isTaperThread = s => /\bNPTF?\b|\bBSPT\b|\bRc ?\d|\bpipe taper/i.test(s ?? '');
+// One picker name per brand. Kyocera SGS (solid carbide, ex-SGS Tool) stays separate from Kyocera (indexable inserts).
+const BRAND_ALIAS = { iscar: 'Iscar', 'sumitomo': 'Sumitomo Electric Hardmetal', 'sumitomo electric': 'Sumitomo Electric Hardmetal', 'sumitomo electric hardmetal': 'Sumitomo Electric Hardmetal',
+  sgs: 'Kyocera SGS', 'kyocera sgs': 'Kyocera SGS', mitsubishi: 'Mitsubishi Materials', 'mitsubishi materials': 'Mitsubishi Materials', korloy: 'Korloy', fraisa: 'Fraisa' };
+export const brandName = b => BRAND_ALIAS[String(b ?? '').trim().toLowerCase()] ?? b;

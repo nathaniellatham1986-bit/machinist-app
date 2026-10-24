@@ -154,3 +154,6 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   assert.equal(tapName({ type: 'HSS-E machine tap; color code M; surface -; flute hand/angle R40°; lead DIN 2197 form C; hole types 1-2-3' }), 'HSS-E spiral flute R40° form C lead, M (stainless)');
   assert.equal(tapName({ type: 'HSS-E machine tap; color code M; surface TI; flute hand/angle -; lead DIN 2197 form B' }), 'HSS-E form B lead, TI, M (stainless)');
   console.log('ME7 Iscar tap name tests pass'); }
+{ const { brandName } = await import('./calc.js');
+  assert.equal(brandName('ISCAR'), 'Iscar'); assert.equal(brandName('Sumitomo Electric'), 'Sumitomo Electric Hardmetal'); assert.equal(brandName('KYOCERA SGS'), 'Kyocera SGS'); assert.equal(brandName('SGS'), 'Kyocera SGS'); assert.equal(brandName('Kyocera'), 'Kyocera');
+  console.log('ME8 brand alias tests pass'); }
