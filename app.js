@@ -237,7 +237,7 @@ function showEng() { const d = D(); $('ae').value = $('aeU').value === 'pct' ? +
   $('ap').value = $('apU').value === 'xd' ? +frac.ap.toFixed(3) : +(frac.ap * d * LK()).toFixed(metric ? 3 : 4); readEng(); }
 $('aeU').onchange = () => { showEng(); run(); }; $('apU').onchange = () => { showEng(); run(); };
 const mine = k => defs[k] == null || Math.abs(inV(k) - defs[k]) > (k === 'sfm' ? 2 : 5e-5);
-function run() { updateFindLink(); if (PART()) $('fD').value = '0'; if (mode === 'mill') readEng();
+function run() { updateFindLink(); favMark(); if (PART()) $('fD').value = '0'; if (mode === 'mill') readEng();
   const v = inV, tag = k => mine(k) && $(k).value ? ' <span class="tag warn">YOUR VALUE, NOT MANUFACTURER</span>' : '';
   const c = curTool()?.conditions[$('cond').value];
   let w = '';
@@ -322,8 +322,10 @@ const snap = () => { const t = curTool(), c = t?.conditions[$('cond').value];
 function recent() { const t = curTool(); if (!t) return; const s = snap(), r = LS.get('recent', []).filter(x => x.name !== s.name); r.unshift(s); LS.set('recent', r.slice(0, 8)); recallList(); }
 function recallList() { const sel = $('recall'); if (!sel) return; sel.length = 1;
   for (const k of ['fav', 'recent']) { const l = LS.get(k, []); if (l.some(x => !MODES.includes(x.mode))) LS.set(k, migrate(l, SUM)); }
-  forMode(LS.get('fav', []), mode).forEach(([x, i]) => sel.add(new Option('★ ' + x.name, 'f' + i))); forMode(LS.get('recent', []), mode).forEach(([x, i]) => sel.add(new Option('↺ ' + x.name, 'r' + i))); }
-$('fav').onclick = () => { const f = LS.get('fav', []); f.unshift(snap()); LS.set('fav', f.slice(0, 30)); recallList(); $('fav').textContent = '★ Saved'; setTimeout(() => $('fav').textContent = '★ Save setup as favorite', 1200); };
+  forMode(LS.get('fav', []), mode).forEach(([x, i]) => sel.add(new Option('★ ' + x.name, 'f' + i))); forMode(LS.get('recent', []), mode).forEach(([x, i]) => sel.add(new Option('↺ ' + x.name, 'r' + i))); favMark(); }
+const favAt = () => { const n = snap().name; return LS.get('fav', []).findIndex(x => x.name === n && x.mode === mode); };
+const favMark = () => { const on = curTool() && favAt() >= 0; $('fav').textContent = on ? '★' : '☆'; $('fav').style.color = on ? '#ffd400' : '#fff'; };
+$('fav').onclick = () => { if (!curTool()) return; const f = LS.get('fav', []), i = favAt(); if (i >= 0) f.splice(i, 1); else f.unshift(snap()); LS.set('fav', f.slice(0, 30)); recallList(); favMark(); };
 $('recall').onchange = async () => { const k = $('recall').value; if (!k) return; const s = LS.get(k[0] === 'f' ? 'fav' : 'recent', [])[+k.slice(1)]; if (!s) return;
   await setMode(s.mode); $('iso').value = s.v.iso; $('mat').value = s.v.mat ?? ''; fillMat(); $('onlyData').checked = false; await fillBrand(); $('brand').value = s.v.brand; await fillTool(); $('tool').value = s.v.tool; await fillCond();
   for (const k2 of FIELDS) if (!['iso', 'mat', 'brand', 'tool', 'sfm', 'fpt'].includes(k2)) $(k2).value = s.v[k2];
