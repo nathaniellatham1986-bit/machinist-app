@@ -21,6 +21,7 @@ for (const f of fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort()) {
   if (errs.length) { const d = mv(f, '_rejected'); fs.writeFileSync(path.join(d, f + '.reason.txt'), errs.join('\n') + '\n'); res.rejected.push({ file: f, errors: errs.length, first: errs[0] }); continue; }
   const b = slug(doc.brand), stem = slug(f.replace(/\.json$/, '')), out = stem.startsWith(b) ? `${stem}.json` : `${b}-${stem}.json`;
   fs.writeFileSync(path.join(root, 'data', out), JSON.stringify(doc));
+  const prev = path.join(inc, '_merged', brand, f); if (fs.existsSync(prev)) fs.renameSync(prev, prev + '.superseded-' + Date.now());
   mv(f, '_merged'); const n = doc.tools.reduce((a, t) => a + t.conditions.length, 0); res.records += n; res.merged.push({ file: out, records: n });
 }
 console.log(JSON.stringify(res));

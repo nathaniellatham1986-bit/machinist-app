@@ -16,7 +16,7 @@ const LEN_UNITS = ['in', 'mm'];
 const FEED_KINDS = ['fz', 'ipr', 'pitch'];
 const TOOL_KEYS = new Set(['mode', 'brand', 'series', 'type', 'flutes', 'coating', 'grade', 'diameters_in', 'diameters_mm', 'notes', 'conditions']);
 const COND_KEYS = new Set(['label', 'iso', 'subgroup', 'material', 'status', 'coolant', 'sfm', 'feed', 'ap', 'ae', 'apx', 'aex', 'source', 'materials', 'sourceGroup',
-  'noseRadius', 'leadAngle', 'toolLife', 'insertWidth', 'chipbreaker', 'geometry', 'kind', 'table', 'woc', 'operation', 'insert', 'grade', 'note', 'coolantNote']);
+  'noseRadius', 'leadAngle', 'toolLife', 'insertWidth', 'chipbreaker', 'geometry', 'kind', 'table', 'woc', 'operation', 'insert', 'grade', 'note', 'coolantNote', 'altSources']);
 const SRC_KEYS = new Set(['kind', 'manufacturer', 'catalog', 'edition', 'url', 'page', 'notes', 'derivation', 'retrieved']);
 
 const isNum = v => typeof v === 'number' && Number.isFinite(v) && v >= 0;
@@ -128,6 +128,10 @@ export function validate(doc, name = 'file') {
       if ('woc' in c && !(isNum(c.woc) && c.woc > 0 && c.woc <= 1)) err(w, 'woc must be ae/D as a fraction 0-1');
       for (const k of ['chipbreaker', 'geometry', 'kind', 'table', 'operation', 'insert', 'grade', 'note', 'coolantNote']) if (k in c && !isStr(c[k])) err(w, `${k} must be a non-empty string`);
       source(c.source, c, w + '.source', err);
+      if ('altSources' in c) { if (!Array.isArray(c.altSources) || !c.altSources.length) err(w, 'altSources must be a non-empty array');
+        else c.altSources.forEach((a, j) => { const aw = `${w}.altSources[${j}]`; source(a?.source, c, aw + '.source', err);
+          if (a?.sfm) range(a.sfm, aw + '.sfm', err); if (a?.feed) feed(a.feed, aw + '.feed', err);
+          for (const k of Object.keys(a || {})) if (!['source', 'label', 'sfm', 'feed'].includes(k)) err(aw, `unknown altSources key "${k}"`); }); }
     });
   });
   return errors;
