@@ -1,0 +1,56 @@
+{
+ "schema": 1,
+ "builder": "Hurco",
+ "models": [
+  {
+   "model": "VM10i",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Standard 12000 rpm",
+     "rpm": 12000,
+     "taper": "CAT40",
+     "kw_peak": 11,
+     "kw_cont": null,
+     "hp_peak": 15,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.hurco.com/Specifications/Pages/Machine-Data-Sheet.aspx?Model=VM10i",
+    "title": "Hurco VM10i data sheet",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "VM20i",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Standard 12000 rpm",
+     "rpm": 12000,
+     "taper": "CAT40",
+     "kw_peak": 15,
+     "kw_cont": null,
+     "hp_peak": 20,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.hurco.com/Specifications/Pages/Machine-Data-Sheet.aspx?Model=VM20i",
+    "title": "Hurco VM20i data sheet",
+    "accessed": "2026-10-24"
+   }
+  }
+ ]
+}
