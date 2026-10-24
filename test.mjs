@@ -65,3 +65,7 @@ const pe = TJ.find(x => x.series.startsWith('PENTA')).conditions[0]; assert.deep
   assert.deepEqual(matchIds('M', 'HRC 30 martensitic'), []);
   assert.deepEqual(matchIds('M', 'AISI 321, 347 stainless'), ['ss304']);
   assert.deepEqual(matchIds('P', 'AISI 4140, 300 HB'), ['p-alloy']); }
+// 303 printed together with 304/316 is "shared", ranked after 303-specific rows.
+{ const { shared303 } = await import('./calc.js');
+  assert.equal(shared303({ materials: ['ss303', 'ss304'], sourceGroup: 'M 2.1 303/304/316/316L/321' }), true);
+  assert.equal(shared303({ materials: ['ss303'], sourceGroup: 'Free-machining stainless 303' }), false); }

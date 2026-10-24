@@ -67,6 +67,7 @@ function feed(f, where, err) {
   if (f.byDiameter) {
     const e = Object.entries(f.byDiameter); if (!e.length) err(where, 'feed.byDiameter is empty');
     for (const [d, v] of e) { if (!isNum(+d) || +d === 0) err(`${where}.byDiameter`, `key "${d}" must be a diameter number`);
+      else if (Math.abs(+d) > (f.unit === 'mm' ? 80 : 3)) err(`${where}.byDiameter`, `key "${d}" is over ${f.unit === 'mm' ? '80 mm' : '3 in'}: likely a lost decimal point`);
       if (typeof v === 'number') { if (!isNum(v)) err(`${where}.byDiameter.${d}`, 'must be a non-negative number'); } else range(v, `${where}.byDiameter.${d}`, err); }
   }
 }

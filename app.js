@@ -1,5 +1,5 @@
 import { MODES, migrate, forMode } from './recall.js';
-import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES } from './calc.js';
+import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303 } from './calc.js';
 const $ = id => document.getElementById(id);
 const J = u => fetch(u).then(r => r.json());
 const idx = await J('data/index.json');
@@ -63,7 +63,7 @@ function fillTool() { const cur = $('tool').value, b = $('brand').value, words =
   const hits = inMode().filter(t => (!b || t.brand === b) && words.every(w => `${t.brand} ${t.series} ${t.type ?? ''}`.toLowerCase().includes(w)));
   const iso = matSel()?.iso || $('iso').value, rank = t => { const f = t.fullIsos || [], ok = i => !iso || i === iso || i === '*';
     const gen = !iso && mode !== 'tap' ? (f.includes('P') ? 0 : .25) + (mode === 'turn' && !(t.pFeed >= .012 && t.pFeed <= .025) ? .2 : 0) : 0; return gen + (f.some(x => !x.includes('~') && ok(x)) ? 0 : f.some(x => ok(x.replace('~', ''))) ? 1 : 2); };
-  const r2 = t => rank(t) + (/parting|groov|thread/i.test(t.series + (t.type ?? '')) ? .5 : 0); hits.sort((x, y) => r2(x) - r2(y));
+  const r2 = t => rank(t) + (/parting|groov|thread/i.test(t.series + (t.type ?? '')) ? .5 : 0); const r3 = t => r2(t) + (matSel()?.id === 'ss303' && !t.only303 ? .1 : 0); hits.sort((x, y) => r3(x) - r3(y));
   $('tool').length = 0; hits.slice(0, MAXOPT).forEach(t => $('tool').add(new Option(b ? t.series : `${t.brand} — ${t.series}`, t.key)));
   $('tn').textContent = hits.length > MAXOPT ? `(${MAXOPT} of ${hits.length}; refine search)` : `(${hits.length})`;
   if ([...$('tool').options].some(o => o.value === cur)) $('tool').value = cur; return fillCond(); }
@@ -72,11 +72,12 @@ async function fillCond() {
   const t = curTool(); $('cond').length = 0;
   const cw = $('cq').value.toLowerCase().split(/\s+/).filter(Boolean); let nc = 0;
   $('cqL').hidden = (t?.conditions.length ?? 0) < 25 && !cw.length;
-  (t?.conditions || []).forEach((c, i) => { if (isoOk(c) && cw.every(w => c.label.toLowerCase().includes(w)) && nc++ < 400) $('cond').add(new Option(c.label + (c.status === 'shop-proven' ? ' · SHOP-PROVEN' : '') + (matSel() && !c.materials ? ' · ISO group only' : ''), i)); });
+  (t?.conditions || []).forEach((c, i) => { if (isoOk(c) && cw.every(w => c.label.toLowerCase().includes(w)) && nc++ < 400) $('cond').add(new Option(c.label + (c.status === 'shop-proven' ? ' · SHOP-PROVEN' : '') + (matSel() && !c.materials ? ' · ISO group only' : '') + (matSel()?.id === 'ss303' && shared303(c) ? ' · 303 grouped with 304/316 as printed' : ''), i)); });
   { const opts = [...$('cond').options].map(o => [o.value, t.conditions[+o.value]]), full = c => c.sfm && (c.feed || mode === 'tap') && c.status !== 'shop-proven';
     const want = matSel()?.iso || $('iso').value || 'P', cat = opts.filter(([, c]) => full(c) && c.source.kind === 'catalog');
     // General default: preferred ISO group, first material subgroup, middle (medium) published feed rather than the finishing/roughing extremes.
-    const pool = cat.filter(([, c]) => c.iso === want).length ? cat.filter(([, c]) => c.iso === want) : cat, sg = pool[0]?.[1].subgroup ?? pool[0]?.[1].label;
+    let cat2 = cat; if (matSel()?.id === 'ss303' && cat.some(([, c]) => !shared303(c))) cat2 = cat.filter(([, c]) => !shared303(c));
+    const pool = cat2.filter(([, c]) => c.iso === want).length ? cat2.filter(([, c]) => c.iso === want) : cat2, sg = pool[0]?.[1].subgroup ?? pool[0]?.[1].label;
     const same = pool.filter(([, c]) => (c.subgroup ?? c.label) === sg), mid = same[Math.floor((same.length - 1) / 2)];
     const best = mid || opts.find(([, c]) => full(c) && c.source.kind === 'catalog') || opts.find(([, c]) => full(c)) || opts.find(([, c]) => hasData(c)); if (best) $('cond').value = best[0]; }
   if (t?.flutes) $('z').value = t.flutes;

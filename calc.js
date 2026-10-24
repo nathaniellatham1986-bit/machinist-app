@@ -43,3 +43,6 @@ export function coolModes(s) { if (!s) return []; const m = [];
   if (/through|internal|\bTSC\b|\bIK\b|coolant[- ]fed|high[- ]pressure coolant/i.test(s)) m.push('through');
   if (/flood|cutting fluid|emulsion|wet|soluble|coolant(?! ?through)/i.test(s) && !/^\s*(internal|through)/i.test(s)) m.push('flood');
   if (/\bair\b|mist|MQL/i.test(s)) m.push('air'); if (/\bdry\b/i.test(s)) m.push('dry'); return [...new Set(m)]; }
+
+// A source row printed as e.g. "303/304/316/316L/321" names 303 together with other austenitic grades: shown as printed, ranked after 303-specific data.
+export const shared303 = c => !!c?.materials?.includes('ss303') && /\b30[124]L?\b|\b316|\b321\b|\b347\b|austenitic/i.test(c.sourceGroup ?? c.label ?? '');
