@@ -112,7 +112,7 @@ async function fillCond() {
   const gSel = $('gradeL').hidden ? '' : $('grade').value.split('|')[1] ?? '', okC = c => (!gSel || gradesOf(t, c).includes(gSel)) && isoOk(c) && (!$('pass').value || passOf(c) === $('pass').value) && (mode !== 'mill' || !$('cut').value || cutOf(c) === $('cut').value);
   fillTurnOpts(t, okC);
   const nrOk = c => mode !== 'turn' || ((!$('nose').value || nrKey(c) === $('nose').value) && (!$('cb').value || (c.chipbreaker ?? '') === $('cb').value));
-  (t?.conditions || []).forEach((c, i) => { if (okC(c) && nrOk(c) && cw.every(w => c.label.toLowerCase().includes(w)) && nc++ < 400) $('cond').add(new Option(c.label + (c.status === 'shop-proven' ? ' · SHOP-PROVEN' : '') + (matSel() && matchMat(matSel(), c) === 'group' ? ` · matched by group: ${c.sourceGroup ?? c.subgroup ?? c.material ?? 'ISO ' + c.iso}` : '') + (matSel()?.id === 'ss303' && shared303(c) ? ' · 303 grouped with 304/316 as printed' : ''), i)); });
+  (t?.conditions || []).forEach((c, i) => { if (okC(c) && nrOk(c) && cw.every(w => c.label.toLowerCase().includes(w)) && nc++ < 400) $('cond').add(new Option(c.label + (allMat(c) ? ' · Feed table, all materials' : '') + (c.status === 'shop-proven' ? ' · SHOP-PROVEN' : '') + (matSel() && !allMat(c) && matchMat(matSel(), c) === 'group' ? ` · matched by group: ${c.sourceGroup ?? c.subgroup ?? c.material ?? 'ISO ' + c.iso}` : '') + (matSel()?.id === 'ss303' && shared303(c) ? ' · 303 grouped with 304/316 as printed' : ''), i)); });
   { const opts = [...$('cond').options].map(o => [o.value, t.conditions[+o.value]]), full = c => (c.printed || c.sfm && (c.feed || mode === 'tap')) && c.status !== 'shop-proven';
     const want = matSel()?.iso || $('iso').value || 'P', cat = opts.filter(([, c]) => full(c) && c.source.kind === 'catalog');
     // General default: preferred ISO group, first material subgroup, middle (medium) published feed rather than the finishing/roughing extremes.
@@ -126,9 +126,10 @@ async function fillCond() {
 function coolNote() { const c = curTool()?.conditions[$('cond').value];
   $('coolNote').textContent = c ? (c.coolant ? `Coolant (source): ${c.coolant}` : 'Coolant: not stated by source') : '';
 }
+const allMat = c => c.iso === '*' && !c.material && !c.materials?.length;
 function badge(c) { const s = c.source;
   if (c.status === 'shop-proven') return `<span class="shop">⚠ Shop-proven, NOT manufacturer data ▸</span>`;
-  return `${s.manufacturer} ${s.kind === 'label' ? 'box label' : 'catalog'} ✓${c.sourceGroup ? ' · “' + c.sourceGroup + '”' : ''} ▸`; }
+  return `${allMat(c) ? 'Feed table, all materials · ' : ''}${s.manufacturer} ${s.kind === 'label' ? 'box label' : 'catalog'} ✓${c.sourceGroup ? ' · “' + c.sourceGroup + '”' : ''} ▸`; }
 let SP = null, FD = null;
 const diaFeed = c => c?.printed && !c.feed?.byDiameter ? { byDiameter: c.printed.byDiameter, unit: c.printed.unit } : c?.feed;
 const diaList = c => { const f = diaFeed(c); if (!f) return []; const u = toIn(1, f.unit);
@@ -226,7 +227,7 @@ function run() { if (mode === 'mill') readEng();
     BAR.push(['RPM', Math.round(r.rpm)], [metric ? 'mm/min' : 'IPM', r.ipm != null ? uIpm(r.ipm) : '—']); cards += card('RPM', Math.round(r.rpm), capT + 'MANUFACTURER PRINTED · ' + ps) + (r.ipm != null ? card(FPL, uIpm(r.ipm), capT + 'MANUFACTURER PRINTED table feed' + (PR.tableFeed.unit === 'mm/min' ? ` (${PR.tableFeed.value} mm/min)` : '') + ' · ' + ps) : card(FPL, 'No manufacturer data', '', 'none'))
       + card(SPL, uSp(r.sfm), 'DERIVED from printed RPM × diameter') + (r.fz != null ? card(mode === 'drill' ? 'IPR' : 'Chip load', uFeed(mode === 'drill' ? r.ipm / r.rpm : r.fz), 'DERIVED from printed feed ÷ (RPM' + (mode === 'drill' ? ')' : ' × flutes)')) : ''); }
   else {
-  cards += v('sfm') ? card(SPL, uSp(v('sfm')), sfmB, mine('sfm') ? 'mine' : '') : card(SPL, 'No manufacturer data', '', 'none');
+  cards += v('sfm') ? card(SPL, uSp(v('sfm')), sfmB, mine('sfm') ? 'mine' : '') : card(SPL, 'No manufacturer data', c && allMat(c) ? 'Feed table, all materials: no speed printed' : '', 'none');
   cards += v('fpt') ? card(fk, uFeed(v('fpt')), fB, mode !== 'tap' && mine('fpt') ? 'mine' : '') : card(fk, 'No manufacturer data' + (c?.feed ? ' at this diameter' : ''), '', 'none');
   let o = null, extra = '';
   if (v('sfm') && v('fpt') && v('d')) {
