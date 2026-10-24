@@ -10,7 +10,7 @@ compute({ sfm: 400, d: .5, fpt: .003, z: 4, ae: .25, ap: .5, stickout: 1.5, maxR
 assert.deepEqual(pick({ min: 50, start: 100, max: 150 }).def, 100);
 assert.match(pick({ min: 40, max: 80 }).basis, /MIDPOINT/); assert.equal(pick({ min: 40, max: 80 }).def, 60);
 assert.equal(pick({ value: 230 }).basis, 'manufacturer value');
-assert.equal(pick({ min: 40 }), null); assert.equal(pick(null), null);
+assert.equal(pick({ min: 40 }).def, 40); assert.equal(pick({ min: 40 }).max, null); // min-only: source minimum, nothing invented assert.equal(pick(null), null);
 // drill: Allied T-A carbide TiN, 4140 175-225 BHN, 15/16" (1C21T-0030): 230 SFM, .012 IPR
 const ta = J('./data/allied-drill.json').tools[0].conditions.find(c => c.label === 'Alloy 4140/5140/8640 175-225 BHN · TiN');
 assert.equal(ta.sfm.value, 230); const band = ta.feed.bands.find(([a, z]) => .9375 >= a && .9375 <= z); assert.equal(band[2], .012);
@@ -237,3 +237,8 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   const c = threadFeed({ rpm: 2000, lead: 0.125, maxIpm: 300 }); assert.equal(c.high, false); assert.equal(c.capped, false);
   const d = threadFeed({ rpm: 2000, lead: 0.125, maxIpm: 150 }); assert.equal(d.capped, true); assert.equal(d.rpm, 1200);
   console.log('AM #3 threading guard tests pass'); }
+{ const { pick, rangeText, lowEnd } = await import('./calc.js'); const { validate } = await import('./scripts/validate.mjs');
+  const r = lowEnd(pick({ min: 500 })); assert.equal(r.def, 500); assert.equal(r.max, null); assert.equal(rangeText(r, 0), 'min 500 (mfr gives minimum only)');
+  const doc = { schema: 1, brand: 'X', tools: [{ mode: 'mill', brand: 'X', series: 'Y', conditions: [{ label: 'a', iso: 'N', status: 'verified', coolant: null, sfm: { min: 500, unit: 'ft/min' }, source: { kind: 'catalog', manufacturer: 'X', catalog: 'c', edition: 'e', url: 'https://x' } }] }] };
+  assert.deepEqual(validate(doc).filter(e => /sfm/.test(e)), []);
+  console.log('AM #4 min-only tests pass'); }

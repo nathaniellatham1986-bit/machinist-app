@@ -28,8 +28,8 @@ function range(r, where, err, { allowStart = true } = {}) {
   for (const k of keys) if (!['value', 'min', 'max', 'start'].includes(k)) err(where, `unknown key "${k}"`);
   for (const k of ['value', 'min', 'max', 'start']) if (k in r && !isNum(r[k])) err(where, `${k} must be a non-negative number`);
   if ('value' in r) { if (['min', 'max', 'start'].some(k => k in r)) err(where, 'use either value or min/max/start, not both'); return; }
-  if (!('max' in r) && !('start' in r)) err(where, 'needs value, start, or max (with optional min)');
-  if ('min' in r && !('max' in r)) err(where, 'min requires max');
+  // min alone = the source prints only a minimum (e.g. Kodiak '500 min.'); no start or max is invented.
+  if (!('max' in r) && !('start' in r) && !('min' in r)) err(where, 'needs value, start, max, or min (min alone = source prints a minimum only)');
   if ('start' in r && !allowStart) err(where, 'start not allowed here');
   if (isNum(r.min) && isNum(r.max) && r.min > r.max) err(where, `min ${r.min} > max ${r.max}`);
   if (isNum(r.start) && ((isNum(r.min) && r.start < r.min) || (isNum(r.max) && r.start > r.max))) err(where, 'start outside min..max');

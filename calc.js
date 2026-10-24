@@ -34,6 +34,7 @@ export function pick(spec, k = 1) {
   const min = s(spec.min), max = s(spec.max), start = s(spec.start);
   if (start != null) return { min, max, def: start, basis: 'manufacturer start value' };
   if (min != null && max != null) return { min, max, def: (min + max) / 2, basis: 'MIDPOINT of manufacturer range (no stated start)' };
+  if (min != null && max == null) return { min, max: null, def: min, minOnly: true, basis: 'manufacturer MINIMUM ONLY (no start or max printed)' };
   return null;
 }
 
@@ -173,7 +174,7 @@ export const GUN = /gun.?drill|SUMOGUN/i, isGun = t => t.mode === 'drill' && GUN
 export const DRILL_SPECIAL = /gun.?drill|SUMOGUN|flat.?bottom|\bFBD|spade|counterbor|chamfer|step drill/i;
 export const drillRank = (t, cool) => (!t.cl?.length ? .1 : t.cl.includes(cool) ? 0 : cool === 'flood' && t.cl.includes('through') ? .3 : .2) /* through-only drill under Flood ranks behind flood-OK and no-coolant-stated drills */ + (DRILL_SPECIAL.test(`${t.series} ${t.type ?? ''}`) ? .4 : 0);
 // Range text: when the app filled the start (low end / midpoint), print 'min–max · using …' instead of a fake 'min – start – max'.
-export const rangeText = (p, dp) => !p ? '' : p.min == null ? p.def.toFixed(dp) : /^LOW END/.test(p.basis ?? '') ? `${p.min.toFixed(dp)}–${p.max.toFixed(dp)} · using low end` : /^MIDPOINT/.test(p.basis ?? '') ? `${p.min.toFixed(dp)}–${p.max.toFixed(dp)} · using midpoint` : `${p.min.toFixed(dp)} – ${p.def.toFixed(dp)} – ${p.max.toFixed(dp)}`;
+export const rangeText = (p, dp) => !p ? '' : p.min == null ? p.def.toFixed(dp) : p.max == null ? `min ${p.min.toFixed(dp)} (mfr gives minimum only)` : /^LOW END/.test(p.basis ?? '') ? `${p.min.toFixed(dp)}–${p.max.toFixed(dp)} · using low end` : /^MIDPOINT/.test(p.basis ?? '') ? `${p.min.toFixed(dp)}–${p.max.toFixed(dp)} · using midpoint` : `${p.min.toFixed(dp)} – ${p.def.toFixed(dp)} – ${p.max.toFixed(dp)}`;
 // Drill: diameter spans (inches) where a record prints SFM + feed, per ISO group: [[iso, lo, hi], ...]. Range/formula feeds cover the tool's stated size range.
 // A printed row diameter in the label, e.g. 'DC ø13~ø15.5' (mm), in inches with a small tolerance.
 export const labelDia = c => { const m = String(c.label ?? '').match(/ø\s*([\d.]+)\s*[~–-]\s*ø?\s*([\d.]+)/); return m ? [m[1] / 25.4 - 1e-4, m[2] / 25.4 + 1e-4] : null; };
