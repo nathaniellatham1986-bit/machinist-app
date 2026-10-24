@@ -1,6 +1,6 @@
 import { MODES, migrate, forMode, upsertMachine, dedupeMachines, removeMachine } from './recall.js';
 import { enhance } from './combo.js';
-import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, classifyOverride, drillTier, rowDia, rowExcludes, toolLifeOf } from './calc.js';
+import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, classifyOverride, classifyEng, engFrac, drillTier, rowDia, rowExcludes, toolLifeOf } from './calc.js';
 const $ = id => document.getElementById(id);
 const J = u => fetch(u).then(r => r.json());
 ['matPick', 'brand', 'kind', 'tool', 'grade', 'cond', 'thr', 'dPick', 'recall', 'pB', 'pM', 'pS'].forEach(k => enhance($(k)));
@@ -186,14 +186,31 @@ function mfgEng(c, d) { if (!c) return {}; const r = {}, u = c.ap ? toIn(1, c.ap
   if (c.apx) r.ap = c.apx; else if (apIn != null && d) r.ap = apIn / d; if (apIn != null) r.apIn = apIn;
   if (c.woc) r.ae = c.woc; else if (c.aex) r.ae = c.aex; else if (cutOf(c) === 'Slot') r.ae = 1; return r; }
 function prefillEng(t, c, d) { const k = `${$('tool').value}|${$('cond').value}|${d}`; if (k === ENG.key) return; ENG.key = k;
-  const m = mfgEng(c, d);
+  const m = mfgEng(c, d); ESPEC = engSpec(c, d);
   if (mode === 'mill') { if (m.ae != null) { frac.ae = m.ae; ENG.ae = 'mfg'; } else if (ENG.ae === 'mfg') { frac.ae = 0.25; ENG.ae = 'default'; }
     if (m.ap != null) { frac.ap = m.ap; ENG.ap = 'mfg'; } else if (ENG.ap === 'mfg') { frac.ap = 1; ENG.ap = 'default'; } showEng(); }
   if (mode === 'turn') { if (m.apIn != null) { setIn('apT', m.apIn); ENG.ap = 'mfg'; } else if (ENG.ap === 'mfg') { setIn('apT', 0.04); ENG.ap = 'default'; } }
   if (mode === 'turn') engTags(); }
 const TAG = { mfg: ' · MANUFACTURER value', yours: ' · YOUR VALUE, NOT MANUFACTURER', default: ' · default (no manufacturer value)' };
-function engTags() { if ($('aeX')) $('aeX').textContent += TAG[ENG.ae]; if ($('apX')) $('apX').textContent += TAG[ENG.ap];
-  const tl = $('apTX'); if (tl) tl.textContent = TAG[ENG.ap].slice(3); }
+// Published DOC/WOC spec only (no slot geometry, no app defaults): ae as fraction of D, ap as ×D (mill) or in (turn).
+let ESPEC = {}; const esc = t => String(t).replace(/[&<>"]/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[m]);
+function engSpec(c, d) { const s = {}; if (!c) return s; const u = c.ap ? toIn(1, c.ap.unit) : 1;
+  if (c.ap && (c.ap.max != null || c.ap.value != null)) { const rg = c.ap.value == null && c.ap.min != null && c.ap.max != null,
+      mx = (c.ap.value ?? c.ap.max) * u, mn = rg ? c.ap.min * u : null, df = rg ? (mn + mx) / 2 : mx;
+    s.apIn = { min: mn, max: mx, def: df }; if (d && !c.apx) s.ap = { min: mn != null ? mn / d : null, max: mx / d, def: df / d }; }
+  if (c.apx) s.ap = { min: null, max: c.apx, def: c.apx };
+  const ae = c.woc ?? c.aex; if (ae) s.ae = { min: null, max: ae, def: ae }; return s; }
+function engSpan(k) { const sp = k === 'apT' ? ESPEC.apIn : ESPEC[k]; if (!sp) return null; const d = D();
+  let v, fmt;
+  if (k === 'ae') { const pct = $('aeU').value === 'pct'; v = engFrac(+$('ae').value / (pct ? 1 : LK()), pct ? 'pct' : 'in', d); fmt = x => pct ? `${+(x * 100).toFixed(1)}% of D` : uLen(x * d); }
+  else if (k === 'ap') { const xd = $('apU').value === 'xd'; v = engFrac(+$('ap').value / (xd ? 1 : LK()), xd ? 'xd' : 'in', d); fmt = x => xd ? `${+x.toFixed(2)}×D` : uLen(x * d); }
+  else { v = +$('apT').value / LK(); fmt = x => uLen(x); }
+  return classifyEng(v, sp, k === 'apT' ? 5e-5 : 1e-3, fmt); }
+function engHtml(k, st) { if (st !== 'yours') return esc(TAG[st]); const o = engSpan(k); if (!o) return esc(TAG.yours);
+  if (o.state === 'mfr') return esc(TAG.mfg); const c = o.state === 'out' ? 'warn' : 'adjw';
+  return ` · <span class="${c}">${o.label}</span>${o.note ? ` <span class="${c}">· ${o.note}</span>` : ''}`; }
+function engTags() { if ($('aeX')) $('aeX').innerHTML = esc($('aeX').textContent) + engHtml('ae', ENG.ae); if ($('apX')) $('apX').innerHTML = esc($('apX').textContent) + engHtml('ap', ENG.ap);
+  const tl = $('apTX'); if (tl) tl.innerHTML = engHtml('apT', ENG.ap).replace(/^ · /, ''); }
 function fill() {
   const t = curTool(), c = t?.conditions[$('cond').value];
   fillDia(c);

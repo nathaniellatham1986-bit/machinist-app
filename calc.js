@@ -216,3 +216,16 @@ export function classifyOverride(v, p, eps = 0, dp = 0) {
   if (Math.abs(v - n) <= Math.abs(n) * 0.2 + eps) return r('within', null, `Adjusted from mfr value ${f(n)}`);
   return r('out', side, 'YOUR VALUE, NOT MANUFACTURER', `${side} mfr value (${f(n)}) by more than 20% (20% is a rule of thumb, not a manufacturer limit)`);
 }
+// DOC/WOC override classification. Makers print DOC/WOC mostly as a suggested MAXIMUM (p = {max}), sometimes a range (p = {min,max}).
+// Compare in one unit (fraction of D, or ×D); fmt prints the mfr number in the unit the app shows. p null = not manufacturer-published.
+export const engFrac = (v, unit, d) => unit === 'pct' ? v / 100 : unit === 'in' ? (d ? v / d : NaN) : v; // pct | in | xd -> fraction of D
+export function classifyEng(v, p, eps = 1e-4, fmt = x => String(x)) {
+  const r = (state, side, label, note = '') => ({ state, side, label, note });
+  if (!p || p.max == null || v == null || !isFinite(v)) return null;
+  const def = p.def ?? p.max; if (Math.abs(v - def) <= eps) return r('mfr', null, '');
+  if (p.min != null && p.max > p.min) { const rg = `${fmt(p.min)}–${fmt(p.max)}`;
+    if (v >= p.min - eps && v <= p.max + eps) return r('within', null, `Adjusted, within mfr range ${rg}`);
+    const side = v > p.max ? 'above' : 'below'; return r('out', side, 'YOUR VALUE, NOT MANUFACTURER', `${side} mfr range (${rg})`); }
+  if (v <= p.max + eps) return r('within', null, `Adjusted, within mfr max ${fmt(p.max)}`);
+  return r('out', 'above', 'YOUR VALUE, NOT MANUFACTURER', `above mfr max (${fmt(p.max)})`);
+}

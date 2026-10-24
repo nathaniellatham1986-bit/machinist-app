@@ -273,3 +273,13 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   const S = { min: null, max: null, def: 200 }; assert.equal(C(210, S, 0).label, 'Adjusted from mfr value 200'); assert.equal(C(190, S, 0).state, 'within');
   assert.equal(C(250, S, 0).state, 'out'); assert.equal(C(150, S, 0).side, 'below'); assert.match(C(250, S, 0).note, /20% is a rule of thumb, not a manufacturer limit/);
   assert.equal(C(.004, { min: .003, max: .006, def: .003 }, 5e-5, 4).label, 'Adjusted, within mfr range 0.0030–0.0060'); }
+// classifyEng: DOC/WOC vs mfr max / range, units via engFrac
+{ const { classifyEng: E, engFrac: F } = await import('./calc.js'); const M = { min: null, max: 0.3, def: 0.3 }, f = x => `${+(x * 100).toFixed(1)}% of D`;
+  assert.equal(E(0.3, M, 1e-3, f).state, 'mfr');
+  assert.deepEqual([E(0.2, M, 1e-3, f).state, E(0.2, M, 1e-3, f).label], ['within', 'Adjusted, within mfr max 30% of D']);
+  assert.deepEqual([E(0.4, M, 1e-3, f).state, E(0.4, M, 1e-3, f).label, E(0.4, M, 1e-3, f).note], ['out', 'YOUR VALUE, NOT MANUFACTURER', 'above mfr max (30% of D)']);
+  const R = { min: 0.5, max: 1.5, def: 1 }; assert.equal(E(1, R).state, 'mfr'); assert.equal(E(1.2, R).label, 'Adjusted, within mfr range 0.5–1.5');
+  assert.equal(E(1.5, R).state, 'within'); assert.equal(E(2, R).note, 'above mfr range (0.5–1.5)'); assert.equal(E(0.3, R).note, 'below mfr range (0.5–1.5)');
+  assert.equal(F(30, 'pct', 0.5), 0.3); assert.equal(F(0.15, 'in', 0.5), 0.3); assert.equal(F(1.5, 'xd', 0.5), 1.5);
+  assert.equal(E(F(0.15, 'in', 0.5), M).state, 'mfr'); assert.equal(E(F(0.1, 'in', 0.5), M).state, 'within'); assert.equal(E(F(0.2, 'in', 0.5), M).state, 'out');
+  assert.equal(E(0.5, null), null); assert.equal(E(0.5, { min: null, max: null }), null); console.log('ok classifyEng'); }
