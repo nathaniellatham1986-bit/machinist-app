@@ -58,7 +58,7 @@ function setMode(m) {
   $('feedLbl').firstChild.textContent = m === 'mill' ? `Chip load (${UL()}/tooth)` : m === 'tap' ? `Pitch (${UL()})` : m === 'bore' ? `Feed (${UL()}, per tooth or per rev as printed)` : `Feed (${UL()}/rev)`;
   $('dLbl').firstChild.textContent = (m === 'turn' ? 'Start dia' : m === 'tap' ? 'Tap dia' : m === 'bore' ? 'Bore dia' : 'Tool dia') + ` (${UL()})`; machines();
   $('zLbl').firstChild.textContent = m === 'bore' ? 'Cutting edges' : 'Flutes'; if (m === 'bore') $('z').value = 1;
-  $('brand').length = 0; $('tool').length = 0; $('tq').value = ''; $('cq').value = ''; return fillBrand();
+  $('pass').value = ''; $('cut').value = ''; $('brand').length = 0; $('tool').length = 0; $('tq').value = ''; $('cq').value = ''; return fillBrand();
 }
 const toolOk = t => { const m = matSel(); if (m && !(t.mats.includes(m.id) || t.isos.includes(m.iso) || t.isos.includes('*'))) return false;
   return !$('onlyData').checked || t.dataIsos.some(i => i === '*' || !(m?.iso || $('iso').value) || i === (m?.iso || $('iso').value)); };
