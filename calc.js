@@ -118,7 +118,7 @@ export const tapName = t => { const s = t.type ?? '', f = k => { const m = s.mat
 export const geoName = t => { const tn = t.mode === 'tap' && tapName(t); if (tn) return tn; const short = s => s.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim().slice(0, 48);
   let s = t.series; if (t.grade) for (const g of t.grade.split(/[,/]\s*/)) s = s.split(g).join(' ');
   const n = short(s.replace(/\b(turning|parting|grooving|threading|milling|drilling|insert)?\s*grade\b/gi, ' ').replace(/\s*[—–-]\s*$/, '').replace(/^\s*[—–-]\s*/, ''));
-  if (n) return n; const q = (t.series.match(/\(([^)]*)\)/) ?? [])[1], ty = (t.type ?? '').split(/\s+[—–-]\s+/)[0];
+  if (n && !/(&|,|\band|\bor)$/i.test(n)) return n; const q = (t.series.match(/\(([^)]*)\)/) ?? [])[1], ty = (t.type ?? '').split(/\s+[—–-]\s+/)[0];
   return [ty ? ty.replace(/grade$/i, 'grades') : 'Grades', q].filter(Boolean).join(' · ').slice(0, 70); };
 // Printed feed-per-tooth as a multiple of tool diameter (fzPerD). fz = multiplier × D, in the record's (= D's) length unit.
 export const fzFromPerD = (p, d) => { const m = pick(p, 1); if (!m || !(d > 0)) return null; const f = x => +x.toPrecision(3);

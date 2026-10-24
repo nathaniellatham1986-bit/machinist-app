@@ -157,3 +157,6 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
 { const { brandName } = await import('./calc.js');
   assert.equal(brandName('ISCAR'), 'Iscar'); assert.equal(brandName('Sumitomo Electric'), 'Sumitomo Electric Hardmetal'); assert.equal(brandName('KYOCERA SGS'), 'Kyocera SGS'); assert.equal(brandName('SGS'), 'Kyocera SGS'); assert.equal(brandName('Kyocera'), 'Kyocera');
   console.log('ME8 brand alias tests pass'); }
+{ const { geoName } = await import('./calc.js');
+  assert.equal(geoName({ mode: 'turn', grade: 'GC1125', series: 'GC1125 parting & grooving grade (Supplement 19.2 start values)', type: 'Parting and grooving insert grade — cutting speed recommendations' }), 'Parting and grooving insert grades · Supplement 19.2 start values');
+  console.log('ME followup Sandvik parting name tests pass'); }
