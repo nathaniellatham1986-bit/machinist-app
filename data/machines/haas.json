@@ -1,0 +1,264 @@
+{
+ "schema": 1,
+ "builder": "Haas",
+ "models": [
+  {
+   "model": "VF-2",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Standard 8100 rpm inline",
+     "rpm": 8100,
+     "taper": "CT40 / BT40",
+     "kw_peak": 22.4,
+     "kw_cont": null,
+     "hp_peak": 30,
+     "hp_cont": null,
+     "torque_nm": 122,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": 1000,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.haascnc.com/machines/vertical-mills/vf-series/models/medium/vf-2.html",
+    "title": "Haas VF-2 specs",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "VF-3",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Standard 8100 rpm inline",
+     "rpm": 8100,
+     "taper": "40 taper",
+     "kw_peak": null,
+     "kw_cont": null,
+     "hp_peak": 30,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.haas.co.uk/wp-content/uploads/2025/01/Haas-CNC-Reference-Guide-Issue-17.pdf",
+    "title": "Haas CNC Reference Guide Issue 17",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "VF-4",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Standard 8100 rpm inline",
+     "rpm": 8100,
+     "taper": "40 taper",
+     "kw_peak": null,
+     "kw_cont": null,
+     "hp_peak": 30,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.haascnc.com/machines/vertical-mills/vf-series/models/medium/vf-4.html",
+    "title": "Haas VF-4 specs",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "Mini Mill",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Standard",
+     "rpm": 8000,
+     "taper": "40 taper",
+     "kw_peak": null,
+     "kw_cont": null,
+     "hp_peak": 7.5,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.haas.co.uk/wp-content/uploads/2025/01/Haas-CNC-Reference-Guide-Issue-17.pdf",
+    "title": "Haas CNC Reference Guide Issue 17",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "TM-1",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Standard belt drive",
+     "rpm": 4000,
+     "taper": "40 taper",
+     "kw_peak": null,
+     "kw_cont": null,
+     "hp_peak": 7.5,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.haas.co.uk/machines/tm-1/",
+    "title": "Haas UK TM-1",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "UMC-750",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Standard 8100 rpm inline",
+     "rpm": 8100,
+     "taper": "40 taper",
+     "kw_peak": null,
+     "kw_cont": null,
+     "hp_peak": 30,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.haascnc.com/machines/vertical-mills/universal-machine/models/umc-750.html",
+    "title": "Haas UMC-750 specs",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "ST-10",
+   "type": "lathe",
+   "spindles": [
+    {
+     "option": "Standard",
+     "rpm": 6000,
+     "taper": "A2-5",
+     "kw_peak": 11.2,
+     "kw_cont": null,
+     "hp_peak": 15,
+     "hp_cont": null,
+     "torque_nm": 102,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": 472,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.haascnc.com/machines/lathes/st/models/y-axis/st-10y-eu.html",
+    "title": "Haas ST-10Y spindle specs",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "ST-20",
+   "type": "lathe",
+   "spindles": [
+    {
+     "option": "Standard",
+     "rpm": 4000,
+     "taper": "A2-6",
+     "kw_peak": 14.9,
+     "kw_cont": null,
+     "hp_peak": 20,
+     "hp_cont": null,
+     "torque_nm": 203,
+     "rating_note": null
+    },
+    {
+     "option": "Optional 5000 rpm",
+     "rpm": 5000,
+     "taper": "A2-6",
+     "kw_peak": null,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": 945,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.haascnc.com/machines/lathes/st/models/standard/st-20.html",
+    "title": "Haas ST-20 specs; ST Series brochure for 5000 rpm option",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "ST-30",
+   "type": "lathe",
+   "spindles": [
+    {
+     "option": "Standard",
+     "rpm": 3400,
+     "taper": "A2-6",
+     "kw_peak": 22.4,
+     "kw_cont": null,
+     "hp_peak": 30,
+     "hp_cont": null,
+     "torque_nm": 407,
+     "rating_note": null
+    },
+    {
+     "option": "Optional gearbox",
+     "rpm": 3400,
+     "taper": "A2-6",
+     "kw_peak": null,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 1356,
+     "rating_note": null
+    },
+    {
+     "option": "Optional 4500 rpm",
+     "rpm": 4500,
+     "taper": "A2-6",
+     "kw_peak": null,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": 945,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.haascnc.com/machines/lathes/st/models/standard/st-30.html",
+    "title": "Haas ST-30 specs; ST Series brochure",
+    "accessed": "2026-10-24"
+   }
+  }
+ ]
+}
