@@ -218,3 +218,8 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   const t = { mode: 'drill', series: 'DRZ', conditions: [{ iso: 'P', label: 'Alloy steel · DC ø13~ø15.5', sfm: { min: 1, max: 2 }, feed: { unit: 'mm', range: { min: .06, max: .1 } } }] }; t.dd = drillSpans(t);
   assert.equal(dataAt(t, 0.5, 'P'), false); assert.equal(dataAt(t, 0.55, 'P'), true);
   console.log('ME11 #6 label row diameter tests pass'); }
+{ const { rowExcludes } = await import('./calc.js');
+  assert.equal(rowExcludes({ label: 'Alloy steel · DC ø13~ø15.5' }, 0.5), true); assert.equal(rowExcludes({ label: 'Alloy steel · DC ø13~ø15.5' }, 0.55), false);
+  assert.equal(rowExcludes({ label: 'no size' }, 0.5), false); assert.equal(rowExcludes({ diameterRange: { min: 10, max: 13, unit: 'mm' } }, 0.5), false);
+  console.log('ME11 #7 out-of-size row tests pass'); }
+{ const { rowExcludes } = await import('./calc.js'); assert.equal(rowExcludes({ label: 'Alloy · 2D · DC ø50~ · x' }, 0.5), true); assert.equal(rowExcludes({ label: 'DC ø50~' }, 2.1), false); console.log('ME11 #7 open-ended row tests pass'); }

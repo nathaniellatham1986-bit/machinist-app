@@ -187,3 +187,11 @@ export function drillSpans(t) { const out = new Set(), sr = sizeRange(t), toIn =
 export const dataAt = (t, d, iso) => !!t.dd?.some(([i, a, b]) => (!iso || i === iso || i === '*') && d >= a && d <= b);
 // Tier: 0 data at the entered Ø, 1 published size range covers it, 2 the rest (coolant/specials order stays inside a tier).
 export const drillTier = (t, d, iso) => !d ? 0 : dataAt(t, d, iso) ? 0 : inRange(t.dr, d) ? 1 : 2;
+// Printed row diameter (field diameterRange {min,max,unit} or label 'DC ø13~ø15.5' mm), inches. A row that excludes the entered Ø is never auto-picked.
+export const rowDia = c => {
+  if (c.diameterRange) return [c.diameterRange.min, c.diameterRange.max].map(x => c.diameterRange.unit === 'mm' ? x / 25.4 : x);
+  const r = labelDia(c); if (r) return r;
+  const L = String(c.label || ''), up = L.match(/ø\s*([\d.]+)\s*[~–-](?!\s*ø?\s*\d)/), dn = L.match(/(?:^|[^\d.])[~–]\s*ø\s*([\d.]+)/); // open-ended 'ø50~' / '~ø12' (mm)
+  return up ? [up[1] / 25.4 - 1e-4, 99] : dn ? [0, dn[1] / 25.4 + 1e-4] : null;
+};
+export const rowExcludes = (c, d) => { const r = rowDia(c); return !!r && d > 0 && !(d >= r[0] - 1e-4 && d <= r[1] + 1e-4); };
