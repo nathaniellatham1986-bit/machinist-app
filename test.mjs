@@ -41,3 +41,12 @@ console.log('phase3 tests pass');
 const sh = J('./data/shop.json').tools[0].conditions[0]; assert.equal(sh.status, 'shop-proven'); assert.notEqual(sh.status, 'verified');
 assert.ok(TJ.every(t => t.conditions.every(c => (c.status === 'shop-proven') === (c.source.kind === 'shop'))));
 const pe = TJ.find(x => x.series.startsWith('PENTA')).conditions[0]; assert.deepEqual([pe.sfm.min, pe.sfm.max, pe.feed.range.max], [60, 150, .05]);
+// Recall dropdown: only setups saved in the current mode; legacy entries get mode from the tool record
+{ const { inferMode, migrate, forMode } = await import('./recall.js');
+  const tools = [{ key: 'a.json#0', mode: 'tap' }, { key: 'b.json#0', mode: 'mill' }];
+  const saved = [{ mode: 'mill', name: 'm1', v: { tool: 'b.json#0' } }, { name: 'legacy', v: { tool: 'a.json#0' } }, { name: 'drill · X · Y', v: { tool: 'gone#9' } }, { mode: 'turn', name: 't1', v: {} }];
+  assert.equal(inferMode(saved[1], tools), 'tap'); assert.equal(inferMode(saved[2], tools), 'drill');
+  const m = migrate(saved, tools); assert.deepEqual(m.map(s => s.mode), ['mill', 'tap', 'drill', 'turn']);
+  assert.deepEqual(forMode(m, 'tap').map(([s, i]) => [s.name, i]), [['legacy', 1]]);
+  assert.deepEqual(forMode(m, 'mill').map(([s]) => s.name), ['m1']);
+  for (const md of ['mill', 'drill', 'turn', 'tap']) assert.ok(forMode(m, md).every(([s]) => s.mode === md)); }
