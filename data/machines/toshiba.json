@@ -26,6 +26,67 @@
     "title": "Shibaura BTD-110H.R13/R16 catalog",
     "accessed": "2026-10-24"
    }
+  },
+  {
+   "model": "BTH-130.R24",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Standard",
+     "rpm": 2500,
+     "taper": "",
+     "kw_peak": 30,
+     "kw_cont": 22,
+     "hp_peak": 40,
+     "hp_cont": 30,
+     "torque_nm": null,
+     "rating_note": "30 min / cont"
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://shibaura-machine.com/media/sc1cp4qe/bth130r24-shibaura-leaflet1-1.pdf",
+    "title": "Shibaura BTH-130.R24 leaflet",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "BTD-200QH",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Standard",
+     "rpm": 3000,
+     "taper": "",
+     "kw_peak": 30,
+     "kw_cont": 22,
+     "hp_peak": 40,
+     "hp_cont": 30,
+     "torque_nm": null,
+     "rating_note": null
+    },
+    {
+     "option": "Optional high-speed",
+     "rpm": 5000,
+     "taper": "",
+     "kw_peak": null,
+     "kw_cont": null,
+     "hp_peak": 40,
+     "hp_cont": 30,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.shibaura-machine.co.jp/en/product/machinetool/lineup/b/btd200qh.html",
+    "title": "Shibaura BTD-200QH",
+    "accessed": "2026-10-24"
+   }
   }
  ]
 }
