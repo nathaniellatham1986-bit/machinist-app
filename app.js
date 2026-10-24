@@ -348,7 +348,22 @@ function updateFindLink() {
   const label = (opt?.textContent || '').replace(/ — outside.*$/, '').replace(/ — spiral.*$/, '').trim();
   const brand = $('brand').value || (label.split(' — ')[0] || '').trim();
   const series = label.includes(' — ') ? label.split(' — ').slice(1).join(' — ') : label;
-  const q = encodeURIComponent((brand + ' ' + series).trim());
+  const parts = [brand, series];
+  if (mode === 'tap') {
+    const thr = threads.threads[$('thr').value];
+    if (thr?.name) parts.push(thr.name, 'tap');
+    else {
+      const d = $('d').value;
+      if (d) parts.push(d + (metric ? 'mm' : 'in'), 'tap');
+    }
+  } else {
+    const d = $('d').value;
+    if (d) parts.push(d + (metric ? 'mm' : '"'));
+    if (mode === 'mill') parts.push('end mill');
+    else if (mode === 'drill') parts.push('drill');
+    else if (mode === 'bore') parts.push('boring');
+  }
+  const q = encodeURIComponent(parts.filter(Boolean).join(' ').replace(/\s+/g, ' ').trim());
   a.href = 'https://www.mscdirect.com/browse/tn?searchterm=' + q;
   a.hidden = false;
 }
