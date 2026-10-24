@@ -78,3 +78,12 @@ const pe = TJ.find(x => x.series.startsWith('PENTA')).conditions[0]; assert.deep
   assert.ok(diaProblem(1030, 'in', { mode: 'mill', type: 'end mill' }));
   assert.ok(diaProblem(1181, 'in', { mode: 'drill', type: 'drill' }));
   assert.ok(diaProblem(2.5, 'in', { mode: 'mill', type: 'end mill', diameters_in: [0.03, 0.5] })); }
+// printed RPM/table feed: shown as printed, scaled together only by the machine RPM cap.
+{ const { printedAt, printedRun } = await import('./calc.js'); const { validate } = await import('./scripts/validate.mjs');
+  const c = { printed: { unit: 'mm', byDiameter: { '6': { rpm: 10000, tableFeed: { value: 1270, unit: 'mm/min' } } } } };
+  const e = printedAt(c, 6 / 25.4); assert.equal(e.rpm, 10000); assert.equal(printedAt(c, 0.25), null);
+  const r = printedRun(e, { dIn: 6 / 25.4, z: 2, maxRpm: 0 }); assert.equal(r.rpm, 10000); assert.ok(Math.abs(r.ipm - 50) < 1e-9); assert.equal(r.capped, false);
+  const k = printedRun(e, { dIn: 6 / 25.4, z: 2, maxRpm: 8000 }); assert.equal(k.capped, true); assert.ok(Math.abs(k.ipm - 40) < 1e-9); assert.ok(Math.abs(k.fz - r.fz) < 1e-12);
+  const doc = { tools: [{ mode: 'mill', brand: 'X', series: 'S', type: 'Solid carbide end mill', flutes: 2, conditions: [{ label: 'P', iso: 'P', status: 'manufacturer', coolant: null, sfm: null, ...c,
+    source: { kind: 'catalog', manufacturer: 'X', catalog: 'C', url: 'https://x', page: '1', retrieved: '2026-10-23' } }] }] };
+  const errs = validate(doc, 't'); assert.deepEqual(errs.filter(x => /printed|no data/.test(x)), []); }

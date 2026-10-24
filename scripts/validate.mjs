@@ -16,7 +16,7 @@ const LEN_UNITS = ['in', 'mm'];
 const FEED_KINDS = ['fz', 'ipr', 'pitch'];
 const TOOL_KEYS = new Set(['mode', 'brand', 'series', 'type', 'flutes', 'coating', 'grade', 'diameters_in', 'diameters_mm', 'notes', 'conditions']);
 const COND_KEYS = new Set(['label', 'iso', 'subgroup', 'material', 'status', 'coolant', 'sfm', 'feed', 'ap', 'ae', 'apx', 'aex', 'source', 'materials', 'sourceGroup',
-  'noseRadius', 'leadAngle', 'toolLife', 'insertWidth', 'chipbreaker', 'geometry', 'kind', 'table', 'woc', 'operation', 'insert', 'grade', 'note', 'coolantNote', 'altSources']);
+  'noseRadius', 'leadAngle', 'toolLife', 'insertWidth', 'chipbreaker', 'geometry', 'kind', 'table', 'woc', 'operation', 'insert', 'grade', 'note', 'coolantNote', 'altSources', 'printed']);
 const SRC_KEYS = new Set(['kind', 'manufacturer', 'catalog', 'edition', 'url', 'page', 'notes', 'derivation', 'retrieved']);
 
 const isNum = v => typeof v === 'number' && Number.isFinite(v) && v >= 0;
@@ -60,6 +60,18 @@ export function diaProblem(d, unit, t) {
   if (sizes.length && (inch > Math.max(...sizes) * 2 || inch < Math.min(...sizes) / 2))
     return `(${inch.toFixed(3)} in) is outside the tool's published range ${Math.min(...sizes).toFixed(3)}-${Math.max(...sizes).toFixed(3)} in`;
   return null;
+}
+// Optional per-diameter printed block: { unit: 'in'|'mm', byDiameter: { "6": { rpm, tableFeed: {value, unit: 'ipm'|'mm/min'}, ap: {value, unit}, ae: {value, unit} } } }
+function printed(p, where, err, tool) {
+  if (!['in', 'mm'].includes(p?.unit)) return err(where, "printed.unit must be 'in' or 'mm'");
+  const e = Object.entries(p.byDiameter ?? {}); if (!e.length) return err(where, 'printed.byDiameter is empty');
+  for (const [d, x] of e) { const w = `${where}.byDiameter.${d}`;
+    if (!isNum(+d) || +d === 0) { err(w, 'key must be a diameter number'); continue; }
+    const why = diaProblem(+d, p.unit, tool); if (why) err(w, `${why}: likely a lost decimal point`);
+    if (!isNum(x?.rpm) || !x.rpm) err(w, 'rpm must be a positive number');
+    if (x.tableFeed && (!isNum(x.tableFeed.value) || !['ipm', 'mm/min'].includes(x.tableFeed.unit))) err(w, "tableFeed needs {value, unit: 'ipm'|'mm/min'}");
+    for (const k of ['ap', 'ae']) if (x[k] && (!isNum(x[k].value) || !['in', 'mm', 'xD'].includes(x[k].unit))) err(w, `${k} needs {value, unit: 'in'|'mm'|'xD'}`);
+    for (const k of Object.keys(x)) if (!['rpm', 'tableFeed', 'ap', 'ae'].includes(k)) err(w, `unknown printed key "${k}"`); }
 }
 function feed(f, where, err, tool) {
   if (f === null) return;
@@ -121,7 +133,8 @@ export function validate(doc, name = 'file') {
       if (!('sfm' in c)) err(w, 'sfm is required (speed object, or null when the source gives none)');
       else if (c.sfm !== null) { range(c.sfm, w + '.sfm', err); if (!SPEED_UNITS.includes(c.sfm?.unit)) err(w + '.sfm', `unit must be one of ${SPEED_UNITS.join('|')}`); }
       if ('feed' in c) feed(c.feed, w + '.feed', err, t);
-      if (c.sfm === null && c.feed == null && !c.ap && !c.coolant) err(w, 'condition carries no data (no speed, feed, depth or coolant)');
+      if (c.printed) printed(c.printed, w + '.printed', err, t);
+      if (c.sfm === null && c.feed == null && !c.ap && !c.coolant && !c.printed) err(w, 'condition carries no data (no speed, feed, depth or coolant)');
       if (c.feed?.kind === 'fz' && t.mode !== 'mill') err(w, 'feed.kind "fz" is for mill tools');
       if (c.feed?.kind === 'ipr' && t.mode === 'mill') err(w, 'mill tools use feed.kind "fz"');
       if (c.ap) depth(c.ap, w + '.ap', err); if (c.ae) depth(c.ae, w + '.ae', err);

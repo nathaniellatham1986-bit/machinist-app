@@ -46,3 +46,17 @@ export function coolModes(s) { if (!s) return []; const m = [];
 
 // A source row printed as e.g. "303/304/316/316L/321" names 303 together with other austenitic grades: shown as printed, ranked after 303-specific data.
 export const shared303 = c => !!c?.materials?.includes('ss303') && /\b30[124]L?\b|\b316|\b321\b|\b347\b|austenitic/i.test(c.sourceGroup ?? c.label ?? '');
+
+// Printed per-diameter RPM/table feed ("printed" block). Exact diameter match only (no interpolation).
+const IN = { in: 1, mm: 1 / 25.4 };
+export function printedAt(c, dIn) {
+  const p = c?.printed; if (!p?.byDiameter || !dIn) return null;
+  for (const [k, e] of Object.entries(p.byDiameter)) if (Math.abs(+k * IN[p.unit] - dIn) < 0.0006) return { ...e, key: k, unit: p.unit };
+  return null;
+}
+// Manufacturer RPM and table feed, scaled together only when the machine RPM cap is below the printed RPM (keeps chip load).
+export function printedRun(e, { dIn, z, maxRpm }) {
+  const capped = !!(maxRpm && e.rpm > maxRpm), s = capped ? maxRpm / e.rpm : 1, rpm = e.rpm * s;
+  const tf = e.tableFeed ? e.tableFeed.value * (e.tableFeed.unit === 'mm/min' ? 1 / 25.4 : 1) : null, ipm = tf == null ? null : tf * s;
+  return { rpm, ipm, capped, printedRpm: e.rpm, printedIpm: tf, sfm: rpm * dIn * Math.PI / 12, fz: ipm != null && z ? ipm / (rpm * z) : null };
+}

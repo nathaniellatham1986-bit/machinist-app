@@ -23,8 +23,8 @@ for (const f of files) {
   const tools = doc.tools.map((t, i) => ({ i, mode: t.mode, brand: t.brand, series: t.series,
     ...(t.type ? { type: t.type } : {}),
     isos: [...new Set(t.conditions.map(c => c.iso))].sort(),
-    dataIsos: [...new Set(t.conditions.filter(c => c.sfm || c.feed).map(c => c.iso))].sort(),
-    fullIsos: [...new Set(t.conditions.filter(c => c.sfm && (c.feed || t.mode === 'tap') && c.status !== 'shop-proven').map(c => c.source.kind === 'catalog' ? c.iso : c.iso + '~'))].sort(),
+    dataIsos: [...new Set(t.conditions.filter(c => c.sfm || c.feed || c.printed).map(c => c.iso))].sort(),
+    fullIsos: [...new Set(t.conditions.filter(c => (c.printed || c.sfm && (c.feed || t.mode === 'tap')) && c.status !== 'shop-proven').map(c => c.source.kind === 'catalog' ? c.iso : c.iso + '~'))].sort(),
     ...(t.mode === 'turn' ? { pFeed: (() => { const v = t.conditions.filter(c => c.iso === 'P' && c.sfm && c.feed?.range && c.source.kind === 'catalog' && c.feed.unit === 'in')
       .map(c => { const r = c.feed.range; return r.value ?? r.start ?? (r.min != null && r.max != null ? (r.min + r.max) / 2 : r.max); }).filter(x => x > 0).sort((a, b) => a - b);
       return v.length ? v[Math.floor(v.length / 2)] : null; })() } : {}),
