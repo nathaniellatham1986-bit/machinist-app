@@ -22,7 +22,7 @@ nav{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}nav button{min-heig
 <label data-show="tap">Thread<select id="thr"></select></label>
 <label>Machine profile<select id="mach"><option value="">(none, enter limits)</option></select></label>
 <details><summary>Add / remove machine profile</summary><div class="row"><label>Name<input id="mName"></label><label>Type<select id="mType"><option value="mill">Mill</option><option value="lathe">Lathe</option></select></label></div><div class="row"><label>Max RPM<input id="mRpm" type="number" inputmode="numeric"></label><label>HP<input id="mHp" type="number" inputmode="decimal"></label></div><button class="sm" id="mSave">Save profile</button> <button class="sm" id="mDel">Delete selected</button></details>
-<label>Coolant<select id="cool"><option value="flood">Flood</option><option value="air">Air blast</option><option value="dry">Dry</option></select></label>
+<label>Coolant<select id="cool"><option value="flood">Flood</option><option value="through">Through-tool</option><option value="air">Air blast</option><option value="dry">Dry</option></select></label>
 <label id="dPickL" hidden>Published diameters<select id="dPick"></select></label>
 <div class="row"><label id="dLbl">Dia (in)<input id="d" type="number" inputmode="decimal" step="any" value="0.5"></label>
 <label data-show="mill">Flutes<input id="z" type="number" inputmode="numeric" value="4"></label></div>

@@ -53,3 +53,15 @@ const pe = TJ.find(x => x.series.startsWith('PENTA')).conditions[0]; assert.deep
 // Est. power: 1/2" 4FL in P steel, 400 SFM, .003 in/t, 25% WOC x 1xD DOC -> ~2.6 HP (not rounded to 0)
 { const o = compute({ sfm: 400, d: .5, fpt: .003, z: 4, ae: .125, ap: .5, stickout: 1.5, iso: 'P' });
   assert.ok(o.hp > 2 && o.hp < 3.5, String(o.hp)); assert.equal(+o.mrr.toFixed(3), +(o.ipm * .125 * .5).toFixed(3)); }
+// Coolant classification: through-tool only when stated; no conversion.
+{ const { coolModes } = await import('./calc.js');
+  assert.deepEqual(coolModes('internal coolant recommended'), ['through']);
+  assert.deepEqual(coolModes('valid for use with cutting fluid (table note)'), ['flood']);
+  assert.deepEqual(coolModes('dry or air blast'), ['air', 'dry']); assert.deepEqual(coolModes(null), []); }
+// link-materials: hardness numbers are not grades
+{ const { matchIds } = await import('./scripts/link-materials.mjs');
+  assert.deepEqual(matchIds('M', 'Austenitic stainless <321 HB'), []);
+  assert.deepEqual(matchIds('M', 'Stainless 420 HB'), []);
+  assert.deepEqual(matchIds('M', 'HRC 30 martensitic'), []);
+  assert.deepEqual(matchIds('M', 'AISI 321, 347 stainless'), ['ss304']);
+  assert.deepEqual(matchIds('P', 'AISI 4140, 300 HB'), ['p-alloy']); }

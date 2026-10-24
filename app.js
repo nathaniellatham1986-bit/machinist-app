@@ -1,5 +1,5 @@
 import { MODES, migrate, forMode } from './recall.js';
-import { compute, drill, turn, tap, pick } from './calc.js';
+import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES } from './calc.js';
 const $ = id => document.getElementById(id);
 const J = u => fetch(u).then(r => r.json());
 const idx = await J('data/index.json');
@@ -139,7 +139,7 @@ function fill() {
       + (c.noseRadius ? `<br>Nose radius ${c.noseRadius.value ?? c.noseRadius.label} ${c.noseRadius.unit}` : '') + (c.leadAngle ? ` · ${c.leadAngle.convention} ${c.leadAngle.deg}°` : '') + (c.toolLife ? ` · tool life ${c.toolLife} min` : '')
       + (c.insertWidth ? `<br>Insert width ${c.insertWidth.value ?? c.insertWidth.label} ${c.insertWidth.unit}` : '')
       + (c.note ? `<br><small>${c.note}</small>` : '') + (c.coolantNote ? `<br><small>${c.coolantNote}</small>` : '')
-      + (c.coolant ? `<br>Coolant: ${c.coolant} (${shop ? 'shop record' : 'manufacturer stated'})` : `<br><span class="warn">Coolant not stated in source; values not adjusted for ${cool}.</span>`);
+      + (c.coolant ? `<br>Coolant: ${c.coolant} (${shop ? 'shop record' : 'manufacturer stated'})` + (() => { const m = coolModes(c.coolant); return !m.length ? '' : m.includes(cool) ? ` · matches ${COOL_NAMES[cool]}` : `<br><span class="warn">Source states ${m.map(x => COOL_NAMES[x]).join('/')}; you selected ${COOL_NAMES[cool]}. Values are NOT converted between coolant modes.</span>`; })() : `<br><span class="warn">Coolant not stated in source; values not adjusted for ${COOL_NAMES[cool]}.</span>`);
   }
   if (mode === 'tap') { const th = threads.threads[$('thr').value];
     h += `<br><b>Tap drill 75%:</b> ${th.drill75_mm ? th.drill75_mm + ' mm / ' : ''}${th.drill75_in.toFixed(4)} in (geometry)${th.chart ? ' · chart pick ' + th.chart : ''}<br><small>${threads.source.formula}. ${th.chart ? threads.source.chart : ''}</small>`; }

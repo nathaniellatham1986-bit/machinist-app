@@ -36,3 +36,10 @@ export function pick(spec, k = 1) {
   if (min != null && max != null) return { min, max, def: (min + max) / 2, basis: 'MIDPOINT of manufacturer range (no stated start)' };
   return null;
 }
+
+// Classify a source's stated coolant text. Through-tool only when the source says through/internal coolant. Never converted between modes.
+export const COOL_NAMES = { flood: 'Flood', through: 'Through-tool', air: 'Air blast', dry: 'Dry' };
+export function coolModes(s) { if (!s) return []; const m = [];
+  if (/through|internal|\bTSC\b|\bIK\b|coolant[- ]fed|high[- ]pressure coolant/i.test(s)) m.push('through');
+  if (/flood|cutting fluid|emulsion|wet|soluble|coolant(?! ?through)/i.test(s) && !/^\s*(internal|through)/i.test(s)) m.push('flood');
+  if (/\bair\b|mist|MQL/i.test(s)) m.push('air'); if (/\bdry\b/i.test(s)) m.push('dry'); return [...new Set(m)]; }

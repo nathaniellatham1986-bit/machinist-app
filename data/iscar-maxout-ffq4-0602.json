@@ -1,0 +1,2345 @@
+{
+"schema": 1,
+"brand": "ISCAR",
+"tools": [
+{
+"mode": "mill",
+"brand": "ISCAR",
+"series": "FFQ4 SOMT/W 0602 fast feed \u2013 grade IC808",
+"type": "fast feed mill insert",
+"notes": "Coolant not stated. Group 41 printed \"-\" for all grades.",
+"conditions": [
+{
+"label": "ISCAR group 1 \u00b7 Non-alloy steel and cast steel, <0.25%C \u00b7 Annealed \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 1",
+"sourceGroup": "ISCAR material group 1: Non-alloy steel and cast steel, <0.25%C \u2013 Annealed",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 492,
+"max": 722,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 2 \u00b7 Non-alloy steel and cast steel, >=0.25%C \u00b7 Annealed \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 2",
+"sourceGroup": "ISCAR material group 2: Non-alloy steel and cast steel, >=0.25%C \u2013 Annealed",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 426,
+"max": 689,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 3 \u00b7 Non-alloy steel and cast steel, <0.55%C \u00b7 Quenched and tempered \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 3",
+"sourceGroup": "ISCAR material group 3: Non-alloy steel and cast steel, <0.55%C \u2013 Quenched and tempered",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 394,
+"max": 656,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 4 \u00b7 Non-alloy steel and cast steel, >=0.55%C \u00b7 Annealed \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 4",
+"sourceGroup": "ISCAR material group 4: Non-alloy steel and cast steel, >=0.55%C \u2013 Annealed",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 394,
+"max": 623,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 5 \u00b7 Non-alloy steel and cast steel, >=0.55%C \u00b7 Quenched and tempered \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 5",
+"sourceGroup": "ISCAR material group 5: Non-alloy steel and cast steel, >=0.55%C \u2013 Quenched and tempered",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 361,
+"max": 590,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 6 \u00b7 Low alloy steel and cast steel (<5% all elements) \u00b7 Annealed \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 6",
+"sourceGroup": "ISCAR material group 6: Low alloy steel and cast steel (<5% all elements) \u2013 Annealed",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 394,
+"max": 623,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 7 \u00b7 Low alloy steel and cast steel (<5% all elements) \u00b7 Quenched and tempered \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 7",
+"sourceGroup": "ISCAR material group 7: Low alloy steel and cast steel (<5% all elements) \u2013 Quenched and tempered",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 361,
+"max": 590,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 8 \u00b7 Low alloy steel and cast steel (<5% all elements) \u00b7 Quenched and tempered \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 8",
+"sourceGroup": "ISCAR material group 8: Low alloy steel and cast steel (<5% all elements) \u2013 Quenched and tempered",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 377,
+"max": 558,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 9 \u00b7 Low alloy steel and cast steel (<5% all elements) \u00b7 Quenched and tempered \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 9",
+"sourceGroup": "ISCAR material group 9: Low alloy steel and cast steel (<5% all elements) \u2013 Quenched and tempered",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 361,
+"max": 558,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 10 \u00b7 High alloy steel, cast steel and tool steel \u00b7 Annealed \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 10",
+"sourceGroup": "ISCAR material group 10: High alloy steel, cast steel and tool steel \u2013 Annealed",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 394,
+"max": 558,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 11 \u00b7 High alloy steel, cast steel and tool steel \u00b7 Quenched and tempered \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 11",
+"sourceGroup": "ISCAR material group 11: High alloy steel, cast steel and tool steel \u2013 Quenched and tempered",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 328,
+"max": 492,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 12 \u00b7 Stainless steel and cast steel \u00b7 Ferritic/martensitic \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 12",
+"sourceGroup": "ISCAR material group 12: Stainless steel and cast steel \u2013 Ferritic/martensitic",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 361,
+"max": 525,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 13 \u00b7 Stainless steel and cast steel \u00b7 Martensitic \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 13",
+"sourceGroup": "ISCAR material group 13: Stainless steel and cast steel \u2013 Martensitic",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 328,
+"max": 492,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 15 \u00b7 Gray cast iron \u00b7 Ferritic/pearlitic \u00b7 T insert",
+"iso": "K",
+"subgroup": "ISCAR 15",
+"sourceGroup": "ISCAR material group 15: Gray cast iron \u2013 Ferritic/pearlitic",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 492,
+"max": 722,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t. SFM printed in one merged cell spanning ISCAR groups 15-16.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 16 \u00b7 Gray cast iron \u00b7 Pearlitic/martensitic \u00b7 T insert",
+"iso": "K",
+"subgroup": "ISCAR 16",
+"sourceGroup": "ISCAR material group 16: Gray cast iron \u2013 Pearlitic/martensitic",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 492,
+"max": 722,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t. SFM printed in one merged cell spanning ISCAR groups 15-16.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 17 \u00b7 Ductile cast iron (nodular) \u00b7 Ferritic \u00b7 T insert",
+"iso": "K",
+"subgroup": "ISCAR 17",
+"sourceGroup": "ISCAR material group 17: Ductile cast iron (nodular) \u2013 Ferritic",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 394,
+"max": 656,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t. SFM printed in one merged cell spanning ISCAR groups 17-18.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 18 \u00b7 Ductile cast iron (nodular) \u00b7 Pearlitic \u00b7 T insert",
+"iso": "K",
+"subgroup": "ISCAR 18",
+"sourceGroup": "ISCAR material group 18: Ductile cast iron (nodular) \u2013 Pearlitic",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 394,
+"max": 656,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t. SFM printed in one merged cell spanning ISCAR groups 17-18.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 19 \u00b7 Malleable cast iron \u00b7 Ferritic \u00b7 T insert",
+"iso": "K",
+"subgroup": "ISCAR 19",
+"sourceGroup": "ISCAR material group 19: Malleable cast iron \u2013 Ferritic",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 426,
+"max": 689,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t. SFM printed in one merged cell spanning ISCAR groups 19-20.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 20 \u00b7 Malleable cast iron \u00b7 Pearlitic \u00b7 T insert",
+"iso": "K",
+"subgroup": "ISCAR 20",
+"sourceGroup": "ISCAR material group 20: Malleable cast iron \u2013 Pearlitic",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 426,
+"max": 689,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t. SFM printed in one merged cell spanning ISCAR groups 19-20.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 38 \u00b7 Hardened steel \u00b7 Hardened \u00b7 SOMW insert",
+"iso": "H",
+"subgroup": "ISCAR 38",
+"sourceGroup": "ISCAR material group 38: Hardened steel \u2013 Hardened",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 197,
+"max": 262,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.012,
+"max": 0.016
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 SOMW",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 39 \u00b7 Hardened steel \u00b7 Hardened \u00b7 SOMW insert",
+"iso": "H",
+"subgroup": "ISCAR 39",
+"sourceGroup": "ISCAR material group 39: Hardened steel \u2013 Hardened",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 131,
+"max": 164,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.012,
+"max": 0.016
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 SOMW",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 40 \u00b7 Chilled cast iron \u00b7 Cast \u00b7 SOMW insert",
+"iso": "H",
+"subgroup": "ISCAR 40",
+"sourceGroup": "ISCAR material group 40: Chilled cast iron \u2013 Cast",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 262,
+"max": 328,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.012,
+"max": 0.016
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 SOMW",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "mill",
+"brand": "ISCAR",
+"series": "FFQ4 SOMT/W 0602 fast feed \u2013 grade IC830",
+"type": "fast feed mill insert",
+"notes": "Coolant not stated. Group 41 printed \"-\" for all grades.",
+"conditions": [
+{
+"label": "ISCAR group 1 \u00b7 Non-alloy steel and cast steel, <0.25%C \u00b7 Annealed \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 1",
+"sourceGroup": "ISCAR material group 1: Non-alloy steel and cast steel, <0.25%C \u2013 Annealed",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 459,
+"max": 689,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 2 \u00b7 Non-alloy steel and cast steel, >=0.25%C \u00b7 Annealed \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 2",
+"sourceGroup": "ISCAR material group 2: Non-alloy steel and cast steel, >=0.25%C \u2013 Annealed",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 394,
+"max": 656,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 3 \u00b7 Non-alloy steel and cast steel, <0.55%C \u00b7 Quenched and tempered \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 3",
+"sourceGroup": "ISCAR material group 3: Non-alloy steel and cast steel, <0.55%C \u2013 Quenched and tempered",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 361,
+"max": 623,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 4 \u00b7 Non-alloy steel and cast steel, >=0.55%C \u00b7 Annealed \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 4",
+"sourceGroup": "ISCAR material group 4: Non-alloy steel and cast steel, >=0.55%C \u2013 Annealed",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 361,
+"max": 590,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 5 \u00b7 Non-alloy steel and cast steel, >=0.55%C \u00b7 Quenched and tempered \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 5",
+"sourceGroup": "ISCAR material group 5: Non-alloy steel and cast steel, >=0.55%C \u2013 Quenched and tempered",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 329,
+"max": 558,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 6 \u00b7 Low alloy steel and cast steel (<5% all elements) \u00b7 Annealed \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 6",
+"sourceGroup": "ISCAR material group 6: Low alloy steel and cast steel (<5% all elements) \u2013 Annealed",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 361,
+"max": 590,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 7 \u00b7 Low alloy steel and cast steel (<5% all elements) \u00b7 Quenched and tempered \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 7",
+"sourceGroup": "ISCAR material group 7: Low alloy steel and cast steel (<5% all elements) \u2013 Quenched and tempered",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 328,
+"max": 558,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 8 \u00b7 Low alloy steel and cast steel (<5% all elements) \u00b7 Quenched and tempered \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 8",
+"sourceGroup": "ISCAR material group 8: Low alloy steel and cast steel (<5% all elements) \u2013 Quenched and tempered",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 328,
+"max": 525,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 9 \u00b7 Low alloy steel and cast steel (<5% all elements) \u00b7 Quenched and tempered \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 9",
+"sourceGroup": "ISCAR material group 9: Low alloy steel and cast steel (<5% all elements) \u2013 Quenched and tempered",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 328,
+"max": 525,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 10 \u00b7 High alloy steel, cast steel and tool steel \u00b7 Annealed \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 10",
+"sourceGroup": "ISCAR material group 10: High alloy steel, cast steel and tool steel \u2013 Annealed",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 361,
+"max": 525,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 11 \u00b7 High alloy steel, cast steel and tool steel \u00b7 Quenched and tempered \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 11",
+"sourceGroup": "ISCAR material group 11: High alloy steel, cast steel and tool steel \u2013 Quenched and tempered",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 295,
+"max": 459,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 12 \u00b7 Stainless steel and cast steel \u00b7 Ferritic/martensitic \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 12",
+"sourceGroup": "ISCAR material group 12: Stainless steel and cast steel \u2013 Ferritic/martensitic",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 328,
+"max": 492,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 13 \u00b7 Stainless steel and cast steel \u00b7 Martensitic \u00b7 T insert",
+"iso": "P",
+"subgroup": "ISCAR 13",
+"sourceGroup": "ISCAR material group 13: Stainless steel and cast steel \u2013 Martensitic",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 295,
+"max": 443,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 15 \u00b7 Gray cast iron \u00b7 Ferritic/pearlitic \u00b7 T insert",
+"iso": "K",
+"subgroup": "ISCAR 15",
+"sourceGroup": "ISCAR material group 15: Gray cast iron \u2013 Ferritic/pearlitic",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 459,
+"max": 689,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t. SFM printed in one merged cell spanning ISCAR groups 15-16.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 16 \u00b7 Gray cast iron \u00b7 Pearlitic/martensitic \u00b7 T insert",
+"iso": "K",
+"subgroup": "ISCAR 16",
+"sourceGroup": "ISCAR material group 16: Gray cast iron \u2013 Pearlitic/martensitic",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 459,
+"max": 689,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t. SFM printed in one merged cell spanning ISCAR groups 15-16.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 17 \u00b7 Ductile cast iron (nodular) \u00b7 Ferritic \u00b7 T insert",
+"iso": "K",
+"subgroup": "ISCAR 17",
+"sourceGroup": "ISCAR material group 17: Ductile cast iron (nodular) \u2013 Ferritic",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 394,
+"max": 623,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t. SFM printed in one merged cell spanning ISCAR groups 17-18.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 18 \u00b7 Ductile cast iron (nodular) \u00b7 Pearlitic \u00b7 T insert",
+"iso": "K",
+"subgroup": "ISCAR 18",
+"sourceGroup": "ISCAR material group 18: Ductile cast iron (nodular) \u2013 Pearlitic",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 394,
+"max": 623,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t. SFM printed in one merged cell spanning ISCAR groups 17-18.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 19 \u00b7 Malleable cast iron \u00b7 Ferritic \u00b7 T insert",
+"iso": "K",
+"subgroup": "ISCAR 19",
+"sourceGroup": "ISCAR material group 19: Malleable cast iron \u2013 Ferritic",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 377,
+"max": 656,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t. SFM printed in one merged cell spanning ISCAR groups 19-20.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 20 \u00b7 Malleable cast iron \u00b7 Pearlitic \u00b7 T insert",
+"iso": "K",
+"subgroup": "ISCAR 20",
+"sourceGroup": "ISCAR material group 20: Malleable cast iron \u2013 Pearlitic",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 377,
+"max": 656,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t. SFM printed in one merged cell spanning ISCAR groups 19-20.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "mill",
+"brand": "ISCAR",
+"series": "FFQ4 SOMT/W 0602 fast feed \u2013 grade IC840",
+"type": "fast feed mill insert",
+"notes": "Coolant not stated. Group 41 printed \"-\" for all grades.",
+"conditions": [
+{
+"label": "ISCAR group 14 \u00b7 Stainless steel and cast steel \u00b7 Austenitic \u00b7 HP / RM-HP insert",
+"iso": "M",
+"subgroup": "ISCAR 14",
+"sourceGroup": "ISCAR material group 14: Stainless steel and cast steel \u2013 Austenitic",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 295,
+"max": 525,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.035
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP / RM-HP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 31 \u00b7 High temp. alloys, Fe based \u00b7 Annealed \u00b7 HP / RM-HP insert",
+"iso": "S",
+"subgroup": "ISCAR 31",
+"sourceGroup": "ISCAR material group 31: High temp. alloys, Fe based \u2013 Annealed",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 180,
+"max": 230,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.024
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP / RM-HP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 32 \u00b7 High temp. alloys, Fe based \u00b7 Hardened \u00b7 HP / RM-HP insert",
+"iso": "S",
+"subgroup": "ISCAR 32",
+"sourceGroup": "ISCAR material group 32: High temp. alloys, Fe based \u2013 Hardened",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 164,
+"max": 197,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.024
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP / RM-HP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 33 \u00b7 High temp. alloys, Ni or Co based \u00b7 Annealed \u00b7 HP / RM-HP insert",
+"iso": "S",
+"subgroup": "ISCAR 33",
+"sourceGroup": "ISCAR material group 33: High temp. alloys, Ni or Co based \u2013 Annealed",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 115,
+"max": 148,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.028
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP / RM-HP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 34 \u00b7 High temp. alloys, Ni or Co based \u00b7 Hardened \u00b7 HP / RM-HP insert",
+"iso": "S",
+"subgroup": "ISCAR 34",
+"sourceGroup": "ISCAR material group 34: High temp. alloys, Ni or Co based \u2013 Hardened",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 98,
+"max": 115,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.028
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP / RM-HP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 35 \u00b7 High temp. alloys, Ni or Co based \u00b7 Cast \u00b7 HP / RM-HP insert",
+"iso": "S",
+"subgroup": "ISCAR 35",
+"sourceGroup": "ISCAR material group 35: High temp. alloys, Ni or Co based \u2013 Cast",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 82,
+"max": 115,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.028
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP / RM-HP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 36 \u00b7 Titanium and Ti alloys \u00b7 Pure titanium \u00b7 HP / RM-HP insert",
+"iso": "S",
+"subgroup": "ISCAR 36",
+"sourceGroup": "ISCAR material group 36: Titanium and Ti alloys \u2013 Pure titanium",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 197,
+"max": 230,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP / RM-HP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 37 \u00b7 Titanium and Ti alloys \u00b7 Alpha+beta alloys cured \u00b7 HP / RM-HP insert",
+"iso": "S",
+"subgroup": "ISCAR 37",
+"sourceGroup": "ISCAR material group 37: Titanium and Ti alloys \u2013 Alpha+beta alloys cured",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 115,
+"max": 164,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP / RM-HP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "mill",
+"brand": "ISCAR",
+"series": "FFQ4 SOMT/W 0602 fast feed \u2013 grade IC882",
+"type": "fast feed mill insert",
+"notes": "Coolant not stated. Group 41 printed \"-\" for all grades.",
+"conditions": [
+{
+"label": "ISCAR group 14 \u00b7 Stainless steel and cast steel \u00b7 Austenitic \u00b7 HP / RM-HP insert",
+"iso": "M",
+"subgroup": "ISCAR 14",
+"sourceGroup": "ISCAR material group 14: Stainless steel and cast steel \u2013 Austenitic",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 295,
+"max": 525,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.035
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP / RM-HP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 31 \u00b7 High temp. alloys, Fe based \u00b7 Annealed \u00b7 HP / RM-HP insert",
+"iso": "S",
+"subgroup": "ISCAR 31",
+"sourceGroup": "ISCAR material group 31: High temp. alloys, Fe based \u2013 Annealed",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 164,
+"max": 213,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.024
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP / RM-HP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 32 \u00b7 High temp. alloys, Fe based \u00b7 Hardened \u00b7 HP / RM-HP insert",
+"iso": "S",
+"subgroup": "ISCAR 32",
+"sourceGroup": "ISCAR material group 32: High temp. alloys, Fe based \u2013 Hardened",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 148,
+"max": 180,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.024
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP / RM-HP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 33 \u00b7 High temp. alloys, Ni or Co based \u00b7 Annealed \u00b7 HP / RM-HP insert",
+"iso": "S",
+"subgroup": "ISCAR 33",
+"sourceGroup": "ISCAR material group 33: High temp. alloys, Ni or Co based \u2013 Annealed",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 98,
+"max": 131,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.028
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP / RM-HP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 34 \u00b7 High temp. alloys, Ni or Co based \u00b7 Hardened \u00b7 HP / RM-HP insert",
+"iso": "S",
+"subgroup": "ISCAR 34",
+"sourceGroup": "ISCAR material group 34: High temp. alloys, Ni or Co based \u2013 Hardened",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 82,
+"max": 115,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.028
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP / RM-HP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 35 \u00b7 High temp. alloys, Ni or Co based \u00b7 Cast \u00b7 HP / RM-HP insert",
+"iso": "S",
+"subgroup": "ISCAR 35",
+"sourceGroup": "ISCAR material group 35: High temp. alloys, Ni or Co based \u2013 Cast",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 82,
+"max": 115,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.028
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP / RM-HP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 36 \u00b7 Titanium and Ti alloys \u00b7 Pure titanium \u00b7 HP / RM-HP insert",
+"iso": "S",
+"subgroup": "ISCAR 36",
+"sourceGroup": "ISCAR material group 36: Titanium and Ti alloys \u2013 Pure titanium",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 164,
+"max": 197,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP / RM-HP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 37 \u00b7 Titanium and Ti alloys \u00b7 Alpha+beta alloys cured \u00b7 HP / RM-HP insert",
+"iso": "S",
+"subgroup": "ISCAR 37",
+"sourceGroup": "ISCAR material group 37: Titanium and Ti alloys \u2013 Alpha+beta alloys cured",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 115,
+"max": 148,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.016,
+"max": 0.039
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP / RM-HP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "mill",
+"brand": "ISCAR",
+"series": "FFQ4 SOMT/W 0602 fast feed \u2013 grade IC08",
+"type": "fast feed mill insert",
+"notes": "Coolant not stated. Group 41 printed \"-\" for all grades.",
+"conditions": [
+{
+"label": "ISCAR group 21 \u00b7 Aluminum wrought alloys \u00b7 Not hardenable \u00b7 HP-P insert",
+"iso": "N",
+"subgroup": "ISCAR 21",
+"sourceGroup": "ISCAR material group 21: Aluminum wrought alloys \u2013 Not hardenable",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 1740,
+"max": 2330,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.012,
+"max": 0.035
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP-P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 22 \u00b7 Aluminum wrought alloys \u00b7 Hardenable \u00b7 HP-P insert",
+"iso": "N",
+"subgroup": "ISCAR 22",
+"sourceGroup": "ISCAR material group 22: Aluminum wrought alloys \u2013 Hardenable",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 1475,
+"max": 2035,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.012,
+"max": 0.035
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP-P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 23 \u00b7 Aluminum cast alloys \u00b7 Not hardenable \u00b7 HP-P insert",
+"iso": "N",
+"subgroup": "ISCAR 23",
+"sourceGroup": "ISCAR material group 23: Aluminum cast alloys \u2013 Not hardenable",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 1740,
+"max": 2330,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.012,
+"max": 0.035
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP-P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 24 \u00b7 Aluminum cast alloys \u00b7 Hardenable \u00b7 HP-P insert",
+"iso": "N",
+"subgroup": "ISCAR 24",
+"sourceGroup": "ISCAR material group 24: Aluminum cast alloys \u2013 Hardenable",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 1475,
+"max": 2035,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.012,
+"max": 0.035
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP-P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "ISCAR group 25 \u00b7 Aluminum cast alloys \u00b7 High temperature \u00b7 HP-P insert",
+"iso": "N",
+"subgroup": "ISCAR 25",
+"sourceGroup": "ISCAR material group 25: Aluminum cast alloys \u2013 High temperature",
+"status": "verified",
+"coolant": null,
+"sfm": {
+"min": 870,
+"max": 1165,
+"unit": "ft/min"
+},
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.012,
+"max": 0.035
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.028,
+"unit": "in"
+},
+"insert": "FFQ4 SOMT/W 0602 HP-P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), FFQ4 SOMT/W 0602 \u2013 Recommended Machining Conditions for Fast Feed Endmills FFQ4 Size 06",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "ISCAR publication PDF fetched 2026-10-23",
+"page": "78",
+"notes": "Depth-of-cut column is headed \"(mm)\" but printed values (.008-.028) match the inch ap in the insert table above; recorded as inch. Unstable conditions: reduce cutting data 20-30% (table note). Side plunging initial feed .004 in/t.",
+"retrieved": "2026-10-23"
+}
+}
+]
+}
+]
+}

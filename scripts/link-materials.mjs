@@ -10,11 +10,15 @@ const RULES = [
   ['p-mild', 'P', /\b10\d\d\b|\b10XX\b|\b11XX\b|\b12L?XX\b|\b12L14\b|\bA36\b/i],
   ['p-alloy', 'P', /\b41\d\d\b|\b43\d\d\b|\b41XX\b|\b43XX\b|\b86\d\d\b|\b86XX\b/i],
 ];
+// Hardness/strength numbers (e.g. "<321 HB", "HRC 45", "1000 N/mm²") are not grade numbers: strip them before matching.
+export const stripHardness = s => s.replace(/[<>≤≥~]?\s*\d+(?:[.,]\d+)?(?:\s*[-–]\s*\d+(?:[.,]\d+)?)?\s*(?:HBW?|HRC|HRB|HV\d*|N\/mm²?|MPa|ksi)(?![A-Za-z])/gi, ' ')
+  .replace(/\b(?:HBW?|HRC|HRB|HV)\s*[<>≤≥]?\s*\d+(?:[.,]\d+)?/gi, ' ');
+export const matchIds = (iso, txt) => { const s = stripHardness(txt); return RULES.filter(([, i, re]) => i === iso && re.test(s)).map(([id]) => id); };
 export function linkMaterials(doc) {
   let n = 0; if (/^seco/i.test(doc.brand)) return 0;
   for (const t of doc.tools) for (const c of t.conditions) {
     if (c.materials?.length || c.status === 'shop-proven') continue;
-    const txt = c.material ?? c.label; const m = RULES.filter(([, iso, re]) => iso === c.iso && re.test(txt)).map(([id]) => id);
+    const txt = c.material ?? c.label; const m = matchIds(c.iso, txt);
     if (!m.length) continue; c.materials = m; c.sourceGroup = txt; n++; }
   return n;
 }
