@@ -66,6 +66,8 @@ const inMode = () => SUM.filter(t => t.mode === mode && toolOk(t) && (mode !== '
   && (mode !== 'turn' || (() => { return turnOpsOf(t).includes($('top').value); })()));
 let GROUPS = {}, GUSER = false;
 const geo = geoName;
+// Part and Groove: depth of cut and MRR do not apply; Part runs to center (finish Ø 0).
+const PG = () => mode === 'turn' && /Groove|Part/.test($('top').value), PART = () => mode === 'turn' && /Part/.test($('top').value);
 const short = s => s.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim().slice(0, 48);
 function fillBrand() { const cur = $('brand').value; $('brand').length = 0; $('brand').add(new Option('All brands', ''));
   [...new Set(inMode().map(t => t.brand))].sort().forEach(b => $('brand').add(new Option(b, b)));
@@ -211,7 +213,7 @@ function showEng() { const d = D(); $('ae').value = $('aeU').value === 'pct' ? +
   $('ap').value = $('apU').value === 'xd' ? +frac.ap.toFixed(3) : +(frac.ap * d * LK()).toFixed(metric ? 3 : 4); readEng(); }
 $('aeU').onchange = () => { showEng(); run(); }; $('apU').onchange = () => { showEng(); run(); };
 const mine = k => defs[k] == null || Math.abs(inV(k) - defs[k]) > (k === 'sfm' ? 2 : 5e-5);
-function run() { if (mode === 'mill') readEng();
+function run() { if (PART()) $('fD').value = '0'; if (mode === 'mill') readEng();
   const v = inV, tag = k => mine(k) && $(k).value ? ' <span class="tag warn">YOUR VALUE, NOT MANUFACTURER</span>' : '';
   const c = curTool()?.conditions[$('cond').value];
   let w = '';
@@ -243,11 +245,11 @@ function run() { if (mode === 'mill') readEng();
     if (mode === 'mill') { o = compute({ sfm: v('sfm'), d: v('d'), fpt: v('fpt'), z: v('z'), ae: frac.ae * v('d'), ap: frac.ap * v('d'), stickout: v('so'), maxRpm: v('maxRpm'), maxHp: v('maxHp'), iso: c?.iso });
       extra = card('Est. power', (o.hp < 1 ? o.hp.toFixed(2) : o.hp.toFixed(1)) + ' HP', `DERIVED · DOC ${ENG.ap === 'mfg' ? 'manufacturer' : ENG.ap === 'yours' ? 'YOUR VALUE' : 'default'}, WOC ${ENG.ae === 'mfg' ? 'manufacturer' : ENG.ae === 'yours' ? 'YOUR VALUE' : 'default 25%'} · MRR ${o.mrr.toFixed(3)} in³/min at WOC ${(frac.ae * v('d')).toFixed(3)} × DOC ${(frac.ap * v('d')).toFixed(3)} in`) + `<div class="card wide"><div class="b">Chip load used for IPM: ${o.fpt.toFixed(4)} in/t (chip thinning + stickout, DERIVED)${o.hpCapped ? ' · <span class="warn">feed cut to fit machine HP</span>' : ''}</div></div>`; }
     if (mode === 'drill') o = drill({ sfm: v('sfm'), d: v('d'), ipr: v('fpt'), maxRpm: v('maxRpm') });
-    if (mode === 'turn') { o = turn({ sfm: v('sfm'), d: v('d'), ipr: v('fpt'), ap: v('apT'), maxRpm: v('maxRpm') }); extra = TH() ? '' : card('MRR', metric ? (o.mrr * 16.387).toFixed(1) + ' cm³/min' : o.mrr.toFixed(2) + ' in³/min', 'DERIVED' + (o.capped ? ` at capped ${Math.round(o.sfmActual)} SFM` : ''));
-      const cs = css({ sfm: v('sfm'), d0: v('d'), d1: v('fD') || v('d'), maxRpm: v('maxRpm') });
+    if (mode === 'turn') { o = turn({ sfm: v('sfm'), d: v('d'), ipr: v('fpt'), ap: v('apT'), maxRpm: v('maxRpm') }); extra = TH() || PG() ? '' : card('MRR', metric ? (o.mrr * 16.387).toFixed(1) + ' cm³/min' : o.mrr.toFixed(2) + ' in³/min', 'DERIVED' + (o.capped ? ` at capped ${Math.round(o.sfmActual)} SFM` : ''));
+      const d1 = PART() ? 0 : v('fD') || v('d'), cs = css({ sfm: v('sfm'), d0: v('d'), d1, maxRpm: v('maxRpm') });
       if (TH()) { const tf = threadFeed({ rpm: o.rpm, lead: v('fpt'), maxIpm: LS.get('machines', [])[$('mach').value]?.thrIpm }); o.rpm = tf.rpm; o.ipm = tf.ipm; o.thrW = tf.capped ? '<span class="warn">RPM capped by machine max threading feed</span> · ' : tf.high ? `<span class="warn">Threading feed ${Math.round(tf.ipm)} IPM is high. Shop rule of thumb ~200 IPM, not manufacturer data. Set your machine's max threading feed.</span> · ` : ''; }
       if (TH()) extra = card('Constant RPM (G97)', `<span style="font-size:22px">G97 S${Math.round(o.rpm)}</span>`, (o.thrW || '') + `threading feed ${Math.round(o.ipm)} IPM (RPM × lead) · threading runs at a locked RPM · manufacturer SFM at part Ø${uLen(v('d'), 3)}` + (o.capped ? ' · <span class="warn">capped at machine max RPM</span>' : '') + ' · DERIVED'); else
-      extra += card('RPM start → finish', `${Math.round(cs.rpm0)} → ${Math.round(cs.rpm1)}`, `at Ø${uLen(v('d'), 3)} → Ø${uLen(v('fD') || v('d'), 3)} · DERIVED`)
+      extra += card('RPM start → finish', `${Math.round(cs.rpm0)} → ${isFinite(cs.rpm1) ? Math.round(cs.rpm1) : '— (set a lathe profile for G50)'}`, `at Ø${uLen(v('d'), 3)} → Ø${uLen(d1, 3)}${PART() ? ' (part-off to center)' : ''} · DERIVED`)
         + card('CSS (G96)', `<span style="font-size:22px">G96 S${metric ? uSp(v('sfm')) : Math.round(v('sfm'))}<br>G50 S${v('maxRpm') || '—'}</span>`, (metric ? 'S in m/min (G21)' : 'S in SFM (G20)') + (cs.clampDia ? ` · RPM clamps at G50 below Ø${uLen(cs.clampDia, 3)}` : ' · <span class="warn">set a lathe profile for the G50 clamp</span>') + ' · DERIVED'); BAR.ipr = true; }
     if (mode === 'bore') { o = drill({ sfm: v('sfm'), d: v('d'), ipr: boreFz ? v('fpt') * (v('z') || 1) : v('fpt'), maxRpm: v('maxRpm') });
       extra = `<div class="card wide"><div class="b">Bore: RPM from SFM at bore Ø ${v('d')} in; ${boreFz ? `IPM = RPM × feed/tooth × ${v('z') || 1} cutting edge(s) (manufacturer prints per tooth)` : 'IPM = RPM × feed/rev (manufacturer prints per rev)'} · DERIVED</div></div>`; }
@@ -258,7 +260,8 @@ function run() { if (mode === 'mill') readEng();
     BAR.push(['RPM', Math.round(o.rpm)], BAR.ipr ? [metric ? 'mm/rev' : 'IPR', uFeed(v('fpt'))] : [metric ? 'mm/min' : 'IPM', uIpm(o.ipm, mode === 'mill' ? 1 : 2)]);
   }
   }
-  if (c) { const apU = c.ap ? toIn(1, c.ap.unit) : 1, d = v('d'); let doc = [];
+  $('apT').closest('label').style.display = PG() ? 'none' : '';
+  if (c && !PG()) { const apU = c.ap ? toIn(1, c.ap.unit) : 1, d = v('d'); let doc = [];
     if (c.ap?.value != null) doc.push(`DOC ${(c.ap.value * apU).toFixed(3)} in`); else if (c.ap) doc.push(`DOC ${c.ap.min != null ? (c.ap.min * apU).toFixed(3) + '–' : '≤ '}${(c.ap.max * apU).toFixed(3)} in`);
     if (c.apx) doc.push(`DOC ${c.apx}×D${d ? ` = ${(c.apx * d).toFixed(3)} in` : ''}`); if (c.aex) doc.push(`WOC ${c.aex}×D${d ? ` = ${(c.aex * d).toFixed(3)} in` : ''}`);
     if (PR?.ap) doc.push(`DOC ${PR.ap.value} ${PR.ap.unit} (printed for Ø${PR.key} ${PR.unit})`); if (PR?.ae) doc.push(`WOC ${PR.ae.value} ${PR.ae.unit} (printed for Ø${PR.key} ${PR.unit})`);
