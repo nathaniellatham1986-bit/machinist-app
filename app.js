@@ -235,7 +235,7 @@ function showEng() { const d = D(); $('ae').value = $('aeU').value === 'pct' ? +
   $('ap').value = $('apU').value === 'xd' ? +frac.ap.toFixed(3) : +(frac.ap * d * LK()).toFixed(metric ? 3 : 4); readEng(); }
 $('aeU').onchange = () => { showEng(); run(); }; $('apU').onchange = () => { showEng(); run(); };
 const mine = k => defs[k] == null || Math.abs(inV(k) - defs[k]) > (k === 'sfm' ? 2 : 5e-5);
-function run() { if (PART()) $('fD').value = '0'; if (mode === 'mill') readEng();
+function run() { updateFindLink(); if (PART()) $('fD').value = '0'; if (mode === 'mill') readEng();
   const v = inV, tag = k => mine(k) && $(k).value ? ' <span class="tag warn">YOUR VALUE, NOT MANUFACTURER</span>' : '';
   const c = curTool()?.conditions[$('cond').value];
   let w = '';
