@@ -79,7 +79,8 @@ function fillTool() { const cur = $('tool').value, b = $('brand').value, words =
   const iso = matSel()?.iso || $('iso').value, rank = t => { const f = t.fullIsos || [], ok = i => !iso || i === iso || i === '*';
     const gen = !iso && mode !== 'tap' ? (f.includes('P') ? 0 : .25) + (mode === 'turn' && !(t.pFeed >= .012 && t.pFeed <= .025) ? .2 : 0) : 0; return gen + (f.some(x => !x.includes('~') && ok(x)) ? 0 : f.some(x => ok(x.replace('~', ''))) ? 1 : 2); };
   const r2 = t => rank(t) + (/parting|groov|thread/i.test(t.series + (t.type ?? '')) ? .5 : 0); const dD = mode === 'drill' ? inV('d') : 0, out = t => inRange(t.dr, dD) === false;
-  const r3 = t => r2(t) + (matSel()?.id === 'ss303' && !t.only303 ? .1 : 0) + (dD ? (out(t) ? 10 : inRange(t.dr, dD) ? 0 : 5) : 0); hits.sort((x, y) => r3(x) - r3(y));
+  const GEN = /\b[CWDVTS]NMG/i, r2b = t => r2(t) + (mode === 'turn' && $('top').value === 'Turn' && !GEN.test(`${t.series} ${t.type ?? ''}`) ? .3 : 0);
+  const r3 = t => r2b(t) + (matSel()?.id === 'ss303' && !t.only303 ? .1 : 0) + (dD ? (out(t) ? 10 : inRange(t.dr, dD) ? 0 : 5) : 0); hits.sort((x, y) => r3(x) - r3(y));
   // Grade/coating split: tools that differ only by grade collapse into one geometry entry; the grade picks the member.
   GROUPS = {}; const seen = {}; const list = [];
   for (const t of hits) { const g = geo(t), k = t.grade ? `${t.brand}|${g}` : t.key;
