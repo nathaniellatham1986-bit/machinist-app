@@ -196,3 +196,7 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
 { const { geoName, isMFDrill } = await import('./calc.js');
   const x = { mode: 'turn', series: 'XCMT-MF insert - grooving' }; assert.ok(isMFDrill(x)); assert.equal(geoName(x), 'XCMT-MF (multi-function drill insert)');
   console.log('ME11 #2 XCMT-MF tests pass'); }
+{ const fs = await import('node:fs'); const j = JSON.parse(fs.readFileSync('./data/index.json'));
+  const tt = j.files.flatMap(f => f.tools).filter(t => t.mode === 'turn'); assert.ok(tt.filter(t => t.ps?.includes('Finish')).length > 10);
+  assert.ok(tt.some(t => t.ps && !t.ps.includes('Finish')));
+  console.log('ME11 #3 turn pass index tests pass'); }

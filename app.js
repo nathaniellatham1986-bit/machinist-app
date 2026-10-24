@@ -64,7 +64,8 @@ function setMode(m) {
 const toolOk = t => { const m = matSel(); if (m && !(t.mats.includes(m.id) || t.isos.includes(m.iso) || t.isos.includes('*'))) return false;
   return !$('onlyData').checked || t.dataIsos.some(i => i === '*' || !(m?.iso || $('iso').value) || i === (m?.iso || $('iso').value)); };
 const inMode = () => SUM.filter(t => t.mode === mode && toolOk(t) && (mode !== 'tap' || (!$('tapT').value || tapTypeOf(t) === $('tapT').value) && isTaperThread(`${t.series} ${t.type ?? ''}`) === isTaperThread(threads.threads[$('thr').value]?.name))
-  && (mode !== 'turn' || (() => { return turnOpsOf(t).includes($('top').value); })()));
+  && (mode !== 'turn' || (() => { return turnOpsOf(t).includes($('top').value); })())
+  && (mode !== 'turn' || !$('pass').value || (t.ps ?? []).includes($('pass').value))); // Turn: a set Pass lists only tools with data for it
 let GROUPS = {}, GUSER = false;
 const geo = geoName;
 // Part and Groove: depth of cut and MRR do not apply; Part runs to center (finish Ø 0).
@@ -307,7 +308,7 @@ $('recall').onchange = async () => { const k = $('recall').value; if (!k) return
   for (const k2 of FIELDS) if (!['iso', 'mat', 'brand', 'tool', 'sfm', 'fpt'].includes(k2)) $(k2).value = s.v[k2];
   fill(); $('sfm').value = s.v.sfm; $('fpt').value = s.v.fpt; run(); $('recall').value = ''; };
 document.querySelectorAll('[data-mode]').forEach(b => { b.onclick = () => setMode(b.dataset.mode); b.hidden = !SUM.some(t => t.mode === b.dataset.mode); });
-['top', 'tapT'].forEach(k => $(k).onchange = fillBrand); $('kind').onchange = fillTool; ['pass', 'cut', 'nose', 'cb'].forEach(k => $(k).onchange = fillCond);
+['top', 'tapT'].forEach(k => $(k).onchange = fillBrand); $('kind').onchange = fillTool; ['pass', 'cut', 'nose', 'cb'].forEach(k => $(k).onchange = fillCond); $('pass').onchange = () => mode === 'turn' ? fillTool() : fillCond();
 ['fD', 'hd', 'bd', 'so'].forEach(k => $(k).oninput = run); $('tpi').oninput = $('pitchU').onchange = () => fillCond(); $('shk').onchange = run; $('hole').onchange = () => { const k = $('tool').value; fillTool(); if ($('tool').value === k) fill(); };
 $('unit').onclick = () => { const KS = [...LEN, 'sfm', 'fpt'], x = Object.fromEntries(KS.map(k => [k, $(k).value === '' ? '' : inV(k)])); metric = !metric; LS.set('metric', metric);
   KS.forEach(k => setIn(k, x[k])); $('aeU').options[1].text = $('apU').options[1].text = UL(); showEng(); $('sfmLbl').firstChild.textContent = metric ? 'Speed (m/min)' : 'SFM';
