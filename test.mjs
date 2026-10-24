@@ -40,7 +40,7 @@ assert.equal(J('./data/allied-drill.json').tools[0].conditions[0].coolant, 'thro
 console.log('phase3 tests pass');
 const sh = J('./data/shop.json').tools[0].conditions[0]; assert.equal(sh.status, 'shop-proven'); assert.notEqual(sh.status, 'verified');
 assert.ok(TJ.every(t => t.conditions.every(c => (c.status === 'shop-proven') === (c.source.kind === 'shop'))));
-const pe = TJ.find(x => x.series.startsWith('PENTA')).conditions[0]; assert.deepEqual([pe.sfm.min, pe.sfm.max, pe.feed.range.max], [60, 150, .05]);
+const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).conditions[0]; assert.deepEqual([pe.sfm.min, pe.sfm.max, pe.feed.range.max], [60, 150, .05]);
 // Recall dropdown: only setups saved in the current mode; legacy entries get mode from the tool record
 { const { inferMode, migrate, forMode } = await import('./recall.js');
   const tools = [{ key: 'a.json#0', mode: 'tap' }, { key: 'b.json#0', mode: 'mill' }];
