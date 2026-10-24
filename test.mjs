@@ -160,3 +160,8 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
 { const { geoName } = await import('./calc.js');
   assert.equal(geoName({ mode: 'turn', grade: 'GC1125', series: 'GC1125 parting & grooving grade (Supplement 19.2 start values)', type: 'Parting and grooving insert grade — cutting speed recommendations' }), 'Parting and grooving insert grades · Supplement 19.2 start values');
   console.log('ME followup Sandvik parting name tests pass'); }
+{ const { threadFeed } = await import('./calc.js');
+  let r = threadFeed({ rpm: 4760, lead: 1 / 13 }); assert.ok(r.high && !r.capped && Math.round(r.ipm) === 366);
+  r = threadFeed({ rpm: 4760, lead: 1 / 13, maxIpm: 150 }); assert.ok(r.capped && Math.round(r.rpm) === 1950 && r.ipm === 150);
+  r = threadFeed({ rpm: 1000, lead: 1 / 13, maxIpm: 150 }); assert.ok(!r.capped && !r.high);
+  console.log('thread feed cap tests pass'); }

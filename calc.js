@@ -147,3 +147,7 @@ export const isTaperThread = s => /\bNPTF?\b|\bBSPT\b|\bRc ?\d|\bpipe taper/i.te
 const BRAND_ALIAS = { iscar: 'Iscar', 'sumitomo': 'Sumitomo Electric Hardmetal', 'sumitomo electric': 'Sumitomo Electric Hardmetal', 'sumitomo electric hardmetal': 'Sumitomo Electric Hardmetal',
   sgs: 'Kyocera SGS', 'kyocera sgs': 'Kyocera SGS', mitsubishi: 'Mitsubishi Materials', 'mitsubishi materials': 'Mitsubishi Materials', korloy: 'Korloy', fraisa: 'Fraisa' };
 export const brandName = b => BRAND_ALIAS[String(b ?? '').trim().toLowerCase()] ?? b;
+// Threading feed = RPM × lead (in/rev). A machine max threading feed (IPM) caps RPM at max/lead. 200 IPM is a shop rule of thumb, not manufacturer data.
+export const threadFeed = ({ rpm, lead, maxIpm }) => { const ipm = rpm * lead;
+  if (maxIpm > 0 && ipm > maxIpm) return { rpm: maxIpm / lead, ipm: maxIpm, capped: true, high: false };
+  return { rpm, ipm, capped: false, high: !(maxIpm > 0) && ipm > 200 }; };

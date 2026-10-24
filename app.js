@@ -1,5 +1,5 @@
 import { MODES, migrate, forMode } from './recall.js';
-import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread } from './calc.js';
+import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed } from './calc.js';
 const $ = id => document.getElementById(id);
 const J = u => fetch(u).then(r => r.json());
 const idx = await J('data/index.json');
@@ -49,7 +49,7 @@ function machines() { const m = LS.get('machines', []); const sel = $('mach'); l
 function applyMachine() { const m = LS.get('machines', [])[$('mach').value]; LS.set('lastMachine:' + mode, $('mach').value);
   $('maxRpm').value = m?.rpm || ''; $('maxHp').value = m?.hp || ''; run(); }
 $('mSave').onclick = () => { const n = $('mName').value.trim(); if (!n) return; const m = LS.get('machines', []);
-  m.push({ name: n, type: $('mType').value, rpm: +$('mRpm').value || null, hp: +$('mHp').value || null }); LS.set('machines', m); machines(); $('mach').value = m.length - 1; applyMachine(); };
+  m.push({ name: n, type: $('mType').value, rpm: +$('mRpm').value || null, hp: +$('mHp').value || null, thrIpm: +$('mThr').value || null }); LS.set('machines', m); machines(); $('mach').value = m.length - 1; applyMachine(); };
 $('mDel').onclick = () => { const m = LS.get('machines', []); if ($('mach').value === '') return; m.splice(+$('mach').value, 1); LS.set('machines', m); $('mach').value = ''; machines(); };
 // Selection chain: material -> brand -> tool -> condition
 function setMode(m) {
@@ -242,7 +242,8 @@ function run() { if (mode === 'mill') readEng();
     if (mode === 'drill') o = drill({ sfm: v('sfm'), d: v('d'), ipr: v('fpt'), maxRpm: v('maxRpm') });
     if (mode === 'turn') { o = turn({ sfm: v('sfm'), d: v('d'), ipr: v('fpt'), ap: v('apT'), maxRpm: v('maxRpm') }); extra = TH() ? '' : card('MRR', metric ? (o.mrr * 16.387).toFixed(1) + ' cm³/min' : o.mrr.toFixed(2) + ' in³/min', 'DERIVED' + (o.capped ? ` at capped ${Math.round(o.sfmActual)} SFM` : ''));
       const cs = css({ sfm: v('sfm'), d0: v('d'), d1: v('fD') || v('d'), maxRpm: v('maxRpm') });
-      if (TH()) extra = card('Constant RPM (G97)', `<span style="font-size:22px">G97 S${Math.round(o.rpm)}</span>`, `threading runs at a locked RPM · manufacturer SFM at part Ø${uLen(v('d'), 3)}` + (o.capped ? ' · <span class="warn">capped at machine max RPM</span>' : '') + ' · DERIVED'); else
+      if (TH()) { const tf = threadFeed({ rpm: o.rpm, lead: v('fpt'), maxIpm: LS.get('machines', [])[$('mach').value]?.thrIpm }); o.rpm = tf.rpm; o.ipm = tf.ipm; o.thrW = tf.capped ? '<span class="warn">RPM capped by machine max threading feed</span> · ' : tf.high ? `<span class="warn">Threading feed ${Math.round(tf.ipm)} IPM is high. Shop rule of thumb ~200 IPM, not manufacturer data. Set your machine's max threading feed.</span> · ` : ''; }
+      if (TH()) extra = card('Constant RPM (G97)', `<span style="font-size:22px">G97 S${Math.round(o.rpm)}</span>`, (o.thrW || '') + `threading feed ${Math.round(o.ipm)} IPM (RPM × lead) · threading runs at a locked RPM · manufacturer SFM at part Ø${uLen(v('d'), 3)}` + (o.capped ? ' · <span class="warn">capped at machine max RPM</span>' : '') + ' · DERIVED'); else
       extra += card('RPM start → finish', `${Math.round(cs.rpm0)} → ${Math.round(cs.rpm1)}`, `at Ø${uLen(v('d'), 3)} → Ø${uLen(v('fD') || v('d'), 3)} · DERIVED`)
         + card('CSS (G96)', `<span style="font-size:22px">G96 S${metric ? uSp(v('sfm')) : Math.round(v('sfm'))}<br>G50 S${v('maxRpm') || '—'}</span>`, (metric ? 'S in m/min (G21)' : 'S in SFM (G20)') + (cs.clampDia ? ` · RPM clamps at G50 below Ø${uLen(cs.clampDia, 3)}` : ' · <span class="warn">set a lathe profile for the G50 clamp</span>') + ' · DERIVED'); BAR.ipr = true; }
     if (mode === 'bore') { o = drill({ sfm: v('sfm'), d: v('d'), ipr: boreFz ? v('fpt') * (v('z') || 1) : v('fpt'), maxRpm: v('maxRpm') });
