@@ -7,6 +7,11 @@
    "models": 1
   },
   {
+   "file": "cheto.json",
+   "builder": "Cheto",
+   "models": 7
+  },
+  {
    "file": "citizen.json",
    "builder": "Citizen",
    "models": 1
@@ -67,6 +72,11 @@
    "models": 3
   },
   {
+   "file": "mte.json",
+   "builder": "MTE",
+   "models": 2
+  },
+  {
    "file": "nakamura-tome.json",
    "builder": "Nakamura-Tome",
    "models": 1
@@ -80,6 +90,11 @@
    "file": "okuma.json",
    "builder": "Okuma",
    "models": 3
+  },
+  {
+   "file": "parpas.json",
+   "builder": "Parpas",
+   "models": 2
   },
   {
    "file": "star.json",

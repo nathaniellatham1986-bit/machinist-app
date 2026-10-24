@@ -1,0 +1,78 @@
+{
+ "schema": 1,
+ "builder": "MTE",
+ "models": [
+  {
+   "model": "BF series (bed type)",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "4000 rpm",
+     "rpm": 4000,
+     "taper": "ISO 50 / HSK 100",
+     "kw_peak": null,
+     "kw_cont": 32,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 1520,
+     "rating_note": "32 kW at 100% ED; 1520 Nm S1"
+    },
+    {
+     "option": "6000 rpm",
+     "rpm": 6000,
+     "taper": "ISO 50 / HSK 100",
+     "kw_peak": null,
+     "kw_cont": 32,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": "32 kW at 100% ED"
+    }
+   ],
+   "rapid_ipm": 591,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.mte.de/en/machines/bf-series/",
+    "title": "MTE BF Series",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "BT series (bed type)",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "6000 rpm",
+     "rpm": 6000,
+     "taper": "ISO 50 / HSK 100",
+     "kw_peak": null,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": "Builder lists 43/65 kW, 917-2020 Nm, pairing to speed not stated"
+    },
+    {
+     "option": "7000 rpm",
+     "rpm": 7000,
+     "taper": "ISO 50 / HSK 100",
+     "kw_peak": null,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": "Builder lists 43/65 kW, pairing not stated"
+    }
+   ],
+   "rapid_ipm": 984,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.mte.de/en/machines/bt-series/",
+    "title": "MTE BT Series",
+    "accessed": "2026-10-24"
+   }
+  }
+ ]
+}
