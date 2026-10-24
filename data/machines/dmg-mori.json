@@ -48,6 +48,89 @@
     "title": "DMG MORI DMU 50 3rd Generation",
     "accessed": "2026-10-24"
    }
+  },
+  {
+   "model": "CMX 1100 V",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "inline 12000 std",
+     "rpm": 12000,
+     "taper": "SK40 / BT40 / CAT40",
+     "kw_peak": 13,
+     "kw_cont": 9,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 83,
+     "rating_note": "40% / 100% DC"
+    },
+    {
+     "option": "inlineMASTER 15000",
+     "rpm": 15000,
+     "taper": "SK40 BIG PLUS",
+     "kw_peak": 20,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 121,
+     "rating_note": "40% ED"
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://en.dmgmori.com/products/machines/milling/vertical-milling/cmx-v/cmx-1100-v",
+    "title": "DMG MORI CMX 1100 V",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "NLX 2500 2nd Gen",
+   "type": "mill-turn",
+   "spindles": [
+    {
+     "option": "Left 10 in",
+     "rpm": 5000,
+     "taper": "",
+     "kw_peak": 26,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 843,
+     "rating_note": null
+    },
+    {
+     "option": "Left 12 in option",
+     "rpm": 3000,
+     "taper": "",
+     "kw_peak": 36,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 1273,
+     "rating_note": null
+    },
+    {
+     "option": "BMT live tool high-speed",
+     "rpm": 12000,
+     "taper": "BMT",
+     "kw_peak": null,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://hu.dmgmori.com/products/machines/turning/universal-turning/nlx/nlx-2500-2nd",
+    "title": "DMG MORI NLX 2500|1250 2nd Gen",
+    "accessed": "2026-10-24"
+   }
   }
  ]
 }
