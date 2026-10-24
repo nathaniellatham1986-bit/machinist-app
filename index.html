@@ -19,7 +19,6 @@ nav{display:grid;grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:4px}na
 <label data-show="turn">Operation<select id="top"><option value="Turn">Turn</option><option value="Face">Face</option><option value="Groove">Groove</option><option value="Part">Part</option><option value="Thread">Thread</option></select></label>
 <div class="row" data-show="tap"><label>Tap type<select id="tapT"><option value="">Any</option><option value="point">Spiral point</option><option value="flute">Spiral flute</option><option value="form">Form (roll)</option></select></label><label>Hole<select id="hole"><option value="through">Through</option><option value="blind">Blind</option></select></label></div>
 <label>Series <small id="tn"></small><select id="tool"></select></label>
-<a id="findTool" href="#" target="_blank" rel="noopener" hidden>Find this tool</a>
 <label id="gradeL" hidden><span id="gradeT">Grade</span><select id="grade"></select><small id="gNote"></small></label>
 <div class="row"><label data-show="mill turn drill bore">Pass<select id="pass"><option value="">Any</option><option value="Finish">Finish</option><option value="Medium">Medium</option><option value="Rough">Rough</option></select></label><label data-show="mill">Cut<select id="cut"><option value="">Any</option><option value="Slot">Slot</option><option value="Side">Side</option><option value="HEM">HEM</option></select></label></div>
 <label>Manufacturer condition <small>(source label)</small><select id="cond"></select><small id="coolNote"></small></label>
@@ -34,6 +33,7 @@ nav{display:grid;grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:4px}na
 <div class="row"><label data-show="mill bore">Stickout <span class="u">(in)</span><input id="so" type="number" inputmode="decimal" step="any" value="1.5"></label><label data-show="turn">DOC ap <span class="u">(in)</span><input id="apT" type="number" inputmode="decimal" step="any" value="0.04"><small id="apTX"></small></label>
 <label data-show="drill">Hole depth <span class="u">(in)</span><input id="hd" type="number" inputmode="decimal" step="any"></label><label data-show="bore">Bar dia <span class="u">(in)</span><input id="bd" type="number" inputmode="decimal" step="any"></label></div>
 <label data-show="bore">Bar shank<select id="shk"><option value="steel">Steel</option><option value="carbide">Carbide</option></select></label>
+<a id="findTool" href="#" target="_blank" rel="noopener" hidden style="margin:14px 0;display:block">Find this tool</a>
 <div id="cards"></div><div class="out" id="out"></div><div class="src" id="src"></div>
 <details id="more" style="margin-top:14px"><summary>More</summary>
 <label>Recall (favorites / recent)<select id="recall"><option value="">—</option></select></label><button class="sm" id="fav" style="margin-top:10px;width:100%">★ Save setup as favorite</button>
