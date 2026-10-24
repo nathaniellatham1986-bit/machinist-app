@@ -130,3 +130,8 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   assert.deepEqual(turnOpsOf({ series: 'DGN inserts', type: 'parting / grooving insert' }), ['Part', 'Groove']);
   assert.deepEqual(turnOpsOf({ series: 'CNMG', type: 'turning insert' }), ['Turn']);
   console.log('turnOps tests pass'); }
+{ const { matPref } = await import('./calc.js');
+  assert.equal(matPref('4140-ann', { label: 'Low alloy steel, annealed (4140)' }), 0);
+  assert.equal(matPref('p-alloy', { label: 'non-alloy steel and cast steel, free cutting steel' }), 2);
+  assert.equal(matPref('4340-ht', { label: 'Unalloyed steel: C = 0.1–0.25%' }), 2);
+  console.log('ME1 alloy pref tests pass'); }

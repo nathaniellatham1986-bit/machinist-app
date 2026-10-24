@@ -118,3 +118,10 @@ export const geoName = t => { const short = s => s.replace(/\s*\([^)]*\)/g, '').
 // Printed feed-per-tooth as a multiple of tool diameter (fzPerD). fz = multiplier × D, in the record's (= D's) length unit.
 export const fzFromPerD = (p, d) => { const m = pick(p, 1); if (!m || !(d > 0)) return null; const f = x => +x.toPrecision(3);
   const r = pick(p, d); r.basis = `MFR FORMULA (${f(m.def)}×D)` + (p.start == null && p.value == null ? `, MIDPOINT of printed ${f(m.min)}–${f(m.max)}×D` : '') + (m.min != null && p.start != null ? ` · printed ${f(m.min)}–${f(m.max)}×D` : ''); r.formula = true; return r; };
+// Row preference for a picked material (default selection only; printed text only, no judgment of values).
+// 0 = row text names the material class, 1 = neutral, 2 = row text names a different class.
+const ALLOY_IDS = /^(p-alloy|4140|4340)/, ALLOY = /alloy|\b4[13]\d\d\b|CrMo|CrNiMo|\bSCM|\bSNCM/i, NONALLOY = /non.?alloy|unalloy|free.?(machin|cut)|\bmild\b|carbon steel|structural/i;
+const AUST = /austenit|\b05\.2|\bM1\b|\bM1\.|\b30[1-9]L?\b|\b31[0-9]L?\b/i, NONAUST = /ferrit|martensit|duplex|precipitation|\b05\.[13]|\b4[0-4]\d\b(?!\s*(HB|HV|HRC|N))/i;
+export const matPref = (id, c) => { const s = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' ');
+  if (ALLOY_IDS.test(id ?? '')) return NONALLOY.test(s) ? 2 : ALLOY.test(s) ? 0 : 1;
+  return 1; };
