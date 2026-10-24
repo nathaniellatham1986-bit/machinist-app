@@ -1,6 +1,6 @@
 // Regenerate data/index.json from every brand file in data/, and stamp sw.js with a content-hash cache name.
 // Never edit data/index.json by hand. Usage: node scripts/build-index.mjs
-import { shared303, sizeRange, brandName } from '../calc.js';
+import { shared303, sizeRange, brandName, seriesGrade } from '../calc.js';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -22,7 +22,7 @@ for (const f of files) {
   const e = validate(doc, f); if (e.length) { errors.push(...e); continue; }
   const tools = doc.tools.map((t, i) => ({ i, mode: t.mode, brand: brandName(t.brand), series: t.series,
     ...(t.type ? { type: t.type } : {}),
-    ...(t.grade || t.coating ? { grade: String(t.grade ?? t.coating) } : {}),
+    ...(t.grade || t.coating || seriesGrade(t) ? { grade: String(t.grade ?? t.coating ?? seriesGrade(t)) } : {}),
     ...(t.coating ? { coating: true } : {}),
     isos: [...new Set(t.conditions.map(c => c.iso))].sort(),
     dataIsos: [...new Set(t.conditions.filter(c => c.sfm || c.feed || c.printed).map(c => c.iso))].sort(),

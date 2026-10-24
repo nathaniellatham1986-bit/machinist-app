@@ -173,3 +173,7 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
 { const { pitchCovers } = await import('./calc.js');
   assert.equal(pitchCovers({ label: 'P1 … — WMP22G, pitch 1,5–5,0 mm' }, 1 / 13), true); assert.equal(pitchCovers({ label: 'P1 … pitch 0,5–1,25 mm' }, 1 / 13), false); assert.equal(pitchCovers({ label: 'x' }, 1 / 13), null);
   console.log('ME10 #3 pitch range tests pass'); }
+{ const { seriesGrade, geoName } = await import('./calc.js');
+  assert.equal(seriesGrade({ mode: 'turn', series: 'CNMG432-MF4 TM2000' }), 'TM2000'); assert.equal(seriesGrade({ mode: 'turn', series: 'PENTA inserts (p.593)' }), null);
+  assert.equal(geoName({ mode: 'turn', series: 'CNMG432-MF4 TP2501', grade: 'TP2501' }), 'CNMG432-MF4');
+  console.log('ME10 #4 series grade tests pass'); }

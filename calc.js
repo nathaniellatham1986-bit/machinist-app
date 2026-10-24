@@ -99,7 +99,9 @@ export const css = ({ sfm, d0, d1, maxRpm }) => { const r = d => (sfm * 12) / (M
   return { rpm0: at(d0), rpm1: at(d1), clampDia: maxRpm ? (sfm * 12) / (Math.PI * maxRpm) : null }; };
 // Grade/coating split (pure). Order = record order; never our own ranking.
 export const REC = /first.?choice|recommended grade|preferred grade/i;
-export const gradesOf = (t, c) => String(c.grade ?? t.grade ?? t.coating ?? '').split(/,\s*/).map(x => x.trim()).filter(Boolean);
+// Turning inserts named '<ISO insert code> <grade>' (e.g. Seco 'CNMG432-MF4 TM2000') carry the grade only in the series; read it from there.
+export const seriesGrade = t => t.mode === 'turn' && !t.grade && !t.coating ? (String(t.series).match(/^[A-Z]{4}\s?\d{3,6}\S*\s+([A-Z]{1,3}\d{3,4}[A-Z]?)$/) ?? [])[1] ?? null : null;
+export const gradesOf = (t, c) => String(c.grade ?? t.grade ?? t.coating ?? seriesGrade(t) ?? '').split(/,\s*/).map(x => x.trim()).filter(Boolean);
 // members: [{ key, tool }]; ok(c): condition matches material & has data. Returns grades with data first, then no-data ones.
 export const gradeList = (members, ok) => { const opts = new Map();
   for (const { key, tool } of members) for (const c of tool.conditions) for (const g of gradesOf(tool, c)) {
