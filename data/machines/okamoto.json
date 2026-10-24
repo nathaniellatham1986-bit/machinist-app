@@ -1,0 +1,42 @@
+{
+ "schema": 1,
+ "builder": "Okamoto",
+ "models": [
+  {
+   "model": "ACC-63SA1 (SA1 series)",
+   "type": "grinder",
+   "spindles": [
+    {
+     "option": "Wheel spindle std",
+     "rpm": null,
+     "taper": "",
+     "kw_peak": 3.7,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    },
+    {
+     "option": "Wheel spindle opt",
+     "rpm": null,
+     "taper": "",
+     "kw_peak": 7.5,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://okamoto-europe.de/machines/surface-grinding-machines/acc-sa1-series/",
+    "title": "Okamoto Europe ACC SA1 series",
+    "accessed": "2026-10-24"
+   }
+  }
+ ]
+}
