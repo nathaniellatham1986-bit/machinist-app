@@ -22,6 +22,8 @@ for (const f of files) {
   const e = validate(doc, f); if (e.length) { errors.push(...e); continue; }
   const tools = doc.tools.map((t, i) => ({ i, mode: t.mode, brand: t.brand, series: t.series,
     ...(t.type ? { type: t.type } : {}),
+    ...(t.grade || t.coating ? { grade: String(t.grade ?? t.coating) } : {}),
+    ...(t.coating ? { coating: true } : {}),
     isos: [...new Set(t.conditions.map(c => c.iso))].sort(),
     dataIsos: [...new Set(t.conditions.filter(c => c.sfm || c.feed || c.printed).map(c => c.iso))].sort(),
     fullIsos: [...new Set(t.conditions.filter(c => (c.printed || c.sfm && (c.feed || t.mode === 'tap')) && c.status !== 'shop-proven').map(c => c.source.kind === 'catalog' ? c.iso : c.iso + '~'))].sort(),
