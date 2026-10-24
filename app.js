@@ -53,7 +53,7 @@ function applyMachine() { const m = LS.get('machines', [])[$('mach').value]; LS.
 $('mSave').onclick = () => { const n = $('mName').value.trim(); if (!n) return; const m = LS.get('machines', []);
   const r = { name: n, type: $('mType').value, rpm: +$('mRpm').value || null, hp: +$('mHp').value || null, thrIpm: +$('mThr').value || null };
   if (PRE) { r.preset = PRE.ref; r.source = PRE.url; r.user = ['type', 'rpm', 'hp', 'thrIpm'].filter(k => r[k] !== PRE[k]); if (!r.user.length) delete r.user; }
-  m.push(r); LS.set('machines', m); machines(); $('mach').value = m.length - 1; applyMachine(); };
+  m.push(r); LS.set('machines', m); machines(); $('mach').value = m.length - 1; applyMachine(); $('mAdd').open = false; };
 $('mDel').onclick = () => { const m = LS.get('machines', []); if ($('mach').value === '') return; m.splice(+$('mach').value, 1); LS.set('machines', m); $('mach').value = ''; machines(); };
 // Builder presets (data/machines): Builder -> Model -> spindle option, same select pattern as Brand -> Series
 let MIDX = null, MDOC = null, PRE = null; const mTypeOf = t => ['mill', 'lathe', 'mill-turn', 'swiss', 'grinder'].includes(t) ? t : 'mill';
