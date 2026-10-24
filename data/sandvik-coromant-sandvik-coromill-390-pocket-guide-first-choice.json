@@ -1,1 +1,1151 @@
-{"schema":1,"brand":"Sandvik Coromant","tools":[{"mode":"mill","brand":"Sandvik Coromant","series":"CoroMill 390 — insert size 390-07","type":"indexable shoulder mill","conditions":[{"label":"Mild steel 1018 — roughing, first-choice insert 390-07 08M-PM 4340","iso":"P","material":"Mild steel 1018","status":"verified","coolant":null,"operation":"roughing","insert":"390-07 08M-PM","grade":"4340","sfm":{"unit":"ft/min","value":930},"feed":{"kind":"fz","unit":"in","range":{"value":0.003}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-07) for 'Roughing' as printed: insert 08M-PM 4340, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."},"materials":["p-mild"],"sourceGroup":"Mild steel 1018"},{"label":"Stainless steel 316 — roughing, first-choice insert 390-07 08M-PM 4340","iso":"M","material":"Stainless steel 316","status":"verified","coolant":null,"operation":"roughing","insert":"390-07 08M-PM","grade":"4340","sfm":{"unit":"ft/min","value":720},"feed":{"kind":"fz","unit":"in","range":{"value":0.003}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-07) for 'Roughing' as printed: insert 08M-PM 4340, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."},"materials":["ss304"],"sourceGroup":"Stainless steel 316"},{"label":"Cast iron, nodular — roughing, first-choice insert 390-07 08M-KM 3330","iso":"K","material":"Cast iron, nodular","status":"verified","coolant":null,"operation":"roughing","insert":"390-07 08M-KM","grade":"3330","sfm":{"unit":"ft/min","value":880},"feed":{"kind":"fz","unit":"in","range":{"value":0.003}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-07) for 'Roughing' as printed: insert 08M-KM 3330, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Aluminium 6061 — roughing, first-choice insert 390-07 08E-NL H13A","iso":"N","material":"Aluminium 6061","status":"verified","coolant":null,"operation":"roughing","insert":"390-07 08E-NL","grade":"H13A","sfm":{"unit":"ft/min","value":3300},"feed":{"kind":"fz","unit":"in","range":{"value":0.01}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-07) for 'Roughing' as printed: insert 08E-NL H13A, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Titanium 6Al-4V — roughing, first-choice insert 390-07 08M-MM S40T","iso":"S","material":"Titanium 6Al-4V","status":"verified","coolant":null,"operation":"roughing","insert":"390-07 08M-MM","grade":"S40T","sfm":{"unit":"ft/min","value":150},"feed":{"kind":"fz","unit":"in","range":{"value":0.003}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-07) for 'Roughing' as printed: insert 08M-MM S40T, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Hardened steel +48 HRC — roughing, first-choice insert 390-07 M-PM 1130","iso":"H","material":"Hardened steel +48 HRC","status":"verified","coolant":null,"operation":"roughing","insert":"390-07 M-PM","grade":"1130","sfm":{"unit":"ft/min","value":350},"feed":{"kind":"fz","unit":"in","range":{"value":0.003}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-07) for 'Roughing' as printed: insert M-PM 1130, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Mild steel 1018 — medium, first-choice insert 390-07 08M-PM 1130","iso":"P","material":"Mild steel 1018","status":"verified","coolant":null,"operation":"medium","insert":"390-07 08M-PM","grade":"1130","sfm":{"unit":"ft/min","value":930},"feed":{"kind":"fz","unit":"in","range":{"value":0.003}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-07) for 'Medium' as printed: insert 08M-PM 1130, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."},"materials":["p-mild"],"sourceGroup":"Mild steel 1018"},{"label":"Stainless steel 316 — medium, first-choice insert 390-07 08E-MM 1040","iso":"M","material":"Stainless steel 316","status":"verified","coolant":null,"operation":"medium","insert":"390-07 08E-MM","grade":"1040","sfm":{"unit":"ft/min","value":660},"feed":{"kind":"fz","unit":"in","range":{"value":0.003}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-07) for 'Medium' as printed: insert 08E-MM 1040, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."},"materials":["ss304"],"sourceGroup":"Stainless steel 316"},{"label":"Cast iron, nodular — medium, first-choice insert 390-07 08M-KM 1020","iso":"K","material":"Cast iron, nodular","status":"verified","coolant":null,"operation":"medium","insert":"390-07 08M-KM","grade":"1020","sfm":{"unit":"ft/min","value":690},"feed":{"kind":"fz","unit":"in","range":{"value":0.003}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-07) for 'Medium' as printed: insert 08M-KM 1020, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Aluminium 6061 — medium, first-choice insert 390-07 08E-NL H13A","iso":"N","material":"Aluminium 6061","status":"verified","coolant":null,"operation":"medium","insert":"390-07 08E-NL","grade":"H13A","sfm":{"unit":"ft/min","value":3300},"feed":{"kind":"fz","unit":"in","range":{"value":0.004}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-07) for 'Medium' as printed: insert 08E-NL H13A, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Titanium 6Al-4V — medium, first-choice insert 390-07 08M-MM S30T","iso":"S","material":"Titanium 6Al-4V","status":"verified","coolant":null,"operation":"medium","insert":"390-07 08M-MM","grade":"S30T","sfm":{"unit":"ft/min","value":180},"feed":{"kind":"fz","unit":"in","range":{"value":0.003}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-07) for 'Medium' as printed: insert 08M-MM S30T, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Hardened steel +48 HRC — medium, first-choice insert 390-07 M-PM 1130","iso":"H","material":"Hardened steel +48 HRC","status":"verified","coolant":null,"operation":"medium","insert":"390-07 M-PM","grade":"1130","sfm":{"unit":"ft/min","value":350},"feed":{"kind":"fz","unit":"in","range":{"value":0.003}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-07) for 'Medium' as printed: insert M-PM 1130, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Mild steel 1018 — finishing, first-choice insert 390-07 08E-PL 1130","iso":"P","material":"Mild steel 1018","status":"verified","coolant":null,"operation":"finishing","insert":"390-07 08E-PL","grade":"1130","sfm":{"unit":"ft/min","value":940},"feed":{"kind":"fz","unit":"in","range":{"value":0.002}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-07) for 'Finishing' as printed: insert 08E-PL 1130, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."},"materials":["p-mild"],"sourceGroup":"Mild steel 1018"},{"label":"Stainless steel 316 — finishing, first-choice insert 390-07 08E-ML 1040","iso":"M","material":"Stainless steel 316","status":"verified","coolant":null,"operation":"finishing","insert":"390-07 08E-ML","grade":"1040","sfm":{"unit":"ft/min","value":670},"feed":{"kind":"fz","unit":"in","range":{"value":0.002}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-07) for 'Finishing' as printed: insert 08E-ML 1040, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."},"materials":["ss304"],"sourceGroup":"Stainless steel 316"},{"label":"Cast iron, nodular — finishing, first-choice insert 390-07 08E-KL 1020","iso":"K","material":"Cast iron, nodular","status":"verified","coolant":null,"operation":"finishing","insert":"390-07 08E-KL","grade":"1020","sfm":{"unit":"ft/min","value":700},"feed":{"kind":"fz","unit":"in","range":{"value":0.002}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-07) for 'Finishing' as printed: insert 08E-KL 1020, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Aluminium 6061 — finishing, first-choice insert 390-07 08E-NL H13A","iso":"N","material":"Aluminium 6061","status":"verified","coolant":null,"operation":"finishing","insert":"390-07 08E-NL","grade":"H13A","sfm":{"unit":"ft/min","value":3300},"feed":{"kind":"fz","unit":"in","range":{"value":0.004}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-07) for 'Finishing' as printed: insert 08E-NL H13A, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Titanium 6Al-4V — finishing, first-choice insert 390-07 08E-ML S30T","iso":"S","material":"Titanium 6Al-4V","status":"verified","coolant":null,"operation":"finishing","insert":"390-07 08E-ML","grade":"S30T","sfm":{"unit":"ft/min","value":180},"feed":{"kind":"fz","unit":"in","range":{"value":0.002}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-07) for 'Finishing' as printed: insert 08E-ML S30T, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Hardened steel +48 HRC — finishing, first-choice insert 390-07 E-PL 1130","iso":"H","material":"Hardened steel +48 HRC","status":"verified","coolant":null,"operation":"finishing","insert":"390-07 E-PL","grade":"1130","sfm":{"unit":"ft/min","value":350},"feed":{"kind":"fz","unit":"in","range":{"value":0.002}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-07) for 'Finishing' as printed: insert E-PL 1130, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}}]},{"mode":"mill","brand":"Sandvik Coromant","series":"CoroMill 390 — insert size 390-11 & 17","type":"indexable shoulder mill","conditions":[{"label":"Mild steel 1018 — roughing, first-choice insert 390-11 & 17 10M-PH 4340","iso":"P","material":"Mild steel 1018","status":"verified","coolant":null,"operation":"roughing","insert":"390-11 & 17 10M-PH","grade":"4340","sfm":{"unit":"ft/min","value":910},"feed":{"kind":"fz","unit":"in","range":{"value":0.005}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-11 & 17) for 'Roughing' as printed: insert 10M-PH 4340, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."},"materials":["p-mild"],"sourceGroup":"Mild steel 1018"},{"label":"Stainless steel 316 — roughing, first-choice insert 390-11 & 17 10M-PH 4340","iso":"M","material":"Stainless steel 316","status":"verified","coolant":null,"operation":"roughing","insert":"390-11 & 17 10M-PH","grade":"4340","sfm":{"unit":"ft/min","value":720},"feed":{"kind":"fz","unit":"in","range":{"value":0.005}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-11 & 17) for 'Roughing' as printed: insert 10M-PH 4340, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."},"materials":["ss304"],"sourceGroup":"Stainless steel 316"},{"label":"Cast iron, nodular — roughing, first-choice insert 390-11 & 17 10M-KH 3330","iso":"K","material":"Cast iron, nodular","status":"verified","coolant":null,"operation":"roughing","insert":"390-11 & 17 10M-KH","grade":"3330","sfm":{"unit":"ft/min","value":860},"feed":{"kind":"fz","unit":"in","range":{"value":0.005}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-11 & 17) for 'Roughing' as printed: insert 10M-KH 3330, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Aluminium 6061 — roughing, first-choice insert 390-11 & 17 08E-PL 1130","iso":"N","material":"Aluminium 6061","status":"verified","coolant":null,"operation":"roughing","insert":"390-11 & 17 08E-PL","grade":"1130","sfm":{"unit":"ft/min","value":3250},"feed":{"kind":"fz","unit":"in","range":{"value":0.01}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-11 & 17) for 'Roughing' as printed: insert 08E-PL 1130, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Titanium 6Al-4V — roughing, first-choice insert 390-11 & 17 08M-MM S40T","iso":"S","material":"Titanium 6Al-4V","status":"verified","coolant":null,"operation":"roughing","insert":"390-11 & 17 08M-MM","grade":"S40T","sfm":{"unit":"ft/min","value":150},"feed":{"kind":"fz","unit":"in","range":{"value":0.005}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-11 & 17) for 'Roughing' as printed: insert 08M-MM S40T, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Hardened steel +48 HRC — roughing, first-choice insert 390-11 & 17 M-PM 1010","iso":"H","material":"Hardened steel +48 HRC","status":"verified","coolant":null,"operation":"roughing","insert":"390-11 & 17 M-PM","grade":"1010","sfm":{"unit":"ft/min","value":395},"feed":{"kind":"fz","unit":"in","range":{"value":0.005}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-11 & 17) for 'Roughing' as printed: insert M-PM 1010, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Mild steel 1018 — medium, first-choice insert 390-11 & 17 08M-PM 1130","iso":"P","material":"Mild steel 1018","status":"verified","coolant":null,"operation":"medium","insert":"390-11 & 17 08M-PM","grade":"1130","sfm":{"unit":"ft/min","value":910},"feed":{"kind":"fz","unit":"in","range":{"value":0.005}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-11 & 17) for 'Medium' as printed: insert 08M-PM 1130, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."},"materials":["p-mild"],"sourceGroup":"Mild steel 1018"},{"label":"Stainless steel 316 — medium, first-choice insert 390-11 & 17 08E-MM 1040","iso":"M","material":"Stainless steel 316","status":"verified","coolant":null,"operation":"medium","insert":"390-11 & 17 08E-MM","grade":"1040","sfm":{"unit":"ft/min","value":640},"feed":{"kind":"fz","unit":"in","range":{"value":0.005}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-11 & 17) for 'Medium' as printed: insert 08E-MM 1040, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."},"materials":["ss304"],"sourceGroup":"Stainless steel 316"},{"label":"Cast iron, nodular — medium, first-choice insert 390-11 & 17 08M-KM 3330","iso":"K","material":"Cast iron, nodular","status":"verified","coolant":null,"operation":"medium","insert":"390-11 & 17 08M-KM","grade":"3330","sfm":{"unit":"ft/min","value":860},"feed":{"kind":"fz","unit":"in","range":{"value":0.005}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-11 & 17) for 'Medium' as printed: insert 08M-KM 3330, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Aluminium 6061 — medium, first-choice insert 390-11 & 17 08E-NL H13A","iso":"N","material":"Aluminium 6061","status":"verified","coolant":null,"operation":"medium","insert":"390-11 & 17 08E-NL","grade":"H13A","sfm":{"unit":"ft/min","value":3250},"feed":{"kind":"fz","unit":"in","range":{"value":0.006}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-11 & 17) for 'Medium' as printed: insert 08E-NL H13A, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Titanium 6Al-4V — medium, first-choice insert 390-11 & 17 08M-MM S30T","iso":"S","material":"Titanium 6Al-4V","status":"verified","coolant":null,"operation":"medium","insert":"390-11 & 17 08M-MM","grade":"S30T","sfm":{"unit":"ft/min","value":180},"feed":{"kind":"fz","unit":"in","range":{"value":0.005}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-11 & 17) for 'Medium' as printed: insert 08M-MM S30T, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Hardened steel +48 HRC — medium, first-choice insert 390-11 & 17 M-PM 1010","iso":"H","material":"Hardened steel +48 HRC","status":"verified","coolant":null,"operation":"medium","insert":"390-11 & 17 M-PM","grade":"1010","sfm":{"unit":"ft/min","value":395},"feed":{"kind":"fz","unit":"in","range":{"value":0.005}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-11 & 17) for 'Medium' as printed: insert M-PM 1010, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Mild steel 1018 — finishing, first-choice insert 390-11 & 17 08E-PL 1130","iso":"P","material":"Mild steel 1018","status":"verified","coolant":null,"operation":"finishing","insert":"390-11 & 17 08E-PL","grade":"1130","sfm":{"unit":"ft/min","value":920},"feed":{"kind":"fz","unit":"in","range":{"value":0.003}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-11 & 17) for 'Finishing' as printed: insert 08E-PL 1130, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."},"materials":["p-mild"],"sourceGroup":"Mild steel 1018"},{"label":"Stainless steel 316 — finishing, first-choice insert 390-11 & 17 08E-ML 1040","iso":"M","material":"Stainless steel 316","status":"verified","coolant":null,"operation":"finishing","insert":"390-11 & 17 08E-ML","grade":"1040","sfm":{"unit":"ft/min","value":650},"feed":{"kind":"fz","unit":"in","range":{"value":0.003}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-11 & 17) for 'Finishing' as printed: insert 08E-ML 1040, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."},"materials":["ss304"],"sourceGroup":"Stainless steel 316"},{"label":"Cast iron, nodular — finishing, first-choice insert 390-11 & 17 08E-KL 1020","iso":"K","material":"Cast iron, nodular","status":"verified","coolant":null,"operation":"finishing","insert":"390-11 & 17 08E-KL","grade":"1020","sfm":{"unit":"ft/min","value":690},"feed":{"kind":"fz","unit":"in","range":{"value":0.003}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-11 & 17) for 'Finishing' as printed: insert 08E-KL 1020, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Aluminium 6061 — finishing, first-choice insert 390-11 & 17 08E-NL H13A","iso":"N","material":"Aluminium 6061","status":"verified","coolant":null,"operation":"finishing","insert":"390-11 & 17 08E-NL","grade":"H13A","sfm":{"unit":"ft/min","value":3250},"feed":{"kind":"fz","unit":"in","range":{"value":0.006}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-11 & 17) for 'Finishing' as printed: insert 08E-NL H13A, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Titanium 6Al-4V — finishing, first-choice insert 390-11 & 17 08E-ML S30T","iso":"S","material":"Titanium 6Al-4V","status":"verified","coolant":null,"operation":"finishing","insert":"390-11 & 17 08E-ML","grade":"S30T","sfm":{"unit":"ft/min","value":180},"feed":{"kind":"fz","unit":"in","range":{"value":0.003}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-11 & 17) for 'Finishing' as printed: insert 08E-ML S30T, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}},{"label":"Hardened steel +48 HRC — finishing, first-choice insert 390-11 & 17 E-PL 1130","iso":"H","material":"Hardened steel +48 HRC","status":"verified","coolant":null,"operation":"finishing","insert":"390-11 & 17 E-PL","grade":"1130","sfm":{"unit":"ft/min","value":405},"feed":{"kind":"fz","unit":"in","range":{"value":0.003}},"source":{"kind":"catalog","manufacturer":"Sandvik Coromant","catalog":"CoroMill 390 Pocket Guide — First choice insert table","edition":"2019 (PDF created 2019-07-03), distributor-hosted copy","url":"https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf","page":"1","notes":"First choice insert (390-11 & 17) for 'Finishing' as printed: insert E-PL 1130, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."}}]}]}
+{
+ "schema": 1,
+ "brand": "Sandvik Coromant",
+ "tools": [
+  {
+   "mode": "mill",
+   "brand": "Sandvik Coromant",
+   "series": "CoroMill 390 \u2014 insert size 390-07",
+   "type": "indexable shoulder mill",
+   "conditions": [
+    {
+     "label": "Mild steel 1018 \u2014 roughing, first-choice insert 390-07 08M-PM 4340",
+     "iso": "P",
+     "material": "Mild steel 1018",
+     "status": "verified",
+     "coolant": null,
+     "operation": "roughing",
+     "insert": "390-07 08M-PM",
+     "grade": "4340",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 930
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.003
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-07) for 'Roughing' as printed: insert 08M-PM 4340, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Mild steel 1018"
+    },
+    {
+     "label": "Stainless steel 316 \u2014 roughing, first-choice insert 390-07 08M-PM 4340",
+     "iso": "M",
+     "material": "Stainless steel 316",
+     "status": "verified",
+     "coolant": null,
+     "operation": "roughing",
+     "insert": "390-07 08M-PM",
+     "grade": "4340",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 720
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.003
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-07) for 'Roughing' as printed: insert 08M-PM 4340, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "Stainless steel 316"
+    },
+    {
+     "label": "Cast iron, nodular \u2014 roughing, first-choice insert 390-07 08M-KM 3330",
+     "iso": "K",
+     "material": "Cast iron, nodular",
+     "status": "verified",
+     "coolant": null,
+     "operation": "roughing",
+     "insert": "390-07 08M-KM",
+     "grade": "3330",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 880
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.003
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-07) for 'Roughing' as printed: insert 08M-KM 3330, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Aluminium 6061 \u2014 roughing, first-choice insert 390-07 08E-NL H13A",
+     "iso": "N",
+     "material": "Aluminium 6061",
+     "status": "verified",
+     "coolant": null,
+     "operation": "roughing",
+     "insert": "390-07 08E-NL",
+     "grade": "H13A",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 3300
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.01
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-07) for 'Roughing' as printed: insert 08E-NL H13A, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Titanium 6Al-4V \u2014 roughing, first-choice insert 390-07 08M-MM S40T",
+     "iso": "S",
+     "material": "Titanium 6Al-4V",
+     "status": "verified",
+     "coolant": null,
+     "operation": "roughing",
+     "insert": "390-07 08M-MM",
+     "grade": "S40T",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 150
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.003
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-07) for 'Roughing' as printed: insert 08M-MM S40T, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Hardened steel +48 HRC \u2014 roughing, first-choice insert 390-07 M-PM 1130",
+     "iso": "H",
+     "material": "Hardened steel +48 HRC",
+     "status": "verified",
+     "coolant": null,
+     "operation": "roughing",
+     "insert": "390-07 M-PM",
+     "grade": "1130",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 350
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.003
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-07) for 'Roughing' as printed: insert M-PM 1130, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Mild steel 1018 \u2014 medium, first-choice insert 390-07 08M-PM 1130",
+     "iso": "P",
+     "material": "Mild steel 1018",
+     "status": "verified",
+     "coolant": null,
+     "operation": "medium",
+     "insert": "390-07 08M-PM",
+     "grade": "1130",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 930
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.003
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-07) for 'Medium' as printed: insert 08M-PM 1130, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Mild steel 1018"
+    },
+    {
+     "label": "Stainless steel 316 \u2014 medium, first-choice insert 390-07 08E-MM 1040",
+     "iso": "M",
+     "material": "Stainless steel 316",
+     "status": "verified",
+     "coolant": null,
+     "operation": "medium",
+     "insert": "390-07 08E-MM",
+     "grade": "1040",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 660
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.003
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-07) for 'Medium' as printed: insert 08E-MM 1040, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "Stainless steel 316"
+    },
+    {
+     "label": "Cast iron, nodular \u2014 medium, first-choice insert 390-07 08M-KM 1020",
+     "iso": "K",
+     "material": "Cast iron, nodular",
+     "status": "verified",
+     "coolant": null,
+     "operation": "medium",
+     "insert": "390-07 08M-KM",
+     "grade": "1020",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 690
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.003
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-07) for 'Medium' as printed: insert 08M-KM 1020, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Aluminium 6061 \u2014 medium, first-choice insert 390-07 08E-NL H13A",
+     "iso": "N",
+     "material": "Aluminium 6061",
+     "status": "verified",
+     "coolant": null,
+     "operation": "medium",
+     "insert": "390-07 08E-NL",
+     "grade": "H13A",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 3300
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.004
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-07) for 'Medium' as printed: insert 08E-NL H13A, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Titanium 6Al-4V \u2014 medium, first-choice insert 390-07 08M-MM S30T",
+     "iso": "S",
+     "material": "Titanium 6Al-4V",
+     "status": "verified",
+     "coolant": null,
+     "operation": "medium",
+     "insert": "390-07 08M-MM",
+     "grade": "S30T",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 180
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.003
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-07) for 'Medium' as printed: insert 08M-MM S30T, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Hardened steel +48 HRC \u2014 medium, first-choice insert 390-07 M-PM 1130",
+     "iso": "H",
+     "material": "Hardened steel +48 HRC",
+     "status": "verified",
+     "coolant": null,
+     "operation": "medium",
+     "insert": "390-07 M-PM",
+     "grade": "1130",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 350
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.003
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-07) for 'Medium' as printed: insert M-PM 1130, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Mild steel 1018 \u2014 finishing, first-choice insert 390-07 08E-PL 1130",
+     "iso": "P",
+     "material": "Mild steel 1018",
+     "status": "verified",
+     "coolant": null,
+     "operation": "finishing",
+     "insert": "390-07 08E-PL",
+     "grade": "1130",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 940
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.002
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-07) for 'Finishing' as printed: insert 08E-PL 1130, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Mild steel 1018"
+    },
+    {
+     "label": "Stainless steel 316 \u2014 finishing, first-choice insert 390-07 08E-ML 1040",
+     "iso": "M",
+     "material": "Stainless steel 316",
+     "status": "verified",
+     "coolant": null,
+     "operation": "finishing",
+     "insert": "390-07 08E-ML",
+     "grade": "1040",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 670
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.002
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-07) for 'Finishing' as printed: insert 08E-ML 1040, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "Stainless steel 316"
+    },
+    {
+     "label": "Cast iron, nodular \u2014 finishing, first-choice insert 390-07 08E-KL 1020",
+     "iso": "K",
+     "material": "Cast iron, nodular",
+     "status": "verified",
+     "coolant": null,
+     "operation": "finishing",
+     "insert": "390-07 08E-KL",
+     "grade": "1020",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 700
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.002
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-07) for 'Finishing' as printed: insert 08E-KL 1020, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Aluminium 6061 \u2014 finishing, first-choice insert 390-07 08E-NL H13A",
+     "iso": "N",
+     "material": "Aluminium 6061",
+     "status": "verified",
+     "coolant": null,
+     "operation": "finishing",
+     "insert": "390-07 08E-NL",
+     "grade": "H13A",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 3300
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.004
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-07) for 'Finishing' as printed: insert 08E-NL H13A, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Titanium 6Al-4V \u2014 finishing, first-choice insert 390-07 08E-ML S30T",
+     "iso": "S",
+     "material": "Titanium 6Al-4V",
+     "status": "verified",
+     "coolant": null,
+     "operation": "finishing",
+     "insert": "390-07 08E-ML",
+     "grade": "S30T",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 180
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.002
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-07) for 'Finishing' as printed: insert 08E-ML S30T, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Hardened steel +48 HRC \u2014 finishing, first-choice insert 390-07 E-PL 1130",
+     "iso": "H",
+     "material": "Hardened steel +48 HRC",
+     "status": "verified",
+     "coolant": null,
+     "operation": "finishing",
+     "insert": "390-07 E-PL",
+     "grade": "1130",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 350
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.002
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-07) for 'Finishing' as printed: insert E-PL 1130, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Sandvik Coromant",
+   "series": "CoroMill 390 \u2014 insert size 390-11 & 17",
+   "type": "indexable shoulder mill",
+   "conditions": [
+    {
+     "label": "Mild steel 1018 \u2014 roughing, first-choice insert 390-11 & 17 10M-PH 4340",
+     "iso": "P",
+     "material": "Mild steel 1018",
+     "status": "verified",
+     "coolant": null,
+     "operation": "roughing",
+     "insert": "390-11 & 17 10M-PH",
+     "grade": "4340",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 910
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.005
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-11 & 17) for 'Roughing' as printed: insert 10M-PH 4340, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Mild steel 1018"
+    },
+    {
+     "label": "Stainless steel 316 \u2014 roughing, first-choice insert 390-11 & 17 10M-PH 4340",
+     "iso": "M",
+     "material": "Stainless steel 316",
+     "status": "verified",
+     "coolant": null,
+     "operation": "roughing",
+     "insert": "390-11 & 17 10M-PH",
+     "grade": "4340",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 720
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.005
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-11 & 17) for 'Roughing' as printed: insert 10M-PH 4340, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "Stainless steel 316"
+    },
+    {
+     "label": "Cast iron, nodular \u2014 roughing, first-choice insert 390-11 & 17 10M-KH 3330",
+     "iso": "K",
+     "material": "Cast iron, nodular",
+     "status": "verified",
+     "coolant": null,
+     "operation": "roughing",
+     "insert": "390-11 & 17 10M-KH",
+     "grade": "3330",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 860
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.005
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-11 & 17) for 'Roughing' as printed: insert 10M-KH 3330, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Aluminium 6061 \u2014 roughing, first-choice insert 390-11 & 17 08E-PL 1130",
+     "iso": "N",
+     "material": "Aluminium 6061",
+     "status": "verified",
+     "coolant": null,
+     "operation": "roughing",
+     "insert": "390-11 & 17 08E-PL",
+     "grade": "1130",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 3250
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.01
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-11 & 17) for 'Roughing' as printed: insert 08E-PL 1130, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     },
+     "note": "MISPRINT? Printed as 08E-PL 1130 (a steel P-geometry/grade) in the N aluminium roughing cell; likely misprint \u2014 the 390-07 row lists 08E-NL H13A for this cell. Shown exactly as printed; check with Sandvik before relying on the insert choice."
+    },
+    {
+     "label": "Titanium 6Al-4V \u2014 roughing, first-choice insert 390-11 & 17 08M-MM S40T",
+     "iso": "S",
+     "material": "Titanium 6Al-4V",
+     "status": "verified",
+     "coolant": null,
+     "operation": "roughing",
+     "insert": "390-11 & 17 08M-MM",
+     "grade": "S40T",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 150
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.005
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-11 & 17) for 'Roughing' as printed: insert 08M-MM S40T, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Hardened steel +48 HRC \u2014 roughing, first-choice insert 390-11 & 17 M-PM 1010",
+     "iso": "H",
+     "material": "Hardened steel +48 HRC",
+     "status": "verified",
+     "coolant": null,
+     "operation": "roughing",
+     "insert": "390-11 & 17 M-PM",
+     "grade": "1010",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 395
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.005
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-11 & 17) for 'Roughing' as printed: insert M-PM 1010, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Mild steel 1018 \u2014 medium, first-choice insert 390-11 & 17 08M-PM 1130",
+     "iso": "P",
+     "material": "Mild steel 1018",
+     "status": "verified",
+     "coolant": null,
+     "operation": "medium",
+     "insert": "390-11 & 17 08M-PM",
+     "grade": "1130",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 910
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.005
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-11 & 17) for 'Medium' as printed: insert 08M-PM 1130, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Mild steel 1018"
+    },
+    {
+     "label": "Stainless steel 316 \u2014 medium, first-choice insert 390-11 & 17 08E-MM 1040",
+     "iso": "M",
+     "material": "Stainless steel 316",
+     "status": "verified",
+     "coolant": null,
+     "operation": "medium",
+     "insert": "390-11 & 17 08E-MM",
+     "grade": "1040",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 640
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.005
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-11 & 17) for 'Medium' as printed: insert 08E-MM 1040, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "Stainless steel 316"
+    },
+    {
+     "label": "Cast iron, nodular \u2014 medium, first-choice insert 390-11 & 17 08M-KM 3330",
+     "iso": "K",
+     "material": "Cast iron, nodular",
+     "status": "verified",
+     "coolant": null,
+     "operation": "medium",
+     "insert": "390-11 & 17 08M-KM",
+     "grade": "3330",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 860
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.005
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-11 & 17) for 'Medium' as printed: insert 08M-KM 3330, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Aluminium 6061 \u2014 medium, first-choice insert 390-11 & 17 08E-NL H13A",
+     "iso": "N",
+     "material": "Aluminium 6061",
+     "status": "verified",
+     "coolant": null,
+     "operation": "medium",
+     "insert": "390-11 & 17 08E-NL",
+     "grade": "H13A",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 3250
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.006
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-11 & 17) for 'Medium' as printed: insert 08E-NL H13A, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Titanium 6Al-4V \u2014 medium, first-choice insert 390-11 & 17 08M-MM S30T",
+     "iso": "S",
+     "material": "Titanium 6Al-4V",
+     "status": "verified",
+     "coolant": null,
+     "operation": "medium",
+     "insert": "390-11 & 17 08M-MM",
+     "grade": "S30T",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 180
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.005
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-11 & 17) for 'Medium' as printed: insert 08M-MM S30T, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Hardened steel +48 HRC \u2014 medium, first-choice insert 390-11 & 17 M-PM 1010",
+     "iso": "H",
+     "material": "Hardened steel +48 HRC",
+     "status": "verified",
+     "coolant": null,
+     "operation": "medium",
+     "insert": "390-11 & 17 M-PM",
+     "grade": "1010",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 395
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.005
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-11 & 17) for 'Medium' as printed: insert M-PM 1010, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Mild steel 1018 \u2014 finishing, first-choice insert 390-11 & 17 08E-PL 1130",
+     "iso": "P",
+     "material": "Mild steel 1018",
+     "status": "verified",
+     "coolant": null,
+     "operation": "finishing",
+     "insert": "390-11 & 17 08E-PL",
+     "grade": "1130",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 920
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.003
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-11 & 17) for 'Finishing' as printed: insert 08E-PL 1130, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Mild steel 1018"
+    },
+    {
+     "label": "Stainless steel 316 \u2014 finishing, first-choice insert 390-11 & 17 08E-ML 1040",
+     "iso": "M",
+     "material": "Stainless steel 316",
+     "status": "verified",
+     "coolant": null,
+     "operation": "finishing",
+     "insert": "390-11 & 17 08E-ML",
+     "grade": "1040",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 650
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.003
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-11 & 17) for 'Finishing' as printed: insert 08E-ML 1040, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "Stainless steel 316"
+    },
+    {
+     "label": "Cast iron, nodular \u2014 finishing, first-choice insert 390-11 & 17 08E-KL 1020",
+     "iso": "K",
+     "material": "Cast iron, nodular",
+     "status": "verified",
+     "coolant": null,
+     "operation": "finishing",
+     "insert": "390-11 & 17 08E-KL",
+     "grade": "1020",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 690
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.003
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-11 & 17) for 'Finishing' as printed: insert 08E-KL 1020, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Aluminium 6061 \u2014 finishing, first-choice insert 390-11 & 17 08E-NL H13A",
+     "iso": "N",
+     "material": "Aluminium 6061",
+     "status": "verified",
+     "coolant": null,
+     "operation": "finishing",
+     "insert": "390-11 & 17 08E-NL",
+     "grade": "H13A",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 3250
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.006
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-11 & 17) for 'Finishing' as printed: insert 08E-NL H13A, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Titanium 6Al-4V \u2014 finishing, first-choice insert 390-11 & 17 08E-ML S30T",
+     "iso": "S",
+     "material": "Titanium 6Al-4V",
+     "status": "verified",
+     "coolant": null,
+     "operation": "finishing",
+     "insert": "390-11 & 17 08E-ML",
+     "grade": "S30T",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 180
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.003
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-11 & 17) for 'Finishing' as printed: insert 08E-ML S30T, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    },
+    {
+     "label": "Hardened steel +48 HRC \u2014 finishing, first-choice insert 390-11 & 17 E-PL 1130",
+     "iso": "H",
+     "material": "Hardened steel +48 HRC",
+     "status": "verified",
+     "coolant": null,
+     "operation": "finishing",
+     "insert": "390-11 & 17 E-PL",
+     "grade": "1130",
+     "sfm": {
+      "unit": "ft/min",
+      "value": 405
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "range": {
+       "value": 0.003
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Sandvik Coromant",
+      "catalog": "CoroMill 390 Pocket Guide \u2014 First choice insert table",
+      "edition": "2019 (PDF created 2019-07-03), distributor-hosted copy",
+      "url": "https://ecomm-api.vallen.com/content/wp-content/uploads/2019/08/CoroMill-390-Pocket-Guide.pdf",
+      "page": "1",
+      "notes": "First choice insert (390-11 & 17) for 'Finishing' as printed: insert E-PL 1130, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
+     }
+    }
+   ]
+  }
+ ]
+}

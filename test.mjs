@@ -69,3 +69,12 @@ const pe = TJ.find(x => x.series.startsWith('PENTA')).conditions[0]; assert.deep
 { const { shared303 } = await import('./calc.js');
   assert.equal(shared303({ materials: ['ss303', 'ss304'], sourceGroup: 'M 2.1 303/304/316/316L/321' }), true);
   assert.equal(shared303({ materials: ['ss303'], sourceGroup: 'Free-machining stainless 303' }), false); }
+// Per-type diameter limits: legit large tools pass, lost-decimal keys fail.
+{ const { diaProblem } = await import('./scripts/validate.mjs');
+  assert.equal(diaProblem(4, 'in', { mode: 'mill', type: 'Slitting Saws', diameters_in: [1, 4] }), null);
+  assert.equal(diaProblem(66, 'mm', { mode: 'drill', type: 'indexable drill', diameters_mm: [57, 66] }), null);
+  assert.equal(diaProblem(5.5, 'in', { mode: 'drill', type: 'spade drill' }), null);
+  assert.equal(diaProblem(10, 'in', { mode: 'mill', type: 'face mill' }), null);
+  assert.ok(diaProblem(1030, 'in', { mode: 'mill', type: 'end mill' }));
+  assert.ok(diaProblem(1181, 'in', { mode: 'drill', type: 'drill' }));
+  assert.ok(diaProblem(2.5, 'in', { mode: 'mill', type: 'end mill', diameters_in: [0.03, 0.5] })); }

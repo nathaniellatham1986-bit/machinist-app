@@ -49,7 +49,19 @@ function source(s, c, where, err) {
   if (/generic|handbook/i.test(s.manufacturer)) err(where, 'source.manufacturer must be a tool manufacturer (no generic/handbook data)');
 }
 
-function feed(f, where, err) {
+// Per-tool-type diameter sanity (inches). Face/shell mills, boring heads and spade drills are legitimately large.
+const CAP_IN = { mill: 14, drill: 7, bore: 14, tap: 4, thread: 14, turn: 14 };
+const SOLID = t => /solid|end ?mill|micro|miniature|carbide drill/i.test(t?.type ?? '') && !/indexable|insert|face|shell|head|spade|modular/i.test((t?.type ?? '') + ' ' + (t?.series ?? ''));
+export function diaProblem(d, unit, t) {
+  const inch = unit === 'mm' ? d / 25.4 : d, cap = SOLID(t) ? 2.05 : CAP_IN[t?.mode] ?? 14;
+  if (inch > cap) return `is ${inch.toFixed(2)} in, over the ${cap} in limit for ${SOLID(t) ? 'solid tools' : (t?.mode ?? 'this') + ' tools'}`;
+  // Outlier vs the tool's own published size list (either unit), with 2x slack.
+  const sizes = [...(t?.diameters_in ?? []), ...(t?.diameters_mm ?? []).map(x => x / 25.4)].filter(x => typeof x === 'number' && x > 0);
+  if (sizes.length && (inch > Math.max(...sizes) * 2 || inch < Math.min(...sizes) / 2))
+    return `(${inch.toFixed(3)} in) is outside the tool's published range ${Math.min(...sizes).toFixed(3)}-${Math.max(...sizes).toFixed(3)} in`;
+  return null;
+}
+function feed(f, where, err, tool) {
   if (f === null) return;
   if (!f || typeof f !== 'object') return err(where, 'feed must be an object or null');
   if (!FEED_KINDS.includes(f.kind)) err(where, `feed.kind must be one of ${FEED_KINDS.join('|')}`);
@@ -67,7 +79,7 @@ function feed(f, where, err) {
   if (f.byDiameter) {
     const e = Object.entries(f.byDiameter); if (!e.length) err(where, 'feed.byDiameter is empty');
     for (const [d, v] of e) { if (!isNum(+d) || +d === 0) err(`${where}.byDiameter`, `key "${d}" must be a diameter number`);
-      else if (Math.abs(+d) > (f.unit === 'mm' ? 80 : 3)) err(`${where}.byDiameter`, `key "${d}" is over ${f.unit === 'mm' ? '80 mm' : '3 in'}: likely a lost decimal point`);
+      else { const why = diaProblem(+d, f.unit, tool); if (why) err(`${where}.byDiameter`, `key "${d}" ${why}: likely a lost decimal point`); }
       if (typeof v === 'number') { if (!isNum(v)) err(`${where}.byDiameter.${d}`, 'must be a non-negative number'); } else range(v, `${where}.byDiameter.${d}`, err); }
   }
 }
@@ -108,7 +120,7 @@ export function validate(doc, name = 'file') {
       else if (c.coolant !== null && !isStr(c.coolant)) err(w, 'coolant must be a string or null');
       if (!('sfm' in c)) err(w, 'sfm is required (speed object, or null when the source gives none)');
       else if (c.sfm !== null) { range(c.sfm, w + '.sfm', err); if (!SPEED_UNITS.includes(c.sfm?.unit)) err(w + '.sfm', `unit must be one of ${SPEED_UNITS.join('|')}`); }
-      if ('feed' in c) feed(c.feed, w + '.feed', err);
+      if ('feed' in c) feed(c.feed, w + '.feed', err, t);
       if (c.sfm === null && c.feed == null && !c.ap && !c.coolant) err(w, 'condition carries no data (no speed, feed, depth or coolant)');
       if (c.feed?.kind === 'fz' && t.mode !== 'mill') err(w, 'feed.kind "fz" is for mill tools');
       if (c.feed?.kind === 'ipr' && t.mode === 'mill') err(w, 'mill tools use feed.kind "fz"');
@@ -131,7 +143,7 @@ export function validate(doc, name = 'file') {
       source(c.source, c, w + '.source', err);
       if ('altSources' in c) { if (!Array.isArray(c.altSources) || !c.altSources.length) err(w, 'altSources must be a non-empty array');
         else c.altSources.forEach((a, j) => { const aw = `${w}.altSources[${j}]`; source(a?.source, c, aw + '.source', err);
-          if (a?.sfm) range(a.sfm, aw + '.sfm', err); if (a?.feed) feed(a.feed, aw + '.feed', err);
+          if (a?.sfm) range(a.sfm, aw + '.sfm', err); if (a?.feed) feed(a.feed, aw + '.feed', err, t);
           for (const k of Object.keys(a || {})) if (!['source', 'label', 'sfm', 'feed'].includes(k)) err(aw, `unknown altSources key "${k}"`); }); }
     });
   });
