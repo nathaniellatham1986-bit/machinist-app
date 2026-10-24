@@ -41,9 +41,9 @@ export function pick(spec, k = 1) {
 // Classify a source's stated coolant text. Through-tool only when the source says through/internal coolant. Never converted between modes.
 export const COOL_NAMES = { flood: 'Flood', through: 'Through-tool', air: 'Air blast', dry: 'Dry' };
 export function coolModes(s) { if (!s) return []; const m = [];
-  if (/through|internal|\bTSC\b|\bIK\b|coolant[- ]fed|high[- ]pressure coolant/i.test(s)) m.push('through');
+  if (/through|internal|\bTSC\b|\bIK\b|coolant[- ]fed|high[- ]pressure coolant|axial concentric entry/i.test(s)) m.push('through'); // 'axial concentric entry' = Sandvik CNSC coolant entry through the tool
   // Internal/through delivery is not flood, even with emulsion fluid; only an explicit flood/external statement adds flood then.
-  if (/flood|external/i.test(s) || !/internal|through/i.test(s) && /cutting fluid|emulsion|wet|soluble|\boil\b|coolant/i.test(s)) m.push('flood');
+  if (/flood|external/i.test(s) || !/internal|through|axial concentric entry/i.test(s) && /cutting fluid|emulsion|wet|soluble|\boil\b|coolant/i.test(s)) m.push('flood');
   if (/\bair\b|mist|MQL/i.test(s)) m.push('air'); if (/\bdry\b/i.test(s)) m.push('dry'); return [...new Set(m)]; }
 
 // A source row printed as e.g. "303/304/316/316L/321" names 303 together with other austenitic grades: shown as printed, ranked after 303-specific data.
