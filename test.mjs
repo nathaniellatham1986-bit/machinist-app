@@ -135,3 +135,7 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   assert.equal(matPref('p-alloy', { label: 'non-alloy steel and cast steel, free cutting steel' }), 2);
   assert.equal(matPref('4340-ht', { label: 'Unalloyed steel: C = 0.1–0.25%' }), 2);
   console.log('ME1 alloy pref tests pass'); }
+{ const { matPref } = await import('./calc.js');
+  assert.equal(matPref('ss304', { label: 'Austenitic stainless — CMC 05.21 / MC M1.0.0.AN' }), 0);
+  assert.equal(matPref('ss304', { label: 'Ferritic/martensitic stainless — CMC 05.11' }), 2);
+  console.log('ME2 austenitic pref tests pass'); }
