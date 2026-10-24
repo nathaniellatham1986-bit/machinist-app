@@ -6,6 +6,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { validate } from './validate.mjs';
 import { convert } from './convert-flat.mjs';
+import { linkMaterials } from './link-materials.mjs';
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const [inc, brand] = process.argv.slice(2);
@@ -16,7 +17,7 @@ for (const f of fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort()) {
   let errs = [], doc;
   try { doc = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
     if (Array.isArray(doc.records)) { const c = convert(doc); errs = c.errors; doc = c.doc; }
-    if (!errs.length) errs = validate(doc, f);
+    if (!errs.length) { linkMaterials(doc); errs = validate(doc, f); }
   } catch (e) { errs = [`${f}: ${e.message}`]; }
   if (errs.length) { const d = mv(f, '_rejected'); fs.writeFileSync(path.join(d, f + '.reason.txt'), errs.join('\n') + '\n'); res.rejected.push({ file: f, errors: errs.length, first: errs[0] }); continue; }
   const b = slug(doc.brand), stem = slug(f.replace(/\.json$/, '')), out = stem.startsWith(b) ? `${stem}.json` : `${b}-${stem}.json`;
