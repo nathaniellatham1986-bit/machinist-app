@@ -249,3 +249,13 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   console.log('machine preset tests pass'); }
 { const { filterOpts } = await import('./combo.js'); const L = ['All brands', 'Allied', 'Sandvik Coromant', 'Guhring', '\u00a0\u00a0Steel 4140 · ISO P'];
   assert.deepEqual(filterOpts(L, ''), [0, 1, 2, 3, 4]); assert.deepEqual(filterOpts(L, 'al'), [0, 1]); assert.deepEqual(filterOpts(L, 'coro sand'), [2]); assert.deepEqual(filterOpts(L, '4140'), [4]); assert.deepEqual(filterOpts(L, 'zz'), []); }
+// machine profiles: Use never duplicates
+{ const { upsertMachine: up, dedupeMachines: dd } = await import('./recall.js');
+  const vf2 = { name: 'Haas VF-2', type: 'mill', rpm: 8100, hp: 30, thrIpm: null, preset: 'haas/vf-2/std' };
+  let a = up([], vf2); assert.equal(a.action, 'added'); a = up(a.list, { ...vf2 }); assert.equal(a.action, 'existing'); assert.equal(a.list.length, 1);
+  a = up(a.list, { ...vf2, rpm: 7000, user: ['rpm'] }); assert.equal(a.action, 'updated'); assert.equal(a.list.length, 1); assert.equal(a.list[0].rpm, 7000);
+  a = up(a.list, { ...vf2, preset: 'haas/vf-2/12k', rpm: 12000 }); assert.equal(a.list.length, 2);
+  const cu = { name: 'Shop mill', type: 'mill', rpm: 6000, hp: 10, thrIpm: null };
+  a = up(a.list, cu); a = up(a.list, { ...cu, name: ' shop mill ' }); assert.equal(a.list.length, 3); assert.equal(a.action, 'existing');
+  const d = dd([vf2, cu, { ...vf2 }, { ...vf2, rpm: 7000 }, { ...cu }]); assert.equal(d.list.length, 3); assert.deepEqual(d.map, [0, 1, 0, 2, 1]);
+  assert.equal(dd([vf2, cu]).changed, false); }

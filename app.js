@@ -1,4 +1,4 @@
-import { MODES, migrate, forMode } from './recall.js';
+import { MODES, migrate, forMode, upsertMachine, dedupeMachines } from './recall.js';
 import { enhance } from './combo.js';
 import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, drillTier, rowDia, rowExcludes, toolLifeOf } from './calc.js';
 const $ = id => document.getElementById(id);
@@ -46,6 +46,8 @@ function feedAt(f, dIn) {
 }
 const fmt = rangeText;
 // Machines
+{ const d = dedupeMachines(LS.get('machines', [])); if (d.changed) { LS.set('machines', d.list);
+  for (const md of MODES) { const v = LS.get('lastMachine:' + md, ''); if (v !== '' && d.map[+v] != null) LS.set('lastMachine:' + md, String(d.map[+v])); } } }
 function machines() { const m = LS.get('machines', []); const sel = $('mach'); let cur = LS.get('lastMachine:' + mode, '');
   sel.length = 1; m.forEach((x, i) => x.type !== 'grinder' && (mode === 'bore' || x.type === 'mill-turn' || (['lathe', 'swiss'].includes(x.type)) === (mode === 'turn')) && sel.add(new Option(`${x.name} (${x.type}, ${x.rpm || '?'} RPM, ${x.hp || '?'} HP${x.user ? ', YOUR VALUES' : x.preset ? ', builder spec' : ''})`, i))); if (![...sel.options].some(o => o.value !== '' && o.value === String(cur))) cur = sel.length === 2 ? sel.options[1].value : ''; sel.value = cur; if (sel.value === '') { $('maxRpm').value = ''; $('maxHp').value = ''; } else { $('maxRpm').value = m[sel.value].rpm || ''; $('maxHp').value = m[sel.value].hp || ''; } return m; }
 function applyMachine() { const m = LS.get('machines', [])[$('mach').value]; LS.set('lastMachine:' + mode, $('mach').value);
@@ -53,7 +55,7 @@ function applyMachine() { const m = LS.get('machines', [])[$('mach').value]; LS.
 $('mSave').onclick = () => { const n = $('mName').value.trim(); if (!n) return; const m = LS.get('machines', []);
   const r = { name: n, type: $('mType').value, rpm: +$('mRpm').value || null, hp: +$('mHp').value || null, thrIpm: +$('mThr').value || null };
   if (PRE) { r.preset = PRE.ref; r.source = PRE.url; r.user = ['type', 'rpm', 'hp', 'thrIpm'].filter(k => r[k] !== PRE[k]); if (!r.user.length) delete r.user; }
-  m.push(r); LS.set('machines', m); machines(); $('mach').value = m.length - 1; applyMachine(); $('mAdd').open = false; };
+  const u = upsertMachine(m, r); LS.set('machines', u.list); machines(); $('mach').value = u.index; applyMachine(); $('mAdd').open = false; };
 $('mDel').onclick = () => { const m = LS.get('machines', []); if ($('mach').value === '') return; m.splice(+$('mach').value, 1); LS.set('machines', m); $('mach').value = ''; machines(); };
 // Builder presets (data/machines): Builder -> Model -> spindle option, same select pattern as Brand -> Series
 let MIDX = null, MDOC = null, PRE = null; const mTypeOf = t => ['mill', 'lathe', 'mill-turn', 'swiss', 'grinder'].includes(t) ? t : 'mill';
