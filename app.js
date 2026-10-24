@@ -1,7 +1,9 @@
 import { MODES, migrate, forMode } from './recall.js';
+import { enhance } from './combo.js';
 import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, drillTier, rowDia, rowExcludes, toolLifeOf } from './calc.js';
 const $ = id => document.getElementById(id);
 const J = u => fetch(u).then(r => r.json());
+['matPick', 'brand', 'kind', 'tool', 'grade', 'cond', 'thr', 'mach', 'dPick', 'recall', 'pB', 'pM', 'pS'].forEach(k => enhance($(k)));
 const idx = await J('data/index.json');
 const MM = 25.4, toIn = (v, u) => (u === 'mm' ? v / MM : v);
 const spdK = u => (u === 'm/min' ? 3.2808 : 1);

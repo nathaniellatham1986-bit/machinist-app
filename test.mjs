@@ -247,3 +247,5 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   const qt = J('./data/machines/mazak.json').models.find(m => m.model === 'QUICK TURN 350MY'); assert.equal(qt.spindles[0].rpm, 3300);
   assert.ok(validateMachines({ schema: 1, builder: 'X', models: [{ model: 'M', type: 'mill', spindles: [{ option: 'o', rpm: null }], source: { url: 'https://x', accessed: '2026-01-01' } }] }).length);
   console.log('machine preset tests pass'); }
+{ const { filterOpts } = await import('./combo.js'); const L = ['All brands', 'Allied', 'Sandvik Coromant', 'Guhring', '\u00a0\u00a0Steel 4140 · ISO P'];
+  assert.deepEqual(filterOpts(L, ''), [0, 1, 2, 3, 4]); assert.deepEqual(filterOpts(L, 'al'), [0, 1]); assert.deepEqual(filterOpts(L, 'coro sand'), [2]); assert.deepEqual(filterOpts(L, '4140'), [4]); assert.deepEqual(filterOpts(L, 'zz'), []); }
