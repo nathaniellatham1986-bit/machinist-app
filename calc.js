@@ -171,8 +171,8 @@ export const distinctName = (name, t, dup) => { if (!dup) return name; const pg 
 export const lowEnd = r => r && /^MIDPOINT/.test(r.basis ?? '') && r.min != null ? { ...r, def: r.min, basis: 'LOW END of manufacturer range (no stated start)' } : r;
 // Drill ranking: stated coolant matches the selected one first, unstated next, other coolant after; specials (flat bottom, spade, counterbore) after standard twist drills.
 export const GUN = /gun.?drill|SUMOGUN/i, isGun = t => t.mode === 'drill' && GUN.test(`${t.series} ${t.type ?? ''}`);
-export const DRILL_SPECIAL = /gun.?drill|SUMOGUN|flat.?bottom|\bFBD|spade|counterbor|chamfer|step drill/i;
-export const drillRank = (t, cool) => (!t.cl?.length ? .1 : t.cl.includes(cool) ? 0 : cool === 'flood' && t.cl.includes('through') ? .3 : .2) /* through-only drill under Flood ranks behind flood-OK and no-coolant-stated drills */ + (DRILL_SPECIAL.test(`${t.series} ${t.type ?? ''}`) ? .4 : 0);
+export const DRILL_SPECIAL = /\bT-A\b|gun.?drill|SUMOGUN|flat.?bottom|\bFBD|spade|counterbor|chamfer|step drill/i;
+export const drillRank = (t, cool) => (!t.cl?.length ? .1 : t.cl.includes(cool) ? 0 : cool === 'flood' && t.cl.includes('through') ? .3 : .2) /* through-only drill under Flood ranks behind flood-OK and no-coolant-stated drills */ + (DRILL_SPECIAL.test(`${t.series} ${t.type ?? ''}`) ? 3 : 0) /* specials tier: behind every twist drill in the same data-at-size tier (tiers are 20 apart) */;
 // Range text: when the app filled the start (low end / midpoint), print 'min–max · using …' instead of a fake 'min – start – max'.
 export const rangeText = (p, dp) => !p ? '' : p.min == null ? p.def.toFixed(dp) : p.max == null ? `min ${p.min.toFixed(dp)} (mfr gives minimum only)` : /^LOW END/.test(p.basis ?? '') ? `${p.min.toFixed(dp)}–${p.max.toFixed(dp)} · using low end` : /^MIDPOINT/.test(p.basis ?? '') ? `${p.min.toFixed(dp)}–${p.max.toFixed(dp)} · using midpoint` : `${p.min.toFixed(dp)} – ${p.def.toFixed(dp)} – ${p.max.toFixed(dp)}`;
 // Drill: diameter spans (inches) where a record prints SFM + feed, per ISO group: [[iso, lo, hi], ...]. Range/formula feeds cover the tool's stated size range.
