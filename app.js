@@ -176,7 +176,7 @@ function fill() {
   const d = inV('d'), cool = $('cool').value; LS.set('lastCoolant', cool);
   const shop = c?.status === 'shop-proven';
   let sp = c && pick(c.sfm, spdK(c.sfm?.unit)), fd = mode === 'tap' ? null : c && (feedAt(c.feed, d) ?? (c.feed == null && c.fzPerD ? fzFromPerD(c.fzPerD, d) : null));
-  if (PG()) { sp = lowEnd(sp); fd = lowEnd(fd); }
+  sp = lowEnd(sp); fd = lowEnd(fd); // every mode: range-only records start at the LOW end (labeled)
   OUTROW = mode === 'drill' && c && rowExcludes(c, d); if (OUTROW) { sp = null; fd = null; } // never borrow an out-of-size printed row
   if (shop) { if (sp) sp.basis = 'SHOP-PROVEN value, not manufacturer'; if (fd) fd.basis = 'SHOP-PROVEN value, not manufacturer'; }
   SP = sp; FD = fd; defs = { sfm: sp?.def ?? null, fpt: mode === 'tap' ? inV('fpt') : fd?.def ?? null };

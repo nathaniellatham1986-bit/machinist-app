@@ -129,7 +129,7 @@ export const geoName = t => { if (isMFDrill(t)) return 'XCMT-MF (multi-function 
   return [ty ? ty.replace(/grade$/i, 'grades') : 'Grades', q].filter(Boolean).join(' · ').slice(0, 70); };
 // Printed feed-per-tooth as a multiple of tool diameter (fzPerD). fz = multiplier × D, in the record's (= D's) length unit.
 export const fzFromPerD = (p, d) => { const m = pick(p, 1); if (!m || !(d > 0)) return null; const f = x => +x.toPrecision(3);
-  const r = pick(p, d); r.basis = `MFR FORMULA (${f(m.def)}×D)` + (p.start == null && p.value == null ? `, MIDPOINT of printed ${f(m.min)}–${f(m.max)}×D` : '') + (m.min != null && p.start != null ? ` · printed ${f(m.min)}–${f(m.max)}×D` : ''); r.formula = true; return r; };
+  const lo = p.start == null && p.value == null && m.min != null, r = pick(p, d); if (lo) r.def = r.min; r.basis = `MFR FORMULA (${f(lo ? m.min : m.def)}×D)` + (lo ? `, LOW END of printed ${f(m.min)}–${f(m.max)}×D` : '') + (m.min != null && p.start != null ? ` · printed ${f(m.min)}–${f(m.max)}×D` : ''); r.formula = true; return r; };
 // Row preference for a picked material (default selection only; printed text only, no judgment of values).
 // 0 = row text names the material class, 1 = neutral, 2 = row text names a different class.
 const ALLOY_IDS = /^(p-alloy|4140|4340)/, ALLOY = /alloy|\b4[13]\d\d\b|CrMo|CrNiMo|\bSCM|\bSNCM/i, NONALLOY = /non.?alloy|unalloy|free.?(machin|cut)|\bmild\b|carbon steel|structural/i;
@@ -166,7 +166,7 @@ export const pitchCovers = (c, pIn) => { const r = pitchRangeOf(c); if (!r || !(
 export const distinctName = (name, t, dup) => { if (!dup) return name; const pg = (String(t.series).match(/\((p\.\s*\d+)\)/) ?? [])[1];
   const ins = t.ins ? `${String(t.ins[0]).replace(/^\S+\s+(?=\S)/, m => String(t.series).startsWith(m.trim()) ? '' : m)}${t.ins[1] > 1 ? ` +${t.ins[1] - 1}` : ''}` : null;
   return [name, pg, ins].filter(Boolean).join(' · '); };
-// Part/Groove records that print only a range: start at the LOW end (labeled). Other modes keep the labeled midpoint.
+// Records that print only a range (no start): every mode starts at the LOW end (labeled 'using low end').
 export const lowEnd = r => r && /^MIDPOINT/.test(r.basis ?? '') && r.min != null ? { ...r, def: r.min, basis: 'LOW END of manufacturer range (no stated start)' } : r;
 // Drill ranking: stated coolant matches the selected one first, unstated next, other coolant after; specials (flat bottom, spade, counterbore) after standard twist drills.
 export const GUN = /gun.?drill|SUMOGUN/i, isGun = t => t.mode === 'drill' && GUN.test(`${t.series} ${t.type ?? ''}`);

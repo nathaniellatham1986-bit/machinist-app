@@ -123,7 +123,7 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   const a = fzFromPerD({ min: 0.005, start: 0.006, max: 0.01 }, 0.5);
   assert.ok(Math.abs(a.def - 0.003) < 1e-12 && Math.abs(a.min - 0.0025) < 1e-12 && Math.abs(a.max - 0.005) < 1e-12);
   assert.match(a.basis, /^MFR FORMULA \(0\.006×D\)/); assert.doesNotMatch(a.basis, /DERIVED/);
-  const b = fzFromPerD({ min: 0.005, max: 0.01 }, 10); assert.ok(Math.abs(b.def - 0.075) < 1e-12); assert.match(b.basis, /MFR FORMULA \(0\.0075×D\), MIDPOINT/);
+  const b = fzFromPerD({ min: 0.005, max: 0.01 }, 10); assert.ok(Math.abs(b.def - 0.05) < 1e-12); assert.match(b.basis, /MFR FORMULA \(0\.005×D\), LOW END/);
   assert.equal(fzFromPerD({ start: 0.006 }, 0), null);
   console.log('fzPerD tests pass'); }
 { const { turnOpsOf } = await import('./calc.js');
