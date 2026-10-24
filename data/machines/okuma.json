@@ -37,6 +37,89 @@
     "title": "Okuma GENOS M series brochure",
     "accessed": "2026-10-24"
    }
+  },
+  {
+   "model": "GENOS L3000-e",
+   "type": "lathe",
+   "spindles": [
+    {
+     "option": "Main spindle",
+     "rpm": 3800,
+     "taper": "JIS A2-8",
+     "kw_peak": 22,
+     "kw_cont": 15,
+     "hp_peak": 30,
+     "hp_cont": 20,
+     "torque_nm": null,
+     "rating_note": "20 min / cont"
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.okuma.com/products/genos-l3000-e-turning-center",
+    "title": "Okuma GENOS L3000-e",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "LB3000 EX II",
+   "type": "lathe",
+   "spindles": [
+    {
+     "option": "Standard A2-6",
+     "rpm": 5000,
+     "taper": "JIS A2-6",
+     "kw_peak": 22,
+     "kw_cont": 15,
+     "hp_peak": 30,
+     "hp_cont": 20,
+     "torque_nm": null,
+     "rating_note": "30 min / cont"
+    },
+    {
+     "option": "Option A2-8",
+     "rpm": 4200,
+     "taper": "JIS A2-8",
+     "kw_peak": 30,
+     "kw_cont": 22,
+     "hp_peak": 40,
+     "hp_cont": 30,
+     "torque_nm": null,
+     "rating_note": null
+    },
+    {
+     "option": "Option big bore",
+     "rpm": 2800,
+     "taper": "",
+     "kw_peak": 22,
+     "kw_cont": 15,
+     "hp_peak": 30,
+     "hp_cont": 20,
+     "torque_nm": null,
+     "rating_note": null
+    },
+    {
+     "option": "Live tool (M)",
+     "rpm": 6000,
+     "taper": "Turret",
+     "kw_peak": 7.1,
+     "kw_cont": 4.1,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": "25 min / cont"
+    }
+   ],
+   "rapid_ipm": 1181,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.okuma.com/files/documents/space_turn_lb3000_ex2_e__18a__700_jan2021.pdf",
+    "title": "Okuma SPACE TURN LB3000 EX II catalog",
+    "accessed": "2026-10-24"
+   }
   }
  ]
 }
