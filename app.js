@@ -61,6 +61,9 @@ function fillBrand() { const cur = $('brand').value; $('brand').length = 0; $('b
 const MAXOPT = 300;
 function fillTool() { const cur = $('tool').value, b = $('brand').value, words = $('tq').value.toLowerCase().split(/\s+/).filter(Boolean);
   const hits = inMode().filter(t => (!b || t.brand === b) && words.every(w => `${t.brand} ${t.series} ${t.type ?? ''}`.toLowerCase().includes(w)));
+  const iso = matSel()?.iso || $('iso').value, rank = t => { const f = t.fullIsos || [], ok = i => !iso || i === iso || i === '*';
+    return f.some(x => !x.includes('~') && ok(x)) ? 0 : f.some(x => ok(x.replace('~', ''))) ? 1 : 2; };
+  const r2 = t => rank(t) + (/parting|groov|thread/i.test(t.series + (t.type ?? '')) ? .5 : 0); hits.sort((x, y) => r2(x) - r2(y));
   $('tool').length = 0; hits.slice(0, MAXOPT).forEach(t => $('tool').add(new Option(b ? t.series : `${t.brand} — ${t.series}`, t.key)));
   $('tn').textContent = hits.length > MAXOPT ? `(${MAXOPT} of ${hits.length}; refine search)` : `(${hits.length})`;
   if ([...$('tool').options].some(o => o.value === cur)) $('tool').value = cur; return fillCond(); }
@@ -70,6 +73,8 @@ async function fillCond() {
   const cw = $('cq').value.toLowerCase().split(/\s+/).filter(Boolean); let nc = 0;
   $('cqL').hidden = (t?.conditions.length ?? 0) < 25 && !cw.length;
   (t?.conditions || []).forEach((c, i) => { if (isoOk(c) && cw.every(w => c.label.toLowerCase().includes(w)) && nc++ < 400) $('cond').add(new Option(c.label + (c.status === 'shop-proven' ? ' · SHOP-PROVEN' : '') + (matSel() && !c.materials ? ' · ISO group only' : ''), i)); });
+  { const opts = [...$('cond').options].map(o => [o.value, t.conditions[+o.value]]), full = c => c.sfm && (c.feed || mode === 'tap') && c.status !== 'shop-proven';
+    const best = opts.find(([, c]) => full(c) && c.source.kind === 'catalog') || opts.find(([, c]) => full(c)) || opts.find(([, c]) => hasData(c)); if (best) $('cond').value = best[0]; }
   if (t?.flutes) $('z').value = t.flutes;
   fill(); recent();
 }
@@ -151,7 +156,7 @@ function run() { if (mode === 'mill') readEng();
   let o = null, extra = '';
   if (v('sfm') && v('fpt') && v('d')) {
     if (mode === 'mill') { o = compute({ sfm: v('sfm'), d: v('d'), fpt: v('fpt'), z: v('z'), ae: frac.ae * v('d'), ap: frac.ap * v('d'), stickout: v('so'), maxRpm: v('maxRpm'), maxHp: v('maxHp'), iso: c?.iso });
-      extra = card('Est. power', o.hp.toFixed(1) + ' HP', 'DERIVED') + `<div class="card wide"><div class="b">Chip load used for IPM: ${o.fpt.toFixed(4)} in/t (chip thinning + stickout, DERIVED)${o.hpCapped ? ' · <span class="warn">feed cut to fit machine HP</span>' : ''}</div></div>`; }
+      extra = card('Est. power', (o.hp < 1 ? o.hp.toFixed(2) : o.hp.toFixed(1)) + ' HP', `DERIVED · MRR ${o.mrr.toFixed(3)} in³/min at WOC ${(frac.ae * v('d')).toFixed(3)} × DOC ${(frac.ap * v('d')).toFixed(3)} in`) + `<div class="card wide"><div class="b">Chip load used for IPM: ${o.fpt.toFixed(4)} in/t (chip thinning + stickout, DERIVED)${o.hpCapped ? ' · <span class="warn">feed cut to fit machine HP</span>' : ''}</div></div>`; }
     if (mode === 'drill') o = drill({ sfm: v('sfm'), d: v('d'), ipr: v('fpt'), maxRpm: v('maxRpm') });
     if (mode === 'turn') { o = turn({ sfm: v('sfm'), d: v('d'), ipr: v('fpt'), ap: v('apT'), maxRpm: v('maxRpm') }); extra = card('MRR', o.mrr.toFixed(2) + ' in³/min', 'DERIVED' + (o.capped ? ` at capped ${Math.round(o.sfmActual)} SFM` : '')); }
     if (mode === 'tap') o = tap({ sfm: v('sfm'), d: v('d'), pitch: v('fpt'), maxRpm: v('maxRpm') });
@@ -165,11 +170,12 @@ function run() { if (mode === 'mill') readEng();
     if (c.feed?.byWoc) doc.push('WOC published at ' + Object.keys(c.feed.byWoc).map(k => (+k * 100).toFixed(0) + '%').join(', '));
     cards += card('DOC / WOC', doc.length ? `<span style="font-size:22px">${doc.join('<br>')}</span>` : 'No manufacturer data', doc.length ? src : '', 'wide' + (doc.length ? '' : ' none')); }
   // nearest options with data, as chips
-  let chips = [];
+  let chips = []; const sig = x => JSON.stringify([x.iso, x.sfm, x.feed, x.ap, x.source?.catalog, x.source?.page]), seen = new Set(c ? [sig(c), c.label] : []);
+  const fresh = x => { const s = sig(x); if (seen.has(s) || seen.has(x.label)) return false; seen.add(s); seen.add(x.label); return true; };
   if (t && (!c || !SP || !FD)) {
     if (c && !FD && c.feed && mode !== 'tap') diaList(c).slice(0, 12).forEach(x => chips.push([`Ø ${x.toFixed(4)} in`, `d:${x}`]));
-    t.conditions.forEach((x, i) => { if (chips.length < 12 && String(i) !== $('cond').value && x.sfm && (mode === 'tap' || x.feed) && isoOk(x)) chips.push([x.label, `c:${i}`]); });
-    t.conditions.forEach((x, i) => { if (chips.length < 16 && x.sfm && (mode === 'tap' || x.feed) && !isoOk(x)) chips.push([x.label + ' (other material)', `m:${i}`]); });
+    t.conditions.forEach((x, i) => { if (chips.length < 12 && String(i) !== $('cond').value && x.sfm && (mode === 'tap' || x.feed) && isoOk(x) && fresh(x)) chips.push([x.label, `c:${i}`]); });
+    t.conditions.forEach((x, i) => { if (chips.length < 16 && x.sfm && (mode === 'tap' || x.feed) && !isoOk(x) && fresh(x)) chips.push([x.label + ' (other material)', `m:${i}`]); });
   }
   const miss = !c || !v('sfm') || !v('fpt');
   $('cards').innerHTML = w + (miss ? `<div class="out"><span class="warn">No manufacturer data for this combo.</span>${chips.length ? '<br>Nearest options from this tool with data:<div class="chips">' + chips.map(([l, k]) => `<button class="chip" data-k="${k}">${l}</button>`).join('') + '</div>' : ''}</div>` : '') + `<div class="cards">${cards}</div>`;

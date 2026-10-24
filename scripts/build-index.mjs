@@ -23,6 +23,7 @@ for (const f of files) {
     ...(t.type ? { type: t.type } : {}),
     isos: [...new Set(t.conditions.map(c => c.iso))].sort(),
     dataIsos: [...new Set(t.conditions.filter(c => c.sfm || c.feed).map(c => c.iso))].sort(),
+    fullIsos: [...new Set(t.conditions.filter(c => c.sfm && (c.feed || t.mode === 'tap') && c.status !== 'shop-proven').map(c => c.source.kind === 'catalog' ? c.iso : c.iso + '~'))].sort(),
     mats: [...new Set(t.conditions.flatMap(c => c.materials ?? []))].sort(),
     shop: t.conditions.some(c => c.status === 'shop-proven') }));
   out.push({ file: f, brand: doc.brand, modes: [...new Set(tools.map(t => t.mode))].sort(), records: doc.tools.reduce((n, t) => n + t.conditions.length, 0), tools });

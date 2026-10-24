@@ -14,7 +14,7 @@ export function compute({ sfm, d, fpt, z, ae, ap, stickout, maxRpm, maxHp, iso }
   let feed = ipm(r, f, z);
   let hp = feed * ae * ap * (UNIT_HP[iso] ?? 1), hpCapped = false;
   if (maxHp && hp > maxHp) { feed *= maxHp / hp; hp = maxHp; hpCapped = true; }
-  return { rpm: r, fpt: f, ipm: feed, hp, capped, hpCapped };
+  return { rpm: r, fpt: f, ipm: feed, hp, mrr: feed * ae * ap, capped, hpCapped };
 }
 // Drilling: IPM = RPM x IPR.
 export function drill({ sfm, d, ipr, maxRpm }) { const [r, capped] = cap(rpm(sfm, d), maxRpm); return { rpm: r, capped, ipm: r * ipr }; }

@@ -50,3 +50,6 @@ const pe = TJ.find(x => x.series.startsWith('PENTA')).conditions[0]; assert.deep
   assert.deepEqual(forMode(m, 'tap').map(([s, i]) => [s.name, i]), [['legacy', 1]]);
   assert.deepEqual(forMode(m, 'mill').map(([s]) => s.name), ['m1']);
   for (const md of ['mill', 'drill', 'turn', 'tap']) assert.ok(forMode(m, md).every(([s]) => s.mode === md)); }
+// Est. power: 1/2" 4FL in P steel, 400 SFM, .003 in/t, 25% WOC x 1xD DOC -> ~2.6 HP (not rounded to 0)
+{ const o = compute({ sfm: 400, d: .5, fpt: .003, z: 4, ae: .125, ap: .5, stickout: 1.5, iso: 'P' });
+  assert.ok(o.hp > 2 && o.hp < 3.5, String(o.hp)); assert.equal(+o.mrr.toFixed(3), +(o.ipm * .125 * .5).toFixed(3)); }
