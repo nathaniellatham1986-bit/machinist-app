@@ -93,7 +93,8 @@ function fill() {
   else {
     const s = c.source, apU = c.ap ? toIn(1, c.ap.unit) : 1;
     h = `<details><summary>${badge(c)}</summary><span class="tag">${c.status.toUpperCase()}</span> ${s.manufacturer} · ${s.catalog} · ${s.edition}${s.page ? ' · p.' + s.page : ''}${s.url ? ` · <a style="color:#9cf" href="${s.url}">source</a>` : ''}`
-      + (c.sourceGroup ? `<br>Source material group: “${c.sourceGroup}”` : '') + (s.notes ? `<br>${s.notes}` : '') + (t.notes ? `<br>${t.notes}` : '') + '</details>'
+      + (c.sourceGroup ? `<br>Source material group: “${c.sourceGroup}”` : '') + (s.notes ? `<br>${s.notes}` : '') + (t.notes ? `<br>${t.notes}` : '')
+      + (c.altSources || []).map(a => `<br><b>Also published:</b> ${a.source.catalog}${a.source.page ? ' · p.' + a.source.page : ''}${a.sfm ? ` · speed ${a.sfm.value ?? a.sfm.start ?? `${a.sfm.min}–${a.sfm.max}`} ${a.sfm.unit}` : ''}${a.feed?.range ? ` · feed ${a.feed.range.value ?? `${a.feed.range.min}–${a.feed.range.max}`} ${a.feed.unit}` : ''}${a.source.url ? ` · <a style="color:#9cf" href="${a.source.url}">source</a>` : ''}`).join('') + '</details>'
       + `<b>SFM:</b> ${sp ? fmt(sp, 0) + ' ft/min — default = ' + sp.basis : NO}`
       + (mode === 'tap' ? '' : `<br><b>${mode === 'mill' ? 'Chip load' : 'Feed/rev'}:</b> ${fd ? fmt(fd, 4) + ' in — default = ' + fd.basis : NO + ' at this diameter'}`)
       + (c.ap?.value != null ? `<br><b>DOC ${shop ? '' : 'manufacturer '}stated:</b> ${(c.ap.value * apU).toFixed(3)} in (${c.ap.value} ${c.ap.unit})` : c.ap ? `<br><b>DOC ${shop ? '' : 'manufacturer '}${c.ap.min != null ? 'min–max' : 'max'}:</b> ${c.ap.min != null ? (c.ap.min * apU).toFixed(3) + ' – ' : '≤ '}${(c.ap.max * apU).toFixed(3)} in (${c.ap.min ?? ''}${c.ap.min != null ? '–' : '≤'}${c.ap.max} ${c.ap.unit})` : (mode === 'turn' ? `<br><b>DOC:</b> ${NO}` : ''))
