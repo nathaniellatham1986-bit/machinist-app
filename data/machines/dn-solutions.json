@@ -1,0 +1,78 @@
+{
+ "schema": 1,
+ "builder": "DN Solutions (Doosan)",
+ "models": [
+  {
+   "model": "DNM 5700",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Standard 8000 r/min",
+     "rpm": 8000,
+     "taper": "BT40",
+     "kw_peak": 18.5,
+     "kw_cont": 11,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    },
+    {
+     "option": "Optional 12000 r/min",
+     "rpm": 12000,
+     "taper": "BT40",
+     "kw_peak": 18.5,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    },
+    {
+     "option": "Optional 15000 r/min",
+     "rpm": 15000,
+     "taper": "BT40",
+     "kw_peak": 18.5,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.dn-solutions.com/us/product/machining-center/vertical/dnm-5700.do",
+    "title": "DN Solutions DNM 5700",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "Lynx 2100B",
+   "type": "lathe",
+   "spindles": [
+    {
+     "option": "Standard A2-6",
+     "rpm": 4500,
+     "taper": "A2-6",
+     "kw_peak": 15,
+     "kw_cont": 11,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 169,
+     "rating_note": "15 min / cont"
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.dn-solutions.com/global/product/turning-center/2-axis-horizontal/lynx-2100-b.do",
+    "title": "DN Solutions Lynx 2100B",
+    "accessed": "2026-10-24"
+   }
+  }
+ ]
+}
