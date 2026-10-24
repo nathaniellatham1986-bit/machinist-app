@@ -98,13 +98,19 @@ tap = dict(brand="tapping", tools=[
 shop = dict(brand="shop-proven", tools=[dict(mode="turn", brand="Shop-proven (not manufacturer)", series="4 mm carbide parting tool", conditions=[dict(label="304 SS · Mazak QT 350 MY · good finish", iso="M", coolant=None, sfm=dict(value=180, unit="ft/min"), feed=dict(kind="ipr", unit="in", range=dict(value=0.0018)), status="shop-proven", source=dict(kind="shop", manufacturer="Shop record", catalog="Run on Mazak QT 350 MY, 304 stainless, good finish", edition="Oct 15 2026", url=None))], notes="A setup that worked at one shop. This is not manufacturer data.")])
 import re
 # Material mapping: only what the source names. (label prefix -> (materials, source wording))
-MATMAP = [("Stainless 300 series (304/316/17-4PH)", ["ss304","ss316","ss17-4ph"], "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"),
+MATMAP = [("Stainless 300 series (304/316/17-4PH)", ["ss304","ss17-4ph"], "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"),
   ("Grp 14 Austenitic stainless", ["ss303","ss304"], "Iscar group 14: austenitic stainless"),
-  ("M2.1 Austenitic 303/304/316", ["ss303","ss304","ss316"], "M2.1 austenitic 303/304/316"),
+  ("M2.1 Austenitic 303/304/316", ["ss303","ss304"], "M2.1 austenitic 303/304/316"),
   ("Stainless, sulphured (e.g. 303)", ["ss303"], "Stainless, sulphured (e.g. 303)"),
   ("Stainless, austenitic (304)", ["ss304"], "Stainless, austenitic (304)"),
-  ("Stainless 303/304/316/400", ["ss303","ss304","ss316","ss400"], "Stainless 303/304/316/400"),
-  ("304 SS", ["ss304"], "304 stainless (shop record)")]
+  ("Stainless 303/304/316/400", ["ss303","ss304","ss400"], "Stainless 303/304/316/400"),
+  ("304 SS", ["ss304"], "304 stainless (shop record)"),
+  ("Low-carbon 1010/1020 (mild)", ["p-mild"], "Low-carbon 1010/1020 (mild)"), ("Alloy 4140/5140/8640", ["p-alloy"], "Alloy 4140/5140/8640"),
+  ("Low carbon steel A36/1018/12L14", ["p-mild"], "Low carbon steel A36/1018/12L14"), ("Alloy steel 4140/4340/8620", ["p-alloy"], "Alloy steel 4140/4340/8620"),
+  ("P1.1 1010/1018/1020/12L14", ["p-mild"], "P1.1 1010/1018/1020/12L14"), ("P2.1 A36/1030-1095/4140/4340/8620", ["p-mild","p-alloy"], "P2.1 A36/1030-1095/4140/4340/8620"),
+  ("Grp 1 Non-alloy", ["p-mild"], "Iscar group 1: non-alloy steel <0.25% C"), ("Grp 6 Low alloy", ["p-alloy"], "Iscar group 6: low alloy, annealed"),
+  ("Grp 7 Low alloy", ["p-alloy"], "Iscar group 7: low alloy, hardened & tempered"), ("Grp 8 Low alloy", ["p-alloy"], "Iscar group 8: low alloy, hardened & tempered"),
+  ("Grp 9 Low alloy", ["p-alloy"], "Iscar group 9: low alloy, hardened & tempered")]
 for o in [drill, turn, tap, shop]:
     for t in o["tools"]:
         for c in t["conditions"]:

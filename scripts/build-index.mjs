@@ -8,7 +8,7 @@ import { validate, NON_BRAND, MATERIALS } from './validate.mjs';
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dataDir = path.join(root, 'data');
-const MATERIAL_GROUPS = [['P', 'Steel'], ['M', 'Stainless'], ['K', 'Cast iron'], ['N', 'Non-ferrous (aluminum, copper, plastics)'], ['S', 'Superalloys / titanium'], ['H', 'Hardened steel']];
+const MATERIAL_GROUPS = Object.entries(JSON.parse(fs.readFileSync(path.join(dataDir, 'materials.json'))).groups);
 const COOLANTS = ['flood', 'air', 'dry'];
 const SHELL = ['./', 'index.html', 'app.js', 'calc.js', 'manifest.json', 'data/index.json', 'data/threads.json'];
 

@@ -24,7 +24,11 @@
       "url": "https://content.syndigo.com/asset/49270877-d96b-4daa-866c-613cf6d1e7c5/original.pdf",
       "notes": "Rigid setup required to run these speeds. Coolant-through column (250 psi) not loaded.",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low carbon steel A36/1018/12L14"
     },
     {
      "label": "Alloy steel 4140/4340/8620",
@@ -43,7 +47,11 @@
       "url": "https://content.syndigo.com/asset/49270877-d96b-4daa-866c-613cf6d1e7c5/original.pdf",
       "notes": "Rigid setup required to run these speeds. Coolant-through column (250 psi) not loaded.",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy steel 4140/4340/8620"
     },
     {
      "label": "Stainless 303/304/316/400",
@@ -66,7 +74,6 @@
      "materials": [
       "ss303",
       "ss304",
-      "ss316",
       "ss400"
      ],
      "sourceGroup": "Stainless 303/304/316/400"

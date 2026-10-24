@@ -15,11 +15,12 @@ threads.threads.forEach((t, i) => $('thr').add(new Option(t.name, i)));
 const q = new URLSearchParams(location.search);
 const LS = { get: (k, d) => { try { return JSON.parse(localStorage.getItem('fs.' + k)) ?? d; } catch { return d; } }, set: (k, v) => localStorage.setItem('fs.' + k, JSON.stringify(v)) };
 let mode = q.get('mode') || 'mill', defs = {};
-const ISO = [['', 'All materials'], ...idx.materialGroups];
-ISO.forEach(([k, n]) => $('iso').add(new Option(k ? `${k} — ${n}` : n, k)));
 const MATS = idx.materials, matSel = () => MATS.find(m => m.id === $('mat').value);
-function fillMat() { const cur = $('mat').value; $('mat').length = 0; $('mat').add(new Option('Any (whole ISO group)', ''));
-  MATS.filter(m => !$('iso').value || m.iso === $('iso').value).forEach(m => $('mat').add(new Option(m.name, m.id))); $('mat').value = [...$('mat').options].some(o => o.value === cur) ? cur : ''; }
+$('matPick').add(new Option('All materials', ''));
+for (const [k, n] of idx.materialGroups) { $('matPick').add(new Option(`${n}, any · ISO ${k}`, k));
+  MATS.filter(m => m.iso === k).forEach(m => $('matPick').add(new Option(`\u00a0\u00a0${m.name} · ISO ${k}`, k + ':' + m.id))); }
+const syncPick = () => { $('matPick').value = $('iso').value + ($('mat').value ? ':' + $('mat').value : ''); };
+const fillMat = () => { if (matSel() && matSel().iso !== $('iso').value) $('iso').value = matSel().iso; syncPick(); };
 const isoOk = c => { const m = matSel(); if (m) return c.materials ? c.materials.includes(m.id) : (c.iso === m.iso || c.iso === '*');
   return !$('iso').value || c.iso === '*' || c.iso === $('iso').value; };
 const hasData = c => c.sfm || c.feed;
@@ -63,9 +64,12 @@ function fillTool() { const cur = $('tool').value, b = $('brand').value, words =
 async function fillCond() {
   await ensure($('tool').value);
   const t = curTool(); $('cond').length = 0;
-  (t?.conditions || []).forEach((c, i) => { if (isoOk(c)) $('cond').add(new Option(c.label + (c.coolant ? ` · ${c.coolant}` : '') + (c.status === 'shop-proven' ? ' · SHOP-PROVEN' : '') + (matSel() && !c.materials ? ' · ISO group only' : ''), i)); });
+  (t?.conditions || []).forEach((c, i) => { if (isoOk(c)) $('cond').add(new Option(c.label + (c.status === 'shop-proven' ? ' · SHOP-PROVEN' : '') + (matSel() && !c.materials ? ' · ISO group only' : ''), i)); });
   if (t?.flutes) $('z').value = t.flutes;
   fill(); recent();
+}
+function coolNote() { const c = curTool()?.conditions[$('cond').value];
+  $('coolNote').textContent = c ? (c.coolant ? `Coolant (source): ${c.coolant}` : 'Coolant: not stated by source') : '';
 }
 function badge(c) { const s = c.source;
   if (c.status === 'shop-proven') return `<span class="shop">⚠ Shop-proven, NOT manufacturer data ▸</span>`;
@@ -94,7 +98,7 @@ function fill() {
   }
   if (mode === 'tap') { const th = threads.threads[$('thr').value];
     h += `<br><b>Tap drill 75%:</b> ${th.drill75_mm ? th.drill75_mm + ' mm / ' : ''}${th.drill75_in.toFixed(4)} in (geometry)${th.chart ? ' · chart pick ' + th.chart : ''}<br><small>${threads.source.formula}. ${th.chart ? threads.source.chart : ''}</small>`; }
-  $('src').innerHTML = h; run();
+  $('src').innerHTML = h; coolNote(); run();
 }
 // Mill engagement: stored as fraction of D; shown in % / xD or inches.
 const frac = { ae: 0.25, ap: 1 };
@@ -134,17 +138,17 @@ function recallList() { const sel = $('recall'); sel.length = 1;
   LS.get('fav', []).forEach((x, i) => sel.add(new Option('★ ' + x.name, 'f' + i))); LS.get('recent', []).forEach((x, i) => sel.add(new Option('↺ ' + x.name, 'r' + i))); }
 $('fav').onclick = () => { const f = LS.get('fav', []); f.unshift(snap()); LS.set('fav', f.slice(0, 30)); recallList(); $('fav').textContent = '★ Saved'; setTimeout(() => $('fav').textContent = '★ Save setup as favorite', 1200); };
 $('recall').onchange = async () => { const k = $('recall').value; if (!k) return; const s = LS.get(k[0] === 'f' ? 'fav' : 'recent', [])[+k.slice(1)]; if (!s) return;
-  await setMode(s.mode); $('iso').value = s.v.iso; fillMat(); $('mat').value = s.v.mat ?? ''; $('onlyData').checked = false; await fillBrand(); $('brand').value = s.v.brand; await fillTool(); $('tool').value = s.v.tool; await fillCond();
+  await setMode(s.mode); $('iso').value = s.v.iso; $('mat').value = s.v.mat ?? ''; fillMat(); $('onlyData').checked = false; await fillBrand(); $('brand').value = s.v.brand; await fillTool(); $('tool').value = s.v.tool; await fillCond();
   for (const k2 of FIELDS) if (!['iso', 'mat', 'brand', 'tool', 'sfm', 'fpt'].includes(k2)) $(k2).value = s.v[k2];
   fill(); $('sfm').value = s.v.sfm; $('fpt').value = s.v.fpt; run(); $('recall').value = ''; };
 document.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => setMode(b.dataset.mode));
-$('iso').onchange = () => { fillMat(); fillBrand(); }; $('mat').onchange = fillBrand; $('onlyData').onchange = fillBrand; $('brand').onchange = fillTool; $('tq').oninput = fillTool; $('tool').onchange = fillCond; $('mach').onchange = applyMachine;
+$('matPick').onchange = () => { const [i, m] = $('matPick').value.split(':'); $('iso').value = i; $('mat').value = m ?? ''; fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillTool; $('tq').oninput = fillTool; $('tool').onchange = fillCond; $('mach').onchange = applyMachine;
 $('cond').onchange = () => { fill(); recent(); }; ['cool', 'thr'].forEach(k => $(k).onchange = fill); $('d').onchange = () => { if (mode === 'mill') showEng(); fill(); };
 ['z', 'sfm', 'fpt', 'ae', 'ap', 'apT', 'so', 'maxRpm', 'maxHp', 'len', 'nose'].forEach(k => $(k).oninput = run); $('sup').onchange = run;
 $('cool').value = LS.get('lastCoolant', 'flood'); machines(); { const m = LS.get('machines', [])[$('mach').value]; if (m) { $('maxRpm').value = m.rpm || ''; $('maxHp').value = m.hp || ''; } }
 recallList();
 if (q.get('iso')) $('iso').value = q.get('iso');
-fillMat(); if (q.get('mat')) $('mat').value = q.get('mat');
+if (q.get('mat')) $('mat').value = q.get('mat'); fillMat();
 if (q.get('d')) $('d').value = q.get('d');
 for (const k of ['len', 'sup', 'apT', 'maxRpm']) if (q.get(k)) $(k).value = q.get(k);
 await setMode(mode);

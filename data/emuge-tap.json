@@ -24,7 +24,11 @@
       "url": "https://www.tecnoutensilisrl.it/wp-content/uploads/2017/04/Emuge-510-Catalog_0.pdf",
       "page": "fold-out product finder, PDF p.19",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "P1.1 1010/1018/1020/12L14"
     },
     {
      "label": "P2.1 A36/1030-1095/4140/4340/8620 <=235 BHN",
@@ -43,7 +47,12 @@
       "url": "https://www.tecnoutensilisrl.it/wp-content/uploads/2017/04/Emuge-510-Catalog_0.pdf",
       "page": "fold-out product finder, PDF p.19",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild",
+      "p-alloy"
+     ],
+     "sourceGroup": "P2.1 A36/1030-1095/4140/4340/8620"
     },
     {
      "label": "M2.1 Austenitic 303/304/316 <=280 BHN",
@@ -65,8 +74,7 @@
      },
      "materials": [
       "ss303",
-      "ss304",
-      "ss316"
+      "ss304"
      ],
      "sourceGroup": "M2.1 austenitic 303/304/316"
     }

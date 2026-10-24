@@ -73,4 +73,4 @@ Suggested name: `<brand>-<mode>[-<series>].json`, e.g. `iscar-mill.json`.
 | derivation | when derived | how the number was computed from published values |
 
 ## Materials
-`data/materials.json` lists specific materials. 303 (free-machining, sulfurized) and 304 (standard austenitic, work-hardens) are separate entries, and 316 is its own entry. To add a material, add it to that file with its ISO group.
+`data/materials.json` lists specific materials. 303 (free-machining, sulfurized) is its own entry. 304 and 316 (standard austenitic, work-hardening) share the entry ss304. `groups` holds the plain ISO group names used by the picker. To add a material, add it to that file with its ISO group.

@@ -1,8 +1,43 @@
-{"note":"Specific materials. Map a record here ONLY when its source names that material. Do not merge 303 and 304.",
-"materials":[
- {"id":"ss303","iso":"M","name":"303 — free-machining austenitic stainless (sulfurized)"},
- {"id":"ss304","iso":"M","name":"304 — standard austenitic stainless (work-hardens)"},
- {"id":"ss316","iso":"M","name":"316 — austenitic stainless, Mo (work-hardens, similar to 304)"},
- {"id":"ss17-4ph","iso":"M","name":"17-4PH — precipitation-hardening stainless"},
- {"id":"ss400","iso":"M","name":"400 series — ferritic/martensitic stainless"}
-]}
+{
+ "note": "Specific materials shown in the Material picker. Map a record here ONLY when its source names that material (or a group that plainly covers it, e.g. 'austenitic stainless'). 303 stays separate from 304/316.",
+ "materials": [
+  {
+   "id": "p-mild",
+   "iso": "P",
+   "name": "Steel, low carbon / mild (A36, 1018)"
+  },
+  {
+   "id": "p-alloy",
+   "iso": "P",
+   "name": "Steel, alloy (4140, 4340)"
+  },
+  {
+   "id": "ss304",
+   "iso": "M",
+   "name": "Stainless, austenitic (304, 316)"
+  },
+  {
+   "id": "ss303",
+   "iso": "M",
+   "name": "Stainless, free-machining (303)"
+  },
+  {
+   "id": "ss17-4ph",
+   "iso": "M",
+   "name": "Stainless, precipitation-hardening (17-4PH)"
+  },
+  {
+   "id": "ss400",
+   "iso": "M",
+   "name": "Stainless, 400 series"
+  }
+ ],
+ "groups": {
+  "P": "Steel",
+  "M": "Stainless",
+  "K": "Cast iron",
+  "N": "Aluminum / non-ferrous",
+  "S": "High-temp alloy / titanium",
+  "H": "Hardened steel"
+ }
+}

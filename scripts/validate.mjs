@@ -113,7 +113,7 @@ export function validate(doc, name = 'file') {
         else for (const m of c.materials) { if (!MAT[m]) err(w, `unknown material "${m}" (see data/materials.json)`); else if (c.iso !== '*' && MAT[m].iso !== c.iso) err(w, `material ${m} is ISO ${MAT[m].iso}, condition is ISO ${c.iso}`); }
         if (!isStr(c.sourceGroup)) err(w, "materials requires sourceGroup: the source's own wording for the material group");
         if (c.materials?.includes('ss303') && !/303|free.?machin|sulph|sulfur|austenitic/i.test(c.sourceGroup ?? '')) err(w, 'ss303 only when the source names 303, free-machining stainless, or austenitic stainless as a group');
-        if (c.materials?.includes('ss304') && !/304|austenitic/i.test(c.sourceGroup ?? '')) err(w, 'ss304 only when the source names 304 or austenitic stainless');
+        if (c.materials?.includes('ss304') && !/304|316|austenitic/i.test(c.sourceGroup ?? '')) err(w, 'ss304 only when the source names 304 or austenitic stainless');
       }
       if (/free.?machin/i.test(c.label) && c.iso === 'M' && !/free.?machin|sulph|sulfur/i.test(c.sourceGroup ?? '')) err(w, 'do not label stainless as free-machining unless the source says so');
       source(c.source, c, w + '.source', err);

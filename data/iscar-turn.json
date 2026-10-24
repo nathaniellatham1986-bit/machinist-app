@@ -164,7 +164,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page248.html",
       "page": "246",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Iscar group 1: non-alloy steel <0.25% C"
     },
     {
      "label": "Grp 6 Low alloy annealed (4140/4340) \u00b7 IC807 Vc",
@@ -183,7 +187,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page248.html",
       "page": "246",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 6: low alloy, annealed"
     },
     {
      "label": "Grp 7 Low alloy Q&T 275HB (4140/4340) \u00b7 IC807 Vc",
@@ -202,7 +210,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page248.html",
       "page": "246",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 7: low alloy, hardened & tempered"
     },
     {
      "label": "Grp 8 Low alloy Q&T 300HB (4140/4340) \u00b7 IC807 Vc",
@@ -221,7 +233,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page248.html",
       "page": "246",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 8: low alloy, hardened & tempered"
     },
     {
      "label": "Grp 9 Low alloy Q&T 350HB (4140/4340) \u00b7 IC807 Vc",
@@ -240,7 +256,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page248.html",
       "page": "246",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 9: low alloy, hardened & tempered"
     },
     {
      "label": "Grp 14 Austenitic stainless \u00b7 IC807 Vc",
@@ -340,7 +360,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
       "page": "432-433",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Iscar group 1: non-alloy steel <0.25% C"
     },
     {
      "label": "Grp 6 Low alloy annealed (4140/4340) \u00b7 IC807",
@@ -359,7 +383,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
       "page": "432-433",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 6: low alloy, annealed"
     },
     {
      "label": "Grp 7 Low alloy Q&T 275HB (4140/4340) \u00b7 IC807",
@@ -378,7 +406,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
       "page": "432-433",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 7: low alloy, hardened & tempered"
     },
     {
      "label": "Grp 8 Low alloy Q&T 300HB (4140/4340) \u00b7 IC807",
@@ -397,7 +429,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
       "page": "432-433",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 8: low alloy, hardened & tempered"
     },
     {
      "label": "Grp 9 Low alloy Q&T 350HB (4140/4340) \u00b7 IC807",
@@ -416,7 +452,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
       "page": "432-433",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 9: low alloy, hardened & tempered"
     },
     {
      "label": "Grp 14 Austenitic stainless \u00b7 IC807",
@@ -459,7 +499,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
       "page": "432-433",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Iscar group 1: non-alloy steel <0.25% C"
     },
     {
      "label": "Grp 6 Low alloy annealed (4140/4340) \u00b7 IC808",
@@ -478,7 +522,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
       "page": "432-433",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 6: low alloy, annealed"
     },
     {
      "label": "Grp 7 Low alloy Q&T 275HB (4140/4340) \u00b7 IC808",
@@ -497,7 +545,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
       "page": "432-433",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 7: low alloy, hardened & tempered"
     },
     {
      "label": "Grp 8 Low alloy Q&T 300HB (4140/4340) \u00b7 IC808",
@@ -516,7 +568,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
       "page": "432-433",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 8: low alloy, hardened & tempered"
     },
     {
      "label": "Grp 9 Low alloy Q&T 350HB (4140/4340) \u00b7 IC808",
@@ -535,7 +591,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
       "page": "432-433",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 9: low alloy, hardened & tempered"
     },
     {
      "label": "Grp 14 Austenitic stainless \u00b7 IC808",
@@ -578,7 +638,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
       "page": "432-433",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Iscar group 1: non-alloy steel <0.25% C"
     },
     {
      "label": "Grp 6 Low alloy annealed (4140/4340) \u00b7 IC908",
@@ -597,7 +661,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
       "page": "432-433",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 6: low alloy, annealed"
     },
     {
      "label": "Grp 7 Low alloy Q&T 275HB (4140/4340) \u00b7 IC908",
@@ -616,7 +684,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
       "page": "432-433",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 7: low alloy, hardened & tempered"
     },
     {
      "label": "Grp 8 Low alloy Q&T 300HB (4140/4340) \u00b7 IC908",
@@ -635,7 +707,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
       "page": "432-433",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 8: low alloy, hardened & tempered"
     },
     {
      "label": "Grp 9 Low alloy Q&T 350HB (4140/4340) \u00b7 IC908",
@@ -654,7 +730,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
       "page": "432-433",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 9: low alloy, hardened & tempered"
     },
     {
      "label": "Grp 14 Austenitic stainless \u00b7 IC908",
@@ -697,7 +777,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
       "page": "432-433",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Iscar group 1: non-alloy steel <0.25% C"
     },
     {
      "label": "Grp 6 Low alloy annealed (4140/4340) \u00b7 IC830",
@@ -716,7 +800,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
       "page": "432-433",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 6: low alloy, annealed"
     },
     {
      "label": "Grp 7 Low alloy Q&T 275HB (4140/4340) \u00b7 IC830",
@@ -735,7 +823,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
       "page": "432-433",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 7: low alloy, hardened & tempered"
     },
     {
      "label": "Grp 8 Low alloy Q&T 300HB (4140/4340) \u00b7 IC830",
@@ -754,7 +846,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
       "page": "432-433",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 8: low alloy, hardened & tempered"
     },
     {
      "label": "Grp 9 Low alloy Q&T 350HB (4140/4340) \u00b7 IC830",
@@ -773,7 +869,11 @@
       "url": "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page434.html",
       "page": "432-433",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 9: low alloy, hardened & tempered"
     },
     {
      "label": "Grp 14 Austenitic stainless \u00b7 IC830",
@@ -824,7 +924,11 @@
       "url": "https://www.werkzeugservice.at/uploads/downloads/ISCAR_Gewindewerkzeuge%20und%20Eins%C3%A4tze-nicht%20rotierende%20Werkezughalter-42_2022-p635-848_2022.pdf",
       "page": "710-711",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Iscar group 1: non-alloy steel <0.25% C"
     },
     {
      "label": "Grp 6 Low alloy annealed (4140/4340) \u00b7 IC908 threading",
@@ -843,7 +947,11 @@
       "url": "https://www.werkzeugservice.at/uploads/downloads/ISCAR_Gewindewerkzeuge%20und%20Eins%C3%A4tze-nicht%20rotierende%20Werkezughalter-42_2022-p635-848_2022.pdf",
       "page": "710-711",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 6: low alloy, annealed"
     },
     {
      "label": "Grp 7 Low alloy Q&T 275HB (4140/4340) \u00b7 IC908 threading",
@@ -862,7 +970,11 @@
       "url": "https://www.werkzeugservice.at/uploads/downloads/ISCAR_Gewindewerkzeuge%20und%20Eins%C3%A4tze-nicht%20rotierende%20Werkezughalter-42_2022-p635-848_2022.pdf",
       "page": "710-711",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 7: low alloy, hardened & tempered"
     },
     {
      "label": "Grp 8 Low alloy Q&T 300HB (4140/4340) \u00b7 IC908 threading",
@@ -881,7 +993,11 @@
       "url": "https://www.werkzeugservice.at/uploads/downloads/ISCAR_Gewindewerkzeuge%20und%20Eins%C3%A4tze-nicht%20rotierende%20Werkezughalter-42_2022-p635-848_2022.pdf",
       "page": "710-711",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 8: low alloy, hardened & tempered"
     },
     {
      "label": "Grp 9 Low alloy Q&T 350HB (4140/4340) \u00b7 IC908 threading",
@@ -900,7 +1016,11 @@
       "url": "https://www.werkzeugservice.at/uploads/downloads/ISCAR_Gewindewerkzeuge%20und%20Eins%C3%A4tze-nicht%20rotierende%20Werkezughalter-42_2022-p635-848_2022.pdf",
       "page": "710-711",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Iscar group 9: low alloy, hardened & tempered"
     },
     {
      "label": "Grp 14 Austenitic stainless \u00b7 IC908 threading",

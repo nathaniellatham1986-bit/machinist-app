@@ -505,7 +505,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 85-125 BHN \u00b7 TiAlN",
@@ -555,7 +559,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 85-125 BHN \u00b7 TiCN",
@@ -605,7 +613,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 125-175 BHN \u00b7 TiN",
@@ -655,7 +667,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 125-175 BHN \u00b7 TiAlN",
@@ -705,7 +721,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 125-175 BHN \u00b7 TiCN",
@@ -755,7 +775,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 175-225 BHN \u00b7 TiN",
@@ -805,7 +829,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 175-225 BHN \u00b7 TiAlN",
@@ -855,7 +883,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 175-225 BHN \u00b7 TiCN",
@@ -905,7 +937,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 225-275 BHN \u00b7 TiN",
@@ -955,7 +991,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 225-275 BHN \u00b7 TiAlN",
@@ -1005,7 +1045,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 225-275 BHN \u00b7 TiCN",
@@ -1055,7 +1099,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Alloy 4140/5140/8640 125-175 BHN \u00b7 TiN",
@@ -1105,7 +1153,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 125-175 BHN \u00b7 TiAlN",
@@ -1155,7 +1207,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 125-175 BHN \u00b7 TiCN",
@@ -1205,7 +1261,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 175-225 BHN \u00b7 TiN",
@@ -1255,7 +1315,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 175-225 BHN \u00b7 TiAlN",
@@ -1305,7 +1369,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 175-225 BHN \u00b7 TiCN",
@@ -1355,7 +1423,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 225-275 BHN \u00b7 TiN",
@@ -1405,7 +1477,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 225-275 BHN \u00b7 TiAlN",
@@ -1455,7 +1531,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 225-275 BHN \u00b7 TiCN",
@@ -1505,7 +1585,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 275-325 BHN \u00b7 TiN",
@@ -1555,7 +1639,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 275-325 BHN \u00b7 TiAlN",
@@ -1605,7 +1693,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 275-325 BHN \u00b7 TiCN",
@@ -1655,7 +1747,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 325-375 BHN \u00b7 TiN",
@@ -1705,7 +1801,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 325-375 BHN \u00b7 TiAlN",
@@ -1755,7 +1855,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 325-375 BHN \u00b7 TiCN",
@@ -1805,7 +1909,11 @@
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "High-strength 4340/300M 225-300 BHN \u00b7 TiN",
@@ -2308,7 +2416,6 @@
      },
      "materials": [
       "ss304",
-      "ss316",
       "ss17-4ph"
      ],
      "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
@@ -2364,7 +2471,6 @@
      },
      "materials": [
       "ss304",
-      "ss316",
       "ss17-4ph"
      ],
      "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
@@ -2420,7 +2526,6 @@
      },
      "materials": [
       "ss304",
-      "ss316",
       "ss17-4ph"
      ],
      "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
@@ -2476,7 +2581,6 @@
      },
      "materials": [
       "ss304",
-      "ss316",
       "ss17-4ph"
      ],
      "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
@@ -2532,7 +2636,6 @@
      },
      "materials": [
       "ss304",
-      "ss316",
       "ss17-4ph"
      ],
      "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
@@ -2588,7 +2691,6 @@
      },
      "materials": [
       "ss304",
-      "ss316",
       "ss17-4ph"
      ],
      "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
@@ -2775,7 +2877,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 125-175 BHN \u00b7 AM300",
@@ -2819,7 +2925,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 175-225 BHN \u00b7 AM300",
@@ -2863,7 +2973,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 225-275 BHN \u00b7 AM300",
@@ -2907,7 +3021,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Alloy 4140/5140/8640 125-175 BHN \u00b7 AM300",
@@ -2951,7 +3069,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 175-225 BHN \u00b7 AM300",
@@ -2995,7 +3117,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 225-275 BHN \u00b7 AM300",
@@ -3039,7 +3165,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 275-325 BHN \u00b7 AM300",
@@ -3083,7 +3213,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 325-375 BHN \u00b7 AM300",
@@ -3127,7 +3261,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "High-strength 4340/300M 225-300 BHN \u00b7 AM300",
@@ -3306,7 +3444,6 @@
      },
      "materials": [
       "ss304",
-      "ss316",
       "ss17-4ph"
      ],
      "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
@@ -3356,7 +3493,6 @@
      },
      "materials": [
       "ss304",
-      "ss316",
       "ss17-4ph"
      ],
      "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
@@ -3605,7 +3741,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 85-125 BHN \u00b7 AM200",
@@ -3639,7 +3779,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 125-175 BHN \u00b7 TiN",
@@ -3673,7 +3817,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 125-175 BHN \u00b7 AM200",
@@ -3707,7 +3855,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 175-225 BHN \u00b7 TiN",
@@ -3741,7 +3893,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 175-225 BHN \u00b7 AM200",
@@ -3775,7 +3931,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 225-275 BHN \u00b7 TiN",
@@ -3809,7 +3969,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 225-275 BHN \u00b7 AM200",
@@ -3843,7 +4007,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Alloy 4140/5140/8640 125-175 BHN \u00b7 TiN",
@@ -3877,7 +4045,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 125-175 BHN \u00b7 AM200",
@@ -3911,7 +4083,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 175-225 BHN \u00b7 TiN",
@@ -3945,7 +4121,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 175-225 BHN \u00b7 AM200",
@@ -3979,7 +4159,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 225-275 BHN \u00b7 TiN",
@@ -4013,7 +4197,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 225-275 BHN \u00b7 AM200",
@@ -4047,7 +4235,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 275-325 BHN \u00b7 TiN",
@@ -4081,7 +4273,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 275-325 BHN \u00b7 AM200",
@@ -4115,7 +4311,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 325-375 BHN \u00b7 TiN",
@@ -4149,7 +4349,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 325-375 BHN \u00b7 AM200",
@@ -4183,7 +4387,11 @@
       "url": "https://www.alliedmachine.com/",
       "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "High-strength 4340/300M 225-300 BHN \u00b7 TiN",
@@ -4424,7 +4632,6 @@
      },
      "materials": [
       "ss304",
-      "ss316",
       "ss17-4ph"
      ],
      "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
@@ -4464,7 +4671,6 @@
      },
      "materials": [
       "ss304",
-      "ss316",
       "ss17-4ph"
      ],
      "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
@@ -4504,7 +4710,6 @@
      },
      "materials": [
       "ss304",
-      "ss316",
       "ss17-4ph"
      ],
      "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
@@ -4544,7 +4749,6 @@
      },
      "materials": [
       "ss304",
-      "ss316",
       "ss17-4ph"
      ],
      "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
@@ -4695,7 +4899,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 85-125 BHN \u00b7 TiAlN",
@@ -4730,7 +4938,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 85-125 BHN \u00b7 TiCN",
@@ -4765,7 +4977,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 125-175 BHN \u00b7 TiN",
@@ -4800,7 +5016,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 125-175 BHN \u00b7 TiAlN",
@@ -4835,7 +5055,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 125-175 BHN \u00b7 TiCN",
@@ -4870,7 +5094,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 175-225 BHN \u00b7 TiN",
@@ -4905,7 +5133,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 175-225 BHN \u00b7 TiAlN",
@@ -4940,7 +5172,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 175-225 BHN \u00b7 TiCN",
@@ -4975,7 +5211,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 225-275 BHN \u00b7 TiN",
@@ -5010,7 +5250,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 225-275 BHN \u00b7 TiAlN",
@@ -5045,7 +5289,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Low-carbon 1010/1020 (mild) 225-275 BHN \u00b7 TiCN",
@@ -5080,7 +5328,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Low-carbon 1010/1020 (mild)"
     },
     {
      "label": "Alloy 4140/5140/8640 125-175 BHN \u00b7 TiN",
@@ -5115,7 +5367,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 125-175 BHN \u00b7 TiAlN",
@@ -5150,7 +5406,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 125-175 BHN \u00b7 TiCN",
@@ -5185,7 +5445,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 175-225 BHN \u00b7 TiN",
@@ -5220,7 +5484,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 175-225 BHN \u00b7 TiAlN",
@@ -5255,7 +5523,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 175-225 BHN \u00b7 TiCN",
@@ -5290,7 +5562,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 225-275 BHN \u00b7 TiN",
@@ -5325,7 +5601,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 225-275 BHN \u00b7 TiAlN",
@@ -5360,7 +5640,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 225-275 BHN \u00b7 TiCN",
@@ -5395,7 +5679,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 275-325 BHN \u00b7 TiN",
@@ -5430,7 +5718,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 275-325 BHN \u00b7 TiAlN",
@@ -5465,7 +5757,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 275-325 BHN \u00b7 TiCN",
@@ -5500,7 +5796,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 325-375 BHN \u00b7 TiN",
@@ -5535,7 +5835,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 325-375 BHN \u00b7 TiAlN",
@@ -5570,7 +5874,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "Alloy 4140/5140/8640 325-375 BHN \u00b7 TiCN",
@@ -5605,7 +5913,11 @@
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
       "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
       "kind": "catalog"
-     }
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy 4140/5140/8640"
     },
     {
      "label": "High-strength 4340/300M 225-300 BHN \u00b7 TiN",
@@ -5958,7 +6270,6 @@
      },
      "materials": [
       "ss304",
-      "ss316",
       "ss17-4ph"
      ],
      "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
@@ -5999,7 +6310,6 @@
      },
      "materials": [
       "ss304",
-      "ss316",
       "ss17-4ph"
      ],
      "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
@@ -6040,7 +6350,6 @@
      },
      "materials": [
       "ss304",
-      "ss316",
       "ss17-4ph"
      ],
      "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
@@ -6081,7 +6390,6 @@
      },
      "materials": [
       "ss304",
-      "ss316",
       "ss17-4ph"
      ],
      "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
@@ -6122,7 +6430,6 @@
      },
      "materials": [
       "ss304",
-      "ss316",
       "ss17-4ph"
      ],
      "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
@@ -6163,7 +6470,6 @@
      },
      "materials": [
       "ss304",
-      "ss316",
       "ss17-4ph"
      ],
      "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
