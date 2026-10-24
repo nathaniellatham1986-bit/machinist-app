@@ -73,6 +73,67 @@
     "title": "DN Solutions Lynx 2100B",
     "accessed": "2026-10-24"
    }
+  },
+  {
+   "model": "PUMA 2600",
+   "type": "lathe",
+   "spindles": [
+    {
+     "option": "Main spindle",
+     "rpm": 3500,
+     "taper": "",
+     "kw_peak": 30,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.dn-solutions.com/global/product/turning-center/2-axis-horizontal/puma-2600.do",
+    "title": "DN Solutions PUMA 2600",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "DVF 5000",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Standard 12000",
+     "rpm": 12000,
+     "taper": "",
+     "kw_peak": 18.5,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    },
+    {
+     "option": "Optional 18000",
+     "rpm": 18000,
+     "taper": "",
+     "kw_peak": 22,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.dn-solutions.com/eu/product/5-axis-machining/horizontal-machining/dvf-5000.do",
+    "title": "DN Solutions DVF 5000",
+    "accessed": "2026-10-24"
+   }
   }
  ]
 }
