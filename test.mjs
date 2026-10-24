@@ -232,3 +232,8 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   assert.equal(toolLifeOf({ toolLife: 10 }), 10); assert.equal(toolLifeOf({ coolantNote: 'Catalog: vc calculated for 15 min tool life with external flood coolant.' }), 15);
   assert.equal(toolLifeOf({ note: 'if dry machining is possible, tool life is reduced by 20–30% on average' }), null); assert.equal(toolLifeOf({}), null);
   console.log('AM #2 tool life tests pass'); }
+{ const { threadFeed } = await import('./calc.js');
+  assert.deepEqual(threadFeed({ rpm: 2000, lead: 0.125 }), { rpm: 2000, ipm: 250, capped: false, high: true });
+  const c = threadFeed({ rpm: 2000, lead: 0.125, maxIpm: 300 }); assert.equal(c.high, false); assert.equal(c.capped, false);
+  const d = threadFeed({ rpm: 2000, lead: 0.125, maxIpm: 150 }); assert.equal(d.capped, true); assert.equal(d.rpm, 1200);
+  console.log('AM #3 threading guard tests pass'); }
