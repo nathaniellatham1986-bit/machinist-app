@@ -26,7 +26,7 @@ const uSp = x => metric ? Math.round(x * 0.3048) : Math.round(x), uFeed = (x, dp
 const LS = { get: (k, d) => { try { return JSON.parse(localStorage.getItem('fs.' + k)) ?? d; } catch { return d; } }, set: (k, v) => localStorage.setItem('fs.' + k, JSON.stringify(v)) };
 let mode = q.get('mode') || 'mill', defs = {};
 const MATS = idx.materials, matSel = () => MATS.find(m => m.id === $('mat').value);
-$('matPick').add(new Option('All materials', ''));
+$('matPick').add(new Option('Pick a material', ''));
 for (const [k, n] of idx.materialGroups) { $('matPick').add(new Option(`${n}, any · ISO ${k}`, k));
   MATS.filter(m => m.iso === k).forEach(m => $('matPick').add(new Option(`\u00a0\u00a0${m.name} · ISO ${k}`, k + ':' + m.id))); }
 const syncPick = () => { $('matPick').value = $('iso').value + ($('mat').value ? ':' + $('mat').value : ''); };
@@ -88,14 +88,17 @@ const geo = geoName;
 // Part and Groove: depth of cut and MRR do not apply; Part runs to center (finish Ø 0).
 const PG = () => mode === 'turn' && /Groove|Part/.test($('top').value), PART = () => mode === 'turn' && /Part/.test($('top').value);
 const short = s => s.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim().slice(0, 48);
-function fillBrand() { const cur = $('brand').value; $('brand').length = 0; $('brand').add(new Option('All brands', ''));
+function fillBrand() { const cur = $('brand').value; $('brand').length = 0; $('brand').add(new Option('Pick a brand', ''));
   [...new Set(inMode().map(t => t.brand))].sort().forEach(b => $('brand').add(new Option(b, b)));
   $('brand').value = [...$('brand').options].some(o => o.value === cur) ? cur : ''; return fillKind(); }
 function fillKind() { const cur = $('kind').value, ks = [...new Set(inMode().filter(t => !$('brand').value || t.brand === $('brand').value).map(kindOf))].sort();
   $('kind').length = 0; if (ks.length > 1) $('kind').add(new Option('All types', '')); ks.forEach(k => $('kind').add(new Option(k, k)));
   $('kind').value = ks.includes(cur) ? cur : ks.length === 1 ? ks[0] : ''; return fillTool(); }
 const MAXOPT = 300;
+// No tool is picked until both a material and a brand are chosen; then the best match from THAT brand is the default.
+const needMsg = () => !$('iso').value && !$('brand').value ? 'Pick a material and a brand' : !$('iso').value ? 'Pick a material' : !$('brand').value ? 'Pick a brand' : '';
 function fillTool() { const cur = $('tool').value, b = $('brand').value, words = $('tq').value.toLowerCase().split(/\s+/).filter(Boolean);
+  const NEED = needMsg(); if (NEED) { GROUPS = {}; $('tool').length = 0; $('tool').add(new Option(NEED, '')); $('tn').textContent = ''; updateFindLink(); return fillGrade(); }
   const kd = $('kind').value, hits = inMode().filter(t => (!b || t.brand === b) && (!kd || kindOf(t) === kd) && words.every(w => `${t.brand} ${t.series} ${t.type ?? ''}`.toLowerCase().includes(w)));
   const iso = matSel()?.iso || $('iso').value, rank = t => { const f = t.fullIsos || [], ok = i => !iso || i === iso || i === '*';
     const gen = !iso && mode !== 'tap' ? (f.includes('P') ? 0 : .25) + (mode === 'turn' && !(t.pFeed >= .012 && t.pFeed <= .025) ? .2 : 0) : 0; return gen + (f.some(x => !x.includes('~') && ok(x)) ? 0 : f.some(x => ok(x.replace('~', ''))) ? 1 : 2); };
@@ -202,7 +205,7 @@ function fill() {
   $('thrL').hidden = !TH(); if (TH()) { const p = threadPitchIn(+$('tpi').value, $('pitchU').value); setIn('fpt', p ?? ''); FD = p ? { def: p, min: null, basis: 'feed/rev = thread pitch (geometry)' } : null; defs.fpt = p; }
   const NO = '<span class="warn">No manufacturer data</span>';
   let h = '';
-  if (!c) h = `${NO} for ${t ? t.brand + ' ' + t.series : 'this selection'}.` + (t?.notes ? `<br>${t.notes}` : '');
+  if (!c) h = !t ? '' : `${NO} for ${t ? t.brand + ' ' + t.series : 'this selection'}.` + (t?.notes ? `<br>${t.notes}` : '');
   else {
     const s = c.source, apU = c.ap ? toIn(1, c.ap.unit) : 1;
     const gun = !!t && isGun(t), thru = !gun && mode === 'drill' && cool === 'flood' && (m => m.includes('through') && !m.includes('flood'))(coolModes(c.coolant ?? '')); h = `<details><summary>${badge(c)}</summary><span class="tag">${c.status.toUpperCase()}</span> ${s.manufacturer} · ${s.catalog} · ${s.edition}${s.page ? ' · p.' + s.page : ''}${s.url ? ` · <a style="color:#9cf" href="${s.url}">source</a>` : ''}`
@@ -237,7 +240,9 @@ function showEng() { const d = D(); $('ae').value = $('aeU').value === 'pct' ? +
   $('ap').value = $('apU').value === 'xd' ? +frac.ap.toFixed(3) : +(frac.ap * d * LK()).toFixed(metric ? 3 : 4); readEng(); }
 $('aeU').onchange = () => { showEng(); run(); }; $('apU').onchange = () => { showEng(); run(); };
 const mine = k => defs[k] == null || Math.abs(inV(k) - defs[k]) > (k === 'sfm' ? 2 : 5e-5);
-function run() { updateFindLink(); favMark(); if (PART()) $('fD').value = '0'; if (mode === 'mill') readEng();
+function run() { updateFindLink(); favMark();
+  if (!curTool()) { const m = needMsg() ? needMsg() + ' to see manufacturer numbers.' : `${$('brand').value} has no ${mode} tool with data for this material and these filters.`;
+    $('cards').innerHTML = `<div class="out"><span class="warn">${m}</span></div>`; $('bar').innerHTML = `<small>${m}</small>`; return; } if (PART()) $('fD').value = '0'; if (mode === 'mill') readEng();
   const v = inV, tag = k => mine(k) && $(k).value ? ' <span class="tag warn">YOUR VALUE, NOT MANUFACTURER</span>' : '';
   const c = curTool()?.conditions[$('cond').value];
   let w = '';
