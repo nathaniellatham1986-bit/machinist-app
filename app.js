@@ -16,8 +16,9 @@ threads.threads.forEach((t, i) => $('thr').add(new Option(t.name, i)));
 const q = new URLSearchParams(location.search);
 // Units: values are kept in inches internally; metric only changes what is shown/typed.
 let metric = false; const LEN = ['d', 'fD', 'so', 'apT', 'hd', 'bd', 'len'];
-const inV = k => (+$(k).value || 0) / (metric && LEN.includes(k) ? 25.4 : 1);
-const setIn = (k, x) => { $(k).value = x === '' || x == null ? '' : +(metric && LEN.includes(k) ? x * 25.4 : x).toFixed(metric ? 3 : 4); };
+const UF = k => !metric ? 1 : LEN.includes(k) || k === 'fpt' ? 25.4 : k === 'sfm' ? 0.3048 : 1;
+const inV = k => (+$(k).value || 0) / UF(k);
+const setIn = (k, x) => { $(k).value = x === '' || x == null ? '' : +(x * UF(k)).toFixed(k === 'sfm' ? 0 : k === 'fpt' ? (metric ? 4 : 5) : metric ? 3 : 4); };
 const UL = () => metric ? 'mm' : 'in', uLen = (x, dp = 4) => metric ? (x * 25.4).toFixed(Math.max(dp - 2, 1)) + ' mm' : x.toFixed(dp) + ' in';
 const uSp = x => metric ? Math.round(x * 0.3048) : Math.round(x), uFeed = (x, dp = 4) => metric ? (x * 25.4).toFixed(Math.max(dp - 1, 2)) : x.toFixed(dp), uIpm = (x, dp = 1) => metric ? Math.round(x * 25.4) : x.toFixed(dp);
 const LS = { get: (k, d) => { try { return JSON.parse(localStorage.getItem('fs.' + k)) ?? d; } catch { return d; } }, set: (k, v) => localStorage.setItem('fs.' + k, JSON.stringify(v)) };
@@ -54,7 +55,7 @@ $('mDel').onclick = () => { const m = LS.get('machines', []); if ($('mach').valu
 function setMode(m) {
   mode = m; recallList(); document.querySelectorAll('[data-mode]').forEach(b => b.classList.toggle('on', b.dataset.mode === m));
   document.querySelectorAll('[data-show]').forEach(e => e.hidden = !e.dataset.show.split(' ').includes(m));
-  $('feedLbl').firstChild.textContent = m === 'mill' ? 'Chip load (in/tooth)' : m === 'tap' ? 'Pitch (in)' : m === 'bore' ? 'Feed (per tooth or per rev, as printed)' : 'Feed (in/rev)';
+  $('feedLbl').firstChild.textContent = m === 'mill' ? `Chip load (${UL()}/tooth)` : m === 'tap' ? `Pitch (${UL()})` : m === 'bore' ? `Feed (${UL()}, per tooth or per rev as printed)` : `Feed (${UL()}/rev)`;
   $('dLbl').firstChild.textContent = (m === 'turn' ? 'Start dia' : m === 'tap' ? 'Tap dia' : m === 'bore' ? 'Bore dia' : 'Tool dia') + ` (${UL()})`; machines();
   $('zLbl').firstChild.textContent = m === 'bore' ? 'Cutting edges' : 'Flutes'; if (m === 'bore') $('z').value = 1;
   $('brand').length = 0; $('tool').length = 0; $('tq').value = ''; $('cq').value = ''; return fillBrand();
@@ -62,7 +63,7 @@ function setMode(m) {
 const toolOk = t => { const m = matSel(); if (m && !(t.mats.includes(m.id) || t.isos.includes(m.iso) || t.isos.includes('*'))) return false;
   return !$('onlyData').checked || t.dataIsos.some(i => i === '*' || !(m?.iso || $('iso').value) || i === (m?.iso || $('iso').value)); };
 const inMode = () => SUM.filter(t => t.mode === mode && toolOk(t) && (mode !== 'tap' || !$('tapT').value || tapTypeOf(t) === $('tapT').value)
-  && (mode !== 'turn' || (() => { const o = turnOpOf(t); const want = $('top').value; return want === 'Face' ? o === 'Turn' || o === 'Face' : o === want; })()));
+  && (mode !== 'turn' || (() => { const o = turnOpOf(t); const want = $('top').value; return o === want; })()));
 const short = s => s.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim().slice(0, 48);
 function fillBrand() { const cur = $('brand').value; $('brand').length = 0; $('brand').add(new Option('All brands', ''));
   [...new Set(inMode().map(t => t.brand))].sort().forEach(b => $('brand').add(new Option(b, b)));
@@ -77,7 +78,7 @@ function fillTool() { const cur = $('tool').value, b = $('brand').value, words =
     const gen = !iso && mode !== 'tap' ? (f.includes('P') ? 0 : .25) + (mode === 'turn' && !(t.pFeed >= .012 && t.pFeed <= .025) ? .2 : 0) : 0; return gen + (f.some(x => !x.includes('~') && ok(x)) ? 0 : f.some(x => ok(x.replace('~', ''))) ? 1 : 2); };
   const r2 = t => rank(t) + (/parting|groov|thread/i.test(t.series + (t.type ?? '')) ? .5 : 0); const r3 = t => r2(t) + (matSel()?.id === 'ss303' && !t.only303 ? .1 : 0); hits.sort((x, y) => r3(x) - r3(y));
   $('tool').length = 0; hits.slice(0, MAXOPT).forEach(t => $('tool').add(new Option(b ? short(t.series) : `${t.brand} — ${short(t.series)}`, t.key)));
-  $('tn').textContent = hits.length > MAXOPT ? `(${MAXOPT} of ${hits.length}; refine search)` : `(${hits.length})`;
+  $('tn').textContent = !hits.length && mode === 'turn' && $('top').value === 'Face' ? '(none: no record says facing)' : hits.length > MAXOPT ? `(${MAXOPT} of ${hits.length}; refine search)` : `(${hits.length})`;
   if ([...$('tool').options].some(o => o.value === cur)) $('tool').value = cur; return fillCond(); }
 const nrKey = c => c.noseRadius ? `${c.noseRadius.value ?? c.noseRadius.label} ${c.noseRadius.unit}` : '';
 // Turn nose radius / chipbreaker: only the values published in this tool's matching records; read-only when there is one.
@@ -139,14 +140,14 @@ function engTags() { if ($('aeX')) $('aeX').textContent += TAG[ENG.ae]; if ($('a
 function fill() {
   const t = curTool(), c = t?.conditions[$('cond').value];
   fillDia(c);
-  if (mode === 'tap') { const th = threads.threads[$('thr').value]; setIn('d', th.d_in); $('fpt').value = th.pitch_in; }
+  if (mode === 'tap') { const th = threads.threads[$('thr').value]; setIn('d', th.d_in); setIn('fpt', th.pitch_in); }
   const d = inV('d'), cool = $('cool').value; LS.set('lastCoolant', cool);
   const shop = c?.status === 'shop-proven';
   const sp = c && pick(c.sfm, spdK(c.sfm?.unit)), fd = mode === 'tap' ? null : c && feedAt(c.feed, d);
   if (shop) { if (sp) sp.basis = 'SHOP-PROVEN value, not manufacturer'; if (fd) fd.basis = 'SHOP-PROVEN value, not manufacturer'; }
-  SP = sp; FD = fd; defs = { sfm: sp?.def ?? null, fpt: mode === 'tap' ? +$('fpt').value : fd?.def ?? null };
+  SP = sp; FD = fd; defs = { sfm: sp?.def ?? null, fpt: mode === 'tap' ? inV('fpt') : fd?.def ?? null };
   prefillEng(t, c, d);
-  $('sfm').value = sp ? Math.round(sp.def) : ''; if (mode !== 'tap') $('fpt').value = fd ? fd.def.toFixed(4) : '';
+  setIn('sfm', sp ? sp.def : ''); if (mode !== 'tap') setIn('fpt', fd ? fd.def : '');
   const NO = '<span class="warn">No manufacturer data</span>';
   let h = '';
   if (!c) h = `${NO} for ${t ? t.brand + ' ' + t.series : 'this selection'}.` + (t?.notes ? `<br>${t.notes}` : '');
@@ -173,14 +174,15 @@ function fill() {
 // Mill engagement: stored as fraction of D; shown in % / xD or inches.
 const frac = { ae: 0.25, ap: 1 };
 const D = () => inV('d');
-function readEng() { const d = D(); frac.ae = $('aeU').value === 'pct' ? +$('ae').value / 100 : (d ? +$('ae').value / d : 0);
-  frac.ap = $('apU').value === 'xd' ? +$('ap').value : (d ? +$('ap').value / d : 0);
-  $('aeX').textContent = $('aeU').value === 'pct' ? `= ${(frac.ae * d).toFixed(4)} in` : `= ${(frac.ae * 100).toFixed(1)}% of D`;
-  $('apX').textContent = $('apU').value === 'xd' ? `= ${(frac.ap * d).toFixed(4)} in` : `= ${frac.ap.toFixed(2)}×D`; engTags(); }
-function showEng() { const d = D(); $('ae').value = $('aeU').value === 'pct' ? +(frac.ae * 100).toFixed(2) : +(frac.ae * d).toFixed(4);
-  $('ap').value = $('apU').value === 'xd' ? +frac.ap.toFixed(3) : +(frac.ap * d).toFixed(4); readEng(); }
+const LK = () => metric ? 25.4 : 1;
+function readEng() { const d = D(); frac.ae = $('aeU').value === 'pct' ? +$('ae').value / 100 : (d ? +$('ae').value / LK() / d : 0);
+  frac.ap = $('apU').value === 'xd' ? +$('ap').value : (d ? +$('ap').value / LK() / d : 0);
+  $('aeX').textContent = $('aeU').value === 'pct' ? `= ${uLen(frac.ae * d)}` : `= ${(frac.ae * 100).toFixed(1)}% of D`;
+  $('apX').textContent = $('apU').value === 'xd' ? `= ${uLen(frac.ap * d)}` : `= ${frac.ap.toFixed(2)}×D`; engTags(); }
+function showEng() { const d = D(); $('ae').value = $('aeU').value === 'pct' ? +(frac.ae * 100).toFixed(2) : +(frac.ae * d * LK()).toFixed(metric ? 3 : 4);
+  $('ap').value = $('apU').value === 'xd' ? +frac.ap.toFixed(3) : +(frac.ap * d * LK()).toFixed(metric ? 3 : 4); readEng(); }
 $('aeU').onchange = () => { showEng(); run(); }; $('apU').onchange = () => { showEng(); run(); };
-const mine = k => defs[k] == null || Math.abs(+$(k).value - defs[k]) > (k === 'sfm' ? 0.5 : 5e-5);
+const mine = k => defs[k] == null || Math.abs(inV(k) - defs[k]) > (k === 'sfm' ? 2 : 5e-5);
 function run() { if (mode === 'mill') readEng();
   const v = inV, tag = k => mine(k) && $(k).value ? ' <span class="tag warn">YOUR VALUE, NOT MANUFACTURER</span>' : '';
   const c = curTool()?.conditions[$('cond').value];
@@ -245,6 +247,7 @@ function run() { if (mode === 'mill') readEng();
   $('cards').innerHTML = w + (miss ? `<div class="out"><span class="warn">No manufacturer data for this combo.</span>${chips.length ? '<br>Nearest options from this tool with data:<div class="chips">' + chips.map(([l, k]) => `<button class="chip" data-k="${k}">${l}</button>`).join('') + '</div>' : ''}</div>` : '') + `<div class="cards">${cards}</div>`;
   $('out').hidden = true;
   $('bar').innerHTML = BAR.length ? BAR.map(([k, x]) => `<span>${x} <small>${k}</small></span>`).join('') + `<small>${t ? short(t.series) : ''}</small>` : '<small>No manufacturer data for this combo</small>';
+  if (!$('mach').value) $('bar').innerHTML += '<span class="warn" style="font-size:15px;width:100%">⚠ Pick a machine for RPM limits</span>';
 }
 $('cards').onclick = e => { const k = e.target.closest('.chip')?.dataset.k; if (!k) return; const [ty, x] = k.split(/:(.*)/);
   if (ty === 'd') { setIn('d', +x); if (mode === 'mill') showEng(); fill(); }
@@ -267,8 +270,9 @@ $('recall').onchange = async () => { const k = $('recall').value; if (!k) return
 document.querySelectorAll('[data-mode]').forEach(b => { b.onclick = () => setMode(b.dataset.mode); b.hidden = !SUM.some(t => t.mode === b.dataset.mode); });
 ['top', 'tapT'].forEach(k => $(k).onchange = fillBrand); $('kind').onchange = fillTool; ['pass', 'cut', 'nose', 'cb'].forEach(k => $(k).onchange = fillCond);
 ['fD', 'hd', 'bd', 'so'].forEach(k => $(k).oninput = run); ['shk', 'hole'].forEach(k => $(k).onchange = run);
-$('unit').onclick = () => { const x = Object.fromEntries(LEN.map(k => [k, $(k).value === '' ? '' : inV(k)])); metric = !metric; LS.set('metric', metric);
-  LEN.forEach(k => setIn(k, x[k])); $('unit').textContent = metric ? 'mm' : 'inch'; document.querySelectorAll('.u').forEach(e => e.textContent = `(${UL()})`);
+$('unit').onclick = () => { const KS = [...LEN, 'sfm', 'fpt'], x = Object.fromEntries(KS.map(k => [k, $(k).value === '' ? '' : inV(k)])); metric = !metric; LS.set('metric', metric);
+  KS.forEach(k => setIn(k, x[k])); $('aeU').options[1].text = $('apU').options[1].text = UL(); showEng(); $('sfmLbl').firstChild.textContent = metric ? 'Speed (m/min)' : 'SFM';
+  $('feedLbl').firstChild.textContent = $('feedLbl').firstChild.textContent.replace(/\b(in|mm)\//, UL() + '/').replace(/\((in|mm)\)/, `(${UL()})`); $('unit').textContent = metric ? 'mm' : 'inch'; document.querySelectorAll('.u').forEach(e => e.textContent = `(${UL()})`);
   $('dLbl').firstChild.textContent = $('dLbl').firstChild.textContent.replace(/\((in|mm)\)/, `(${UL()})`); run(); };
 $('matPick').onchange = () => { const [i, m] = $('matPick').value.split(':'); $('iso').value = i; $('mat').value = m ?? ''; fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillTool; $('tq').oninput = fillTool; $('cq').oninput = fillCond; $('tool').onchange = () => { $('cq').value = ''; fillCond(); }; $('mach').onchange = applyMachine;
 $('cond').onchange = () => { fill(); recent(); }; ['cool', 'thr'].forEach(k => $(k).onchange = fill); $('d').onchange = () => { if (mode === 'mill') showEng(); fill(); };

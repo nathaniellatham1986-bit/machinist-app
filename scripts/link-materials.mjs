@@ -4,7 +4,7 @@
 import fs from 'node:fs';
 const RULES = [
   ['ss303', 'M', /\b303\b|free[- ]?machin\w*\s+stainless/i],
-  ['ss304', 'M', /\b30[14]L?\b|\b316L?\b|\b321\b|\b347\b/i],
+  ['ss304', 'M', /(?:\b30[14]L?\b|\b316L?\b|\b321\b|\b347\b)(?!\s*(?:HB|HRC|HV))/i],
   ['ss17-4ph', 'M', /\b17-?4\b/i],
   ['ss400', 'M', /\b4[0-4]\d\b/],
   ['p-mild', 'P', /\b10\d\d\b|\b10XX\b|\b11XX\b|\b12L?XX\b|\b12L14\b|\bA36\b/i],
