@@ -159,3 +159,7 @@ export const threadFeed = ({ rpm, lead, maxIpm }) => { const ipm = rpm * lead;
 export const pitchRangeOf = c => { const m = `${c.label ?? ''} ${c.operation ?? ''}`.match(/pitch\s*(\d+(?:[.,]\d+)?)\s*[–-]\s*(\d+(?:[.,]\d+)?)\s*mm/i);
   return m ? [parseFloat(m[1].replace(',', '.')), parseFloat(m[2].replace(',', '.'))] : null; };
 export const pitchCovers = (c, pIn) => { const r = pitchRangeOf(c); if (!r || !(pIn > 0)) return null; const mm = pIn * 25.4; return mm >= r[0] - 1e-6 && mm <= r[1] + 1e-6; };
+// When two picker lines would read the same, add the printed page and the first insert designation (+count) so each line is distinct.
+export const distinctName = (name, t, dup) => { if (!dup) return name; const pg = (String(t.series).match(/\((p\.\s*\d+)\)/) ?? [])[1];
+  const ins = t.ins ? `${String(t.ins[0]).replace(/^\S+\s+(?=\S)/, m => String(t.series).startsWith(m.trim()) ? '' : m)}${t.ins[1] > 1 ? ` +${t.ins[1] - 1}` : ''}` : null;
+  return [name, pg, ins].filter(Boolean).join(' · '); };

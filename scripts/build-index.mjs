@@ -30,6 +30,7 @@ for (const f of files) {
     ...(t.mode === 'turn' ? { pFeed: (() => { const v = t.conditions.filter(c => c.iso === 'P' && c.sfm && c.feed?.range && c.source.kind === 'catalog' && c.feed.unit === 'in')
       .map(c => { const r = c.feed.range; return r.value ?? r.start ?? (r.min != null && r.max != null ? (r.min + r.max) / 2 : r.max); }).filter(x => x > 0).sort((a, b) => a - b);
       return v.length ? v[Math.floor(v.length / 2)] : null; })() } : {}),
+    ...((u => u.length ? { ins: [u[0], u.length] } : {})([...new Set(t.conditions.map(c => c.insert).filter(Boolean))])),
     ...(t.mode === 'drill' && sizeRange(t) ? { dr: sizeRange(t).map(x => +x.toFixed(4)) } : {}),
     ...(t.conditions.some(c => c.materials?.includes('ss303') && !shared303(c)) ? { only303: true } : {}),
     mats: [...new Set(t.conditions.flatMap(c => c.materials ?? []))].sort(),

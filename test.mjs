@@ -177,3 +177,7 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   assert.equal(seriesGrade({ mode: 'turn', series: 'CNMG432-MF4 TM2000' }), 'TM2000'); assert.equal(seriesGrade({ mode: 'turn', series: 'PENTA inserts (p.593)' }), null);
   assert.equal(geoName({ mode: 'turn', series: 'CNMG432-MF4 TP2501', grade: 'TP2501' }), 'CNMG432-MF4');
   console.log('ME10 #4 series grade tests pass'); }
+{ const { distinctName } = await import('./calc.js');
+  assert.equal(distinctName('Iscar — PENTA inserts', { series: 'PENTA inserts (p.593)', ins: ['PENTA D22N200J020', 12] }, true), 'Iscar — PENTA inserts · p.593 · D22N200J020 +11');
+  assert.equal(distinctName('X', { series: 'X' }, false), 'X');
+  console.log('ME10 #5 distinct name tests pass'); }

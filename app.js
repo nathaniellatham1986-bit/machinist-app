@@ -1,5 +1,5 @@
 import { MODES, migrate, forMode } from './recall.js';
-import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers } from './calc.js';
+import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName } from './calc.js';
 const $ = id => document.getElementById(id);
 const J = u => fetch(u).then(r => r.json());
 const idx = await J('data/index.json');
@@ -87,7 +87,8 @@ function fillTool() { const cur = $('tool').value, b = $('brand').value, words =
   GROUPS = {}; const seen = {}; const list = [];
   for (const t of hits) { const g = geo(t), k = t.grade ? `${t.brand}|${g}` : t.key;
     if (seen[k]) { GROUPS[seen[k]].push(t.key); continue; } seen[k] = t.key; GROUPS[t.key] = [t.key]; list.push([t, g]); }
-  $('tool').length = 0; list.slice(0, MAXOPT).forEach(([t, g]) => $('tool').add(new Option((b ? g : `${t.brand} — ${g}`) + (dD && out(t) ? ' — outside mfr size range' : '') + (blind && tapTypeOf(t) === 'point' ? ' — spiral point pushes chips ahead, not for blind holes' : ''), t.key)));
+  const nm = ([t, g]) => b ? g : `${t.brand} — ${g}`, cnt = {}; list.forEach(x => cnt[nm(x)] = (cnt[nm(x)] || 0) + 1);
+  $('tool').length = 0; list.slice(0, MAXOPT).forEach(([t, g]) => $('tool').add(new Option(distinctName(nm([t, g]), t, cnt[nm([t, g])] > 1) + (dD && out(t) ? ' — outside mfr size range' : '') + (blind && tapTypeOf(t) === 'point' ? ' — spiral point pushes chips ahead, not for blind holes' : ''), t.key)));
   $('tn').textContent = !hits.length && mode === 'turn' && $('top').value === 'Face' ? '(none: no record says facing)' : hits.length > MAXOPT ? `(${MAXOPT} of ${hits.length}; refine search)` : `(${hits.length})`;
   if (cur && !GROUPS[cur]) { const g = Object.keys(GROUPS).find(k => GROUPS[k].includes(cur)); if (g) $('tool').value = g; } else if ([...$('tool').options].some(o => o.value === cur)) $('tool').value = cur; return fillGrade(); }
 async function fillGrade(keep) { const keys = GROUPS[$('tool').value] ?? ($('tool').value ? [$('tool').value] : []); await Promise.all(keys.map(ensure));
