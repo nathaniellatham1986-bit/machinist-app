@@ -1,6 +1,6 @@
 import { MODES, migrate, forMode, upsertMachine, dedupeMachines, removeMachine } from './recall.js';
 import { enhance } from './combo.js';
-import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, drillTier, rowDia, rowExcludes, toolLifeOf } from './calc.js';
+import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, classifyOverride, drillTier, rowDia, rowExcludes, toolLifeOf } from './calc.js';
 const $ = id => document.getElementById(id);
 const J = u => fetch(u).then(r => r.json());
 ['matPick', 'brand', 'kind', 'tool', 'grade', 'cond', 'thr', 'dPick', 'recall', 'pB', 'pM', 'pS'].forEach(k => enhance($(k)));
@@ -245,6 +245,9 @@ function showEng() { const d = D(); $('ae').value = $('aeU').value === 'pct' ? +
   $('ap').value = $('apU').value === 'xd' ? +frac.ap.toFixed(3) : +(frac.ap * d * LK()).toFixed(metric ? 3 : 4); readEng(); }
 $('aeU').onchange = () => { showEng(); run(); }; $('apU').onchange = () => { showEng(); run(); };
 const mine = k => defs[k] == null || Math.abs(inV(k) - defs[k]) > (k === 'sfm' ? 2 : 5e-5);
+const ovc = k => { const p = k === 'sfm' ? SP : FD; if (defs[k] == null || !p) return { state: mine(k) ? 'out' : 'mfr', label: 'YOUR VALUE, NOT MANUFACTURER', note: '' }; return classifyOverride(inV(k), p, k === 'sfm' ? 2 : 5e-5, k === 'sfm' ? 0 : 4); };
+const ovHtml = o => `<span class="${o.state === 'out' ? 'warn' : 'adjw'}">${o.label}</span>${o.note ? `<br><span class="${o.state === 'out' ? 'warn' : 'adjw'}">${o.note}</span>` : ''}`;
+const ovCls = o => o.state === 'out' ? 'mine' : o.state === 'within' ? 'adj' : '';
 function run() { updateFindLink(); favMark();
   if (!curTool()) { const m = needMsg() ? needMsg() + ' to see manufacturer numbers.' : `${$('brand').value} has no ${mode} tool with data for this material and these filters.`;
     $('cards').innerHTML = `<div class="out"><span class="warn">${m}</span></div>`; $('bar').innerHTML = `<small>${m}</small>`; return; } if (PART()) $('fD').value = '0'; if (mode === 'mill') readEng();
@@ -260,20 +263,19 @@ function run() { updateFindLink(); favMark();
   if (mode === 'bore' && v('so')) { const bd = v('bd') || v('d'), lim = boreLimit($('shk').value), r = v('so') / bd;
     w += `<div class="${r > lim ? 'warn' : 'out'}">Bar L/D ${r.toFixed(1)}:1 (${$('shk').value} shank, limit ~${lim}×D)${r > lim ? ' · past the usual limit: expect chatter; shorten stickout, use a ' + ($('shk').value === 'steel' ? 'carbide or ' : '') + 'damped bar, or reduce speed/feed' : ''} <span class="tag">GENERAL GUIDANCE, not manufacturer data</span></div>`; }
   const t = curTool(), src = c ? (c.status === 'shop-proven' ? '⚠ SHOP-PROVEN, not manufacturer' : `${c.source.manufacturer} ${c.source.kind === 'label' ? 'box label' : 'catalog'}${c.source.page ? ' p.' + c.source.page : ''} ✓`) : '';
-  const YOURS = '<span class="warn">YOUR VALUE, NOT MANUFACTURER</span>';
-  const BAR = []; const card = (k, val, b, cls = '', ov) => `<div class="card ${cls}"${ov ? ` data-ov="${ov}"` : ''}><div class="k">${k}${ov ? ' <span class="tap">✎ tap to change</span>' : ''}</div><div class="v">${val}</div><div class="b">${b}</div>${ov && cls === 'mine' ? '<button class="sm rst" data-reset="' + ov + '">Reset to manufacturer</button>' : ''}</div>`;
+  const BAR = []; const card = (k, val, b, cls = '', ov) => `<div class="card ${cls}"${ov ? ` data-ov="${ov}"` : ''}><div class="k">${k}${ov ? ' <span class="tap">✎ tap to change</span>' : ''}</div><div class="v">${val}</div><div class="b">${b}</div>${ov && (cls === 'mine' || cls === 'adj') ? '<button class="sm rst" data-reset="' + ov + '">Reset to manufacturer</button>' : ''}</div>`;
   const boreFz = mode === 'bore' && c?.feed?.kind === 'fz', fk = (mode === 'mill' ? 'Chip load' : mode === 'tap' ? 'Pitch' : 'Feed') + ` (${UL()}/${mode === 'mill' || boreFz ? 'tooth' : 'rev'})`, SPL = metric ? 'm/min' : 'SFM', FPL = metric ? 'Feed mm/min' : 'Feed IPM';
   let cards = '';
-  const tl = toolLifeOf(c), sfmB = mine('sfm') && v('sfm') ? YOURS : SP ? `${src} · ${SP.basis}${SP.min != null ? ` · range ${fmt(SP, 0)}` : ''}${tl ? ` · <b>at ${tl} min tool life</b> (source)` : ''}` : '';
-  const fB = mode === 'tap' || TH() ? (TH() && !v('fpt') ? 'enter TPI or pitch' : 'feed/rev = thread pitch (geometry)') : false ? '' : mode === 'tap' ? 'thread pitch (geometry)' : mine('fpt') && v('fpt') ? YOURS : FD ? `${src} · ${FD.basis}${FD.min != null ? ` · range ${fmt(FD, 4)}` : ''}` : '';
+  const tl = toolLifeOf(c), sfmB = ovc('sfm').state !== 'mfr' && v('sfm') ? ovHtml(ovc('sfm')) : SP ? `${src} · ${SP.basis}${SP.min != null ? ` · range ${fmt(SP, 0)}` : ''}${tl ? ` · <b>at ${tl} min tool life</b> (source)` : ''}` : '';
+  const fB = mode === 'tap' || TH() ? (TH() && !v('fpt') ? 'enter TPI or pitch' : 'feed/rev = thread pitch (geometry)') : false ? '' : mode === 'tap' ? 'thread pitch (geometry)' : ovc('fpt').state !== 'mfr' && v('fpt') ? ovHtml(ovc('fpt')) : FD ? `${src} · ${FD.basis}${FD.min != null ? ` · range ${fmt(FD, 4)}` : ''}` : '';
   const PR = mode === 'mill' || mode === 'drill' || mode === 'bore' ? printedAt(c, v('d')) : null;
   if (PR) { const r = printedRun(PR, { dIn: v('d'), z: v('z'), maxRpm: v('maxRpm') }), ps = `${src} · printed for Ø${PR.key} ${PR.unit}`;
     const capT = r.capped ? `<span class="warn">CAPPED: printed ${PR.rpm} RPM scaled to machine max; feed scaled by the same ratio</span> · ` : '';
     BAR.push(['RPM', Math.round(r.rpm)], [metric ? 'mm/min' : 'IPM', r.ipm != null ? uIpm(r.ipm) : '—']); cards += card('RPM', Math.round(r.rpm), capT + 'MANUFACTURER PRINTED · ' + ps) + (r.ipm != null ? card(FPL, uIpm(r.ipm), capT + 'MANUFACTURER PRINTED table feed' + (PR.tableFeed.unit === 'mm/min' ? ` (${PR.tableFeed.value} mm/min)` : '') + ' · ' + ps) : card(FPL, 'No manufacturer data', '', 'none'))
       + card(SPL, uSp(r.sfm), 'DERIVED from printed RPM × diameter') + (r.fz != null ? card(mode === 'drill' ? 'IPR' : 'Chip load', uFeed(mode === 'drill' ? r.ipm / r.rpm : r.fz), 'DERIVED from printed feed ÷ (RPM' + (mode === 'drill' ? ')' : ' × flutes)')) : ''); }
   else {
-  cards += v('sfm') ? card(SPL, uSp(v('sfm')), sfmB + (mine('sfm') && SP ? ` · manufacturer ${fmt(SP, 0)}` : ''), mine('sfm') ? 'mine' : '', SP ? 'sfm' : '') : card(SPL, 'No manufacturer data', c && allMat(c) ? 'Feed table, all materials: no speed printed' : '', 'none');
-  cards += v('fpt') ? card(fk, uFeed(v('fpt')), fB + (mode !== 'tap' && !TH() && mine('fpt') && FD ? ` · manufacturer ${fmt(FD, 4)}` : ''), mode !== 'tap' && mine('fpt') ? 'mine' : '', FD && mode !== 'tap' && !TH() ? 'fpt' : '') : card(fk, 'No manufacturer data' + (c?.feed ? ' at this diameter' : ''), '', 'none');
+  cards += v('sfm') ? card(SPL, uSp(v('sfm')), sfmB + (ovc('sfm').state !== 'mfr' && SP ? ` · manufacturer ${fmt(SP, 0)}` : ''), ovCls(ovc('sfm')), SP ? 'sfm' : '') : card(SPL, 'No manufacturer data', c && allMat(c) ? 'Feed table, all materials: no speed printed' : '', 'none');
+  cards += v('fpt') ? card(fk, uFeed(v('fpt')), fB + (mode !== 'tap' && !TH() && ovc('fpt').state !== 'mfr' && FD ? ` · manufacturer ${fmt(FD, 4)}` : ''), mode !== 'tap' && !TH() ? ovCls(ovc('fpt')) : '', FD && mode !== 'tap' && !TH() ? 'fpt' : '') : card(fk, 'No manufacturer data' + (c?.feed ? ' at this diameter' : ''), '', 'none');
   let o = null, extra = '';
   if (v('sfm') && v('fpt') && v('d')) {
     if (mode === 'mill') { o = compute({ sfm: v('sfm'), d: v('d'), fpt: v('fpt'), z: v('z'), ae: frac.ae * v('d'), ap: frac.ap * v('d'), stickout: v('so'), maxRpm: v('maxRpm'), maxHp: v('maxHp'), iso: c?.iso });

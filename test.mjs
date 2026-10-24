@@ -262,3 +262,14 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
 { const { removeMachine: rm } = await import('./recall.js'); const r = rm([{ name: 'a' }, { name: 'b' }, { name: 'c' }], 1, { mill: '1', turn: '2', drill: '0', tap: '' });
   assert.deepEqual(r.list.map(x => x.name), ['a', 'c']); assert.deepEqual(r.last, { mill: '', turn: '1', drill: '0', tap: '' }); console.log('ok removeMachine'); }
 { const { filterOpts } = await import('./combo.js'); assert.deepEqual(filterOpts(['x', 'y'], ''), [0, 1]); }
+// classifyOverride: amber inside mfr range, red outside
+{ const { classifyOverride: C } = await import('./calc.js'); const R = { min: 300, max: 550, def: 300 };
+  assert.equal(C(300, R, 2).state, 'mfr'); assert.equal(C(500, R, 2).state, 'within'); assert.equal(C(500, R, 2).label, 'Adjusted, within mfr range 300–550');
+  assert.equal(C(550, R, 2).state, 'within'); assert.equal(C(301, { ...R, def: 425 }, 0).state, 'within');
+  assert.deepEqual([C(600, R, 2).state, C(600, R, 2).side, C(600, R, 2).note], ['out', 'above', 'above mfr range (300–550)']);
+  assert.deepEqual([C(250, R, 2).state, C(250, R, 2).side, C(250, R, 2).note], ['out', 'below', 'below mfr range (300–550)']);
+  const M = { min: 500, max: null, def: 500 }; assert.equal(C(500, M, 2).state, 'mfr'); assert.equal(C(505, M, 2).label, 'Adjusted, at/above mfr minimum 500'); assert.equal(C(505, M, 2).note, '');
+  assert.equal(C(700, M, 2).state, 'within'); assert.equal(C(700, M, 2).note, 'mfr minimum only, no upper limit published'); assert.equal(C(450, M, 2).note, 'below mfr minimum (500)');
+  const S = { min: null, max: null, def: 200 }; assert.equal(C(210, S, 0).label, 'Adjusted from mfr value 200'); assert.equal(C(190, S, 0).state, 'within');
+  assert.equal(C(250, S, 0).state, 'out'); assert.equal(C(150, S, 0).side, 'below'); assert.match(C(250, S, 0).note, /20% is a rule of thumb, not a manufacturer limit/);
+  assert.equal(C(.004, { min: .003, max: .006, def: .003 }, 5e-5, 4).label, 'Adjusted, within mfr range 0.0030–0.0060'); }

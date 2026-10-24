@@ -201,3 +201,18 @@ export const rowExcludes = (c, d) => { const r = rowDia(c); return !!r && d > 0 
 export const toolLifeOf = c => { if (!c) return null; if (c.toolLife > 0) return +c.toolLife;
   const m = [c.note, c.coolantNote, c.source?.notes].filter(Boolean).join(' ').match(/(\d+(?:\.\d+)?)\s*min(?:utes?)?\.?\s*(?:of\s*)?tool\s*life|tool\s*life\s*(?:of\s*|T\s*=\s*|=\s*)?(\d+(?:\.\d+)?)\s*min/i);
   return m ? +(m[1] ?? m[2]) : null; };
+// Override classification for a tapped SFM / feed box. p = picked spec {min,max,def}; eps = "same value" tolerance; dp = display decimals.
+// 'mfr' = unchanged; 'within' = inside manufacturer's published range (amber); 'out' = YOUR VALUE, NOT MANUFACTURER (red).
+export function classifyOverride(v, p, eps = 0, dp = 0) {
+  const f = x => x.toFixed(dp), r = (state, side, label, note = '') => ({ state, side, label, note });
+  if (!p || v == null || !isFinite(v) || Math.abs(v - p.def) <= eps) return r('mfr', null, '');
+  if (p.min != null && p.max == null) { // min-only
+    if (v < p.min - eps) return r('out', 'below', 'YOUR VALUE, NOT MANUFACTURER', `below mfr minimum (${f(p.min)})`);
+    return r('within', null, `Adjusted, at/above mfr minimum ${f(p.min)}`, v > p.min * 1.25 ? 'mfr minimum only, no upper limit published' : ''); }
+  if (p.min != null && p.max != null && p.max > p.min) { const rg = `${f(p.min)}–${f(p.max)}`;
+    if (v >= p.min - eps && v <= p.max + eps) return r('within', null, `Adjusted, within mfr range ${rg}`);
+    const side = v > p.max ? 'above' : 'below'; return r('out', side, 'YOUR VALUE, NOT MANUFACTURER', `${side} mfr range (${rg})`); }
+  const n = p.def, side = v > n ? 'above' : 'below'; // single number
+  if (Math.abs(v - n) <= Math.abs(n) * 0.2 + eps) return r('within', null, `Adjusted from mfr value ${f(n)}`);
+  return r('out', side, 'YOUR VALUE, NOT MANUFACTURER', `${side} mfr value (${f(n)}) by more than 20% (20% is a rule of thumb, not a manufacturer limit)`);
+}
