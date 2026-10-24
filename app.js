@@ -131,7 +131,7 @@ async function fillCond() {
     const pool = cat2.filter(([, c]) => c.iso === want).length ? cat2.filter(([, c]) => c.iso === want) : cat2, sg = pool[0]?.[1].subgroup ?? pool[0]?.[1].label;
     const same = pool.filter(([, c]) => (c.subgroup ?? c.label) === sg), mid = same[Math.floor((same.length - 1) / 2)];
     const best = mid || opts.find(([, c]) => full(c) && c.source.kind === 'catalog') || opts.find(([, c]) => full(c)) || opts.find(([, c]) => hasData(c) && !(mode === 'drill' && rowExcludes(c, inV('d')))) || opts[0]; if (best) $('cond').value = best[0]; }
-  if (t?.flutes) $('z').value = t.flutes;
+  if (t?.flutes) $('z'.value = t.flutes;
   fill(); recent();
 }
 function coolNote() { const c = curTool()?.conditions[$('cond').value];
@@ -140,7 +140,7 @@ function coolNote() { const c = curTool()?.conditions[$('cond').value];
 const TH = () => mode === 'turn' && $('top').value === 'Thread';
 const allMat = c => c.iso === '*' && !c.material && !c.materials?.length;
 function badge(c) { const s = c.source;
-  if (c.status === 'shop-proven') return `<span class=\"shop\">⚠ Shop-proven, NOT manufacturer data ▸</span>`;
+  if (c.status === 'shop-proven') return `<span class="shop">⚠ Shop-proven, NOT manufacturer data ▸</span>`;
   return `${allMat(c) ? 'Feed table, all materials · ' : ''}${s.manufacturer} ${s.kind === 'label' ? 'box label' : 'catalog'} ✓${c.sourceGroup ? ' · “' + c.sourceGroup + '”' : ''} ▸`; }
 let SP = null, FD = null;
 const diaFeed = c => c?.printed && !c.feed?.byDiameter ? { byDiameter: c.printed.byDiameter, unit: c.printed.unit } : c?.feed;
@@ -162,4 +162,104 @@ function mfgEng(c, d) { if (!c) return {}; const r = {}, u = c.ap ? toIn(1, c.ap
   if (c.woc) r.ae = c.woc; else if (c.aex) r.ae = c.aex; else if (cutOf(c) === 'Slot') r.ae = 1; return r; }
 function prefillEng(t, c, d) { const k = `${$('tool').value}|${$('cond').value}|${d}`; if (k === ENG.key) return; ENG.key = k;
   const m = mfgEng(c, d);
-  if (mode === 'mill') { if (m.ae != null) { frac.ae = m.ae; ENG.ae = 'mfg'; } else if (ENG.ae === 'mfg') { frac.ae = [+27200 bytes truncated for this call]
+  if (mode === 'mill') { if (m.ae != null) { frac.ae = m.ae; ENG.ae = 'mfg'; } else if (ENG.ae === 'mfg') { frac.ae = 0.25; ENG.ae = 'default'; }
+  if (m.ap != null) { frac.ap = m.ap; ENG.ap = 'mfg'; } else if (ENG.ap === 'mfg') { frac.ap = 1; ENG.ap = 'default'; }
+  showEng(); } }
+function showEng() { const d = inV('d');
+  $('aeX').textContent = frac.ae ? `= ${uLen(frac.ae * d)}` : '';
+  $('apX').textContent = frac.ap ? `= ${uLen(frac.ap * d)}` : '';
+  engTags(); }
+function engTags() { const ae = ENG.ae === 'yours' ? ' <span class="tag" style="border-color:#ff6b6b;color:#ff6b6b">YOUR VALUE</span>' : ENG.ae === 'mfg' ? ' <span class="tag" style="border-color:#7f7;color:#7f7">MFG</span>' : '';
+  const ap = ENG.ap === 'yours' ? ' <span class="tag" style="border-color:#ff6b6b;color:#ff6b6b">YOUR VALUE</span>' : ENG.ap === 'mfg' ? ' <span class="tag" style="border-color:#7f7;color:#7f7">MFG</span>' : '';
+  $('aeL').innerHTML = `WOC / stepover${ae}`;
+  $('apL').innerHTML = `DOC ap${ap}`; }
+function readEng() { frac.ae = $('aeU').value === 'pct' ? +$('ae').value / 100 : inV('ae') / inV('d');
+  frac.ap = $('apU').value === 'xd' ? +$('ap').value : inV('ap') / inV('d'); }
+let frac = { ae: 0.25, ap: 1 };
+function fill() { const t = curTool(), c = t?.conditions[$('cond').value];
+  fillDia(c); coolNote();
+  const d = inV('d'); prefillEng(t, c, d);
+  if (mode === 'mill') showEng();
+  run(); }
+function run() { if (PART()) $('fD').value = '0'; if (mode === 'mill') readEng();
+  const t = curTool(), c = t?.conditions[$('cond').value], d = inV('d');
+  if (!c || !d) { $('cards').innerHTML = ''; $('out').innerHTML = ''; $('src').innerHTML = ''; return; }
+  const r = mode === 'mill' ? compute(c, d, +$('z').value, frac.ae, frac.ap, inV('so'), +$('maxRpm').value, +$('maxHp').value) :
+    mode === 'drill' ? drill(c, d, +$('maxRpm').value, +$('maxHp').value, $('cool').value) :
+    mode === 'turn' ? turn(c, d, inV('fD'), inV('apT'), +$('maxRpm').value, +$('maxHp').value, $('top').value, inV('len'), $('sup').value) :
+    mode === 'tap' ? tap(c, d, threadPitchIn(+$('tpi').value, $('pitchU').value), +$('maxRpm').value) :
+    boreLimit(c, d, +$('z').value, inV('bd'), $('shk').value, +$('maxRpm').value, +$('maxHp').value);
+  const cards = [];
+  if (r.sfm) cards.push({ k: 'SFM', v: uSp(r.sfm), b: r.sfmSrc });
+  if (r.rpm) cards.push({ k: 'RPM', v: Math.round(r.rpm), b: r.rpmSrc });
+  if (r.feed) cards.push({ k: mode === 'mill' ? 'Chip load' : mode === 'tap' ? 'Pitch' : 'Feed', v: uFeed(r.feed), b: r.feedSrc });
+  if (r.ipm) cards.push({ k: 'IPM', v: uIpm(r.ipm), b: r.ipmSrc });
+  if (r.mrr) cards.push({ k: 'MRR', v: r.mrr.toFixed(2) + ' in³/min', b: '' });
+  if (r.hp) cards.push({ k: 'HP', v: r.hp.toFixed(2), b: r.hpSrc });
+  if (r.warn) cards.push({ k: 'Note', v: r.warn, b: '', wide: true });
+  $('cards').innerHTML = cards.map(x => `<div class="card${x.wide ? ' wide' : ''}"><div class="k">${x.k}</div><div class="v">${x.v}</div><div class="b">${x.b || ''}</div></div>`).join('');
+  $('out').innerHTML = r.html || '';
+  $('src').innerHTML = c ? badge(c) + (c.source.url ? ` <a href="${c.source.url}" target="_blank">source</a>` : '') : '';
+}
+function recent() { const k = $('tool').value; if (!k) return; const r = LS.get('recent', []); const i = r.findIndex(x => x.key === k); if (i >= 0) r.splice(i, 1); r.unshift({ key: k, mode, mat: $('mat').value, d: inV('d'), cond: $('cond').value }); LS.set('recent', r.slice(0, 12)); recallList(); }
+function recallList() { const fav = LS.get('fav', []), rec = LS.get('recent', []); const s = $('recall'); s.length = 1;
+  fav.forEach((x, i) => s.add(new Option('★ ' + (x.name || x.key), 'f' + i)));
+  rec.forEach((x, i) => s.add(new Option(x.key + ' · ' + (x.mat || ''), 'r' + i))); }
+$('fav').onclick = () => { const n = prompt('Name this favorite?') || $('tool').value; const fav = LS.get('fav', []); fav.unshift({ name: n, key: $('tool').value, mode, mat: $('mat').value, d: inV('d'), cond: $('cond').value, ae: $('ae').value, ap: $('ap').value }); LS.set('fav', fav.slice(0, 20)); recallList(); };
+$('unit').onclick = () => { metric = !metric; $('unit').textContent = metric ? 'mm' : 'inch'; ['d', 'fD', 'so', 'apT', 'hd', 'bd', 'len', 'sfm', 'fpt'].forEach(k => setIn(k, inV(k))); run(); };
+$('aeU').onchange = () => { showEng(); run(); }; $('apU').onchange = () => { showEng(); run(); };
+function run() { if (PART()) $('fD').value = '0'; if (mode === 'mill') readEng();
+  const t = curTool(), c = t?.conditions[$('cond').value], d = inV('d');
+  if (!c || !d) { $('cards').innerHTML = ''; $('out').innerHTML = ''; $('src').innerHTML = ''; return; }
+  const r = mode === 'mill' ? compute(c, d, +$('z').value, frac.ae, frac.ap, inV('so'), +$('maxRpm').value, +$('maxHp').value) :
+    mode === 'drill' ? drill(c, d, +$('maxRpm').value, +$('maxHp').value, $('cool').value) :
+    mode === 'turn' ? turn(c, d, inV('fD'), inV('apT'), +$('maxRpm').value, +$('maxHp').value, $('top').value, inV('len'), $('sup').value) :
+    mode === 'tap' ? tap(c, d, threadPitchIn(+$('tpi').value, $('pitchU').value), +$('maxRpm').value) :
+    boreLimit(c, d, +$('z').value, inV('bd'), $('shk').value, +$('maxRpm').value, +$('maxHp').value);
+  const cards = [];
+  if (r.sfm) cards.push({ k: 'SFM', v: uSp(r.sfm), b: r.sfmSrc });
+  if (r.rpm) cards.push({ k: 'RPM', v: Math.round(r.rpm), b: r.rpmSrc });
+  if (r.feed) cards.push({ k: mode === 'mill' ? 'Chip load' : mode === 'tap' ? 'Pitch' : 'Feed', v: uFeed(r.feed), b: r.feedSrc });
+  if (r.ipm) cards.push({ k: 'IPM', v: uIpm(r.ipm), b: r.ipmSrc });
+  if (r.mrr) cards.push({ k: 'MRR', v: r.mrr.toFixed(2) + ' in³/min', b: '' });
+  if (r.hp) cards.push({ k: 'HP', v: r.hp.toFixed(2), b: r.hpSrc });
+  if (r.warn) cards.push({ k: 'Note', v: r.warn, b: '', wide: true });
+  $('cards').innerHTML = cards.map(x => `<div class="card${x.wide ? ' wide' : ''}"><div class="k">${x.k}</div><div class="v">${x.v}</div><div class="b">${x.b || ''}</div></div>`).join('');
+  $('out').innerHTML = r.html || '';
+  $('src').innerHTML = c ? badge(c) + (c.source.url ? ` <a href="${c.source.url}" target="_blank">source</a>` : '') : '';
+}
+$('dPick').onchange = () => { setIn('d', +$('dPick').value); if (mode === 'mill') showEng(); fill(); };
+$('recall').onchange = async () => { const k = $('recall').value; if (!k) return; const s = LS.get(k[0] === 'f' ? 'fav' : 'recent', [])[+k.slice(1)]; if (!s) return;
+  $('onlyData').checked = false; if (s.mode !== mode) await setMode(s.mode); await fillBrand(); $('brand').value = SUM.find(x => x.key === s.key)?.brand || ''; await fillTool(); $('tool').value = s.key; await fillGrade(''); $('cond').value = s.cond; setIn('d', s.d); fill(); };
+['top', 'tapT'].forEach(k => $(k).onchange = fillBrand); $('kind').onchange = fillTool; ['pass', 'cut', 'nose', 'cb'].forEach(k => $(k).onchange = fillCond); $('pass').onchange = () => mode === 'turn' ? fillTool() : fillCond();
+['fD', 'hd', 'bd', 'so'].forEach(k => $(k).oninput = run); $('tpi').oninput = $('pitchU').onchange = () => fillCond(); $('shk').onchange = run; $('hole').onchange = () => { const k = $('tool').value; fillTool(); if ($('tool').value === k) fill(); };
+$('matPick').onchange = () => { TUSER = false; const [i, m] = $('matPick').value.split(':'); $('iso').value = i; $('mat').value = m ?? ''; fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillTool; $('tq').oninput = fillTool; $('cq').oninput = fillCond; $('tool').onchange = () => { TUSER = true; GUSER = false; $('cq').value = ''; fillGrade(''); updateFindLink(); }; $('grade').onchange = () => { GUSER = true; fillGrade(); }; $('mach').onchange = applyMachine;
+$('cond').onchange = () => { fill(); recent(); }; $('cool').onchange = () => { if (mode === 'drill') { const k = $('tool').value; if (!TUSER) $('tool').value = ''; fillTool(); if ($('tool').value === k) fill(); } else fill(); }; $('thr').onchange = fillBrand; $('d').onchange = () => { TUSER = false; if (mode === 'mill') showEng(); if (mode === 'drill') { const k = $('tool').value; fillTool(); if ($('tool').value === k) return fill(); return; } fill(); };
+['ae', 'aeU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ae') ENG.ae = 'yours'; readEng(); }));
+['ap', 'apU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ap') ENG.ap = 'yours'; readEng(); }));
+$('apT').addEventListener('input', () => { ENG.ap = 'yours'; engTags(); });
+$('ae').onchange = () => { if (curTool()?.conditions[$('cond').value]?.feed?.byWoc) { readEng(); fill(); } };
+['z', 'sfm', 'fpt', 'ae', 'ap', 'apT', 'len'].forEach(k => $(k).oninput = run); $('sup').onchange = run;
+if (q.get('mode')) mode = q.get('mode');
+if (q.get('mat')) { $('mat').value = q.get('mat'); fillMat(); }
+if (q.get('brand')) $('brand').value = q.get('brand');
+if (q.get('d')) $('d').value = q.get('d');
+for (const k of ['len', 'sup', 'apT', 'maxRpm']) if (q.get(k)) $(k).value = q.get(k);
+await setMode(mode);
+if (q.get('tool')) { const t = SUM.find(x => x.key === q.get('tool')); if (t) { $('onlyData').checked = false; if (t.mode !== mode) await setMode(t.mode); await fillBrand(); $('brand').value = t.brand; await fillTool(); const g = Object.keys(GROUPS).find(k => GROUPS[k].includes(t.key)) ?? t.key; $('tool').value = g; await fillGrade(''); if ([...$('grade').options].some(o => o.value.startsWith(t.key + '|') && !o.disabled) && !$('grade').value.startsWith(t.key + '|')) { $('grade').value = [...$('grade').options].find(o => o.value.startsWith(t.key + '|') && !o.disabled).value; await fillCond(); } } }
+if (q.get('cond')) { $('cond').value = q.get('cond'); fill(); }
+if (q.get('thr')) { $('thr').value = q.get('thr'); fill(); }
+if (q.get('d')) { $('d').value = q.get('d'); fill(); }
+if (q.get('open')) document.querySelector('#src details')?.setAttribute('open', '');
+
+function updateFindLink() {
+  const key = $('tool').value;
+  if (!key) { $('findTool').hidden = true; return; }
+  const t = SUM.find(x => x.key === key) || {};
+  const q = encodeURIComponent([t.brand, t.series, t.type].filter(Boolean).join(' '));
+  $('findTool').href = 'https://www.mscdirect.com/browse/tn?searchterm=' + q;
+  $('findTool').hidden = false;
+  $('findTool').textContent = 'Find this tool';
+}
+
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
