@@ -84,6 +84,42 @@
     "title": "Mazak VCN-430/530 brochure (Mazak document, distributor-hosted)",
     "accessed": "2026-10-24"
    }
+  },
+  {
+   "model": "INTEGREX i-200S",
+   "type": "mill-turn",
+   "spindles": [
+    {
+     "option": "Main spindle",
+     "rpm": 5000,
+     "taper": "A2-6",
+     "kw_peak": 18.5,
+     "kw_cont": 15,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 325,
+     "rating_note": "Summary block 18.5/15 kW, 325 Nm; spec table lists 22/15 kW"
+    },
+    {
+     "option": "Milling spindle",
+     "rpm": 12000,
+     "taper": "HSK-A63 / Capto C6",
+     "kw_peak": null,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 120,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.mmsonline.com/cdn/cms/low_integrex_%20i-series_ea.pdf",
+    "title": "Mazak INTEGREX i-series brochure (Mazak-authored, hosted on mmsonline)",
+    "accessed": "2026-10-24"
+   }
   }
  ]
 }
