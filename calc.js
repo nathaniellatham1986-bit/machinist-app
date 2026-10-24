@@ -122,6 +122,8 @@ export const fzFromPerD = (p, d) => { const m = pick(p, 1); if (!m || !(d > 0)) 
 // 0 = row text names the material class, 1 = neutral, 2 = row text names a different class.
 const ALLOY_IDS = /^(p-alloy|4140|4340)/, ALLOY = /alloy|\b4[13]\d\d\b|CrMo|CrNiMo|\bSCM|\bSNCM/i, NONALLOY = /non.?alloy|unalloy|free.?(machin|cut)|\bmild\b|carbon steel|structural/i;
 const AUST = /austenit|\b05\.2|\bM1\b|\bM1\.|\b30[1-9]L?\b|\b31[0-9]L?\b/i, NONAUST = /ferrit|martensit|duplex|precipitation|\b05\.[13]|\b4[0-4]\d\b(?!\s*(HB|HV|HRC|N))/i;
+// Thread turning: feed per rev = thread pitch (inches). TPI or metric pitch in mm.
+export const threadPitchIn = (v, u) => !(v > 0) ? null : u === 'mm' ? v / 25.4 : 1 / v;
 export const matPref = (id, c) => { const s = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' ');
   if (ALLOY_IDS.test(id ?? '')) return NONALLOY.test(s) ? 2 : ALLOY.test(s) ? 0 : 1;
   if (id === 'ss304') return AUST.test(s) && !NONAUST.test(s) ? 0 : NONAUST.test(s) ? 2 : 1;

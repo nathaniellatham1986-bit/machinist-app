@@ -139,3 +139,6 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   assert.equal(matPref('ss304', { label: 'Austenitic stainless — CMC 05.21 / MC M1.0.0.AN' }), 0);
   assert.equal(matPref('ss304', { label: 'Ferritic/martensitic stainless — CMC 05.11' }), 2);
   console.log('ME2 austenitic pref tests pass'); }
+{ const { threadPitchIn } = await import('./calc.js');
+  assert.equal(threadPitchIn(20, 'tpi'), 0.05); assert.ok(Math.abs(threadPitchIn(1.5, 'mm') - 0.059055) < 1e-5); assert.equal(threadPitchIn(0, 'tpi'), null);
+  console.log('ME3 thread pitch tests pass'); }
