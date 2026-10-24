@@ -3,13 +3,13 @@
  "builder": "Okamoto",
  "models": [
   {
-   "model": "ACC-63SA1 (SA1 series)",
+   "model": "ACC SA1 series (63SA1 and larger)",
    "type": "grinder",
    "spindles": [
     {
      "option": "Wheel spindle std",
      "rpm": null,
-     "taper": "",
+     "taper": null,
      "kw_peak": 3.7,
      "kw_cont": null,
      "hp_peak": null,
@@ -20,7 +20,7 @@
     {
      "option": "Wheel spindle opt",
      "rpm": null,
-     "taper": "",
+     "taper": null,
      "kw_peak": 7.5,
      "kw_cont": null,
      "hp_peak": null,

@@ -54,20 +54,9 @@
    "type": "mill",
    "spindles": [
     {
-     "option": "inline 12000 std",
-     "rpm": 12000,
-     "taper": "SK40 / BT40 / CAT40",
-     "kw_peak": 13,
-     "kw_cont": 9,
-     "hp_peak": null,
-     "hp_cont": null,
-     "torque_nm": 83,
-     "rating_note": "40% / 100% DC"
-    },
-    {
      "option": "inlineMASTER 15000",
      "rpm": 15000,
-     "taper": "SK40 BIG PLUS",
+     "taper": "BIG PLUS",
      "kw_peak": 20,
      "kw_cont": null,
      "hp_peak": null,
@@ -92,8 +81,8 @@
     {
      "option": "Left 10 in",
      "rpm": 5000,
-     "taper": "",
-     "kw_peak": 26,
+     "taper": null,
+     "kw_peak": null,
      "kw_cont": null,
      "hp_peak": null,
      "hp_cont": null,
@@ -103,8 +92,8 @@
     {
      "option": "Left 12 in option",
      "rpm": 3000,
-     "taper": "",
-     "kw_peak": 36,
+     "taper": null,
+     "kw_peak": null,
      "kw_cont": null,
      "hp_peak": null,
      "hp_cont": null,
@@ -112,14 +101,25 @@
      "rating_note": null
     },
     {
-     "option": "BMT live tool high-speed",
+     "option": "BMT high-speed live tool",
      "rpm": 12000,
      "taper": "BMT",
      "kw_peak": null,
      "kw_cont": null,
      "hp_peak": null,
      "hp_cont": null,
-     "torque_nm": null,
+     "torque_nm": 86,
+     "rating_note": null
+    },
+    {
+     "option": "BMT high-torque live tool",
+     "rpm": 6000,
+     "taper": "BMT",
+     "kw_peak": null,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 100,
      "rating_note": null
     }
    ],

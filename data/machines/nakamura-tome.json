@@ -27,17 +27,6 @@
      "hp_cont": null,
      "torque_nm": null,
      "rating_note": null
-    },
-    {
-     "option": "Live tool",
-     "rpm": 6000,
-     "taper": "Turret",
-     "kw_peak": 5.5,
-     "kw_cont": 3.7,
-     "hp_peak": null,
-     "hp_cont": null,
-     "torque_nm": null,
-     "rating_note": null
     }
    ],
    "rapid_ipm": null,

@@ -81,16 +81,16 @@
     {
      "option": "Main spindle",
      "rpm": 3500,
-     "taper": "",
+     "taper": null,
      "kw_peak": 30,
      "kw_cont": null,
-     "hp_peak": null,
+     "hp_peak": 40,
      "hp_cont": null,
-     "torque_nm": null,
-     "rating_note": null
+     "torque_nm": 327,
+     "rating_note": "Current builder page: 30 kW / 40 hp. Older PUMA 2100/2600/3100 brochure (distributor-hosted) lists 22 kW."
     }
    ],
-   "rapid_ipm": null,
+   "rapid_ipm": 1181,
    "max_thread_ipm": null,
    "live_tool": null,
    "source": {
@@ -106,18 +106,18 @@
     {
      "option": "Standard 12000",
      "rpm": 12000,
-     "taper": "",
+     "taper": "ISO #40",
      "kw_peak": 18.5,
      "kw_cont": null,
      "hp_peak": null,
      "hp_cont": null,
-     "torque_nm": null,
+     "torque_nm": 118,
      "rating_note": null
     },
     {
      "option": "Optional 18000",
      "rpm": 18000,
-     "taper": "",
+     "taper": "ISO #40",
      "kw_peak": 22,
      "kw_cont": null,
      "hp_peak": null,
@@ -126,7 +126,7 @@
      "rating_note": null
     }
    ],
-   "rapid_ipm": null,
+   "rapid_ipm": 1575,
    "max_thread_ipm": null,
    "live_tool": null,
    "source": {

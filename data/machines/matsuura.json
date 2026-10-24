@@ -9,7 +9,7 @@
     {
      "option": "Standard 15000",
      "rpm": 15000,
-     "taper": "BT40",
+     "taper": null,
      "kw_peak": 7.5,
      "kw_cont": 5.5,
      "hp_peak": null,
@@ -18,15 +18,26 @@
      "rating_note": null
     },
     {
-     "option": "Optional 20000",
+     "option": "High-power 15000",
+     "rpm": 15000,
+     "taper": null,
+     "kw_peak": 15,
+     "kw_cont": 7.5,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 119.3,
+     "rating_note": null
+    },
+    {
+     "option": "High-speed 20000",
      "rpm": 20000,
-     "taper": "BT40",
+     "taper": null,
      "kw_peak": 18.5,
      "kw_cont": 15,
      "hp_peak": null,
      "hp_cont": null,
      "torque_nm": 108.4,
-     "rating_note": null
+     "rating_note": "Builder lists 11/15, 15/18.5 kW"
     }
    ],
    "rapid_ipm": null,

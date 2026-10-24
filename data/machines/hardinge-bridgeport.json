@@ -7,9 +7,9 @@
    "type": "mill",
    "spindles": [
     {
-     "option": "Standard step pulley/variable",
+     "option": "Standard (low 60-500 / high 500-4200)",
      "rpm": 4200,
-     "taper": "R8",
+     "taper": "R-8",
      "kw_peak": null,
      "kw_cont": null,
      "hp_peak": 3,
@@ -32,12 +32,34 @@
    "type": "mill",
    "spindles": [
     {
-     "option": "#30 direct drive",
-     "rpm": 15000,
-     "taper": "#30",
-     "kw_peak": 9.0,
+     "option": "Standard",
+     "rpm": 10000,
+     "taper": null,
+     "kw_peak": 7.5,
+     "kw_cont": 5.5,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": "Fanuc, 30 min / cont"
+    },
+    {
+     "option": "Optional 12000",
+     "rpm": 12000,
+     "taper": null,
+     "kw_peak": null,
      "kw_cont": null,
-     "hp_peak": 12,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    },
+    {
+     "option": "Optional 15000",
+     "rpm": 15000,
+     "taper": null,
+     "kw_peak": null,
+     "kw_cont": null,
+     "hp_peak": null,
      "hp_cont": null,
      "torque_nm": null,
      "rating_note": null

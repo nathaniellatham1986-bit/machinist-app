@@ -9,18 +9,18 @@
     {
      "option": "Standard 14000",
      "rpm": 14000,
-     "taper": "BT40 / CAT40",
-     "kw_peak": 30,
+     "taper": "CAT40",
+     "kw_peak": null,
      "kw_cont": null,
      "hp_peak": null,
      "hp_cont": null,
-     "torque_nm": 303,
+     "torque_nm": null,
      "rating_note": null
     },
     {
      "option": "Optional 20000",
      "rpm": 20000,
-     "taper": "HSK-A63",
+     "taper": "HSK-63",
      "kw_peak": null,
      "kw_cont": null,
      "hp_peak": null,
@@ -29,7 +29,7 @@
      "rating_note": null
     }
    ],
-   "rapid_ipm": null,
+   "rapid_ipm": 2362,
    "max_thread_ipm": null,
    "live_tool": null,
    "source": {

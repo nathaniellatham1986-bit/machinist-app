@@ -9,7 +9,7 @@
     {
      "option": "Standard 4-step gear",
      "rpm": 20000,
-     "taper": "NST No. 40",
+     "taper": "#40",
      "kw_peak": null,
      "kw_cont": null,
      "hp_peak": null,

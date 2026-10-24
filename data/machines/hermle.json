@@ -78,44 +78,45 @@
     {
      "option": "15000 rpm SK40",
      "rpm": 15000,
-     "taper": "SK40",
+     "taper": "SK 40",
      "kw_peak": 20,
      "kw_cont": null,
      "hp_peak": null,
      "hp_cont": null,
      "torque_nm": 173,
-     "rating_note": "20% duty"
+     "rating_note": null
     },
     {
      "option": "16000 rpm HSK-A63",
      "rpm": 16000,
-     "taper": "HSK-A63",
+     "taper": "HSK A 63",
      "kw_peak": 20,
      "kw_cont": null,
      "hp_peak": null,
      "hp_cont": null,
      "torque_nm": 173,
-     "rating_note": "20% duty"
+     "rating_note": null
     },
     {
      "option": "20000 rpm HSK-A63",
      "rpm": 20000,
-     "taper": "HSK-A63",
+     "taper": "HSK A 63",
      "kw_peak": 42,
      "kw_cont": null,
      "hp_peak": null,
      "hp_cont": null,
      "torque_nm": 148,
-     "rating_note": "20% duty"
+     "rating_note": null
     }
    ],
-   "rapid_ipm": null,
+   "rapid_ipm": 1378,
    "max_thread_ipm": null,
    "live_tool": null,
    "source": {
     "url": "https://www.hermle.de/fileadmin/website/5_NEWS-UND-MEDIA/5_2_Mediathek/Technische_Daten/Englisch/HERMLE_Technical-Data_C250-GEN2_2025_EN.pdf",
     "title": "Hermle Technical data C 250 GEN2",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "note": "Rapid 35 m/min converted to ipm"
    }
   },
   {
@@ -125,44 +126,45 @@
     {
      "option": "15000 rpm SK40",
      "rpm": 15000,
-     "taper": "SK40",
+     "taper": "SK 40",
      "kw_peak": 20,
      "kw_cont": null,
      "hp_peak": null,
      "hp_cont": null,
      "torque_nm": 173,
-     "rating_note": "20% duty"
+     "rating_note": null
     },
     {
      "option": "16000 rpm HSK-A63",
      "rpm": 16000,
-     "taper": "HSK-A63",
+     "taper": "HSK A 63",
      "kw_peak": 20,
      "kw_cont": null,
      "hp_peak": null,
      "hp_cont": null,
      "torque_nm": 173,
-     "rating_note": "20% duty"
+     "rating_note": null
     },
     {
      "option": "20000 rpm HSK-A63",
      "rpm": 20000,
-     "taper": "HSK-A63",
+     "taper": "HSK A 63",
      "kw_peak": 42,
      "kw_cont": null,
      "hp_peak": null,
      "hp_cont": null,
      "torque_nm": 148,
-     "rating_note": "20% duty"
+     "rating_note": null
     }
    ],
-   "rapid_ipm": null,
+   "rapid_ipm": 1378,
    "max_thread_ipm": null,
    "live_tool": null,
    "source": {
     "url": "https://www.hermle.de/fileadmin/website/5_NEWS-UND-MEDIA/5_2_Mediathek/Technische_Daten/Englisch/hermle_technical_data_C400_GEN2_en.pdf",
     "title": "Hermle Technical data C 400 GEN2",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "note": "Rapid 35 m/min converted to ipm"
    }
   },
   {
@@ -172,44 +174,45 @@
     {
      "option": "15000 rpm SK40",
      "rpm": 15000,
-     "taper": "SK40",
+     "taper": "SK 40",
      "kw_peak": 20,
      "kw_cont": null,
      "hp_peak": null,
      "hp_cont": null,
      "torque_nm": 173,
-     "rating_note": "20% duty"
+     "rating_note": null
     },
     {
      "option": "16000 rpm HSK-A63",
      "rpm": 16000,
-     "taper": "HSK-A63",
+     "taper": "HSK A 63",
      "kw_peak": 20,
      "kw_cont": null,
      "hp_peak": null,
      "hp_cont": null,
      "torque_nm": 173,
-     "rating_note": "20% duty"
+     "rating_note": null
     },
     {
      "option": "20000 rpm HSK-A63",
      "rpm": 20000,
-     "taper": "HSK-A63",
+     "taper": "HSK A 63",
      "kw_peak": 42,
      "kw_cont": null,
      "hp_peak": null,
      "hp_cont": null,
      "torque_nm": 148,
-     "rating_note": "20% duty"
+     "rating_note": null
     }
    ],
-   "rapid_ipm": null,
+   "rapid_ipm": 1378,
    "max_thread_ipm": null,
    "live_tool": null,
    "source": {
     "url": "https://www.hermle.de/fileadmin/website/5_NEWS-UND-MEDIA/5_2_Mediathek/Technische_Daten/Englisch/HERMLE_Technical_Data_C650_GEN2_EN.pdf",
     "title": "Hermle Technical data C 650 GEN2",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "note": "Rapid 35 m/min converted to ipm"
    }
   }
  ]

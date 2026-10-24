@@ -34,16 +34,27 @@
     {
      "option": "Standard",
      "rpm": 2500,
-     "taper": "",
+     "taper": null,
      "kw_peak": 30,
      "kw_cont": 22,
      "hp_peak": 40,
      "hp_cont": 30,
      "torque_nm": null,
      "rating_note": "30 min / cont"
+    },
+    {
+     "option": "Optional",
+     "rpm": 4000,
+     "taper": null,
+     "kw_peak": null,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
     }
    ],
-   "rapid_ipm": null,
+   "rapid_ipm": 551,
    "max_thread_ipm": null,
    "live_tool": null,
    "source": {
@@ -59,22 +70,22 @@
     {
      "option": "Standard",
      "rpm": 3000,
-     "taper": "",
+     "taper": null,
      "kw_peak": 30,
      "kw_cont": 22,
      "hp_peak": 40,
      "hp_cont": 30,
      "torque_nm": null,
-     "rating_note": null
+     "rating_note": "30 min / cont"
     },
     {
-     "option": "Optional high-speed",
+     "option": "Optional 2-range",
      "rpm": 5000,
-     "taper": "",
+     "taper": null,
      "kw_peak": null,
      "kw_cont": null,
-     "hp_peak": 40,
-     "hp_cont": 30,
+     "hp_peak": null,
+     "hp_cont": null,
      "torque_nm": null,
      "rating_note": null
     }
