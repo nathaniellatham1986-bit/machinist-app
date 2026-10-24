@@ -128,3 +128,11 @@ export const matPref = (id, c) => { const s = [c.label, c.sourceGroup, c.subgrou
   if (ALLOY_IDS.test(id ?? '')) return NONALLOY.test(s) ? 2 : ALLOY.test(s) ? 0 : 1;
   if (id === 'ss304') return AUST.test(s) && !NONAUST.test(s) ? 0 : NONAUST.test(s) ? 2 : 1;
   return 1; };
+// Published diameter range of a tool in inches: [min, max] from diameters_in/mm, feed.byDiameter keys or feed.bands. null if none printed.
+export const sizeRange = t => { const v = [];
+  (t.diameters_in ?? []).forEach(x => v.push(+x)); (t.diameters_mm ?? []).forEach(x => v.push(x / 25.4));
+  for (const c of t.conditions ?? []) { const f = c.feed, k = f?.unit === 'mm' ? 1 / 25.4 : 1; if (!f) continue;
+    if (f.byDiameter) Object.keys(f.byDiameter).forEach(x => v.push(parseFloat(x) * k));
+    if (f.bands) f.bands.forEach(([a, b]) => v.push(a * k, b * k)); }
+  const ok = v.filter(x => x > 0 && isFinite(x)); return ok.length ? [Math.min(...ok), Math.max(...ok)] : null; };
+export const inRange = (r, d) => !r || !(d > 0) ? null : d >= r[0] - 1e-6 && d <= r[1] + 1e-6;

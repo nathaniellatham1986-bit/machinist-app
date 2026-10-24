@@ -142,3 +142,8 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
 { const { threadPitchIn } = await import('./calc.js');
   assert.equal(threadPitchIn(20, 'tpi'), 0.05); assert.ok(Math.abs(threadPitchIn(1.5, 'mm') - 0.059055) < 1e-5); assert.equal(threadPitchIn(0, 'tpi'), null);
   console.log('ME3 thread pitch tests pass'); }
+{ const { sizeRange, inRange } = await import('./calc.js');
+  const t = { diameters_mm: [3, 20], conditions: [{ feed: { unit: 'in', byDiameter: { '0.125': 0.002, '0.5': 0.006 } } }] };
+  const r = sizeRange(t); assert.ok(Math.abs(r[0] - 0.118) < 1e-3 && Math.abs(r[1] - 0.787) < 1e-3);
+  assert.equal(inRange(r, 0.5), true); assert.equal(inRange(r, 1), false); assert.equal(inRange(null, 1), null);
+  console.log('ME5 drill size range tests pass'); }

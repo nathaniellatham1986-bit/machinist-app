@@ -1,5 +1,5 @@
 import { MODES, migrate, forMode } from './recall.js';
-import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn } from './calc.js';
+import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange } from './calc.js';
 const $ = id => document.getElementById(id);
 const J = u => fetch(u).then(r => r.json());
 const idx = await J('data/index.json');
@@ -78,12 +78,13 @@ function fillTool() { const cur = $('tool').value, b = $('brand').value, words =
   const kd = $('kind').value, hits = inMode().filter(t => (!b || t.brand === b) && (!kd || kindOf(t) === kd) && words.every(w => `${t.brand} ${t.series} ${t.type ?? ''}`.toLowerCase().includes(w)));
   const iso = matSel()?.iso || $('iso').value, rank = t => { const f = t.fullIsos || [], ok = i => !iso || i === iso || i === '*';
     const gen = !iso && mode !== 'tap' ? (f.includes('P') ? 0 : .25) + (mode === 'turn' && !(t.pFeed >= .012 && t.pFeed <= .025) ? .2 : 0) : 0; return gen + (f.some(x => !x.includes('~') && ok(x)) ? 0 : f.some(x => ok(x.replace('~', ''))) ? 1 : 2); };
-  const r2 = t => rank(t) + (/parting|groov|thread/i.test(t.series + (t.type ?? '')) ? .5 : 0); const r3 = t => r2(t) + (matSel()?.id === 'ss303' && !t.only303 ? .1 : 0); hits.sort((x, y) => r3(x) - r3(y));
+  const r2 = t => rank(t) + (/parting|groov|thread/i.test(t.series + (t.type ?? '')) ? .5 : 0); const dD = mode === 'drill' ? inV('d') : 0, out = t => inRange(t.dr, dD) === false;
+  const r3 = t => r2(t) + (matSel()?.id === 'ss303' && !t.only303 ? .1 : 0) + (dD ? (out(t) ? 10 : inRange(t.dr, dD) ? 0 : 5) : 0); hits.sort((x, y) => r3(x) - r3(y));
   // Grade/coating split: tools that differ only by grade collapse into one geometry entry; the grade picks the member.
   GROUPS = {}; const seen = {}; const list = [];
   for (const t of hits) { const g = geo(t), k = t.grade ? `${t.brand}|${g}` : t.key;
     if (seen[k]) { GROUPS[seen[k]].push(t.key); continue; } seen[k] = t.key; GROUPS[t.key] = [t.key]; list.push([t, g]); }
-  $('tool').length = 0; list.slice(0, MAXOPT).forEach(([t, g]) => $('tool').add(new Option(b ? g : `${t.brand} — ${g}`, t.key)));
+  $('tool').length = 0; list.slice(0, MAXOPT).forEach(([t, g]) => $('tool').add(new Option((b ? g : `${t.brand} — ${g}`) + (dD && out(t) ? ' — outside mfr size range' : ''), t.key)));
   $('tn').textContent = !hits.length && mode === 'turn' && $('top').value === 'Face' ? '(none: no record says facing)' : hits.length > MAXOPT ? `(${MAXOPT} of ${hits.length}; refine search)` : `(${hits.length})`;
   if (cur && !GROUPS[cur]) { const g = Object.keys(GROUPS).find(k => GROUPS[k].includes(cur)); if (g) $('tool').value = g; } else if ([...$('tool').options].some(o => o.value === cur)) $('tool').value = cur; return fillGrade(); }
 async function fillGrade(keep) { const keys = GROUPS[$('tool').value] ?? ($('tool').value ? [$('tool').value] : []); await Promise.all(keys.map(ensure));
@@ -297,7 +298,7 @@ $('unit').onclick = () => { const KS = [...LEN, 'sfm', 'fpt'], x = Object.fromEn
   $('feedLbl').firstChild.textContent = $('feedLbl').firstChild.textContent.replace(/\b(in|mm)\//, UL() + '/').replace(/\((in|mm)\)/, `(${UL()})`); $('unit').textContent = metric ? 'mm' : 'inch'; document.querySelectorAll('.u').forEach(e => e.textContent = `(${UL()})`);
   $('dLbl').firstChild.textContent = $('dLbl').firstChild.textContent.replace(/\((in|mm)\)/, `(${UL()})`); run(); };
 $('matPick').onchange = () => { const [i, m] = $('matPick').value.split(':'); $('iso').value = i; $('mat').value = m ?? ''; fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillTool; $('tq').oninput = fillTool; $('cq').oninput = fillCond; $('tool').onchange = () => { GUSER = false; $('cq').value = ''; fillGrade(''); }; $('grade').onchange = () => { GUSER = true; fillGrade(); }; $('mach').onchange = applyMachine;
-$('cond').onchange = () => { fill(); recent(); }; ['cool', 'thr'].forEach(k => $(k).onchange = fill); $('d').onchange = () => { if (mode === 'mill') showEng(); fill(); };
+$('cond').onchange = () => { fill(); recent(); }; ['cool', 'thr'].forEach(k => $(k).onchange = fill); $('d').onchange = () => { if (mode === 'mill') showEng(); if (mode === 'drill') { const k = $('tool').value; fillTool(); if ($('tool').value === k) return fill(); return; } fill(); };
 ['ae', 'aeU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ae') ENG.ae = 'yours'; readEng(); }));
 ['ap', 'apU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ap') ENG.ap = 'yours'; readEng(); }));
 $('apT').addEventListener('input', () => { ENG.ap = 'yours'; engTags(); });
