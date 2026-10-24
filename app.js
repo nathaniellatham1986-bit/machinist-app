@@ -269,7 +269,7 @@ function run() { if (PART()) $('fD').value = '0'; if (mode === 'mill') readEng()
     if (PR?.ap) doc.push(`DOC ${PR.ap.value} ${PR.ap.unit} (printed for Ø${PR.key} ${PR.unit})`); if (PR?.ae) doc.push(`WOC ${PR.ae.value} ${PR.ae.unit} (printed for Ø${PR.key} ${PR.unit})`);
     if (c.woc) doc.push(`WOC ${(c.woc * 100).toFixed(0)}% of D`);
     if (c.feed?.byWoc) doc.push('WOC published at ' + Object.keys(c.feed.byWoc).map(k => (+k * 100).toFixed(0) + '%').join(', '));
-    cards += card('DOC / WOC', doc.length ? `<span style="font-size:22px">${doc.join('<br>')}</span>` : 'No manufacturer data', doc.length ? src : '', 'wide' + (doc.length ? '' : ' none')); }
+    if (doc.length) cards += card('DOC / WOC', `<span style="font-size:22px">${doc.join('<br>')}</span>`, src, 'wide'); } // no card when it would only say No manufacturer data
   // nearest options with data, as chips
   let chips = []; const sig = x => JSON.stringify([x.iso, x.sfm, x.feed, x.ap, x.source?.catalog, x.source?.page]), seen = new Set(c ? [sig(c), c.label] : []);
   const fresh = x => { const s = sig(x); if (seen.has(s) || seen.has(x.label)) return false; seen.add(s); seen.add(x.label); return true; };
