@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { compute, rpm, thinFactor, drill, turn, tap, pick } from './calc.js';
 const J = p => JSON.parse(fs.readFileSync(new URL(p, import.meta.url)));
+const IDX = J('./data/index.json'); const ALL = m => IDX.files.flatMap(f => J('./data/' + f.file).tools).filter(t => t.mode === m);
 assert.equal(Math.round(rpm(400, .5)), 3056);
 assert.equal(+thinFactor(.05, .5).toFixed(3), 1.667);
 compute({ sfm: 400, d: .5, fpt: .003, z: 4, ae: .25, ap: .5, stickout: 1.5, maxRpm: 10000, maxHp: 15, iso: 'P' });
@@ -11,7 +12,7 @@ assert.match(pick({ min: 40, max: 80 }).basis, /MIDPOINT/); assert.equal(pick({ 
 assert.equal(pick({ value: 230 }).basis, 'manufacturer value');
 assert.equal(pick({ min: 40 }), null); assert.equal(pick(null), null);
 // drill: Allied T-A carbide TiN, 4140 175-225 BHN, 15/16" (1C21T-0030): 230 SFM, .012 IPR
-const ta = J('./data/drill-allied.json').tools[0].conditions.find(c => c.label === 'Alloy 4140/5140/8640 175-225 BHN · TiN');
+const ta = J('./data/allied-drill.json').tools[0].conditions.find(c => c.label === 'Alloy 4140/5140/8640 175-225 BHN · TiN');
 assert.equal(ta.sfm.value, 230); const band = ta.feed.bands.find(([a, z]) => .9375 >= a && .9375 <= z); assert.equal(band[2], .012);
 const dr = drill({ sfm: 230, d: .9375, ipr: .012 }); assert.equal(Math.round(dr.rpm), 937); assert.equal(+dr.ipm.toFixed(2), 11.25);
 // turn: RPM cap and MRR
@@ -21,16 +22,22 @@ assert.equal(+t.mrr.toFixed(3), +(500 * 2 / 3.82 * 12 * .04 * .00984).toFixed(3)
 const tp = tap({ sfm: 60, d: .25, pitch: .05 }); assert.equal(Math.round(tp.rpm), 917); assert.equal(+tp.ipm.toFixed(2), 45.84);
 const th = J('./data/threads.json').threads; assert.equal(th.find(x => x.name === '1/4-20').drill75_in, .2013); assert.equal(th.find(x => x.name === 'M6x1').drill75_mm, 5.03);
 // every loaded condition has a source and a feed/speed or explicit absence; no generic tools
-for (const f of ['drill-allied', 'turn', 'tap']) for (const tl of J(`./data/${f}.json`).tools) { assert.ok(!/generic/i.test(tl.brand)); for (const c of tl.conditions) assert.ok(c.source?.url || ["label","shop"].includes(c.source?.kind), tl.series); }
-assert.ok(!J('./data/index.json').brands.includes('generic.json'));
+for (const m of ['drill', 'turn', 'tap', 'mill']) for (const tl of ALL(m)) { assert.ok(!/generic/i.test(tl.brand)); for (const c of tl.conditions) assert.ok(c.source?.url || ["label","shop"].includes(c.source?.kind), tl.series); }
+assert.ok(!IDX.files.some(f => /generic/i.test(f.file + f.brand)));
+{ const { validate } = await import('./scripts/validate.mjs');
+  const good = { schema: 1, brand: 'X', tools: [{ mode: 'drill', brand: 'X', series: 'S', conditions: [{ label: 'L', iso: 'P', status: 'verified', coolant: null, sfm: { min: 1, max: 2, unit: 'ft/min' }, feed: { kind: 'ipr', unit: 'in', range: { min: .001, max: .002 } }, source: { kind: 'catalog', manufacturer: 'X', catalog: 'C', edition: 'E', url: 'https://x' } }] }] };
+  assert.deepEqual(validate(good), []);
+  const bad = (f, re) => { const d = structuredClone(good); f(d.tools[0].conditions[0], d); assert.ok(validate(d).some(e => re.test(e)), re); };
+  bad(c => delete c.source.url, /url/); bad(c => delete c.coolant, /coolant/); bad(c => c.sfm.unit = 'sfm', /unit/); bad(c => c.status = 'derived', /derivation/);
+  bad(c => c.status = 'guess', /status/); bad(c => delete c.source.edition, /edition/); bad(c => c.source.kind = 'shop', /shop/); bad(c => c.sfm.min = 9, /min/); bad((c, d) => d.brand = 'Generic', /generic/); }
 console.log('all tests pass');
-const TJ = J('./data/turn.json').tools;
+const TJ = ALL('turn');
 const thr = TJ.find(x => x.series === 'Threading IC908').conditions.find(c => c.label.startsWith('Grp 6')); assert.deepEqual([thr.sfm.min, thr.sfm.max], [100, 180]);
 const nf = TJ.find(x => x.series === 'VNMG-NF IC807').conditions.find(c => c.label.startsWith('Grp 14')); assert.deepEqual([nf.sfm.min, nf.sfm.max], [100, 200]); assert.match(pick(nf.sfm).basis, /MIDPOINT/);
 assert.equal(TJ.find(x => x.series.startsWith('BC8110')).conditions[0].sfm, null);
-const em = J('./data/tap.json').tools.find(x => x.brand === 'Emuge').conditions.find(c => c.label.startsWith('P2.1')); assert.deepEqual([em.sfm.min, em.sfm.max], [7, 20]);
-assert.equal(J('./data/drill-allied.json').tools[0].conditions[0].coolant, 'through-tool');
+const em = ALL('tap').find(x => x.brand === 'Emuge').conditions.find(c => c.label.startsWith('P2.1')); assert.deepEqual([em.sfm.min, em.sfm.max], [7, 20]);
+assert.equal(J('./data/allied-drill.json').tools[0].conditions[0].coolant, 'through-tool');
 console.log('phase3 tests pass');
 const sh = J('./data/shop.json').tools[0].conditions[0]; assert.equal(sh.status, 'shop-proven'); assert.notEqual(sh.status, 'verified');
-assert.ok(TJ.every(t => t.conditions.every(c => c.status !== 'shop-proven')));
+assert.ok(TJ.every(t => t.conditions.every(c => (c.status === 'shop-proven') === (c.source.kind === 'shop'))));
 const pe = TJ.find(x => x.series.startsWith('PENTA')).conditions[0]; assert.deepEqual([pe.sfm.min, pe.sfm.max, pe.feed.range.max], [60, 150, .05]);

@@ -1,0 +1,8 @@
+{"note":"Specific materials. Map a record here ONLY when its source names that material. Do not merge 303 and 304.",
+"materials":[
+ {"id":"ss303","iso":"M","name":"303 — free-machining austenitic stainless (sulfurized)"},
+ {"id":"ss304","iso":"M","name":"304 — standard austenitic stainless (work-hardens)"},
+ {"id":"ss316","iso":"M","name":"316 — austenitic stainless, Mo (work-hardens, similar to 304)"},
+ {"id":"ss17-4ph","iso":"M","name":"17-4PH — precipitation-hardening stainless"},
+ {"id":"ss400","iso":"M","name":"400 series — ferritic/martensitic stainless"}
+]}

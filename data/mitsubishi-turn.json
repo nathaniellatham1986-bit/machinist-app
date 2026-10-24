@@ -1,0 +1,40 @@
+{
+ "schema": 1,
+ "brand": "Mitsubishi",
+ "tools": [
+  {
+   "mode": "turn",
+   "brand": "Mitsubishi",
+   "series": "BC8110 CBN (Mitsubishi grade; Sumitomo's own comparison chart lists BC8110 under Mitsubishi, Sumitomo equivalents BNC2010/BN1000)",
+   "conditions": [
+    {
+     "label": "Hardened steel, external continuous cutting",
+     "iso": "H",
+     "coolant": "dry or wet (stated)",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "max": 0.2
+      }
+     },
+     "ap": {
+      "max": 0.35,
+      "unit": "mm"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Mitsubishi Materials",
+      "catalog": "Tool News B215G BC8100/MB8100 series, Recommended Cutting Conditions",
+      "edition": "2018.12 update (2017.9.E)",
+      "url": "https://www.mmc-carbide.com/download_file/f7122c42-eec6-43d1-a937-0b7bc5ccfb12/2021",
+      "notes": "States f < 0.20 mm/rev, ap < 0.35 mm, cutting mode Dry/Wet. Vc is shown only as a bar chart with no numbers, so: No manufacturer data for Vc. 250 m/min appears only as a test example.",
+      "kind": "catalog"
+     }
+    }
+   ],
+   "notes": "Only an upper limit is published for feed. With no min, no default is invented. Enter YOUR VALUE."
+  }
+ ]
+}

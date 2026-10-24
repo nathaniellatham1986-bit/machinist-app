@@ -18,3 +18,9 @@ Data gaps: Iscar ECK-H4M vc; Sandvik Plura per-series data; Kennametal P/M grade
 - Gaps: IC806 P/M Vc, IC1008 PENTA Vc, BC8110 Vc, CNMG chipformer/grade, GEN2 coolant charts, 303 not in Allied's table, calculator spot-check (NOVO/CoroPlus need login; Allied's calculator is only a mobile app).
 - v3/v4 UI: material -> brand -> tool chain with a data filter, machine profiles (localStorage), turn nose radius/chipbreaker, DOC range warning, slender L/D>4 warning (general guideline), source badges, favorites/recents, remembered coolant and machine. Data: Iscar box labels (PENTA IC1008, VNMG 12T308-NF ISO M), a separate shop-proven record type (shop.json).
 - Open: BC8110 is a Mitsubishi grade per Sumitomo's own comparison chart. No Sumitomo BC8110 data exists, so it was kept as Mitsubishi.
+
+## v6 (schema 1)
+- Brand files split per brand and mode, with the canonical conditions shape. The legacy mill shape is gone (scripts/migrate-legacy-mill.mjs).
+- data/SCHEMA.md, scripts/validate.mjs and scripts/build-index.mjs added. The index and SW cache name are generated.
+- Data files lazy-load, and the tool picker has search (cross-brand, capped at 300 options).
+- Specific materials (data/materials.json): 303 and 304 are split, each record is mapped to what its source names, and the badge shows the source's group wording.

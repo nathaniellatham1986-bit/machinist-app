@@ -1,0 +1,77 @@
+{
+ "schema": 1,
+ "brand": "Emuge",
+ "tools": [
+  {
+   "mode": "tap",
+   "brand": "Emuge",
+   "series": "Rekord 2-KEG R15-VA NPT spiral flute 15\u00b0 (CW483000 / CW483100 TIN)",
+   "conditions": [
+    {
+     "label": "P1.1 1010/1018/1020/12L14 <=180 BHN",
+     "iso": "P",
+     "coolant": "emulsion or oil (stated)",
+     "sfm": {
+      "min": 7,
+      "max": 26,
+      "unit": "ft/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Emuge",
+      "catalog": "EMUGE USA Catalog 510, Taps product finder and cutting data, Tapered Taps (NPT pp.102-103)",
+      "edition": "Catalog 510 (PDF on tecnoutensilisrl.it, PDF p.19)",
+      "url": "https://www.tecnoutensilisrl.it/wp-content/uploads/2017/04/Emuge-510-Catalog_0.pdf",
+      "page": "fold-out product finder, PDF p.19",
+      "kind": "catalog"
+     }
+    },
+    {
+     "label": "P2.1 A36/1030-1095/4140/4340/8620 <=235 BHN",
+     "iso": "P",
+     "coolant": "emulsion or oil (stated)",
+     "sfm": {
+      "min": 7,
+      "max": 20,
+      "unit": "ft/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Emuge",
+      "catalog": "EMUGE USA Catalog 510, Taps product finder and cutting data, Tapered Taps (NPT pp.102-103)",
+      "edition": "Catalog 510 (PDF on tecnoutensilisrl.it, PDF p.19)",
+      "url": "https://www.tecnoutensilisrl.it/wp-content/uploads/2017/04/Emuge-510-Catalog_0.pdf",
+      "page": "fold-out product finder, PDF p.19",
+      "kind": "catalog"
+     }
+    },
+    {
+     "label": "M2.1 Austenitic 303/304/316 <=280 BHN",
+     "iso": "M",
+     "coolant": "emulsion or oil (stated)",
+     "sfm": {
+      "min": 3,
+      "max": 26,
+      "unit": "ft/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Emuge",
+      "catalog": "EMUGE USA Catalog 510, Taps product finder and cutting data, Tapered Taps (NPT pp.102-103)",
+      "edition": "Catalog 510 (PDF on tecnoutensilisrl.it, PDF p.19)",
+      "url": "https://www.tecnoutensilisrl.it/wp-content/uploads/2017/04/Emuge-510-Catalog_0.pdf",
+      "page": "fold-out product finder, PDF p.19",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss303",
+      "ss304",
+      "ss316"
+     ],
+     "sourceGroup": "M2.1 austenitic 303/304/316"
+    }
+   ],
+   "notes": "Emuge marks these as standard values to be adjusted to your work conditions. Straight-flute KEG-STEEL is in the same table but not loaded."
+  }
+ ]
+}

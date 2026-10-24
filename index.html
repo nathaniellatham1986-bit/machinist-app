@@ -11,9 +11,11 @@ nav{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}nav button{min-heig
 </style></head><body><main><h1>Feeds &amp; Speeds v3</h1>
 <nav><button data-mode="mill">Mill</button><button data-mode="drill">Drill</button><button data-mode="turn">Turn</button><button data-mode="tap">Tap</button></nav>
 <label>Recall (favorites / recent)<select id="recall"><option value="">—</option></select></label>
-<label>Material / condition<select id="iso"></select></label>
+<label>Material group (ISO)<select id="iso"></select></label>
+<label>Specific material <small>(optional)</small><select id="mat"></select></label>
 <label>Brand<select id="brand"></select></label>
-<label>Tool / insert<select id="tool"></select></label>
+<label>Search tools<input id="tq" type="search" placeholder="series, type, brand…" autocomplete="off"></label>
+<label>Tool / insert <small id="tn"></small><select id="tool"></select></label>
 <label><input id="onlyData" type="checkbox" checked style="width:auto;min-height:0"> Only tools with data for this material</label>
 <label>Manufacturer condition<select id="cond"></select></label>
 <label data-show="tap">Thread<select id="thr"></select></label>

@@ -59,14 +59,14 @@ SUP = "https://cata.supratool.com.mx/ISCAR3/files/basic-html/page{}.html"
 ISV = dict(manufacturer="Iscar", catalog="ISCAR Turning Catalog 42-2022, p.246 ISO turning cutting speed table", edition="42-2022 (distributor mirror cata.supratool.com.mx)", url=SUP.format(248), page="246")
 ISG = dict(manufacturer="Iscar", catalog="ISCAR Turning Catalog 42-2022, pp.432-433 groove-turn cutting speed table", edition="42-2022 (distributor mirror cata.supratool.com.mx)", url=SUP.format(434), page="432-433")
 IST = dict(manufacturer="Iscar", catalog="ISCAR Threading catalog 42-2022, Machining Data for Threading (user guide)", edition="42-2022 pp.635-848 (PDF hosted by werkzeugservice.at)", url="https://www.werkzeugservice.at/uploads/downloads/ISCAR_Gewindewerkzeuge%20und%20Eins%C3%A4tze-nicht%20rotierende%20Werkezughalter-42_2022-p635-848_2022.pdf", page="710-711")
-GN = {1:"Grp 1 Non-alloy <0.25%C (mild steel)",6:"Grp 6 Low alloy annealed (4140/4340)",7:"Grp 7 Low alloy Q&T 275HB (4140/4340)",8:"Grp 8 Low alloy Q&T 300HB (4140/4340)",9:"Grp 9 Low alloy Q&T 350HB (4140/4340)",14:"Grp 14 Austenitic stainless (303/304)"}
+GN = {1:"Grp 1 Non-alloy <0.25%C (mild steel)",6:"Grp 6 Low alloy annealed (4140/4340)",7:"Grp 7 Low alloy Q&T 275HB (4140/4340)",8:"Grp 8 Low alloy Q&T 300HB (4140/4340)",9:"Grp 9 Low alloy Q&T 350HB (4140/4340)",14:"Grp 14 Austenitic stainless"}
 def vc(src, tag, d):
     return [dict(label=f"{GN[g]} · {tag}", iso="M" if g==14 else "P", coolant=None, sfm=dict(min=a, max=b, unit="m/min"), status="verified", source=src) for g,(a,b) in d.items()]
 LBL = dict(kind="label", manufacturer="Iscar", catalog="Iscar box label, photographed by user", edition="Oct 2026", url=None, notes="From the manufacturer's printed box label. The label does not name the material unless shown.")
 SEI = dict(manufacturer="Sumitomo Electric", catalog="SUMIBORON BNC8115/BNS8125 flyer E-163, Recommended Cutting Conditions (Turning), Hardened Steel", edition="E-163", url="https://api.sumitomotool.com/media/roweb/publication/files/e/-/e-163_bnc8115-bns8125.pdf")
 turn = dict(brand="turning", tools=[
  dict(mode="turn", brand="Iscar", series="VNMG-NF IC807", conditions=[vnmg("VNMG 160404-NF",(0.7,2.5),(0.07,0.24)),vnmg("VNMG 160408-NF",(1.0,3.0),(0.08,0.25)),vnmg("VNMG 12T304-NF",(0.7,2.0),(0.07,0.24)),vnmg("VNMG 12T308-NF",(1.0,3.0),(0.08,0.24))]+[dict(label="VNMG 12T308-NF (2.5-2-NF) ISO M · box label", iso="M", coolant=None, sfm=dict(min=200, max=300, unit="m/min"), feed=dict(kind="ipr", unit="mm", range=dict(min=0.08, max=0.24)), ap=dict(min=1.0, max=3.0, unit="mm"), status="verified", source=dict(LBL, notes="Box label: Vc 200-300 m/min (660-990 SFM), f 0.080-0.240 mm/rev, ap 1.00-3.00 mm, ISO M. Catalog p.246 gives 100-200 m/min for group 14; the two sources differ, so both are shown."))]+vc(ISV,"IC807 Vc",{1:(140,230),6:(100,180),7:(95,170),8:(85,150),9:(70,130),14:(100,200)}),
-      notes="Insert rows give ap/feed (p.165). Vc rows are the IC807/IC907 column of the p.246 grade table (no feed in that table). Iscar gives a range only, so the default is the MIDPOINT. 303 and 304 both fall in Iscar group 14."),
+      notes="Insert rows give ap/feed (p.165). Vc rows are the IC807/IC907 column of the p.246 grade table (no feed in that table). Iscar gives a range only, so the default is the MIDPOINT. Iscar group 14 is 'austenitic stainless' (no grade named), so these rows attach to both 303 and 304."),
  dict(mode="turn", brand="Iscar", series="VNMG F3M IC806", conditions=[], notes="No manufacturer data for P/M: the p.246 turning table lists IC806 only for ISO S (heat-resistant alloys). (In the groove-turn table pp.432-433, IC806 is 110-205 m/min for group 14, but that is grooving, not F3M turning.)"),
  dict(mode="turn", brand="Iscar", series="CNMG (chipformer/grade TBD)", conditions=[], notes="Not yet sourced; need exact chipformer and grade."),
  dict(mode="turn", brand="Iscar", series="PENTA grooving IC1008", conditions=[dict(label="PENTA 17N120P010RS IC1008 · box label (material not stated)", iso="*", coolant=None, sfm=dict(min=60, max=150, unit="m/min"), feed=dict(kind="ipr", unit="mm", range=dict(min=0.02, max=0.05)), status="verified", source=dict(LBL, notes="Box label: Vc 60-150 m/min (200-500 SFM), f 0.02-0.05 mm/rev."))], notes="Box label data only. Catalog: no manufacturer data for Vc: IC1008 is not in the groove-turn speed table (pp.432-433), and the PENTA page gives only ap/feed."),
@@ -96,8 +96,32 @@ tap = dict(brand="tapping", tools=[
       notes="Emuge marks these as standard values to be adjusted to your work conditions. Straight-flute KEG-STEEL is in the same table but not loaded."),
 ])
 shop = dict(brand="shop-proven", tools=[dict(mode="turn", brand="Shop-proven (not manufacturer)", series="4 mm carbide parting tool", conditions=[dict(label="304 SS · Mazak QT 350 MY · good finish", iso="M", coolant=None, sfm=dict(value=180, unit="ft/min"), feed=dict(kind="ipr", unit="in", range=dict(value=0.0018)), status="shop-proven", source=dict(kind="shop", manufacturer="Shop record", catalog="Run on Mazak QT 350 MY, 304 stainless, good finish", edition="Oct 15 2026", url=None))], notes="A setup that worked at one shop. This is not manufacturer data.")])
-for n, o in [("shop.json", shop), ("drill-allied.json", drill), ("turn.json", turn), ("tap.json", tap)]:
-    json.dump(o, open(os.path.join(D, n), "w"), indent=1)
+import re
+# Material mapping: only what the source names. (label prefix -> (materials, source wording))
+MATMAP = [("Stainless 300 series (304/316/17-4PH)", ["ss304","ss316","ss17-4ph"], "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"),
+  ("Grp 14 Austenitic stainless", ["ss303","ss304"], "Iscar group 14: austenitic stainless"),
+  ("M2.1 Austenitic 303/304/316", ["ss303","ss304","ss316"], "M2.1 austenitic 303/304/316"),
+  ("Stainless, sulphured (e.g. 303)", ["ss303"], "Stainless, sulphured (e.g. 303)"),
+  ("Stainless, austenitic (304)", ["ss304"], "Stainless, austenitic (304)"),
+  ("Stainless 303/304/316/400", ["ss303","ss304","ss316","ss400"], "Stainless 303/304/316/400"),
+  ("304 SS", ["ss304"], "304 stainless (shop record)")]
+for o in [drill, turn, tap, shop]:
+    for t in o["tools"]:
+        for c in t["conditions"]:
+            for pre, ms, g in MATMAP:
+                if c["label"].startswith(pre): c["materials"], c["sourceGroup"] = ms, g
+slug = lambda x: re.sub(r"[^a-z0-9]+", "-", x.lower()).strip("-")
+def kind(src):
+    src.setdefault("kind", "catalog")
+for o in [drill, turn, tap]:
+    for t in o["tools"]:
+        for c in t["conditions"]: kind(c["source"])
+groups = {}
+for o in [drill, turn, tap]:
+    for t in o["tools"]: groups.setdefault((t["brand"], t["mode"]), []).append(t)
+for (b, m), ts in groups.items():
+    json.dump(dict(schema=1, brand=b, tools=ts), open(os.path.join(D, f"{slug(b)}-{m}.json"), "w"), indent=1)
+json.dump(dict(schema=1, brand=shop["tools"][0]["brand"], tools=shop["tools"]), open(os.path.join(D, "shop.json"), "w"), indent=1)
 # Tap drills: geometry. 75% drill = D - 0.01299*75*P(in) per Machinery's Handbook formula (= D - 0.974*P).
 unc = [("#4-40",.112,40,"#43 (.0890)"),("#6-32",.138,32,"#35 (.1100)"),("#8-32",.164,32,"#29 (.1360)"),("#10-24",.19,24,"#25 (.1495)"),("#10-32",.19,32,"#21 (.1590)"),("1/4-20",.25,20,"#7 (.2010)"),("1/4-28",.25,28,"#3 (.2130)"),("5/16-18",.3125,18,"F (.2570)"),("5/16-24",.3125,24,"I (.2720)"),("3/8-16",.375,16,"5/16 (.3125)"),("3/8-24",.375,24,"Q (.3320)"),("7/16-14",.4375,14,"U (.3680)"),("7/16-20",.4375,20,"25/64 (.3906)"),("1/2-13",.5,13,"27/64 (.4219)"),("1/2-20",.5,20,"29/64 (.4531)"),("5/8-11",.625,11,"17/32 (.5312)"),("5/8-18",.625,18,"37/64 (.5781)"),("3/4-10",.75,10,"21/32 (.6562)"),("3/4-16",.75,16,"11/16 (.6875)"),("1-8",1.0,8,"7/8 (.8750)")]
 met = [("M3x0.5",3,.5),("M4x0.7",4,.7),("M5x0.8",5,.8),("M6x1",6,1.0),("M8x1.25",8,1.25),("M10x1.5",10,1.5),("M12x1.75",12,1.75),("M16x2",16,2.0),("M20x2.5",20,2.5),("M24x3",24,3.0)]

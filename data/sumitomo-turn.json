@@ -1,0 +1,46 @@
+{
+ "schema": 1,
+ "brand": "Sumitomo",
+ "tools": [
+  {
+   "mode": "turn",
+   "brand": "Sumitomo",
+   "series": "SUMIBORON BNC8115 CBN (hardened steel)",
+   "conditions": [
+    {
+     "label": "Hardened steel",
+     "iso": "H",
+     "coolant": "flood",
+     "sfm": {
+      "min": 50,
+      "start": 100,
+      "max": 150,
+      "unit": "m/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.1,
+       "start": 0.25,
+       "max": 0.4
+      }
+     },
+     "ap": {
+      "max": 3.0,
+      "unit": "mm"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Sumitomo Electric",
+      "catalog": "SUMIBORON BNC8115/BNS8125 flyer E-163, Recommended Cutting Conditions (Turning), Hardened Steel",
+      "edition": "E-163",
+      "url": "https://api.sumitomotool.com/media/roweb/publication/files/e/-/e-163_bnc8115-bns8125.pdf",
+      "notes": "Source says 'Coolant: wet'; recorded as flood. Values are Min-Optimum-Max; Optimum used as start.",
+      "kind": "catalog"
+     }
+    }
+   ]
+  }
+ ]
+}

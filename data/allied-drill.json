@@ -1,4 +1,5 @@
 {
+ "schema": 1,
  "brand": "Allied",
  "tools": [
   {
@@ -52,7 +53,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 195 psi / 2.6 gpm; 33/64-11/16\" 140 psi / 3.3 gpm; 23/32-1\" 160 psi / 5.5 gpm; 1-1-3/8\" 140 psi / 9 gpm; 1-13/32-1-7/8\" 155 psi / 18 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 195 psi / 2.6 gpm; 33/64-11/16\" 140 psi / 3.3 gpm; 23/32-1\" 160 psi / 5.5 gpm; 1-1-3/8\" 140 psi / 9 gpm; 1-13/32-1-7/8\" 155 psi / 18 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -101,7 +103,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 195 psi / 2.6 gpm; 33/64-11/16\" 140 psi / 3.3 gpm; 23/32-1\" 160 psi / 5.5 gpm; 1-1-3/8\" 140 psi / 9 gpm; 1-13/32-1-7/8\" 155 psi / 18 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 195 psi / 2.6 gpm; 33/64-11/16\" 140 psi / 3.3 gpm; 23/32-1\" 160 psi / 5.5 gpm; 1-1-3/8\" 140 psi / 9 gpm; 1-13/32-1-7/8\" 155 psi / 18 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -150,7 +153,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 195 psi / 2.6 gpm; 33/64-11/16\" 140 psi / 3.3 gpm; 23/32-1\" 160 psi / 5.5 gpm; 1-1-3/8\" 140 psi / 9 gpm; 1-13/32-1-7/8\" 155 psi / 18 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 195 psi / 2.6 gpm; 33/64-11/16\" 140 psi / 3.3 gpm; 23/32-1\" 160 psi / 5.5 gpm; 1-1-3/8\" 140 psi / 9 gpm; 1-13/32-1-7/8\" 155 psi / 18 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -199,7 +203,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 195 psi / 2.6 gpm; 33/64-11/16\" 140 psi / 3.3 gpm; 23/32-1\" 160 psi / 5.5 gpm; 1-1-3/8\" 140 psi / 9 gpm; 1-13/32-1-7/8\" 155 psi / 18 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 195 psi / 2.6 gpm; 33/64-11/16\" 140 psi / 3.3 gpm; 23/32-1\" 160 psi / 5.5 gpm; 1-1-3/8\" 140 psi / 9 gpm; 1-13/32-1-7/8\" 155 psi / 18 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -248,7 +253,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 195 psi / 2.6 gpm; 33/64-11/16\" 140 psi / 3.3 gpm; 23/32-1\" 160 psi / 5.5 gpm; 1-1-3/8\" 140 psi / 9 gpm; 1-13/32-1-7/8\" 155 psi / 18 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 195 psi / 2.6 gpm; 33/64-11/16\" 140 psi / 3.3 gpm; 23/32-1\" 160 psi / 5.5 gpm; 1-1-3/8\" 140 psi / 9 gpm; 1-13/32-1-7/8\" 155 psi / 18 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -297,7 +303,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 195 psi / 2.6 gpm; 33/64-11/16\" 140 psi / 3.3 gpm; 23/32-1\" 160 psi / 5.5 gpm; 1-1-3/8\" 140 psi / 9 gpm; 1-13/32-1-7/8\" 155 psi / 18 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 195 psi / 2.6 gpm; 33/64-11/16\" 140 psi / 3.3 gpm; 23/32-1\" 160 psi / 5.5 gpm; 1-1-3/8\" 140 psi / 9 gpm; 1-13/32-1-7/8\" 155 psi / 18 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -346,7 +353,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 195 psi / 2.6 gpm; 33/64-11/16\" 140 psi / 3.3 gpm; 23/32-1\" 160 psi / 5.5 gpm; 1-1-3/8\" 140 psi / 9 gpm; 1-13/32-1-7/8\" 155 psi / 18 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 195 psi / 2.6 gpm; 33/64-11/16\" 140 psi / 3.3 gpm; 23/32-1\" 160 psi / 5.5 gpm; 1-1-3/8\" 140 psi / 9 gpm; 1-13/32-1-7/8\" 155 psi / 18 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -395,7 +403,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 195 psi / 2.6 gpm; 33/64-11/16\" 140 psi / 3.3 gpm; 23/32-1\" 160 psi / 5.5 gpm; 1-1-3/8\" 140 psi / 9 gpm; 1-13/32-1-7/8\" 155 psi / 18 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 195 psi / 2.6 gpm; 33/64-11/16\" 140 psi / 3.3 gpm; 23/32-1\" 160 psi / 5.5 gpm; 1-1-3/8\" 140 psi / 9 gpm; 1-13/32-1-7/8\" 155 psi / 18 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -444,7 +453,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 195 psi / 2.6 gpm; 33/64-11/16\" 140 psi / 3.3 gpm; 23/32-1\" 160 psi / 5.5 gpm; 1-1-3/8\" 140 psi / 9 gpm; 1-13/32-1-7/8\" 155 psi / 18 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 195 psi / 2.6 gpm; 33/64-11/16\" 140 psi / 3.3 gpm; 23/32-1\" 160 psi / 5.5 gpm; 1-1-3/8\" 140 psi / 9 gpm; 1-13/32-1-7/8\" 155 psi / 18 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -493,7 +503,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -542,7 +553,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -591,7 +603,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -640,7 +653,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -689,7 +703,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -738,7 +753,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -787,7 +803,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -836,7 +853,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -885,7 +903,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -934,7 +953,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -983,7 +1003,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -1032,7 +1053,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 180 psi / 2.5 gpm; 33/64-11/16\" 105 psi / 2.9 gpm; 23/32-1\" 105 psi / 4.4 gpm; 1-1-3/8\" 110 psi / 8 gpm; 1-13/32-1-7/8\" 115 psi / 15 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -1081,7 +1103,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -1130,7 +1153,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -1179,7 +1203,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -1228,7 +1253,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -1277,7 +1303,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -1326,7 +1353,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -1375,7 +1403,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -1424,7 +1453,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -1473,7 +1503,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -1522,7 +1553,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -1571,7 +1603,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -1620,7 +1653,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -1669,7 +1703,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -1718,7 +1753,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -1767,7 +1803,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165 psi / 2.4 gpm; 33/64-11/16\" 85 psi / 2.6 gpm; 23/32-1\" 100 psi / 4.3 gpm; 1-1-3/8\" 75 psi / 6 gpm; 1-13/32-1-7/8\" 70 psi / 12 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -1816,7 +1853,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175 psi / 2.4 gpm; 33/64-11/16\" 115 psi / 2.3 gpm; 23/32-1\" 105 psi / 3.2 gpm; 1-1-3/8\" 75 psi / 5 gpm; 1-13/32-1-7/8\" 70 psi / 8 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175 psi / 2.4 gpm; 33/64-11/16\" 115 psi / 2.3 gpm; 23/32-1\" 105 psi / 3.2 gpm; 1-1-3/8\" 75 psi / 5 gpm; 1-13/32-1-7/8\" 70 psi / 8 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -1865,7 +1903,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175 psi / 2.4 gpm; 33/64-11/16\" 115 psi / 2.3 gpm; 23/32-1\" 105 psi / 3.2 gpm; 1-1-3/8\" 75 psi / 5 gpm; 1-13/32-1-7/8\" 70 psi / 8 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175 psi / 2.4 gpm; 33/64-11/16\" 115 psi / 2.3 gpm; 23/32-1\" 105 psi / 3.2 gpm; 1-1-3/8\" 75 psi / 5 gpm; 1-13/32-1-7/8\" 70 psi / 8 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -1914,7 +1953,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175 psi / 2.4 gpm; 33/64-11/16\" 115 psi / 2.3 gpm; 23/32-1\" 105 psi / 3.2 gpm; 1-1-3/8\" 75 psi / 5 gpm; 1-13/32-1-7/8\" 70 psi / 8 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175 psi / 2.4 gpm; 33/64-11/16\" 115 psi / 2.3 gpm; 23/32-1\" 105 psi / 3.2 gpm; 1-1-3/8\" 75 psi / 5 gpm; 1-13/32-1-7/8\" 70 psi / 8 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -1963,7 +2003,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175 psi / 2.4 gpm; 33/64-11/16\" 115 psi / 2.3 gpm; 23/32-1\" 105 psi / 3.2 gpm; 1-1-3/8\" 75 psi / 5 gpm; 1-13/32-1-7/8\" 70 psi / 8 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175 psi / 2.4 gpm; 33/64-11/16\" 115 psi / 2.3 gpm; 23/32-1\" 105 psi / 3.2 gpm; 1-1-3/8\" 75 psi / 5 gpm; 1-13/32-1-7/8\" 70 psi / 8 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -2012,7 +2053,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175 psi / 2.4 gpm; 33/64-11/16\" 115 psi / 2.3 gpm; 23/32-1\" 105 psi / 3.2 gpm; 1-1-3/8\" 75 psi / 5 gpm; 1-13/32-1-7/8\" 70 psi / 8 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175 psi / 2.4 gpm; 33/64-11/16\" 115 psi / 2.3 gpm; 23/32-1\" 105 psi / 3.2 gpm; 1-1-3/8\" 75 psi / 5 gpm; 1-13/32-1-7/8\" 70 psi / 8 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -2061,7 +2103,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175 psi / 2.4 gpm; 33/64-11/16\" 115 psi / 2.3 gpm; 23/32-1\" 105 psi / 3.2 gpm; 1-1-3/8\" 75 psi / 5 gpm; 1-13/32-1-7/8\" 70 psi / 8 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175 psi / 2.4 gpm; 33/64-11/16\" 115 psi / 2.3 gpm; 23/32-1\" 105 psi / 3.2 gpm; 1-1-3/8\" 75 psi / 5 gpm; 1-13/32-1-7/8\" 70 psi / 8 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -2110,7 +2153,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175 psi / 2.4 gpm; 33/64-11/16\" 115 psi / 2.3 gpm; 23/32-1\" 105 psi / 3.2 gpm; 1-1-3/8\" 75 psi / 5 gpm; 1-13/32-1-7/8\" 70 psi / 8 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175 psi / 2.4 gpm; 33/64-11/16\" 115 psi / 2.3 gpm; 23/32-1\" 105 psi / 3.2 gpm; 1-1-3/8\" 75 psi / 5 gpm; 1-13/32-1-7/8\" 70 psi / 8 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -2159,7 +2203,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175 psi / 2.4 gpm; 33/64-11/16\" 115 psi / 2.3 gpm; 23/32-1\" 105 psi / 3.2 gpm; 1-1-3/8\" 75 psi / 5 gpm; 1-13/32-1-7/8\" 70 psi / 8 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175 psi / 2.4 gpm; 33/64-11/16\" 115 psi / 2.3 gpm; 23/32-1\" 105 psi / 3.2 gpm; 1-1-3/8\" 75 psi / 5 gpm; 1-13/32-1-7/8\" 70 psi / 8 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -2208,7 +2253,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175 psi / 2.4 gpm; 33/64-11/16\" 115 psi / 2.3 gpm; 23/32-1\" 105 psi / 3.2 gpm; 1-1-3/8\" 75 psi / 5 gpm; 1-13/32-1-7/8\" 70 psi / 8 gpm"
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175 psi / 2.4 gpm; 33/64-11/16\" 115 psi / 2.3 gpm; 23/32-1\" 105 psi / 3.2 gpm; 1-1-3/8\" 75 psi / 5 gpm; 1-13/32-1-7/8\" 70 psi / 8 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -2257,8 +2303,15 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 329 psi / 3 gpm; 33/64-11/16\" 239 psi / 4 gpm; 23/32-1\" 260 psi / 7 gpm; 1-1-3/8\" 250 psi / 12 gpm; 1-13/32-1-7/8\" 190 psi / 20 gpm"
-     }
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 329 psi / 3 gpm; 33/64-11/16\" 239 psi / 4 gpm; 23/32-1\" 260 psi / 7 gpm; 1-1-3/8\" 250 psi / 12 gpm; 1-13/32-1-7/8\" 190 psi / 20 gpm",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304",
+      "ss316",
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
     },
     {
      "label": "Stainless 300 series (304/316/17-4PH) 135-185 BHN \u00b7 TiAlN",
@@ -2306,8 +2359,15 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 329 psi / 3 gpm; 33/64-11/16\" 239 psi / 4 gpm; 23/32-1\" 260 psi / 7 gpm; 1-1-3/8\" 250 psi / 12 gpm; 1-13/32-1-7/8\" 190 psi / 20 gpm"
-     }
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 329 psi / 3 gpm; 33/64-11/16\" 239 psi / 4 gpm; 23/32-1\" 260 psi / 7 gpm; 1-1-3/8\" 250 psi / 12 gpm; 1-13/32-1-7/8\" 190 psi / 20 gpm",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304",
+      "ss316",
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
     },
     {
      "label": "Stainless 300 series (304/316/17-4PH) 135-185 BHN \u00b7 TiCN",
@@ -2355,8 +2415,15 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 329 psi / 3 gpm; 33/64-11/16\" 239 psi / 4 gpm; 23/32-1\" 260 psi / 7 gpm; 1-1-3/8\" 250 psi / 12 gpm; 1-13/32-1-7/8\" 190 psi / 20 gpm"
-     }
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 329 psi / 3 gpm; 33/64-11/16\" 239 psi / 4 gpm; 23/32-1\" 260 psi / 7 gpm; 1-1-3/8\" 250 psi / 12 gpm; 1-13/32-1-7/8\" 190 psi / 20 gpm",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304",
+      "ss316",
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
     },
     {
      "label": "Stainless 300 series (304/316/17-4PH) 185-275 BHN \u00b7 TiN",
@@ -2404,8 +2471,15 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 329 psi / 3 gpm; 33/64-11/16\" 239 psi / 4 gpm; 23/32-1\" 260 psi / 7 gpm; 1-1-3/8\" 250 psi / 12 gpm; 1-13/32-1-7/8\" 190 psi / 20 gpm"
-     }
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 329 psi / 3 gpm; 33/64-11/16\" 239 psi / 4 gpm; 23/32-1\" 260 psi / 7 gpm; 1-1-3/8\" 250 psi / 12 gpm; 1-13/32-1-7/8\" 190 psi / 20 gpm",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304",
+      "ss316",
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
     },
     {
      "label": "Stainless 300 series (304/316/17-4PH) 185-275 BHN \u00b7 TiAlN",
@@ -2453,8 +2527,15 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 329 psi / 3 gpm; 33/64-11/16\" 239 psi / 4 gpm; 23/32-1\" 260 psi / 7 gpm; 1-1-3/8\" 250 psi / 12 gpm; 1-13/32-1-7/8\" 190 psi / 20 gpm"
-     }
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 329 psi / 3 gpm; 33/64-11/16\" 239 psi / 4 gpm; 23/32-1\" 260 psi / 7 gpm; 1-1-3/8\" 250 psi / 12 gpm; 1-13/32-1-7/8\" 190 psi / 20 gpm",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304",
+      "ss316",
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
     },
     {
      "label": "Stainless 300 series (304/316/17-4PH) 185-275 BHN \u00b7 TiCN",
@@ -2502,8 +2583,15 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
-      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 329 psi / 3 gpm; 33/64-11/16\" 239 psi / 4 gpm; 23/32-1\" 260 psi / 7 gpm; 1-1-3/8\" 250 psi / 12 gpm; 1-13/32-1-7/8\" 190 psi / 20 gpm"
-     }
+      "notes": "Allied carbide coolant chart (A30 p.127), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 329 psi / 3 gpm; 33/64-11/16\" 239 psi / 4 gpm; 23/32-1\" 260 psi / 7 gpm; 1-1-3/8\" 250 psi / 12 gpm; 1-13/32-1-7/8\" 190 psi / 20 gpm",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304",
+      "ss316",
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
     }
    ],
    "notes": "303: Allied's stainless row reads 'Stainless Steel 300 Series (304, 316, 17-4PH, etc.)'; 303 is not named, so it is not mapped. Allied lists C5 grade for ISO P rows and C2 for ISO M; 1C21T is C2."
@@ -2553,7 +2641,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -2596,7 +2685,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -2639,7 +2729,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -2682,7 +2773,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -2725,7 +2817,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -2768,7 +2861,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -2811,7 +2905,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -2854,7 +2949,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -2897,7 +2993,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -2940,7 +3037,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -2983,7 +3081,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3026,7 +3125,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3069,7 +3169,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3112,7 +3213,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3155,7 +3257,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3198,8 +3301,15 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
-     }
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304",
+      "ss316",
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
     },
     {
      "label": "Stainless 300 series (304/316/17-4PH) 185-275 BHN \u00b7 AM300",
@@ -3241,8 +3351,15 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)"
-     }
+      "page": "GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial)",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304",
+      "ss316",
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
     }
    ],
    "notes": "Allied tables say to refer to the coolant charts (catalog pp.126-127) to run at these values; coolant condition not transcribed, so coolant = not stated. 303 is not listed by Allied; it is not mapped. GEN2 coolant charts not transcribed."
@@ -3282,7 +3399,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3315,7 +3433,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3348,7 +3467,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3381,7 +3501,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3414,7 +3535,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3447,7 +3569,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3480,7 +3603,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3513,7 +3637,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3546,7 +3671,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3579,7 +3705,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3612,7 +3739,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3645,7 +3773,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3678,7 +3807,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3711,7 +3841,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3744,7 +3875,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3777,7 +3909,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3810,7 +3943,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3843,7 +3977,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3876,7 +4011,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3909,7 +4045,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3942,7 +4079,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -3975,7 +4113,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -4008,7 +4147,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -4041,7 +4181,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -4074,7 +4215,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -4107,7 +4249,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -4140,7 +4283,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -4173,7 +4317,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -4206,7 +4351,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -4239,7 +4385,8 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
      }
     },
     {
@@ -4272,8 +4419,15 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
-     }
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304",
+      "ss316",
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
     },
     {
      "label": "Stainless 300 series (304/316/17-4PH) 135-185 BHN \u00b7 AM200",
@@ -4305,8 +4459,15 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
-     }
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304",
+      "ss316",
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
     },
     {
      "label": "Stainless 300 series (304/316/17-4PH) 185-275 BHN \u00b7 TiN",
@@ -4338,8 +4499,15 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
-     }
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304",
+      "ss316",
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
     },
     {
      "label": "Stainless 300 series (304/316/17-4PH) 185-275 BHN \u00b7 AM200",
@@ -4371,8 +4539,15 @@
       "catalog": "T-A Drilling Systems catalog A30-TAS (Imperial)",
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
-      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)"
-     }
+      "page": "GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial)",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304",
+      "ss316",
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
     }
    ],
    "notes": "Allied tables say to refer to the coolant charts (catalog pp.126-127) to run at these values; coolant condition not transcribed, so coolant = not stated. 303 is not listed by Allied; it is not mapped. Only 3/8\"-11/16\" feed columns transcribed."
@@ -4413,7 +4588,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175-185 psi / 2.5-2.6 gpm; 33/64-11/16\" 100-120 psi / 2.8-3.0 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175-185 psi / 2.5-2.6 gpm; 33/64-11/16\" 100-120 psi / 2.8-3.0 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -4447,7 +4623,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175-185 psi / 2.5-2.6 gpm; 33/64-11/16\" 100-120 psi / 2.8-3.0 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175-185 psi / 2.5-2.6 gpm; 33/64-11/16\" 100-120 psi / 2.8-3.0 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -4481,7 +4658,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175-185 psi / 2.5-2.6 gpm; 33/64-11/16\" 100-120 psi / 2.8-3.0 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 175-185 psi / 2.5-2.6 gpm; 33/64-11/16\" 100-120 psi / 2.8-3.0 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -4515,7 +4693,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -4549,7 +4728,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -4583,7 +4763,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -4617,7 +4798,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -4651,7 +4833,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -4685,7 +4868,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -4719,7 +4903,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -4753,7 +4938,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -4787,7 +4973,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -4821,7 +5008,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -4855,7 +5043,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -4889,7 +5078,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 165-170 psi / 2.4-2.5 gpm; 33/64-11/16\" 75-90 psi / 2.4-2.6 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -4923,7 +5113,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -4957,7 +5148,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -4991,7 +5183,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5025,7 +5218,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5059,7 +5253,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5093,7 +5288,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5127,7 +5323,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5161,7 +5358,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5195,7 +5393,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5229,7 +5428,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5263,7 +5463,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5297,7 +5498,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5331,7 +5533,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5365,7 +5568,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5399,7 +5603,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 160-165 psi / 2.3-2.4 gpm; 33/64-11/16\" 65-75 psi / 2.2-2.4 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5433,7 +5638,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 150-155 psi / 2.3-2.4 gpm; 33/64-11/16\" 55-60 psi / 2.1-2.2 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 150-155 psi / 2.3-2.4 gpm; 33/64-11/16\" 55-60 psi / 2.1-2.2 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5467,7 +5673,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 150-155 psi / 2.3-2.4 gpm; 33/64-11/16\" 55-60 psi / 2.1-2.2 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 150-155 psi / 2.3-2.4 gpm; 33/64-11/16\" 55-60 psi / 2.1-2.2 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5501,7 +5708,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 150-155 psi / 2.3-2.4 gpm; 33/64-11/16\" 55-60 psi / 2.1-2.2 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 150-155 psi / 2.3-2.4 gpm; 33/64-11/16\" 55-60 psi / 2.1-2.2 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5535,7 +5743,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 150-155 psi / 2.3-2.4 gpm; 33/64-11/16\" 55-60 psi / 2.1-2.2 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 150-155 psi / 2.3-2.4 gpm; 33/64-11/16\" 55-60 psi / 2.1-2.2 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5569,7 +5778,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 150-155 psi / 2.3-2.4 gpm; 33/64-11/16\" 55-60 psi / 2.1-2.2 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 150-155 psi / 2.3-2.4 gpm; 33/64-11/16\" 55-60 psi / 2.1-2.2 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5603,7 +5813,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 150-155 psi / 2.3-2.4 gpm; 33/64-11/16\" 55-60 psi / 2.1-2.2 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 150-155 psi / 2.3-2.4 gpm; 33/64-11/16\" 55-60 psi / 2.1-2.2 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5637,7 +5848,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 150-155 psi / 2.3-2.4 gpm; 33/64-11/16\" 55-60 psi / 2.1-2.2 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 150-155 psi / 2.3-2.4 gpm; 33/64-11/16\" 55-60 psi / 2.1-2.2 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5671,7 +5883,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 150-155 psi / 2.3-2.4 gpm; 33/64-11/16\" 55-60 psi / 2.1-2.2 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 150-155 psi / 2.3-2.4 gpm; 33/64-11/16\" 55-60 psi / 2.1-2.2 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5705,7 +5918,8 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 150-155 psi / 2.3-2.4 gpm; 33/64-11/16\" 55-60 psi / 2.1-2.2 gpm"
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 150-155 psi / 2.3-2.4 gpm; 33/64-11/16\" 55-60 psi / 2.1-2.2 gpm",
+      "kind": "catalog"
      }
     },
     {
@@ -5739,8 +5953,15 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 171 psi / 3 gpm; 33/64-11/16\" 86 psi / 3 gpm"
-     }
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 171 psi / 3 gpm; 33/64-11/16\" 86 psi / 3 gpm",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304",
+      "ss316",
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
     },
     {
      "label": "Stainless 300 series (304/316/17-4PH) 135-185 BHN \u00b7 TiAlN",
@@ -5773,8 +5994,15 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 171 psi / 3 gpm; 33/64-11/16\" 86 psi / 3 gpm"
-     }
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 171 psi / 3 gpm; 33/64-11/16\" 86 psi / 3 gpm",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304",
+      "ss316",
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
     },
     {
      "label": "Stainless 300 series (304/316/17-4PH) 135-185 BHN \u00b7 TiCN",
@@ -5807,8 +6035,15 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 171 psi / 3 gpm; 33/64-11/16\" 86 psi / 3 gpm"
-     }
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 171 psi / 3 gpm; 33/64-11/16\" 86 psi / 3 gpm",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304",
+      "ss316",
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
     },
     {
      "label": "Stainless 300 series (304/316/17-4PH) 185-275 BHN \u00b7 TiN",
@@ -5841,8 +6076,15 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 171 psi / 3 gpm; 33/64-11/16\" 86 psi / 3 gpm"
-     }
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 171 psi / 3 gpm; 33/64-11/16\" 86 psi / 3 gpm",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304",
+      "ss316",
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
     },
     {
      "label": "Stainless 300 series (304/316/17-4PH) 185-275 BHN \u00b7 TiAlN",
@@ -5875,8 +6117,15 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 171 psi / 3 gpm; 33/64-11/16\" 86 psi / 3 gpm"
-     }
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 171 psi / 3 gpm; 33/64-11/16\" 86 psi / 3 gpm",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304",
+      "ss316",
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
     },
     {
      "label": "Stainless 300 series (304/316/17-4PH) 185-275 BHN \u00b7 TiCN",
@@ -5909,8 +6158,15 @@
       "edition": "A30-TAS (PDF copy on box)",
       "url": "https://www.alliedmachine.com/",
       "page": "T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:116",
-      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 171 psi / 3 gpm; 33/64-11/16\" 86 psi / 3 gpm"
-     }
+      "notes": "Allied HSS coolant chart (A30 p.126), through-tool, based on water- and oil-based coolants: 3/8-1/2\" 171 psi / 3 gpm; 33/64-11/16\" 86 psi / 3 gpm",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304",
+      "ss316",
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
     }
    ],
    "notes": "303: Allied's stainless row reads 'Stainless Steel 300 Series (304, 316, 17-4PH, etc.)'; 303 is not named, so it is not mapped. Only 3/8\"-11/16\" feed columns transcribed."

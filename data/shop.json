@@ -1,5 +1,6 @@
 {
- "brand": "shop-proven",
+ "schema": 1,
+ "brand": "Shop-proven (not manufacturer)",
  "tools": [
   {
    "mode": "turn",
@@ -28,7 +29,11 @@
       "catalog": "Run on Mazak QT 350 MY, 304 stainless, good finish",
       "edition": "Oct 15 2026",
       "url": null
-     }
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "304 stainless (shop record)"
     }
    ],
    "notes": "A setup that worked at one shop. This is not manufacturer data."

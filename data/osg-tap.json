@@ -1,0 +1,77 @@
+{
+ "schema": 1,
+ "brand": "OSG",
+ "tools": [
+  {
+   "mode": "tap",
+   "brand": "OSG",
+   "series": "HY-PRO / HY-PRO DIN",
+   "conditions": [
+    {
+     "label": "Low carbon steel A36/1018/12L14",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 50,
+      "max": 90,
+      "unit": "ft/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "OSG",
+      "catalog": "Taps: Recommended Tapping Conditions - HY-PRO and HY-PRO DIN, Machining Centers",
+      "edition": "OSG tech page (syndigo-hosted PDF)",
+      "url": "https://content.syndigo.com/asset/49270877-d96b-4daa-866c-613cf6d1e7c5/original.pdf",
+      "notes": "Rigid setup required to run these speeds. Coolant-through column (250 psi) not loaded.",
+      "kind": "catalog"
+     }
+    },
+    {
+     "label": "Alloy steel 4140/4340/8620",
+     "iso": "P",
+     "coolant": null,
+     "sfm": {
+      "min": 40,
+      "max": 80,
+      "unit": "ft/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "OSG",
+      "catalog": "Taps: Recommended Tapping Conditions - HY-PRO and HY-PRO DIN, Machining Centers",
+      "edition": "OSG tech page (syndigo-hosted PDF)",
+      "url": "https://content.syndigo.com/asset/49270877-d96b-4daa-866c-613cf6d1e7c5/original.pdf",
+      "notes": "Rigid setup required to run these speeds. Coolant-through column (250 psi) not loaded.",
+      "kind": "catalog"
+     }
+    },
+    {
+     "label": "Stainless 303/304/316/400",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "min": 40,
+      "max": 80,
+      "unit": "ft/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "OSG",
+      "catalog": "Taps: Recommended Tapping Conditions - HY-PRO and HY-PRO DIN, Machining Centers",
+      "edition": "OSG tech page (syndigo-hosted PDF)",
+      "url": "https://content.syndigo.com/asset/49270877-d96b-4daa-866c-613cf6d1e7c5/original.pdf",
+      "notes": "Rigid setup required to run these speeds. Coolant-through column (250 psi) not loaded.",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss303",
+      "ss304",
+      "ss316",
+      "ss400"
+     ],
+     "sourceGroup": "Stainless 303/304/316/400"
+    }
+   ]
+  }
+ ]
+}

@@ -1,7 +1,9 @@
 {
+ "schema": 1,
  "brand": "Kennametal",
  "tools": [
   {
+   "mode": "mill",
    "brand": "Kennametal",
    "series": "HARVI I TE",
    "type": "solid carbide end mill",
@@ -15,16 +17,20 @@
     16,
     20
    ],
-   "recommendations": [
+   "conditions": [
     {
+     "label": "ISO P 1",
      "iso": "P",
      "subgroup": "1",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "min": 150,
       "max": 200,
       "unit": "m/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "mm",
       "byDiameter": {
        "6": 0.048,
@@ -35,27 +41,30 @@
        "20": 0.125
       }
      },
-     "ap_xD": 1.5,
-     "ae_xD": 0.5,
-     "status": "verified",
+     "apx": 1.5,
+     "aex": 0.5,
      "source": {
+      "kind": "catalog",
       "manufacturer": "Kennametal",
-      "catalog": "Kennametal Innovations 2020 \u2014 HARVI I TE 4 Flutes Application Data (side milling A)",
+      "catalog": "Kennametal Innovations 2020 — HARVI I TE 4 Flutes Application Data (side milling A)",
       "url": "https://www.sumecsl.com/docs/Kennametal/Kennametal-Innovations-2020%5F2.pdf",
       "edition": "Innovations 2020 (distributor-hosted copy)",
       "notes": "Slotting: reduce fz 20%."
-     },
-     "coolant": null
+     }
     },
     {
+     "label": "ISO P 3",
      "iso": "P",
      "subgroup": "3",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "min": 120,
       "max": 160,
       "unit": "m/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "mm",
       "byDiameter": {
        "6": 0.04,
@@ -66,27 +75,30 @@
        "20": 0.111
       }
      },
-     "ap_xD": 1.5,
-     "ae_xD": 0.5,
-     "status": "verified",
+     "apx": 1.5,
+     "aex": 0.5,
      "source": {
+      "kind": "catalog",
       "manufacturer": "Kennametal",
-      "catalog": "Kennametal Innovations 2020 \u2014 HARVI I TE 4 Flutes Application Data (side milling A)",
+      "catalog": "Kennametal Innovations 2020 — HARVI I TE 4 Flutes Application Data (side milling A)",
       "url": "https://www.sumecsl.com/docs/Kennametal/Kennametal-Innovations-2020%5F2.pdf",
       "edition": "Innovations 2020 (distributor-hosted copy)",
       "notes": "Slotting: reduce fz 20%."
-     },
-     "coolant": null
+     }
     },
     {
+     "label": "ISO P 5",
      "iso": "P",
      "subgroup": "5",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "min": 60,
       "max": 100,
       "unit": "m/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "mm",
       "byDiameter": {
        "6": 0.032,
@@ -97,27 +109,30 @@
        "20": 0.089
       }
      },
-     "ap_xD": 1.5,
-     "ae_xD": 0.5,
-     "status": "verified",
+     "apx": 1.5,
+     "aex": 0.5,
      "source": {
+      "kind": "catalog",
       "manufacturer": "Kennametal",
-      "catalog": "Kennametal Innovations 2020 \u2014 HARVI I TE 4 Flutes Application Data (side milling A)",
+      "catalog": "Kennametal Innovations 2020 — HARVI I TE 4 Flutes Application Data (side milling A)",
       "url": "https://www.sumecsl.com/docs/Kennametal/Kennametal-Innovations-2020%5F2.pdf",
       "edition": "Innovations 2020 (distributor-hosted copy)",
       "notes": "Slotting: reduce fz 20%."
-     },
-     "coolant": null
+     }
     },
     {
+     "label": "ISO M 1",
      "iso": "M",
      "subgroup": "1",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "min": 90,
       "max": 115,
       "unit": "m/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "mm",
       "byDiameter": {
        "6": 0.04,
@@ -128,27 +143,30 @@
        "20": 0.111
       }
      },
-     "ap_xD": 1.5,
-     "ae_xD": 0.5,
-     "status": "verified",
+     "apx": 1.5,
+     "aex": 0.5,
      "source": {
+      "kind": "catalog",
       "manufacturer": "Kennametal",
-      "catalog": "Kennametal Innovations 2020 \u2014 HARVI I TE 4 Flutes Application Data (side milling A)",
+      "catalog": "Kennametal Innovations 2020 — HARVI I TE 4 Flutes Application Data (side milling A)",
       "url": "https://www.sumecsl.com/docs/Kennametal/Kennametal-Innovations-2020%5F2.pdf",
       "edition": "Innovations 2020 (distributor-hosted copy)",
       "notes": "Slotting: reduce fz 20%."
-     },
-     "coolant": null
+     }
     },
     {
+     "label": "ISO M 2",
      "iso": "M",
      "subgroup": "2",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "min": 60,
       "max": 80,
       "unit": "m/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "mm",
       "byDiameter": {
        "6": 0.032,
@@ -159,27 +177,30 @@
        "20": 0.089
       }
      },
-     "ap_xD": 1.5,
-     "ae_xD": 0.5,
-     "status": "verified",
+     "apx": 1.5,
+     "aex": 0.5,
      "source": {
+      "kind": "catalog",
       "manufacturer": "Kennametal",
-      "catalog": "Kennametal Innovations 2020 \u2014 HARVI I TE 4 Flutes Application Data (side milling A)",
+      "catalog": "Kennametal Innovations 2020 — HARVI I TE 4 Flutes Application Data (side milling A)",
       "url": "https://www.sumecsl.com/docs/Kennametal/Kennametal-Innovations-2020%5F2.pdf",
       "edition": "Innovations 2020 (distributor-hosted copy)",
       "notes": "Slotting: reduce fz 20%."
-     },
-     "coolant": null
+     }
     },
     {
+     "label": "ISO K 1",
      "iso": "K",
      "subgroup": "1",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "min": 120,
       "max": 150,
       "unit": "m/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "mm",
       "byDiameter": {
        "6": 0.048,
@@ -190,27 +211,30 @@
        "20": 0.125
       }
      },
-     "ap_xD": 1.5,
-     "ae_xD": 0.5,
-     "status": "verified",
+     "apx": 1.5,
+     "aex": 0.5,
      "source": {
+      "kind": "catalog",
       "manufacturer": "Kennametal",
-      "catalog": "Kennametal Innovations 2020 \u2014 HARVI I TE 4 Flutes Application Data (side milling A)",
+      "catalog": "Kennametal Innovations 2020 — HARVI I TE 4 Flutes Application Data (side milling A)",
       "url": "https://www.sumecsl.com/docs/Kennametal/Kennametal-Innovations-2020%5F2.pdf",
       "edition": "Innovations 2020 (distributor-hosted copy)",
       "notes": "Slotting: reduce fz 20%."
-     },
-     "coolant": null
+     }
     },
     {
+     "label": "ISO S 1",
      "iso": "S",
      "subgroup": "1",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "min": 50,
       "max": 90,
       "unit": "m/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "mm",
       "byDiameter": {
        "6": 0.04,
@@ -221,27 +245,30 @@
        "20": 0.111
       }
      },
-     "ap_xD": 1.5,
-     "ae_xD": 0.3,
-     "status": "verified",
+     "apx": 1.5,
+     "aex": 0.3,
      "source": {
+      "kind": "catalog",
       "manufacturer": "Kennametal",
-      "catalog": "Kennametal Innovations 2020 \u2014 HARVI I TE 4 Flutes Application Data (side milling A)",
+      "catalog": "Kennametal Innovations 2020 — HARVI I TE 4 Flutes Application Data (side milling A)",
       "url": "https://www.sumecsl.com/docs/Kennametal/Kennametal-Innovations-2020%5F2.pdf",
       "edition": "Innovations 2020 (distributor-hosted copy)",
       "notes": "Slotting: reduce fz 20%."
-     },
-     "coolant": null
+     }
     },
     {
+     "label": "ISO S 3",
      "iso": "S",
      "subgroup": "3",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "min": 25,
       "max": 40,
       "unit": "m/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "mm",
       "byDiameter": {
        "6": 0.021,
@@ -252,27 +279,30 @@
        "20": 0.059
       }
      },
-     "ap_xD": 1.5,
-     "ae_xD": 0.5,
-     "status": "verified",
+     "apx": 1.5,
+     "aex": 0.5,
      "source": {
+      "kind": "catalog",
       "manufacturer": "Kennametal",
-      "catalog": "Kennametal Innovations 2020 \u2014 HARVI I TE 4 Flutes Application Data (side milling A)",
+      "catalog": "Kennametal Innovations 2020 — HARVI I TE 4 Flutes Application Data (side milling A)",
       "url": "https://www.sumecsl.com/docs/Kennametal/Kennametal-Innovations-2020%5F2.pdf",
       "edition": "Innovations 2020 (distributor-hosted copy)",
       "notes": "Slotting: reduce fz 20%."
-     },
-     "coolant": null
+     }
     },
     {
+     "label": "ISO H 1",
      "iso": "H",
      "subgroup": "1",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "min": 80,
       "max": 140,
       "unit": "m/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "mm",
       "byDiameter": {
        "6": 0.036,
@@ -283,21 +313,21 @@
        "20": 0.097
       }
      },
-     "ap_xD": 1.5,
-     "ae_xD": 0.5,
-     "status": "verified",
+     "apx": 1.5,
+     "aex": 0.5,
      "source": {
+      "kind": "catalog",
       "manufacturer": "Kennametal",
-      "catalog": "Kennametal Innovations 2020 \u2014 HARVI I TE 4 Flutes Application Data (side milling A)",
+      "catalog": "Kennametal Innovations 2020 — HARVI I TE 4 Flutes Application Data (side milling A)",
       "url": "https://www.sumecsl.com/docs/Kennametal/Kennametal-Innovations-2020%5F2.pdf",
       "edition": "Innovations 2020 (distributor-hosted copy)",
       "notes": "Slotting: reduce fz 20%."
-     },
-     "coolant": null
+     }
     }
    ]
   },
   {
+   "mode": "mill",
    "brand": "Kennametal",
    "series": "HARVI I UADE (extended reach)",
    "type": "solid carbide end mill",
@@ -311,16 +341,20 @@
     16,
     20
    ],
-   "recommendations": [
+   "conditions": [
     {
+     "label": "ISO P 1",
      "iso": "P",
      "subgroup": "1",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "min": 150,
       "max": 200,
       "unit": "m/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "mm",
       "byDiameter": {
        "6": 0.044,
@@ -331,27 +365,30 @@
        "20": 0.114
       }
      },
-     "ap_xD": 1.5,
-     "ae_xD": 0.5,
-     "status": "verified",
+     "apx": 1.5,
+     "aex": 0.5,
      "source": {
+      "kind": "catalog",
       "manufacturer": "Kennametal",
-      "catalog": "High-Performance Solid Carbide End Mills \u2022 HARVI I \u2014 UADE Application Data (KCPM15)",
+      "catalog": "High-Performance Solid Carbide End Mills • HARVI I — UADE Application Data (KCPM15)",
       "url": "https://content.syndigo.com/asset/d902ad4e-2fb6-4c92-87fd-d066ce458fca/original.pdf",
       "edition": "date not printed in extract",
       "notes": "Slotting: reduce fz 10%."
-     },
-     "coolant": null
+     }
     },
     {
+     "label": "ISO P 3",
      "iso": "P",
      "subgroup": "3",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "min": 120,
       "max": 160,
       "unit": "m/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "mm",
       "byDiameter": {
        "6": 0.036,
@@ -362,27 +399,30 @@
        "20": 0.101
       }
      },
-     "ap_xD": 1.5,
-     "ae_xD": 0.5,
-     "status": "verified",
+     "apx": 1.5,
+     "aex": 0.5,
      "source": {
+      "kind": "catalog",
       "manufacturer": "Kennametal",
-      "catalog": "High-Performance Solid Carbide End Mills \u2022 HARVI I \u2014 UADE Application Data (KCPM15)",
+      "catalog": "High-Performance Solid Carbide End Mills • HARVI I — UADE Application Data (KCPM15)",
       "url": "https://content.syndigo.com/asset/d902ad4e-2fb6-4c92-87fd-d066ce458fca/original.pdf",
       "edition": "date not printed in extract",
       "notes": "Slotting: reduce fz 10%."
-     },
-     "coolant": null
+     }
     },
     {
+     "label": "ISO M 1",
      "iso": "M",
      "subgroup": "1",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "min": 90,
       "max": 115,
       "unit": "m/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "mm",
       "byDiameter": {
        "6": 0.036,
@@ -393,27 +433,30 @@
        "20": 0.101
       }
      },
-     "ap_xD": 1.5,
-     "ae_xD": 0.5,
-     "status": "verified",
+     "apx": 1.5,
+     "aex": 0.5,
      "source": {
+      "kind": "catalog",
       "manufacturer": "Kennametal",
-      "catalog": "High-Performance Solid Carbide End Mills \u2022 HARVI I \u2014 UADE Application Data (KCPM15)",
+      "catalog": "High-Performance Solid Carbide End Mills • HARVI I — UADE Application Data (KCPM15)",
       "url": "https://content.syndigo.com/asset/d902ad4e-2fb6-4c92-87fd-d066ce458fca/original.pdf",
       "edition": "date not printed in extract",
       "notes": "Slotting: reduce fz 10%."
-     },
-     "coolant": null
+     }
     },
     {
+     "label": "ISO K 1",
      "iso": "K",
      "subgroup": "1",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "min": 120,
       "max": 150,
       "unit": "m/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "mm",
       "byDiameter": {
        "6": 0.044,
@@ -424,27 +467,30 @@
        "20": 0.114
       }
      },
-     "ap_xD": 1.5,
-     "ae_xD": 0.5,
-     "status": "verified",
+     "apx": 1.5,
+     "aex": 0.5,
      "source": {
+      "kind": "catalog",
       "manufacturer": "Kennametal",
-      "catalog": "High-Performance Solid Carbide End Mills \u2022 HARVI I \u2014 UADE Application Data (KCPM15)",
+      "catalog": "High-Performance Solid Carbide End Mills • HARVI I — UADE Application Data (KCPM15)",
       "url": "https://content.syndigo.com/asset/d902ad4e-2fb6-4c92-87fd-d066ce458fca/original.pdf",
       "edition": "date not printed in extract",
       "notes": "Slotting: reduce fz 10%."
-     },
-     "coolant": null
+     }
     },
     {
+     "label": "ISO S 1",
      "iso": "S",
      "subgroup": "1",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "min": 50,
       "max": 90,
       "unit": "m/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "mm",
       "byDiameter": {
        "6": 0.036,
@@ -455,27 +501,30 @@
        "20": 0.101
       }
      },
-     "ap_xD": 1.5,
-     "ae_xD": 0.3,
-     "status": "verified",
+     "apx": 1.5,
+     "aex": 0.3,
      "source": {
+      "kind": "catalog",
       "manufacturer": "Kennametal",
-      "catalog": "High-Performance Solid Carbide End Mills \u2022 HARVI I \u2014 UADE Application Data (KCPM15)",
+      "catalog": "High-Performance Solid Carbide End Mills • HARVI I — UADE Application Data (KCPM15)",
       "url": "https://content.syndigo.com/asset/d902ad4e-2fb6-4c92-87fd-d066ce458fca/original.pdf",
       "edition": "date not printed in extract",
       "notes": "Slotting: reduce fz 10%."
-     },
-     "coolant": null
+     }
     },
     {
+     "label": "ISO H 1",
      "iso": "H",
      "subgroup": "1",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "min": 80,
       "max": 140,
       "unit": "m/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "mm",
       "byDiameter": {
        "6": 0.033,
@@ -486,17 +535,16 @@
        "20": 0.088
       }
      },
-     "ap_xD": 1.5,
-     "ae_xD": 0.5,
-     "status": "verified",
+     "apx": 1.5,
+     "aex": 0.5,
      "source": {
+      "kind": "catalog",
       "manufacturer": "Kennametal",
-      "catalog": "High-Performance Solid Carbide End Mills \u2022 HARVI I \u2014 UADE Application Data (KCPM15)",
+      "catalog": "High-Performance Solid Carbide End Mills • HARVI I — UADE Application Data (KCPM15)",
       "url": "https://content.syndigo.com/asset/d902ad4e-2fb6-4c92-87fd-d066ce458fca/original.pdf",
       "edition": "date not printed in extract",
       "notes": "Slotting: reduce fz 10%."
-     },
-     "coolant": null
+     }
     }
    ]
   }

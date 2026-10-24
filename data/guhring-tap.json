@@ -1,0 +1,190 @@
+{
+ "schema": 1,
+ "brand": "Guhring",
+ "tools": [
+  {
+   "mode": "tap",
+   "brand": "Guhring",
+   "series": "3909",
+   "conditions": [
+    {
+     "label": "Stainless, sulphured (e.g. 303) <180 HB \u00b7 HSS-E bright",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "min": 25,
+      "max": 35,
+      "unit": "ft/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Guhring",
+      "catalog": "Speed & feed sheet 3909 (Blue Ring cut taps)",
+      "edition": "guhring.com/media/speedfeed/3909.pdf",
+      "url": "https://guhring.com/media/speedfeed/3909.pdf",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss303"
+     ],
+     "sourceGroup": "Stainless, sulphured (e.g. 303)"
+    },
+    {
+     "label": "Stainless, sulphured (e.g. 303) <180 HB \u00b7 HSS-E hard coated",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "min": 40,
+      "max": 55,
+      "unit": "ft/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Guhring",
+      "catalog": "Speed & feed sheet 3909 (Blue Ring cut taps)",
+      "edition": "guhring.com/media/speedfeed/3909.pdf",
+      "url": "https://guhring.com/media/speedfeed/3909.pdf",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss303"
+     ],
+     "sourceGroup": "Stainless, sulphured (e.g. 303)"
+    },
+    {
+     "label": "Stainless, sulphured (e.g. 303) <180 HB \u00b7 HSS-E-PM bright",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "min": 30,
+      "max": 55,
+      "unit": "ft/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Guhring",
+      "catalog": "Speed & feed sheet 3909 (Blue Ring cut taps)",
+      "edition": "guhring.com/media/speedfeed/3909.pdf",
+      "url": "https://guhring.com/media/speedfeed/3909.pdf",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss303"
+     ],
+     "sourceGroup": "Stainless, sulphured (e.g. 303)"
+    },
+    {
+     "label": "Stainless, sulphured (e.g. 303) <180 HB \u00b7 HSS-E-PM hard coated",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "min": 35,
+      "max": 70,
+      "unit": "ft/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Guhring",
+      "catalog": "Speed & feed sheet 3909 (Blue Ring cut taps)",
+      "edition": "guhring.com/media/speedfeed/3909.pdf",
+      "url": "https://guhring.com/media/speedfeed/3909.pdf",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss303"
+     ],
+     "sourceGroup": "Stainless, sulphured (e.g. 303)"
+    },
+    {
+     "label": "Stainless, austenitic (304) <250 HB \u00b7 HSS-E bright",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "min": 20,
+      "max": 30,
+      "unit": "ft/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Guhring",
+      "catalog": "Speed & feed sheet 3909 (Blue Ring cut taps)",
+      "edition": "guhring.com/media/speedfeed/3909.pdf",
+      "url": "https://guhring.com/media/speedfeed/3909.pdf",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "Stainless, austenitic (304)"
+    },
+    {
+     "label": "Stainless, austenitic (304) <250 HB \u00b7 HSS-E hard coated",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "min": 30,
+      "max": 40,
+      "unit": "ft/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Guhring",
+      "catalog": "Speed & feed sheet 3909 (Blue Ring cut taps)",
+      "edition": "guhring.com/media/speedfeed/3909.pdf",
+      "url": "https://guhring.com/media/speedfeed/3909.pdf",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "Stainless, austenitic (304)"
+    },
+    {
+     "label": "Stainless, austenitic (304) <250 HB \u00b7 HSS-E-PM bright",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "min": 30,
+      "max": 50,
+      "unit": "ft/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Guhring",
+      "catalog": "Speed & feed sheet 3909 (Blue Ring cut taps)",
+      "edition": "guhring.com/media/speedfeed/3909.pdf",
+      "url": "https://guhring.com/media/speedfeed/3909.pdf",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "Stainless, austenitic (304)"
+    },
+    {
+     "label": "Stainless, austenitic (304) <250 HB \u00b7 HSS-E-PM hard coated",
+     "iso": "M",
+     "coolant": null,
+     "sfm": {
+      "min": 35,
+      "max": 60,
+      "unit": "ft/min"
+     },
+     "status": "verified",
+     "source": {
+      "manufacturer": "Guhring",
+      "catalog": "Speed & feed sheet 3909 (Blue Ring cut taps)",
+      "edition": "guhring.com/media/speedfeed/3909.pdf",
+      "url": "https://guhring.com/media/speedfeed/3909.pdf",
+      "kind": "catalog"
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "Stainless, austenitic (304)"
+    }
+   ],
+   "notes": "Sheet lists HSS-E and HSS-E-PM, bright and hard-coated columns; pick the one matching your tap. Only stainless rows are on this sheet."
+  }
+ ]
+}

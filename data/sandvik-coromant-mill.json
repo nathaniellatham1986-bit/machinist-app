@@ -1,7 +1,9 @@
 {
+ "schema": 1,
  "brand": "Sandvik Coromant",
  "tools": [
   {
+   "mode": "mill",
    "brand": "Sandvik Coromant",
    "series": "CoroMill Plura (general, inch tools)",
    "type": "solid carbide end mill",
@@ -14,15 +16,19 @@
     0.625,
     0.75
    ],
-   "recommendations": [
+   "conditions": [
     {
+     "label": "ISO P CMC 02.2",
      "iso": "P",
      "subgroup": "CMC 02.2",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "start": 315,
       "unit": "ft/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "in",
       "byDiameter": {
        "0.250": {
@@ -47,23 +53,26 @@
        }
       }
      },
-     "status": "verified",
      "source": {
+      "kind": "catalog",
       "manufacturer": "Sandvik Coromant",
-      "catalog": "Sandvik Coromant catalog \u2014 CoroMill Plura cutting data, starting values (Roughing, ap x ae > Dc)",
+      "catalog": "Sandvik Coromant catalog — CoroMill Plura cutting data, starting values (Roughing, ap x ae > Dc)",
       "url": "https://www.directools.com/documents/all/Sandvik_5739942_Catalog.pdf",
       "edition": "edition not stated (distributor-hosted)"
-     },
-     "coolant": null
+     }
     },
     {
+     "label": "ISO M CMC 05.21",
      "iso": "M",
      "subgroup": "CMC 05.21",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "start": 290,
       "unit": "ft/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "in",
       "byDiameter": {
        "0.250": {
@@ -88,23 +97,26 @@
        }
       }
      },
-     "status": "verified",
      "source": {
+      "kind": "catalog",
       "manufacturer": "Sandvik Coromant",
-      "catalog": "Sandvik Coromant catalog \u2014 CoroMill Plura cutting data, starting values (Roughing, ap x ae > Dc)",
+      "catalog": "Sandvik Coromant catalog — CoroMill Plura cutting data, starting values (Roughing, ap x ae > Dc)",
       "url": "https://www.directools.com/documents/all/Sandvik_5739942_Catalog.pdf",
       "edition": "edition not stated (distributor-hosted)"
-     },
-     "coolant": null
+     }
     },
     {
+     "label": "ISO K CMC 08.1",
      "iso": "K",
      "subgroup": "CMC 08.1",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "start": 430,
       "unit": "ft/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "in",
       "byDiameter": {
        "0.250": {
@@ -129,23 +141,26 @@
        }
       }
      },
-     "status": "verified",
      "source": {
+      "kind": "catalog",
       "manufacturer": "Sandvik Coromant",
-      "catalog": "Sandvik Coromant catalog \u2014 CoroMill Plura cutting data, starting values (Roughing, ap x ae > Dc)",
+      "catalog": "Sandvik Coromant catalog — CoroMill Plura cutting data, starting values (Roughing, ap x ae > Dc)",
       "url": "https://www.directools.com/documents/all/Sandvik_5739942_Catalog.pdf",
       "edition": "edition not stated (distributor-hosted)"
-     },
-     "coolant": null
+     }
     },
     {
+     "label": "ISO N CMC 30.22",
      "iso": "N",
      "subgroup": "CMC 30.22",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "start": 3280,
       "unit": "ft/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "in",
       "byDiameter": {
        "0.250": {
@@ -170,23 +185,26 @@
        }
       }
      },
-     "status": "verified",
      "source": {
+      "kind": "catalog",
       "manufacturer": "Sandvik Coromant",
-      "catalog": "Sandvik Coromant catalog \u2014 CoroMill Plura cutting data, starting values (Roughing, ap x ae > Dc)",
+      "catalog": "Sandvik Coromant catalog — CoroMill Plura cutting data, starting values (Roughing, ap x ae > Dc)",
       "url": "https://www.directools.com/documents/all/Sandvik_5739942_Catalog.pdf",
       "edition": "edition not stated (distributor-hosted)"
-     },
-     "coolant": null
+     }
     },
     {
+     "label": "ISO S CMC 23.22",
      "iso": "S",
      "subgroup": "CMC 23.22",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "start": 150,
       "unit": "ft/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "in",
       "byDiameter": {
        "0.250": {
@@ -211,23 +229,26 @@
        }
       }
      },
-     "status": "verified",
      "source": {
+      "kind": "catalog",
       "manufacturer": "Sandvik Coromant",
-      "catalog": "Sandvik Coromant catalog \u2014 CoroMill Plura cutting data, starting values (Roughing, ap x ae > Dc)",
+      "catalog": "Sandvik Coromant catalog — CoroMill Plura cutting data, starting values (Roughing, ap x ae > Dc)",
       "url": "https://www.directools.com/documents/all/Sandvik_5739942_Catalog.pdf",
       "edition": "edition not stated (distributor-hosted)"
-     },
-     "coolant": null
+     }
     },
     {
+     "label": "ISO H CMC 04.1",
      "iso": "H",
      "subgroup": "CMC 04.1",
-     "vc": {
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
       "start": 230,
       "unit": "ft/min"
      },
-     "fz": {
+     "feed": {
+      "kind": "fz",
       "unit": "in",
       "byDiameter": {
        "0.250": {
@@ -252,14 +273,13 @@
        }
       }
      },
-     "status": "verified",
      "source": {
+      "kind": "catalog",
       "manufacturer": "Sandvik Coromant",
-      "catalog": "Sandvik Coromant catalog \u2014 CoroMill Plura cutting data, starting values (Roughing, ap x ae > Dc)",
+      "catalog": "Sandvik Coromant catalog — CoroMill Plura cutting data, starting values (Roughing, ap x ae > Dc)",
       "url": "https://www.directools.com/documents/all/Sandvik_5739942_Catalog.pdf",
       "edition": "edition not stated (distributor-hosted)"
-     },
-     "coolant": null
+     }
     }
    ]
   }
