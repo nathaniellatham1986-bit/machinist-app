@@ -2,34 +2,24 @@
  "schema": 1,
  "builders": [
   {
-   "file": "haas.json",
-   "builder": "Haas",
-   "models": 9
-  },
-  {
-   "file": "mazak.json",
-   "builder": "Mazak",
-   "models": 2
-  },
-  {
-   "file": "hermle.json",
-   "builder": "Hermle",
+   "file": "brother.json",
+   "builder": "Brother",
    "models": 1
   },
   {
-   "file": "okuma.json",
-   "builder": "Okuma",
+   "file": "citizen.json",
+   "builder": "Citizen",
    "models": 1
-  },
-  {
-   "file": "dn-solutions.json",
-   "builder": "DN Solutions (Doosan)",
-   "models": 2
   },
   {
    "file": "dmg-mori.json",
    "builder": "DMG Mori",
-   "models": 1
+   "models": 3
+  },
+  {
+   "file": "dn-solutions.json",
+   "builder": "DN Solutions (Doosan)",
+   "models": 4
   },
   {
    "file": "fanuc.json",
@@ -37,9 +27,19 @@
    "models": 1
   },
   {
-   "file": "brother.json",
-   "builder": "Brother",
-   "models": 1
+   "file": "haas.json",
+   "builder": "Haas",
+   "models": 9
+  },
+  {
+   "file": "hardinge-bridgeport.json",
+   "builder": "Hardinge / Bridgeport",
+   "models": 2
+  },
+  {
+   "file": "hermle.json",
+   "builder": "Hermle",
+   "models": 4
   },
   {
    "file": "hurco.json",
@@ -47,9 +47,49 @@
    "models": 2
   },
   {
+   "file": "kitamura.json",
+   "builder": "Kitamura",
+   "models": 1
+  },
+  {
+   "file": "makino.json",
+   "builder": "Makino",
+   "models": 1
+  },
+  {
+   "file": "matsuura.json",
+   "builder": "Matsuura",
+   "models": 1
+  },
+  {
+   "file": "mazak.json",
+   "builder": "Mazak",
+   "models": 3
+  },
+  {
+   "file": "nakamura-tome.json",
+   "builder": "Nakamura-Tome",
+   "models": 1
+  },
+  {
+   "file": "okamoto.json",
+   "builder": "Okamoto",
+   "models": 1
+  },
+  {
+   "file": "okuma.json",
+   "builder": "Okuma",
+   "models": 3
+  },
+  {
+   "file": "star.json",
+   "builder": "Star",
+   "models": 1
+  },
+  {
    "file": "toshiba.json",
    "builder": "Toshiba / Shibaura",
-   "models": 1
+   "models": 3
   }
  ]
 }
