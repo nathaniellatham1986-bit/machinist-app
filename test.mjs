@@ -189,3 +189,7 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   assert.ok(drillRank({ series: 'X', cl: ['flood'] }, 'flood') < drillRank({ series: 'X', cl: ['through'] }, 'flood'));
   assert.ok(drillRank({ series: 'X', cl: ['through'] }, 'flood') < drillRank({ series: 'T-A carbide insert, Flat Bottom Geometry', cl: ['flood'] }, 'flood'));
   console.log('ME10 #10 drill rank tests pass'); }
+{ const { drillRank, isGun } = await import('./calc.js');
+  const g = { mode: 'drill', series: 'SUMOGUN MNSNT', type: 'modular gundrill head', cl: ['flood'] };
+  assert.ok(isGun(g)); assert.ok(drillRank(g, 'flood') > drillRank({ mode: 'drill', series: 'DE10' }, 'flood'));
+  console.log('ME11 #1 gundrill tests pass'); }
