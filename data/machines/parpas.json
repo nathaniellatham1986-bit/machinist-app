@@ -1,0 +1,89 @@
+{
+ "schema": 1,
+ "builder": "Parpas",
+ "models": [
+  {
+   "model": "XS gantry",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Universal milling head",
+     "rpm": 7000,
+     "taper": null,
+     "kw_peak": 30,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    },
+    {
+     "option": "5-axis head motorspindle",
+     "rpm": 24000,
+     "taper": null,
+     "kw_peak": 60,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.parpasamerica.com/products/xs/",
+    "title": "Parpas America XS Gantry Machine",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "Diamond (TOE 29T head)",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "TOE 29T",
+     "rpm": 20000,
+     "taper": "HSK 63 A",
+     "kw_peak": 37,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 115,
+     "rating_note": null
+    },
+    {
+     "option": "TOE 41T HSK100A option",
+     "rpm": 15000,
+     "taper": "HSK 100 A",
+     "kw_peak": null,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    },
+    {
+     "option": "TOE 41T HSK63A option",
+     "rpm": 16000,
+     "taper": "HSK 63 A",
+     "kw_peak": null,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": 2362,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.parpasamerica.com/wp-content/uploads/2022/03/diamond_brochure.pdf",
+    "title": "Parpas Diamond brochure (Parpas America)",
+    "accessed": "2026-10-24"
+   }
+  }
+ ]
+}
