@@ -228,3 +228,7 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   assert.ok(coolModes('emulsion or oil').includes('flood')); assert.ok(coolModes('combination of internal and external coolant').includes('flood'));
   const F = drillRank({ series: 'A', cl: ['flood'] }, 'flood'), N = drillRank({ series: 'B', cl: [] }, 'flood'), T = drillRank({ series: 'C', cl: ['through'] }, 'flood');
   assert.ok(F < N && N < T); assert.equal(drillRank({ series: 'C', cl: ['through'] }, 'through'), 0); console.log('ME11 #8 coolant rank tests pass'); }
+{ const { toolLifeOf } = await import('./calc.js');
+  assert.equal(toolLifeOf({ toolLife: 10 }), 10); assert.equal(toolLifeOf({ coolantNote: 'Catalog: vc calculated for 15 min tool life with external flood coolant.' }), 15);
+  assert.equal(toolLifeOf({ note: 'if dry machining is possible, tool life is reduced by 20–30% on average' }), null); assert.equal(toolLifeOf({}), null);
+  console.log('AM #2 tool life tests pass'); }

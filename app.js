@@ -1,5 +1,5 @@
 import { MODES, migrate, forMode } from './recall.js';
-import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, drillTier, rowDia, rowExcludes } from './calc.js';
+import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, drillTier, rowDia, rowExcludes, toolLifeOf } from './calc.js';
 const $ = id => document.getElementById(id);
 const J = u => fetch(u).then(r => r.json());
 const idx = await J('data/index.json');
@@ -237,7 +237,7 @@ function run() { if (PART()) $('fD').value = '0'; if (mode === 'mill') readEng()
   const BAR = []; const card = (k, val, b, cls = '') => `<div class="card ${cls}"><div class="k">${k}</div><div class="v">${val}</div><div class="b">${b}</div></div>`;
   const boreFz = mode === 'bore' && c?.feed?.kind === 'fz', fk = (mode === 'mill' ? 'Chip load' : mode === 'tap' ? 'Pitch' : 'Feed') + ` (${UL()}/${mode === 'mill' || boreFz ? 'tooth' : 'rev'})`, SPL = metric ? 'm/min' : 'SFM', FPL = metric ? 'Feed mm/min' : 'Feed IPM';
   let cards = '';
-  const sfmB = mine('sfm') && v('sfm') ? YOURS : SP ? `${src} · ${SP.basis}${SP.min != null ? ` · range ${fmt(SP, 0)}` : ''}` : '';
+  const tl = toolLifeOf(c), sfmB = mine('sfm') && v('sfm') ? YOURS : SP ? `${src} · ${SP.basis}${SP.min != null ? ` · range ${fmt(SP, 0)}` : ''}${tl ? ` · <b>at ${tl} min tool life</b> (source)` : ''}` : '';
   const fB = mode === 'tap' || TH() ? (TH() && !v('fpt') ? 'enter TPI or pitch' : 'feed/rev = thread pitch (geometry)') : false ? '' : mode === 'tap' ? 'thread pitch (geometry)' : mine('fpt') && v('fpt') ? YOURS : FD ? `${src} · ${FD.basis}${FD.min != null ? ` · range ${fmt(FD, 4)}` : ''}` : '';
   const PR = mode === 'mill' || mode === 'drill' || mode === 'bore' ? printedAt(c, v('d')) : null;
   if (PR) { const r = printedRun(PR, { dIn: v('d'), z: v('z'), maxRpm: v('maxRpm') }), ps = `${src} · printed for Ø${PR.key} ${PR.unit}`;

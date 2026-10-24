@@ -196,3 +196,7 @@ export const rowDia = c => {
   return up ? [up[1] / 25.4 - 1e-4, 99] : dn ? [0, dn[1] / 25.4 + 1e-4] : null;
 };
 export const rowExcludes = (c, d) => { const r = rowDia(c); return !!r && d > 0 && !(d >= r[0] - 1e-4 && d <= r[1] + 1e-4); };
+// Tool life the SOURCE states for a speed (field toolLife, or printed text like 'vc calculated for 15 min tool life'). null when not stated; never assumed.
+export const toolLifeOf = c => { if (!c) return null; if (c.toolLife > 0) return +c.toolLife;
+  const m = [c.note, c.coolantNote, c.source?.notes].filter(Boolean).join(' ').match(/(\d+(?:\.\d+)?)\s*min(?:utes?)?\.?\s*(?:of\s*)?tool\s*life|tool\s*life\s*(?:of\s*|T\s*=\s*|=\s*)?(\d+(?:\.\d+)?)\s*min/i);
+  return m ? +(m[1] ?? m[2]) : null; };
