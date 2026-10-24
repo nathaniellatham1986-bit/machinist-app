@@ -1,0 +1,42 @@
+{
+ "schema": 1,
+ "builder": "Star",
+ "models": [
+  {
+   "model": "SR-20JII",
+   "type": "swiss",
+   "spindles": [
+    {
+     "option": "Main spindle",
+     "rpm": 10000,
+     "taper": "",
+     "kw_peak": 3.7,
+     "kw_cont": 2.2,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    },
+    {
+     "option": "Sub spindle",
+     "rpm": 10000,
+     "taper": "",
+     "kw_peak": 3.7,
+     "kw_cont": 2.2,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://star-m.jp/eng/products/lathe/swiss_type/sr-20j_ii.html",
+    "title": "Star Micronics SR-20JII",
+    "accessed": "2026-10-24"
+   }
+  }
+ ]
+}
