@@ -192,7 +192,7 @@ function fill() {
   }
   if (mode === 'tap') { const th = threads.threads[$('thr').value];
     h += `<br><b>Tap drill 75%:</b> ${th.drill75_mm ? th.drill75_mm + ' mm / ' : ''}${th.drill75_in.toFixed(4)} in (geometry)${th.chart ? ' · chart pick ' + th.chart : ''}<br><small>${threads.source.formula}. ${th.chart ? threads.source.chart : ''}</small>`
-    + (tapTypeOf(t ?? {}) === 'form' || $('tapT').value === 'form' ? `<br><b>Form-tap drill:</b> ${c?.formDrill ? c.formDrill + ' (manufacturer chart)' : NO} <small>(the 75% chart above is for cutting taps)</small>` : '')
+    + ((t ? tapTypeOf(t) === 'form' : $('tapT').value === 'form') ? `<br><b>Form-tap drill:</b> ${c?.formDrill ? c.formDrill + ' (manufacturer chart)' : NO} <small>(the 75% chart above is for cutting taps)</small>` : '')
     + `<br><b>Rigid tap:</b> feed per rev = pitch (${th.pitch_in.toFixed(4)} in); IPM = RPM × pitch.`; }
   $('src').innerHTML = h; coolNote(); run();
 }

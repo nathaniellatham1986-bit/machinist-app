@@ -165,3 +165,8 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   r = threadFeed({ rpm: 4760, lead: 1 / 13, maxIpm: 150 }); assert.ok(r.capped && Math.round(r.rpm) === 1950 && r.ipm === 150);
   r = threadFeed({ rpm: 1000, lead: 1 / 13, maxIpm: 150 }); assert.ok(!r.capped && !r.high);
   console.log('thread feed cap tests pass'); }
+{ const { tapTypeOf } = await import('./calc.js');
+  assert.equal(tapTypeOf({ series: 'x', type: 'HSS-E machine tap; color code M; surface -; flute hand/angle -; lead DIN 2197 form B' }), 'point');
+  assert.equal(tapTypeOf({ series: 'x', type: 'HSS-E machine tap; flute hand/angle R40°; lead DIN 2197 form C' }), 'flute');
+  assert.equal(tapTypeOf({ series: 'InnoForm roll tap' }), 'form'); assert.equal(tapTypeOf({ series: 'List 16250', type: 'FORMING HSS-Co' }), 'form'); assert.equal(tapTypeOf({ series: 'Fluteless thread forming tap' }), 'form');
+  console.log('ME10 #1 tap type tests pass'); }

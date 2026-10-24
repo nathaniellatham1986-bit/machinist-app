@@ -90,7 +90,9 @@ export const turnOpOf = (t, c) => { const s = `${c?.operation ?? ''} ${t.series}
 export const turnOpsOf = (t, c) => { const o = turnOpOf(t, c), s = `${c?.operation ?? ''} ${t.series} ${t.type ?? ''}`; return o === 'Part' && /groov/i.test(s) ? ['Part', 'Groove'] : [o]; };
 export const kindOf = t => { const s = `${t.type ?? ''} ${t.series}`, m = t.mode;
   return /thread mill/i.test(s) ? 'Thread mill' : m === 'tap' ? 'Tap' : m === 'bore' || /bor/i.test(s) && m !== 'drill' ? 'Boring' : /insert|indexable/i.test(s) || m === 'turn' ? 'Insert' : m === 'drill' ? 'Drill' : 'End mill'; };
-export const tapTypeOf = t => { const s = `${t.type ?? ''} ${t.series}`; return /form|roll|flutel/i.test(s) ? 'form' : /spiral point|gun|straight/i.test(s) ? 'point' : /spiral/i.test(s) ? 'flute' : ''; };
+// Form (roll) tap only when the name says so. 'form B/C lead' (DIN 2197) is a chamfer style on cutting taps; form B = spiral point.
+export const tapTypeOf = t => { const s = `${t.type ?? ''} ${t.series}`; return /\broll|\bform tap|\bforming\b|fluteless|flutel|thread.?form/i.test(s) ? 'form'
+  : /spiral flute|flute hand\/angle [RL]\d|helix/i.test(s) ? 'flute' : /spiral point|gun|\bform B\b|straight/i.test(s) ? 'point' : /spiral/i.test(s) ? 'flute' : ''; };
 // General shop guidance (NOT manufacturer data).
 export const boreLimit = shank => shank === 'carbide' ? 6 : 4;
 export const css = ({ sfm, d0, d1, maxRpm }) => { const r = d => (sfm * 12) / (Math.PI * d), at = d => maxRpm ? Math.min(r(d), maxRpm) : r(d);
