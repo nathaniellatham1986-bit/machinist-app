@@ -214,3 +214,7 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   assert.ok(20 * drillTier(gunData, 0.5, 'P') + drillRank(gunData, 'flood') < 20 * drillTier(rangeOnly, 0.5, 'P') + drillRank(rangeOnly, 'flood'));
   assert.ok(drillRank(gunData, 'flood') > drillRank(withData, 'flood'));
   console.log('ME11 #6 drill data tier tests pass'); }
+{ const { drillSpans, dataAt } = await import('./calc.js');
+  const t = { mode: 'drill', series: 'DRZ', conditions: [{ iso: 'P', label: 'Alloy steel · DC ø13~ø15.5', sfm: { min: 1, max: 2 }, feed: { unit: 'mm', range: { min: .06, max: .1 } } }] }; t.dd = drillSpans(t);
+  assert.equal(dataAt(t, 0.5, 'P'), false); assert.equal(dataAt(t, 0.55, 'P'), true);
+  console.log('ME11 #6 label row diameter tests pass'); }
