@@ -354,42 +354,31 @@ if (q.get('d')) { $('d').value = q.get('d'); fill(); }
 if (q.get('open')) document.querySelector('#src details')?.setAttribute('open', '');
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
 
+// MSC search for the exact tool picked: brand, series, grade/coating, size (native unit), flutes, type. Rebuilt on every run().
+function mscBrand(b) { return ({ 'Allied': 'Allied Machine', 'Helical Solutions': 'Helical Solutions', 'Sandvik Coromant': 'Sandvik Coromant',  'Kodiak Cutting Tools': 'Kodiak', 'Sumitomo Electric Hardmetal': 'Sumitomo', 'Sumitomo Electric': 'Sumitomo', 'Mitsubishi Materials': 'Mitsubishi', 'KYOCERA SGS': 'SGS', 'Kyocera SGS': 'SGS', 'Dormer Pramet': 'Dormer', 'Lakeshore Carbide': 'Lakeshore', 'Data Flute': 'Data Flute', 'Garr Tool': 'Garr', 'Harvey Tool': 'Harvey Tool', 'Union Tool': 'Union Tool', 'ISCAR': 'Iscar', 'KORLOY': 'Korloy', 'FRAISA': 'Fraisa', 'MAPAL': 'Mapal' })[b]; }
+function fracIn(x) { for (const den of [2, 4, 8, 16, 32, 64]) { const n = x * den; if (Math.abs(n - Math.round(n)) < 1e-4) { const w = Math.floor(Math.round(n) / den), r = Math.round(n) % den, g = (a, b) => b ? g(b, a % b) : a, k = g(r, den);
+  return r ? `${w ? w + '-' : ''}${r / k}/${den / k}"` : `${w}"`; } } return +x.toFixed(4) + '"'; };
+function findQuery() { const t = curTool(); if (!t || /shop-proven/i.test(t.brand)) return null; const c = t.conditions?.[$('cond').value] ?? {};
+  const brand = /^Criterion\b/i.test(t.series) ? 'Criterion' : mscBrand(t.brand) ?? t.brand.replace(/\s+(Cutting Tools|Precision Tools|Coromant|Hardmetal)$/i, '');
+  const blob = `${t.series} ${t.type ?? ''}`, ins = /insert|indexable|exchangeable|head|cutter|parting|groov|cut-off/i.test(blob) || mode === 'turn';
+  const strip = x => String(x ?? '').replace(/[®™©]/g, '').replace(/\(.*?\)|\(.*$/g, ' ');
+  let series = strip(t.series).split(/\s+[—–]\s+|[,:;]|\s-\s/)[0].replace(/\b\d\s*(fl|flutes?)\b|\b(series|list|grade|grades|inserts?|tools?|end ?mills?|drills?|taps?|turning|thread|threading|parting|grooving|cut-off|start values|recommended|cutting|conditions|standard|ball|nose|square|criterion|finish|boring|internal|external)\b/gi, ' ').replace(/&/g, ' ');
+  series = series.split(/\s+/).filter(w => w && !/^(\d{1,2}x?|e\.g\.|and|for|of|the|with|&|\/|[-–—·])$/i.test(w) && w.toLowerCase() !== brand.toLowerCase() && !brand.toLowerCase().includes(w.toLowerCase())).slice(0, 3).join(' ');
+  const gSel = $('grade'); let grade = !$('gradeL').hidden && gSel.selectedIndex >= 0 ? gSel.options[gSel.selectedIndex].textContent.replace(/ · .*$/, '') : (t.grade || t.coating || c.grade || '');
+  grade = String(grade).split(/\s*[\/,]\s*|\s+or\s+/)[0].replace(/\(.*?\)/g, '').trim(); if (!/^[A-Z0-9][\w.\-]{1,11}$/i.test(grade) || /^(any|none|uncoated|carbide|hss|-)$/i.test(grade) && !/^(TiN|AlTiN|TiAlN|TiCN)$/i.test(grade)) grade = '';
+  const insD = /\d/.test(c.insert ?? '') && /[A-Z]/.test(c.insert) && !/insert|negative|positive|inboard|outboard/i.test(c.insert) ? c.insert.trim() : '';
+  const parts = [brand];
+  if (insD) parts.push(insD); else if (series && !(grade && series.includes(grade))) parts.push(series); else if (series) parts.push(series);
+  if (grade && !parts.join(' ').includes(grade)) parts.push(grade);
+  if (mode === 'tap') { const th = threads.threads[$('thr').value]; if (th?.name) parts.push(th.name.replace(/^#/, '#')); parts.push('tap'); return parts; }
+  const thMill = /thread ?mill/i.test(blob);
+  if (!ins || mode === 'drill' && !/insert/i.test(t.type ?? '')) { const d = inV('d'); if (d > 0 && !thMill) { const mm = t.diameters_mm && !t.diameters_in || /metric|\bmm\b|ø/i.test(blob) && !/inch|fraction/i.test(blob); parts.push(mm ? `${+(d * 25.4).toFixed(2)} mm` : fracIn(d)); } }
+  const zs = /(\d)\s*(?:fl\b|flutes?)/i.exec(t.series) ?? /^[A-Z]+\d+[A-Z]*-(\d)$/.exec(t.series.trim()), z = t.flutes || (zs ? +zs[1] : +$('z').value); if (mode === 'mill' && !ins && !thMill && z > 0) parts.push(`${z} Flute`);
+  parts.push(thMill ? 'thread mill' : mode === 'mill' ? (ins ? (insD ? 'insert' : 'indexable mill') : 'end mill') : mode === 'drill' ? (insD || /insert/i.test(t.type ?? '') ? 'drill insert' : 'drill') : mode === 'bore' ? 'boring' : TH() ? 'threading insert' : PART() ? 'cut-off insert' : PG() ? 'grooving insert' : 'turning insert');
+  return parts; }
 function updateFindLink() {
-  const a = $('findTool');
-  if (!a) return;
-  const sel = $('tool');
-  if (!sel || !sel.value) { a.hidden = true; return; }
-  const opt = sel.options[sel.selectedIndex];
-  const label = (opt?.textContent || '').replace(/ — outside.*$/, '').replace(/ — spiral.*$/, '').trim();
-  const brand = $('brand').value || (label.split(' — ')[0] || '').trim();
-  const series = label.includes(' — ') ? label.split(' — ').slice(1).join(' — ') : label;
-  const parts = [brand, series];
-  // Grade / coating from the Grade select
-  const gSel = $('grade');
-  if (gSel && !gSel.hidden && gSel.selectedIndex >= 0) {
-    const gText = (gSel.options[gSel.selectedIndex].textContent || '').replace(/ · No mfr data.*$/, '').trim();
-    if (gText && gText !== 'Any') parts.push(gText);
-  }
-  // Size
-  if (mode === 'tap') {
-    const thr = threads.threads[$('thr').value];
-    if (thr?.name) parts.push(thr.name);
-    else {
-      const d = $('d').value;
-      if (d) parts.push(d + (metric ? 'mm' : 'in'));
-    }
-    parts.push('tap');
-  } else {
-    const d = $('d').value;
-    if (d) parts.push(d + (metric ? 'mm' : '"'));
-    const z = +$('z').value;
-    if (z > 0 && (mode === 'mill' || mode === 'bore')) parts.push(z + ' flute');
-    if (mode === 'mill') parts.push('end mill');
-    else if (mode === 'drill') parts.push('drill');
-    else if (mode === 'bore') parts.push('boring bar');
-    else if (mode === 'turn') parts.push('insert');
-  }
-  const q = encodeURIComponent(parts.filter(Boolean).join(' ').replace(/\s+/g, ' ').trim());
-  a.href = 'https://www.mscdirect.com/browse/tn?searchterm=' + q;
-  a.hidden = false;
+  const a = $('findTool'); if (!a) return; const p = $('tool').value ? findQuery() : null;
+  if (!p) { a.hidden = true; return; }
+  const q = p.filter(x => x && !/^(undefined|null|NaN)$/.test(x) && !/DERIVED|MFR|YOUR VALUE/i.test(x)).join(' ').replace(/\s+/g, ' ').trim();
+  a.href = 'https://www.mscdirect.com/browse/tn?searchterm=' + encodeURIComponent(q); a.dataset.q = q; a.textContent = `Find this tool: ${q}`; a.hidden = false;
 }
