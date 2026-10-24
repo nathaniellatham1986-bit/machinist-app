@@ -126,3 +126,7 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   const b = fzFromPerD({ min: 0.005, max: 0.01 }, 10); assert.ok(Math.abs(b.def - 0.075) < 1e-12); assert.match(b.basis, /MFR FORMULA \(0\.0075×D\), MIDPOINT/);
   assert.equal(fzFromPerD({ start: 0.006 }, 0), null);
   console.log('fzPerD tests pass'); }
+{ const { turnOpsOf } = await import('./calc.js');
+  assert.deepEqual(turnOpsOf({ series: 'DGN inserts', type: 'parting / grooving insert' }), ['Part', 'Groove']);
+  assert.deepEqual(turnOpsOf({ series: 'CNMG', type: 'turning insert' }), ['Turn']);
+  console.log('turnOps tests pass'); }

@@ -86,6 +86,8 @@ export function matchMat(m, c) {
 export const passOf = c => { const s = `${c.label} ${c.operation ?? ''} ${c.subgroup ?? ''}`; return /finish|light/i.test(s) ? 'Finish' : /rough|heavy/i.test(s) ? 'Rough' : 'Medium'; };
 export const cutOf = c => { const s = `${c.label} ${c.operation ?? ''}`; return /\bHEM\b|dynamic|trochoid|high.?eff|adaptive|HPC/i.test(s) ? 'HEM' : /slot|full width|groov/i.test(s) ? 'Slot' : /side|profil|periph|contour|shoulder/i.test(s) ? 'Side' : ''; };
 export const turnOpOf = (t, c) => { const s = `${c?.operation ?? ''} ${t.series} ${t.type ?? ''}`; return /thread/i.test(s) ? 'Thread' : /part|cut.?off/i.test(s) ? 'Part' : /groov/i.test(s) ? 'Groove' : /fac/i.test(s) ? 'Face' : 'Turn'; };
+// All operations a record names ("parting / grooving insert" → Part and Groove); used by the Operation filter.
+export const turnOpsOf = (t, c) => { const o = turnOpOf(t, c), s = `${c?.operation ?? ''} ${t.series} ${t.type ?? ''}`; return o === 'Part' && /groov/i.test(s) ? ['Part', 'Groove'] : [o]; };
 export const kindOf = t => { const s = `${t.type ?? ''} ${t.series}`, m = t.mode;
   return /thread mill/i.test(s) ? 'Thread mill' : m === 'tap' ? 'Tap' : m === 'bore' || /bor/i.test(s) && m !== 'drill' ? 'Boring' : /insert|indexable/i.test(s) || m === 'turn' ? 'Insert' : m === 'drill' ? 'Drill' : 'End mill'; };
 export const tapTypeOf = t => { const s = `${t.type ?? ''} ${t.series}`; return /form|roll|flutel/i.test(s) ? 'form' : /spiral point|gun|straight/i.test(s) ? 'point' : /spiral/i.test(s) ? 'flute' : ''; };
