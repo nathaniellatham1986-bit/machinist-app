@@ -1,0 +1,392 @@
+{
+ "schema": 1,
+ "brand": "ISCAR",
+ "tools": [
+  {
+   "mode": "turn",
+   "brand": "ISCAR",
+   "series": "XCMT-MG (DR-MF multifunction)",
+   "type": "internal grooving / turning insert",
+   "conditions": [
+    {
+     "label": "XCMT 05R-201802-MG IC808G \u2013 turning (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "XCMT 05R-201802-MG",
+     "operation": "turning",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "range": {
+       "min": 0.00196,
+       "max": 0.00393
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "MAX-OUT Catalog (inch) \u2013 XCMT-MG Two Cutting Edged Internal Grooving Inserts for DR-MF Multifunction Tools, Recommended Machining Data",
+      "edition": "May 2026 imperial version",
+      "url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+      "page": "114",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC808G. Catalog prints feed only (IPR), no cutting speed and no workpiece material for this table. Pages 92-113 (SUMO-CHAM/DCN bodies, heads, DR-MF) print dimensions only, no machining data."
+     }
+    },
+    {
+     "label": "XCMT 05R-201802-MG IC808G \u2013 grooving (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "XCMT 05R-201802-MG",
+     "operation": "grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "range": {
+       "min": 0.0016,
+       "max": 0.0027
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "MAX-OUT Catalog (inch) \u2013 XCMT-MG Two Cutting Edged Internal Grooving Inserts for DR-MF Multifunction Tools, Recommended Machining Data",
+      "edition": "May 2026 imperial version",
+      "url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+      "page": "114",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC808G. Catalog prints feed only (IPR), no cutting speed and no workpiece material for this table. Pages 92-113 (SUMO-CHAM/DCN bodies, heads, DR-MF) print dimensions only, no machining data."
+     }
+    },
+    {
+     "label": "XCMT 06R-202002-MG IC808G \u2013 turning (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "XCMT 06R-202002-MG",
+     "operation": "turning",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "range": {
+       "min": 0.00196,
+       "max": 0.00393
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "MAX-OUT Catalog (inch) \u2013 XCMT-MG Two Cutting Edged Internal Grooving Inserts for DR-MF Multifunction Tools, Recommended Machining Data",
+      "edition": "May 2026 imperial version",
+      "url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+      "page": "114",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC808G. Catalog prints feed only (IPR), no cutting speed and no workpiece material for this table. Pages 92-113 (SUMO-CHAM/DCN bodies, heads, DR-MF) print dimensions only, no machining data."
+     }
+    },
+    {
+     "label": "XCMT 06R-202002-MG IC808G \u2013 grooving (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "XCMT 06R-202002-MG",
+     "operation": "grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "range": {
+       "min": 0.0016,
+       "max": 0.0027
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "MAX-OUT Catalog (inch) \u2013 XCMT-MG Two Cutting Edged Internal Grooving Inserts for DR-MF Multifunction Tools, Recommended Machining Data",
+      "edition": "May 2026 imperial version",
+      "url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+      "page": "114",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC808G. Catalog prints feed only (IPR), no cutting speed and no workpiece material for this table. Pages 92-113 (SUMO-CHAM/DCN bodies, heads, DR-MF) print dimensions only, no machining data."
+     }
+    },
+    {
+     "label": "XCMT 07R-252002-MG IC808G \u2013 turning (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "XCMT 07R-252002-MG",
+     "operation": "turning",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "range": {
+       "min": 0.00275,
+       "max": 0.00472
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "MAX-OUT Catalog (inch) \u2013 XCMT-MG Two Cutting Edged Internal Grooving Inserts for DR-MF Multifunction Tools, Recommended Machining Data",
+      "edition": "May 2026 imperial version",
+      "url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+      "page": "114",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC808G. Catalog prints feed only (IPR), no cutting speed and no workpiece material for this table. Pages 92-113 (SUMO-CHAM/DCN bodies, heads, DR-MF) print dimensions only, no machining data."
+     }
+    },
+    {
+     "label": "XCMT 07R-252002-MG IC808G \u2013 grooving (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "XCMT 07R-252002-MG",
+     "operation": "grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "range": {
+       "min": 0.002,
+       "max": 0.0039
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "MAX-OUT Catalog (inch) \u2013 XCMT-MG Two Cutting Edged Internal Grooving Inserts for DR-MF Multifunction Tools, Recommended Machining Data",
+      "edition": "May 2026 imperial version",
+      "url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+      "page": "114",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC808G. Catalog prints feed only (IPR), no cutting speed and no workpiece material for this table. Pages 92-113 (SUMO-CHAM/DCN bodies, heads, DR-MF) print dimensions only, no machining data."
+     }
+    },
+    {
+     "label": "XCMT 08R-252502-MG IC808G \u2013 turning (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "XCMT 08R-252502-MG",
+     "operation": "turning",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "range": {
+       "min": 0.00275,
+       "max": 0.00472
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "MAX-OUT Catalog (inch) \u2013 XCMT-MG Two Cutting Edged Internal Grooving Inserts for DR-MF Multifunction Tools, Recommended Machining Data",
+      "edition": "May 2026 imperial version",
+      "url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+      "page": "114",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC808G. Catalog prints feed only (IPR), no cutting speed and no workpiece material for this table. Pages 92-113 (SUMO-CHAM/DCN bodies, heads, DR-MF) print dimensions only, no machining data."
+     }
+    },
+    {
+     "label": "XCMT 08R-252502-MG IC808G \u2013 grooving (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "XCMT 08R-252502-MG",
+     "operation": "grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "range": {
+       "min": 0.002,
+       "max": 0.0039
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "MAX-OUT Catalog (inch) \u2013 XCMT-MG Two Cutting Edged Internal Grooving Inserts for DR-MF Multifunction Tools, Recommended Machining Data",
+      "edition": "May 2026 imperial version",
+      "url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+      "page": "114",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC808G. Catalog prints feed only (IPR), no cutting speed and no workpiece material for this table. Pages 92-113 (SUMO-CHAM/DCN bodies, heads, DR-MF) print dimensions only, no machining data."
+     }
+    },
+    {
+     "label": "XCMT 10R-303003-MG IC808G \u2013 turning (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "XCMT 10R-303003-MG",
+     "operation": "turning",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "range": {
+       "min": 0.00551,
+       "max": 0.00708
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "MAX-OUT Catalog (inch) \u2013 XCMT-MG Two Cutting Edged Internal Grooving Inserts for DR-MF Multifunction Tools, Recommended Machining Data",
+      "edition": "May 2026 imperial version",
+      "url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+      "page": "114",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC808G. Catalog prints feed only (IPR), no cutting speed and no workpiece material for this table. Pages 92-113 (SUMO-CHAM/DCN bodies, heads, DR-MF) print dimensions only, no machining data."
+     }
+    },
+    {
+     "label": "XCMT 10R-303003-MG IC808G \u2013 grooving (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "XCMT 10R-303003-MG",
+     "operation": "grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "range": {
+       "min": 0.0024,
+       "max": 0.0047
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "MAX-OUT Catalog (inch) \u2013 XCMT-MG Two Cutting Edged Internal Grooving Inserts for DR-MF Multifunction Tools, Recommended Machining Data",
+      "edition": "May 2026 imperial version",
+      "url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+      "page": "114",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC808G. Catalog prints feed only (IPR), no cutting speed and no workpiece material for this table. Pages 92-113 (SUMO-CHAM/DCN bodies, heads, DR-MF) print dimensions only, no machining data."
+     }
+    },
+    {
+     "label": "XCMT 13R-353503-MG IC808G \u2013 turning (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "XCMT 13R-353503-MG",
+     "operation": "turning",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "range": {
+       "min": 0.00551,
+       "max": 0.00787
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "MAX-OUT Catalog (inch) \u2013 XCMT-MG Two Cutting Edged Internal Grooving Inserts for DR-MF Multifunction Tools, Recommended Machining Data",
+      "edition": "May 2026 imperial version",
+      "url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+      "page": "114",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC808G. Catalog prints feed only (IPR), no cutting speed and no workpiece material for this table. Pages 92-113 (SUMO-CHAM/DCN bodies, heads, DR-MF) print dimensions only, no machining data."
+     }
+    },
+    {
+     "label": "XCMT 13R-353503-MG IC808G \u2013 grooving (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "XCMT 13R-353503-MG",
+     "operation": "grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "range": {
+       "min": 0.0027,
+       "max": 0.0055
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "MAX-OUT Catalog (inch) \u2013 XCMT-MG Two Cutting Edged Internal Grooving Inserts for DR-MF Multifunction Tools, Recommended Machining Data",
+      "edition": "May 2026 imperial version",
+      "url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+      "page": "114",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC808G. Catalog prints feed only (IPR), no cutting speed and no workpiece material for this table. Pages 92-113 (SUMO-CHAM/DCN bodies, heads, DR-MF) print dimensions only, no machining data."
+     }
+    },
+    {
+     "label": "XCMT 17R-404004-MG IC808G \u2013 turning (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "XCMT 17R-404004-MG",
+     "operation": "turning",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "range": {
+       "min": 0.0059,
+       "max": 0.00826
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "MAX-OUT Catalog (inch) \u2013 XCMT-MG Two Cutting Edged Internal Grooving Inserts for DR-MF Multifunction Tools, Recommended Machining Data",
+      "edition": "May 2026 imperial version",
+      "url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+      "page": "114",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC808G. Catalog prints feed only (IPR), no cutting speed and no workpiece material for this table. Pages 92-113 (SUMO-CHAM/DCN bodies, heads, DR-MF) print dimensions only, no machining data."
+     }
+    },
+    {
+     "label": "XCMT 17R-404004-MG IC808G \u2013 grooving (material not stated)",
+     "iso": "*",
+     "status": "verified",
+     "coolant": null,
+     "insert": "XCMT 17R-404004-MG",
+     "operation": "grooving",
+     "sfm": null,
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "range": {
+       "min": 0.0031,
+       "max": 0.0059
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "ISCAR",
+      "catalog": "MAX-OUT Catalog (inch) \u2013 XCMT-MG Two Cutting Edged Internal Grooving Inserts for DR-MF Multifunction Tools, Recommended Machining Data",
+      "edition": "May 2026 imperial version",
+      "url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+      "page": "114",
+      "retrieved": "2026-10-23",
+      "notes": "Grade IC808G. Catalog prints feed only (IPR), no cutting speed and no workpiece material for this table. Pages 92-113 (SUMO-CHAM/DCN bodies, heads, DR-MF) print dimensions only, no machining data."
+     }
+    }
+   ]
+  }
+ ]
+}
