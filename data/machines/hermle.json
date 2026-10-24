@@ -70,6 +70,147 @@
     "title": "Hermle Technical data C 42",
     "accessed": "2026-10-24"
    }
+  },
+  {
+   "model": "C 250 GEN2",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "15000 rpm SK40",
+     "rpm": 15000,
+     "taper": "SK40",
+     "kw_peak": 20,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 173,
+     "rating_note": "20% duty"
+    },
+    {
+     "option": "16000 rpm HSK-A63",
+     "rpm": 16000,
+     "taper": "HSK-A63",
+     "kw_peak": 20,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 173,
+     "rating_note": "20% duty"
+    },
+    {
+     "option": "20000 rpm HSK-A63",
+     "rpm": 20000,
+     "taper": "HSK-A63",
+     "kw_peak": 42,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 148,
+     "rating_note": "20% duty"
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.hermle.de/fileadmin/website/5_NEWS-UND-MEDIA/5_2_Mediathek/Technische_Daten/Englisch/HERMLE_Technical-Data_C250-GEN2_2025_EN.pdf",
+    "title": "Hermle Technical data C 250 GEN2",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "C 400 GEN2",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "15000 rpm SK40",
+     "rpm": 15000,
+     "taper": "SK40",
+     "kw_peak": 20,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 173,
+     "rating_note": "20% duty"
+    },
+    {
+     "option": "16000 rpm HSK-A63",
+     "rpm": 16000,
+     "taper": "HSK-A63",
+     "kw_peak": 20,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 173,
+     "rating_note": "20% duty"
+    },
+    {
+     "option": "20000 rpm HSK-A63",
+     "rpm": 20000,
+     "taper": "HSK-A63",
+     "kw_peak": 42,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 148,
+     "rating_note": "20% duty"
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.hermle.de/fileadmin/website/5_NEWS-UND-MEDIA/5_2_Mediathek/Technische_Daten/Englisch/hermle_technical_data_C400_GEN2_en.pdf",
+    "title": "Hermle Technical data C 400 GEN2",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "C 650 GEN2",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "15000 rpm SK40",
+     "rpm": 15000,
+     "taper": "SK40",
+     "kw_peak": 20,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 173,
+     "rating_note": "20% duty"
+    },
+    {
+     "option": "16000 rpm HSK-A63",
+     "rpm": 16000,
+     "taper": "HSK-A63",
+     "kw_peak": 20,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 173,
+     "rating_note": "20% duty"
+    },
+    {
+     "option": "20000 rpm HSK-A63",
+     "rpm": 20000,
+     "taper": "HSK-A63",
+     "kw_peak": 42,
+     "kw_cont": null,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 148,
+     "rating_note": "20% duty"
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.hermle.de/fileadmin/website/5_NEWS-UND-MEDIA/5_2_Mediathek/Technische_Daten/Englisch/HERMLE_Technical_Data_C650_GEN2_EN.pdf",
+    "title": "Hermle Technical data C 650 GEN2",
+    "accessed": "2026-10-24"
+   }
   }
  ]
 }
