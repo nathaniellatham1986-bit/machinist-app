@@ -1,0 +1,6269 @@
+{
+"schema": 1,
+"brand": "ISCAR",
+"tools": [
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "CXMU inserts (MAX-OUT p.4)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "CXMU 060202-F3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.012,
+"max": 0.079,
+"unit": "in"
+},
+"insert": "CXMU 060202-F3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "4",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CXMU 060204-F3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.079,
+"unit": "in"
+},
+"insert": "CXMU 060204-F3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "4",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CXMU 060208-F3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00275,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.079,
+"unit": "in"
+},
+"insert": "CXMU 060208-F3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "4",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CXMU 060202-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.012,
+"max": 0.079,
+"unit": "in"
+},
+"insert": "CXMU 060202-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "4",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CXMU 060204-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.079,
+"unit": "in"
+},
+"insert": "CXMU 060204-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "4",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CXMU 060208-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00275,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.079,
+"unit": "in"
+},
+"insert": "CXMU 060208-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "4",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "D6NGG inserts (MAX-OUT p.8)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "D6NGG 330-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.012,
+"max": 0.098,
+"unit": "in"
+},
+"insert": "D6NGG 330-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "8",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "D6NGG 331-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.098,
+"unit": "in"
+},
+"insert": "D6NGG 331-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "8",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "D6NMG inserts (MAX-OUT p.8)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "D6NMG 331-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00197,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.098,
+"unit": "in"
+},
+"insert": "D6NMG 331-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "8",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "D6NMG 332-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00276,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.032,
+"max": 0.098,
+"unit": "in"
+},
+"insert": "D6NMG 332-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "8",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "D6NMG 331-M3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.098,
+"unit": "in"
+},
+"insert": "D6NMG 331-M3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "8",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "D6NMG 332-M3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00275,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.098,
+"unit": "in"
+},
+"insert": "D6NMG 332-M3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "8",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "D6NMG 333-M3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00314,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.004,
+"max": 0.098,
+"unit": "in"
+},
+"insert": "D6NMG 333-M3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "8",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "D6NMG 331-M3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.098,
+"unit": "in"
+},
+"insert": "D6NMG 331-M3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "8",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "D6NMG 332-M3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00275,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.098,
+"unit": "in"
+},
+"insert": "D6NMG 332-M3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "8",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "D6NMG 333-M3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00315,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.098,
+"unit": "in"
+},
+"insert": "D6NMG 333-M3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "8",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "WNMG inserts (MAX-OUT p.14)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "WNMG 331-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00275,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.098,
+"unit": "in"
+},
+"insert": "WNMG 331-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "14",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 332-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00314,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.035,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 332-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "14",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 333-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.051,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 333-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "14",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 3-1-M3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.01771
+}
+},
+"ap": {
+"min": 0.018,
+"max": 0.098,
+"unit": "in"
+},
+"insert": "WNMG 3-1-M3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "14",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 3-2-M3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 3-2-M3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "14",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 3-3-M3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00708,
+"max": 0.02362
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 3-3-M3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "14",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 331-M3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.01771
+}
+},
+"ap": {
+"min": 0.018,
+"max": 0.098,
+"unit": "in"
+},
+"insert": "WNMG 331-M3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "14",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 332-M3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 332-M3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "14",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 333-M3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00708,
+"max": 0.02362
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 333-M3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "14",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 331-F3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.004,
+"max": 0.059,
+"unit": "in"
+},
+"insert": "WNMG 331-F3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "14",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 332-F3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.01574
+}
+},
+"ap": {
+"min": 0.004,
+"max": 0.059,
+"unit": "in"
+},
+"insert": "WNMG 332-F3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "14",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 333-F3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.098,
+"unit": "in"
+},
+"insert": "WNMG 333-F3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "14",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "WNMG inserts (MAX-OUT p.15)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "WNMG 331-M3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00472,
+"max": 0.01574
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "WNMG 331-M3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "15",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 332-M3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "WNMG 332-M3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "15",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 333-M3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00787,
+"max": 0.02362
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "WNMG 333-M3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "15",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 3-.004-NF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.0059
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.039,
+"unit": "in"
+},
+"insert": "WNMG 3-.004-NF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "15",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 3-0-NF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00314,
+"max": 0.00669
+}
+},
+"ap": {
+"min": 0.012,
+"max": 0.059,
+"unit": "in"
+},
+"insert": "WNMG 3-0-NF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "15",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 3-1-NF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00275,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.016,
+"max": 0.098,
+"unit": "in"
+},
+"insert": "WNMG 3-1-NF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "15",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 3-2-NF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00314,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.024,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 3-2-NF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "15",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 330-NF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.00787
+}
+},
+"ap": {
+"min": 0.012,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 330-NF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "15",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 331-NF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00314,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.024,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 331-NF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "15",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 332-NF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00314,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 332-NF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "15",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 3-1-GN \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00551,
+"max": 0.01574
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "WNMG 3-1-GN",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "15",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 3-2-GN \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00629,
+"max": 0.01771
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "WNMG 3-2-GN",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "15",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 3-3-GN \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00708,
+"max": 0.01771
+}
+},
+"ap": {
+"min": 0.059,
+"max": 0.157,
+"unit": "in"
+},
+"insert": "WNMG 3-3-GN",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "15",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 331-GN \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00551,
+"max": 0.01574
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "WNMG 331-GN",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "15",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 332-GN \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00629,
+"max": 0.01771
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "WNMG 332-GN",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "15",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 333-GN \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00708,
+"max": 0.01771
+}
+},
+"ap": {
+"min": 0.059,
+"max": 0.157,
+"unit": "in"
+},
+"insert": "WNMG 333-GN",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "15",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "WNMG inserts (MAX-OUT p.16)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "WNMG 3-1-PP \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00551,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 3-1-PP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "16",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 3-2-PP \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00551,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 3-2-PP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "16",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 331-PP \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00551,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 331-PP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "16",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 332-PP \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00551,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 332-PP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "16",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 3-1-TF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00472,
+"max": 0.01377
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 3-1-TF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "16",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 3-2-TF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00472,
+"max": 0.01377
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 3-2-TF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "16",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 3-3-TF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.01574
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.157,
+"unit": "in"
+},
+"insert": "WNMG 3-3-TF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "16",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 331-TF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00472,
+"max": 0.01377
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 331-TF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "16",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 332-TF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00472,
+"max": 0.01377
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 332-TF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "16",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 333-TF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.01377
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.157,
+"unit": "in"
+},
+"insert": "WNMG 333-TF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "16",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 330-WF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 330-WF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "16",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 331-WF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 331-WF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "16",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 332-WF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00275,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "WNMG 332-WF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "16",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "WNMG inserts (MAX-OUT p.17)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "WNMG 3-1-WG \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.01377
+}
+},
+"ap": {
+"min": 0.016,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 3-1-WG",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "17",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 3-2-WG \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.024,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "WNMG 3-2-WG",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "17",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 331-WG \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.01377
+}
+},
+"ap": {
+"min": 0.016,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMG 331-WG",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "17",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMG 332-WG \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.024,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "WNMG 332-WG",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "17",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "WNMX inserts (MAX-OUT p.17)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "WNMX 341-M3PW \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00787,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.157,
+"unit": "in"
+},
+"insert": "WNMX 341-M3PW",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "17",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMX 342-M3PW \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00984,
+"max": 0.02362
+}
+},
+"ap": {
+"min": 0.059,
+"max": 0.157,
+"unit": "in"
+},
+"insert": "WNMX 342-M3PW",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "17",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "WNMA inserts (MAX-OUT p.17)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "WNMA 3-1 \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00118,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.079,
+"unit": "in"
+},
+"insert": "WNMA 3-1",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "17",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMA 3-2 \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00118,
+"max": 0.01574
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMA 3-2",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "17",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMA 3-3 \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00118,
+"max": 0.01771
+}
+},
+"ap": {
+"min": 0.059,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "WNMA 3-3",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "17",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMA 331 \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00118,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMA 331",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "17",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMA 332 \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00118,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMA 332",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "17",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WNMA 333 \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00118,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "WNMA 333",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "17",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "CNMG inserts (MAX-OUT p.18)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "CNMG 331-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00275,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "CNMG 331-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "18",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CNMG 332-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00314,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.035,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "CNMG 332-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "18",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CNMG 331-M3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.016,
+"max": 0.157,
+"unit": "in"
+},
+"insert": "CNMG 331-M3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "18",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CNMG 332-M3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.177,
+"unit": "in"
+},
+"insert": "CNMG 332-M3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "18",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CNMG 331-F3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.004,
+"max": 0.059,
+"unit": "in"
+},
+"insert": "CNMG 331-F3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "18",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CNMG 332-F3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.01574
+}
+},
+"ap": {
+"min": 0.004,
+"max": 0.059,
+"unit": "in"
+},
+"insert": "CNMG 332-F3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "18",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CNMG 331-M3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00472,
+"max": 0.01574
+}
+},
+"ap": {
+"min": 0.016,
+"max": 0.157,
+"unit": "in"
+},
+"insert": "CNMG 331-M3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "18",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CNMG 332-M3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.177,
+"unit": "in"
+},
+"insert": "CNMG 332-M3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "18",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "CNMX inserts (MAX-OUT p.19)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "CNMX 341-M3PW \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00787,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.177,
+"unit": "in"
+},
+"insert": "CNMX 341-M3PW",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "19",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CNMX 342-M3PW \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00984,
+"max": 0.02362
+}
+},
+"ap": {
+"min": 0.059,
+"max": 0.197,
+"unit": "in"
+},
+"insert": "CNMX 342-M3PW",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "19",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "SNMG inserts (MAX-OUT p.19)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "SNMG 331-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0028,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "SNMG 331-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "19",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "SNMG 332-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00314,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.035,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "SNMG 332-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "19",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "SNMG 331-M3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "SNMG 331-M3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "19",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "SNMG 332-M3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.02165
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "SNMG 332-M3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "19",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "SNMG 331-F3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "SNMG 331-F3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "19",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "SNMG 332-F3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "SNMG 332-F3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "19",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "SNMG inserts (MAX-OUT p.20)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "SNMG 331-M3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.177,
+"unit": "in"
+},
+"insert": "SNMG 331-M3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "20",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "SNMG 332-M3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.177,
+"unit": "in"
+},
+"insert": "SNMG 332-M3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "20",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "DNMG inserts (MAX-OUT p.20)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "DNMG 331-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00275,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "DNMG 331-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "20",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "DNMG 332-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00314,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "DNMG 332-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "20",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "DNMG 333-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.055,
+"max": 0.157,
+"unit": "in"
+},
+"insert": "DNMG 333-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "20",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "DNMG 332-M3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.197,
+"unit": "in"
+},
+"insert": "DNMG 332-M3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "20",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "DNMG 333-M3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00708,
+"max": 0.02362
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.197,
+"unit": "in"
+},
+"insert": "DNMG 333-M3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "20",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "DNMG inserts (MAX-OUT p.21)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "DNMG 331-F3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.01259
+}
+},
+"ap": {
+"min": 0.004,
+"max": 0.059,
+"unit": "in"
+},
+"insert": "DNMG 331-F3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "21",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "DNMG 332-F3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.01653
+}
+},
+"ap": {
+"min": 0.004,
+"max": 0.059,
+"unit": "in"
+},
+"insert": "DNMG 332-F3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "21",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "DNMG 333-F3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.02047
+}
+},
+"ap": {
+"min": 0.006,
+"max": 0.079,
+"unit": "in"
+},
+"insert": "DNMG 333-F3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "21",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "DNMG 331-M3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00472,
+"max": 0.01574
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "DNMG 331-M3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "21",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "DNMG 332-M3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.0197
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.157,
+"unit": "in"
+},
+"insert": "DNMG 332-M3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "21",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "DNMG 333-M3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0079,
+"max": 0.02362
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.157,
+"unit": "in"
+},
+"insert": "DNMG 333-M3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "21",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "DNMG 332-GN \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00708,
+"max": 0.01496
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.157,
+"unit": "in"
+},
+"insert": "DNMG 332-GN",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "21",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "DNMG 333-GN \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00708,
+"max": 0.01496
+}
+},
+"ap": {
+"min": 0.059,
+"max": 0.177,
+"unit": "in"
+},
+"insert": "DNMG 333-GN",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "21",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "DNMG inserts (MAX-OUT p.22)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "DNMG 330-NF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00275,
+"max": 0.00708
+}
+},
+"ap": {
+"min": 0.016,
+"max": 0.098,
+"unit": "in"
+},
+"insert": "DNMG 330-NF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "22",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "DNMG 331-NF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00275,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "DNMG 331-NF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "22",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "DNMG 332-NF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00314,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "DNMG 332-NF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "22",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "DNMG 331-TF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00472,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "DNMG 331-TF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "22",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "DNMG 333-TF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.0138
+}
+},
+"ap": {
+"min": 0.059,
+"max": 0.157,
+"unit": "in"
+},
+"insert": "DNMG 333-TF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "22",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "DNMG 331-PP \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00472,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.016,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "DNMG 331-PP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "22",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "DNMG 332-PP \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00472,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "DNMG 332-PP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "22",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "TNMG inserts (MAX-OUT p.23)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "TNMG 331-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00275,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.079,
+"unit": "in"
+},
+"insert": "TNMG 331-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "23",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 332-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00314,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.035,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "TNMG 332-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "23",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 333-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.051,
+"max": 0.157,
+"unit": "in"
+},
+"insert": "TNMG 333-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "23",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 331-M3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.016,
+"max": 0.197,
+"unit": "in"
+},
+"insert": "TNMG 331-M3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "23",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 332-M3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.197,
+"unit": "in"
+},
+"insert": "TNMG 332-M3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "23",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 333-M3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00708,
+"max": 0.02362
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.197,
+"unit": "in"
+},
+"insert": "TNMG 333-M3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "23",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 331-F3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.01259
+}
+},
+"ap": {
+"min": 0.004,
+"max": 0.059,
+"unit": "in"
+},
+"insert": "TNMG 331-F3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "23",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 332-F3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.01653
+}
+},
+"ap": {
+"min": 0.004,
+"max": 0.059,
+"unit": "in"
+},
+"insert": "TNMG 332-F3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "23",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 333-F3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.02047
+}
+},
+"ap": {
+"min": 0.006,
+"max": 0.079,
+"unit": "in"
+},
+"insert": "TNMG 333-F3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "23",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "TNMG inserts (MAX-OUT p.24)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "TNMG 331-M3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.157,
+"unit": "in"
+},
+"insert": "TNMG 331-M3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "24",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 332-M3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.157,
+"unit": "in"
+},
+"insert": "TNMG 332-M3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "24",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 333-M3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00787,
+"max": 0.02362
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.157,
+"unit": "in"
+},
+"insert": "TNMG 333-M3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "24",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 331-GN \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00472,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "TNMG 331-GN",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "24",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 332-GN \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00708,
+"max": 0.01535
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "TNMG 332-GN",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "24",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 333-GN \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00708,
+"max": 0.01692
+}
+},
+"ap": {
+"min": 0.059,
+"max": 0.157,
+"unit": "in"
+},
+"insert": "TNMG 333-GN",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "24",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 221-NF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0028,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.016,
+"max": 0.079,
+"unit": "in"
+},
+"insert": "TNMG 221-NF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "24",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 332-NF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00314,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "TNMG 332-NF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "24",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "TNMG inserts (MAX-OUT p.25)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "TNMG 332-PF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00314,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "TNMG 332-PF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "25",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 331-SF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00157,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.016,
+"max": 0.079,
+"unit": "in"
+},
+"insert": "TNMG 331-SF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "25",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 332-SF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00236,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "TNMG 332-SF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "25",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 321-TF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00472,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "TNMG 321-TF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "25",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 322-TF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00472,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "TNMG 322-TF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "25",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 331-TF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00472,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "TNMG 331-TF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "25",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 332-TF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00472,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "TNMG 332-TF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "25",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 333-TF \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00472,
+"max": 0.01574
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.197,
+"unit": "in"
+},
+"insert": "TNMG 333-TF",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "25",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "TNMG inserts (MAX-OUT p.26)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "TNMG 331-VL \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "TNMG 331-VL",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "26",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 332-VL \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "TNMG 332-VL",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "26",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 331-PP \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00511,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "TNMG 331-PP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "26",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMG 332-PP \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00472,
+"max": 0.01181
+}
+},
+"ap": {
+"min": 0.039,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "TNMG 332-PP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "26",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "TNGG inserts (MAX-OUT p.26)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "TNGG 330.5-PP \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.059,
+"unit": "in"
+},
+"insert": "TNGG 330.5-PP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "26",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "TNMX inserts (MAX-OUT p.26)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "TNMX 341-M3PW \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00984,
+"max": 0.01574
+}
+},
+"ap": {
+"min": 0.079,
+"max": 0.197,
+"unit": "in"
+},
+"insert": "TNMX 341-M3PW",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "26",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "TNMX 342-M3PW \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.01181,
+"max": 0.01968
+}
+},
+"ap": {
+"min": 0.098,
+"max": 0.217,
+"unit": "in"
+},
+"insert": "TNMX 342-M3PW",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "26",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "YNMG inserts (MAX-OUT p.27)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "YNMG 331-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00118,
+"max": 0.00472
+}
+},
+"ap": {
+"min": 0.016,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "YNMG 331-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "27",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "YNMG 332-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.0059
+}
+},
+"ap": {
+"min": 0.035,
+"max": 0.157,
+"unit": "in"
+},
+"insert": "YNMG 332-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "27",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "XNMG inserts (MAX-OUT p.27)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "XNMG 331-F3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00275,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.016,
+"max": 0.059,
+"unit": "in"
+},
+"insert": "XNMG 331-F3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "27",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "XNMG 332-F3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.059,
+"unit": "in"
+},
+"insert": "XNMG 332-F3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "27",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "XNMG 331-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00275,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "XNMG 331-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "27",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "XNMG 332-F3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00314,
+"max": 0.00984
+}
+},
+"ap": {
+"min": 0.035,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "XNMG 332-F3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "27",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "XNMG 331-M3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.01574
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "XNMG 331-M3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "27",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "XNMG 332-M3M \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.01574
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "XNMG 332-M3M",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "27",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "XNMG inserts (MAX-OUT p.28)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "XNMG 331-M3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.01377
+}
+},
+"ap": {
+"min": 0.02,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "XNMG 331-M3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "28",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "XNMG 332-M3P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.01377
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "XNMG 332-M3P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "28",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "Q6-MNMG120608-M3P-SL inserts (MAX-OUT p.28)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "Q6-MNMG120608-M3P-SL \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0118,
+"max": 0.0472
+}
+},
+"ap": {
+"min": 0.0079,
+"max": 0.0236,
+"unit": "in"
+},
+"insert": "Q6-MNMG120608-M3P-SL",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "28",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "Q6-MNMG120608-M3M-SL inserts (MAX-OUT p.28)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "Q6-MNMG120608-M3M-SL \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.0118,
+"max": 0.0394
+}
+},
+"ap": {
+"min": 0.0079,
+"max": 0.0236,
+"unit": "in"
+},
+"insert": "Q6-MNMG120608-M3M-SL",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "28",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "CCGW inserts (MAX-OUT p.31)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "CCGW 03X102TF-MT \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.00787
+}
+},
+"ap": {
+"min": 0.002,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "CCGW 03X102TF-MT",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "31",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CCGW 03X104TF-MT \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.00787
+}
+},
+"ap": {
+"min": 0.002,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "CCGW 03X104TF-MT",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "31",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CCGW 04T102TF-MT \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.00787
+}
+},
+"ap": {
+"min": 0.002,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "CCGW 04T102TF-MT",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "31",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CCGW 04T104TF-MT \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.00787
+}
+},
+"ap": {
+"min": 0.002,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "CCGW 04T104TF-MT",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "31",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "CCMT inserts (MAX-OUT p.31)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "CCMT 2-0T \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.00787
+}
+},
+"ap": {
+"min": 0.002,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "CCMT 2-0T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "31",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CCMT 2-1T \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.00787
+}
+},
+"ap": {
+"min": 0.002,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "CCMT 2-1T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "31",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CCMT 3-1T \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.00787
+}
+},
+"ap": {
+"min": 0.002,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "CCMT 3-1T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "31",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CCMT 3-2T \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.00787
+}
+},
+"ap": {
+"min": 0.002,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "CCMT 3-2T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "31",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "CCGT inserts (MAX-OUT p.32)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "CCGT 03X101-F1P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00039,
+"max": 0.00196
+}
+},
+"ap": {
+"min": 0.004,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "CCGT 03X101-F1P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "32",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CCGT 03X102-F1P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00078,
+"max": 0.00393
+}
+},
+"ap": {
+"min": 0.004,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "CCGT 03X102-F1P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "32",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CCGT 03X104-F1P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.0059
+}
+},
+"ap": {
+"min": 0.004,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "CCGT 03X104-F1P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "32",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CCGT 04T101-F1P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00039,
+"max": 0.00196
+}
+},
+"ap": {
+"min": 0.004,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "CCGT 04T101-F1P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "32",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CCGT 04T102-F1P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00078,
+"max": 0.00393
+}
+},
+"ap": {
+"min": 0.004,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "CCGT 04T102-F1P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "32",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "CCGT 04T104-F1P \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.0059
+}
+},
+"ap": {
+"min": 0.004,
+"max": 0.02,
+"unit": "in"
+},
+"insert": "CCGT 04T104-F1P",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "32",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "WBMT inserts (MAX-OUT p.33)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "WBMT 52.004R/L \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.0059
+}
+},
+"ap": {
+"min": 0.016,
+"max": 0.079,
+"unit": "in"
+},
+"insert": "WBMT 52.004R/L",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "33",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WBMT 520L \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.0059
+}
+},
+"ap": {
+"min": 0.016,
+"max": 0.079,
+"unit": "in"
+},
+"insert": "WBMT 520L",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "33",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "WBMT 520R \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00393,
+"max": 0.0059
+}
+},
+"ap": {
+"min": 0.016,
+"max": 0.079,
+"unit": "in"
+},
+"insert": "WBMT 520R",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "33",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "turn",
+"brand": "ISCAR",
+"series": "WBGT inserts (MAX-OUT p.33)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "WBGT 520L \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "ipr",
+"unit": "in",
+"range": {
+"min": 0.00196,
+"max": 0.00393
+}
+},
+"ap": {
+"min": 0.004,
+"max": 0.039,
+"unit": "in"
+},
+"insert": "WBGT 520L",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "33",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "mill",
+"brand": "ISCAR",
+"series": "S845 inserts (MAX-OUT p.67)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "S845 SNMU 1305ANR-MM \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.0079,
+"max": 0.0157
+}
+},
+"ap": {
+"min": 0.079,
+"max": 0.236,
+"unit": "in"
+},
+"insert": "S845 SNMU 1305ANR-MM",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "67",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "S845 SNMU 1305ANR-RM \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.0079,
+"max": 0.0157
+}
+},
+"ap": {
+"min": 0.079,
+"max": 0.236,
+"unit": "in"
+},
+"insert": "S845 SNMU 1305ANR-RM",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "67",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "S845 SNHU 1305ANR-MM \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.0059,
+"max": 0.0118
+}
+},
+"ap": {
+"min": 0.079,
+"max": 0.236,
+"unit": "in"
+},
+"insert": "S845 SNHU 1305ANR-MM",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "67",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "mill",
+"brand": "ISCAR",
+"series": "ONHU inserts (MAX-OUT p.67)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "ONHU 050500-R-HP \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.0079,
+"max": 0.0098
+}
+},
+"ap": {
+"min": 0.059,
+"max": 0.118,
+"unit": "in"
+},
+"insert": "ONHU 050500-R-HP",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "67",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "mill",
+"brand": "ISCAR",
+"series": "T490 inserts (MAX-OUT p.74)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "T490 LNMT 0804PNR \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.0039,
+"max": 0.0071
+}
+},
+"ap": {
+"min": 0.059,
+"max": 0.315,
+"unit": "in"
+},
+"insert": "T490 LNMT 0804PNR",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "74",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "T490 LNHT 080404PNR \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.0031,
+"max": 0.0059
+}
+},
+"ap": {
+"min": 0.059,
+"max": 0.315,
+"unit": "in"
+},
+"insert": "T490 LNHT 080404PNR",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "74",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "T490 LNMT 080408PNR \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.0039,
+"max": 0.0071
+}
+},
+"ap": {
+"min": 0.059,
+"max": 0.315,
+"unit": "in"
+},
+"insert": "T490 LNMT 080408PNR",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "74",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "T490 LNHT 080408PNR \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.0031,
+"max": 0.0059
+}
+},
+"ap": {
+"min": 0.059,
+"max": 0.315,
+"unit": "in"
+},
+"insert": "T490 LNHT 080408PNR",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "74",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "T490 LNHT 080412PNR \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.0031,
+"max": 0.0059
+}
+},
+"ap": {
+"min": 0.059,
+"max": 0.315,
+"unit": "in"
+},
+"insert": "T490 LNHT 080412PNR",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "74",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "T490 LNMT 080412PNR \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.0031,
+"max": 0.0071
+}
+},
+"ap": {
+"min": 0.059,
+"max": 0.315,
+"unit": "in"
+},
+"insert": "T490 LNMT 080412PNR",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "74",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "T490 LNHT 080416PNR \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.0031,
+"max": 0.0059
+}
+},
+"ap": {
+"min": 0.059,
+"max": 0.315,
+"unit": "in"
+},
+"insert": "T490 LNHT 080416PNR",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "74",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "T490 LNMT 080416PNR \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.0039,
+"max": 0.0071
+}
+},
+"ap": {
+"min": 0.059,
+"max": 0.315,
+"unit": "in"
+},
+"insert": "T490 LNMT 080416PNR",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "74",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "mill",
+"brand": "ISCAR",
+"series": "FFT3 inserts (MAX-OUT p.82)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "FFT3 WXMT 030206T \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.0079,
+"max": 0.0315
+}
+},
+"ap": {
+"min": 0.008,
+"max": 0.024,
+"unit": "in"
+},
+"insert": "FFT3 WXMT 030206T",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "82",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "mill",
+"brand": "ISCAR",
+"series": "HM390 inserts (MAX-OUT p.85)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "HM390 TPCT 0502PDR \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.002,
+"max": 0.0039
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "HM390 TPCT 0502PDR",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "85",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "HM390 TPKT 0502PDR \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.002,
+"max": 0.0059
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "HM390 TPKT 0502PDR",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "85",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "HM390 TPKT 050202PDR \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.002,
+"max": 0.0059
+}
+},
+"ap": {
+"min": 0.024,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "HM390 TPKT 050202PDR",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "85",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "HM390 TPKT 050208PDR \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.002,
+"max": 0.0059
+}
+},
+"ap": {
+"min": 0.047,
+"max": 0.138,
+"unit": "in"
+},
+"insert": "HM390 TPKT 050208PDR",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "85",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+},
+{
+"mode": "mill",
+"brand": "ISCAR",
+"series": "H490 inserts (MAX-OUT p.88)",
+"type": "indexable insert",
+"notes": "Feed and depth only; manufacturer SFM not printed on this page. Coolant not stated.",
+"conditions": [
+{
+"label": "H490 ANCX 090404PDR \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.0031,
+"max": 0.0059
+}
+},
+"ap": {
+"min": 0.031,
+"max": 0.315,
+"unit": "in"
+},
+"insert": "H490 ANCX 090404PDR",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "88",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "H490 ANCX 090408PDR \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.0031,
+"max": 0.0059
+}
+},
+"ap": {
+"min": 0.047,
+"max": 0.315,
+"unit": "in"
+},
+"insert": "H490 ANCX 090408PDR",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "88",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "H490 ANCX 090412PDR \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.0031,
+"max": 0.0059
+}
+},
+"ap": {
+"min": 0.063,
+"max": 0.315,
+"unit": "in"
+},
+"insert": "H490 ANCX 090412PDR",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "88",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "H490 ANCX 090416PDR \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.0031,
+"max": 0.0059
+}
+},
+"ap": {
+"min": 0.079,
+"max": 0.315,
+"unit": "in"
+},
+"insert": "H490 ANCX 090416PDR",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "88",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+},
+{
+"label": "H490 ANKX 090408PNTR \u00b7 all listed grades \u00b7 ISCAR insert start range",
+"iso": "*",
+"status": "verified",
+"coolant": null,
+"sfm": null,
+"feed": {
+"kind": "fz",
+"unit": "in",
+"range": {
+"min": 0.0039,
+"max": 0.0071
+}
+},
+"ap": {
+"min": 0.047,
+"max": 0.315,
+"unit": "in"
+},
+"insert": "H490 ANKX 090408PNTR",
+"source": {
+"kind": "catalog",
+"manufacturer": "ISCAR",
+"catalog": "MAX-OUT Catalog (inch), May 2026 imperial version \u2013 insert table \"Recommended Machining Data\"",
+"url": "https://www.iscar.com/MediaWeb/MaxValue/Catalogs_inch/MAX-OUT_Catalog_INCH/MAX-OUT_Catalog_INCH.pdf",
+"edition": "May 2026 imperial",
+"page": "88",
+"notes": "Per-insert ap and feed as printed; cutting speed is not printed with this table, so SFM is not given here (see ISCAR grade speed tables). Grade dots not mapped to the range.",
+"retrieved": "2026-10-23"
+}
+}
+]
+}
+]
+}
