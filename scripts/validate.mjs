@@ -50,7 +50,7 @@ function source(s, c, where, err) {
 }
 
 // Per-tool-type diameter sanity (inches). Face/shell mills, boring heads and spade drills are legitimately large.
-const CAP_IN = { mill: 14, drill: 7, bore: 14, tap: 4, thread: 14, turn: 14 };
+const CAP_IN = { mill: 14, drill: 7, bore: 24, tap: 4, thread: 14, turn: 14 };
 const SOLID = t => /solid|end ?mill|micro|miniature|carbide drill/i.test(t?.type ?? '') && !/indexable|insert|face|shell|head|spade|modular/i.test((t?.type ?? '') + ' ' + (t?.series ?? ''));
 export function diaProblem(d, unit, t) {
   const inch = unit === 'mm' ? d / 25.4 : d, cap = SOLID(t) ? 2.05 : CAP_IN[t?.mode] ?? 14;

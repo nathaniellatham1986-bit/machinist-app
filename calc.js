@@ -60,3 +60,36 @@ export function printedRun(e, { dIn, z, maxRpm }) {
   const tf = e.tableFeed ? e.tableFeed.value * (e.tableFeed.unit === 'mm/min' ? 1 / 25.4 : 1) : null, ipm = tf == null ? null : tf * s;
   return { rpm, ipm, capped, printedRpm: e.rpm, printedIpm: tf, sfm: rpm * dIn * Math.PI / 12, fz: ipm != null && z ? ipm / (rpm * z) : null };
 }
+
+// ---- Review #1 helpers (pure) ----
+// Printed hardness -> [lo, hi] in HB (HRC converted by a standard table; DERIVED for matching only).
+const HRC_HB = [[20, 226], [25, 253], [28, 271], [30, 286], [32, 301], [35, 327], [40, 371], [44, 409], [48, 451], [52, 500], [56, 560], [60, 615], [65, 690]];
+export const hrcToHb = h => { const T = HRC_HB; if (h <= T[0][0]) return T[0][1] - (T[0][0] - h) * 5;
+  for (let i = 1; i < T.length; i++) if (h <= T[i][0]) { const [a, x] = T[i - 1], [b, y] = T[i]; return x + (y - x) * (h - a) / (b - a); } return T.at(-1)[1]; };
+export function hardnessHB(text) {
+  const s = String(text ?? ''), U = '(HRC|Rc|HRc|HB\\w*|BHN|HB)';
+  let m = s.match(new RegExp(`(≤|<=|<|up to|max\\.?)?\\s*(\\d+(?:\\.\\d+)?)(?:\\s*[-–~]\\s*(\\d+(?:\\.\\d+)?))?\\s*${U}\\b`, 'i'));
+  let le, a, b, u; if (m) [, le, a, b, u] = m; else { m = s.match(new RegExp(`${U}\\s*(≤|<=|<)?\\s*(\\d+)(?:\\s*[-–~]\\s*(\\d+))?`, 'i')); if (!m) return null; [, u, le, a, b] = m; }
+  const hrc = /r/i.test(u) && !/bhn/i.test(u), f = x => hrc ? hrcToHb(+x) : +x;
+  return le && !b ? [0, f(a)] : [f(a), f(b ?? a)]; }
+// Material match: 'named' when the record names the alloy, 'group' when its printed group/hardness fits, else null.
+export function matchMat(m, c) {
+  const text = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' ');
+  if (c.materials?.includes(m.id) || (m.named && new RegExp(m.named, 'i').test(text))) {
+    if (!m.hb) return 'named'; const h = hardnessHB(text); return !h || (h[0] <= m.hb[1] && h[1] >= m.hb[0]) ? 'named' : null; }
+  if (c.materials && !m.named) return null;
+  if (c.iso !== '*' && c.iso !== m.iso) return null;
+  if (m.group && !new RegExp(m.group, 'i').test(text)) return null;
+  if (m.hb) { const h = hardnessHB(text); if (h && !(h[0] <= m.hb[1] && h[1] >= m.hb[0])) return null; }
+  return 'group'; }
+// Plain condition choices mapped from the record's own label/operation text.
+export const passOf = c => { const s = `${c.label} ${c.operation ?? ''} ${c.subgroup ?? ''}`; return /finish|light/i.test(s) ? 'Finish' : /rough|heavy/i.test(s) ? 'Rough' : 'Medium'; };
+export const cutOf = c => { const s = `${c.label} ${c.operation ?? ''}`; return /\bHEM\b|dynamic|trochoid|high.?eff|adaptive|HPC/i.test(s) ? 'HEM' : /slot|full width|groov/i.test(s) ? 'Slot' : /side|profil|periph|contour|shoulder/i.test(s) ? 'Side' : ''; };
+export const turnOpOf = (t, c) => { const s = `${c?.operation ?? ''} ${t.series} ${t.type ?? ''}`; return /thread/i.test(s) ? 'Thread' : /part|cut.?off/i.test(s) ? 'Part' : /groov/i.test(s) ? 'Groove' : /fac/i.test(s) ? 'Face' : 'Turn'; };
+export const kindOf = t => { const s = `${t.type ?? ''} ${t.series}`, m = t.mode;
+  return /thread mill/i.test(s) ? 'Thread mill' : m === 'tap' ? 'Tap' : m === 'bore' || /bor/i.test(s) && m !== 'drill' ? 'Boring' : /insert|indexable/i.test(s) || m === 'turn' ? 'Insert' : m === 'drill' ? 'Drill' : 'End mill'; };
+export const tapTypeOf = t => { const s = `${t.type ?? ''} ${t.series}`; return /form|roll|flutel/i.test(s) ? 'form' : /spiral point|gun|straight/i.test(s) ? 'point' : /spiral/i.test(s) ? 'flute' : ''; };
+// General shop guidance (NOT manufacturer data).
+export const boreLimit = shank => shank === 'carbide' ? 6 : 4;
+export const css = ({ sfm, d0, d1, maxRpm }) => { const r = d => (sfm * 12) / (Math.PI * d), at = d => maxRpm ? Math.min(r(d), maxRpm) : r(d);
+  return { rpm0: at(d0), rpm1: at(d1), clampDia: maxRpm ? (sfm * 12) / (Math.PI * maxRpm) : null }; };

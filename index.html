@@ -7,33 +7,39 @@ select,input{width:100%;box-sizing:border-box;min-height:56px;font-size:22px;bac
 .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .out{margin-top:14px;border:3px solid #ffd400;border-radius:8px;padding:10px}.big{font-size:40px;font-weight:800;color:#ffd400}
 .src{font-size:15px;color:#ccc;margin-top:8px}.warn{color:#ff6b6b;font-weight:700}.tag{border:2px solid;padding:0 6px;border-radius:6px;font-size:14px}
-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}nav button{min-height:56px;font-size:20px;font-weight:800;background:#111;color:#fff;border:3px solid #fff;border-radius:8px}button.sm{min-height:48px;font-size:18px;font-weight:700;background:#111;color:#fff;border:3px solid #fff;border-radius:8px;padding:0 10px}summary{cursor:pointer;font-weight:800;font-size:18px;color:#7f7}.shop{color:#ffa500!important}nav button.on{background:#ffd400;color:#000;border-color:#ffd400}[hidden]{display:none!important}
+nav{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(72px,1fr);overflow-x:auto;gap:6px}nav button{min-height:56px;font-size:20px;font-weight:800;background:#111;color:#fff;border:3px solid #fff;border-radius:8px}button.sm{min-height:48px;font-size:18px;font-weight:700;background:#111;color:#fff;border:3px solid #fff;border-radius:8px;padding:0 10px}summary{cursor:pointer;font-weight:800;font-size:18px;color:#7f7}.shop{color:#ffa500!important}nav button.on{background:#ffd400;color:#000;border-color:#ffd400}[hidden]{display:none!important}
 .cards{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}.card{border:3px solid #ffd400;border-radius:8px;padding:8px}.card .k{font-size:16px;font-weight:700;color:#ccc}.card .v{font-size:34px;font-weight:800;color:#ffd400;line-height:1.1}.card .b{font-size:13px;color:#bbb;margin-top:4px}.card.wide{grid-column:1/-1}.card.mine{border-color:#ff6b6b}.card.none .v{font-size:20px;color:#ff6b6b}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}.chip{min-height:44px;font-size:17px;background:#111;color:#fff;border:2px solid #7f7;border-radius:22px;padding:4px 12px}
-</style></head><body><main><h1>Feeds &amp; Speeds v3</h1>
+.bar{position:sticky;top:0;z-index:5;background:#000;border-bottom:3px solid #ffd400;padding:6px 0;font-size:26px;font-weight:800;color:#ffd400;display:flex;gap:14px;flex-wrap:wrap}.bar small{font-size:13px;color:#bbb;font-weight:400}h1 button{float:right}select:disabled{opacity:.8;border-style:dashed}
+</style></head><body><div class="bar" id="bar"></div><main><h1>Feeds &amp; Speeds <button class="sm" id="unit">inch</button></h1>
 <nav><button data-mode="mill">Mill</button><button data-mode="drill">Drill</button><button data-mode="turn">Turn</button><button data-mode="tap">Tap</button><button data-mode="bore">Bore</button></nav>
-<label>Recall (favorites / recent)<select id="recall"><option value="">—</option></select></label>
-<label>Material (catalog group)<select id="matPick"></select><input type="hidden" id="iso"><input type="hidden" id="mat"></label>
-<label>Brand<select id="brand"></select></label>
-<label>Search tools<input id="tq" type="search" placeholder="series, type, brand…" autocomplete="off"></label>
-<label>Tool / insert <small id="tn"></small><select id="tool"></select></label>
-<label><input id="onlyData" type="checkbox" checked style="width:auto;min-height:0"> Only tools with data for this material</label>
-<label id="cqL" hidden>Search conditions<input id="cq" type="search" placeholder="grade, insert, SMG code…" autocomplete="off"></label>
-<label>Operation / manufacturer condition<select id="cond"></select><small id="coolNote"></small></label>
+<label>Material<select id="matPick"></select><input type="hidden" id="iso"><input type="hidden" id="mat"><small id="matNote"></small></label>
+<div class="row"><label>Brand<select id="brand"></select></label><label>Type<select id="kind"></select></label></div>
+<label data-show="turn">Operation<select id="top"><option value="Turn">Turn</option><option value="Face">Face</option><option value="Groove">Groove</option><option value="Part">Part</option><option value="Thread">Thread</option></select></label>
+<div class="row" data-show="tap"><label>Tap type<select id="tapT"><option value="">Any</option><option value="point">Spiral point</option><option value="flute">Spiral flute</option><option value="form">Form (roll)</option></select></label><label>Hole<select id="hole"><option value="through">Through</option><option value="blind">Blind</option></select></label></div>
+<label>Series <small id="tn"></small><select id="tool"></select></label>
+<div class="row"><label>Pass<select id="pass"><option value="">Any</option><option value="Finish">Finish</option><option value="Medium">Medium</option><option value="Rough">Rough</option></select></label><label data-show="mill">Cut<select id="cut"><option value="">Any</option><option value="Slot">Slot</option><option value="Side">Side</option><option value="HEM">HEM</option></select></label></div>
+<label>Manufacturer condition <small>(source label)</small><select id="cond"></select><small id="coolNote"></small></label>
+<div class="row" data-show="turn"><label>Nose radius <small>(from record)</small><select id="nose"></select></label><label>Chipbreaker <small>(from record)</small><select id="cb"></select></label></div>
 <label data-show="tap">Thread<select id="thr"></select></label>
-<label>Machine profile<select id="mach"><option value="">(none, enter limits)</option></select></label>
-<details><summary>Add / remove machine profile</summary><div class="row"><label>Name<input id="mName"></label><label>Type<select id="mType"><option value="mill">Mill</option><option value="lathe">Lathe</option></select></label></div><div class="row"><label>Max RPM<input id="mRpm" type="number" inputmode="numeric"></label><label>HP<input id="mHp" type="number" inputmode="decimal"></label></div><button class="sm" id="mSave">Save profile</button> <button class="sm" id="mDel">Delete selected</button></details>
-<label>Coolant<select id="cool"><option value="flood">Flood</option><option value="through">Through-tool</option><option value="air">Air blast</option><option value="dry">Dry</option></select></label>
+<label>Machine profile<select id="mach"><option value="">(none: no RPM/HP limit)</option></select><input type="hidden" id="maxRpm"><input type="hidden" id="maxHp"></label>
 <label id="dPickL" hidden>Published diameters<select id="dPick"></select></label>
 <div class="row"><label id="dLbl">Dia (in)<input id="d" type="number" inputmode="decimal" step="any" value="0.5"></label>
-<label data-show="mill bore" id="zLbl">Flutes<input id="z" type="number" inputmode="numeric" value="4"></label></div>
+<label data-show="mill bore" id="zLbl">Flutes<input id="z" type="number" inputmode="numeric" value="4"></label><label data-show="turn">Finish dia <span class="u">(in)</span><input id="fD" type="number" inputmode="decimal" step="any"></label></div>
 <div class="row" data-show="mill"><label>WOC / stepover<input id="ae" type="number" inputmode="decimal" step="any" value="25"><select id="aeU"><option value="pct">% of D</option><option value="in">in</option></select><small id="aeX"></small></label>
 <label>DOC ap<input id="ap" type="number" inputmode="decimal" step="any" value="1"><select id="apU"><option value="xd">×D</option><option value="in">in</option></select><small id="apX"></small></label></div>
-<div class="row"><label data-show="mill">Stickout (in)<input id="so" type="number" inputmode="decimal" step="any" value="1.5"></label><label data-show="turn">DOC ap (in)<input id="apT" type="number" inputmode="decimal" step="any" value="0.04"><small id="apTX"></small></label>
-<label>Max RPM<input id="maxRpm" type="number" inputmode="numeric" placeholder="machine max"></label></div>
-<div class="row" data-show="turn"><label>Nose radius (in)<input id="nose" type="number" inputmode="decimal" step="any"></label><label>Chipbreaker<input id="cb" placeholder="e.g. NF, F3M"></label></div>
-<div class="row" data-show="turn"><label>Length out of chuck (in)<input id="len" type="number" inputmode="decimal" step="any"></label><label>Support<select id="sup"><option value="none">None</option><option value="tail">Tailstock</option><option value="steady">Steady rest</option></select></label></div>
-<label>Machine HP<input id="maxHp" type="number" inputmode="decimal" placeholder="machine HP"></label>
-<div id="cards"></div><div class="out" id="out"></div><button class="sm" id="fav" style="margin-top:10px;width:100%">★ Save setup as favorite</button><div class="src" id="src"></div>
+<div class="row"><label data-show="mill bore">Stickout <span class="u">(in)</span><input id="so" type="number" inputmode="decimal" step="any" value="1.5"></label><label data-show="turn">DOC ap <span class="u">(in)</span><input id="apT" type="number" inputmode="decimal" step="any" value="0.04"><small id="apTX"></small></label>
+<label data-show="drill">Hole depth <span class="u">(in)</span><input id="hd" type="number" inputmode="decimal" step="any"></label><label data-show="bore">Bar dia <span class="u">(in)</span><input id="bd" type="number" inputmode="decimal" step="any"></label></div>
+<label data-show="bore">Bar shank<select id="shk"><option value="steel">Steel</option><option value="carbide">Carbide</option></select></label>
+<div id="cards"></div><div class="out" id="out"></div><div class="src" id="src"></div>
+<details id="more" style="margin-top:14px"><summary>More</summary>
+<label>Recall (favorites / recent)<select id="recall"><option value="">—</option></select></label><button class="sm" id="fav" style="margin-top:10px;width:100%">★ Save setup as favorite</button>
+<label>Search tools<input id="tq" type="search" placeholder="series, type, brand…" autocomplete="off"></label>
+<label><input id="onlyData" type="checkbox" checked style="width:auto;min-height:0"> Only tools with data for this material</label>
+<label id="cqL" hidden>Search conditions<input id="cq" type="search" placeholder="grade, insert, SMG code…" autocomplete="off"></label>
+<label>Coolant<select id="cool"><option value="flood">Flood</option><option value="through">Through-tool</option><option value="air">Air blast</option><option value="dry">Dry</option></select></label>
+<div class="row" data-show="turn"><label>Length out of chuck <span class="u">(in)</span><input id="len" type="number" inputmode="decimal" step="any"></label><label>Support<select id="sup"><option value="none">None</option><option value="tail">Tailstock</option><option value="steady">Steady rest</option></select></label></div>
+<details><summary>Add / remove machine profile</summary><div class="row"><label>Name<input id="mName"></label><label>Type<select id="mType"><option value="mill">Mill</option><option value="lathe">Lathe</option></select></label></div><div class="row"><label>Max RPM<input id="mRpm" type="number" inputmode="numeric"></label><label>HP<input id="mHp" type="number" inputmode="decimal"></label></div><button class="sm" id="mSave">Save profile</button> <button class="sm" id="mDel">Delete selected</button></details>
+</details>
 <details id="ovr" style="margin-top:16px"><summary style="font-size:15px;color:#aaa">Override</summary><small>Values typed here are tagged YOUR VALUE, NOT MANUFACTURER. Clear to go back to manufacturer data.</small>
 <div class="row"><label>SFM<input id="sfm" type="number" inputmode="decimal"></label><label id="feedLbl">Chip load (in/t)<input id="fpt" type="number" inputmode="decimal" step="any"></label></div></details></main>
 <script type="module" src="app.js"></script></body></html>

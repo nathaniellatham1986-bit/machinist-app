@@ -93,3 +93,11 @@ const pe = TJ.find(x => x.series.startsWith('PENTA')).conditions[0]; assert.deep
     source: { kind: 'catalog', manufacturer: 'X', catalog: 'C', edition: 'e', url: 'https://x', page: '1', retrieved: '2026-10-23' } }] }] });
   assert.deepEqual(validate(mk('bore', 'fz'), 't'), []); assert.deepEqual(validate(mk('bore', 'ipr'), 't'), []);
   assert.ok(validate(mk('drill', 'fz'), 't').some(e => /fz/.test(e))); }
+{ const { hardnessHB, matchMat, css, boreLimit } = await import('./calc.js');
+  assert.deepEqual(hardnessHB('HB 180-250'), [180, 250]); assert.deepEqual(hardnessHB('48 - 52 HRC'), [451, 500]);
+  const h13h = { id: 'h13-hard', iso: 'H', named: '\\bH13\\b', hb: [409, 500] };
+  assert.equal(matchMat(h13h, { iso: 'H', label: 'Hardened tool steel 48 - 52 HRC' }), 'group');
+  assert.equal(matchMat(h13h, { iso: 'H', label: 'Hardened 56 - 60 HRC' }), null);
+  assert.equal(matchMat(h13h, { iso: 'H', label: 'H13 48 HRC' }), 'named');
+  const c = css({ sfm: 500, d0: 4, d1: 0.5, maxRpm: 3000 }); assert.equal(c.rpm1, 3000); assert.ok(Math.abs(c.clampDia - 0.6366) < 1e-3);
+  assert.equal(boreLimit('steel'), 4); assert.equal(boreLimit('carbide'), 6); console.log('review1 tests pass'); }

@@ -83,3 +83,8 @@ Suggested name: `<brand>-<mode>[-<series>].json`, e.g. `iscar-mill.json`.
 - `ap: {value, unit}` — a single stated depth.
 - Optional condition fields: `noseRadius`/`insertWidth` `{value|label, unit}`, `leadAngle {deg, convention}`, `toolLife` (min), `woc` (the ae/D the speed is stated for), and the strings `chipbreaker`, `geometry`, `kind`, `table`, `operation`, `insert`, `grade`, `note`, `coolantNote`.
 - Flat drops `{brand, family, records[]}` are converted by `scripts/convert-flat.mjs`. `scripts/merge-incoming.mjs <incoming> <brand>` validates them, writes `data/<brand>-<family>.json` (one shard per family, lazy-loaded) and moves rejects to `_rejected/<brand>/` with `.reason.txt`.
+
+## Tool mode `bore`
+Boring heads and boring bars. `feed.kind` is `fz` (per tooth / per cutting edge, as printed for boring heads) or `ipr` (where the catalog prints per rev). Diameter keys/ranges are the bore diameter. Tool `flutes` = number of effective cutting edges (default 1 in the app).
+App: RPM from SFM at the bore diameter (capped by machine max); IPM = RPM × fz × edges, or RPM × ipr. Nose-radius columns go in separate conditions with `noseRadius`.
+Diameter cap for bore tools: 24 in (CB206F head to 21.5 in).
