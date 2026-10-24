@@ -1,0 +1,56 @@
+{
+ "schema": 1,
+ "builder": "Hardinge / Bridgeport",
+ "models": [
+  {
+   "model": "Series I knee mill (manual)",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Standard step pulley/variable",
+     "rpm": 4200,
+     "taper": "R8",
+     "kw_peak": null,
+     "kw_cont": null,
+     "hp_peak": 3,
+     "hp_cont": 2,
+     "torque_nm": null,
+     "rating_note": "30 min / cont"
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://bridgeportmachinetools.com/product/milling/series-1/",
+    "title": "Bridgeport Series I Standard Knee Mill",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "V480",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "#30 direct drive",
+     "rpm": 15000,
+     "taper": "#30",
+     "kw_peak": 9.0,
+     "kw_cont": null,
+     "hp_peak": 12,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://bridgeportmachinetools.com/product/milling/v-series/",
+    "title": "Bridgeport V-Series",
+    "accessed": "2026-10-24"
+   }
+  }
+ ]
+}
