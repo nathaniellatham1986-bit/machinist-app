@@ -15,7 +15,7 @@ const SPEED_UNITS = ['ft/min', 'm/min'];
 const LEN_UNITS = ['in', 'mm'];
 const FEED_KINDS = ['fz', 'ipr', 'pitch'];
 const TOOL_KEYS = new Set(['mode', 'brand', 'series', 'type', 'flutes', 'coating', 'grade', 'diameters_in', 'diameters_mm', 'notes', 'conditions']);
-const COND_KEYS = new Set(['label', 'iso', 'subgroup', 'material', 'status', 'coolant', 'sfm', 'feed', 'ap', 'ae', 'apx', 'aex', 'source', 'materials', 'sourceGroup',
+const COND_KEYS = new Set(['fzPerD', 'label', 'iso', 'subgroup', 'material', 'status', 'coolant', 'sfm', 'feed', 'ap', 'ae', 'apx', 'aex', 'source', 'materials', 'sourceGroup',
   'noseRadius', 'leadAngle', 'toolLife', 'insertWidth', 'chipbreaker', 'geometry', 'kind', 'table', 'woc', 'operation', 'insert', 'grade', 'note', 'coolantNote', 'altSources', 'printed']);
 const SRC_KEYS = new Set(['kind', 'manufacturer', 'catalog', 'edition', 'url', 'page', 'notes', 'derivation', 'retrieved']);
 
@@ -133,8 +133,13 @@ export function validate(doc, name = 'file') {
       if (!('sfm' in c)) err(w, 'sfm is required (speed object, or null when the source gives none)');
       else if (c.sfm !== null) { range(c.sfm, w + '.sfm', err); if (!SPEED_UNITS.includes(c.sfm?.unit)) err(w + '.sfm', `unit must be one of ${SPEED_UNITS.join('|')}`); }
       if ('feed' in c) feed(c.feed, w + '.feed', err, t);
+      if ('fzPerD' in c) { const p = c.fzPerD, ks = ['min', 'start', 'max'];
+        if (!p || typeof p !== 'object' || !Object.keys(p).length || Object.keys(p).some(k => !ks.includes(k)) || !Object.values(p).every(x => isNum(x) && x > 0 && x < 0.2)) err(w + '.fzPerD', 'must be {min?, start?, max?} with positive multipliers < 0.2');
+        else { if (p.min != null && p.max != null && p.min > p.max) err(w + '.fzPerD', 'min > max'); if (p.start != null && ((p.min != null && p.start < p.min) || (p.max != null && p.start > p.max))) err(w + '.fzPerD', 'start outside min–max');
+          if (p.start == null && (p.min == null || p.max == null)) err(w + '.fzPerD', 'needs start, or both min and max'); }
+        if (!['mill', 'bore'].includes(t.mode)) err(w + '.fzPerD', 'fzPerD is for mill and bore tools'); }
       if (c.printed) printed(c.printed, w + '.printed', err, t);
-      if (c.sfm === null && c.feed == null && !c.ap && !c.coolant && !c.printed) err(w, 'condition carries no data (no speed, feed, depth or coolant)');
+      if (c.sfm === null && c.feed == null && !c.fzPerD && !c.ap && !c.coolant && !c.printed) err(w, 'condition carries no data (no speed, feed, depth or coolant)');
       if (c.feed?.kind === 'fz' && !['mill', 'bore'].includes(t.mode)) err(w, 'feed.kind "fz" is for mill and bore tools');
       if (c.feed?.kind === 'ipr' && t.mode === 'mill') err(w, 'mill tools use feed.kind "fz"');
       if (c.ap) depth(c.ap, w + '.ap', err); if (c.ae) depth(c.ae, w + '.ae', err);

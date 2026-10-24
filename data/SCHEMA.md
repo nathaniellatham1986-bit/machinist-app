@@ -72,6 +72,13 @@ Suggested name: `<brand>-<mode>[-<series>].json`, e.g. `iscar-mill.json`.
 | page, notes, retrieved | no | |
 | derivation | when derived | how the number was computed from published values |
 
+### `fzPerD` (optional, mill/bore)
+`fzPerD: { min?, start?, max? }` — feed per tooth printed by the manufacturer as a multiple of tool diameter
+(e.g. Iscar p.218 "Fz 0.005–0.01×D, start 0.006×D", Lakeshore Feed-Max). Dimensionless; fz comes out in the
+same length unit as D. Needs `start` or both `min` and `max`; multipliers are > 0 and < 0.2. Used only when
+`feed` is null: the app computes fz = multiplier × D and labels it `MFR FORMULA (0.006×D)` (a printed
+formula, not DERIVED). No start → midpoint of the printed multipliers, labeled MIDPOINT.
+
 ## Materials
 `data/materials.json` lists specific materials. 303 (free-machining, sulfurized) is its own entry. 304 and 316 (standard austenitic, work-hardening) share the entry ss304. `groups` holds the plain ISO group names used by the picker. To add a material, add it to that file with its ISO group.
 

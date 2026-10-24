@@ -113,3 +113,6 @@ export const geoName = t => { const short = s => s.replace(/\s*\([^)]*\)/g, '').
   const n = short(s.replace(/\b(turning|parting|grooving|threading|milling|drilling|insert)?\s*grade\b/gi, ' ').replace(/\s*[—–-]\s*$/, '').replace(/^\s*[—–-]\s*/, ''));
   if (n) return n; const q = (t.series.match(/\(([^)]*)\)/) ?? [])[1], ty = (t.type ?? '').split(/\s+[—–-]\s+/)[0];
   return [ty ? ty.replace(/grade$/i, 'grades') : 'Grades', q].filter(Boolean).join(' · ').slice(0, 70); };
+// Printed feed-per-tooth as a multiple of tool diameter (fzPerD). fz = multiplier × D, in the record's (= D's) length unit.
+export const fzFromPerD = (p, d) => { const m = pick(p, 1); if (!m || !(d > 0)) return null; const f = x => +x.toPrecision(3);
+  const r = pick(p, d); r.basis = `MFR FORMULA (${f(m.def)}×D)` + (p.start == null && p.value == null ? `, MIDPOINT of printed ${f(m.min)}–${f(m.max)}×D` : '') + (m.min != null && p.start != null ? ` · printed ${f(m.min)}–${f(m.max)}×D` : ''); r.formula = true; return r; };

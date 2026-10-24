@@ -119,3 +119,10 @@ const pe = TJ.find(x => x.series.startsWith('PENTA')).conditions[0]; assert.deep
   assert.equal(geoName({ series: 'CB7015 turning grade (2015 catalogue, inch start values)', type: 'Turning insert grade — general turning', grade: 'CB7015' }), 'Turning insert grades · 2015 catalogue, inch start values');
   assert.equal(geoName({ series: 'TungCut AH7025', grade: 'AH7025' }), 'TungCut');
   console.log('grade tests pass'); }
+{ const { fzFromPerD } = await import('./calc.js');
+  const a = fzFromPerD({ min: 0.005, start: 0.006, max: 0.01 }, 0.5);
+  assert.ok(Math.abs(a.def - 0.003) < 1e-12 && Math.abs(a.min - 0.0025) < 1e-12 && Math.abs(a.max - 0.005) < 1e-12);
+  assert.match(a.basis, /^MFR FORMULA \(0\.006×D\)/); assert.doesNotMatch(a.basis, /DERIVED/);
+  const b = fzFromPerD({ min: 0.005, max: 0.01 }, 10); assert.ok(Math.abs(b.def - 0.075) < 1e-12); assert.match(b.basis, /MFR FORMULA \(0\.0075×D\), MIDPOINT/);
+  assert.equal(fzFromPerD({ start: 0.006 }, 0), null);
+  console.log('fzPerD tests pass'); }

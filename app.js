@@ -1,5 +1,5 @@
 import { MODES, migrate, forMode } from './recall.js';
-import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor } from './calc.js';
+import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD } from './calc.js';
 const $ = id => document.getElementById(id);
 const J = u => fetch(u).then(r => r.json());
 const idx = await J('data/index.json');
@@ -161,7 +161,7 @@ function fill() {
   if (mode === 'tap') { const th = threads.threads[$('thr').value]; setIn('d', th.d_in); setIn('fpt', th.pitch_in); }
   const d = inV('d'), cool = $('cool').value; LS.set('lastCoolant', cool);
   const shop = c?.status === 'shop-proven';
-  const sp = c && pick(c.sfm, spdK(c.sfm?.unit)), fd = mode === 'tap' ? null : c && feedAt(c.feed, d);
+  const sp = c && pick(c.sfm, spdK(c.sfm?.unit)), fd = mode === 'tap' ? null : c && (feedAt(c.feed, d) ?? (c.feed == null && c.fzPerD ? fzFromPerD(c.fzPerD, d) : null));
   if (shop) { if (sp) sp.basis = 'SHOP-PROVEN value, not manufacturer'; if (fd) fd.basis = 'SHOP-PROVEN value, not manufacturer'; }
   SP = sp; FD = fd; defs = { sfm: sp?.def ?? null, fpt: mode === 'tap' ? inV('fpt') : fd?.def ?? null };
   prefillEng(t, c, d);
