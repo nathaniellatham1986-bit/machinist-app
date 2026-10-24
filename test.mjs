@@ -223,3 +223,8 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   assert.equal(rowExcludes({ label: 'no size' }, 0.5), false); assert.equal(rowExcludes({ diameterRange: { min: 10, max: 13, unit: 'mm' } }, 0.5), false);
   console.log('ME11 #7 out-of-size row tests pass'); }
 { const { rowExcludes } = await import('./calc.js'); assert.equal(rowExcludes({ label: 'Alloy · 2D · DC ø50~ · x' }, 0.5), true); assert.equal(rowExcludes({ label: 'DC ø50~' }, 2.1), false); console.log('ME11 #7 open-ended row tests pass'); }
+{ const { coolModes, drillRank } = await import('./calc.js');
+  assert.deepEqual(coolModes('Use internal coolant'), ['through']); assert.ok(!coolModes('Internal coolant is recommended').includes('flood'));
+  assert.ok(coolModes('emulsion or oil').includes('flood')); assert.ok(coolModes('combination of internal and external coolant').includes('flood'));
+  const F = drillRank({ series: 'A', cl: ['flood'] }, 'flood'), N = drillRank({ series: 'B', cl: [] }, 'flood'), T = drillRank({ series: 'C', cl: ['through'] }, 'flood');
+  assert.ok(F < N && N < T); assert.equal(drillRank({ series: 'C', cl: ['through'] }, 'through'), 0); console.log('ME11 #8 coolant rank tests pass'); }
