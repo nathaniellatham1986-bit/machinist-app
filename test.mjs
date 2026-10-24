@@ -185,3 +185,7 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   const r = lowEnd(pick({ min: 0.05, max: 0.16 })); assert.equal(r.def, 0.05); assert.match(r.basis, /^LOW END of manufacturer range/);
   assert.equal(lowEnd(pick({ min: 1, max: 3, start: 2 })).def, 2);
   console.log('ME10 #7 low end tests pass'); }
+{ const { drillRank } = await import('./calc.js');
+  assert.ok(drillRank({ series: 'X', cl: ['flood'] }, 'flood') < drillRank({ series: 'X', cl: ['through'] }, 'flood'));
+  assert.ok(drillRank({ series: 'X', cl: ['through'] }, 'flood') < drillRank({ series: 'T-A carbide insert, Flat Bottom Geometry', cl: ['flood'] }, 'flood'));
+  console.log('ME10 #10 drill rank tests pass'); }

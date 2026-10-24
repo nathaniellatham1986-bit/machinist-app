@@ -1,6 +1,6 @@
 // Regenerate data/index.json from every brand file in data/, and stamp sw.js with a content-hash cache name.
 // Never edit data/index.json by hand. Usage: node scripts/build-index.mjs
-import { shared303, sizeRange, brandName, seriesGrade } from '../calc.js';
+import { shared303, sizeRange, brandName, seriesGrade, coolModes } from '../calc.js';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -31,6 +31,7 @@ for (const f of files) {
       .map(c => { const r = c.feed.range; return r.value ?? r.start ?? (r.min != null && r.max != null ? (r.min + r.max) / 2 : r.max); }).filter(x => x > 0).sort((a, b) => a - b);
       return v.length ? v[Math.floor(v.length / 2)] : null; })() } : {}),
     ...((u => u.length ? { ins: [u[0], u.length] } : {})([...new Set(t.conditions.map(c => c.insert).filter(Boolean))])),
+    ...(t.mode === 'drill' ? (u => u.length ? { cl: u } : {})([...new Set(t.conditions.flatMap(c => coolModes(typeof c.coolant === 'string' ? c.coolant : '')))]) : {}),
     ...(t.mode === 'drill' && sizeRange(t) ? { dr: sizeRange(t).map(x => +x.toFixed(4)) } : {}),
     ...(t.conditions.some(c => c.materials?.includes('ss303') && !shared303(c)) ? { only303: true } : {}),
     mats: [...new Set(t.conditions.flatMap(c => c.materials ?? []))].sort(),

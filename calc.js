@@ -165,3 +165,6 @@ export const distinctName = (name, t, dup) => { if (!dup) return name; const pg 
   return [name, pg, ins].filter(Boolean).join(' · '); };
 // Part/Groove records that print only a range: start at the LOW end (labeled). Other modes keep the labeled midpoint.
 export const lowEnd = r => r && /^MIDPOINT/.test(r.basis ?? '') && r.min != null ? { ...r, def: r.min, basis: 'LOW END of manufacturer range (no stated start)' } : r;
+// Drill ranking: stated coolant matches the selected one first, unstated next, other coolant after; specials (flat bottom, spade, counterbore) after standard twist drills.
+export const DRILL_SPECIAL = /flat.?bottom|\bFBD|spade|counterbor|chamfer|step drill/i;
+export const drillRank = (t, cool) => (!t.cl?.length ? .1 : t.cl.includes(cool) ? 0 : .2) + (DRILL_SPECIAL.test(`${t.series} ${t.type ?? ''}`) ? .4 : 0);
