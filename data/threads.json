@@ -224,6 +224,48 @@
    "drill75_mm": 21.08,
    "drill75_in": 0.8298,
    "chart": null
+  },
+  {
+   "name": "1/8-27 NPT",
+   "d_in": 0.405,
+   "pitch_in": 0.037037,
+   "drill75_in": 0.339,
+   "chart": "R (.339) NPT tap drill, no ream (pipe OD shown as dia; ANSI B1.20.1 geometry)"
+  },
+  {
+   "name": "1/4-18 NPT",
+   "d_in": 0.54,
+   "pitch_in": 0.055556,
+   "drill75_in": 0.4375,
+   "chart": "7/16 (.4375) NPT tap drill, no ream (pipe OD shown as dia; ANSI B1.20.1 geometry)"
+  },
+  {
+   "name": "3/8-18 NPT",
+   "d_in": 0.675,
+   "pitch_in": 0.055556,
+   "drill75_in": 0.5781,
+   "chart": "37/64 (.5781) NPT tap drill, no ream (pipe OD shown as dia; ANSI B1.20.1 geometry)"
+  },
+  {
+   "name": "1/2-14 NPT",
+   "d_in": 0.84,
+   "pitch_in": 0.071429,
+   "drill75_in": 0.7188,
+   "chart": "23/32 (.7188) NPT tap drill, no ream (pipe OD shown as dia; ANSI B1.20.1 geometry)"
+  },
+  {
+   "name": "3/4-14 NPT",
+   "d_in": 1.05,
+   "pitch_in": 0.071429,
+   "drill75_in": 0.9219,
+   "chart": "59/64 (.9219) NPT tap drill, no ream (pipe OD shown as dia; ANSI B1.20.1 geometry)"
+  },
+  {
+   "name": "1-11.5 NPT",
+   "d_in": 1.315,
+   "pitch_in": 0.086957,
+   "drill75_in": 1.1563,
+   "chart": "1-5/32 (1.1563) NPT tap drill, no ream (pipe OD shown as dia; ANSI B1.20.1 geometry)"
   }
  ]
 }
