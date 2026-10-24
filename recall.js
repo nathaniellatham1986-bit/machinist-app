@@ -27,3 +27,8 @@ export function dedupeMachines(list) {
   list.forEach((x, i) => { const j = out.findIndex(y => sameMach(y, x)); if (j >= 0) map[i] = j; else { map[i] = out.length; out.push(x); } });
   return { list: out, map, changed: out.length !== list.length };
 }
+// Delete saved machine i; remap per-mode active indices (deleted one -> '' = none).
+export function removeMachine(list, i, last) {
+  const out = {}; for (const [k, v] of Object.entries(last)) out[k] = v === '' || v == null ? '' : +v === i ? '' : +v > i ? String(+v - 1) : String(v);
+  return { list: list.filter((_, j) => j !== i), last: out };
+}

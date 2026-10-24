@@ -259,3 +259,6 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   a = up(a.list, cu); a = up(a.list, { ...cu, name: ' shop mill ' }); assert.equal(a.list.length, 3); assert.equal(a.action, 'existing');
   const d = dd([vf2, cu, { ...vf2 }, { ...vf2, rpm: 7000 }, { ...cu }]); assert.equal(d.list.length, 3); assert.deepEqual(d.map, [0, 1, 0, 2, 1]);
   assert.equal(dd([vf2, cu]).changed, false); }
+{ const { removeMachine: rm } = await import('./recall.js'); const r = rm([{ name: 'a' }, { name: 'b' }, { name: 'c' }], 1, { mill: '1', turn: '2', drill: '0', tap: '' });
+  assert.deepEqual(r.list.map(x => x.name), ['a', 'c']); assert.deepEqual(r.last, { mill: '', turn: '1', drill: '0', tap: '' }); console.log('ok removeMachine'); }
+{ const { filterOpts } = await import('./combo.js'); assert.deepEqual(filterOpts(['x', 'y'], ''), [0, 1]); }

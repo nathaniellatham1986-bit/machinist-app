@@ -1,9 +1,9 @@
-import { MODES, migrate, forMode, upsertMachine, dedupeMachines } from './recall.js';
+import { MODES, migrate, forMode, upsertMachine, dedupeMachines, removeMachine } from './recall.js';
 import { enhance } from './combo.js';
 import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, drillTier, rowDia, rowExcludes, toolLifeOf } from './calc.js';
 const $ = id => document.getElementById(id);
 const J = u => fetch(u).then(r => r.json());
-['matPick', 'brand', 'kind', 'tool', 'grade', 'cond', 'thr', 'mach', 'dPick', 'recall', 'pB', 'pM', 'pS'].forEach(k => enhance($(k)));
+['matPick', 'brand', 'kind', 'tool', 'grade', 'cond', 'thr', 'dPick', 'recall', 'pB', 'pM', 'pS'].forEach(k => enhance($(k)));
 const idx = await J('data/index.json');
 const MM = 25.4, toIn = (v, u) => (u === 'mm' ? v / MM : v);
 const spdK = u => (u === 'm/min' ? 3.2808 : 1);
@@ -56,7 +56,10 @@ $('mSave').onclick = () => { const n = $('mName').value.trim(); if (!n) return; 
   const r = { name: n, type: $('mType').value, rpm: +$('mRpm').value || null, hp: +$('mHp').value || null, thrIpm: +$('mThr').value || null };
   if (PRE) { r.preset = PRE.ref; r.source = PRE.url; r.user = ['type', 'rpm', 'hp', 'thrIpm'].filter(k => r[k] !== PRE[k]); if (!r.user.length) delete r.user; }
   const u = upsertMachine(m, r); LS.set('machines', u.list); machines(); $('mach').value = u.index; applyMachine(); $('mAdd').open = false; };
-$('mDel').onclick = () => { const m = LS.get('machines', []); if ($('mach').value === '') return; m.splice(+$('mach').value, 1); LS.set('machines', m); $('mach').value = ''; machines(); };
+$('mDel').onclick = () => { $('pB').value = ''; $('pB').onchange(); ['mName', 'mThr', 'mRpm', 'mHp'].forEach(k => $(k).value = ''); $('mType').value = 'mill'; };
+enhance($('mach'), { action: o => o.value === '' ? null : { label: '✕', title: 'Delete this saved machine', run: () => {
+  const last = Object.fromEntries(MODES.map(md => [md, LS.get('lastMachine:' + md, '')])), r = removeMachine(LS.get('machines', []), +o.value, last);
+  LS.set('machines', r.list); MODES.forEach(md => LS.set('lastMachine:' + md, r.last[md])); machines(); $('mach').value = r.last[mode]; applyMachine(); } } });
 // Builder presets (data/machines): Builder -> Model -> spindle option, same select pattern as Brand -> Series
 let MIDX = null, MDOC = null, PRE = null; const mTypeOf = t => ['mill', 'lathe', 'mill-turn', 'swiss', 'grinder'].includes(t) ? t : 'mill';
 const preHp = s => s.hp_cont ?? s.hp_peak ?? (s.kw_cont ?? s.kw_peak ? +((s.kw_cont ?? s.kw_peak) * 1.341).toFixed(1) : null);
