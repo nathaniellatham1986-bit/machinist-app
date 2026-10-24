@@ -1,0 +1,89 @@
+{
+ "schema": 1,
+ "builder": "Mazak",
+ "models": [
+  {
+   "model": "QUICK TURN 350MY",
+   "type": "mill-turn",
+   "spindles": [
+    {
+     "option": "Main spindle",
+     "rpm": 3300,
+     "taper": "A2-11",
+     "kw_peak": 30,
+     "kw_cont": 22,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 808,
+     "rating_note": "30 kW at 40% ED / 22 kW cont"
+    },
+    {
+     "option": "Main, opt high-torque",
+     "rpm": 3300,
+     "taper": "A2-11",
+     "kw_peak": 37,
+     "kw_cont": 22,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    },
+    {
+     "option": "Rotary tool (live)",
+     "rpm": 5000,
+     "taper": "Turret",
+     "kw_peak": 7.5,
+     "kw_cont": 5.5,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 95,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://mazarom.ro/wp-content/uploads/2025/01/QUICK-TURN-300350-SERIES-SmoothCNC.pdf",
+    "title": "Mazak QUICK TURN 300/350 Series SmoothC brochure (Mazak document, distributor-hosted)",
+    "accessed": "2026-10-24"
+   }
+  },
+  {
+   "model": "VCN-530C",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "Standard 12000 rpm",
+     "rpm": 12000,
+     "taper": "CAT40",
+     "kw_peak": 18.5,
+     "kw_cont": 7.5,
+     "hp_peak": 25,
+     "hp_cont": null,
+     "torque_nm": 95.5,
+     "rating_note": "18.5 kW 5 min / 11 kW 40% ED / 7.5 kW cont"
+    },
+    {
+     "option": "Optional 18000 rpm",
+     "rpm": 18000,
+     "taper": "CAT40",
+     "kw_peak": 15,
+     "kw_cont": 11,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": "40% ED / cont"
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://cnc-toerner.de/wp-content/uploads/2026/09/VCN-430_530_SmoothG_EN.pdf",
+    "title": "Mazak VCN-430/530 brochure (Mazak document, distributor-hosted)",
+    "accessed": "2026-10-24"
+   }
+  }
+ ]
+}
