@@ -1,0 +1,53 @@
+{
+ "schema": 1,
+ "builder": "Nakamura-Tome",
+ "models": [
+  {
+   "model": "WT-150II",
+   "type": "mill-turn",
+   "spindles": [
+    {
+     "option": "Left spindle",
+     "rpm": 5000,
+     "taper": "",
+     "kw_peak": 15,
+     "kw_cont": 11,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    },
+    {
+     "option": "Right spindle",
+     "rpm": 4500,
+     "taper": "",
+     "kw_peak": 11,
+     "kw_cont": 7.5,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    },
+    {
+     "option": "Live tool",
+     "rpm": 6000,
+     "taper": "Turret",
+     "kw_peak": 5.5,
+     "kw_cont": 3.7,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": null,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://www.nakamura-tome.com/products/machines/wt-150-2/",
+    "title": "Nakamura-Tome WT-150II",
+    "accessed": "2026-10-24"
+   }
+  }
+ ]
+}
