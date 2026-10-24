@@ -1,0 +1,55 @@
+{
+ "schema": 1,
+ "builders": [
+  {
+   "file": "haas.json",
+   "builder": "Haas",
+   "models": 9
+  },
+  {
+   "file": "mazak.json",
+   "builder": "Mazak",
+   "models": 2
+  },
+  {
+   "file": "hermle.json",
+   "builder": "Hermle",
+   "models": 1
+  },
+  {
+   "file": "okuma.json",
+   "builder": "Okuma",
+   "models": 1
+  },
+  {
+   "file": "dn-solutions.json",
+   "builder": "DN Solutions (Doosan)",
+   "models": 2
+  },
+  {
+   "file": "dmg-mori.json",
+   "builder": "DMG Mori",
+   "models": 1
+  },
+  {
+   "file": "fanuc.json",
+   "builder": "Fanuc Robodrill",
+   "models": 1
+  },
+  {
+   "file": "brother.json",
+   "builder": "Brother",
+   "models": 1
+  },
+  {
+   "file": "hurco.json",
+   "builder": "Hurco",
+   "models": 2
+  },
+  {
+   "file": "toshiba.json",
+   "builder": "Toshiba / Shibaura",
+   "models": 1
+  }
+ ]
+}

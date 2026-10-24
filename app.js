@@ -45,12 +45,27 @@ function feedAt(f, dIn) {
 const fmt = rangeText;
 // Machines
 function machines() { const m = LS.get('machines', []); const sel = $('mach'); let cur = LS.get('lastMachine:' + mode, '');
-  sel.length = 1; m.forEach((x, i) => (mode === 'bore' || (x.type === 'lathe') === (mode === 'turn')) && sel.add(new Option(`${x.name} (${x.type}, ${x.rpm || '?'} RPM, ${x.hp || '?'} HP)`, i))); if (![...sel.options].some(o => o.value !== '' && o.value === String(cur))) cur = sel.length === 2 ? sel.options[1].value : ''; sel.value = cur; if (sel.value === '') { $('maxRpm').value = ''; $('maxHp').value = ''; } else { $('maxRpm').value = m[sel.value].rpm || ''; $('maxHp').value = m[sel.value].hp || ''; } return m; }
+  sel.length = 1; m.forEach((x, i) => x.type !== 'grinder' && (mode === 'bore' || x.type === 'mill-turn' || (['lathe', 'swiss'].includes(x.type)) === (mode === 'turn')) && sel.add(new Option(`${x.name} (${x.type}, ${x.rpm || '?'} RPM, ${x.hp || '?'} HP${x.user ? ', YOUR VALUES' : x.preset ? ', builder spec' : ''})`, i))); if (![...sel.options].some(o => o.value !== '' && o.value === String(cur))) cur = sel.length === 2 ? sel.options[1].value : ''; sel.value = cur; if (sel.value === '') { $('maxRpm').value = ''; $('maxHp').value = ''; } else { $('maxRpm').value = m[sel.value].rpm || ''; $('maxHp').value = m[sel.value].hp || ''; } return m; }
 function applyMachine() { const m = LS.get('machines', [])[$('mach').value]; LS.set('lastMachine:' + mode, $('mach').value);
   $('maxRpm').value = m?.rpm || ''; $('maxHp').value = m?.hp || ''; run(); }
 $('mSave').onclick = () => { const n = $('mName').value.trim(); if (!n) return; const m = LS.get('machines', []);
-  m.push({ name: n, type: $('mType').value, rpm: +$('mRpm').value || null, hp: +$('mHp').value || null, thrIpm: +$('mThr').value || null }); LS.set('machines', m); machines(); $('mach').value = m.length - 1; applyMachine(); };
+  const r = { name: n, type: $('mType').value, rpm: +$('mRpm').value || null, hp: +$('mHp').value || null, thrIpm: +$('mThr').value || null };
+  if (PRE) { r.preset = PRE.ref; r.source = PRE.url; r.user = ['type', 'rpm', 'hp', 'thrIpm'].filter(k => r[k] !== PRE[k]); if (!r.user.length) delete r.user; }
+  m.push(r); LS.set('machines', m); machines(); $('mach').value = m.length - 1; applyMachine(); };
 $('mDel').onclick = () => { const m = LS.get('machines', []); if ($('mach').value === '') return; m.splice(+$('mach').value, 1); LS.set('machines', m); $('mach').value = ''; machines(); };
+// Builder presets (data/machines): Builder -> Model -> spindle option, same select pattern as Brand -> Series
+let MIDX = null, MDOC = null, PRE = null; const mTypeOf = t => ['mill', 'lathe', 'mill-turn', 'swiss', 'grinder'].includes(t) ? t : 'mill';
+const preHp = s => s.hp_cont ?? s.hp_peak ?? (s.kw_cont ?? s.kw_peak ? +((s.kw_cont ?? s.kw_peak) * 1.341).toFixed(1) : null);
+async function presetBuilders() { if (MIDX) return; MIDX = await J('data/machines/index.json'); MIDX.builders.forEach(b => $('pB').add(new Option(`${b.builder} (${b.models})`, b.file))); }
+$('mSave').closest('details').ontoggle = presetBuilders;
+$('pB').onchange = async () => { $('pM').length = 0; $('pS').length = 0; $('pSL').hidden = true; PRE = null; $('pNote').textContent = ''; if (!$('pB').value) return;
+  MDOC = await J('data/machines/' + $('pB').value); $('pM').add(new Option('Pick model', '')); MDOC.models.forEach((m, i) => $('pM').add(new Option(`${m.model} · ${m.type}`, i))); };
+$('pM').onchange = () => { const m = MDOC?.models[$('pM').value]; $('pS').length = 0; if (!m) return; m.spindles.forEach((s, i) => $('pS').add(new Option(`${s.option} · ${s.rpm || '?'} rpm`, i))); $('pSL').hidden = m.spindles.length < 2; $('pS').onchange(); };
+$('pS').onchange = () => { const m = MDOC.models[$('pM').value], s = m.spindles[$('pS').value || 0], hp = preHp(s);
+  const der = s.hp_cont == null && s.hp_peak == null && hp != null; const which = s.hp_cont != null || (s.hp_peak == null && s.kw_cont != null) ? 'continuous' : 'peak';
+  PRE = { ref: `${MDOC.builder} ${m.model} · ${s.option}`, url: m.source.url, type: mTypeOf(m.type), rpm: s.rpm, hp, thrIpm: m.max_thread_ipm ?? null };
+  $('mName').value = `${MDOC.builder} ${m.model}` + (m.spindles.length > 1 ? ` (${s.option})` : ''); $('mType').value = PRE.type; $('mRpm').value = s.rpm ?? ''; $('mHp').value = hp ?? ''; $('mThr').value = PRE.thrIpm ?? '';
+  $('pNote').innerHTML = `BUILDER SPEC · ${s.rpm ?? '?'} rpm · ${hp ?? '?'} HP ${which}${der ? ' (DERIVED from kW × 1.341)' : ''}${s.taper ? ' · ' + s.taper : ''}${s.torque_nm ? ' · ' + s.torque_nm + ' Nm' : ''}${s.rating_note ? ' · ' + s.rating_note : ''}${m.type === 'grinder' ? ' · grinder: not used for feeds/speeds limits' : ''} · <a href="${m.source.url}" target="_blank" rel="noopener">source</a> (accessed ${m.source.accessed}). Fields stay editable; changed fields save as YOUR VALUE.`; };
 // Selection chain: material -> brand -> tool -> condition
 function setMode(m) {
   mode = m; TUSER = false; Object.assign(ENG, { key: '', ae: 'default', ap: 'default' }); // YOUR VALUE tags belong to one tab

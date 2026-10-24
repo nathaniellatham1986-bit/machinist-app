@@ -242,3 +242,8 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   const doc = { schema: 1, brand: 'X', tools: [{ mode: 'mill', brand: 'X', series: 'Y', conditions: [{ label: 'a', iso: 'N', status: 'verified', coolant: null, sfm: { min: 500, unit: 'ft/min' }, source: { kind: 'catalog', manufacturer: 'X', catalog: 'c', edition: 'e', url: 'https://x' } }] }] };
   assert.deepEqual(validate(doc).filter(e => /sfm/.test(e)), []);
   console.log('AM #4 min-only tests pass'); }
+{ const { validateMachines } = await import('./scripts/validate-machines.mjs'); const MI = J('./data/machines/index.json');
+  for (const b of MI.builders) assert.deepEqual(validateMachines(J('./data/machines/' + b.file), b.file), []);
+  const qt = J('./data/machines/mazak.json').models.find(m => m.model === 'QUICK TURN 350MY'); assert.equal(qt.spindles[0].rpm, 3300);
+  assert.ok(validateMachines({ schema: 1, builder: 'X', models: [{ model: 'M', type: 'mill', spindles: [{ option: 'o', rpm: null }], source: { url: 'https://x', accessed: '2026-01-01' } }] }).length);
+  console.log('machine preset tests pass'); }
