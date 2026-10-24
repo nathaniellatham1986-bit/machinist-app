@@ -110,7 +110,12 @@ export const pickGrade = (list, cur) => { const has = list.filter(o => o.has);
   const r = has.find(o => o.rec); if (r) return { pick: r, why: 'rec' };
   return has[0] ? { pick: has[0], why: 'auto' } : { pick: null, why: null }; };
 // Display name for a tool with the grade stripped; grade-only records fall back to the record's own series qualifier / type.
-export const geoName = t => { const short = s => s.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim().slice(0, 48);
+// Iscar tap records print fields as 'X; color code M; surface TI; flute hand/angle R40°; lead DIN 2197 form C'. Build a readable name from them; '-' = empty, skipped.
+const ISO_WORD = { P: 'steel', M: 'stainless', K: 'cast iron', N: 'non-ferrous', S: 'superalloy', H: 'hardened' };
+export const tapName = t => { const s = t.type ?? '', f = k => { const m = s.match(new RegExp(k + '\\s+([^;]+)')); const v = m?.[1].trim(); return v && v !== '-' ? v : null; };
+  if (!/color code/i.test(s)) return null; const mat = s.match(/^\s*(HSS-E-PM|HSS-E|HSS|carbide|VHM)/i)?.[1], fl = f('flute hand/angle'), ld = f('lead DIN 2197 form'), sf = f('surface'), cc = f('color code');
+  return [[mat, fl ? `spiral flute ${fl}` : null, ld ? `form ${ld} lead` : null].filter(Boolean).join(' '), sf, cc ? cc + (ISO_WORD[cc] ? ` (${ISO_WORD[cc]})` : '') : null].filter(Boolean).join(', '); };
+export const geoName = t => { const tn = t.mode === 'tap' && tapName(t); if (tn) return tn; const short = s => s.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim().slice(0, 48);
   let s = t.series; if (t.grade) for (const g of t.grade.split(/[,/]\s*/)) s = s.split(g).join(' ');
   const n = short(s.replace(/\b(turning|parting|grooving|threading|milling|drilling|insert)?\s*grade\b/gi, ' ').replace(/\s*[—–-]\s*$/, '').replace(/^\s*[—–-]\s*/, ''));
   if (n) return n; const q = (t.series.match(/\(([^)]*)\)/) ?? [])[1], ty = (t.type ?? '').split(/\s+[—–-]\s+/)[0];
