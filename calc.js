@@ -153,3 +153,7 @@ export const brandName = b => BRAND_ALIAS[String(b ?? '').trim().toLowerCase()] 
 export const threadFeed = ({ rpm, lead, maxIpm }) => { const ipm = rpm * lead;
   if (maxIpm > 0 && ipm > maxIpm) return { rpm: maxIpm / lead, ipm: maxIpm, capped: true, high: false };
   return { rpm, ipm, capped: false, high: !(maxIpm > 0) && ipm > 200 }; };
+// Printed thread pitch range in a row label, e.g. 'pitch 1,5–5,0 mm' -> [1.5, 5] (mm). null if none printed.
+export const pitchRangeOf = c => { const m = `${c.label ?? ''} ${c.operation ?? ''}`.match(/pitch\s*(\d+(?:[.,]\d+)?)\s*[–-]\s*(\d+(?:[.,]\d+)?)\s*mm/i);
+  return m ? [parseFloat(m[1].replace(',', '.')), parseFloat(m[2].replace(',', '.'))] : null; };
+export const pitchCovers = (c, pIn) => { const r = pitchRangeOf(c); if (!r || !(pIn > 0)) return null; const mm = pIn * 25.4; return mm >= r[0] - 1e-6 && mm <= r[1] + 1e-6; };

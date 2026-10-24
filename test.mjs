@@ -170,3 +170,6 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   assert.equal(tapTypeOf({ series: 'x', type: 'HSS-E machine tap; flute hand/angle R40°; lead DIN 2197 form C' }), 'flute');
   assert.equal(tapTypeOf({ series: 'InnoForm roll tap' }), 'form'); assert.equal(tapTypeOf({ series: 'List 16250', type: 'FORMING HSS-Co' }), 'form'); assert.equal(tapTypeOf({ series: 'Fluteless thread forming tap' }), 'form');
   console.log('ME10 #1 tap type tests pass'); }
+{ const { pitchCovers } = await import('./calc.js');
+  assert.equal(pitchCovers({ label: 'P1 … — WMP22G, pitch 1,5–5,0 mm' }, 1 / 13), true); assert.equal(pitchCovers({ label: 'P1 … pitch 0,5–1,25 mm' }, 1 / 13), false); assert.equal(pitchCovers({ label: 'x' }, 1 / 13), null);
+  console.log('ME10 #3 pitch range tests pass'); }
