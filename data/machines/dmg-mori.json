@@ -1,0 +1,53 @@
+{
+ "schema": 1,
+ "builder": "DMG Mori",
+ "models": [
+  {
+   "model": "DMU 50 3rd Gen",
+   "type": "mill",
+   "spindles": [
+    {
+     "option": "speedMASTER 15000 std",
+     "rpm": 15000,
+     "taper": "SK40 / HSK-A63",
+     "kw_peak": 21,
+     "kw_cont": 16,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 111,
+     "rating_note": "40% / 100% duty"
+    },
+    {
+     "option": "speedMASTER 15000 power",
+     "rpm": 15000,
+     "taper": "SK40 / HSK-A63",
+     "kw_peak": 46,
+     "kw_cont": 30,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 200,
+     "rating_note": null
+    },
+    {
+     "option": "speedMASTER 20000",
+     "rpm": 20000,
+     "taper": "SK40 / HSK-A63",
+     "kw_peak": 35,
+     "kw_cont": 25,
+     "hp_peak": null,
+     "hp_cont": null,
+     "torque_nm": 130,
+     "rating_note": null
+    }
+   ],
+   "rapid_ipm": null,
+   "max_thread_ipm": null,
+   "live_tool": null,
+   "source": {
+    "url": "https://us.dmgmori.com/products/machines/milling/5-axis-milling/dmu/dmu-50",
+    "title": "DMG MORI DMU 50 3rd Generation",
+    "accessed": "2026-10-24"
+   }
+  }
+ ]
+}
