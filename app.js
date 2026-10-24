@@ -318,7 +318,7 @@ $('unit').onclick = () => { const KS = [...LEN, 'sfm', 'fpt'], x = Object.fromEn
   KS.forEach(k => setIn(k, x[k])); $('aeU').options[1].text = $('apU').options[1].text = UL(); showEng(); $('sfmLbl').firstChild.textContent = metric ? 'Speed (m/min)' : 'SFM';
   $('feedLbl').firstChild.textContent = $('feedLbl').firstChild.textContent.replace(/\b(in|mm)\//, UL() + '/').replace(/\((in|mm)\)/, `(${UL()})`); $('unit').textContent = metric ? 'mm' : 'inch'; document.querySelectorAll('.u').forEach(e => e.textContent = `(${UL()})`);
   $('dLbl').firstChild.textContent = $('dLbl').firstChild.textContent.replace(/\((in|mm)\)/, `(${UL()})`); run(); };
-$('matPick').onchange = () => { TUSER = false; const [i, m] = $('matPick').value.split(':'); $('iso').value = i; $('mat').value = m ?? ''; fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillTool; $('tq').oninput = fillTool; $('cq').oninput = fillCond; $('tool').onchange = () => { TUSER = true; GUSER = false; $('cq').value = ''; fillGrade(''); }; $('grade').onchange = () => { GUSER = true; fillGrade(); }; $('mach').onchange = applyMachine;
+$('matPick').onchange = () => { TUSER = false; const [i, m] = $('matPick').value.split(':'); $('iso').value = i; $('mat').value = m ?? ''; fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillTool; $('tq').oninput = fillTool; $('cq').oninput = fillCond; $('tool').onchange = () => { TUSER = true; GUSER = false; $('cq').value = ''; fillGrade(''); }; $('grade').onchange = () => { GUSER = true; fillGrade(); updateFindLink(); }; $('mach').onchange = applyMachine;
 $('cond').onchange = () => { fill(); recent(); }; $('cool').onchange = () => { if (mode === 'drill') { const k = $('tool').value; if (!TUSER) $('tool').value = ''; fillTool(); if ($('tool').value === k) fill(); } else fill(); }; $('thr').onchange = fillBrand; $('d').onchange = () => { TUSER = false; if (mode === 'mill') showEng(); if (mode === 'drill') { const k = $('tool').value; fillTool(); if ($('tool').value === k) return fill(); return; } fill(); };
 ['ae', 'aeU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ae') ENG.ae = 'yours'; readEng(); }));
 ['ap', 'apU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ap') ENG.ap = 'yours'; readEng(); }));
@@ -349,19 +349,30 @@ function updateFindLink() {
   const brand = $('brand').value || (label.split(' — ')[0] || '').trim();
   const series = label.includes(' — ') ? label.split(' — ').slice(1).join(' — ') : label;
   const parts = [brand, series];
+  // Grade / coating from the Grade select
+  const gSel = $('grade');
+  if (gSel && !gSel.hidden && gSel.selectedIndex >= 0) {
+    const gText = (gSel.options[gSel.selectedIndex].textContent || '').replace(/ · No mfr data.*$/, '').trim();
+    if (gText && gText !== 'Any') parts.push(gText);
+  }
+  // Size
   if (mode === 'tap') {
     const thr = threads.threads[$('thr').value];
-    if (thr?.name) parts.push(thr.name, 'tap');
+    if (thr?.name) parts.push(thr.name);
     else {
       const d = $('d').value;
-      if (d) parts.push(d + (metric ? 'mm' : 'in'), 'tap');
+      if (d) parts.push(d + (metric ? 'mm' : 'in'));
     }
+    parts.push('tap');
   } else {
     const d = $('d').value;
     if (d) parts.push(d + (metric ? 'mm' : '"'));
+    const z = +$('z').value;
+    if (z > 0 && (mode === 'mill' || mode === 'bore')) parts.push(z + ' flute');
     if (mode === 'mill') parts.push('end mill');
     else if (mode === 'drill') parts.push('drill');
-    else if (mode === 'bore') parts.push('boring');
+    else if (mode === 'bore') parts.push('boring bar');
+    else if (mode === 'turn') parts.push('insert');
   }
   const q = encodeURIComponent(parts.filter(Boolean).join(' ').replace(/\s+/g, ' ').trim());
   a.href = 'https://www.mscdirect.com/browse/tn?searchterm=' + q;
