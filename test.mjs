@@ -181,3 +181,7 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   assert.equal(distinctName('Iscar — PENTA inserts', { series: 'PENTA inserts (p.593)', ins: ['PENTA D22N200J020', 12] }, true), 'Iscar — PENTA inserts · p.593 · D22N200J020 +11');
   assert.equal(distinctName('X', { series: 'X' }, false), 'X');
   console.log('ME10 #5 distinct name tests pass'); }
+{ const { lowEnd, pick } = await import('./calc.js');
+  const r = lowEnd(pick({ min: 0.05, max: 0.16 })); assert.equal(r.def, 0.05); assert.match(r.basis, /^LOW END of manufacturer range/);
+  assert.equal(lowEnd(pick({ min: 1, max: 3, start: 2 })).def, 2);
+  console.log('ME10 #7 low end tests pass'); }

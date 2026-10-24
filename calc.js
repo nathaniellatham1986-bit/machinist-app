@@ -163,3 +163,5 @@ export const pitchCovers = (c, pIn) => { const r = pitchRangeOf(c); if (!r || !(
 export const distinctName = (name, t, dup) => { if (!dup) return name; const pg = (String(t.series).match(/\((p\.\s*\d+)\)/) ?? [])[1];
   const ins = t.ins ? `${String(t.ins[0]).replace(/^\S+\s+(?=\S)/, m => String(t.series).startsWith(m.trim()) ? '' : m)}${t.ins[1] > 1 ? ` +${t.ins[1] - 1}` : ''}` : null;
   return [name, pg, ins].filter(Boolean).join(' · '); };
+// Part/Groove records that print only a range: start at the LOW end (labeled). Other modes keep the labeled midpoint.
+export const lowEnd = r => r && /^MIDPOINT/.test(r.basis ?? '') && r.min != null ? { ...r, def: r.min, basis: 'LOW END of manufacturer range (no stated start)' } : r;
