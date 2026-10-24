@@ -136,3 +136,5 @@ export const sizeRange = t => { const v = [];
     if (f.bands) f.bands.forEach(([a, b]) => v.push(a * k, b * k)); }
   const ok = v.filter(x => x > 0 && isFinite(x)); return ok.length ? [Math.min(...ok), Math.max(...ok)] : null; };
 export const inRange = (r, d) => !r || !(d > 0) ? null : d >= r[0] - 1e-6 && d <= r[1] + 1e-6;
+// Tapered pipe threads (NPT/NPTF/BSPT/Rc). A taper tap only cuts a taper thread and vice versa.
+export const isTaperThread = s => /\bNPTF?\b|\bBSPT\b|\bRc ?\d|\bpipe taper/i.test(s ?? '');

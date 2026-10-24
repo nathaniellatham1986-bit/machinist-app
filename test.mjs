@@ -147,3 +147,6 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   const r = sizeRange(t); assert.ok(Math.abs(r[0] - 0.118) < 1e-3 && Math.abs(r[1] - 0.787) < 1e-3);
   assert.equal(inRange(r, 0.5), true); assert.equal(inRange(r, 1), false); assert.equal(inRange(null, 1), null);
   console.log('ME5 drill size range tests pass'); }
+{ const { isTaperThread } = await import('./calc.js');
+  assert.equal(isTaperThread('Rekord 2-KEG R15-VA NPT spiral flute'), true); assert.equal(isTaperThread('1/4-18 NPT'), true); assert.equal(isTaperThread('1/4-20 UNC'), false); assert.equal(isTaperThread('M8x1.25'), false);
+  console.log('ME6 NPT tap tests pass'); }
