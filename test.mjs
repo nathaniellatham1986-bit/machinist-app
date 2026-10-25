@@ -386,3 +386,8 @@ console.log('estimate tests ok');
   assert.equal(noDataWhy({ feedIsos: ['*'] }, '4140-ann', 'P'), 'feed only, no speed printed');
   assert.equal(noDataWhy({ speedIsos: ['P'], nm: ['4140-ann'] }, '4140-ann', 'P'), 'no data for this material');
   assert.equal(noDataWhy({}, 'x', 'P'), 'no data for this material'); }
+// ME1: Dormer S116 has no M data at 0.5 in (published 12 and 14 mm only), so it must never be the auto-picked default there.
+{ const { dataAt } = await import('./calc.js'); const fs = await import('node:fs'); const ix = JSON.parse(fs.readFileSync('data/index.json'));
+  const t = ix.files.find(f => f.file === 'dormer-pramet-mill-endmills.json').tools.find(t => t.series === 'Dormer S116');
+  assert.equal(dataAt(t, 0.5, 'M'), false); assert.equal(dataAt(t, 0.4724, 'M'), true);
+  const app = fs.readFileSync('app.js', 'utf8'); assert.ok(/bad = t => [^;]*noAt\(t\)/.test(app)); }
