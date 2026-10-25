@@ -21,3 +21,4 @@ One commit per item. After each: validate.mjs, test.mjs, validate-machines.mjs, 
 | # | Commit | Result | Note |
 |---|--------|--------|------|
 | 1 | (see git) | PASS | Brand change re-fills Type; kindOf phrase rules. Mill>Sandvik: End mill/Insert only. |
+| 2 | (see git) | PASS | Out-of-range / no-data tools never auto-picked (mill+drill; mill now has dr/dd in index). Brands without data grayed 'no data for this material'. |

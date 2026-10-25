@@ -95,7 +95,8 @@ const geo = geoName;
 const PG = () => mode === 'turn' && /Groove|Part/.test($('top').value), PART = () => mode === 'turn' && /Part/.test($('top').value);
 const short = s => s.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim().slice(0, 48);
 function fillBrand() { const cur = $('brand').value; $('brand').length = 0; $('brand').add(new Option('Pick a brand', ''));
-  [...new Set(inMode().map(t => t.brand))].sort().forEach(b => $('brand').add(new Option(b, b)));
+  const ok = new Set(inMode().map(t => t.brand)); [...ok].sort().forEach(b => $('brand').add(new Option(b, b)));
+  if (matSel() || $('iso').value) [...new Set(SUM.filter(t => t.mode === mode && !ok.has(t.brand)).map(t => t.brand))].sort().forEach(b => { const o = new Option(`${b} — no data for this material`, b); o.disabled = true; o.style.color = '#777'; $('brand').add(o); });
   $('brand').value = [...$('brand').options].some(o => o.value === cur) ? cur : ''; return fillKind(); }
 function fillKind() { const cur = $('kind').value, ks = [...new Set(inMode().filter(t => !$('brand').value || t.brand === $('brand').value).map(kindOf))].sort();
   $('kind').length = 0; if (ks.length > 1) $('kind').add(new Option('All types', '')); ks.forEach(k => $('kind').add(new Option(k, k)));
@@ -108,18 +109,21 @@ function fillTool() { const cur = $('tool').value, b = $('brand').value, words =
   const kd = $('kind').value, hits = inMode().filter(t => (!b || t.brand === b) && (!kd || kindOf(t) === kd) && words.every(w => `${t.brand} ${t.series} ${t.type ?? ''}`.toLowerCase().includes(w)));
   const iso = matSel()?.iso || $('iso').value, rank = t => { const f = t.fullIsos || [], ok = i => !iso || i === iso || i === '*';
     const gen = !iso && mode !== 'tap' ? (f.includes('P') ? 0 : .25) + (mode === 'turn' && !(t.pFeed >= .012 && t.pFeed <= .025) ? .2 : 0) : 0; return gen + (f.some(x => !x.includes('~') && ok(x)) ? 0 : f.some(x => ok(x.replace('~', ''))) ? 1 : 2); };
-  const r2 = t => rank(t) + (/parting|groov|thread/i.test(t.series + (t.type ?? '')) ? .5 : 0); const dD = mode === 'drill' ? inV('d') : 0, out = t => inRange(t.dr, dD) === false;
+  const r2 = t => rank(t) + (/parting|groov|thread/i.test(t.series + (t.type ?? '')) ? .5 : 0); const dD = mode === 'drill' || mode === 'mill' ? inV('d') : 0, out = t => inRange(t.dr, dD) === false;
   const GEN = /\b[CWDVTS]NMG/i, r2b = t => r2(t) + (mode === 'turn' && $('top').value === 'Turn' && !GEN.test(`${t.series} ${t.type ?? ''}`) ? .3 : 0);
   const r2c = t => r2b(t) + (mode === 'turn' && $('top').value === 'Groove' && /face/i.test(`${t.series} ${t.type ?? ''}`) ? .3 : 0) + (/Groove|Turn/.test($('top').value) && isMFDrill(t) ? .9 : 0);
   const blind = mode === 'tap' && $('hole').value === 'blind', bl = t => !blind ? 0 : { flute: 0, form: 0, '': 1 }[tapTypeOf(t)] ?? 3;
   const r3 = t => r2c(t) + bl(t) + (mode === 'drill' ? drillRank(t, $('cool').value) : 0) + (matSel()?.id === 'ss303' && !t.only303 ? .1 : 0) + (dD ? 20 * drillTier(t, dD, iso) : 0); hits.sort((x, y) => r3(x) - r3(y));
+  const bad = t => dD && out(t) || !!iso && rank(t) >= 2; // never auto-picked
   // Grade/coating split: tools that differ only by grade collapse into one geometry entry; the grade picks the member.
   GROUPS = {}; const seen = {}; const list = [];
   for (const t of hits) { const g = geo(t), k = t.grade ? `${t.brand}|${g}` : t.key;
     if (seen[k]) { GROUPS[seen[k]].push(t.key); continue; } seen[k] = t.key; GROUPS[t.key] = [t.key]; list.push([t, g]); }
   const nm = ([t, g]) => b ? g : `${t.brand} — ${g}`, cnt = {}; list.forEach(x => cnt[nm(x)] = (cnt[nm(x)] || 0) + 1);
-  $('tool').length = 0; list.slice(0, MAXOPT).forEach(([t, g]) => $('tool').add(new Option(distinctName(nm([t, g]), t, cnt[nm([t, g])] > 1) + (dD && out(t) ? ' — outside mfr size range' : '') + (blind && tapTypeOf(t) === 'point' ? ' — spiral point pushes chips ahead, not for blind holes' : ''), t.key)));
+  $('tool').length = 0; list.slice(0, MAXOPT).forEach(([t, g]) => $('tool').add(new Option(distinctName(nm([t, g]), t, cnt[nm([t, g])] > 1) + (dD && out(t) ? ' — outside mfr size range' : '') + (iso && rank(t) >= 2 ? ' — no data for this material' : '') + (blind && tapTypeOf(t) === 'point' ? ' — spiral point pushes chips ahead, not for blind holes' : ''), t.key)));
   $('tn').textContent = !hits.length && mode === 'turn' && $('top').value === 'Face' ? '(none: no record says facing)' : hits.length > MAXOPT ? `(${MAXOPT} of ${hits.length}; refine search)` : `(${hits.length})`;
+  if (list.length && bad(list[0][0])) { $('tool').add(new Option(`Pick a tool — none covers this Ø with data for this material`, ''), 0); $('tool').value = ''; }
+  const curT = SUM.find(x => x.key === cur); if (curT && !TUSER && bad(curT)) { $('tool').value = $('tool').options[0].value; updateFindLink(); return fillGrade(); }
   if (cur && !GROUPS[cur]) { const g = Object.keys(GROUPS).find(k => GROUPS[k].includes(cur)); if (g) $('tool').value = g; } else if ([...$('tool').options].some(o => o.value === cur)) $('tool').value = cur; updateFindLink(); return fillGrade(); }
 async function fillGrade(keep) { const keys = GROUPS[$('tool').value] ?? ($('tool').value ? [$('tool').value] : []); await Promise.all(keys.map(ensure));
   const cur = keep ?? (GUSER ? $('grade').value : ''), L = gradeList(keys.map(k => ({ key: k, tool: toolBy(k) })).filter(m => m.tool), c => isoOk(c) && !!hasData(c));
@@ -385,7 +389,7 @@ $('unit').onclick = () => { const KS = [...LEN, 'sfm', 'fpt'], x = Object.fromEn
   $('feedLbl').firstChild.textContent = $('feedLbl').firstChild.textContent.replace(/\b(in|mm)\//, UL() + '/').replace(/\((in|mm)\)/, `(${UL()})`); $('unit').textContent = metric ? 'mm' : 'inch'; document.querySelectorAll('.u').forEach(e => e.textContent = `(${UL()})`);
   $('dLbl').firstChild.textContent = $('dLbl').firstChild.textContent.replace(/\((in|mm)\)/, `(${UL()})`); run(); };
 $('matPick').onchange = () => { TUSER = false; const [i, m] = $('matPick').value.split(':'); $('iso').value = i; $('mat').value = m ?? ''; fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillKind; $('tq').oninput = fillTool; $('cq').oninput = fillCond; $('tool').onchange = () => { TUSER = true; GUSER = false; $('cq').value = ''; fillGrade(''); }; $('grade').onchange = () => { GUSER = true; fillGrade(); updateFindLink(); }; $('mach').onchange = applyMachine;
-$('cond').onchange = () => { fill(); recent(); }; $('cool').onchange = () => { if (mode === 'drill') { const k = $('tool').value; if (!TUSER) $('tool').value = ''; fillTool(); if ($('tool').value === k) fill(); } else fill(); }; $('thr').onchange = fillBrand; $('d').onchange = () => { TUSER = false; if (mode === 'mill') showEng(); if (mode === 'drill') { const k = $('tool').value; fillTool(); if ($('tool').value === k) return fill(); return; } fill(); };
+$('cond').onchange = () => { fill(); recent(); }; $('cool').onchange = () => { if (mode === 'drill') { const k = $('tool').value; if (!TUSER) $('tool').value = ''; fillTool(); if ($('tool').value === k) fill(); } else fill(); }; $('thr').onchange = fillBrand; $('d').onchange = () => { TUSER = false; if (mode === 'mill') showEng(); if (mode === 'drill' || mode === 'mill') { const k = $('tool').value; fillTool(); if ($('tool').value === k) return fill(); return; } fill(); };
 ['ae', 'aeU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ae') ENG.ae = 'yours'; readEng(); }));
 ['ap', 'apU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ap') ENG.ap = 'yours'; readEng(); }));
 $('apT').addEventListener('input', () => { ENG.ap = 'yours'; engTags(); });
