@@ -286,7 +286,12 @@ const ovHtml = o => `<span class="${o.state === 'out' ? 'warn' : 'adjw'}">${o.la
 const ovCls = o => o.state === 'out' ? 'mine' : o.state === 'within' ? 'adj' : o.state === 'est' ? 'est' : '';
 // Blue ESTIMATE body: label + basis; tapping it lists each source record (brand, series, coating, value, catalog/edition).
 const estHtml = (e, dp, u) => `<details class="estd"><summary><span class="estw">ESTIMATE, not manufacturer data</span><br>from ${e.n} published ${esc(e.sources[0].brand)} tools (same type, material group, size range); lowest low end used ▸</summary>${e.sources.map(x => `<div class="estrow">${esc(x.brand)} ${esc(x.series)}${x.coating ? ' · ' + esc(x.coating) : ''} · <b>${u(x.value)}</b>${x.at ? ` at Ø${x.at.toFixed(4)} in` : ''} · ${esc(x.label)} · ${esc(x.source)}${x.url ? ` · <a style="color:#9cf" href="${x.url}" target="_blank" rel="noopener">source</a>` : ''}</div>`).join('')}</details>`;
+// Review3 #7: Groove/Part need the real stock Ø before any RPM is shown.
+const GP = () => mode === 'turn' && /Groove|Part/.test($('top').value);
+function stockAsk() { const g = GP(); $('dLbl').firstChild.textContent = (mode === 'turn' ? (g ? 'Stock dia' : 'Start dia') : $('dLbl').firstChild.textContent.split(' (')[0]) + ` (${UL()})`; $('d').placeholder = g ? 'enter real stock Ø' : ''; if (g && !TUSER_D) $('d').value = ''; }
+let TUSER_D = false;
 function run() { updateFindLink(); favMark();
+  if (GP() && !(inV('d') > 0)) { $('cards').innerHTML = `<div class="out"><span class="warn">Enter the real stock diameter first — RPM for ${$('top').value.toLowerCase()} comes from it.</span></div>`; $('bar').innerHTML = '<small>Enter stock Ø</small>'; return; }
   if (!curTool()) { const m = needMsg() ? needMsg() + ' to see manufacturer numbers.' : `${$('brand').value} has no ${mode} tool with data for this material and these filters.`;
     $('cards').innerHTML = `<div class="out"><span class="warn">${m}</span></div>`; $('bar').innerHTML = `<small>${m}</small>`; return; } if (PART()) $('fD').value = '0'; if (mode === 'mill') readEng();
   const v = inV, tag = k => mine(k) && $(k).value ? ' <span class="tag warn">YOUR VALUE, NOT MANUFACTURER</span>' : '';
@@ -360,7 +365,7 @@ function run() { updateFindLink(); favMark();
     $('faceTurn').onclick = () => { $('top').value = 'Turn'; fillBrand(); }; }
   $('out').hidden = true;
   $('bar').innerHTML = BAR.length ? BAR.map(([k, x]) => `<span>${x} <small>${k}</small></span>`).join('') + `<small>${t ? (mode === 'tap' ? geo(t) : short(t.series)) : ''}</small>` + (usesEst ? '<small class="estw">ESTIMATE</small>' : '') : '<small>No manufacturer data for this combo</small>';
-  if (!$('mach').value) $('bar').innerHTML += '<span class="warn" style="font-size:15px;width:100%">⚠ Pick a machine for RPM limits</span>';
+  if (!$('mach').value) $('bar').innerHTML += '<span class="warn" style="font-size:15px;width:100%">No machine selected — RPM not limited</span>';
 }
 $('cards').onclick = e => { if (e.target.closest('.estd')) return; const rs = e.target.closest('[data-reset]')?.dataset.reset; if (rs) { setIn(rs, defs[rs]); return run(); }
   const ov = e.target.closest('[data-ov]'); if (ov && !ov.querySelector('input')) { const f = ov.dataset.ov, box = ov.querySelector('.v'), x = document.createElement('input');
@@ -389,14 +394,14 @@ $('recall').onchange = async () => { const k = $('recall').value; if (!k) return
   for (const k2 of FIELDS) if (!['iso', 'mat', 'brand', 'tool', 'sfm', 'fpt'].includes(k2)) $(k2).value = s.v[k2];
   fill(); $('sfm').value = s.v.sfm; $('fpt').value = s.v.fpt; run(); $('recall').value = ''; };
 document.querySelectorAll('[data-mode]').forEach(b => { b.onclick = () => setMode(b.dataset.mode); b.hidden = !SUM.some(t => t.mode === b.dataset.mode); });
-['top', 'tapT'].forEach(k => $(k).onchange = fillBrand); $('kind').onchange = fillTool; ['pass', 'cut', 'nose', 'cb'].forEach(k => $(k).onchange = fillCond); $('pass').onchange = () => mode === 'turn' ? fillTool() : fillCond();
+['top', 'tapT'].forEach(k => $(k).onchange = fillBrand); $('top').addEventListener('change', stockAsk); $('kind').onchange = fillTool; ['pass', 'cut', 'nose', 'cb'].forEach(k => $(k).onchange = fillCond); $('pass').onchange = () => mode === 'turn' ? fillTool() : fillCond();
 ['fD', 'hd', 'bd', 'so'].forEach(k => $(k).oninput = run); $('tpi').oninput = $('pitchU').onchange = () => fillCond(); $('shk').onchange = run; $('hole').onchange = () => { const k = $('tool').value; fillTool(); if ($('tool').value === k) fill(); };
 $('unit').onclick = () => { const KS = [...LEN, 'sfm', 'fpt'], x = Object.fromEntries(KS.map(k => [k, $(k).value === '' ? '' : inV(k)])); metric = !metric; LS.set('metric', metric);
   KS.forEach(k => setIn(k, x[k])); $('aeU').options[1].text = $('apU').options[1].text = UL(); showEng(); $('sfmLbl').firstChild.textContent = metric ? 'Speed (m/min)' : 'SFM';
   $('feedLbl').firstChild.textContent = $('feedLbl').firstChild.textContent.replace(/\b(in|mm)\//, UL() + '/').replace(/\((in|mm)\)/, `(${UL()})`); $('unit').textContent = metric ? 'mm' : 'inch'; document.querySelectorAll('.u').forEach(e => e.textContent = `(${UL()})`);
   $('dLbl').firstChild.textContent = $('dLbl').firstChild.textContent.replace(/\((in|mm)\)/, `(${UL()})`); run(); };
 $('matPick').onchange = () => { TUSER = false; const [i, m] = $('matPick').value.split(':'); $('iso').value = i; $('mat').value = m ?? ''; fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillKind; $('tq').oninput = fillTool; $('cq').oninput = fillCond; $('tool').onchange = () => { TUSER = true; GUSER = false; $('cq').value = ''; fillGrade(''); }; $('grade').onchange = () => { GUSER = true; fillGrade(); updateFindLink(); }; $('mach').onchange = applyMachine;
-$('cond').onchange = () => { fill(); recent(); }; $('cool').onchange = () => { if (mode === 'drill') { const k = $('tool').value; if (!TUSER) $('tool').value = ''; fillTool(); if ($('tool').value === k) fill(); } else fill(); }; $('thr').onchange = fillBrand; $('d').onchange = () => { TUSER = false; if (mode === 'mill') showEng(); if (mode === 'drill' || mode === 'mill') { const k = $('tool').value; fillTool(); if ($('tool').value === k) return fill(); return; } fill(); };
+$('cond').onchange = () => { fill(); recent(); }; $('cool').onchange = () => { if (mode === 'drill') { const k = $('tool').value; if (!TUSER) $('tool').value = ''; fillTool(); if ($('tool').value === k) fill(); } else fill(); }; $('thr').onchange = fillBrand; $('d').onchange = () => { TUSER = false; TUSER_D = inV('d') > 0; if (mode === 'mill') showEng(); if (mode === 'drill' || mode === 'mill') { const k = $('tool').value; fillTool(); if ($('tool').value === k) return fill(); return; } fill(); };
 ['ae', 'aeU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ae') ENG.ae = 'yours'; readEng(); }));
 ['ap', 'apU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ap') ENG.ap = 'yours'; readEng(); }));
 $('apT').addEventListener('input', () => { ENG.ap = 'yours'; engTags(); });
