@@ -1,7 +1,7 @@
 // ESTIMATES (DERIVED, NOT MANUFACTURER DATA). Pure. Built at runtime from the SAME maker's other published records; never stored in data files.
 // Rules (agreed with Nathaniel, App Build chat 2026-10-25): same brand only; same tool kind and mode; same material (303/304 never mixed);
 // published size must cover the entered Ø or sit within 25% of it; stated coolant must match; >=2 distinct source tools; LOWEST low end used (no averaging).
-import { pick, matchMat, coolModes, shared303, kindOf, rowDia, sizeRange, gradesOf, brandName } from './calc.js';
+import { pick, matchMat, coolModes, shared303, kindOf, rowDia, sizeRange, gradesOf, brandName, endGeom, ownNames } from './calc.js';
 export const ESTIMATES_ON = true; // kill switch
 export const EST_MIN = 2, EST_BAND = 0.25, EST_MODES = ['mill', 'drill', 'tap'];
 const toIn = (v, u) => (u === 'mm' ? v / 25.4 : v), SPK = u => (u === 'm/min' ? 3.2808 : 1);
@@ -23,12 +23,14 @@ function feedLow(c, t, d) { const f = c.feed; if (!f) return null; const u = toI
   return null; }
 const srcText = s => [s.catalog, s.edition, s.page ? 'p.' + s.page : ''].filter(Boolean).join(' · ');
 // target: {brand, mode, series, type, grade}; cands: [{key, tool}] (full tools); mat: material object; d (in); cool; need: {sfm, fpt}
-export function estimate({ target, targetKey, cands, mat, d, cool, need = { sfm: true, fpt: true }, on = ESTIMATES_ON }) {
+export function estimate({ target, targetTool, targetKey, cands, geom = true, own = true, mat, d, cool, need = { sfm: true, fpt: true }, on = ESTIMATES_ON }) {
   const out = { sfm: null, fpt: null }; if (!on || !target || !mat || !(d > 0) || !EST_MODES.includes(target.mode)) return out;
+  if (own && targetTool && !ownNames(targetTool, mat)) return out; // B: only materials this tool's own records name
+  const eg = target.mode === 'mill' ? endGeom(target) : null; if (geom && target.mode === 'mill' && !eg) return out; // A: unknown end geometry → no estimate
   const kind = kindOf(target), coat = String(target.grade ?? target.coating ?? '').toLowerCase(), fk = target.mode === 'mill' ? 'fz' : 'ipr';
   const rows = { sfm: [], fpt: [] };
   for (const { key, tool: t } of cands) {
-    if (!t || key === targetKey || brandName(t.brand) !== brandName(target.brand) || t.mode !== target.mode || kindOf(t) !== kind) continue;
+    if (!t || key === targetKey || brandName(t.brand) !== brandName(target.brand) || t.mode !== target.mode || kindOf(t) !== kind || geom && eg && endGeom(t) !== eg) continue;
     for (const c of t.conditions) {
       if (c.status === 'shop-proven' || !c.source || !['catalog', 'label'].includes(c.source.kind)) continue;
       const mm = matOk(mat, c); if (!mm) continue;

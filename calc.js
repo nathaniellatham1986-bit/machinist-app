@@ -262,3 +262,11 @@ export function classifyEng(v, p, eps = 1e-4, fmt = x => String(x)) {
   if (v <= p.max + eps) return r('within', null, `Adjusted, within mfr max ${fmt(p.max)}`);
   return r('out', 'above', 'YOUR VALUE, NOT MANUFACTURER', `above mfr max (${fmt(p.max)})`);
 }
+
+// End geometry of a milling tool from printed series/type text: 'ball' | 'bull' (corner radius) | 'square' | null (unknown or more than one named).
+export const endGeom = t => { const s = `${t?.series ?? ''} ${t?.type ?? ''}`, g = [/ball/i.test(s) && 'ball', /corner.?rad|bull.?nose|\bradius\b|toroid/i.test(s) && 'bull', /square|flat.?end/i.test(s) && 'square'].filter(Boolean); return g.length === 1 ? g[0] : null; };
+// The tool's own records must name this material (same ISO group or the material by name) before any estimate is offered.
+// Materials with a class rule (alloy steel, tool steel, Ti alloy, nickel alloy, ...) need a row naming that class (e.g. Ti rows never qualify Inconel 718); others need a row in the same ISO group.
+export const ownNames = (t, m) => { const k = MAT_CLASS.find(([r]) => r.test(m?.id ?? ''));
+  return !!t?.conditions?.some(c => { if (matchMat(m, c) === 'named') return true; if (!c.iso || c.iso === '*' || c.iso !== m.iso || matBad(m, c)) return false;
+    const s = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' '); return !k || k[1].test(s) || !!k[3]?.test(s); }); };

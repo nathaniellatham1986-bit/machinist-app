@@ -239,7 +239,7 @@ function fill() { setupSum();
   OUTROW = mode === 'drill' && c && rowExcludes(c, d); if (OUTROW) { sp = null; fd = null; } // never borrow an out-of-size printed row
   if (shop) { if (sp) sp.basis = 'SHOP-PROVEN value, not manufacturer'; if (fd) fd.basis = 'SHOP-PROVEN value, not manufacturer'; }
   ESTTRY = false; if (ESTIMATES_ON && EST_MODES.includes(mode) && t && matSel() && !shop && (!sp || (!fd && mode !== 'tap')) && !((mode === 'mill' || mode === 'drill') && printedAt(c, d))) {
-    ESTTRY = true; const s = SUM.find(x => x.key === realKey()), e = estimate({ target: { ...s, mode }, targetKey: s?.key, cands: estCands().map(x => ({ key: x.key, tool: toolBy(x.key) })).filter(x => x.tool), mat: matSel(), d, cool, need: { sfm: !sp, fpt: !fd && mode !== 'tap' } });
+    ESTTRY = true; const s = SUM.find(x => x.key === realKey()), e = estimate({ target: { ...s, mode }, targetTool: t, targetKey: s?.key, cands: estCands().map(x => ({ key: x.key, tool: toolBy(x.key) })).filter(x => x.tool), mat: matSel(), d, cool, need: { sfm: !sp, fpt: !fd && mode !== 'tap' } });
     if (!sp && e.sfm) sp = { def: e.sfm.def, min: null, max: null, est: e.sfm, basis: 'ESTIMATE' }; if (!fd && e.fpt) fd = { def: e.fpt.def, min: null, max: null, est: e.fpt, basis: 'ESTIMATE' }; }
   SP = sp; FD = fd; defs = { sfm: sp?.def ?? null, fpt: mode === 'tap' ? inV('fpt') : fd?.def ?? null };
   prefillEng(t, c, d);

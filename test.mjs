@@ -287,8 +287,8 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
 { const { estimate } = await import('./estimate.js'); const M = id => IDX.materials.find(m => m.id === id);
   const src = { kind: 'catalog', manufacturer: 'A', catalog: 'Cat', edition: '2024', url: 'https://x' };
   const cond = (o = {}) => ({ label: '4140', iso: 'P', materials: ['4140-ann'], status: 'verified', coolant: 'flood', sfm: { min: 300, max: 400, unit: 'ft/min' }, feed: { kind: 'fz', unit: 'in', byDiameter: { '0.5': { min: .002, max: .003 } } }, source: src, ...o });
-  const tool = (brand, o = {}, c = {}) => ({ mode: 'mill', brand, series: 'S' + Math.random(), type: 'end mill', diameters_in: [.25, .75], conditions: [cond(c)], ...o });
-  const target = { brand: 'A', mode: 'mill', series: 'T', type: 'end mill' }, run = (cands, o = {}) => estimate({ target, targetKey: 'T', cands: cands.map((tool, i) => ({ key: 'k' + i, tool })), mat: M('4140-ann'), d: .5, cool: 'flood', ...o });
+  const tool = (brand, o = {}, c = {}) => ({ mode: 'mill', brand, series: 'S' + Math.random(), type: 'square end mill', diameters_in: [.25, .75], conditions: [cond(c)], ...o });
+  const target = { brand: 'A', mode: 'mill', series: 'T', type: 'square end mill' }, run = (cands, o = {}) => estimate({ target, targetKey: 'T', cands: cands.map((tool, i) => ({ key: 'k' + i, tool })), mat: M('4140-ann'), d: .5, cool: 'flood', ...o });
   // needs >=2 same-maker tools; null with 0 or 1
   assert.equal(run([]).sfm, null); assert.equal(run([tool('A')]).sfm, null); assert.equal(run([tool('A')]).fpt, null);
   const two = run([tool('A'), tool('A', {}, { sfm: { min: 250, max: 500, unit: 'ft/min' }, feed: { kind: 'fz', unit: 'in', byDiameter: { '0.5': { min: .0015, max: .004 } } } })]);
@@ -323,3 +323,18 @@ console.log('estimate tests ok');
   assert.equal(matPref('ti64', { label: 'Titanium Alloy (Ti 3Al-2.5V, Ti 6Al-4V) 21 - 36 HRC' }, g('ti64')), 0);
   console.log('material class tests ok'); }
 { const { nice } = await import('./calc.js'); assert.equal(nice('BTAH'), 'BTAH back-turning holder (Swiss/gang, BTAT insert)'); assert.equal(nice('Superalloys Inconel718, etc. · Grades: SH7025,SH725'), 'Superalloys Inconel718, etc. · grade SH7025 / SH725'); assert.equal(nice('streamjetbar – Standard cutting conditions'), 'streamjetbar'); }
+
+{ // Estimate A: same end geometry only; unknown geometry → none. B: target's own records must name the material.
+  const { estimate } = await import('./estimate.js'); const { endGeom } = await import('./calc.js');
+  assert.equal(endGeom({ series: 'Miniature End Mills - Ball' }), 'ball'); assert.equal(endGeom({ series: 'Finishers - Corner Radius' }), 'bull'); assert.equal(endGeom({ series: 'X - Square' }), 'square');
+  assert.equal(endGeom({ series: 'Square & Corner Radius' }), null); assert.equal(endGeom({ series: 'R217.79-10' }), null);
+  const M = id => JSON.parse(fs.readFileSync('data/materials.json')).materials.find(m => m.id === id);
+  const src = { kind: 'catalog', manufacturer: 'A', catalog: 'Cat' }, c = { label: '4140', iso: 'P', materials: ['4140-ann'], status: 'verified', sfm: { min: 300, max: 400, unit: 'ft/min' }, source: src };
+  const tl = (g, o = {}) => ({ mode: 'mill', brand: 'A', series: 'S ' + g + Math.random(), diameters_in: [.25, .75], conditions: [c], ...o });
+  const r = (tg, cands, extra = {}) => estimate({ target: { brand: 'A', mode: 'mill', series: 'T ' + tg }, targetKey: 'T', cands: cands.map((tool, i) => ({ key: 'k' + i, tool })), mat: M('4140-ann'), d: .5, cool: 'flood', need: { sfm: true, fpt: false }, ...extra }).sfm;
+  assert.ok(r('Ball', [tl('Ball'), tl('Ball')])); assert.equal(r('Ball', [tl('Square'), tl('Square')]), null); assert.equal(r('', [tl('Ball'), tl('Ball')]), null);
+  const own = iso => ({ conditions: [{ label: 'Alloy steel', iso, source: src }] });
+  assert.equal(r('Ball', [tl('Ball'), tl('Ball')], { targetTool: own('N') }), null); assert.ok(r('Ball', [tl('Ball'), tl('Ball')], { targetTool: own('P') }));
+  const ti = { conditions: [{ label: 'S 1.2 Titanium alloys ≤27 HRC (6Al4V)', iso: 'S', source: src }] }, ni = { conditions: [{ label: 'S 2.1 Nickel alloys (Inconel 718)', iso: 'S', source: src }] }, { ownNames } = await import('./calc.js');
+  assert.equal(ownNames(ti, M('in718')), false); assert.equal(ownNames(ni, M('in718')), true); assert.equal(ownNames(ti, M('ti64')), true);
+}
