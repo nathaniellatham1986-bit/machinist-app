@@ -391,3 +391,10 @@ console.log('estimate tests ok');
   const t = ix.files.find(f => f.file === 'dormer-pramet-mill-endmills.json').tools.find(t => t.series === 'Dormer S116');
   assert.equal(dataAt(t, 0.5, 'M'), false); assert.equal(dataAt(t, 0.4724, 'M'), true);
   const app = fs.readFileSync('app.js', 'utf8'); assert.ok(/bad = t => [^;]*noAt\(t\)/.test(app)); }
+// ME2: a tool with several matching rows is listed once in the estimate sources (its lowest row); n equals rows shown.
+{ const { estimate } = await import('./estimate.js'); const M = id => IDX.materials.find(m => m.id === id);
+  const src = { kind: 'catalog', manufacturer: 'A', catalog: 'Cat', url: 'https://x' };
+  const cond = s => ({ label: '4140 ' + s, iso: 'P', materials: ['4140-ann'], status: 'verified', coolant: 'flood', sfm: { min: s, max: s + 100, unit: 'ft/min' }, feed: { kind: 'fz', unit: 'in', byDiameter: { '0.5': { min: .002, max: .003 } } }, source: src });
+  const tool = n => ({ mode: 'mill', brand: 'A', series: n, type: 'square end mill', diameters_in: [.25, .75], conditions: [cond(300), cond(250), cond(350)] });
+  const e = estimate({ target: { brand: 'A', mode: 'mill', series: 'T', type: 'square end mill' }, targetKey: 'T', cands: [{ key: 'a', tool: tool('X') }, { key: 'b', tool: tool('Y') }], mat: M('4140-ann'), d: .5, cool: 'flood' });
+  assert.equal(e.sfm.sources.length, 2); assert.equal(e.sfm.n, 2); assert.equal(e.sfm.def, 250); assert.equal(e.fpt.sources.length, 2); }

@@ -49,5 +49,7 @@ export function estimate({ target, targetTool, targetKey, cands, geom = true, ow
     if (tools(l.filter(x => x.sameCoat)) >= EST_MIN) l = l.filter(x => x.sameCoat); // closest coating first
     if (tools(l) < EST_MIN) continue;
     l = [...l].sort((a, b) => a.value - b.value);
+    // each tool once: l is sorted ascending, so the first row per tool is its lowest
+    { const seen = new Set(); l = l.filter(x => !seen.has(x.key) && seen.add(x.key)); }
     out[k] = { def: l[0].value, n: tools(l), sources: l, d, close: l.some(x => x.close), derived: true, est: true }; }
   return out; }
