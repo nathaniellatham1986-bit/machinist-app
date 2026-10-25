@@ -409,7 +409,7 @@ console.log('estimate tests ok');
   const fs = await import('fs'); const ix = JSON.parse(fs.readFileSync(new URL('./data/index.json', import.meta.url)));
   const ts = ix.files.flatMap(f => f.tools); const m = ts.filter(t => t.mode === 'mill' && t.ps);
   if (m.length < 50 || !m.every(t => t.ps.every((x, i) => x > 0 && (!i || x > t.ps[i - 1])))) throw 'ps missing/unsorted';
-  if (ts.some(t => t.ps && t.mode !== 'mill' && t.mode !== 'drill')) throw 'ps on non mill/drill';
+  if (!ts.some(t => t.ps && t.mode === 'drill')) throw 'ps missing on drills';
   const h = fs.readFileSync(new URL('./index.html', import.meta.url), 'utf8'), a = fs.readFileSync(new URL('./app.js', import.meta.url), 'utf8');
   if (!/id="diaHome"><\/div><div id="diaGrp">/.test(h) || !/id="bkRow"/.test(h) || !/id="tapRow"/.test(h) || !/\$\('diaHome'\)\.after\(g\)/.test(a)) throw 'dia group placement';
   console.log('diaGrp ok');
