@@ -340,3 +340,7 @@ console.log('estimate tests ok');
 }
 { const { sizeTxt } = await import('./estimate.js'); const assert = (await import('node:assert')).default;
   assert.equal(sizeTxt(0.375), '3/8 in'); assert.equal(sizeTxt(1.25), '1 1/4 in'); assert.equal(sizeTxt(0.3937), '0.3937 in'); console.log('D size text tests pass'); }
+{ const { brandUsable } = await import('./calc.js'); const assert = (await import('node:assert')).default; const m = { id: '4140-ann', iso: 'P' };
+  const speedOnly = { mats: [], isos: ['P'], dataIsos: ['P'], fullIsos: [] }, full = { mats: [], isos: ['P'], dataIsos: ['P'], fullIsos: ['P'] }, label = { mats: [], isos: ['*'], dataIsos: ['*'], fullIsos: ['*~'] };
+  assert.equal(brandUsable(speedOnly, m), false); assert.equal(brandUsable(full, m), true); assert.equal(brandUsable(label, m), true); assert.equal(brandUsable(speedOnly, m, false), true);
+  console.log('Iscar brand-has-data consistency tests pass'); }

@@ -270,3 +270,7 @@ export const endGeom = t => { const s = `${t?.series ?? ''} ${t?.type ?? ''}`, g
 export const ownNames = (t, m) => { const k = MAT_CLASS.find(([r]) => r.test(m?.id ?? ''));
   return !!t?.conditions?.some(c => { if (matchMat(m, c) === 'named') return true; if (!c.iso || c.iso === '*' || c.iso !== m.iso || matBad(m, c)) return false;
     const s = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' '); return !k || k[1].test(s) || !!k[3]?.test(s); }); };
+// A tool counts as "has data" for a material only when one manufacturer record carries both SFM and feed (tap: SFM) for its ISO group —
+// the same test the series list ranks by (fullIsos). Rows with only a speed table or only a feed table are not usable on their own.
+export const brandUsable = (t, m, onlyData = true) => { if (m && !(t.mats.includes(m.id) || t.isos.includes(m.iso) || t.isos.includes('*'))) return false;
+  return !onlyData || !m?.iso || (t.fullIsos ?? []).some(x => { x = x.replace('~', ''); return x === '*' || x === m.iso; }); };
