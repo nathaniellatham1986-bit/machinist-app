@@ -274,6 +274,9 @@ export const ownNames = (t, m) => { const k = MAT_CLASS.find(([r]) => r.test(m?.
 export const brandUsable = (t, m, onlyData = true) => { if (m && !(t.mats.includes(m.id) || t.isos.includes(m.iso) || t.isos.includes('*'))) return false;
   if (onlyData && m?.id && t.nm?.includes(m.id)) return false; // ISO group has data, but no row fits this material
   return !onlyData || !m?.iso || (t.fullIsos ?? []).some(x => { x = x.replace('~', ''); return x === '*' || x === m.iso; }); };
+// Picker's data rank for one tool (the tool list greys rank 2 as 'no data for this material'). Shared by app.js and the audit.
+export const dataRank = (t, mid, iso) => { if (mid && t.nm?.includes(mid)) return 2; const f = t.fullIsos || [], ok = i => !iso || i === iso || i === '*';
+  return f.some(x => !x.includes('~') && ok(x)) ? 0 : f.some(x => ok(x.replace('~', ''))) ? 1 : 2; };
 // Nearest standard metric twist-drill size (DIN 338 steps: 0.05 mm ≤3 mm, 0.1 mm ≤13 mm, 0.5 mm above). DERIVED common size, not manufacturer data.
 export const commonDrillMm = mm => { if (!(mm > 0)) return null; const st = mm <= 3 ? 0.05 : mm <= 13 ? 0.1 : 0.5; return +(Math.round(mm / st) * st).toFixed(2); };
 // Row has manufacturer numbers usable on their own (same rule as index fullIsos), and matches this material (not a wrong class / hardness).

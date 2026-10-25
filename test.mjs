@@ -368,3 +368,7 @@ console.log('estimate tests ok');
   const f = { feed: { kind: 'fz', unit: 'in', bands: [[.25, .5, .001], [.5, .75, .002]] } };
   assert.equal(feedLow(f, {}, .5).v, .001); assert.equal(feedLow(f, {}, .6).v, .002); assert.equal(feedLow(f, {}, .8).v, .002);
   console.log('estimate band edge low ok'); }
+{ const { dataRank } = await import('./calc.js'); const assert = (await import('node:assert')).default; // picker rank shared with audit-picker.mjs
+  assert.equal(dataRank({ fullIsos: ['P'] }, '4140-ann', 'P'), 0); assert.equal(dataRank({ fullIsos: ['P~'] }, '4140-ann', 'P'), 1);
+  assert.equal(dataRank({ fullIsos: ['M'] }, '4140-ann', 'P'), 2); assert.equal(dataRank({ fullIsos: ['P'], nm: ['4140-ann'] }, '4140-ann', 'P'), 2);
+  console.log('dataRank ok'); }
