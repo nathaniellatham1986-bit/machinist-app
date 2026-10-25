@@ -20,7 +20,7 @@ export function feedLow(c, t, d) { const f = c.feed; if (!f) return null; const 
   if (f.byDiameter) { const ks = Object.keys(f.byDiameter).map(k => [k, +k * u]).filter(([, x]) => x <= d + 1e-4 && x >= d * (1 - EST_BAND)); // never a LARGER published Ø
     if (!ks.length) return null; const [k, x] = ks.sort((a, b) => Math.abs(a[1] - d) - Math.abs(b[1] - d))[0], v = f.byDiameter[k];
     return { v: lowOf(typeof v === 'object' ? v : { value: v }, u), at: x }; }
-  if (f.bands) { const b = f.bands.filter(([a, z]) => a * u <= d + 1e-4 && z * u >= d * (1 - EST_BAND)).sort((p, q) => q[1] - p[1])[0];
+  if (f.bands) { let b = f.bands.filter(([a, z]) => a * u <= d + 1e-4 && z * u >= d * (1 - EST_BAND)).sort((p, q) => q[1] - p[1] || p[2] - q[2]); const cov = b.filter(([a, z]) => a * u <= d + 1e-4 && z * u >= d - 1e-4).sort((p, q) => p[2] - q[2])[0]; b = cov ?? b[0]; // Ø on a shared band edge: lower value
     return b ? { v: b[2] * u, at: Math.min(d, b[1] * u) } : null; }
   if (f.range) { const r = rowDia(c) ?? sizeRange(t); return r && r[0] <= d + 1e-4 && r[1] >= d * (1 - EST_BAND) ? { v: lowOf(f.range, u), at: null } : null; } // covers Ø or smaller tool only
   return null; }

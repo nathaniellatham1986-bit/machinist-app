@@ -363,3 +363,7 @@ console.log('estimate tests ok');
   assert.equal(feedLow({ feed: c().feed }, { diameters_in: [0.55, 0.6] }, 0.5), null);
   assert.equal(feedLow({ feed: c().feed }, { diameters_in: [0.4, 0.45] }, 0.5)?.v, 0.002);
   console.log('estimate range smaller-only ok'); }
+{ const { feedLow } = await import('./estimate.js'); const assert = (await import('node:assert')).default; // estimate (b2): shared band edge takes the lower value
+  const f = { feed: { kind: 'fz', unit: 'in', bands: [[.25, .5, .001], [.5, .75, .002]] } };
+  assert.equal(feedLow(f, {}, .5).v, .001); assert.equal(feedLow(f, {}, .6).v, .002); assert.equal(feedLow(f, {}, .8).v, .002);
+  console.log('estimate band edge low ok'); }
