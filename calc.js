@@ -90,8 +90,12 @@ export const cutOf = c => { const s = `${c.label} ${c.operation ?? ''}`; return 
 export const turnOpOf = (t, c) => { const s = `${c?.operation ?? ''} ${t.series} ${t.type ?? ''}`; return /thread/i.test(s) ? 'Thread' : /part|cut.?off/i.test(s) ? 'Part' : /groov/i.test(s) ? 'Groove' : /fac/i.test(s) ? 'Face' : 'Turn'; };
 // All operations a record names ("parting / grooving insert" → Part and Groove); used by the Operation filter.
 export const turnOpsOf = (t, c) => { const o = turnOpOf(t, c), s = `${c?.operation ?? ''} ${t.series} ${t.type ?? ''}`; return o === 'Part' && /groov/i.test(s) ? ['Part', 'Groove'] : [o]; };
+// Type by phrase, not substring: 'SUMIBORON', 'counterbore', 'small bore', 'bore and shank type' are not boring tools.
+export const COUNTERBORE = /counter.?bor/i, REAMER = /\bream(er|ing)?s?\b|ReamMeister|\bH-?REAM/i;
+const BORING = /\bboring\b|\bboring bars?\b/i, NOT_BORING = /\bsmall.?bore\b.*\bgrade\b|thread|groov|counter.?bor/i;
 export const kindOf = t => { const s = `${t.type ?? ''} ${t.series}`, m = t.mode;
-  return /thread mill/i.test(s) ? 'Thread mill' : m === 'tap' ? 'Tap' : m === 'bore' || /bor/i.test(s) && m !== 'drill' ? 'Boring' : /insert|indexable/i.test(s) || m === 'turn' ? 'Insert' : m === 'drill' ? 'Drill' : 'End mill'; };
+  return /thread mill/i.test(s) ? 'Thread mill' : m === 'tap' ? 'Tap' : m === 'bore' ? 'Boring' : m !== 'turn' && COUNTERBORE.test(s) ? 'Counterbore' : m === 'drill' && REAMER.test(s) && !/\bdrills\b/i.test(s) ? 'Reamer'
+    : m === 'turn' && BORING.test(s) && !NOT_BORING.test(s) ? 'Boring' : /insert|indexable/i.test(s) || m === 'turn' ? 'Insert' : m === 'drill' ? 'Drill' : 'End mill'; };
 // Form (roll) tap only when the name says so. 'form B/C lead' (DIN 2197) is a chamfer style on cutting taps; form B = spiral point.
 export const tapTypeOf = t => { const s = `${t.type ?? ''} ${t.series}`; return /\broll|\bform tap|\bforming\b|fluteless|flutel|thread.?form/i.test(s) ? 'form'
   : /spiral flute|flute hand\/angle [RL]\d|helix/i.test(s) ? 'flute' : /spiral point|gun|\bform B\b|straight/i.test(s) ? 'point' : /spiral/i.test(s) ? 'flute' : ''; };
