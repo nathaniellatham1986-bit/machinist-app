@@ -398,3 +398,6 @@ console.log('estimate tests ok');
   const tool = n => ({ mode: 'mill', brand: 'A', series: n, type: 'square end mill', diameters_in: [.25, .75], conditions: [cond(300), cond(250), cond(350)] });
   const e = estimate({ target: { brand: 'A', mode: 'mill', series: 'T', type: 'square end mill' }, targetKey: 'T', cands: [{ key: 'a', tool: tool('X') }, { key: 'b', tool: tool('Y') }], mat: M('4140-ann'), d: .5, cool: 'flood' });
   assert.equal(e.sfm.sources.length, 2); assert.equal(e.sfm.n, 2); assert.equal(e.sfm.def, 250); assert.equal(e.fpt.sources.length, 2); }
+// ME3: Thread before a TPI is entered says 'Enter TPI', not 'No manufacturer data'.
+{ const fs = await import('node:fs'), app = fs.readFileSync('app.js', 'utf8'); assert.equal((app.match(/TH\(\)[^?]*!threadPitchIn\(\+\$\('tpi'\)\.value, \$\('pitchU'\)\.value\) \? [^:]*Enter TPI/g) ?? []).length, 3);
+  const { threadPitchIn } = await import('./calc.js'); assert.ok(!threadPitchIn(0, 'tpi')); }
