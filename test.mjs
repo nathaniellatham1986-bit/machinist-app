@@ -283,3 +283,34 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   assert.equal(F(30, 'pct', 0.5), 0.3); assert.equal(F(0.15, 'in', 0.5), 0.3); assert.equal(F(1.5, 'xd', 0.5), 1.5);
   assert.equal(E(F(0.15, 'in', 0.5), M).state, 'mfr'); assert.equal(E(F(0.1, 'in', 0.5), M).state, 'within'); assert.equal(E(F(0.2, 'in', 0.5), M).state, 'out');
   assert.equal(E(0.5, null), null); assert.equal(E(0.5, { min: null, max: null }), null); console.log('ok classifyEng'); }
+// ---- Estimates (DERIVED, same maker only) ----
+{ const { estimate } = await import('./estimate.js'); const M = id => IDX.materials.find(m => m.id === id);
+  const src = { kind: 'catalog', manufacturer: 'A', catalog: 'Cat', edition: '2024', url: 'https://x' };
+  const cond = (o = {}) => ({ label: '4140', iso: 'P', materials: ['4140-ann'], status: 'verified', coolant: 'flood', sfm: { min: 300, max: 400, unit: 'ft/min' }, feed: { kind: 'fz', unit: 'in', byDiameter: { '0.5': { min: .002, max: .003 } } }, source: src, ...o });
+  const tool = (brand, o = {}, c = {}) => ({ mode: 'mill', brand, series: 'S' + Math.random(), type: 'end mill', diameters_in: [.25, .75], conditions: [cond(c)], ...o });
+  const target = { brand: 'A', mode: 'mill', series: 'T', type: 'end mill' }, run = (cands, o = {}) => estimate({ target, targetKey: 'T', cands: cands.map((tool, i) => ({ key: 'k' + i, tool })), mat: M('4140-ann'), d: .5, cool: 'flood', ...o });
+  // needs >=2 same-maker tools; null with 0 or 1
+  assert.equal(run([]).sfm, null); assert.equal(run([tool('A')]).sfm, null); assert.equal(run([tool('A')]).fpt, null);
+  const two = run([tool('A'), tool('A', {}, { sfm: { min: 250, max: 500, unit: 'ft/min' }, feed: { kind: 'fz', unit: 'in', byDiameter: { '0.5': { min: .0015, max: .004 } } } })]);
+  assert.equal(two.sfm.def, 250); assert.equal(two.fpt.def, .0015); assert.equal(two.sfm.n, 2); assert.ok(two.sfm.derived && two.sfm.est); // lowest low end, no averaging
+  // never another brand, never another tool type
+  assert.equal(run([tool('A'), tool('B')]).sfm, null);
+  assert.equal(run([tool('A'), tool('A', { mode: 'drill', type: 'drill' })]).sfm, null);
+  assert.equal(run([tool('A'), tool('A', { series: 'Thread mill X', type: 'thread mill' })]).sfm, null);
+  // size: 1/8" tool numbers never carry to 1"; within 25% ok
+  const small = c => tool('A', { diameters_in: [.0625, .125] }, { feed: { kind: 'fz', unit: 'in', byDiameter: { '0.125': .001 } }, ...c });
+  assert.equal(run([small(), small()], { d: 1 }).sfm, null); assert.equal(run([small(), small()], { d: 1 }).fpt, null);
+  assert.equal(run([small(), small()], { d: .15 }).sfm.def, 300); assert.equal(run([small(), small()], { d: .15 }).fpt.def, .001);
+  assert.equal(run([tool('A'), tool('A')], { d: .45 }).fpt, null); // never borrows a LARGER Ø chip load
+  // coolant mismatch excluded (unstated allowed)
+  assert.equal(run([tool('A'), tool('A', {}, { coolant: 'through-tool coolant' })]).sfm, null);
+  assert.equal(run([tool('A'), tool('A', {}, { coolant: null })]).sfm.n, 2);
+  // 303 vs 304 never mixed
+  const ss = (m, lbl) => tool('A', {}, { iso: 'M', materials: m, label: lbl, sourceGroup: lbl });
+  assert.equal(run([ss(['ss304'], '304'), ss(['ss304'], '304')], { mat: M('ss303') }).sfm, null);
+  assert.equal(run([ss(['ss303', 'ss304'], '303/304'), ss(['ss303', 'ss304'], '303/304')], { mat: M('ss304') }).sfm, null);
+  assert.equal(run([ss(['ss304'], '304'), ss(['ss304'], '304')], { mat: M('ss304') }).sfm.n, 2);
+  // kill switch
+  assert.equal(run([tool('A'), tool('A')], { on: false }).sfm, null);
+}
+console.log('estimate tests ok');
