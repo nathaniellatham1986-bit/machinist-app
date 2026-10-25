@@ -140,7 +140,7 @@ export function validate(doc, name = 'file') {
         if (!['mill', 'bore'].includes(t.mode)) err(w + '.fzPerD', 'fzPerD is for mill and bore tools'); }
       if (c.printed) printed(c.printed, w + '.printed', err, t);
       if (c.sfm === null && c.feed == null && !c.fzPerD && !c.ap && !c.coolant && !c.printed) err(w, 'condition carries no data (no speed, feed, depth or coolant)');
-      if (c.feed?.kind === 'fz' && !['mill', 'bore'].includes(t.mode)) err(w, 'feed.kind "fz" is for mill and bore tools');
+      if (c.feed?.kind === 'fz' && !['mill', 'bore'].includes(t.mode) && !(t.mode === 'drill' && t.flutes > 0)) err(w, 'feed.kind "fz" is for mill and bore tools (drill only with printed flutes)');
       if (c.feed?.kind === 'ipr' && t.mode === 'mill') err(w, 'mill tools use feed.kind "fz"');
       if (c.ap) depth(c.ap, w + '.ap', err); if (c.ae) depth(c.ae, w + '.ae', err);
       for (const k of ['apx', 'aex']) if (k in c && !(isNum(c[k]) && c[k] > 0)) err(w, `${k} must be a positive number (multiple of D)`);
