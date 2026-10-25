@@ -83,7 +83,8 @@ function setMode(m) {
   $('feedLbl').firstChild.textContent = m === 'mill' ? `Chip load (${UL()}/tooth)` : m === 'tap' ? `Pitch (${UL()})` : m === 'bore' ? `Feed (${UL()}, per tooth or per rev as printed)` : `Feed (${UL()}/rev)`;
   $('dLbl').firstChild.textContent = (m === 'turn' ? 'Start dia' : m === 'tap' ? 'Tap dia' : m === 'bore' ? 'Bore dia' : 'Tool dia') + ` (${UL()})`; machines();
   $('zLbl').firstChild.textContent = m === 'bore' ? 'Cutting edges' : 'Flutes'; if (m === 'bore') $('z').value = 1;
-  Object.assign(frac, { ae: 0.25, ap: 1 }); $('ae').value = 25; $('aeU').value = 'pct'; $('ap').value = 1; $('apU').value = 'xd'; TUSER_D = false; // Review3 #8: engagement/pass/cut back to mode defaults; material, coolant, machine kept
+  Object.assign(frac, { ae: 0.25, ap: 1 }); $('ae').value = 25; $('aeU').value = 'pct'; $('ap').value = 1; $('apU').value = 'xd'; TUSER_D = false; setIn('d', { mill: 0.5, drill: 0.5, bore: 1, tap: threads.threads[$('thr').value]?.d_in }[m] ?? ''); // diameter resets to the tab default (Turn asks for real stock Ø)
+  // Review3 #8: engagement/pass/cut back to mode defaults; material, coolant, machine kept
   $('pass').value = ''; $('cut').value = ''; $('brand').length = 0; $('tool').length = 0; $('cq').value = ''; return fillBrand();
 }
 const toolOk = t => { const m = matSel(), iso = m?.iso || $('iso').value; return brandUsable(t, m ?? (iso ? { id: '', iso } : null), $('onlyData').checked); }; // same usable-data test as the series ranking
