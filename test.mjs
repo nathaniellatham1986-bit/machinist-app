@@ -293,6 +293,7 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   assert.equal(run([]).sfm, null); assert.equal(run([tool('A')]).sfm, null); assert.equal(run([tool('A')]).fpt, null);
   const two = run([tool('A'), tool('A', {}, { sfm: { min: 250, max: 500, unit: 'ft/min' }, feed: { kind: 'fz', unit: 'in', byDiameter: { '0.5': { min: .0015, max: .004 } } } })]);
   assert.equal(two.sfm.def, 250); assert.equal(two.fpt.def, .0015); assert.equal(two.sfm.n, 2); assert.ok(two.sfm.derived && two.sfm.est); // lowest low end, no averaging
+  { const fz = { feed: { kind: 'fz', unit: 'in', byDiameter: { '0.4': .001 } } }, e = run([tool('A', { diameters_in: [.25, .75] }, fz), tool('A', { diameters_in: [.25, .75] }, fz)]); assert.equal(e.fpt.def, .001); assert.equal(e.fpt.close, true); } // estimate (b3): feed from a smaller published Ø is flagged close even when the tool range covers Ø
   // never another brand, never another tool type
   assert.equal(run([tool('A'), tool('B')]).sfm, null);
   assert.equal(run([tool('A'), tool('A', { mode: 'drill', type: 'drill' })]).sfm, null);

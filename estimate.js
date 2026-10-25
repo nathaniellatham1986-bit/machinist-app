@@ -41,7 +41,7 @@ export function estimate({ target, targetTool, targetKey, cands, geom = true, ow
       const g = gradesOf(t, c), sameCoat = !!coat && g.some(x => x.toLowerCase() === coat);
       const base = { key, brand: brandName(t.brand), series: t.series, coating: g.join(', ') || null, label: c.label, source: srcText(c.source), url: c.source.url ?? null, named: mm === 'named', sameCoat };
       if (need.sfm && c.sfm) { const r = rowDia(c) ?? sizeRange(t); const v = lowOf(c.sfm, SPK(c.sfm.unit)); if (v > 0 && nearSize(r, d)) rows.sfm.push({ ...base, value: v, size: r, close: !inR(r, d) }); }
-      if (need.fpt && target.mode !== 'tap' && c.feed && (c.feed.kind ?? fk) === fk) { const f = feedLow(c, t, d); if (f?.v > 0) { const r = rowDia(c) ?? sizeRange(t); rows.fpt.push({ ...base, value: f.v, at: f.at, size: r, close: !!r && !inR(r, d) }); } }
+      if (need.fpt && target.mode !== 'tap' && c.feed && (c.feed.kind ?? fk) === fk) { const f = feedLow(c, t, d); if (f?.v > 0) { const r = rowDia(c) ?? sizeRange(t); rows.fpt.push({ ...base, value: f.v, at: f.at, size: r, close: f.at != null ? Math.abs(f.at - d) > 1e-4 : !!r && !inR(r, d) }); } } // close = the feed came from another Ø
     } }
   const tools = l => new Set(l.map(x => x.key)).size;
   for (const k of ['sfm', 'fpt']) { let l = rows[k];
