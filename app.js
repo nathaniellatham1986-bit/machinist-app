@@ -340,6 +340,8 @@ function run() { updateFindLink(); favMark();
     if (mode === 'bore') { o = drill({ sfm: v('sfm'), d: v('d'), ipr: boreFz ? v('fpt') * (v('z') || 1) : v('fpt'), maxRpm: v('maxRpm') });
       extra = `<div class="card wide"><div class="b">Bore: RPM from SFM at bore Ø ${v('d')} in; ${boreFz ? `IPM = RPM × feed/tooth × ${v('z') || 1} cutting edge(s) (manufacturer prints per tooth)` : 'IPM = RPM × feed/rev (manufacturer prints per rev)'} · DERIVED</div></div>`; }
     if (mode === 'tap') o = tap({ sfm: v('sfm'), d: v('d'), pitch: v('fpt'), maxRpm: v('maxRpm') });
+    if (mode === 'tap') { const th = threads.threads[$('thr').value], tt = curTool(), form = tt ? tapTypeOf(tt) === 'form' : $('tapT').value === 'form', mf = c?.tapDrill || (form && c?.formDrill), f75 = `${th.drill75_mm ? th.drill75_mm + ' mm / ' : ''}${th.drill75_in.toFixed(4)} in`; // Review3 #11
+      extra = card('Tap drill', `<span style="font-size:22px">${mf || (form ? '—' : th.chart || f75)}</span>`, mf ? 'MANUFACTURER chart (this tap record)' : form ? '<span class="warn">Form tap: no manufacturer form-drill printed. The 75% drill is for cutting taps — do not use it.</span>' : th.chart ? `STANDARD chart, 75% thread (${threads.source.chart.split("'")[1] || 'tap-drill chart'}) · formula gives ${f75}` : 'DERIVED (standard formula), 75% thread', 'wide'); }
     const calc = 'CALCULATED from the values above' + (SP?.est || FD?.est ? ' · <span class="estw">uses an ESTIMATE</span>' : '') + (!v('maxRpm') ? ' · <span class="warn">no machine max RPM set</span>' : '');
     const soN = mode === 'mill' && stickoutFactor(v('so'), v('d')) < 1 ? ` · <span class="warn">feed reduced ${Math.round((1 - stickoutFactor(v('so'), v('d'))) * 100)}% for stickout</span> (DERIVED)` : '';
     cards += card('RPM', Math.round(o.rpm), (o.capped ? '<span class="warn">capped at machine max RPM</span> · ' : '') + calc) + (TH() ? '' : card(FPL, uIpm(o.ipm, mode === 'mill' ? 1 : 2), calc + soN)) + extra;
@@ -422,6 +424,7 @@ for (const k of ['len', 'sup', 'apT', 'maxRpm']) if (q.get(k)) $(k).value = q.ge
 await setMode(mode);
 if (q.get('tool')) { const t = SUM.find(x => x.key === q.get('tool')); if (t) { $('onlyData').checked = false; if (t.mode !== mode) await setMode(t.mode); await fillBrand(); $('brand').value = t.brand; await fillTool(); const g = Object.keys(GROUPS).find(k => GROUPS[k].includes(t.key)) ?? t.key; $('tool').value = g; await fillGrade(''); if ([...$('grade').options].some(o => o.value.startsWith(t.key + '|') && !o.disabled) && !$('grade').value.startsWith(t.key + '|')) { $('grade').value = [...$('grade').options].find(o => o.value.startsWith(t.key + '|') && !o.disabled).value; await fillCond(); } } }
 if (q.get('cond')) { $('cond').value = q.get('cond'); fill(); }
+{ const i = threads.threads.findIndex(t => t.name === '1/4-20'); if (i >= 0) $('thr').value = i; } // Review3 #11 default thread
 if (q.get('thr')) { $('thr').value = q.get('thr'); fill(); }
 if (q.get('d')) { $('d').value = q.get('d'); fill(); }
 if (q.get('open')) document.querySelector('#src details')?.setAttribute('open', '');
