@@ -50,3 +50,11 @@ One commit per item. After each: validate.mjs, test.mjs, validate-machines.mjs, 
 | ME 7 Wrong-material rows | Reproduced live (Guhring 4140 "Tool steels" 1 row; Helical P20 "Carbon Steel" 2; Helical Ti-6Al-4V "Pure Titanium" 6, all in Condition list). Material match now requires !matBad; matBad ignores transcriber notes ("member alloy list not transcribed") that made Pure Ti look like an alloy. Local: 0 / 0 / 0 rows. 3 unit tests | PASS | ui/17-7-*.png, ui/live/L7-*.png |
 | ME 8 Groove default | Reproduced live (Turn Groove 4140 ann Ø2 Iscar → GFQR face grooving). Face-grooving penalty .3 → 1.5 so an OD grooving tool with data wins; face tools stay listed. Now PENTA grooving IC1008 (Iscar box label 197–492 SFM). UI-only | PASS | ui/17-8-groove-default.png, ui/live/j-Groove.png |
 | ME 9 Tap ranking | Reproduced live (Tap 1/4-20 mild steel, Iscar → "HSS-E form B lead, M (stainless)"). Root cause: "(stainless)" was our guess that ISCAR color code M = ISO M; ISCAR p.408 says it is the tap color code (ring colour). Label now "color code M". Ranking by material NOT done: the only evidence is the p.409 Recommended/Suitable dots, which were not captured in data ("suitable dots not captured") | PARTIAL | ui/17-9-tap-label.png, ui/live/j4-tap-1420.png |
+
+| ME 6 | — | NOT REPRODUCIBLE | Live Iscar Groove (4140, 304, no material): list shows GFQR, MIFR×3, PENTA; no XCMT. | ui/live/L6-groove-iscar.png |
+| estimate (a) | a80ca92 | PASS | byDiameter never uses a larger published Ø. | test.mjs |
+| estimate (b1) | 0097bdc | PASS | range feed only when size covers or is smaller (nearSize accepted larger). | test.mjs |
+| estimate (b2) | 782d386 | PASS | Bands all numeric and non-overlapping, but 683 shared edges: Ø on an edge now takes the lower value. | test.mjs |
+| estimate (b3) | see log | PASS | fpt close flag uses f.at. | test.mjs |
+| Number check: Guhring 235/245 in 304 | — | REPORT | 25 SFM/.005 IPR is from 235.pdf "Stainless, sulphured (HRC<28)"; austenitic row blank; 245 has no stainless data but is merged with 235. Not fixed. | — |
+| Number check: Iscar VNMG-NF IC807 304 | — | REPORT | 656 SFM = low end of 200–300 m/min; feed shows .0032 vs range text .0031 (rounding). No change. | — |
