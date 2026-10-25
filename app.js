@@ -224,7 +224,9 @@ function engHtml(k, st) { if (st !== 'yours') return esc(TAG[st]); const o = eng
   return ` · <span class="${c}">${o.label}</span>${o.note ? ` <span class="${c}">· ${o.note}</span>` : ''}`; }
 function engTags() { if ($('aeX')) $('aeX').innerHTML = esc($('aeX').textContent) + engHtml('ae', ENG.ae); if ($('apX')) $('apX').innerHTML = esc($('apX').textContent) + engHtml('ap', ENG.ap);
   const tl = $('apTX'); if (tl) tl.innerHTML = engHtml('apT', ENG.ap).replace(/^ · /, ''); }
-function fill() {
+function setupSum() { const c = curTool()?.conditions[$('cond').value], P = $('pass'), K = $('cut');
+  $('setupSum').textContent = '· ' + [!P.closest('label').hidden && mode !== 'drill' && mode !== 'tap' ? `Pass ${P.value || 'Any'}` : '', mode === 'mill' ? `Cut ${K.value || 'Any'}` : '', c ? c.label.slice(0, 60) : 'no condition'].filter(Boolean).join(' · '); }
+function fill() { setupSum();
   const t = curTool(), c = t?.conditions[$('cond').value];
   fillDia(c);
   if (mode === 'tap') { const th = threads.threads[$('thr').value]; setIn('d', th.d_in); setIn('fpt', th.pitch_in); }
