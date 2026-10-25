@@ -401,3 +401,7 @@ console.log('estimate tests ok');
 // ME3: Thread before a TPI is entered says 'Enter TPI', not 'No manufacturer data'.
 { const fs = await import('node:fs'), app = fs.readFileSync('app.js', 'utf8'); assert.equal((app.match(/TH\(\)[^?]*!threadPitchIn\(\+\$\('tpi'\)\.value, \$\('pitchU'\)\.value\) \? [^:]*Enter TPI/g) ?? []).length, 3);
   const { threadPitchIn } = await import('./calc.js'); assert.ok(!threadPitchIn(0, 'tpi')); }
+// ME4: Guhring 'Stainless steels, sulphured' is a 303-type row; flagged NOT 304. Plain austenitic / 304 rows are not flagged.
+{ const { sulph303 } = await import('./calc.js');
+  assert.ok(sulph303({ label: 'Stainless steels, sulphured (HRC < 28, BHN < 273)' })); assert.ok(sulph303({ label: 'Stainless, sulphured (e.g. 303) <180 HB' }));
+  assert.ok(!sulph303({ label: 'Stainless steels, austenitic (304, 316)' })); assert.ok(!sulph303({ label: 'Grp 14 Austenitic stainless' })); }

@@ -47,6 +47,8 @@ export function coolModes(s) { if (!s) return []; const m = [];
   if (/\bair\b|mist|MQL/i.test(s)) m.push('air'); if (/\bdry\b/i.test(s)) m.push('dry'); return [...new Set(m)]; }
 
 // A source row printed as e.g. "303/304/316/316L/321" names 303 together with other austenitic grades: shown as printed, ranked after 303-specific data.
+// A row printed for sulphured / free-machining stainless (303 type). Shown for 304 only with a NOT-304 label.
+export const sulph303 = c => /sulph|sulfur|free.?(machin|cut)|\b303\b/i.test(`${c?.label ?? ''} ${c?.sourceGroup ?? ''}`) && !/\b304|\b316|austenitic(?!.*sulph)/i.test(`${c?.label ?? ''} ${c?.sourceGroup ?? ''}`.replace(/sulph\w*/i, 'sulph'));
 export const shared303 = c => !!c?.materials?.includes('ss303') && /\b30[124]L?\b|\b316|\b321\b|\b347\b|austenitic/i.test(c.sourceGroup ?? c.label ?? '');
 
 // Printed per-diameter RPM/table feed ("printed" block). Exact diameter match only (no interpolation).
