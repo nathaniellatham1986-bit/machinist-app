@@ -1,5 +1,6 @@
 import { MODES, migrate, forMode, upsertMachine, dedupeMachines, removeMachine } from './recall.js';
 import { enhance } from './combo.js';
+import { estimate, ESTIMATES_ON, EST_MODES } from './estimate.js';
 import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, classifyOverride, classifyEng, engFrac, drillTier, rowDia, rowExcludes, toolLifeOf } from './calc.js';
 const $ = id => document.getElementById(id);
 const J = u => fetch(u).then(r => r.json());
@@ -138,8 +139,13 @@ function fillTurnOpts(t, okC) { if (mode !== 'turn') return; for (const [id, f] 
   const vals = [...new Set((t?.conditions || []).filter(okC).map(f).filter(Boolean))].sort(); s.length = 0;
   if (!vals.length) s.add(new Option('No manufacturer data', '')); else { if (vals.length > 1) s.add(new Option('Any published', '')); vals.forEach(x => s.add(new Option(x, x))); }
   s.value = vals.includes(cur) ? cur : vals.length === 1 ? vals[0] : ''; s.disabled = vals.length < 2; } }
+// ESTIMATE candidates (DERIVED): same brand + mode + tool kind with data for the material; loaded only when the picked tool lacks data.
+const estCands = () => { const s = SUM.find(x => x.key === realKey()), m = matSel(); if (!s || !m) return [];
+  return SUM.filter(x => x.key !== s.key && x.brand === s.brand && x.mode === s.mode && kindOf(x) === kindOf(s) && (x.mats.includes(m.id) || x.dataIsos.includes(m.iso))); };
+const estWanted = t => ESTIMATES_ON && EST_MODES.includes(mode) && !!matSel() && !!t && !t.conditions.some(c => isoOk(c) && c.status !== 'shop-proven' && (c.printed || c.sfm && (c.feed || mode === 'tap')));
 async function fillCond() {
   await ensure(realKey());
+  if (estWanted(curTool())) await Promise.all(estCands().map(x => ensure(x.key)));
   const t = curTool(); $('cond').length = 0;
   const cw = $('cq').value.toLowerCase().split(/\s+/).filter(Boolean); let nc = 0;
   $('cqL').hidden = (t?.conditions.length ?? 0) < 25 && !cw.length;
@@ -167,7 +173,7 @@ const allMat = c => c.iso === '*' && !c.material && !c.materials?.length;
 function badge(c) { const s = c.source;
   if (c.status === 'shop-proven') return `<span class="shop">⚠ Shop-proven, NOT manufacturer data ▸</span>`;
   return `${allMat(c) ? 'Feed table, all materials · ' : ''}${s.manufacturer} ${s.kind === 'label' ? 'box label' : 'catalog'} ✓${c.sourceGroup ? ' · “' + c.sourceGroup + '”' : ''} ▸`; }
-let SP = null, FD = null;
+let SP = null, FD = null, ESTTRY = false;
 const diaFeed = c => c?.printed && !c.feed?.byDiameter ? { byDiameter: c.printed.byDiameter, unit: c.printed.unit } : c?.feed;
 const diaList = c => { const f = diaFeed(c); if (!f) return []; const u = toIn(1, f.unit);
   if (f.byDiameter) return Object.keys(f.byDiameter).map(k => +k * u).sort((x, y) => x - y);
@@ -221,6 +227,9 @@ function fill() {
   sp = lowEnd(sp); fd = lowEnd(fd); // every mode: range-only records start at the LOW end (labeled)
   OUTROW = mode === 'drill' && c && rowExcludes(c, d); if (OUTROW) { sp = null; fd = null; } // never borrow an out-of-size printed row
   if (shop) { if (sp) sp.basis = 'SHOP-PROVEN value, not manufacturer'; if (fd) fd.basis = 'SHOP-PROVEN value, not manufacturer'; }
+  ESTTRY = false; if (ESTIMATES_ON && EST_MODES.includes(mode) && t && matSel() && !shop && (!sp || (!fd && mode !== 'tap')) && !((mode === 'mill' || mode === 'drill') && printedAt(c, d))) {
+    ESTTRY = true; const s = SUM.find(x => x.key === realKey()), e = estimate({ target: { ...s, mode }, targetKey: s?.key, cands: estCands().map(x => ({ key: x.key, tool: toolBy(x.key) })).filter(x => x.tool), mat: matSel(), d, cool, need: { sfm: !sp, fpt: !fd && mode !== 'tap' } });
+    if (!sp && e.sfm) sp = { def: e.sfm.def, min: null, max: null, est: e.sfm, basis: 'ESTIMATE' }; if (!fd && e.fpt) fd = { def: e.fpt.def, min: null, max: null, est: e.fpt, basis: 'ESTIMATE' }; }
   SP = sp; FD = fd; defs = { sfm: sp?.def ?? null, fpt: mode === 'tap' ? inV('fpt') : fd?.def ?? null };
   prefillEng(t, c, d);
   setIn('sfm', sp ? sp.def : ''); if (mode !== 'tap') setIn('fpt', fd ? fd.def : '');
@@ -262,9 +271,11 @@ function showEng() { const d = D(); $('ae').value = $('aeU').value === 'pct' ? +
   $('ap').value = $('apU').value === 'xd' ? +frac.ap.toFixed(3) : +(frac.ap * d * LK()).toFixed(metric ? 3 : 4); readEng(); }
 $('aeU').onchange = () => { showEng(); run(); }; $('apU').onchange = () => { showEng(); run(); };
 const mine = k => defs[k] == null || Math.abs(inV(k) - defs[k]) > (k === 'sfm' ? 2 : 5e-5);
-const ovc = k => { const p = k === 'sfm' ? SP : FD; if (defs[k] == null || !p) return { state: mine(k) ? 'out' : 'mfr', label: 'YOUR VALUE, NOT MANUFACTURER', note: '' }; return classifyOverride(inV(k), p, k === 'sfm' ? 2 : 5e-5, k === 'sfm' ? 0 : 4); };
+const ovc = k => { const p = k === 'sfm' ? SP : FD; if (p?.est) return mine(k) ? { state: 'out', label: 'YOUR VALUE, NOT MANUFACTURER', note: 'changed from the ESTIMATE (an estimate has no manufacturer range)' } : { state: 'est', label: '' }; if (defs[k] == null || !p) return { state: mine(k) ? 'out' : 'mfr', label: 'YOUR VALUE, NOT MANUFACTURER', note: '' }; return classifyOverride(inV(k), p, k === 'sfm' ? 2 : 5e-5, k === 'sfm' ? 0 : 4); };
 const ovHtml = o => `<span class="${o.state === 'out' ? 'warn' : 'adjw'}">${o.label}</span>${o.note ? `<br><span class="${o.state === 'out' ? 'warn' : 'adjw'}">${o.note}</span>` : ''}`;
-const ovCls = o => o.state === 'out' ? 'mine' : o.state === 'within' ? 'adj' : '';
+const ovCls = o => o.state === 'out' ? 'mine' : o.state === 'within' ? 'adj' : o.state === 'est' ? 'est' : '';
+// Blue ESTIMATE body: label + basis; tapping it lists each source record (brand, series, coating, value, catalog/edition).
+const estHtml = (e, dp, u) => `<details class="estd"><summary><span class="estw">ESTIMATE, not manufacturer data</span><br>from ${e.n} published ${esc(e.sources[0].brand)} tools (same type, material group, size range); lowest low end used ▸</summary>${e.sources.map(x => `<div class="estrow">${esc(x.brand)} ${esc(x.series)}${x.coating ? ' · ' + esc(x.coating) : ''} · <b>${u(x.value)}</b>${x.at ? ` at Ø${x.at.toFixed(4)} in` : ''} · ${esc(x.label)} · ${esc(x.source)}${x.url ? ` · <a style="color:#9cf" href="${x.url}" target="_blank" rel="noopener">source</a>` : ''}</div>`).join('')}</details>`;
 function run() { updateFindLink(); favMark();
   if (!curTool()) { const m = needMsg() ? needMsg() + ' to see manufacturer numbers.' : `${$('brand').value} has no ${mode} tool with data for this material and these filters.`;
     $('cards').innerHTML = `<div class="out"><span class="warn">${m}</span></div>`; $('bar').innerHTML = `<small>${m}</small>`; return; } if (PART()) $('fD').value = '0'; if (mode === 'mill') readEng();
@@ -280,19 +291,20 @@ function run() { updateFindLink(); favMark();
   if (mode === 'bore' && v('so')) { const bd = v('bd') || v('d'), lim = boreLimit($('shk').value), r = v('so') / bd;
     w += `<div class="${r > lim ? 'warn' : 'out'}">Bar L/D ${r.toFixed(1)}:1 (${$('shk').value} shank, limit ~${lim}×D)${r > lim ? ' · past the usual limit: expect chatter; shorten stickout, use a ' + ($('shk').value === 'steel' ? 'carbide or ' : '') + 'damped bar, or reduce speed/feed' : ''} <span class="tag">GENERAL GUIDANCE, not manufacturer data</span></div>`; }
   const t = curTool(), src = c ? (c.status === 'shop-proven' ? '⚠ SHOP-PROVEN, not manufacturer' : `${c.source.manufacturer} ${c.source.kind === 'label' ? 'box label' : 'catalog'}${c.source.page ? ' p.' + c.source.page : ''} ✓`) : '';
-  const BAR = []; const card = (k, val, b, cls = '', ov) => `<div class="card ${cls}"${ov ? ` data-ov="${ov}"` : ''}><div class="k">${k}${ov ? ' <span class="tap">✎ tap to change</span>' : ''}</div><div class="v">${val}</div><div class="b">${b}</div>${ov && (cls === 'mine' || cls === 'adj') ? '<button class="sm rst" data-reset="' + ov + '">Reset to manufacturer</button>' : ''}</div>`;
+  const BAR = []; const card = (k, val, b, cls = '', ov, rl) => `<div class="card ${cls}"${ov ? ` data-ov="${ov}"` : ''}><div class="k">${k}${ov ? ' <span class="tap">✎ tap to change</span>' : ''}</div><div class="v">${val}</div><div class="b">${b}</div>${ov && (cls === 'mine' || cls === 'adj') ? '<button class="sm rst" data-reset="' + ov + '">' + (rl ?? 'Reset to manufacturer') + '</button>' : ''}</div>`;
   const boreFz = mode === 'bore' && c?.feed?.kind === 'fz', fk = (mode === 'mill' ? 'Chip load' : mode === 'tap' ? 'Pitch' : 'Feed') + ` (${UL()}/${mode === 'mill' || boreFz ? 'tooth' : 'rev'})`, SPL = metric ? 'm/min' : 'SFM', FPL = metric ? 'Feed mm/min' : 'Feed IPM';
   let cards = '';
-  const tl = toolLifeOf(c), sfmB = ovc('sfm').state !== 'mfr' && v('sfm') ? ovHtml(ovc('sfm')) : SP ? `${src} · ${SP.basis}${SP.min != null ? ` · range ${fmt(SP, 0)}` : ''}${tl ? ` · <b>at ${tl} min tool life</b> (source)` : ''}` : '';
-  const fB = mode === 'tap' || TH() ? (TH() && !v('fpt') ? 'enter TPI or pitch' : 'feed/rev = thread pitch (geometry)') : false ? '' : mode === 'tap' ? 'thread pitch (geometry)' : ovc('fpt').state !== 'mfr' && v('fpt') ? ovHtml(ovc('fpt')) : FD ? `${src} · ${FD.basis}${FD.min != null ? ` · range ${fmt(FD, 4)}` : ''}` : '';
+  const tl = toolLifeOf(c), sfmB = SP?.est && ovc('sfm').state === 'est' ? estHtml(SP.est, 0, x => uSp(x) + (metric ? ' m/min' : ' SFM')) : ovc('sfm').state !== 'mfr' && v('sfm') ? ovHtml(ovc('sfm')) : SP ? `${src} · ${SP.basis}${SP.min != null ? ` · range ${fmt(SP, 0)}` : ''}${tl ? ` · <b>at ${tl} min tool life</b> (source)` : ''}` : '';
+  const fB = mode === 'tap' || TH() ? (TH() && !v('fpt') ? 'enter TPI or pitch' : 'feed/rev = thread pitch (geometry)') : false ? '' : mode === 'tap' ? 'thread pitch (geometry)' : FD?.est && ovc('fpt').state === 'est' ? estHtml(FD.est, 4, x => uFeed(x) + ' ' + UL() + (mode === 'mill' ? '/t' : '/rev')) : ovc('fpt').state !== 'mfr' && v('fpt') ? ovHtml(ovc('fpt')) : FD ? `${src} · ${FD.basis}${FD.min != null ? ` · range ${fmt(FD, 4)}` : ''}` : '';
   const PR = mode === 'mill' || mode === 'drill' || mode === 'bore' ? printedAt(c, v('d')) : null;
   if (PR) { const r = printedRun(PR, { dIn: v('d'), z: v('z'), maxRpm: v('maxRpm') }), ps = `${src} · printed for Ø${PR.key} ${PR.unit}`;
     const capT = r.capped ? `<span class="warn">CAPPED: printed ${PR.rpm} RPM scaled to machine max; feed scaled by the same ratio</span> · ` : '';
     BAR.push(['RPM', Math.round(r.rpm)], [metric ? 'mm/min' : 'IPM', r.ipm != null ? uIpm(r.ipm) : '—']); cards += card('RPM', Math.round(r.rpm), capT + 'MANUFACTURER PRINTED · ' + ps) + (r.ipm != null ? card(FPL, uIpm(r.ipm), capT + 'MANUFACTURER PRINTED table feed' + (PR.tableFeed.unit === 'mm/min' ? ` (${PR.tableFeed.value} mm/min)` : '') + ' · ' + ps) : card(FPL, 'No manufacturer data', '', 'none'))
       + card(SPL, uSp(r.sfm), 'DERIVED from printed RPM × diameter') + (r.fz != null ? card(mode === 'drill' ? 'IPR' : 'Chip load', uFeed(mode === 'drill' ? r.ipm / r.rpm : r.fz), 'DERIVED from printed feed ÷ (RPM' + (mode === 'drill' ? ')' : ' × flutes)')) : ''); }
   else {
-  cards += v('sfm') ? card(SPL, uSp(v('sfm')), sfmB + (ovc('sfm').state !== 'mfr' && SP ? ` · manufacturer ${fmt(SP, 0)}` : ''), ovCls(ovc('sfm')), SP ? 'sfm' : '') : card(SPL, 'No manufacturer data', c && allMat(c) ? 'Feed table, all materials: no speed printed' : '', 'none');
-  cards += v('fpt') ? card(fk, uFeed(v('fpt')), fB + (mode !== 'tap' && !TH() && ovc('fpt').state !== 'mfr' && FD ? ` · manufacturer ${fmt(FD, 4)}` : ''), mode !== 'tap' && !TH() ? ovCls(ovc('fpt')) : '', FD && mode !== 'tap' && !TH() ? 'fpt' : '') : card(fk, 'No manufacturer data' + (c?.feed ? ' at this diameter' : ''), '', 'none');
+  const noEst = ESTTRY ? '<span class="estw">No estimate available</span> (fewer than 2 matching published tools from this maker)' : '';
+  cards += v('sfm') ? card(SPL, uSp(v('sfm')), sfmB + (SP?.est ? (ovc('sfm').state === 'out' ? ` · ESTIMATE was ${uSp(SP.def)}` : '') : ovc('sfm').state !== 'mfr' && SP ? ` · manufacturer ${fmt(SP, 0)}` : ''), ovCls(ovc('sfm')), SP ? 'sfm' : '', SP?.est ? 'Reset to estimate' : null) : card(SPL, 'No manufacturer data', c && allMat(c) ? 'Feed table, all materials: no speed printed' : noEst, 'none');
+  cards += v('fpt') ? card(fk, uFeed(v('fpt')), fB + (mode !== 'tap' && !TH() && FD?.est ? (ovc('fpt').state === 'out' ? ` · ESTIMATE was ${uFeed(FD.def)}` : '') : mode !== 'tap' && !TH() && ovc('fpt').state !== 'mfr' && FD ? ` · manufacturer ${fmt(FD, 4)}` : ''), mode !== 'tap' && !TH() ? ovCls(ovc('fpt')) : '', FD && mode !== 'tap' && !TH() ? 'fpt' : '', FD?.est ? 'Reset to estimate' : null) : card(fk, 'No manufacturer data' + (c?.feed ? ' at this diameter' : ''), mode !== 'tap' ? noEst : '', 'none');
   let o = null, extra = '';
   if (v('sfm') && v('fpt') && v('d')) {
     if (mode === 'mill') { o = compute({ sfm: v('sfm'), d: v('d'), fpt: v('fpt'), z: v('z'), ae: frac.ae * v('d'), ap: frac.ap * v('d'), stickout: v('so'), maxRpm: v('maxRpm'), maxHp: v('maxHp'), iso: c?.iso });
@@ -307,7 +319,7 @@ function run() { updateFindLink(); favMark();
     if (mode === 'bore') { o = drill({ sfm: v('sfm'), d: v('d'), ipr: boreFz ? v('fpt') * (v('z') || 1) : v('fpt'), maxRpm: v('maxRpm') });
       extra = `<div class="card wide"><div class="b">Bore: RPM from SFM at bore Ø ${v('d')} in; ${boreFz ? `IPM = RPM × feed/tooth × ${v('z') || 1} cutting edge(s) (manufacturer prints per tooth)` : 'IPM = RPM × feed/rev (manufacturer prints per rev)'} · DERIVED</div></div>`; }
     if (mode === 'tap') o = tap({ sfm: v('sfm'), d: v('d'), pitch: v('fpt'), maxRpm: v('maxRpm') });
-    const calc = 'CALCULATED from the values above' + (!v('maxRpm') ? ' · <span class="warn">no machine max RPM set</span>' : '');
+    const calc = 'CALCULATED from the values above' + (SP?.est || FD?.est ? ' · <span class="estw">uses an ESTIMATE</span>' : '') + (!v('maxRpm') ? ' · <span class="warn">no machine max RPM set</span>' : '');
     const soN = mode === 'mill' && stickoutFactor(v('so'), v('d')) < 1 ? ` · <span class="warn">feed reduced ${Math.round((1 - stickoutFactor(v('so'), v('d'))) * 100)}% for stickout</span> (DERIVED)` : '';
     cards += card('RPM', Math.round(o.rpm), (o.capped ? '<span class="warn">capped at machine max RPM</span> · ' : '') + calc) + (TH() ? '' : card(FPL, uIpm(o.ipm, mode === 'mill' ? 1 : 2), calc + soN)) + extra;
     BAR.push(['RPM', Math.round(o.rpm)], BAR.ipr ? [metric ? 'mm/rev' : 'IPR', uFeed(v('fpt'))] : [metric ? 'mm/min' : 'IPM', uIpm(o.ipm, mode === 'mill' ? 1 : 2)]);
@@ -330,16 +342,16 @@ function run() { updateFindLink(); favMark();
     t.conditions.forEach((x, i) => { if (chips.length < 12 && String(i) !== $('cond').value && x.sfm && (mode === 'tap' || x.feed) && isoOk(x) && fresh(x)) chips.push([x.label, `c:${i}`]); });
     t.conditions.forEach((x, i) => { if (chips.length < 16 && x.sfm && (mode === 'tap' || x.feed) && !isoOk(x) && fresh(x)) chips.push([x.label + ' (other material)', `m:${i}`]); });
   }
-  const miss = !c || (!PR && (!v('sfm') || !v('fpt')));
-  $('cards').innerHTML = w + (miss ? `<div class="out"><span class="warn">${OUTROW ? 'No mfr data at this size.' : 'No manufacturer data for this combo.'}</span>${chips.length ? '<br>Nearest options from this tool with data:<div class="chips">' + chips.map(([l, k]) => `<button class="chip" data-k="${k}">${l}</button>`).join('') + '</div>' : ''}</div>` : '') + `<div class="cards">${cards}</div>`;
+  const usesEst = !!(SP?.est || FD?.est), miss = !c || usesEst || (!PR && (!v('sfm') || !v('fpt')));
+  $('cards').innerHTML = w + (miss ? `<div class="out"><span class="warn">${OUTROW ? 'No mfr data at this size.' : 'No manufacturer data for this combo.'}</span>${usesEst ? ' <span class="estw">Blue boxes are ESTIMATES from this maker\'s other tools, not manufacturer data.</span>' : ''}${chips.length ? '<br>Nearest options from this tool with data:<div class="chips">' + chips.map(([l, k]) => `<button class="chip" data-k="${k}">${l}</button>`).join('') + '</div>' : ''}</div>` : '') + `<div class="cards">${cards}</div>`;
   if (mode === 'turn' && $('top').value === 'Face' && !c) { // no facing record: point to Turn, invent nothing
     $('cards').innerHTML = `<div class="out"><span class="warn">Catalogs don't print facing separately. Use the Turn numbers for the same insert.</span><br><button id="faceTurn" class="chip">Switch Operation to Turn</button></div>`;
     $('faceTurn').onclick = () => { $('top').value = 'Turn'; fillBrand(); }; }
   $('out').hidden = true;
-  $('bar').innerHTML = BAR.length ? BAR.map(([k, x]) => `<span>${x} <small>${k}</small></span>`).join('') + `<small>${t ? (mode === 'tap' ? geo(t) : short(t.series)) : ''}</small>` : '<small>No manufacturer data for this combo</small>';
+  $('bar').innerHTML = BAR.length ? BAR.map(([k, x]) => `<span>${x} <small>${k}</small></span>`).join('') + `<small>${t ? (mode === 'tap' ? geo(t) : short(t.series)) : ''}</small>` + (usesEst ? '<small class="estw">ESTIMATE</small>' : '') : '<small>No manufacturer data for this combo</small>';
   if (!$('mach').value) $('bar').innerHTML += '<span class="warn" style="font-size:15px;width:100%">⚠ Pick a machine for RPM limits</span>';
 }
-$('cards').onclick = e => { const rs = e.target.closest('[data-reset]')?.dataset.reset; if (rs) { setIn(rs, defs[rs]); return run(); }
+$('cards').onclick = e => { if (e.target.closest('.estd')) return; const rs = e.target.closest('[data-reset]')?.dataset.reset; if (rs) { setIn(rs, defs[rs]); return run(); }
   const ov = e.target.closest('[data-ov]'); if (ov && !ov.querySelector('input')) { const f = ov.dataset.ov, box = ov.querySelector('.v'), x = document.createElement('input');
     x.type = 'number'; x.inputMode = 'decimal'; x.step = 'any'; x.value = $(f).value; box.replaceChildren(x); x.focus(); x.select(); let done = false;
     const end = ok => { if (done) return; done = true; if (ok && +x.value > 0) $(f).value = x.value; run(); };
@@ -352,7 +364,8 @@ $('dPick').onchange = () => { setIn('d', +$('dPick').value); if (mode === 'mill'
 // Favorites & recent setups
 const FIELDS = ['iso', 'mat', 'brand', 'kind', 'top', 'tapT', 'hole', 'pass', 'cut', 'tool', 'cond', 'thr', 'd', 'z', 'sfm', 'fpt', 'aeU', 'apU', 'ae', 'ap', 'apT', 'so', 'nose', 'cb', 'len', 'sup', 'cool', 'fD', 'hd', 'bd', 'shk'];
 const snap = () => { const t = curTool(), c = t?.conditions[$('cond').value];
-  return { mode, name: `${mode} · ${t ? t.brand + ' ' + t.series : '?'} · ${c?.label ?? ''}${$('cb').value ? ' · ' + $('cb').value : ''}`, v: Object.fromEntries(FIELDS.map(k => [k, $(k).value])) }; };
+  const est = !!(SP?.est || FD?.est);
+  return { mode, name: `${mode} · ${t ? t.brand + ' ' + t.series : '?'} · ${c?.label ?? ''}${$('cb').value ? ' · ' + $('cb').value : ''}${est ? ' · ESTIMATE' : ''}`, ...(est ? { est: true } : {}), v: Object.fromEntries(FIELDS.map(k => [k, $(k).value])) }; };
 function recent() { const t = curTool(); if (!t) return; const s = snap(), r = LS.get('recent', []).filter(x => x.name !== s.name); r.unshift(s); LS.set('recent', r.slice(0, 8)); recallList(); }
 function recallList() { const sel = $('recall'); if (!sel) return; sel.length = 1;
   for (const k of ['fav', 'recent']) { const l = LS.get(k, []); if (l.some(x => !MODES.includes(x.mode))) LS.set(k, migrate(l, SUM)); }
