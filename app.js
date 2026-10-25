@@ -1,7 +1,7 @@
 import { MODES, migrate, forMode, upsertMachine, dedupeMachines, removeMachine } from './recall.js';
 import { enhance } from './combo.js';
 import { estimate, ESTIMATES_ON, EST_MODES, sizeTxt } from './estimate.js';
-import { brandUsable, nice, compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, classifyOverride, classifyEng, engFrac, drillTier, rowDia, rowExcludes, toolLifeOf } from './calc.js';
+import { brandUsable, commonDrillMm, nice, compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, classifyOverride, classifyEng, engFrac, drillTier, rowDia, rowExcludes, toolLifeOf } from './calc.js';
 let PASSNOTE = ''; // Review3 #4: set when the chosen Pass has no rows for this tool
 const $ = id => document.getElementById(id);
 const J = u => fetch(u).then(r => r.json());
@@ -303,7 +303,8 @@ function tapDrillInfo(c) { const th = threads.threads[$('thr').value]; if (!th) 
   if (mf) return { val: mf, sub: /mm/.test(mf) ? '' : mmOf(mf), lbl: 'MANUFACTURER chart (this tap record)', src: 'MANUFACTURER' };
   if (form) return { val: '—', sub: '', lbl: '<span class="warn">Form tap: no manufacturer form-drill printed. The 75% drill is for cutting taps — do not use it.</span>', src: 'warn' };
   if (th.chart) return { val: th.chart, sub: mmOf(th.chart), lbl: `STANDARD chart, 75% thread (${threads.source.chart.split("'")[1] || 'tap-drill chart'}) · formula gives ${f75}`, src: 'STANDARD' };
-  return { val: th.drill75_in.toFixed(4) + ' in', sub: th.drill75_mm ? th.drill75_mm + ' mm' : '', lbl: 'DERIVED (standard formula), 75% thread', src: 'DERIVED' }; }
+  const cm = th.drill75_mm ? commonDrillMm(+th.drill75_mm) : null;
+  return { val: th.drill75_in.toFixed(4) + ' in', sub: th.drill75_mm ? th.drill75_mm + ' mm' + (cm ? ` · <b>${cm} mm</b> common size` : '') : '', lbl: 'DERIVED (standard formula), 75% thread' + (cm ? ` · ${cm} mm = nearest standard metric drill (DERIVED common size, not manufacturer data)` : ''), src: 'DERIVED' + (cm ? ' · common size' : '') }; }
 function tapBox() { const e = $('tdBox'); if (!e) return; e.hidden = mode !== 'tap'; if (mode !== 'tap') return;
   const k = tapDrillInfo(curTool()?.conditions[$('cond').value]);
   e.innerHTML = `<span class="tdl">Drill</span><b class="tdv">${esc(String(k.val))}</b>${k.sub ? `<span class="tdm">${k.sub}</span>` : ''}<small class="tds${k.src === 'warn' ? ' warn' : ''}">${k.src === 'warn' ? 'Form tap: no mfr drill — not the 75% cutting drill' : k.src}</small>`; }

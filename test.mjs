@@ -344,3 +344,5 @@ console.log('estimate tests ok');
   const speedOnly = { mats: [], isos: ['P'], dataIsos: ['P'], fullIsos: [] }, full = { mats: [], isos: ['P'], dataIsos: ['P'], fullIsos: ['P'] }, label = { mats: [], isos: ['*'], dataIsos: ['*'], fullIsos: ['*~'] };
   assert.equal(brandUsable(speedOnly, m), false); assert.equal(brandUsable(full, m), true); assert.equal(brandUsable(label, m), true); assert.equal(brandUsable(speedOnly, m, false), true);
   console.log('Iscar brand-has-data consistency tests pass'); }
+{ const { commonDrillMm } = await import('./calc.js'); const assert = (await import('node:assert')).default;
+  assert.equal(commonDrillMm(6.78), 6.8); assert.equal(commonDrillMm(2.47), 2.45); assert.equal(commonDrillMm(17.6), 17.5); console.log('common drill size tests pass'); }
