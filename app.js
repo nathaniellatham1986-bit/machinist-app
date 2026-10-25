@@ -87,9 +87,12 @@ function setMode(m) {
   $('pass').value = ''; $('cut').value = ''; $('brand').length = 0; $('tool').length = 0; $('cq').value = ''; return fillBrand();
 }
 const toolOk = t => { const m = matSel(), iso = m?.iso || $('iso').value; return brandUsable(t, m ?? (iso ? { id: '', iso } : null), $('onlyData').checked); }; // same usable-data test as the series ranking
-const inMode = () => SUM.filter(t => t.mode === mode && toolOk(t) && (mode !== 'tap' || (!$('tapT').value || tapTypeOf(t) === $('tapT').value) && isTaperThread(`${t.series} ${t.type ?? ''}`) === isTaperThread(threads.threads[$('thr').value]?.name))
+const inMode0 = (np = false) => SUM.filter(t => t.mode === mode && toolOk(t) && (mode !== 'tap' || (!$('tapT').value || tapTypeOf(t) === $('tapT').value) && isTaperThread(`${t.series} ${t.type ?? ''}`) === isTaperThread(threads.threads[$('thr').value]?.name))
   && (mode !== 'turn' || (() => { const o = turnOpsOf(t); return $('top').value === 'Face' ? o.includes('Turn') || o.includes('Face') : o.includes($('top').value); })())
-  && (mode !== 'turn' || !$('pass').value || (t.ps ?? []).includes($('pass').value))); // Turn: a set Pass lists only tools with data for it
+  && (np || mode !== 'turn' || !$('pass').value || (t.ps ?? []).includes($('pass').value))); // Turn: a set Pass lists only tools with data for it
+// Turn: if the set Pass has no data for this brand/material, fall back to Any and say so (PASSFB).
+let PASSFB = false; const inMode = () => { const a = inMode0(), b = $('brand')?.value; PASSFB = false;
+  if (mode === 'turn' && $('pass').value && !a.some(t => !b || t.brand === b)) { PASSFB = true; return inMode0(true); } return a; };
 let GROUPS = {}, GUSER = false, TUSER = false; // TUSER: user picked the tool by hand, so a coolant change keeps it
 const geo = geoName;
 // Part and Groove: depth of cut and MRR do not apply; Part runs to center (finish Ø 0).
@@ -123,6 +126,7 @@ function fillTool() { const cur = $('tool').value, b = $('brand').value, words =
   const nm = ([t, g]) => b ? g : `${t.brand} — ${g}`, cnt = {}; list.forEach(x => cnt[nm(x)] = (cnt[nm(x)] || 0) + 1);
   $('tool').length = 0; list.slice(0, MAXOPT).forEach(([t, g]) => $('tool').add(new Option(distinctName(nm([t, g]), t, cnt[nm([t, g])] > 1) + (dD && out(t) ? ' — outside mfr size range' : '') + (iso && rank(t) >= 2 ? ' — no data for this material' : '') + (blind && tapTypeOf(t) === 'point' ? ' — spiral point pushes chips ahead, not for blind holes' : ''), t.key)));
   $('tn').textContent = !hits.length && mode === 'turn' && $('top').value === 'Face' ? '(none: no record says facing)' : hits.length > MAXOPT ? `(${MAXOPT} of ${hits.length}; refine search)` : `(${hits.length})`;
+  if (PASSFB) $('tn').textContent += ` · no ${$('pass').value} data, showing Any`;
   if (list.length && bad(list[0][0])) { $('tool').add(new Option(`Pick a tool — none covers this Ø with data for this material`, ''), 0); $('tool').value = ''; }
   const curT = SUM.find(x => x.key === cur); if (curT && !TUSER && bad(curT)) { $('tool').value = $('tool').options[0].value; updateFindLink(); return fillGrade(); }
   if (cur && !GROUPS[cur]) { const g = Object.keys(GROUPS).find(k => GROUPS[k].includes(cur)); if (g) $('tool').value = g; } else if ([...$('tool').options].some(o => o.value === cur)) $('tool').value = cur; updateFindLink(); return fillGrade(); }
