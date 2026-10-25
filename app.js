@@ -295,7 +295,7 @@ const chipHtml = a => a.map(([l, k]) => `<button class="chip" data-k="${k}" titl
 // Review3 #7: Groove/Part need the real stock Ø before any RPM is shown.
 const GP = () => mode === 'turn' && /Groove|Part/.test($('top').value);
 function stockAsk() { const g = GP(); $('dLbl').firstChild.textContent = (mode === 'turn' ? (g ? 'Stock dia' : 'Start dia') : $('dLbl').firstChild.textContent.split(' (')[0]) + ` (${UL()})`; $('d').placeholder = g ? 'enter real stock Ø' : ''; if (g && !TUSER_D) $('d').value = ''; }
-let TUSER_D = false;
+let TUSER_D = false, CALCN = '';
 function run() { updateFindLink(); favMark();
   if (GP() && !(inV('d') > 0)) { $('cards').innerHTML = `<div class="out"><span class="warn">Enter the real stock diameter first — RPM for ${$('top').value.toLowerCase()} comes from it.</span></div>`; $('bar').innerHTML = '<small>Enter stock Ø</small>'; return; }
   if (!curTool()) { const m = needMsg() ? needMsg() + ' to see manufacturer numbers.' : `${$('brand').value} has no ${mode} tool with data for this material and these filters.`;
@@ -342,7 +342,8 @@ function run() { updateFindLink(); favMark();
     if (mode === 'tap') o = tap({ sfm: v('sfm'), d: v('d'), pitch: v('fpt'), maxRpm: v('maxRpm') });
     if (mode === 'tap') { const th = threads.threads[$('thr').value], tt = curTool(), form = tt ? tapTypeOf(tt) === 'form' : $('tapT').value === 'form', mf = c?.tapDrill || (form && c?.formDrill), f75 = `${th.drill75_mm ? th.drill75_mm + ' mm / ' : ''}${th.drill75_in.toFixed(4)} in`; // Review3 #11
       extra = card('Tap drill', `<span style="font-size:22px">${mf || (form ? '—' : th.chart || f75)}</span>`, mf ? 'MANUFACTURER chart (this tap record)' : form ? '<span class="warn">Form tap: no manufacturer form-drill printed. The 75% drill is for cutting taps — do not use it.</span>' : th.chart ? `STANDARD chart, 75% thread (${threads.source.chart.split("'")[1] || 'tap-drill chart'}) · formula gives ${f75}` : 'DERIVED (standard formula), 75% thread', 'wide'); }
-    const calc = 'CALCULATED from the values above' + (SP?.est || FD?.est ? ' · <span class="estw">uses an ESTIMATE</span>' : '') + (!v('maxRpm') ? ' · <span class="warn">no machine max RPM set</span>' : '');
+    const calc = SP?.est || FD?.est ? '<span class="estw">uses an ESTIMATE</span>' : ''; // Review3 #16: one CALCULATED note under the results
+    CALCN = `<div class="out calcn"><b>CALCULATED:</b> RPM and feed rate are computed from the speed and feed above${SP?.est || FD?.est ? ' — <span class="estw">includes an ESTIMATE</span>' : ''}.${!v('maxRpm') ? ' <span class="warn">No machine max RPM set — RPM not limited.</span>' : ''}</div>`;
     const soN = mode === 'mill' && stickoutFactor(v('so'), v('d')) < 1 ? ` · <span class="warn">feed reduced ${Math.round((1 - stickoutFactor(v('so'), v('d'))) * 100)}% for stickout</span> (DERIVED)` : '';
     cards += card('RPM', Math.round(o.rpm), (o.capped ? '<span class="warn">capped at machine max RPM</span> · ' : '') + calc) + (TH() ? '' : card(FPL, uIpm(o.ipm, mode === 'mill' ? 1 : 2), calc + soN)) + extra;
     BAR.push(['RPM', Math.round(o.rpm)], BAR.ipr ? [metric ? 'mm/rev' : 'IPR', uFeed(v('fpt'))] : [metric ? 'mm/min' : 'IPM', uIpm(o.ipm, mode === 'mill' ? 1 : 2)]);
@@ -367,7 +368,7 @@ function run() { updateFindLink(); favMark();
   }
   const usesEst = !!(SP?.est || FD?.est), miss = !c || usesEst || (!PR && (!v('sfm') || !v('fpt')));
   const faceN = mode === 'turn' && $('top').value === 'Face' && c ? `<div class="out">Face: catalogs print turning data for this insert; using its Turn row.</div>` : '';
-  $('cards').innerHTML = w + (PASSNOTE ? `<div class="out"><span class="warn">${PASSNOTE}</span></div>` : '') + faceN + (miss ? `<div class="out"><span class="warn">${OUTROW ? 'No mfr data at this size.' : 'No manufacturer data for this combo.'}</span>${usesEst ? ' <span class="estw">Blue boxes are ESTIMATES from this maker\'s other tools, not manufacturer data.</span>' : ''}${chips.length ? '<br>Nearest options from this tool with data:<div class="chips">' + chipHtml(chips.slice(0, 3)) + (chips.length > 3 ? `</div><details class="morechips"><summary>more (${chips.length - 3})</summary><div class="chips">${chipHtml(chips.slice(3))}</div></details><div>` : '') + '</div>' : ''}</div>` : '') + `<div class="cards">${cards}</div>`;
+  $('cards').innerHTML = w + (PASSNOTE ? `<div class="out"><span class="warn">${PASSNOTE}</span></div>` : '') + faceN + (miss ? `<div class="out"><span class="warn">${OUTROW ? 'No mfr data at this size.' : 'No manufacturer data for this combo.'}</span>${usesEst ? ' <span class="estw">Blue boxes are ESTIMATES from this maker\'s other tools, not manufacturer data.</span>' : ''}${chips.length ? '<br>Nearest options from this tool with data:<div class="chips">' + chipHtml(chips.slice(0, 3)) + (chips.length > 3 ? `</div><details class="morechips"><summary>more (${chips.length - 3})</summary><div class="chips">${chipHtml(chips.slice(3))}</div></details><div>` : '') + '</div>' : ''}</div>` : '') + `<div class="cards">${cards}</div>` + CALCN; CALCN = '';
   if (mode === 'turn' && $('top').value === 'Face' && !c) { // no facing record: point to Turn, invent nothing
     $('cards').innerHTML = `<div class="out"><span class="warn">Catalogs don't print facing separately. Use the Turn numbers for the same insert.</span><br><button id="faceTurn" class="chip">Switch Operation to Turn</button></div>`;
     $('faceTurn').onclick = () => { $('top').value = 'Turn'; fillBrand(); }; }
