@@ -78,11 +78,11 @@ export function hardnessHB(text) {
 export function matchMat(m, c) {
   const text = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' ');
   if (c.materials?.includes(m.id) || (m.named && new RegExp(m.named, 'i').test(text))) {
-    if (!m.hb) return 'named'; const h = hardnessHB(text); return !h || (h[0] <= m.hb[1] && h[1] >= m.hb[0]) ? 'named' : null; }
+    if (!m.hb) return 'named'; const h = hardnessBand(text); return !h || (h[0] <= m.hb[1] && h[1] >= m.hb[0]) ? 'named' : null; }
   if (c.materials && !m.named) return null;
   if (c.iso !== '*' && c.iso !== m.iso) return null;
   if (m.group && !new RegExp(m.group, 'i').test(text)) return null;
-  if (m.hb) { const h = hardnessHB(text); if (h && !(h[0] <= m.hb[1] && h[1] >= m.hb[0])) return null; }
+  if (m.hb) { const h = hardnessBand(text); if (h && !(h[0] <= m.hb[1] && h[1] >= m.hb[0])) return null; }
   return 'group'; }
 // Plain condition choices mapped from the record's own label/operation text.
 export const passOf = c => { const s = `${c.label} ${c.operation ?? ''} ${c.subgroup ?? ''}`; return /finish|light/i.test(s) ? 'Finish' : /rough|heavy/i.test(s) ? 'Rough' : 'Medium'; };
@@ -141,10 +141,32 @@ const ALLOY_IDS = /^(p-alloy|4140|4340)/, ALLOY = /alloy|\b4[13]\d\d\b|CrMo|CrNi
 const AUST = /austenit|\b05\.2|\bM1\b|\bM1\.|\b30[1-9]L?\b|\b31[0-9]L?\b/i, NONAUST = /ferrit|martensit|duplex|precipitation|\b05\.[13]|\b4[0-4]\d\b(?!\s*(HB|HV|HRC|N))/i;
 // Thread turning: feed per rev = thread pitch (inches). TPI or metric pitch in mm.
 export const threadPitchIn = (v, u) => !(v > 0) ? null : u === 'mm' ? v / 25.4 : 1 / v;
-export const matPref = (id, c) => { const s = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' ');
+// Material class table (data-driven): row text that names the right class (good) or a different class (bad) for a picked material.
+const STEEL_OTHER = 'stainless|cast iron|alumin|titan|nickel';
+export const MAT_CLASS = [
+  [/^(p-alloy|4140|4340)/, /\b4xxx\b|\b4[13]xx\b|alloy|\b4[13]\d\d\b|CrMo|CrNiMo|\bSCM|\bSNCM/i, new RegExp(`non.?alloy|unalloy|free.?(machin|cut)|\\bmild\\b|carbon steel|tool steel|die steel|mou?ld steel|${STEEL_OTHER}`, 'i'), /heat.?treat|quench|temper|Verg[uü]t/i],
+  [/^(p20|h13)/, /tool steel|die steel|mou?ld|\bP20\b|\bH13\b|1\.23\d\d|SKD/i, new RegExp(`carbon steel|\\bmild\\b|non.?alloy|unalloy|free.?(machin|cut)|structural|${STEEL_OTHER}`, 'i')],
+  [/^p-mild/, /\bmild\b|low.?carbon|non.?alloy|unalloy|carbon steel|structural|\b10[1-4]\d\b|A36/i, new RegExp(`tool steel|die steel|mou?ld|hardened|${STEEL_OTHER}`, 'i')],
+  [/^ti64/, /Ti-?6Al|titanium alloy|\balloy|α.?β|alpha.?beta|grade 5/i, /pure titan|commercially pure|\bCP\b|unalloy|\bgrade [1-4]\b/i],
+  [/^in718/, /nickel alloy|inconel|\b718\b|Ni.?based|super ?alloy/i, /titan|cobalt|pure nickel|nickel 20[01]/i],
+  [/^ss400/, /ferrit|martensit|\b4[0-4]\d\b/i, /austenit|\b30\d|\b31\d|duplex/i],
+  [/^ss17-4/, /precipitation|17-?4|\bPH\b/i, /austenit|ferrit/i]];
+// HRB -> HB (standard table, DERIVED for matching only).
+const HRB_HB = [[60, 107], [70, 125], [75, 137], [80, 150], [85, 163], [90, 185], [95, 210], [100, 240]];
+const hrbToHb = b => { const T = HRB_HB; if (b <= T[0][0]) return T[0][1]; for (let i = 1; i < T.length; i++) if (b <= T[i][0]) { const [a, x] = T[i - 1], [c, y] = T[i]; return x + (y - x) * (b - a) / (c - a); } return T.at(-1)[1]; };
+export const hardnessBand = text => { const s = String(text ?? ''), m = s.match(/(≤|<=|<|up to|max\.?)?\s*(\d+)(?:\s*[-–~]\s*(\d+))?\s*HRB\b/i);
+  if (m) return m[1] && !m[3] ? [0, hrbToHb(+m[2])] : [hrbToHb(+m[2]), hrbToHb(+(m[3] ?? m[2]))]; return hardnessHB(s); };
+// 2 when the row's printed hardness band cannot be the picked material's (HB/HRC/HRB).
+const hbOff = (m, s) => { if (!m?.hb) return false; const h = hardnessBand(s); return !!h && !(h[0] <= m.hb[1] && h[1] >= m.hb[0]); };
+export const matPrefOld = (id, c) => { const s = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' ');
   if (ALLOY_IDS.test(id ?? '')) return NONALLOY.test(s) ? 2 : ALLOY.test(s) ? 0 : 1;
   if (id === 'ss304') return AUST.test(s) && !NONAUST.test(s) ? 0 : NONAUST.test(s) ? 2 : 1;
   return 1; };
+export const matBad = (m, c) => { const s = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' '), k = MAT_CLASS.find(([r]) => r.test(m?.id ?? ''));
+  return hbOff(m, s) || !!k && k[2].test(s) && !k[1].test(s.replace(k[2], '')) && !k[3]?.test(s) || m?.id === 'ss304' && NONAUST.test(s) && !AUST.test(s); };
+export const matPref = (id, c, m = { id }) => { const s = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' ');
+  if (id === 'ss304') return AUST.test(s) && !NONAUST.test(s) ? 0 : NONAUST.test(s) ? 2 : 1;
+  if (matBad(m, c)) return 2; const k = MAT_CLASS.find(([r]) => r.test(id ?? '')); return k && k[1].test(s) ? 0 : 1; };
 // Published diameter range of a tool in inches: [min, max] from diameters_in/mm, feed.byDiameter keys or feed.bands. null if none printed.
 export const sizeRange = t => { const v = [];
   (t.diameters_in ?? []).forEach(x => v.push(+x)); (t.diameters_mm ?? []).forEach(x => v.push(x / 25.4));

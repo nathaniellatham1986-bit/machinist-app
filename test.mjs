@@ -314,3 +314,11 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   assert.equal(run([tool('A'), tool('A')], { on: false }).sfm, null);
 }
 console.log('estimate tests ok');
+// Review3 #3: material class + hardness band mapping
+{ const { matPref, matchMat } = await import('./calc.js'); const M = JSON.parse((await import('node:fs')).readFileSync('data/materials.json')).materials, g = id => M.find(m => m.id === id);
+  assert.equal(matPref('4140-ann', { label: 'Tool steels (HRC < 25, BHN < 255)' }, g('4140-ann')), 2);
+  assert.ok(matPref('4140-ann', { label: 'Unalloyed heat-treatable steels (HRC < 20, BHN < 220)' }, g('4140-ann')) < 2);
+  assert.equal(matchMat(g('p20-pre'), { iso: 'P', label: 'Carbon Steel (10XX) < 75 HRB - Fin' }), null);
+  assert.equal(matPref('ti64', { label: 'Pure Titanium (Ti Grade 1, Ti Grade 2) 21 - 36 HRC' }, g('ti64')), 2);
+  assert.equal(matPref('ti64', { label: 'Titanium Alloy (Ti 3Al-2.5V, Ti 6Al-4V) 21 - 36 HRC' }, g('ti64')), 0);
+  console.log('material class tests ok'); }

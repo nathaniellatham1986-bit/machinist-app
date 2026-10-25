@@ -160,7 +160,7 @@ async function fillCond() {
   { const opts = [...$('cond').options].map(o => [o.value, t.conditions[+o.value]]), full = c => (c.printed || c.sfm && (c.feed || mode === 'tap')) && c.status !== 'shop-proven' && !(mode === 'drill' && rowExcludes(c, inV('d')));
     const want = matSel()?.iso || $('iso').value || 'P', cat = opts.filter(([, c]) => full(c) && c.source.kind === 'catalog');
     // General default: preferred ISO group, first material subgroup, middle (medium) published feed rather than the finishing/roughing extremes.
-    const mp = c => matPref(matSel()?.id, c); let cat2 = cat; if (matSel() && cat.some(([, c]) => mp(c) === 0)) cat2 = cat.filter(([, c]) => mp(c) === 0); else if (matSel() && cat.some(([, c]) => mp(c) < 2)) cat2 = cat.filter(([, c]) => mp(c) < 2);
+    const mp = c => matPref(matSel()?.id, c, matSel()); let cat2 = cat; if (matSel() && cat.some(([, c]) => mp(c) === 0)) cat2 = cat.filter(([, c]) => mp(c) === 0); else if (matSel() && cat.some(([, c]) => mp(c) < 2)) cat2 = cat.filter(([, c]) => mp(c) < 2);
     if (TH()) { const pI = threadPitchIn(+$('tpi').value, $('pitchU').value); if (cat2.some(([, c]) => pitchCovers(c, pI))) cat2 = cat2.filter(([, c]) => pitchCovers(c, pI)); }
     if (matSel()?.id === 'ss303' && cat2.some(([, c]) => !shared303(c))) cat2 = cat2.filter(([, c]) => !shared303(c));
     const pool = cat2.filter(([, c]) => c.iso === want).length ? cat2.filter(([, c]) => c.iso === want) : cat2, sg = pool[0]?.[1].subgroup ?? pool[0]?.[1].label;
