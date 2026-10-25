@@ -244,7 +244,7 @@ function fill() { setupSum();
   SP = sp; FD = fd; defs = { sfm: sp?.def ?? null, fpt: mode === 'tap' ? inV('fpt') : fd?.def ?? null };
   prefillEng(t, c, d);
   setIn('sfm', sp ? sp.def : ''); if (mode !== 'tap') setIn('fpt', fd ? fd.def : '');
-  $('thrL').hidden = !TH(); if (TH()) { const p = threadPitchIn(+$('tpi').value, $('pitchU').value); setIn('fpt', p ?? ''); FD = p ? { def: p, min: null, basis: 'feed/rev = thread pitch (geometry)' } : null; defs.fpt = p; }
+  $('thrL').hidden = !TH(); if (TH()) { const p = threadPitchIn(+$('tpi').value, $('pitchU').value); setIn('fpt', p ?? ''); FD = p ? { def: p, min: null, basis: 'DERIVED from thread pitch (feed/rev = pitch = 1/TPI) — fixed by geometry, not missing data' } : null; defs.fpt = p; }
   const NO = '<span class="warn">No manufacturer data</span>';
   let h = '';
   if (!c) h = !t ? '' : `${NO} for ${t ? t.brand + ' ' + t.series : 'this selection'}.` + (t?.notes ? `<br>${t.notes}` : '');
@@ -308,10 +308,10 @@ function run() { updateFindLink(); favMark();
     w += `<div class="${r > lim ? 'warn' : 'out'}">Bar L/D ${r.toFixed(1)}:1 (${$('shk').value} shank, limit ~${lim}×D)${r > lim ? ' · past the usual limit: expect chatter; shorten stickout, use a ' + ($('shk').value === 'steel' ? 'carbide or ' : '') + 'damped bar, or reduce speed/feed' : ''} <span class="tag">GENERAL GUIDANCE, not manufacturer data</span></div>`; }
   const t = curTool(), src = c ? (c.status === 'shop-proven' ? '⚠ SHOP-PROVEN, not manufacturer' : `${c.source.manufacturer} ${c.source.kind === 'label' ? 'box label' : 'catalog'}${c.source.page ? ' p.' + c.source.page : ''} ✓`) : '';
   const BAR = []; const card = (k, val, b, cls = '', ov, rl) => `<div class="card ${cls}"${ov ? ` data-ov="${ov}"` : ''}><div class="k">${k}${ov ? ' <span class="tap">✎ tap to change</span>' : ''}</div><div class="v">${val}</div><div class="b">${b}</div>${ov && (cls === 'mine' || cls === 'adj') ? '<button class="sm rst" data-reset="' + ov + '">' + (rl ?? 'Reset to manufacturer') + '</button>' : ''}</div>`;
-  const boreFz = mode === 'bore' && c?.feed?.kind === 'fz', fk = (mode === 'mill' ? 'Chip load' : mode === 'tap' ? 'Pitch' : 'Feed') + ` (${UL()}/${mode === 'mill' || boreFz ? 'tooth' : 'rev'})`, SPL = metric ? 'm/min' : 'SFM', FPL = metric ? 'Feed mm/min' : 'Feed IPM';
+  const boreFz = mode === 'bore' && c?.feed?.kind === 'fz', fk = (mode === 'mill' ? 'Chip load' : mode === 'tap' ? 'Pitch' : TH() ? 'Feed = pitch' : 'Feed') + ` (${UL()}/${mode === 'mill' || boreFz ? 'tooth' : 'rev'})`, SPL = metric ? 'm/min' : 'SFM', FPL = metric ? 'Feed mm/min' : 'Feed IPM';
   let cards = '';
   const tl = toolLifeOf(c), sfmB = SP?.est && ovc('sfm').state === 'est' ? estHtml(SP.est, 0, x => uSp(x) + (metric ? ' m/min' : ' SFM')) : ovc('sfm').state !== 'mfr' && v('sfm') ? ovHtml(ovc('sfm')) : SP ? `${src} · ${SP.basis}${SP.min != null ? ` · range ${fmt(SP, 0)}` : ''}${tl ? ` · <b>at ${tl} min tool life</b> (source)` : ''}` : '';
-  const fB = mode === 'tap' || TH() ? (TH() && !v('fpt') ? 'enter TPI or pitch' : 'feed/rev = thread pitch (geometry)') : false ? '' : mode === 'tap' ? 'thread pitch (geometry)' : FD?.est && ovc('fpt').state === 'est' ? estHtml(FD.est, 4, x => uFeed(x) + ' ' + UL() + (mode === 'mill' ? '/t' : '/rev')) : ovc('fpt').state !== 'mfr' && v('fpt') ? ovHtml(ovc('fpt')) : FD ? `${src} · ${FD.basis}${FD.min != null ? ` · range ${fmt(FD, 4)}` : ''}` : '';
+  const fB = mode === 'tap' || TH() ? (TH() && !v('fpt') ? 'enter TPI or pitch' : 'DERIVED from thread pitch (feed/rev = pitch = 1/TPI) — fixed by geometry, not missing data') : false ? '' : mode === 'tap' ? 'DERIVED from thread pitch (feed/rev = pitch) — fixed by geometry, not missing data' : FD?.est && ovc('fpt').state === 'est' ? estHtml(FD.est, 4, x => uFeed(x) + ' ' + UL() + (mode === 'mill' ? '/t' : '/rev')) : ovc('fpt').state !== 'mfr' && v('fpt') ? ovHtml(ovc('fpt')) : FD ? `${src} · ${FD.basis}${FD.min != null ? ` · range ${fmt(FD, 4)}` : ''}` : '';
   const PR = mode === 'mill' || mode === 'drill' || mode === 'bore' ? printedAt(c, v('d')) : null;
   if (PR) { const r = printedRun(PR, { dIn: v('d'), z: v('z'), maxRpm: v('maxRpm') }), ps = `${src} · printed for Ø${PR.key} ${PR.unit}`;
     const capT = r.capped ? `<span class="warn">CAPPED: printed ${PR.rpm} RPM scaled to machine max; feed scaled by the same ratio</span> · ` : '';
