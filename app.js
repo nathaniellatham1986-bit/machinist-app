@@ -1,7 +1,7 @@
 import { MODES, migrate, forMode, upsertMachine, dedupeMachines, removeMachine } from './recall.js';
 import { enhance } from './combo.js';
 import { estimate, ESTIMATES_ON, EST_MODES, sizeTxt } from './estimate.js';
-import { matBad, brandUsable, commonDrillMm, nice, compute, dataRank, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, classifyOverride, classifyEng, engFrac, drillTier, rowDia, rowExcludes, toolLifeOf } from './calc.js';
+import { matBad, brandUsable, commonDrillMm, nice, compute, dataRank, withPairs, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, classifyOverride, classifyEng, engFrac, drillTier, rowDia, rowExcludes, toolLifeOf } from './calc.js';
 let PASSNOTE = ''; // Review3 #4: set when the chosen Pass has no rows for this tool
 const $ = id => document.getElementById(id);
 const J = u => fetch(u).then(r => r.json());
@@ -12,7 +12,7 @@ const spdK = u => (u === 'm/min' ? 3.2808 : 1);
 // Lazy data: index.json lists every tool; a brand file is fetched only when one of its tools is picked.
 const SUM = idx.files.flatMap(f => f.tools.map(t => ({ ...t, file: f.file, key: f.file + '#' + t.i })));
 const DOCS = {};
-const ensure = async key => { const f = key?.split('#')[0]; if (f && !DOCS[f]) DOCS[f] = await J('data/' + f); };
+const ensure = async key => { const f = key?.split('#')[0]; if (f && !DOCS[f]) { const d = await J('data/' + f); d.tools = d.tools.map(withPairs); DOCS[f] = d; } };
 const toolBy = key => { if (!key) return null; const [f, i] = key.split('#'); return DOCS[f]?.tools[+i] ?? null; };
 const realKey = () => $('grade').value.split('|')[0] || $('tool').value, curTool = () => toolBy(realKey());
 const threads = await J('data/threads.json');
@@ -168,7 +168,8 @@ async function fillCond() {
   { const opts = [...$('cond').options].map(o => [o.value, t.conditions[+o.value]]), full = c => (c.printed || c.sfm && (c.feed || mode === 'tap')) && c.status !== 'shop-proven' && !(mode === 'drill' && rowExcludes(c, inV('d')));
     const want = matSel()?.iso || $('iso').value || 'P', cat = opts.filter(([, c]) => full(c) && c.source.kind === 'catalog');
     // General default: preferred ISO group, first material subgroup, middle (medium) published feed rather than the finishing/roughing extremes.
-    const mp = c => matPref(matSel()?.id, c, matSel()); let cat2 = cat; if (matSel() && cat.some(([, c]) => mp(c) === 0)) cat2 = cat.filter(([, c]) => mp(c) === 0); else if (matSel() && cat.some(([, c]) => mp(c) < 2)) cat2 = cat.filter(([, c]) => mp(c) < 2);
+    const mp = c => matPref(matSel()?.id, c, matSel()); let cat2 = cat.some(([, c]) => !c.paired && mp(c) < 2) ? cat.filter(([, c]) => !c.paired) : cat; // a real one-row manufacturer record beats an app-paired row
+    { const cat = cat2; if (matSel() && cat.some(([, c]) => mp(c) === 0)) cat2 = cat.filter(([, c]) => mp(c) === 0); else if (matSel() && cat.some(([, c]) => mp(c) < 2)) cat2 = cat.filter(([, c]) => mp(c) < 2); }
     if (TH()) { const pI = threadPitchIn(+$('tpi').value, $('pitchU').value); if (cat2.some(([, c]) => pitchCovers(c, pI))) cat2 = cat2.filter(([, c]) => pitchCovers(c, pI)); }
     if (mode === 'drill') { const cl = $('cool').value, cm = c => coolModes(c.coolant ?? ''); if (cat2.some(([, c]) => cm(c).includes(cl)) && cat2.some(([, c]) => cm(c).length && !cm(c).includes(cl))) cat2 = cat2.filter(([, c]) => !cm(c).length || cm(c).includes(cl)); } // records that differ by coolant: follow the Coolant picker
     if (matSel()?.id === 'ss303' && cat2.some(([, c]) => !shared303(c))) cat2 = cat2.filter(([, c]) => !shared303(c));
@@ -333,11 +334,13 @@ function run() { tapBox(); updateFindLink(); favMark();
   if (mode === 'bore' && v('so')) { const bd = v('bd') || v('d'), lim = boreLimit($('shk').value), r = v('so') / bd;
     w += `<div class="${r > lim ? 'warn' : 'out'}">Bar L/D ${r.toFixed(1)}:1 (${$('shk').value} shank, limit ~${lim}×D)${r > lim ? ' · past the usual limit: expect chatter; shorten stickout, use a ' + ($('shk').value === 'steel' ? 'carbide or ' : '') + 'damped bar, or reduce speed/feed' : ''} <span class="tag">GENERAL GUIDANCE, not manufacturer data</span></div>`; }
   const t = curTool(), src = c ? (c.status === 'shop-proven' ? '⚠ SHOP-PROVEN, not manufacturer' : `${c.source.manufacturer} ${c.source.kind === 'label' ? 'box label' : 'catalog'}${c.source.page ? ' p.' + c.source.page : ''} ✓`) : '';
+  const fpg = c?.feedSource && (c.feedSource.page ?? c.feedSource.catalog?.match(/p\.\s?(\d+)/)?.[1]), fsrc = c?.feedSource ? `${c.feedSource.manufacturer} catalog${fpg ? ' p.' + fpg : ''} ✓ (feed table)` : src;
+  if (c?.paired) w += `<div class="warn">PAIRED BY THIS APP: speed and feed come from two different ${esc(c.source.manufacturer)} catalog pages, not one manufacturer row. Speed: “${esc(c.sourceGroup ?? c.label.split(' · speed table')[0])}” (${c.source.page ? 'p.' + esc(c.source.page) : 'speed table'}). Feed: “${esc(c.feedLabel)}” (${fpg ? 'p.' + esc(fpg) : 'feed table'}).</div>`;
   const BAR = []; const card = (k, val, b, cls = '', ov, rl) => `<div class="card ${cls}"${ov ? ` data-ov="${ov}"` : ''}><div class="k">${k}${ov ? ' <span class="tap">✎ tap to change</span>' : ''}</div><div class="v">${val}</div><div class="b">${b}</div>${ov && (cls === 'mine' || cls === 'adj') ? '<button class="sm rst" data-reset="' + ov + '">' + (rl ?? 'Reset to manufacturer') + '</button>' : ''}</div>`;
   const boreFz = mode === 'bore' && c?.feed?.kind === 'fz', fk = (mode === 'mill' ? 'Chip load' : mode === 'tap' ? 'Pitch' : TH() ? 'Feed = pitch' : 'Feed') + ` (${UL()}/${mode === 'mill' || boreFz ? 'tooth' : 'rev'})`, SPL = metric ? 'm/min' : 'SFM', FPL = metric ? 'Feed mm/min' : 'Feed IPM';
   let cards = '';
   const tl = toolLifeOf(c), sfmB = SP?.est && ovc('sfm').state === 'est' ? estHtml(SP.est, 0, x => uSp(x) + (metric ? ' m/min' : ' SFM')) : ovc('sfm').state !== 'mfr' && v('sfm') ? ovHtml(ovc('sfm')) : SP ? `${src} · ${SP.basis}${SP.min != null ? ` · range ${fmt(SP, 0)}` : ''}${tl ? ` · <b>at ${tl} min tool life</b> (source)` : ''}` : '';
-  const fB = mode === 'tap' || TH() ? (TH() && !v('fpt') ? 'enter TPI or pitch' : 'DERIVED from thread pitch (feed/rev = pitch = 1/TPI) — fixed by geometry, not missing data') : false ? '' : mode === 'tap' ? 'DERIVED from thread pitch (feed/rev = pitch) — fixed by geometry, not missing data' : FD?.est && ovc('fpt').state === 'est' ? estHtml(FD.est, 4, x => uFeed(x) + ' ' + UL() + (mode === 'mill' ? '/t' : '/rev')) : ovc('fpt').state !== 'mfr' && v('fpt') ? ovHtml(ovc('fpt')) : FD ? `${src} · ${FD.basis}${FD.min != null ? ` · range ${fmt(FD, 4)}` : ''}` : '';
+  const fB = mode === 'tap' || TH() ? (TH() && !v('fpt') ? 'enter TPI or pitch' : 'DERIVED from thread pitch (feed/rev = pitch = 1/TPI) — fixed by geometry, not missing data') : false ? '' : mode === 'tap' ? 'DERIVED from thread pitch (feed/rev = pitch) — fixed by geometry, not missing data' : FD?.est && ovc('fpt').state === 'est' ? estHtml(FD.est, 4, x => uFeed(x) + ' ' + UL() + (mode === 'mill' ? '/t' : '/rev')) : ovc('fpt').state !== 'mfr' && v('fpt') ? ovHtml(ovc('fpt')) : FD ? `${fsrc} · ${FD.basis}${FD.min != null ? ` · range ${fmt(FD, 4)}` : ''}` : '';
   const PR = mode === 'mill' || mode === 'drill' || mode === 'bore' ? printedAt(c, v('d')) : null;
   if (PR) { const r = printedRun(PR, { dIn: v('d'), z: v('z'), maxRpm: v('maxRpm') }), ps = `${src} · printed for Ø${PR.key} ${PR.unit}`;
     const capT = r.capped ? `<span class="warn">CAPPED: printed ${PR.rpm} RPM scaled to machine max; feed scaled by the same ratio</span> · ` : '';

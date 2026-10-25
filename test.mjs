@@ -372,3 +372,12 @@ console.log('estimate tests ok');
   assert.equal(dataRank({ fullIsos: ['P'] }, '4140-ann', 'P'), 0); assert.equal(dataRank({ fullIsos: ['P~'] }, '4140-ann', 'P'), 1);
   assert.equal(dataRank({ fullIsos: ['M'] }, '4140-ann', 'P'), 2); assert.equal(dataRank({ fullIsos: ['P'], nm: ['4140-ann'] }, '4140-ann', 'P'), 2);
   console.log('dataRank ok'); }
+// Iscar Turn: speed-only grade table + feed-only insert table in the same tool record are paired, labeled, sources kept separate.
+{ const { withPairs, matPref } = await import('./calc.js'); const fs = await import('node:fs');
+  const t = JSON.parse(fs.readFileSync('data/iscar-turn.json')).tools.find(t => t.series === 'VNMG-NF IC807'), p = withPairs(t).conditions.filter(c => c.paired);
+  assert.ok(p.length > 0 && p.every(c => c.sfm && c.feed && c.feedSource && c.source.page == 246 && /p\.165/.test(c.feedSource.catalog)));
+  assert.ok(p.every(c => c.iso !== '*'));
+  assert.equal(withPairs(withPairs(t)).conditions.length, withPairs(t).conditions.length);
+  const g6 = p.find(c => /Grp 6/.test(c.label)), g1 = p.find(c => /Grp 1 /.test(c.label));
+  assert.ok(matPref('4140-ann', g6) < matPref('4140-ann', g1));
+  const noFeed = { mode: 'turn', conditions: [{ iso: 'P', sfm: { min: 1 }, label: 'a', source: { page: 1 } }] }; assert.equal(withPairs(noFeed), noFeed); }

@@ -170,9 +170,10 @@ export const matPrefOld = (id, c) => { const s = [c.label, c.sourceGroup, c.subg
   return 1; };
 export const matBad = (m, c) => { const s = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' ').replace(/\([^)]*not transcribed[^)]*\)/gi, ''), k = MAT_CLASS.find(([r]) => r.test(m?.id ?? ''));
   return hbOff(m, s) || !!k && k[2].test(s) && !k[1].test(s.replace(k[2], '')) && !k[3]?.test(s) || m?.id === 'ss304' && NONAUST.test(s) && !AUST.test(s); };
+// Alloy-steel ids: a non-alloy row is a fallback only (1), never preferred over an alloy row (0).
 export const matPref = (id, c, m = { id }) => { const s = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' ');
   if (id === 'ss304') return AUST.test(s) && !NONAUST.test(s) ? 0 : NONAUST.test(s) ? 2 : 1;
-  if (matBad(m, c)) return 2; const k = MAT_CLASS.find(([r]) => r.test(id ?? '')); return k && k[1].test(s) ? 0 : 1; };
+  if (matBad(m, c)) return 2; if (ALLOY_IDS.test(id ?? '') && NONALLOY.test(s) && !ALLOY.test(s.replace(new RegExp(NONALLOY.source, 'gi'), ''))) return 1; const k = MAT_CLASS.find(([r]) => r.test(id ?? '')); return k && k[1].test(s) ? 0 : 1; };
 // Published diameter range of a tool in inches: [min, max] from diameters_in/mm, feed.byDiameter keys or feed.bands. null if none printed.
 export const sizeRange = t => { const v = [];
   (t.diameters_in ?? []).forEach(x => v.push(+x)); (t.diameters_mm ?? []).forEach(x => v.push(x / 25.4));
@@ -274,6 +275,17 @@ export const ownNames = (t, m) => { const k = MAT_CLASS.find(([r]) => r.test(m?.
 export const brandUsable = (t, m, onlyData = true) => { if (m && !(t.mats.includes(m.id) || t.isos.includes(m.iso) || t.isos.includes('*'))) return false;
   if (onlyData && m?.id && t.nm?.includes(m.id)) return false; // ISO group has data, but no row fits this material
   return !onlyData || !m?.iso || (t.fullIsos ?? []).some(x => { x = x.replace('~', ''); return x === '*' || x === m.iso; }); };
+// Turning: a tool whose record holds a speed-only table (by material group) and a feed-only insert table ('all materials')
+// from DIFFERENT catalog pages gets paired rows. Each paired row keeps both sources (source = speed page, feedSource = feed page)
+// and is flagged paired, so the UI never shows it as one manufacturer row. Same tool record only; never across tools or brands.
+const pageOf = s => `${s?.url ?? ''}|${s?.page ?? ''}`;
+export const withPairs = t => { const cs = t.conditions ?? []; if (t.mode !== 'turn' || cs.some(c => c.paired)) return t;
+  const S = cs.filter(c => c.sfm && !c.feed && c.iso && c.iso !== '*' && c.status !== 'shop-proven' && turnOpOf(t, c) !== 'Thread'),
+    F = cs.filter(c => c.feed && !c.sfm && c.status !== 'shop-proven' && turnOpOf(t, c) !== 'Thread'); if (!S.length || !F.length) return t;
+  const add = []; for (const s of S) for (const f of F) { if ((f.iso !== '*' && f.iso !== s.iso) || pageOf(s.source) === pageOf(f.source)) continue;
+    add.push({ ...f, label: `${s.label} · speed table + feed ${f.insert ?? f.label.replace(/\s*\(.*$/, '')}`, iso: s.iso, subgroup: s.subgroup, sourceGroup: s.sourceGroup, materials: s.materials, material: s.material,
+      sfm: s.sfm, coolant: s.coolant ?? f.coolant, operation: s.operation ?? f.operation, status: s.status === f.status ? s.status : 'derived', source: s.source, feedSource: f.source, feedLabel: f.label, paired: true }); }
+  return add.length ? { ...t, conditions: [...cs, ...add] } : t; };
 // Picker's data rank for one tool (the tool list greys rank 2 as 'no data for this material'). Shared by app.js and the audit.
 export const dataRank = (t, mid, iso) => { if (mid && t.nm?.includes(mid)) return 2; const f = t.fullIsos || [], ok = i => !iso || i === iso || i === '*';
   return f.some(x => !x.includes('~') && ok(x)) ? 0 : f.some(x => ok(x.replace('~', ''))) ? 1 : 2; };
