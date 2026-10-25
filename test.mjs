@@ -353,3 +353,8 @@ console.log('estimate tests ok');
   assert.ok(matBad({ id: 'p20-pre', iso: 'P' }, { label: 'Carbon Steel < 75 HRB - Slot' }));
   assert.ok(matBad({ id: '4140-ann', iso: 'P' }, { label: 'Tool steels (HRC < 25, BHN < 255)' }));
   console.log('wrong-material rows excluded'); }
+{ const { feedLow } = await import('./estimate.js'); const assert = (await import('node:assert')).default; // estimate (a): byDiameter never uses a larger Ø
+  const c = { feed: { kind: 'fz', unit: 'in', byDiameter: { '0.5': 0.002, '0.515': 0.003 } } };
+  assert.equal(feedLow(c, {}, 0.51).at, 0.5); assert.equal(feedLow(c, {}, 0.51).v, 0.002);
+  assert.equal(feedLow({ feed: { kind: 'fz', unit: 'in', byDiameter: { '0.52': 0.003 } } }, {}, 0.51), null);
+  console.log('estimate byDiameter smaller-only ok'); }

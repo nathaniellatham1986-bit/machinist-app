@@ -16,8 +16,8 @@ function matOk(m, c) { const r = matchMat(m, c); if (!r) return null; if (c.iso 
     if (both || (m.id === 'ss303' ? shared303(c) : /\b303\b/.test(`${c.label} ${c.sourceGroup ?? ''}`))) return null; }
   return r; }
 // Chip load / IPR at Ø d from a record: exact Ø, else nearest SMALLER published Ø within 25% (smaller = lower chip load; never extrapolated up).
-function feedLow(c, t, d) { const f = c.feed; if (!f) return null; const u = toIn(1, f.unit);
-  if (f.byDiameter) { const ks = Object.keys(f.byDiameter).map(k => [k, +k * u]).filter(([, x]) => Math.abs(x - d) < 0.02 || (x <= d && x >= d * (1 - EST_BAND)));
+export function feedLow(c, t, d) { const f = c.feed; if (!f) return null; const u = toIn(1, f.unit);
+  if (f.byDiameter) { const ks = Object.keys(f.byDiameter).map(k => [k, +k * u]).filter(([, x]) => x <= d + 1e-4 && x >= d * (1 - EST_BAND)); // never a LARGER published Ø
     if (!ks.length) return null; const [k, x] = ks.sort((a, b) => Math.abs(a[1] - d) - Math.abs(b[1] - d))[0], v = f.byDiameter[k];
     return { v: lowOf(typeof v === 'object' ? v : { value: v }, u), at: x }; }
   if (f.bands) { const b = f.bands.filter(([a, z]) => a * u <= d + 1e-4 && z * u >= d * (1 - EST_BAND)).sort((p, q) => q[1] - p[1])[0];
