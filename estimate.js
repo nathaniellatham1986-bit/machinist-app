@@ -5,6 +5,9 @@ import { pick, matchMat, coolModes, shared303, kindOf, rowDia, sizeRange, grades
 export const ESTIMATES_ON = true; // kill switch
 export const EST_MIN = 2, EST_BAND = 0.25, EST_MODES = ['mill', 'drill', 'tap'];
 const toIn = (v, u) => (u === 'mm' ? v / 25.4 : v), SPK = u => (u === 'm/min' ? 3.2808 : 1);
+const inR = (r, d) => !!r && d >= r[0] - 1e-6 && d <= r[1] + 1e-6;
+// D: '3/8 in' when a 64th fraction, else decimal
+export const sizeTxt = x => { const n = Math.round(x * 64); if (Math.abs(n / 64 - x) < 1e-4 && n) { let a = n, b = 64; while (a % 2 === 0) { a /= 2; b /= 2; } const w = Math.floor(a / b), r = a % b; return `${w ? w + (r ? ' ' : '') : ''}${r ? r + '/' + b : ''} in`; } return `${+x.toFixed(4)} in`; };
 export const nearSize = (r, d) => !!r && d > 0 && (d >= r[0] - 1e-6 && d <= r[1] + 1e-6 || Math.min(Math.abs(d - r[0]), Math.abs(d - r[1])) <= EST_BAND * d + 1e-6);
 const lowOf = (spec, k) => { const p = pick(spec, k); return p ? (p.min ?? p.def) : null; };
 // Material: named match preferred; 303 and 304 only from rows naming that grade alone.
@@ -37,8 +40,8 @@ export function estimate({ target, targetTool, targetKey, cands, geom = true, ow
       const cm = coolModes(typeof c.coolant === 'string' ? c.coolant : ''); if (cm.length && !cm.includes(cool)) continue;
       const g = gradesOf(t, c), sameCoat = !!coat && g.some(x => x.toLowerCase() === coat);
       const base = { key, brand: brandName(t.brand), series: t.series, coating: g.join(', ') || null, label: c.label, source: srcText(c.source), url: c.source.url ?? null, named: mm === 'named', sameCoat };
-      if (need.sfm && c.sfm) { const r = rowDia(c) ?? sizeRange(t); const v = lowOf(c.sfm, SPK(c.sfm.unit)); if (v > 0 && nearSize(r, d)) rows.sfm.push({ ...base, value: v }); }
-      if (need.fpt && target.mode !== 'tap' && c.feed && (c.feed.kind ?? fk) === fk) { const f = feedLow(c, t, d); if (f?.v > 0) rows.fpt.push({ ...base, value: f.v, at: f.at }); }
+      if (need.sfm && c.sfm) { const r = rowDia(c) ?? sizeRange(t); const v = lowOf(c.sfm, SPK(c.sfm.unit)); if (v > 0 && nearSize(r, d)) rows.sfm.push({ ...base, value: v, size: r, close: !inR(r, d) }); }
+      if (need.fpt && target.mode !== 'tap' && c.feed && (c.feed.kind ?? fk) === fk) { const f = feedLow(c, t, d); if (f?.v > 0) { const r = rowDia(c) ?? sizeRange(t); rows.fpt.push({ ...base, value: f.v, at: f.at, size: r, close: !!r && !inR(r, d) }); } }
     } }
   const tools = l => new Set(l.map(x => x.key)).size;
   for (const k of ['sfm', 'fpt']) { let l = rows[k];
@@ -46,5 +49,5 @@ export function estimate({ target, targetTool, targetKey, cands, geom = true, ow
     if (tools(l.filter(x => x.sameCoat)) >= EST_MIN) l = l.filter(x => x.sameCoat); // closest coating first
     if (tools(l) < EST_MIN) continue;
     l = [...l].sort((a, b) => a.value - b.value);
-    out[k] = { def: l[0].value, n: tools(l), sources: l, derived: true, est: true }; }
+    out[k] = { def: l[0].value, n: tools(l), sources: l, d, close: l.some(x => x.close), derived: true, est: true }; }
   return out; }

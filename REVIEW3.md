@@ -38,3 +38,5 @@ One commit per item. After each: validate.mjs, test.mjs, validate-machines.mjs, 
 ## Estimate follow-ups
 | A | Estimates borrow only from same end geometry (ball/bull/square; unknown → none) | PASS — 4097 → 1795 combos (−2302) | ui/12-A-ball-estimate.png |
 | B | Estimates only for materials the tool's own records name (class-level: Ti rows don't qualify Inconel) | PASS — 1795 → 573 (−1222) | ui/12-B-multicut-in718-no-estimate.png |
+| C | Saved favorite of an estimate setup recalls blue after reload | PASS — no code change needed (Recall label shows ESTIMATE; blue box restored) | ui/12-C-fav-estimate-recalled.png |
+| D | Sources list flags close-size rows ("size … — close to your 1 in, not exact"), basis says "sizes close to yours" | PASS | ui/12-D-close-size-sources.png |

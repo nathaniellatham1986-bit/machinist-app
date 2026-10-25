@@ -338,3 +338,5 @@ console.log('estimate tests ok');
   const ti = { conditions: [{ label: 'S 1.2 Titanium alloys ≤27 HRC (6Al4V)', iso: 'S', source: src }] }, ni = { conditions: [{ label: 'S 2.1 Nickel alloys (Inconel 718)', iso: 'S', source: src }] }, { ownNames } = await import('./calc.js');
   assert.equal(ownNames(ti, M('in718')), false); assert.equal(ownNames(ni, M('in718')), true); assert.equal(ownNames(ti, M('ti64')), true);
 }
+{ const { sizeTxt } = await import('./estimate.js'); const assert = (await import('node:assert')).default;
+  assert.equal(sizeTxt(0.375), '3/8 in'); assert.equal(sizeTxt(1.25), '1 1/4 in'); assert.equal(sizeTxt(0.3937), '0.3937 in'); console.log('D size text tests pass'); }
