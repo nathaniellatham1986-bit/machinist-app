@@ -22,7 +22,7 @@ export function feedLow(c, t, d) { const f = c.feed; if (!f) return null; const 
     return { v: lowOf(typeof v === 'object' ? v : { value: v }, u), at: x }; }
   if (f.bands) { const b = f.bands.filter(([a, z]) => a * u <= d + 1e-4 && z * u >= d * (1 - EST_BAND)).sort((p, q) => q[1] - p[1])[0];
     return b ? { v: b[2] * u, at: Math.min(d, b[1] * u) } : null; }
-  if (f.range) { const r = rowDia(c) ?? sizeRange(t); return nearSize(r, d) ? { v: lowOf(f.range, u), at: null } : null; }
+  if (f.range) { const r = rowDia(c) ?? sizeRange(t); return r && r[0] <= d + 1e-4 && r[1] >= d * (1 - EST_BAND) ? { v: lowOf(f.range, u), at: null } : null; } // covers Ø or smaller tool only
   return null; }
 const srcText = s => [s.catalog, s.edition, s.page ? 'p.' + s.page : ''].filter(Boolean).join(' · ');
 // target: {brand, mode, series, type, grade}; cands: [{key, tool}] (full tools); mat: material object; d (in); cool; need: {sfm, fpt}

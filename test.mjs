@@ -358,3 +358,8 @@ console.log('estimate tests ok');
   assert.equal(feedLow(c, {}, 0.51).at, 0.5); assert.equal(feedLow(c, {}, 0.51).v, 0.002);
   assert.equal(feedLow({ feed: { kind: 'fz', unit: 'in', byDiameter: { '0.52': 0.003 } } }, {}, 0.51), null);
   console.log('estimate byDiameter smaller-only ok'); }
+{ const { feedLow } = await import('./estimate.js'); const assert = (await import('node:assert')).default; // estimate (b1): f.range never from a larger tool
+  const c = r => ({ diameters_in: r, feed: { kind: 'fz', unit: 'in', range: { min: 0.002, max: 0.004 } } });
+  assert.equal(feedLow({ feed: c().feed }, { diameters_in: [0.55, 0.6] }, 0.5), null);
+  assert.equal(feedLow({ feed: c().feed }, { diameters_in: [0.4, 0.45] }, 0.5)?.v, 0.002);
+  console.log('estimate range smaller-only ok'); }
