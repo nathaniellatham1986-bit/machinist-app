@@ -296,7 +296,19 @@ const chipHtml = a => a.map(([l, k]) => `<button class="chip" data-k="${k}" titl
 const GP = () => mode === 'turn' && /Groove|Part/.test($('top').value);
 function stockAsk() { const g = GP(); $('dLbl').firstChild.textContent = (mode === 'turn' ? (g ? 'Stock dia' : 'Start dia') : $('dLbl').firstChild.textContent.split(' (')[0]) + ` (${UL()})`; $('d').placeholder = g ? 'enter real stock Ø' : ''; if (g && !TUSER_D) $('d').value = ''; }
 let TUSER_D = false, CALCN = '';
-function run() { updateFindLink(); favMark();
+// Review3 #11 / tap-drill box: manufacturer tapDrill/formDrill → STANDARD chart → DERIVED 75%; form tap without mfr form drill → '—' + warning.
+const mmOf = x => { const m = String(x).match(/\.\d+|\d+\.\d+/); return m ? (parseFloat(m[0]) * 25.4).toFixed(2) + ' mm' : ''; };
+function tapDrillInfo(c) { const th = threads.threads[$('thr').value]; if (!th) return { val: '—', lbl: 'pick a thread', src: '' };
+  const tt = curTool(), form = tt ? tapTypeOf(tt) === 'form' : $('tapT').value === 'form', mf = c?.tapDrill || (form && c?.formDrill),
+    f75 = `${th.drill75_mm ? th.drill75_mm + ' mm / ' : ''}${th.drill75_in.toFixed(4)} in`;
+  if (mf) return { val: mf, sub: /mm/.test(mf) ? '' : mmOf(mf), lbl: 'MANUFACTURER chart (this tap record)', src: 'MANUFACTURER' };
+  if (form) return { val: '—', sub: '', lbl: '<span class="warn">Form tap: no manufacturer form-drill printed. The 75% drill is for cutting taps — do not use it.</span>', src: 'warn' };
+  if (th.chart) return { val: th.chart, sub: mmOf(th.chart), lbl: `STANDARD chart, 75% thread (${threads.source.chart.split("'")[1] || 'tap-drill chart'}) · formula gives ${f75}`, src: 'STANDARD' };
+  return { val: th.drill75_in.toFixed(4) + ' in', sub: th.drill75_mm ? th.drill75_mm + ' mm' : '', lbl: 'DERIVED (standard formula), 75% thread', src: 'DERIVED' }; }
+function tapBox() { const e = $('tdBox'); if (!e) return; e.hidden = mode !== 'tap'; if (mode !== 'tap') return;
+  const k = tapDrillInfo(curTool()?.conditions[$('cond').value]);
+  e.innerHTML = `<span class="tdl">Drill</span><b class="tdv">${esc(String(k.val))}</b>${k.sub ? `<span class="tdm">${k.sub}</span>` : ''}<small class="tds${k.src === 'warn' ? ' warn' : ''}">${k.src === 'warn' ? 'Form tap: no mfr drill — not the 75% cutting drill' : k.src}</small>`; }
+function run() { tapBox(); updateFindLink(); favMark();
   if (GP() && !(inV('d') > 0)) { $('cards').innerHTML = `<div class="out"><span class="warn">Enter the real stock diameter first — RPM for ${$('top').value.toLowerCase()} comes from it.</span></div>`; $('bar').innerHTML = '<small>Enter stock Ø</small>'; return; }
   if (!curTool()) { const m = needMsg() ? needMsg() + ' to see manufacturer numbers.' : `${$('brand').value} has no ${mode} tool with data for this material and these filters.`;
     $('cards').innerHTML = `<div class="out"><span class="warn">${m}</span></div>`; $('bar').innerHTML = `<small>${m}</small>`; return; } if (PART()) $('fD').value = '0'; if (mode === 'mill') readEng();
@@ -340,8 +352,7 @@ function run() { updateFindLink(); favMark();
     if (mode === 'bore') { o = drill({ sfm: v('sfm'), d: v('d'), ipr: boreFz ? v('fpt') * (v('z') || 1) : v('fpt'), maxRpm: v('maxRpm') });
       extra = `<div class="card wide"><div class="b">Bore: RPM from SFM at bore Ø ${v('d')} in; ${boreFz ? `IPM = RPM × feed/tooth × ${v('z') || 1} cutting edge(s) (manufacturer prints per tooth)` : 'IPM = RPM × feed/rev (manufacturer prints per rev)'} · DERIVED</div></div>`; }
     if (mode === 'tap') o = tap({ sfm: v('sfm'), d: v('d'), pitch: v('fpt'), maxRpm: v('maxRpm') });
-    if (mode === 'tap') { const th = threads.threads[$('thr').value], tt = curTool(), form = tt ? tapTypeOf(tt) === 'form' : $('tapT').value === 'form', mf = c?.tapDrill || (form && c?.formDrill), f75 = `${th.drill75_mm ? th.drill75_mm + ' mm / ' : ''}${th.drill75_in.toFixed(4)} in`; // Review3 #11
-      extra = card('Tap drill', `<span style="font-size:22px">${mf || (form ? '—' : th.chart || f75)}</span>`, mf ? 'MANUFACTURER chart (this tap record)' : form ? '<span class="warn">Form tap: no manufacturer form-drill printed. The 75% drill is for cutting taps — do not use it.</span>' : th.chart ? `STANDARD chart, 75% thread (${threads.source.chart.split("'")[1] || 'tap-drill chart'}) · formula gives ${f75}` : 'DERIVED (standard formula), 75% thread', 'wide'); }
+    if (mode === 'tap') { const k = tapDrillInfo(c); extra = card('Tap drill', `<span style="font-size:22px">${k.val}</span>`, k.lbl, 'wide'); } // Review3 #11
     const calc = SP?.est || FD?.est ? '<span class="estw">uses an ESTIMATE</span>' : ''; // Review3 #16: one CALCULATED note under the results
     CALCN = `<div class="out calcn"><b>CALCULATED:</b> RPM and feed rate are computed from the speed and feed above${SP?.est || FD?.est ? ' — <span class="estw">includes an ESTIMATE</span>' : ''}.${!v('maxRpm') ? ' <span class="warn">No machine max RPM set — RPM not limited.</span>' : ''}</div>`;
     const soN = mode === 'mill' && stickoutFactor(v('so'), v('d')) < 1 ? ` · <span class="warn">feed reduced ${Math.round((1 - stickoutFactor(v('so'), v('d'))) * 100)}% for stickout</span> (DERIVED)` : '';

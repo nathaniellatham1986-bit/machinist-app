@@ -41,3 +41,4 @@ One commit per item. After each: validate.mjs, test.mjs, validate-machines.mjs, 
 | C | Saved favorite of an estimate setup recalls blue after reload | PASS — no code change needed (Recall label shows ESTIMATE; blue box restored) | ui/12-C-fav-estimate-recalled.png |
 | D | Sources list flags close-size rows ("size … — close to your 1 in, not exact"), basis says "sizes close to yours" | PASS | ui/12-D-close-size-sources.png |
 | Coolant/More | Coolant beside Machine profile at top; More removed (search box dropped, condition search + "only tools with data" moved into Setup, length/support under Dia in Turn) | PASS | ui/13-coolant-top.png, ui/13-turn-len-under-dia.png |
+| Tap drill box | Drill-size box beside Tap dia (mfr → STANDARD → DERIVED; form tap without mfr drill → — + warning); full Tap drill card kept for source detail | PASS | ui/14-tapdrill-*.png |
