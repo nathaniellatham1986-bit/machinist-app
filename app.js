@@ -116,7 +116,7 @@ function fillTool() { const cur = $('tool').value, b = $('brand').value, words =
     const gen = !iso && mode !== 'tap' ? (f.includes('P') ? 0 : .25) + (mode === 'turn' && !(t.pFeed >= .012 && t.pFeed <= .025) ? .2 : 0) : 0; return gen + (f.some(x => !x.includes('~') && ok(x)) ? 0 : f.some(x => ok(x.replace('~', ''))) ? 1 : 2); };
   const r2 = t => rank(t) + (/parting|groov|thread/i.test(t.series + (t.type ?? '')) ? .5 : 0); const dD = mode === 'drill' || mode === 'mill' ? inV('d') : 0, out = t => inRange(t.dr, dD) === false;
   const GEN = /\b[CWDVTS]NMG/i, r2b = t => r2(t) + (mode === 'turn' && $('top').value === 'Turn' && !GEN.test(`${t.series} ${t.type ?? ''}`) ? .3 : 0);
-  const r2c = t => r2b(t) + (mode === 'turn' && $('top').value === 'Groove' && /face/i.test(`${t.series} ${t.type ?? ''}`) ? .3 : 0) + (/Groove|Turn/.test($('top').value) && isMFDrill(t) ? .9 : 0);
+  const r2c = t => r2b(t) + (mode === 'turn' && $('top').value === 'Groove' && /face/i.test(`${t.series} ${t.type ?? ''}`) ? 1.5 : 0) /* face grooving never the OD default over an OD tool with data */ + (/Groove|Turn/.test($('top').value) && isMFDrill(t) ? .9 : 0);
   const blind = mode === 'tap' && $('hole').value === 'blind', bl = t => !blind ? 0 : { flute: 0, form: 0, '': 1 }[tapTypeOf(t)] ?? 3;
   const r3 = t => r2c(t) + bl(t) + (mode === 'drill' ? drillRank(t, $('cool').value) : 0) + (matSel()?.id === 'ss303' && !t.only303 ? .1 : 0) + (dD ? 20 * drillTier(t, dD, iso) : 0); hits.sort((x, y) => r3(x) - r3(y));
   const bad = t => dD && out(t) || !!iso && rank(t) >= 2; // never auto-picked
