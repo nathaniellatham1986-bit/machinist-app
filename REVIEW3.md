@@ -23,3 +23,4 @@ One commit per item. After each: validate.mjs, test.mjs, validate-machines.mjs, 
 | 1 | (see git) | PASS | Brand change re-fills Type; kindOf phrase rules. Mill>Sandvik: End mill/Insert only. |
 | 2 | (see git) | PASS | Out-of-range / no-data tools never auto-picked (mill+drill; mill now has dr/dd in index). Brands without data grayed 'no data for this material'. |
 | 3 | (see git) | PASS | MAT_CLASS table + HRB-aware hardness bands. Audit (scripts/audit-materials.mjs): 29,462 combos; default row names wrong class 6,222 → 2,332; avoidable 3,890 → 0 (rest: tool has only other-class rows). Guhring 205/206+4140 → Unalloyed heat-treatable; Helical P20 → Tool Steel 21–36 HRC; Ti-6Al-4V → Titanium Alloy. |
+| 4 | (see git) | PASS | Face lists Turn-capable inserts and uses their turning rows (note shown). Pass with no rows → 'No Finish data for this tool — showing Any.' |
