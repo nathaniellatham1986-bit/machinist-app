@@ -84,7 +84,7 @@ function setMode(m) {
   $('dLbl').firstChild.textContent = (m === 'turn' ? 'Start dia' : m === 'tap' ? 'Tap dia' : m === 'bore' ? 'Bore dia' : 'Tool dia') + ` (${UL()})`; machines();
   $('zLbl').firstChild.textContent = m === 'bore' ? 'Cutting edges' : 'Flutes'; if (m === 'bore') $('z').value = 1;
   Object.assign(frac, { ae: 0.25, ap: 1 }); $('ae').value = 25; $('aeU').value = 'pct'; $('ap').value = 1; $('apU').value = 'xd'; TUSER_D = false; // Review3 #8: engagement/pass/cut back to mode defaults; material, coolant, machine kept
-  $('pass').value = ''; $('cut').value = ''; $('brand').length = 0; $('tool').length = 0; $('tq').value = ''; $('cq').value = ''; return fillBrand();
+  $('pass').value = ''; $('cut').value = ''; $('brand').length = 0; $('tool').length = 0; $('cq').value = ''; return fillBrand();
 }
 const toolOk = t => { const m = matSel(); if (m && !(t.mats.includes(m.id) || t.isos.includes(m.iso) || t.isos.includes('*'))) return false;
   return !$('onlyData').checked || t.dataIsos.some(i => i === '*' || !(m?.iso || $('iso').value) || i === (m?.iso || $('iso').value)); };
@@ -106,7 +106,7 @@ function fillKind() { const cur = $('kind').value, ks = [...new Set(inMode().fil
 const MAXOPT = 300;
 // No tool is picked until both a material and a brand are chosen; then the best match from THAT brand is the default.
 const needMsg = () => !$('iso').value && !$('brand').value ? 'Pick a material and a brand' : !$('iso').value ? 'Pick a material' : !$('brand').value ? 'Pick a brand' : '';
-function fillTool() { const cur = $('tool').value, b = $('brand').value, words = $('tq').value.toLowerCase().split(/\s+/).filter(Boolean);
+function fillTool() { const cur = $('tool').value, b = $('brand').value, words = [];
   const NEED = needMsg(); if (NEED) { GROUPS = {}; $('tool').length = 0; $('tool').add(new Option(NEED, '')); $('tn').textContent = ''; updateFindLink(); return fillGrade(); }
   const kd = $('kind').value, hits = inMode().filter(t => (!b || t.brand === b) && (!kd || kindOf(t) === kd) && words.every(w => `${t.brand} ${t.series} ${t.type ?? ''}`.toLowerCase().includes(w)));
   const iso = matSel()?.iso || $('iso').value, rank = t => { const f = t.fullIsos || [], ok = i => !iso || i === iso || i === '*';
@@ -409,7 +409,7 @@ $('unit').onclick = () => { const KS = [...LEN, 'sfm', 'fpt'], x = Object.fromEn
   KS.forEach(k => setIn(k, x[k])); $('aeU').options[1].text = $('apU').options[1].text = UL(); showEng(); $('sfmLbl').firstChild.textContent = metric ? 'Speed (m/min)' : 'SFM';
   $('feedLbl').firstChild.textContent = $('feedLbl').firstChild.textContent.replace(/\b(in|mm)\//, UL() + '/').replace(/\((in|mm)\)/, `(${UL()})`); $('unit').textContent = metric ? 'mm' : 'inch'; document.querySelectorAll('.u').forEach(e => e.textContent = `(${UL()})`);
   $('dLbl').firstChild.textContent = $('dLbl').firstChild.textContent.replace(/\((in|mm)\)/, `(${UL()})`); run(); };
-$('matPick').onchange = () => { TUSER = false; const [i, m] = $('matPick').value.split(':'); $('iso').value = i; $('mat').value = m ?? ''; fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillKind; $('tq').oninput = fillTool; $('cq').oninput = fillCond; $('tool').onchange = () => { TUSER = true; GUSER = false; $('cq').value = ''; fillGrade(''); }; $('grade').onchange = () => { GUSER = true; fillGrade(); updateFindLink(); }; $('mach').onchange = applyMachine;
+$('matPick').onchange = () => { TUSER = false; const [i, m] = $('matPick').value.split(':'); $('iso').value = i; $('mat').value = m ?? ''; fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillKind; $('cq').oninput = fillCond; $('tool').onchange = () => { TUSER = true; GUSER = false; $('cq').value = ''; fillGrade(''); }; $('grade').onchange = () => { GUSER = true; fillGrade(); updateFindLink(); }; $('mach').onchange = applyMachine;
 $('cond').onchange = () => { fill(); recent(); }; $('cool').onchange = () => { if (mode === 'drill') { const k = $('tool').value; if (!TUSER) $('tool').value = ''; fillTool(); if ($('tool').value === k) fill(); } else fill(); }; $('thr').onchange = fillBrand; $('d').onchange = () => { TUSER = false; TUSER_D = inV('d') > 0; if (mode === 'mill') showEng(); if (mode === 'drill' || mode === 'mill') { const k = $('tool').value; fillTool(); if ($('tool').value === k) return fill(); return; } fill(); };
 ['ae', 'aeU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ae') ENG.ae = 'yours'; readEng(); }));
 ['ap', 'apU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ap') ENG.ap = 'yours'; readEng(); }));
