@@ -65,3 +65,6 @@ One commit per item. After each: validate.mjs, test.mjs, validate-machines.mjs, 
 | ME2 estimate sources repeat | 517230c | PASS | Each tool is listed once (its lowest row). | test.mjs, shots/ui/21-* |
 | ME3 Thread before TPI | d928b32 | PASS | Shows "Enter TPI". | test.mjs, shots/ui/22-* |
 | ME4 Guhring sulphured row in 304 | 6bd1837 | PASS | Labeled NOT A 304 NUMBER / 303 type (card, SFM basis, condition list). | test.mjs, shots/ui/23-* |
+
+## Dia group after Brand/Type (approved single change, 2026-10-25)
+Mill/Drill: Published diameters + Tool dia + Flutes now sit after Brand/Type, before Series; list = every published size of that brand+type (all series, deduped, `ps` index field), narrowed to sizes with data for the material when Only-tools-with-data is on. Picking a size re-ranks Series (94c10fc no-auto-pick kept). Tap: after Tap type (tdBox stays beside Tap dia). Turn/Bore: unchanged position (workpiece/bore measure). PASS — shots/ui/dia/.

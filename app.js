@@ -77,7 +77,7 @@ $('pS').onchange = () => { const m = MDOC.models[$('pM').value], s = m.spindles[
   $('pNote').innerHTML = `BUILDER SPEC · ${s.rpm ?? '?'} rpm · ${hp ?? '?'} HP ${which}${der ? ' (DERIVED from kW × 1.341)' : ''}${s.taper ? ' · ' + s.taper : ''}${s.torque_nm ? ' · ' + s.torque_nm + ' Nm' : ''}${s.rating_note ? ' · ' + s.rating_note : ''}${m.type === 'grinder' ? ' · grinder: not used for feeds/speeds limits' : ''} · <a href="${m.source.url}" target="_blank" rel="noopener">source</a> (accessed ${m.source.accessed}). Fields stay editable; changed fields save as YOUR VALUE.`; };
 // Selection chain: material -> brand -> tool -> condition
 function setMode(m) {
-  mode = m; TUSER = false; Object.assign(ENG, { key: '', ae: 'default', ap: 'default' }); // YOUR VALUE tags belong to one tab
+  mode = m; TUSER = false; { const g = $('diaGrp'); if (m === 'turn' || m === 'bore') $('diaHome').after(g); else (m === 'tap' ? $('tapRow') : $('bkRow')).after(g); } // tool Ø after Brand/Type (Tap: after Tap type); Turn/Bore Ø is a workpiece measure, stays up top Object.assign(ENG, { key: '', ae: 'default', ap: 'default' }); // YOUR VALUE tags belong to one tab
   recallList(); document.querySelectorAll('[data-mode]').forEach(b => b.classList.toggle('on', b.dataset.mode === m));
   document.querySelectorAll('[data-show]').forEach(e => e.hidden = !e.dataset.show.split(' ').includes(m));
   $('feedLbl').firstChild.textContent = m === 'mill' ? `Chip load (${UL()}/tooth)` : m === 'tap' ? `Pitch (${UL()})` : m === 'bore' ? `Feed (${UL()}, per tooth or per rev as printed)` : `Feed (${UL()}/rev)`;
@@ -110,7 +110,7 @@ const MAXOPT = 300;
 // No tool is picked until both a material and a brand are chosen; then the best match from THAT brand is the default.
 const needMsg = () => !$('iso').value && !$('brand').value ? 'Pick a material and a brand' : !$('iso').value ? 'Pick a material' : !$('brand').value ? 'Pick a brand' : '';
 function fillTool() { const cur = $('tool').value, b = $('brand').value, words = [];
-  const NEED = needMsg(); if (NEED) { GROUPS = {}; $('tool').length = 0; $('tool').add(new Option(NEED, '')); $('tn').textContent = ''; updateFindLink(); return fillGrade(); }
+  const NEED = needMsg(); if (NEED) { fillBrandDia(b ? inMode().filter(t => t.brand === b && (!$('kind').value || kindOf(t) === $('kind').value)) : []); GROUPS = {}; $('tool').length = 0; $('tool').add(new Option(NEED, '')); $('tn').textContent = ''; updateFindLink(); return fillGrade(); }
   const kd = $('kind').value, hits = inMode().filter(t => (!b || t.brand === b) && (!kd || kindOf(t) === kd) && words.every(w => `${t.brand} ${t.series} ${t.type ?? ''}`.toLowerCase().includes(w)));
   const iso = matSel()?.iso || $('iso').value, mid = matSel()?.id, rank = t => { const f = t.fullIsos || [];
     const gen = !iso && mode !== 'tap' ? (f.includes('P') ? 0 : .25) + (mode === 'turn' && !(t.pFeed >= .012 && t.pFeed <= .025) ? .2 : 0) : 0; return gen + dataRank(t, mid, iso); };
@@ -121,6 +121,7 @@ function fillTool() { const cur = $('tool').value, b = $('brand').value, words =
   const r3 = t => r2c(t) + bl(t) + (mode === 'drill' ? drillRank(t, $('cool').value) : 0) + (matSel()?.id === 'ss303' && !t.only303 ? .1 : 0) + (dD ? 20 * drillTier(t, dD, iso) : 0); hits.sort((x, y) => r3(x) - r3(y));
   const noAt = t => !!dD && !out(t) && !dataAt(t, dD, iso), bad = t => dD && out(t) || !!iso && rank(t) >= 2 || noAt(t); // never auto-picked: a default must have manufacturer data at the entered Ø // never auto-picked
   // Grade/coating split: tools that differ only by grade collapse into one geometry entry; the grade picks the member.
+  fillBrandDia(inMode().filter(t => (!b || t.brand === b) && (!kd || kindOf(t) === kd)));
   GROUPS = {}; const seen = {}; const list = [];
   for (const t of hits) { const g = geo(t), k = t.grade ? `${t.brand}|${g}` : t.key;
     if (seen[k]) { GROUPS[seen[k]].push(t.key); continue; } seen[k] = t.key; GROUPS[t.key] = [t.key]; list.push([t, g]); }
@@ -192,7 +193,14 @@ const diaFeed = c => c?.printed && !c.feed?.byDiameter ? { byDiameter: c.printed
 const diaList = c => { const f = diaFeed(c); if (!f) return []; const u = toIn(1, f.unit);
   if (f.byDiameter) return Object.keys(f.byDiameter).map(k => +k * u).sort((x, y) => x - y);
   if (f.bands) return f.bands.map(([a, z]) => (a + z) / 2 * u); return []; };
-function fillDia(c) { const L = mode === 'mill' || mode === 'drill' || mode === 'bore' ? diaList(c) : [], s = $('dPick'); s.length = 0;
+// Mill/Drill with a brand: Published diameters = every published size of that brand + type (all series, deduped); with 'Only tools with data' and a material, only sizes some tool has data at.
+let BDIA = null; function fillBrandDia(hits) { BDIA = null; if (!(mode === 'mill' || mode === 'drill') || !$('brand').value) return;
+  const iso = matSel()?.iso || $('iso').value, od = $('onlyData').checked && !!iso, set = new Map();
+  for (const t of hits) for (const x of t.ps ?? []) if (!od || dataAt(t, x, iso)) set.set(x.toFixed(3), x);
+  BDIA = [...set.values()].sort((a, b) => a - b); const s = $('dPick'); s.length = 0; $('dPickL').hidden = !BDIA.length; if (!BDIA.length) return;
+  s.add(new Option(`${BDIA.length} published size${BDIA.length > 1 ? 's' : ''} · pick or type Dia`, '')); BDIA.forEach(x => s.add(new Option(`${x.toFixed(4)} in (${(x * 25.4).toFixed(2)} mm)`, x)));
+  const hit = BDIA.find(x => Math.abs(x - inV('d')) < 0.0006); s.value = hit != null ? String(hit) : ''; }
+function fillDia(c) { if (BDIA) { const hit = BDIA.find(x => Math.abs(x - inV('d')) < 0.0006); $('dPick').value = hit != null ? String(hit) : ''; return; } const L = mode === 'mill' || mode === 'drill' || mode === 'bore' ? diaList(c) : [], s = $('dPick'); s.length = 0;
   $('dPickL').hidden = L.length < 2; if (!L.length) return;
   const f = diaFeed(c); if (f.byDiameter) L.forEach(x => s.add(new Option(x.toFixed(4) + ' in', x)));
   else f.bands.forEach(([a, z]) => { const u = toIn(1, f.unit); s.add(new Option(`${(a * u).toFixed(3)}–${(z * u).toFixed(3)} in`, (a + z) / 2 * u)); });
@@ -411,7 +419,7 @@ $('cards').onclick = e => { if (e.target.closest('.estd')) return; const rs = e.
   if (ty === 'd') { setIn('d', +x); if (mode === 'mill') showEng(); fill(); }
   if (ty === 'c') { $('cond').value = x; fill(); recent(); }
   if (ty === 'm') { $('iso').value = ''; $('mat').value = ''; syncPick(); fillCond().then(() => { $('cond').value = x; fill(); recent(); }); } };
-$('dPick').onchange = () => { setIn('d', +$('dPick').value); if (mode === 'mill') showEng(); fill(); };
+$('dPick').onchange = () => { if ($('dPick').value === '') return; setIn('d', +$('dPick').value); if (BDIA) return $('d').onchange(); if (mode === 'mill') showEng(); fill(); }; // brand list: re-rank Series by the picked Ø
 // Favorites & recent setups
 const FIELDS = ['iso', 'mat', 'brand', 'kind', 'top', 'tapT', 'hole', 'pass', 'cut', 'tool', 'cond', 'thr', 'd', 'z', 'sfm', 'fpt', 'aeU', 'apU', 'ae', 'ap', 'apT', 'so', 'nose', 'cb', 'len', 'sup', 'cool', 'fD', 'hd', 'bd', 'shk'];
 const snap = () => { const t = curTool(), c = t?.conditions[$('cond').value];

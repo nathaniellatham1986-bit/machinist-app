@@ -35,6 +35,8 @@ for (const f of files) {
     ...((u => u.length ? { ins: [u[0], u.length] } : {})([...new Set(t.conditions.map(c => c.insert).filter(Boolean))])),
     ...(t.mode === 'turn' ? (u => u.length ? { ps: u } : {})([...new Set(t.conditions.filter(c => c.sfm || c.feed).map(passOf).filter(Boolean))]) : {}),
     ...((t.mode === 'drill' || t.mode === 'mill') ? (u => u.length ? { dd: u } : {})(drillSpans(t)) : {}),
+    ...((t.mode === 'drill' || t.mode === 'mill') ? (u => u.length ? { ps: u } : {})([...new Set([...(t.diameters_in ?? []).map(Number), ...(t.diameters_mm ?? []).map(x => x / 25.4),
+      ...t.conditions.flatMap(c => [c.feed, c.printed].filter(f => f?.byDiameter).flatMap(f => Object.keys(f.byDiameter).map(k => +k * (f.unit === 'mm' ? 1 / 25.4 : 1))))].filter(x => x > 0).map(x => Math.round(x * 1e4) / 1e4))].sort((a, b) => a - b)) : {}), // published tool sizes (in)
     ...(t.mode === 'drill' ? (u => u.length ? { cl: u } : {})([...new Set(t.conditions.flatMap(c => coolModes(typeof c.coolant === 'string' ? c.coolant : '')))]) : {}),
     ...((t.mode === 'drill' || t.mode === 'mill') && sizeRange(t) ? { dr: sizeRange(t).map(x => +x.toFixed(4)) } : {}),
     ...(t.conditions.some(c => c.materials?.includes('ss303') && !shared303(c)) ? { only303: true } : {}),
