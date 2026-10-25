@@ -348,3 +348,8 @@ console.log('estimate tests ok');
   console.log('Iscar brand-has-data consistency tests pass'); }
 { const { commonDrillMm } = await import('./calc.js'); const assert = (await import('node:assert')).default;
   assert.equal(commonDrillMm(6.78), 6.8); assert.equal(commonDrillMm(2.47), 2.45); assert.equal(commonDrillMm(17.6), 17.5); console.log('common drill size tests pass'); }
+{ const { matBad } = await import('./calc.js'); const assert = (await import('node:assert')).default; // ME item 7
+  assert.ok(matBad({ id: 'ti64', iso: 'S' }, { label: 'Pure Titanium < 75 HRB - Slot', subgroup: 'Pure Titanium, < 75 HRB', material: 'Pure Titanium (Helical material-guide group heading; member alloy list not transcribed - see PDF)' }));
+  assert.ok(matBad({ id: 'p20-pre', iso: 'P' }, { label: 'Carbon Steel < 75 HRB - Slot' }));
+  assert.ok(matBad({ id: '4140-ann', iso: 'P' }, { label: 'Tool steels (HRC < 25, BHN < 255)' }));
+  console.log('wrong-material rows excluded'); }

@@ -169,7 +169,7 @@ export const matPrefOld = (id, c) => { const s = [c.label, c.sourceGroup, c.subg
   if (ALLOY_IDS.test(id ?? '')) return NONALLOY.test(s) ? 2 : ALLOY.test(s) ? 0 : 1;
   if (id === 'ss304') return AUST.test(s) && !NONAUST.test(s) ? 0 : NONAUST.test(s) ? 2 : 1;
   return 1; };
-export const matBad = (m, c) => { const s = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' '), k = MAT_CLASS.find(([r]) => r.test(m?.id ?? ''));
+export const matBad = (m, c) => { const s = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' ').replace(/\([^)]*not transcribed[^)]*\)/gi, ''), k = MAT_CLASS.find(([r]) => r.test(m?.id ?? ''));
   return hbOff(m, s) || !!k && k[2].test(s) && !k[1].test(s.replace(k[2], '')) && !k[3]?.test(s) || m?.id === 'ss304' && NONAUST.test(s) && !AUST.test(s); };
 export const matPref = (id, c, m = { id }) => { const s = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' ');
   if (id === 'ss304') return AUST.test(s) && !NONAUST.test(s) ? 0 : NONAUST.test(s) ? 2 : 1;
