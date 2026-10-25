@@ -287,6 +287,10 @@ export const withPairs = t => { const cs = t.conditions ?? []; if (t.mode !== 't
       sfm: s.sfm, coolant: s.coolant ?? f.coolant, operation: s.operation ?? f.operation, status: s.status === f.status ? s.status : 'derived', source: s.source, feedSource: f.source, feedLabel: f.label, paired: true }); }
   return add.length ? { ...t, conditions: [...cs, ...add] } : t; };
 // Picker's data rank for one tool (the tool list greys rank 2 as 'no data for this material'). Shared by app.js and the audit.
+// Why a tool has no usable row for this material: the honest label for the tool list.
+export const noDataWhy = (t, mid, iso) => { const has = a => !(mid && t.nm?.includes(mid)) && (a ?? []).some(i => !iso || i === iso || i === '*');
+  const sp = has(t.speedIsos), fd = has(t.feedIsos);
+  return sp && !fd ? 'speed only, no feed printed' : fd && !sp ? 'feed only, no speed printed' : sp && fd ? 'speed and feed on separate rows' : 'no data for this material'; };
 export const dataRank = (t, mid, iso) => { if (mid && t.nm?.includes(mid)) return 2; const f = t.fullIsos || [], ok = i => !iso || i === iso || i === '*';
   return f.some(x => !x.includes('~') && ok(x)) ? 0 : f.some(x => ok(x.replace('~', ''))) ? 1 : 2; };
 // Nearest standard metric twist-drill size (DIN 338 steps: 0.05 mm ≤3 mm, 0.1 mm ≤13 mm, 0.5 mm above). DERIVED common size, not manufacturer data.

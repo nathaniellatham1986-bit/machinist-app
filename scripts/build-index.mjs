@@ -25,6 +25,8 @@ for (const f of files) {
     ...(t.grade || t.coating || seriesGrade(t) ? { grade: String(t.grade ?? t.coating ?? seriesGrade(t)) } : {}),
     ...(t.coating ? { coating: true } : {}),
     isos: [...new Set(t.conditions.map(c => c.iso))].sort(),
+    ...(() => { const so = t.conditions.filter(c => c.sfm && !c.feed && c.status !== 'shop-proven'), fo = t.conditions.filter(c => c.feed && !c.sfm && c.status !== 'shop-proven'), u = a => [...new Set(a.map(c => c.iso))].sort();
+      return { ...(so.length ? { speedIsos: u(so) } : {}), ...(fo.length ? { feedIsos: u(fo) } : {}) }; })(),
     dataIsos: [...new Set(t.conditions.filter(c => c.sfm || c.feed || c.printed).map(c => c.iso))].sort(),
     fullIsos: [...new Set(t.conditions.filter(c => (c.printed || c.sfm && (c.feed || t.mode === 'tap' || t.mode === 'turn' && turnOpOf(t, c) === 'Thread')) && c.status !== 'shop-proven').map(c => c.source.kind === 'catalog' ? c.iso : c.iso + '~'))].sort(),
     ...(t.mode === 'turn' ? { pFeed: (() => { const v = t.conditions.filter(c => c.iso === 'P' && c.sfm && c.feed?.range && c.source.kind === 'catalog' && c.feed.unit === 'in')

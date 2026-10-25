@@ -381,3 +381,8 @@ console.log('estimate tests ok');
   const g6 = p.find(c => /Grp 6/.test(c.label)), g1 = p.find(c => /Grp 1 /.test(c.label));
   assert.ok(matPref('4140-ann', g6) < matPref('4140-ann', g1));
   const noFeed = { mode: 'turn', conditions: [{ iso: 'P', sfm: { min: 1 }, label: 'a', source: { page: 1 } }] }; assert.equal(withPairs(noFeed), noFeed); }
+{ const { noDataWhy } = await import('./calc.js');
+  assert.equal(noDataWhy({ speedIsos: ['P'] }, '4140-ann', 'P'), 'speed only, no feed printed');
+  assert.equal(noDataWhy({ feedIsos: ['*'] }, '4140-ann', 'P'), 'feed only, no speed printed');
+  assert.equal(noDataWhy({ speedIsos: ['P'], nm: ['4140-ann'] }, '4140-ann', 'P'), 'no data for this material');
+  assert.equal(noDataWhy({}, 'x', 'P'), 'no data for this material'); }
