@@ -116,7 +116,7 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   const N = gradeList([{ key: 'k', tool: { conditions: [{ grade: 'X', label: 'steel', sfm: 1 }, { grade: 'Y', label: 'steel', sfm: 1 }] } }], () => true);
   assert.deepEqual(pickGrade(N, '').why, 'auto'); assert.equal(pickGrade(N, '').pick.g, 'X');
   assert.equal(pickGrade(gradeList([{ key: 'k', tool: T }], () => false), '').pick, null);
-  assert.equal(geoName({ series: 'CB7015 turning grade (2015 catalogue, inch start values)', type: 'Turning insert grade — general turning', grade: 'CB7015' }), 'Turning insert grades · 2015 catalogue, inch start values');
+  assert.equal(geoName({ series: 'CB7015 turning grade (2015 catalogue, inch start values)', type: 'Turning insert grade — general turning', grade: 'CB7015' }), 'Turning inserts (pick grade below)');
   assert.equal(geoName({ series: 'TungCut AH7025', grade: 'AH7025' }), 'TungCut');
   console.log('grade tests pass'); }
 { const { fzFromPerD } = await import('./calc.js');
@@ -158,7 +158,7 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   assert.equal(brandName('ISCAR'), 'Iscar'); assert.equal(brandName('Sumitomo Electric'), 'Sumitomo Electric Hardmetal'); assert.equal(brandName('KYOCERA SGS'), 'Kyocera SGS'); assert.equal(brandName('SGS'), 'Kyocera SGS'); assert.equal(brandName('Kyocera'), 'Kyocera');
   console.log('ME8 brand alias tests pass'); }
 { const { geoName } = await import('./calc.js');
-  assert.equal(geoName({ mode: 'turn', grade: 'GC1125', series: 'GC1125 parting & grooving grade (Supplement 19.2 start values)', type: 'Parting and grooving insert grade — cutting speed recommendations' }), 'Parting and grooving insert grades · Supplement 19.2 start values');
+  assert.equal(geoName({ mode: 'turn', grade: 'GC1125', series: 'GC1125 parting & grooving grade (Supplement 19.2 start values)', type: 'Parting and grooving insert grade — cutting speed recommendations' }), 'Parting and grooving inserts (pick grade below)');
   console.log('ME followup Sandvik parting name tests pass'); }
 { const { threadFeed } = await import('./calc.js');
   let r = threadFeed({ rpm: 4760, lead: 1 / 13 }); assert.ok(r.high && !r.capped && Math.round(r.ipm) === 366);
@@ -322,3 +322,4 @@ console.log('estimate tests ok');
   assert.equal(matPref('ti64', { label: 'Pure Titanium (Ti Grade 1, Ti Grade 2) 21 - 36 HRC' }, g('ti64')), 2);
   assert.equal(matPref('ti64', { label: 'Titanium Alloy (Ti 3Al-2.5V, Ti 6Al-4V) 21 - 36 HRC' }, g('ti64')), 0);
   console.log('material class tests ok'); }
+{ const { nice } = await import('./calc.js'); assert.equal(nice('BTAH'), 'BTAH back-turning holder (Swiss/gang, BTAT insert)'); assert.equal(nice('Superalloys Inconel718, etc. · Grades: SH7025,SH725'), 'Superalloys Inconel718, etc. · grade SH7025 / SH725'); assert.equal(nice('streamjetbar – Standard cutting conditions'), 'streamjetbar'); }

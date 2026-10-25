@@ -127,9 +127,16 @@ export const tapName = t => { const s = t.type ?? '', f = k => { const m = s.mat
   return [[mat, fl ? `spiral flute ${fl}` : null, ld ? `form ${ld} lead` : null].filter(Boolean).join(' '), sf, cc ? cc + (ISO_WORD[cc] ? ` (${ISO_WORD[cc]})` : '') : null].filter(Boolean).join(', '); };
 // Iscar XCMT-MF is the PICCO-MF multi-function drill insert, not a lathe groove/turn insert.
 export const isMFDrill = t => t.mode === 'turn' && /^XCMT-MF/i.test(String(t.series));
-export const geoName = t => { if (isMFDrill(t)) return 'XCMT-MF (multi-function drill insert)'; const tn = t.mode === 'tap' && tapName(t); if (tn) return tn; const short = s => s.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim().slice(0, 48);
-  let s = t.series; if (t.grade) for (const g of t.grade.split(/[,/]\s*/)) s = s.split(g).join(' ');
-  const n = short(s.replace(/\b(turning|parting|grooving|threading|milling|drilling|insert)?\s*grade\b/gi, ' ').replace(/\s*[—–-]\s*$/, '').replace(/^\s*[—–-]\s*/, ''));
+// Review3 #12: display-only label map for catalog jargon (data and source citations unchanged).
+export const NICE = [[/\s*[–—-]\s*Standard cutting conditions( for)?/i, (m, f) => f ? ' ·' : ''], [/^standard cutting conditions \(web\)$/i, 'manufacturer web table'],
+  [/\s*·\s*(\d{4} catalogue, (inch|metric)|Supplement [\d.]+) start values/i, ''], [/^(Turning|Parting and grooving) insert grades$/i, '$1 inserts (pick grade below)'], [/^Grades$/, 'Inserts (pick grade below)'],
+  [/^BTAH$/, 'BTAH back-turning holder (Swiss/gang, BTAT insert)'], [/^List 16250$/, 'List 16250 forming tap, HSS-Co'], [/\s*·\s*Grades:\s*([\w-]+(?:,\s*[\w-]+)*)/, (m, g) => ' · grade ' + g.split(/,\s*/).join(' / ')]];
+export const nice = s => NICE.reduce((a, [r, w]) => a.replace(r, w), String(s ?? '')).trim();
+export const geoName = t => nice(geoName0(t));
+const geoName0 = t => { if (isMFDrill(t)) return 'XCMT-MF (multi-function drill insert)'; const tn = t.mode === 'tap' && tapName(t); if (tn) return tn; const short = s => s.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim().slice(0, 48);
+  let s = nice(t.series); if (t.grade) for (const g of t.grade.split(/[,/]\s*/)) s = s.split(g).join(' ');
+  const n0 = short(s.replace(/\b(turning|parting|grooving|threading|milling|drilling|insert)?\s*grade\b/gi, ' ').replace(/\s*[—–-]\s*$/, '').replace(/^\s*[—–-]\s*/, ''));
+  const n = n0.replace(/[\s,;:/]+$/, '');
   if (n && !/(&|,|\band|\bor)$/i.test(n)) return n; const q = (t.series.match(/\(([^)]*)\)/) ?? [])[1], ty = (t.type ?? '').split(/\s+[—–-]\s+/)[0];
   return [ty ? ty.replace(/grade$/i, 'grades') : 'Grades', q].filter(Boolean).join(' · ').slice(0, 70); };
 // Printed feed-per-tooth as a multiple of tool diameter (fzPerD). fz = multiplier × D, in the record's (= D's) length unit.

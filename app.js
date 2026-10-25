@@ -1,7 +1,7 @@
 import { MODES, migrate, forMode, upsertMachine, dedupeMachines, removeMachine } from './recall.js';
 import { enhance } from './combo.js';
 import { estimate, ESTIMATES_ON, EST_MODES } from './estimate.js';
-import { compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, classifyOverride, classifyEng, engFrac, drillTier, rowDia, rowExcludes, toolLifeOf } from './calc.js';
+import { nice, compute, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, classifyOverride, classifyEng, engFrac, drillTier, rowDia, rowExcludes, toolLifeOf } from './calc.js';
 let PASSNOTE = ''; // Review3 #4: set when the chosen Pass has no rows for this tool
 const $ = id => document.getElementById(id);
 const J = u => fetch(u).then(r => r.json());
@@ -160,7 +160,7 @@ async function fillCond() {
   const okC = c => (!gSel || gradesOf(t, c).includes(gSel)) && isoOk(c) && (PASSNOTE || !$('pass').value || passOf(c) === $('pass').value) && (mode !== 'mill' || !$('cut').value || cutOf(c) === $('cut').value);
   fillTurnOpts(t, okC);
   const nrOk = c => mode !== 'turn' || ((!$('nose').value || nrKey(c) === $('nose').value) && (!$('cb').value || (c.chipbreaker ?? '') === $('cb').value));
-  (t?.conditions || []).forEach((c, i) => { if (okC(c) && nrOk(c) && cw.every(w => c.label.toLowerCase().includes(w)) && nc++ < 400) $('cond').add(new Option(c.label + (allMat(c) ? ' · Feed table, all materials' : '') + (c.status === 'shop-proven' ? ' · SHOP-PROVEN' : '') + (matSel() && !allMat(c) && matchMat(matSel(), c) === 'group' ? ` · matched by group: ${c.sourceGroup ?? c.subgroup ?? c.material ?? 'ISO ' + c.iso}` : '') + (matSel()?.id === 'ss303' && shared303(c) ? ' · 303 grouped with 304/316 as printed' : ''), i)); });
+  (t?.conditions || []).forEach((c, i) => { if (okC(c) && nrOk(c) && cw.every(w => c.label.toLowerCase().includes(w)) && nc++ < 400) $('cond').add(new Option(nice(c.label) + (allMat(c) ? ' · Feed table, all materials' : '') + (c.status === 'shop-proven' ? ' · SHOP-PROVEN' : '') + (matSel() && !allMat(c) && matchMat(matSel(), c) === 'group' ? ` · matched by group: ${c.sourceGroup ?? c.subgroup ?? c.material ?? 'ISO ' + c.iso}` : '') + (matSel()?.id === 'ss303' && shared303(c) ? ' · 303 grouped with 304/316 as printed' : ''), i)); });
   { const opts = [...$('cond').options].map(o => [o.value, t.conditions[+o.value]]), full = c => (c.printed || c.sfm && (c.feed || mode === 'tap')) && c.status !== 'shop-proven' && !(mode === 'drill' && rowExcludes(c, inV('d')));
     const want = matSel()?.iso || $('iso').value || 'P', cat = opts.filter(([, c]) => full(c) && c.source.kind === 'catalog');
     // General default: preferred ISO group, first material subgroup, middle (medium) published feed rather than the finishing/roughing extremes.
@@ -291,7 +291,7 @@ const estHtml = (e, dp, u) => `<details class="estd"><summary><span class="estw"
 const chipShort = (l, k) => { const t = curTool(), i = +k.slice(2), x = t?.conditions?.[i]; const r = x && rowDia(x);
   const sz = k[0] === 'd' ? l : r ? (f => `Ø ${r[0] <= 0 ? '≤' + f(r[1]) : r[1] >= 99 ? '≥' + f(r[0]) : f(r[0]) + (Math.abs(r[1] - r[0]) > 1e-4 ? '–' + f(r[1]) : '')} ${UL()}`)(x => (metric ? x * 25.4 : x).toFixed(metric ? 1 : 3)) : (L => { const [h, ...tl] = L.split(' — '), hs = h.split(/[,(]/)[0].trim(); return (x?.iso && !hs.startsWith(x.iso) ? x.iso + ' ' : '') + (tl.length ? hs.split(' ')[0] + ' · ' + tl.join(' ').slice(0, 26) : hs.slice(0, 24)); })(String(l).replace(/\s*\(other material\)$/, '')) + (k[0] === 'm' ? ' (other mat.)' : '');
   return `${(t?.brand ?? '').split(' ')[0]} ${t?.series ?? ''} · ${sz}`; };
-const chipHtml = a => a.map(([l, k]) => `<button class="chip" data-k="${k}" title="${String(l).replace(/"/g, '&quot;')}">${chipShort(l, k)}</button>`).join('');
+const chipHtml = a => a.map(([l, k]) => `<button class="chip" data-k="${k}" title="${String(l).replace(/"/g, '&quot;')}">${nice(chipShort(l, k))}</button>`).join('');
 // Review3 #7: Groove/Part need the real stock Ø before any RPM is shown.
 const GP = () => mode === 'turn' && /Groove|Part/.test($('top').value);
 function stockAsk() { const g = GP(); $('dLbl').firstChild.textContent = (mode === 'turn' ? (g ? 'Stock dia' : 'Start dia') : $('dLbl').firstChild.textContent.split(' (')[0]) + ` (${UL()})`; $('d').placeholder = g ? 'enter real stock Ø' : ''; if (g && !TUSER_D) $('d').value = ''; }
