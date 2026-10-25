@@ -343,6 +343,8 @@ console.log('estimate tests ok');
 { const { brandUsable } = await import('./calc.js'); const assert = (await import('node:assert')).default; const m = { id: '4140-ann', iso: 'P' };
   const speedOnly = { mats: [], isos: ['P'], dataIsos: ['P'], fullIsos: [] }, full = { mats: [], isos: ['P'], dataIsos: ['P'], fullIsos: ['P'] }, label = { mats: [], isos: ['*'], dataIsos: ['*'], fullIsos: ['*~'] };
   assert.equal(brandUsable(speedOnly, m), false); assert.equal(brandUsable(full, m), true); assert.equal(brandUsable(label, m), true); assert.equal(brandUsable(speedOnly, m, false), true);
+  assert.equal(brandUsable({ ...full, nm: ["4140-ann"] }, m), false); // item 1: ISO P has data but no row fits annealed 4140
+{ const I = JSON.parse((await import("node:fs")).readFileSync("data/index.json")); const h = I.files.filter(f => /harvey/i.test(f.brand)).flatMap(f => f.tools).filter(t => t.mode === "mill" && /^126xx/.test(t.series)); assert.ok(h.length && h.every(t => t.nm?.includes("4140-ann"))); }
   console.log('Iscar brand-has-data consistency tests pass'); }
 { const { commonDrillMm } = await import('./calc.js'); const assert = (await import('node:assert')).default;
   assert.equal(commonDrillMm(6.78), 6.8); assert.equal(commonDrillMm(2.47), 2.45); assert.equal(commonDrillMm(17.6), 17.5); console.log('common drill size tests pass'); }

@@ -1,6 +1,6 @@
 // Regenerate data/index.json from every brand file in data/, and stamp sw.js with a content-hash cache name.
 // Never edit data/index.json by hand. Usage: node scripts/build-index.mjs
-import { shared303, sizeRange, brandName, seriesGrade, coolModes, passOf, drillSpans, turnOpOf } from '../calc.js';
+import { shared303, sizeRange, brandName, seriesGrade, coolModes, passOf, drillSpans, turnOpOf, rowUsable, matRowOk } from '../calc.js';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -37,6 +37,7 @@ for (const f of files) {
     ...((t.mode === 'drill' || t.mode === 'mill') && sizeRange(t) ? { dr: sizeRange(t).map(x => +x.toFixed(4)) } : {}),
     ...(t.conditions.some(c => c.materials?.includes('ss303') && !shared303(c)) ? { only303: true } : {}),
     mats: [...new Set(t.conditions.flatMap(c => c.materials ?? []))].sort(),
+    ...((u => u.length ? { nm: u } : {})(MATERIALS.filter(m => t.conditions.some(c => rowUsable(t, c) && (c.iso === m.iso || c.iso === '*')) && !t.conditions.some(c => rowUsable(t, c) && matRowOk(m, c) && !(c.iso === '*' && m.iso !== 'N' && /non-?ferrous/i.test(`${t.series} ${t.type ?? ''}`)))).map(m => m.id))),
     shop: t.conditions.some(c => c.status === 'shop-proven') }));
   out.push({ file: f, brand: doc.brand, modes: [...new Set(tools.map(t => t.mode))].sort(), records: doc.tools.reduce((n, t) => n + t.conditions.length, 0), tools });
 }

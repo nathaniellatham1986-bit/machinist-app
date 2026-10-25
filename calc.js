@@ -273,6 +273,10 @@ export const ownNames = (t, m) => { const k = MAT_CLASS.find(([r]) => r.test(m?.
 // A tool counts as "has data" for a material only when one manufacturer record carries both SFM and feed (tap: SFM) for its ISO group —
 // the same test the series list ranks by (fullIsos). Rows with only a speed table or only a feed table are not usable on their own.
 export const brandUsable = (t, m, onlyData = true) => { if (m && !(t.mats.includes(m.id) || t.isos.includes(m.iso) || t.isos.includes('*'))) return false;
+  if (onlyData && m?.id && t.nm?.includes(m.id)) return false; // ISO group has data, but no row fits this material
   return !onlyData || !m?.iso || (t.fullIsos ?? []).some(x => { x = x.replace('~', ''); return x === '*' || x === m.iso; }); };
 // Nearest standard metric twist-drill size (DIN 338 steps: 0.05 mm ≤3 mm, 0.1 mm ≤13 mm, 0.5 mm above). DERIVED common size, not manufacturer data.
 export const commonDrillMm = mm => { if (!(mm > 0)) return null; const st = mm <= 3 ? 0.05 : mm <= 13 ? 0.1 : 0.5; return +(Math.round(mm / st) * st).toFixed(2); };
+// Row has manufacturer numbers usable on their own (same rule as index fullIsos), and matches this material (not a wrong class / hardness).
+export const rowUsable = (t, c) => (c.printed || c.sfm && (c.feed || t.mode === 'tap' || t.mode === 'turn' && turnOpOf(t, c) === 'Thread')) && c.status !== 'shop-proven';
+export const matRowOk = (m, c) => !!matchMat(m, c) && !matBad(m, c);
