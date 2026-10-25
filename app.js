@@ -294,7 +294,10 @@ const estHtml = (e, dp, u) => `<details class="estd"><summary><span class="estw"
 // Review3 #10: short chip text = brand + series + size/material; full row label in title
 const chipShort = (l, k) => { const t = curTool(), i = +k.slice(2), x = t?.conditions?.[i]; const r = x && rowDia(x);
   const sz = k[0] === 'd' ? l : r ? (f => `Ø ${r[0] <= 0 ? '≤' + f(r[1]) : r[1] >= 99 ? '≥' + f(r[0]) : f(r[0]) + (Math.abs(r[1] - r[0]) > 1e-4 ? '–' + f(r[1]) : '')} ${UL()}`)(x => (metric ? x * 25.4 : x).toFixed(metric ? 1 : 3)) : (L => { const [h, ...tl] = L.split(' — '), hs = h.split(/[,(]/)[0].trim(); return (x?.iso && !hs.startsWith(x.iso) ? x.iso + ' ' : '') + (tl.length ? hs.split(' ')[0] + ' · ' + tl.join(' ').slice(0, 26) : hs.slice(0, 24)); })(String(l).replace(/\s*\(other material\)$/, '')) + (k[0] === 'm' ? ' (other mat.)' : '');
-  return `${(t?.brand ?? '').split(' ')[0]} ${t?.series ?? ''} · ${sz}`; };
+  if (k[0] === 'd' || !x) return sz; // tool name is already on screen: show only what differs (material · op · size)
+  const op = cutOf(x) || passOf(x), dz = r ? ` · Ø${(metric ? r[0] * 25.4 : r[0]).toFixed(metric ? 1 : 3)}${Math.abs(r[1] - r[0]) > 1e-4 && r[1] < 99 ? '–' + (metric ? r[1] * 25.4 : r[1]).toFixed(metric ? 1 : 3) : ''}` : '';
+  let hr = (String(l).match(/\d+\s*-\s*\d+\s*(?:Rc|HRC)/i) || [''])[0].replace(/\s+/g, ''); const sz2 = sz.replace(/ \(other mat\.\)$/, hr ? ' ' + hr + ' (other mat.)' : ' (other mat.)');
+  return r ? `${sz}${k[0] === 'm' ? ' (other mat.)' : ''} · ${op}` : `${sz2} · ${op}${dz}`; };
 const chipHtml = a => a.map(([l, k]) => `<button class="chip" data-k="${k}" title="${String(l).replace(/"/g, '&quot;')}">${nice(chipShort(l, k))}</button>`).join('');
 // Review3 #7: Groove/Part need the real stock Ø before any RPM is shown.
 const GP = () => mode === 'turn' && /Groove|Part/.test($('top').value);
@@ -380,8 +383,9 @@ function run() { tapBox(); updateFindLink(); favMark();
     if (OUTROW) t.conditions.map((x, i) => [x, i, rowDia(x)]).filter(([x, i, r]) => r && isoOk(x) && x.sfm && x.feed && String(i) !== $('cond').value && fresh(x)).sort((a, b) => Math.min(Math.abs(a[2][0] - inV('d')), Math.abs(a[2][1] - inV('d'))) - Math.min(Math.abs(b[2][0] - inV('d')), Math.abs(b[2][1] - inV('d')))).slice(0, 8).forEach(([x, i]) => chips.push([x.label, `c:${i}`]));
     if (c && !FD && c.feed && mode !== 'tap' && !OUTROW) diaList(c).slice(0, 12).forEach(x => chips.push([`Ø ${x.toFixed(4)} in`, `d:${x}`]));
     t.conditions.forEach((x, i) => { if (chips.length < 12 && String(i) !== $('cond').value && x.sfm && (mode === 'tap' || x.feed) && isoOk(x) && fresh(x)) chips.push([x.label, `c:${i}`]); });
-    t.conditions.forEach((x, i) => { if (chips.length < 16 && x.sfm && (mode === 'tap' || x.feed) && !isoOk(x) && fresh(x)) chips.push([x.label + ' (other material)', `m:${i}`]); });
+    { const mi = matSel()?.iso; t.conditions.map((x, i) => [x, i]).sort(([a], [b]) => (b.iso === mi) - (a.iso === mi)).forEach(([x, i]) => { if (chips.length < 16 && x.sfm && (mode === 'tap' || x.feed) && !isoOk(x) && fresh(x)) chips.push([x.label + ' (other material)', `m:${i}`]); }); } // same ISO group first
   }
+  { const sh = new Set(); chips = chips.filter(([l, k]) => { const q = chipShort(l, k); return !sh.has(q) && sh.add(q); }); } // 3 visible chips must differ
   const usesEst = !!(SP?.est || FD?.est), miss = !c || usesEst || (!PR && (!v('sfm') || !v('fpt')));
   const faceN = mode === 'turn' && $('top').value === 'Face' && c ? `<div class="out">Face: catalogs print turning data for this insert; using its Turn row.</div>` : '';
   $('cards').innerHTML = w + (PASSNOTE ? `<div class="out"><span class="warn">${PASSNOTE}</span></div>` : '') + faceN + (miss ? `<div class="out"><span class="warn">${OUTROW ? 'No mfr data at this size.' : 'No manufacturer data for this combo.'}</span>${usesEst ? ' <span class="estw">Blue boxes are ESTIMATES from this maker\'s other tools, not manufacturer data.</span>' : ''}${chips.length ? '<br>Nearest options from this tool with data:<div class="chips">' + chipHtml(chips.slice(0, 3)) + (chips.length > 3 ? `</div><details class="morechips"><summary>more (${chips.length - 3})</summary><div class="chips">${chipHtml(chips.slice(3))}</div></details><div>` : '') + '</div>' : ''}</div>` : '') + `<div class="cards">${cards}</div>` + CALCN; CALCN = '';
