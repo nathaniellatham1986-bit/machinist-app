@@ -62,6 +62,13 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
 { const d = JSON.parse(fs.readFileSync('data/accupro-mill.json'));
   const bad = d.tools.flatMap(t => t.conditions).filter(c => /[>]\s*\d+\s*HRC/.test(c.label) && c.materials?.length);
   assert.equal(bad.length, 0, 'hardened Accupro rows linked: ' + bad.map(c => c.label).slice(0, 3).join('; ')); }
+// Accupro drills (p1 colour band + pp3-4 chart): hardness-limited rows unlinked, values as printed
+{ const d = JSON.parse(fs.readFileSync('data/accupro-drill.json')), cs = d.tools.flatMap(t => t.conditions);
+  assert.equal(cs.filter(c => /Over 35 Rc|[>]\s*\d+\s*(HRC|HB)/.test(c.label) && c.materials?.length).length, 0);
+  assert.equal(d.tools.slice(0, 5).flatMap(t => t.conditions).length, 24); assert.equal(d.tools.slice(5).flatMap(t => t.conditions).length, 372);
+  const ti = cs.find(c => c.label.startsWith('Titanium: Pure Titanium')); assert.equal(ti.feed.byDiameter['0.7500'].value, 0.008); assert.deepEqual([ti.sfm.min, ti.sfm.max], [65, 105]);
+  const t4 = d.tools.find(t => t.diameters_in?.[0] === 0.5 && t.diameters_in[1] === 0.625), ha = t4.conditions.find(c => /^High Alloy.*Over 35 Rc/.test(c.label) && c.coolant === 'Dry');
+  assert.equal(ha.sfm.value, 175); assert.deepEqual([ha.feed.range.min, ha.feed.range.max], [0.003, 0.0035]); }
 // link-materials: hardness numbers are not grades
 { const { matchIds } = await import('./scripts/link-materials.mjs');
   assert.deepEqual(matchIds('M', 'Austenitic stainless <321 HB'), []);
