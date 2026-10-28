@@ -31,7 +31,8 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -55,7 +56,12 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "materials": [
+      "ss304"
+     ],
+     "strictMaterials": true,
+     "sourceGroup": "Stainless Steels: Austenitic"
     },
     {
      "iso": "M",
@@ -79,7 +85,8 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -103,7 +110,8 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -127,7 +135,8 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -151,7 +160,8 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "strictMaterials": true
     }
    ]
   },
@@ -184,7 +194,8 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -208,7 +219,12 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "materials": [
+      "p-mild"
+     ],
+     "strictMaterials": true,
+     "sourceGroup": "Carbon Alloy Steels: Low Carbon Steel"
     },
     {
      "iso": "P",
@@ -232,7 +248,8 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "strictMaterials": true
     }
    ]
   },
@@ -265,7 +282,8 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -289,7 +307,8 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -313,7 +332,8 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -337,7 +357,8 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -361,7 +382,12 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "materials": [
+      "in718"
+     ],
+     "strictMaterials": true,
+     "sourceGroup": "Nickel: Nickel, Inconel 718 Alloy"
     },
     {
      "iso": "N",
@@ -385,7 +411,8 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "strictMaterials": true
     }
    ]
   },
@@ -418,7 +445,12 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "materials": [
+      "al6061"
+     ],
+     "strictMaterials": true,
+     "sourceGroup": "Aluminium Alloys: Wrought & Extruded"
     },
     {
      "iso": "N",
@@ -442,7 +474,8 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -466,7 +499,8 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -490,7 +524,8 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -515,7 +550,8 @@
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
      },
-     "note": "Tons/sq.in hardness column is blank in the printed row."
+     "note": "Tons/sq.in hardness column is blank in the printed row.",
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -539,7 +575,8 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -563,7 +600,8 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "strictMaterials": true
     }
    ]
   },
@@ -596,7 +634,12 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "materials": [
+      "gray-iron"
+     ],
+     "strictMaterials": true,
+     "sourceGroup": "Cast Irons: Plain Grey Irons"
     },
     {
      "iso": "K",
@@ -620,7 +663,12 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "materials": [
+      "ductile-iron"
+     ],
+     "strictMaterials": true,
+     "sourceGroup": "Cast Irons: Plain \u201cSG\u201d Iron"
     },
     {
      "iso": "K",
@@ -644,7 +692,8 @@
       "page": "1 (PDF page 1 of 16)",
       "retrieved": "2026-10-27",
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
-     }
+     },
+     "strictMaterials": true
     }
    ]
   }
