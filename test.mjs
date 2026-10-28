@@ -83,7 +83,7 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   const row = { label: 'Carbon Alloy Steels: Free Cutting Mild Steel · <120 HB · Green Band', iso: 'P', strictMaterials: true };
   assert.equal(matchMat(g('4140-ann'), row), null); assert.equal(matchMat(g('p-mild'), row), null);
   assert.equal(matchMat(g('4140-ann'), { ...row, strictMaterials: undefined }), 'group'); // other brands keep group matching
-  for (const f of ['drill', 'tap', 'threadmill']) assert.ok(JSON.parse(fs.readFileSync(`data/accupro-${f}.json`)).tools.every(t => t.conditions.every(c => c.strictMaterials === true))); }
+  for (const f of ['drill', 'tap', 'threadmill', 'mill']) assert.ok(JSON.parse(fs.readFileSync(`data/accupro-${f}.json`)).tools.every(t => t.conditions.every(c => c.strictMaterials === true))); }
 // link-materials: hardness numbers are not grades
 { const { matchIds } = await import('./scripts/link-materials.mjs');
   assert.deepEqual(matchIds('M', 'Austenitic stainless <321 HB'), []);

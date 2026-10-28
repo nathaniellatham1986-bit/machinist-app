@@ -73,7 +73,8 @@
      "materials": [
       "p-mild"
      ],
-     "sourceGroup": "Low Alloy Steels Maraging--10XX, 11XX, 13XX"
+     "sourceGroup": "Low Alloy Steels Maraging--10XX, 11XX, 13XX",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -125,7 +126,8 @@
       "page": "5 (PDF page 5 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -177,7 +179,8 @@
       "page": "5 (PDF page 5 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -233,7 +236,8 @@
      "materials": [
       "p-alloy"
      ],
-     "sourceGroup": "High Strength Steels--4340, 6150, 52100, H-11, H-13"
+     "sourceGroup": "High Strength Steels--4340, 6150, 52100, H-11, H-13",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -290,7 +294,8 @@
       "ss303",
       "ss304"
      ],
-     "sourceGroup": "Austenitic--200 Series, 302, 303, 304L, 316L"
+     "sourceGroup": "Austenitic--200 Series, 302, 303, 304L, 316L",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -346,7 +351,8 @@
      "materials": [
       "ss400"
      ],
-     "sourceGroup": "Martensitic--403, 410, 416"
+     "sourceGroup": "Martensitic--403, 410, 416",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -398,7 +404,8 @@
       "page": "5 (PDF page 5 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -450,7 +457,8 @@
       "page": "5 (PDF page 5 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -502,7 +510,8 @@
       "page": "5 (PDF page 5 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -554,7 +563,8 @@
       "page": "5 (PDF page 5 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -606,7 +616,8 @@
       "page": "5 (PDF page 5 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -658,7 +669,8 @@
       "page": "5 (PDF page 5 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -710,7 +722,8 @@
       "page": "5 (PDF page 5 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -763,7 +776,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Printed chip load at 0.75, 1.0 in is out of sequence with neighbouring sizes (possible catalog typo); copied as printed \u2014 check before use."
+     "note": "Printed chip load at 0.75, 1.0 in is out of sequence with neighbouring sizes (possible catalog typo); copied as printed \u2014 check before use.",
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -814,7 +828,8 @@
       "page": "5 (PDF page 5 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -866,7 +881,8 @@
       "page": "5 (PDF page 5 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -919,7 +935,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Printed chip load at 0.125, 0.1875 in is out of sequence with neighbouring sizes (possible catalog typo); copied as printed \u2014 check before use."
+     "note": "Printed chip load at 0.125, 0.1875 in is out of sequence with neighbouring sizes (possible catalog typo); copied as printed \u2014 check before use.",
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -972,7 +989,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Printed chip load at 0.125, 0.1875 in is out of sequence with neighbouring sizes (possible catalog typo); copied as printed \u2014 check before use."
+     "note": "Printed chip load at 0.125, 0.1875 in is out of sequence with neighbouring sizes (possible catalog typo); copied as printed \u2014 check before use.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -1024,7 +1042,8 @@
       "page": "6 (PDF page 6 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -1076,7 +1095,8 @@
       "page": "6 (PDF page 6 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -1128,7 +1148,8 @@
       "page": "6 (PDF page 6 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -1181,7 +1202,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -1234,7 +1256,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -1286,7 +1309,8 @@
       "page": "6 (PDF page 6 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -1338,7 +1362,8 @@
       "page": "6 (PDF page 6 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -1390,7 +1415,8 @@
       "page": "6 (PDF page 6 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -1442,7 +1468,8 @@
       "page": "6 (PDF page 6 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -1494,7 +1521,8 @@
       "page": "6 (PDF page 6 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -1546,7 +1574,8 @@
       "page": "6 (PDF page 6 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -1599,7 +1628,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Printed chip load at 0.75, 1.0 in is out of sequence with neighbouring sizes (possible catalog typo); copied as printed \u2014 check before use."
+     "note": "Printed chip load at 0.75, 1.0 in is out of sequence with neighbouring sizes (possible catalog typo); copied as printed \u2014 check before use.",
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -1651,7 +1681,8 @@
       "page": "6 (PDF page 6 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -1704,7 +1735,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Printed chip load at 0.125, 0.1875 in is out of sequence with neighbouring sizes (possible catalog typo); copied as printed \u2014 check before use."
+     "note": "Printed chip load at 0.125, 0.1875 in is out of sequence with neighbouring sizes (possible catalog typo); copied as printed \u2014 check before use.",
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -1757,7 +1789,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Printed chip load at 0.125, 0.1875 in is out of sequence with neighbouring sizes (possible catalog typo); copied as printed \u2014 check before use."
+     "note": "Printed chip load at 0.125, 0.1875 in is out of sequence with neighbouring sizes (possible catalog typo); copied as printed \u2014 check before use.",
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -1810,7 +1843,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Printed chip load at 0.125, 0.1875 in is out of sequence with neighbouring sizes (possible catalog typo); copied as printed \u2014 check before use."
+     "note": "Printed chip load at 0.125, 0.1875 in is out of sequence with neighbouring sizes (possible catalog typo); copied as printed \u2014 check before use.",
+     "strictMaterials": true
     }
    ]
   },
@@ -1879,7 +1913,8 @@
      "materials": [
       "p-mild"
      ],
-     "sourceGroup": "Carbon Steels: 10xx, 11xx, 13xx, 15xx Series"
+     "sourceGroup": "Carbon Steels: 10xx, 11xx, 13xx, 15xx Series",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -1928,7 +1963,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -1977,7 +2013,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -2029,7 +2066,8 @@
      "materials": [
       "p-mild"
      ],
-     "sourceGroup": "Carbon Steels: 10xx, 11xx, 13xx, 15xx Series"
+     "sourceGroup": "Carbon Steels: 10xx, 11xx, 13xx, 15xx Series",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -2078,7 +2116,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -2127,7 +2166,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -2179,7 +2219,8 @@
      "materials": [
       "p-mild"
      ],
-     "sourceGroup": "Carbon Steels: 10xx, 11xx, 13xx, 15xx Series"
+     "sourceGroup": "Carbon Steels: 10xx, 11xx, 13xx, 15xx Series",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -2228,7 +2269,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -2277,7 +2319,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -2329,7 +2372,8 @@
      "materials": [
       "p-mild"
      ],
-     "sourceGroup": "Carbon Steels: 10xx, 11xx, 13xx, 15xx Series"
+     "sourceGroup": "Carbon Steels: 10xx, 11xx, 13xx, 15xx Series",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -2378,7 +2422,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -2427,7 +2472,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -2479,7 +2525,8 @@
      "materials": [
       "p-mild"
      ],
-     "sourceGroup": "Carbon Steels: 10xx, 11xx, 13xx, 15xx Series"
+     "sourceGroup": "Carbon Steels: 10xx, 11xx, 13xx, 15xx Series",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -2528,7 +2575,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -2577,7 +2625,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -2629,7 +2678,8 @@
      "materials": [
       "p-mild"
      ],
-     "sourceGroup": "Carbon Steels: 10xx, 11xx, 13xx, 15xx Series"
+     "sourceGroup": "Carbon Steels: 10xx, 11xx, 13xx, 15xx Series",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -2678,7 +2728,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -2727,7 +2778,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -2778,7 +2830,8 @@
      "materials": [
       "p-mild"
      ],
-     "sourceGroup": "Carbon Steels: 10xx, 11xx, 13xx, 15xx Series"
+     "sourceGroup": "Carbon Steels: 10xx, 11xx, 13xx, 15xx Series",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -2826,7 +2879,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -2874,7 +2928,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -2925,7 +2980,8 @@
      "materials": [
       "p-mild"
      ],
-     "sourceGroup": "Carbon Steels: 10xx, 11xx, 13xx, 15xx Series"
+     "sourceGroup": "Carbon Steels: 10xx, 11xx, 13xx, 15xx Series",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -2973,7 +3029,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -3021,7 +3078,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -3072,7 +3130,8 @@
      "materials": [
       "p-mild"
      ],
-     "sourceGroup": "Carbon Steels: 10xx, 11xx, 13xx, 15xx Series"
+     "sourceGroup": "Carbon Steels: 10xx, 11xx, 13xx, 15xx Series",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -3120,7 +3179,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -3168,7 +3228,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -3220,7 +3281,8 @@
      "materials": [
       "p-alloy"
      ],
-     "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series"
+     "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -3269,7 +3331,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -3318,7 +3381,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -3370,7 +3434,8 @@
      "materials": [
       "p-alloy"
      ],
-     "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series"
+     "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -3419,7 +3484,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -3468,7 +3534,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -3520,7 +3587,8 @@
      "materials": [
       "p-alloy"
      ],
-     "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series"
+     "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -3569,7 +3637,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -3618,7 +3687,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -3670,7 +3740,8 @@
      "materials": [
       "p-alloy"
      ],
-     "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series"
+     "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -3719,7 +3790,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -3768,7 +3840,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -3820,7 +3893,8 @@
      "materials": [
       "p-alloy"
      ],
-     "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series"
+     "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -3869,7 +3943,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -3918,7 +3993,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -3970,7 +4046,8 @@
      "materials": [
       "p-alloy"
      ],
-     "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series"
+     "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4019,7 +4096,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4068,7 +4146,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4119,7 +4198,8 @@
      "materials": [
       "p-alloy"
      ],
-     "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series"
+     "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4167,7 +4247,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4215,7 +4296,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4266,7 +4348,8 @@
      "materials": [
       "p-alloy"
      ],
-     "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series"
+     "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4314,7 +4397,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4362,7 +4446,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4413,7 +4498,8 @@
      "materials": [
       "p-alloy"
      ],
-     "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series"
+     "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4461,7 +4547,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4509,7 +4596,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4557,7 +4645,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4605,7 +4694,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4653,7 +4743,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4701,7 +4792,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4749,7 +4841,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4797,7 +4890,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4845,7 +4939,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4893,7 +4988,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4941,7 +5037,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -4989,7 +5086,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -5037,7 +5135,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -5085,7 +5184,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -5133,7 +5233,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -5181,7 +5282,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -5229,7 +5331,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -5277,7 +5380,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -5325,7 +5429,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -5373,7 +5478,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -5420,7 +5526,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -5467,7 +5574,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -5514,7 +5622,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -5561,7 +5670,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -5608,7 +5718,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -5655,7 +5766,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -5702,7 +5814,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -5749,7 +5862,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "P",
@@ -5796,7 +5910,8 @@
       "page": "9 (PDF page 9 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -5848,7 +5963,8 @@
      "materials": [
       "ss304"
      ],
-     "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar"
+     "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -5897,7 +6013,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -5946,7 +6063,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -5995,7 +6113,8 @@
      "materials": [
       "ss304"
      ],
-     "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar"
+     "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -6044,7 +6163,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -6093,7 +6213,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -6145,7 +6266,8 @@
      "materials": [
       "ss304"
      ],
-     "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar"
+     "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -6194,7 +6316,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -6243,7 +6366,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -6295,7 +6419,8 @@
      "materials": [
       "ss304"
      ],
-     "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar"
+     "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -6344,7 +6469,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -6393,7 +6519,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -6445,7 +6572,8 @@
      "materials": [
       "ss304"
      ],
-     "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar"
+     "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -6494,7 +6622,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -6543,7 +6672,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -6595,7 +6725,8 @@
      "materials": [
       "ss304"
      ],
-     "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar"
+     "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -6644,7 +6775,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -6693,7 +6825,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -6744,7 +6877,8 @@
      "materials": [
       "ss304"
      ],
-     "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar"
+     "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -6792,7 +6926,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -6840,7 +6975,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -6891,7 +7027,8 @@
      "materials": [
       "ss304"
      ],
-     "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar"
+     "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -6939,7 +7076,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -6987,7 +7125,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -7038,7 +7177,8 @@
      "materials": [
       "ss304"
      ],
-     "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar"
+     "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -7086,7 +7226,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -7134,7 +7275,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -7186,7 +7328,8 @@
      "materials": [
       "ss400"
      ],
-     "sourceGroup": "Stainless Steel - Martensitic, Moderately Difficult to Cut: 420, 430F, 416, 420F, 440c"
+     "sourceGroup": "Stainless Steel - Martensitic, Moderately Difficult to Cut: 420, 430F, 416, 420F, 440c",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -7235,7 +7378,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -7284,7 +7428,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -7336,7 +7481,8 @@
      "materials": [
       "ss400"
      ],
-     "sourceGroup": "Stainless Steel - Martensitic, Moderately Difficult to Cut: 420, 430F, 416, 420F, 440c"
+     "sourceGroup": "Stainless Steel - Martensitic, Moderately Difficult to Cut: 420, 430F, 416, 420F, 440c",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -7385,7 +7531,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -7434,7 +7581,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -7486,7 +7634,8 @@
      "materials": [
       "ss400"
      ],
-     "sourceGroup": "Stainless Steel - Martensitic, Moderately Difficult to Cut: 420, 430F, 416, 420F, 440c"
+     "sourceGroup": "Stainless Steel - Martensitic, Moderately Difficult to Cut: 420, 430F, 416, 420F, 440c",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -7535,7 +7684,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -7584,7 +7734,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -7636,7 +7787,8 @@
      "materials": [
       "ss400"
      ],
-     "sourceGroup": "Stainless Steel - Martensitic, Moderately Difficult to Cut: 420, 430F, 416, 420F, 440c"
+     "sourceGroup": "Stainless Steel - Martensitic, Moderately Difficult to Cut: 420, 430F, 416, 420F, 440c",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -7685,7 +7837,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -7734,7 +7887,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -7786,7 +7940,8 @@
      "materials": [
       "ss400"
      ],
-     "sourceGroup": "Stainless Steel - Martensitic, Moderately Difficult to Cut: 420, 430F, 416, 420F, 440c"
+     "sourceGroup": "Stainless Steel - Martensitic, Moderately Difficult to Cut: 420, 430F, 416, 420F, 440c",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -7835,7 +7990,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -7884,7 +8040,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -7936,7 +8093,8 @@
      "materials": [
       "ss400"
      ],
-     "sourceGroup": "Stainless Steel - Martensitic, Moderately Difficult to Cut: 420, 430F, 416, 420F, 440c"
+     "sourceGroup": "Stainless Steel - Martensitic, Moderately Difficult to Cut: 420, 430F, 416, 420F, 440c",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -7985,7 +8143,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -8034,7 +8193,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -8085,7 +8245,8 @@
      "materials": [
       "ss400"
      ],
-     "sourceGroup": "Stainless Steel - Martensitic, Moderately Difficult to Cut: 420, 430F, 416, 420F, 440c"
+     "sourceGroup": "Stainless Steel - Martensitic, Moderately Difficult to Cut: 420, 430F, 416, 420F, 440c",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -8133,7 +8294,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -8181,7 +8343,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -8232,7 +8395,8 @@
      "materials": [
       "ss400"
      ],
-     "sourceGroup": "Stainless Steel - Martensitic, Moderately Difficult to Cut: 420, 430F, 416, 420F, 440c"
+     "sourceGroup": "Stainless Steel - Martensitic, Moderately Difficult to Cut: 420, 430F, 416, 420F, 440c",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -8280,7 +8444,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -8328,7 +8493,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -8379,7 +8545,8 @@
      "materials": [
       "ss400"
      ],
-     "sourceGroup": "Stainless Steel - Martensitic, Moderately Difficult to Cut: 420, 430F, 416, 420F, 440c"
+     "sourceGroup": "Stainless Steel - Martensitic, Moderately Difficult to Cut: 420, 430F, 416, 420F, 440c",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -8427,7 +8594,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -8475,7 +8643,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class."
+     "note": "Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class. Hardened-material chart (printed hardness in label); not linked to an app material because none matches this hardness class.",
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -8523,7 +8692,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -8571,7 +8741,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -8619,7 +8790,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -8667,7 +8839,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -8715,7 +8888,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -8763,7 +8937,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -8811,7 +8986,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -8859,7 +9035,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -8907,7 +9084,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -8955,7 +9133,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -9003,7 +9182,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -9051,7 +9231,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -9099,7 +9280,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -9147,7 +9329,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -9195,7 +9378,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -9243,7 +9427,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -9291,7 +9476,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -9339,7 +9525,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -9386,7 +9573,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -9433,7 +9621,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -9480,7 +9669,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -9527,7 +9717,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -9574,7 +9765,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -9621,7 +9813,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -9668,7 +9861,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -9715,7 +9909,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "M",
@@ -9762,7 +9957,8 @@
       "page": "12 (PDF page 12 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -9810,7 +10006,8 @@
       "page": "13 (PDF page 13 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -9858,7 +10055,8 @@
       "page": "13 (PDF page 13 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -9906,7 +10104,8 @@
       "page": "13 (PDF page 13 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -9954,7 +10153,8 @@
       "page": "13 (PDF page 13 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -10002,7 +10202,8 @@
       "page": "13 (PDF page 13 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -10050,7 +10251,8 @@
       "page": "13 (PDF page 13 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -10098,7 +10300,8 @@
       "page": "13 (PDF page 13 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -10146,7 +10349,8 @@
       "page": "13 (PDF page 13 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -10194,7 +10398,8 @@
       "page": "13 (PDF page 13 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -10242,7 +10447,8 @@
       "page": "13 (PDF page 13 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -10290,7 +10496,8 @@
       "page": "13 (PDF page 13 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -10338,7 +10545,8 @@
       "page": "13 (PDF page 13 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -10385,7 +10593,8 @@
       "page": "13 (PDF page 13 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -10432,7 +10641,8 @@
       "page": "13 (PDF page 13 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -10479,7 +10689,8 @@
       "page": "13 (PDF page 13 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -10526,7 +10737,8 @@
       "page": "13 (PDF page 13 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -10573,7 +10785,8 @@
       "page": "13 (PDF page 13 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "K",
@@ -10620,7 +10833,8 @@
       "page": "13 (PDF page 13 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -10668,7 +10882,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -10716,7 +10931,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -10764,7 +10980,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -10812,7 +11029,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -10860,7 +11078,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -10908,7 +11127,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -10956,7 +11176,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11004,7 +11225,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11052,7 +11274,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11100,7 +11323,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11148,7 +11372,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11196,7 +11421,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11244,7 +11470,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11292,7 +11519,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11340,7 +11568,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11388,7 +11617,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11436,7 +11666,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11484,7 +11715,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11531,7 +11763,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11578,7 +11811,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11625,7 +11859,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11672,7 +11907,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11719,7 +11955,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11766,7 +12003,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11813,7 +12051,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11860,7 +12099,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11907,7 +12147,8 @@
       "page": "15 (PDF page 15 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -11955,7 +12196,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12003,7 +12245,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12051,7 +12294,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12099,7 +12343,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12147,7 +12392,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12195,7 +12441,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12243,7 +12490,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12291,7 +12539,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12339,7 +12588,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12387,7 +12637,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12435,7 +12686,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12483,7 +12735,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12531,7 +12784,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12579,7 +12833,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12627,7 +12882,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12675,7 +12931,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12723,7 +12980,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12770,7 +13028,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12817,7 +13076,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12864,7 +13124,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12911,7 +13172,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -12958,7 +13220,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -13005,7 +13268,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -13052,7 +13316,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -13099,7 +13364,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     },
     {
      "iso": "S",
@@ -13146,7 +13412,8 @@
       "page": "16 (PDF page 16 of 16)",
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
-     }
+     },
+     "strictMaterials": true
     }
    ]
   },
@@ -13212,7 +13479,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Speed printed as \"1200+\" (no upper limit given); stored as start value."
+     "note": "Speed printed as \"1200+\" (no upper limit given); stored as start value.",
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -13260,7 +13528,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Speed printed as \"600+\" (no upper limit given); stored as start value."
+     "note": "Speed printed as \"600+\" (no upper limit given); stored as start value.",
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -13308,7 +13577,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Speed printed as \"1200+\" (no upper limit given); stored as start value."
+     "note": "Speed printed as \"1200+\" (no upper limit given); stored as start value.",
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -13356,7 +13626,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Speed printed as \"600+\" (no upper limit given); stored as start value."
+     "note": "Speed printed as \"600+\" (no upper limit given); stored as start value.",
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -13404,7 +13675,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Speed printed as \"1200+\" (no upper limit given); stored as start value."
+     "note": "Speed printed as \"1200+\" (no upper limit given); stored as start value.",
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -13452,7 +13724,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Speed printed as \"600+\" (no upper limit given); stored as start value."
+     "note": "Speed printed as \"600+\" (no upper limit given); stored as start value.",
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -13500,7 +13773,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Speed printed as \"1200+\" (no upper limit given); stored as start value."
+     "note": "Speed printed as \"1200+\" (no upper limit given); stored as start value.",
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -13548,7 +13822,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Speed printed as \"600+\" (no upper limit given); stored as start value."
+     "note": "Speed printed as \"600+\" (no upper limit given); stored as start value.",
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -13596,7 +13871,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Speed printed as \"1200+\" (no upper limit given); stored as start value."
+     "note": "Speed printed as \"1200+\" (no upper limit given); stored as start value.",
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -13644,7 +13920,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Speed printed as \"600+\" (no upper limit given); stored as start value."
+     "note": "Speed printed as \"600+\" (no upper limit given); stored as start value.",
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -13692,7 +13969,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Speed printed as \"1200+\" (no upper limit given); stored as start value."
+     "note": "Speed printed as \"1200+\" (no upper limit given); stored as start value.",
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -13740,7 +14018,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Speed printed as \"600+\" (no upper limit given); stored as start value."
+     "note": "Speed printed as \"600+\" (no upper limit given); stored as start value.",
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -13787,7 +14066,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Speed printed as \"1200+\" (no upper limit given); stored as start value."
+     "note": "Speed printed as \"1200+\" (no upper limit given); stored as start value.",
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -13834,7 +14114,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Speed printed as \"600+\" (no upper limit given); stored as start value."
+     "note": "Speed printed as \"600+\" (no upper limit given); stored as start value.",
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -13881,7 +14162,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Speed printed as \"1200+\" (no upper limit given); stored as start value."
+     "note": "Speed printed as \"1200+\" (no upper limit given); stored as start value.",
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -13928,7 +14210,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Speed printed as \"600+\" (no upper limit given); stored as start value."
+     "note": "Speed printed as \"600+\" (no upper limit given); stored as start value.",
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -13975,7 +14258,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Speed printed as \"1200+\" (no upper limit given); stored as start value."
+     "note": "Speed printed as \"1200+\" (no upper limit given); stored as start value.",
+     "strictMaterials": true
     },
     {
      "iso": "N",
@@ -14022,7 +14306,8 @@
       "retrieved": "2026-10-25",
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
-     "note": "Speed printed as \"600+\" (no upper limit given); stored as start value."
+     "note": "Speed printed as \"600+\" (no upper limit given); stored as start value.",
+     "strictMaterials": true
     }
    ]
   }
