@@ -68,3 +68,9 @@ One commit per item. After each: validate.mjs, test.mjs, validate-machines.mjs, 
 
 ## Dia group after Brand/Type (approved single change, 2026-10-25)
 Mill/Drill: Published diameters + Tool dia + Flutes now sit after Brand/Type, before Series; list = every published size of that brand+type (all series, deduped, `ps` index field), narrowed to sizes with data for the material when Only-tools-with-data is on. Picking a size re-ranks Series (94c10fc no-auto-pick kept). Tap: after Tap type (tdBox stays beside Tap dia). Turn/Bore: unchanged position (workpiece/bore measure). PASS — shots/ui/dia/.
+
+## Tool library buildout: Niagara + Accupro (2026-10-25)
+- Niagara Cutter (data/niagara-mill.json): 24 series, 319 rows from Navigator Niagara Solid Milling Catalog 2023.1 (iPaper HTML text; PDF not used, robots disallows *.ashx). Only the 18 START VALUES tables that pass vc=n·πD/12 and vf=n·fz·Z self-checks were loaded; ~46 other tables skipped (PARTIAL). ISO P/M/K/S/H only — no N (aluminum) tables passed, so Niagara is off for aluminum. SMG codes only, no alloy links (like Seco). No coating, no ap/ae stored.
+- Accupro (data/accupro-mill.json): 3 families, 285 rows from MSC Accupro technical PDF (2014-12-19, pp.5–16). Flutes not stated. 25 rows flagged in-note where a printed chip load is out of sequence (copied as printed). Aluminum "1200+"/"600+" SFM stored as start. One p16 row with no printed hardness skipped. 304L rows are labelled as printed; 303 stays its own link.
+- PASS: validate, test.mjs, r3.sh, picker at 390x844 (shots/ui/niagara, shots/ui/accupro), Find this tool builds MSC search for both.
+- Note (pre-existing, not fixed): forcing a disabled brand option in the combo throws in fillTool (options[0] undefined).
