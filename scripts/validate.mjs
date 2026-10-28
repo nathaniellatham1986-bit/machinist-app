@@ -26,7 +26,7 @@ function specs(sp, w, err) { if (!sp || typeof sp !== 'object') return err(w, 's
   if ('coatingClass' in sp && !isStr(sp.coating)) err(w, 'specs.coatingClass needs the printed specs.coating');
   if ('endShape' in sp && !SPEC_END.includes(sp.endShape)) err(w, `specs.endShape must be ${SPEC_END.join('|')}`);
   if (!sp.source || !isStr(sp.source.url) || !isStr(sp.source.retrieved)) err(w, 'specs.source needs url and retrieved'); }
-const COND_KEYS = new Set(['fzPerD', 'label', 'iso', 'subgroup', 'material', 'status', 'coolant', 'sfm', 'feed', 'ap', 'ae', 'apx', 'aex', 'source', 'materials', 'sourceGroup', 'strictMaterials',
+const COND_KEYS = new Set(['fzPerD', 'label', 'iso', 'subgroup', 'material', 'status', 'coolant', 'sfm', 'feed', 'ap', 'ae', 'apx', 'aex', 'source', 'materials', 'sourceGroup', 'strictMaterials', 'excludeMaterials',
   'noseRadius', 'leadAngle', 'toolLife', 'insertWidth', 'chipbreaker', 'geometry', 'kind', 'table', 'woc', 'operation', 'insert', 'grade', 'note', 'coolantNote', 'altSources', 'printed']);
 const SRC_KEYS = new Set(['kind', 'manufacturer', 'catalog', 'edition', 'url', 'page', 'notes', 'derivation', 'retrieved']);
 

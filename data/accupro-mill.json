@@ -239,6 +239,7 @@
      ],
      "sourceGroup": "High Strength Steels--4340, 6150, 52100, H-11, H-13",
      "strictMaterials": true,
+     "excludeMaterials": ["4340-ht"],
      "note": "Linked to 4340 annealed: p.5 \"Under 32 HRC\" chart prints \"High Strength Steels--4340, 6150, 52100, H-11, H-13\". No 41xx/4140 printed, so not linked to 4140."
     },
     {

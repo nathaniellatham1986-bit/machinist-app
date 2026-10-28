@@ -78,6 +78,7 @@ export function hardnessHB(text) {
   return le && !b ? [0, f(a)] : [f(a), f(b ?? a)]; }
 // Material match: 'named' when the record names the alloy, 'group' when its printed group/hardness fits, else null.
 export function matchMat(m, c) {
+  if (c.excludeMaterials?.includes(m.id)) return null; // explicit refusal: a printed row that must not match this material even when its text names the alloy
   const text = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' ');
   if (c.materials?.includes(m.id) || (m.named && new RegExp(m.named, 'i').test(text))) {
     if (!m.hb) return 'named'; const h = hardnessBand(text); return !h || (h[0] <= m.hb[1] && h[1] >= m.hb[0]) ? 'named' : null; }

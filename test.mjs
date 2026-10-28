@@ -464,3 +464,7 @@ console.log('estimate tests ok');
 { const { classifyOverride: C } = await import('./calc.js'); const k = 3.28084, p = { min: 140 * k, max: 160 * k, def: 150 * k };
   assert.equal(C(526, p, 2, 0).state, 'out'); assert.equal(C(525, p, 2, 0).state, 'out'); assert.equal(C(524, p, 2, 0).state, 'within');
   assert.equal(C(459, p, 2, 0).state, 'out'); assert.equal(C(460, p, 2, 0).state, 'within'); assert.match(C(500, p, 2, 0).label, /460–524/); }
+// Accupro under-32 HRC High Strength row must not match 4340 heat-treated (Nathaniel, Oct 28): excludeMaterials wins over the printed grade name.
+{ const { matchMat } = await import('./calc.js'); const MATS = JSON.parse(fs.readFileSync('data/materials.json')).materials, d = JSON.parse(fs.readFileSync('data/accupro-mill.json', 'utf8'));
+  const c = d.tools.flatMap(t => t.conditions).find(c => /High Strength Steels--4340/.test(c.label) && /<32 HRC/.test(c.label));
+  assert.ok(c.excludeMaterials?.includes('4340-ht')); assert.equal(matchMat(MATS.find(m => m.id === '4340-ht'), c), null); assert.equal(matchMat(MATS.find(m => m.id === '4340-ann'), c), 'named'); console.log('4340-ht unlink ok'); }
