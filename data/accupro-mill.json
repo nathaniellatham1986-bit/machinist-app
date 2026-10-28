@@ -234,10 +234,12 @@
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
      "materials": [
-      "p-alloy"
+      "p-alloy",
+      "4340-ann"
      ],
      "sourceGroup": "High Strength Steels--4340, 6150, 52100, H-11, H-13",
-     "strictMaterials": true
+     "strictMaterials": true,
+     "note": "Linked to 4340 annealed: p.5 \"Under 32 HRC\" chart prints \"High Strength Steels--4340, 6150, 52100, H-11, H-13\". No 41xx/4140 printed, so not linked to 4140."
     },
     {
      "iso": "M",
@@ -3279,10 +3281,13 @@
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
      "materials": [
-      "p-alloy"
+      "p-alloy",
+      "4140-ann",
+      "4340-ann"
      ],
      "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series",
-     "strictMaterials": true
+     "strictMaterials": true,
+     "note": "Linked to 4140 annealed and 4340 annealed: p.8 prints \"Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series\", row \"< 32\" HRC."
     },
     {
      "iso": "P",
@@ -3432,10 +3437,13 @@
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
      "materials": [
-      "p-alloy"
+      "p-alloy",
+      "4140-ann",
+      "4340-ann"
      ],
      "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series",
-     "strictMaterials": true
+     "strictMaterials": true,
+     "note": "Linked to 4140 annealed and 4340 annealed: p.8 prints \"Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series\", row \"< 32\" HRC."
     },
     {
      "iso": "P",
@@ -3585,10 +3593,13 @@
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
      "materials": [
-      "p-alloy"
+      "p-alloy",
+      "4140-ann",
+      "4340-ann"
      ],
      "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series",
-     "strictMaterials": true
+     "strictMaterials": true,
+     "note": "Linked to 4140 annealed and 4340 annealed: p.8 prints \"Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series\", row \"< 32\" HRC."
     },
     {
      "iso": "P",
@@ -3738,10 +3749,13 @@
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
      "materials": [
-      "p-alloy"
+      "p-alloy",
+      "4140-ann",
+      "4340-ann"
      ],
      "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series",
-     "strictMaterials": true
+     "strictMaterials": true,
+     "note": "Linked to 4140 annealed and 4340 annealed: p.8 prints \"Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series\", row \"< 32\" HRC."
     },
     {
      "iso": "P",
@@ -3891,10 +3905,13 @@
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
      "materials": [
-      "p-alloy"
+      "p-alloy",
+      "4140-ann",
+      "4340-ann"
      ],
      "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series",
-     "strictMaterials": true
+     "strictMaterials": true,
+     "note": "Linked to 4140 annealed and 4340 annealed: p.8 prints \"Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series\", row \"< 32\" HRC."
     },
     {
      "iso": "P",
@@ -4044,10 +4061,13 @@
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
      "materials": [
-      "p-alloy"
+      "p-alloy",
+      "4140-ann",
+      "4340-ann"
      ],
      "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series",
-     "strictMaterials": true
+     "strictMaterials": true,
+     "note": "Linked to 4140 annealed and 4340 annealed: p.8 prints \"Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series\", row \"< 32\" HRC."
     },
     {
      "iso": "P",
@@ -4196,10 +4216,13 @@
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
      "materials": [
-      "p-alloy"
+      "p-alloy",
+      "4140-ann",
+      "4340-ann"
      ],
      "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series",
-     "strictMaterials": true
+     "strictMaterials": true,
+     "note": "Linked to 4140 annealed and 4340 annealed: p.8 prints \"Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series\", row \"< 32\" HRC."
     },
     {
      "iso": "P",
@@ -4346,10 +4369,13 @@
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
      "materials": [
-      "p-alloy"
+      "p-alloy",
+      "4140-ann",
+      "4340-ann"
      ],
      "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series",
-     "strictMaterials": true
+     "strictMaterials": true,
+     "note": "Linked to 4140 annealed and 4340 annealed: p.8 prints \"Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series\", row \"< 32\" HRC."
     },
     {
      "iso": "P",
@@ -4496,10 +4522,13 @@
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
      "materials": [
-      "p-alloy"
+      "p-alloy",
+      "4140-ann",
+      "4340-ann"
      ],
      "sourceGroup": "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series",
-     "strictMaterials": true
+     "strictMaterials": true,
+     "note": "Linked to 4140 annealed and 4340 annealed: p.8 prints \"Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series\", row \"< 32\" HRC."
     },
     {
      "iso": "P",

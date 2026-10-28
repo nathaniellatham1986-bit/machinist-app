@@ -440,3 +440,9 @@ console.log('estimate tests ok');
   if (!/id="diaHome"><\/div><div id="diaGrp">/.test(h) || !/id="bkRow"/.test(h) || !/id="tapRow"/.test(h) || !/\$\('diaHome'\)\.after\(g\)/.test(a) || !/\$\('topL'\)\.after\(g\)/.test(a)) throw 'dia group placement';
   console.log('diaGrp ok');
 }
+{ const d = JSON.parse(fs.readFileSync('data/accupro-mill.json', 'utf8')); let n = 0;
+  for (const t of d.tools) for (const c of t.conditions) { const m = c.materials || [];
+    if (m.includes('4140-ann')) { n++; assert.ok(c.label.includes('41xx') && c.label.includes('<32 HRC') && c.strictMaterials, c.label); }
+    if (m.includes('4140-ht')) assert.fail('accupro mill 4140-ht link ' + c.label);
+    if ((m.includes('4340-ann')) ) assert.ok(c.label.includes('<32 HRC'), c.label); }
+  assert.equal(n, 9, 'accupro mill 4140-ann links'); }
