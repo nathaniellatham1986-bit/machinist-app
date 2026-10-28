@@ -87,3 +87,11 @@ Mill/Drill: Published diameters + Tool dia + Flutes now sit after Brand/Type, be
 - 9 p.8 "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series · <32 HRC" rows → +4140-ann, +4340-ann. p.5 "High Strength Steels--4340, 6150, 52100, H-11, H-13 · <32 HRC" → +4340-ann (no 41xx printed, so no 4140). Row notes cite the wording. strictMaterials kept; no 4140-ht, no >32/>42 rows.
 - Match diff: only those 9 rows changed (+4140-ann,+4340-ann named); the High Strength row already matched 4340-ann/4340-ht by name. Picker: only Accupro mill 4140-ann 0/3→1/3, 4340-ann 1/3→2/3.
 - Shots: 4140 ann → HP Progressive Helix, Shallow Slotting <32, 180 SFM (180–220) / .0028, p.8; 4340 ann → General Purpose, High Strength <32, 150 (150–250) / .0024, p.5; mild unchanged 100 / .0030 p.5.
+
+## Plan: material-borrowed ESTIMATE (2026-10-27) — STOPPED before build, needs a decision
+Intended design: a class table in estimate.js (id → family, gummy flag; ISO and hardness from data/materials.json), one pure `borrow()` called only after the existing estimate returns null, same tool record only, mill/drill/tap only (never turn/bore), lowest low-end of the harder/slower lender, blue ESTIMATE card "Estimated from [material, hardness, page]"; tool list labels borrowed combos "— estimate only" and picker defaults never pick them.
+Hole count measured first (/tmp/holes.mjs, every mill/drill/tap tool × each of our 20 materials with no row): 26,918 no-data combos.
+- Rules as agreed, classifying only materials both in the brief and in materials.json: **0 combos filled.** Only 8 materials carry hardness data (H13, P20, 4140, 4340 ann/ht); of those only 4140-ann/4140-ht are classified, and that pair is refused.
+- Adding 4340-ann/ht as non-gummy alloy (not in the brief): 2 (Accupro General Purpose: 4140-ann←4340-ann, 4140-ht←4340-ht; the second rests on the open 4340-ht question).
+- Also treating "no hardness on either side" as a match: 5 (adds gray↔ductile iron on Hertel HSS and Sandvik CoroMill 390).
+Also: our materials list has no separate 316/316L/321 (ss304 = "304, 316"), so the 304↔316 test case cannot exist in the app.
