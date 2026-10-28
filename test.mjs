@@ -58,6 +58,10 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   assert.deepEqual(coolModes('internal coolant recommended'), ['through']);
   assert.deepEqual(coolModes('valid for use with cutting fluid (table note)'), ['flood']);
   assert.deepEqual(coolModes('dry or air blast'), ['air', 'dry']); assert.deepEqual(coolModes(null), []); }
+// Accupro: rows printed for >32/>42 HRC must not link to an (unhardened) app material
+{ const d = JSON.parse(fs.readFileSync('data/accupro-mill.json'));
+  const bad = d.tools.flatMap(t => t.conditions).filter(c => /[>]\s*\d+\s*HRC/.test(c.label) && c.materials?.length);
+  assert.equal(bad.length, 0, 'hardened Accupro rows linked: ' + bad.map(c => c.label).slice(0, 3).join('; ')); }
 // link-materials: hardness numbers are not grades
 { const { matchIds } = await import('./scripts/link-materials.mjs');
   assert.deepEqual(matchIds('M', 'Austenitic stainless <321 HB'), []);
