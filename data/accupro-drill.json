@@ -1444,9 +1444,9 @@
   {
    "mode": "drill",
    "brand": "Accupro",
-   "series": "Drills \u2013 Non-Coolant/Coolant Fed chart, 1/16\"\u20131/8\"",
+   "series": "Drills \u2013 Non-Coolant/Coolant Fed chart, 1/16\u20131/8 in",
    "type": "Drill",
-   "notes": "MSC Accupro drill chart: cutting-diameter band 1/16\"\u20131/8\" as printed (one tool per printed band; ipr range applies across the band). SFM by coolant column (Non-coolant / Coolant FED). Series/EDP not stated.",
+   "notes": "MSC Accupro drill chart: cutting-diameter band 1/16\u20131/8 in as printed (one tool per printed band; ipr range applies across the band). SFM by coolant column (Non-coolant / Coolant FED). Series/EDP not stated.",
    "conditions": [
     {
      "iso": "P",
@@ -3549,9 +3549,9 @@
   {
    "mode": "drill",
    "brand": "Accupro",
-   "series": "Drills \u2013 Non-Coolant/Coolant Fed chart, 1/8\"\u20131/4\"",
+   "series": "Drills \u2013 Non-Coolant/Coolant Fed chart, 1/8\u20131/4 in",
    "type": "Drill",
-   "notes": "MSC Accupro drill chart: cutting-diameter band 1/8\"\u20131/4\" as printed (one tool per printed band; ipr range applies across the band). SFM by coolant column (Non-coolant / Coolant FED). Series/EDP not stated.",
+   "notes": "MSC Accupro drill chart: cutting-diameter band 1/8\u20131/4 in as printed (one tool per printed band; ipr range applies across the band). SFM by coolant column (Non-coolant / Coolant FED). Series/EDP not stated.",
    "conditions": [
     {
      "iso": "P",
@@ -5654,9 +5654,9 @@
   {
    "mode": "drill",
    "brand": "Accupro",
-   "series": "Drills \u2013 Non-Coolant/Coolant Fed chart, 1/4\"\u20133/8\"",
+   "series": "Drills \u2013 Non-Coolant/Coolant Fed chart, 1/4\u20133/8 in",
    "type": "Drill",
-   "notes": "MSC Accupro drill chart: cutting-diameter band 1/4\"\u20133/8\" as printed (one tool per printed band; ipr range applies across the band). SFM by coolant column (Non-coolant / Coolant FED). Series/EDP not stated.",
+   "notes": "MSC Accupro drill chart: cutting-diameter band 1/4\u20133/8 in as printed (one tool per printed band; ipr range applies across the band). SFM by coolant column (Non-coolant / Coolant FED). Series/EDP not stated.",
    "conditions": [
     {
      "iso": "P",
@@ -7759,9 +7759,9 @@
   {
    "mode": "drill",
    "brand": "Accupro",
-   "series": "Drills \u2013 Non-Coolant/Coolant Fed chart, 3/8\"\u20131/2\"",
+   "series": "Drills \u2013 Non-Coolant/Coolant Fed chart, 3/8\u20131/2 in",
    "type": "Drill",
-   "notes": "MSC Accupro drill chart: cutting-diameter band 3/8\"\u20131/2\" as printed (one tool per printed band; ipr range applies across the band). SFM by coolant column (Non-coolant / Coolant FED). Series/EDP not stated.",
+   "notes": "MSC Accupro drill chart: cutting-diameter band 3/8\u20131/2 in as printed (one tool per printed band; ipr range applies across the band). SFM by coolant column (Non-coolant / Coolant FED). Series/EDP not stated.",
    "conditions": [
     {
      "iso": "P",
@@ -9872,9 +9872,9 @@
   {
    "mode": "drill",
    "brand": "Accupro",
-   "series": "Drills \u2013 Non-Coolant/Coolant Fed chart, 1/2\"\u20135/8\"",
+   "series": "Drills \u2013 Non-Coolant/Coolant Fed chart, 1/2\u20135/8 in",
    "type": "Drill",
-   "notes": "MSC Accupro drill chart: cutting-diameter band 1/2\"\u20135/8\" as printed (one tool per printed band; ipr range applies across the band). SFM by coolant column (Non-coolant / Coolant FED). Series/EDP not stated.",
+   "notes": "MSC Accupro drill chart: cutting-diameter band 1/2\u20135/8 in as printed (one tool per printed band; ipr range applies across the band). SFM by coolant column (Non-coolant / Coolant FED). Series/EDP not stated.",
    "conditions": [
     {
      "iso": "P",
@@ -11985,9 +11985,9 @@
   {
    "mode": "drill",
    "brand": "Accupro",
-   "series": "Drills \u2013 Non-Coolant/Coolant Fed chart, 5/8\"\u20133/4\"",
+   "series": "Drills \u2013 Non-Coolant/Coolant Fed chart, 5/8\u20133/4 in",
    "type": "Drill",
-   "notes": "MSC Accupro drill chart: cutting-diameter band 5/8\"\u20133/4\" as printed (one tool per printed band; ipr range applies across the band). SFM by coolant column (Non-coolant / Coolant FED). Series/EDP not stated.",
+   "notes": "MSC Accupro drill chart: cutting-diameter band 5/8\u20133/4 in as printed (one tool per printed band; ipr range applies across the band). SFM by coolant column (Non-coolant / Coolant FED). Series/EDP not stated.",
    "conditions": [
     {
      "iso": "P",
