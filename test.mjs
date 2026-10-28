@@ -69,6 +69,10 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   const ti = cs.find(c => c.label.startsWith('Titanium: Pure Titanium')); assert.equal(ti.feed.byDiameter['0.7500'].value, 0.008); assert.deepEqual([ti.sfm.min, ti.sfm.max], [65, 105]);
   const t4 = d.tools.find(t => t.diameters_in?.[0] === 0.5 && t.diameters_in[1] === 0.625), ha = t4.conditions.find(c => /^High Alloy.*Over 35 Rc/.test(c.label) && c.coolant === 'Dry');
   assert.equal(ha.sfm.value, 175); assert.deepEqual([ha.feed.range.min, ha.feed.range.max], [0.003, 0.0035]); }
+// Accupro taps (p1): SFM only, feed = pitch
+{ const cs = JSON.parse(fs.readFileSync('data/accupro-tap.json')).tools.flatMap(t => t.conditions);
+  assert.equal(cs.length, 25); assert.ok(cs.every(c => c.feed === null));
+  const m = cs.find(c => c.label.startsWith('Stainless Steels: Martensitic')); assert.deepEqual([m.sfm.min, m.sfm.max], [12, 35]); }
 // link-materials: hardness numbers are not grades
 { const { matchIds } = await import('./scripts/link-materials.mjs');
   assert.deepEqual(matchIds('M', 'Austenitic stainless <321 HB'), []);

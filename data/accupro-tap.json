@@ -1,0 +1,652 @@
+{
+ "schema": 1,
+ "brand": "Accupro",
+ "tools": [
+  {
+   "mode": "tap",
+   "brand": "Accupro",
+   "series": "High Performance Color Band Tap \u2013 Blue Band",
+   "type": "Tap \u2013 color band",
+   "notes": "MSC Accupro \"High Performance Color Band for Drills & Taps\" chart: the band colour on the tool selects the material row. Tapping SFM only; feed = thread pitch.",
+   "conditions": [
+    {
+     "iso": "M",
+     "label": "Stainless Steels: Free Cutting \u00b7 <250 HB \u00b7 Blue Band",
+     "material": "Stainless Steels: Free Cutting",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 12,
+      "max": 35
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "M",
+     "label": "Stainless Steels: Austenitic \u00b7 <250 HB \u00b7 Blue Band",
+     "material": "Stainless Steels: Austenitic",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 12,
+      "max": 35
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "M",
+     "label": "Stainless Steels: Martensitic, Ferritic \u00b7 >300 HB \u00b7 Blue Band",
+     "material": "Stainless Steels: Martensitic, Ferritic",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 12,
+      "max": 35
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "S",
+     "label": "Titanium: Pure Titanium, unalloyed \u00b7 <200 HB \u00b7 Blue Band",
+     "material": "Titanium: Pure Titanium, unalloyed",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 10,
+      "max": 25
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "S",
+     "label": "Titanium: Titanium Alloys \u00b7 >300 HB \u00b7 Blue Band",
+     "material": "Titanium: Titanium Alloys",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 3,
+      "max": 15
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "S",
+     "label": "Nickel: Pure Nickel, unalloyed \u00b7 <300 HB \u00b7 Blue Band",
+     "material": "Nickel: Pure Nickel, unalloyed",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 10,
+      "max": 15
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "tap",
+   "brand": "Accupro",
+   "series": "High Performance Color Band Tap \u2013 Green Band",
+   "type": "Tap \u2013 color band",
+   "notes": "MSC Accupro \"High Performance Color Band for Drills & Taps\" chart: the band colour on the tool selects the material row. Tapping SFM only; feed = thread pitch.",
+   "conditions": [
+    {
+     "iso": "P",
+     "label": "Carbon Alloy Steels: Free Cutting Mild Steel \u00b7 <120 HB \u00b7 Green Band",
+     "material": "Carbon Alloy Steels: Free Cutting Mild Steel",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 25,
+      "max": 50
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "P",
+     "label": "Carbon Alloy Steels: Low Carbon Steel \u00b7 <200 HB \u00b7 Green Band",
+     "material": "Carbon Alloy Steels: Low Carbon Steel",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 25,
+      "max": 50
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "P",
+     "label": "Carbon Alloy Steels: Medium Carbon Steel \u00b7 <250 HB \u00b7 Green Band",
+     "material": "Carbon Alloy Steels: Medium Carbon Steel",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 25,
+      "max": 50
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "tap",
+   "brand": "Accupro",
+   "series": "High Performance Color Band Tap \u2013 Red Band",
+   "type": "Tap \u2013 color band",
+   "notes": "MSC Accupro \"High Performance Color Band for Drills & Taps\" chart: the band colour on the tool selects the material row. Tapping SFM only; feed = thread pitch.",
+   "conditions": [
+    {
+     "iso": "P",
+     "label": "Carbon Alloy Steels: Low Alloy Steels \u00b7 >250 HB \u00b7 Red Band",
+     "material": "Carbon Alloy Steels: Low Alloy Steels",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 6,
+      "max": 30
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "P",
+     "label": "Carbon Alloy Steels: Alloyed, Heat Treated \u00b7 >300 HB \u00b7 Red Band",
+     "material": "Carbon Alloy Steels: Alloyed, Heat Treated",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 6,
+      "max": 30
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "P",
+     "label": "Carbon Alloy Steels: Alloyed, Heat Treated \u00b7 >350 HB \u00b7 Red Band",
+     "material": "Carbon Alloy Steels: Alloyed, Heat Treated",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 6,
+      "max": 12
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "S",
+     "label": "Nickel: Nickel, Nimonic 75 \u00b7 >300 HB \u00b7 Red Band",
+     "material": "Nickel: Nickel, Nimonic 75",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 10,
+      "max": 12
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "S",
+     "label": "Nickel: Nickel, Inconel 718 Alloy \u00b7 <350 HB \u00b7 Red Band",
+     "material": "Nickel: Nickel, Inconel 718 Alloy",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 10,
+      "max": 15
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "N",
+     "label": "Copper: High Tensile Bronze \u00b7 <350 HB \u00b7 Red Band",
+     "material": "Copper: High Tensile Bronze",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 50,
+      "max": 60
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "tap",
+   "brand": "Accupro",
+   "series": "High Performance Color Band Tap \u2013 Yellow Band",
+   "type": "Tap \u2013 color band",
+   "notes": "MSC Accupro \"High Performance Color Band for Drills & Taps\" chart: the band colour on the tool selects the material row. Tapping SFM only; feed = thread pitch.",
+   "conditions": [
+    {
+     "iso": "N",
+     "label": "Aluminium Alloys: Wrought & Extruded \u00b7 <150 HB \u00b7 Yellow Band",
+     "material": "Aluminium Alloys: Wrought & Extruded",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 50,
+      "max": 65
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "N",
+     "label": "Aluminium Alloys: Wrought & Treated \u00b7 >150 HB \u00b7 Yellow Band",
+     "material": "Aluminium Alloys: Wrought & Treated",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 50,
+      "max": 65
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "N",
+     "label": "Aluminium Alloys: Cast, Low Silicon <5% \u00b7 <150 HB \u00b7 Yellow Band",
+     "material": "Aluminium Alloys: Cast, Low Silicon <5%",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 40,
+      "max": 65
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "N",
+     "label": "Aluminium Alloys: Cast, High Silicon >10% \u00b7 >150 HB \u00b7 Yellow Band",
+     "material": "Aluminium Alloys: Cast, High Silicon >10%",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 40,
+      "max": 65
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "N",
+     "label": "Copper: Pure Copper \u00b7 <100 HB \u00b7 Yellow Band",
+     "material": "Copper: Pure Copper",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 50,
+      "max": 60
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     },
+     "note": "Tons/sq.in hardness column is blank in the printed row."
+    },
+    {
+     "iso": "N",
+     "label": "Copper: Brass, Soft \u00b7 <200 HB \u00b7 Yellow Band",
+     "material": "Copper: Brass, Soft",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 30,
+      "max": 65
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "N",
+     "label": "Copper: Brass, Bronze \u00b7 >200 HB \u00b7 Yellow Band",
+     "material": "Copper: Brass, Bronze",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 12,
+      "max": 20
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "tap",
+   "brand": "Accupro",
+   "series": "High Performance Color Band Tap \u2013 White Band",
+   "type": "Tap \u2013 color band",
+   "notes": "MSC Accupro \"High Performance Color Band for Drills & Taps\" chart: the band colour on the tool selects the material row. Tapping SFM only; feed = thread pitch.",
+   "conditions": [
+    {
+     "iso": "K",
+     "label": "Cast Irons: Plain Grey Irons \u00b7 <150 HB \u00b7 White Band",
+     "material": "Cast Irons: Plain Grey Irons",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 35,
+      "max": 50
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "K",
+     "label": "Cast Irons: Plain \u201cSG\u201d Iron \u00b7 <250 HB \u00b7 White Band",
+     "material": "Cast Irons: Plain \u201cSG\u201d Iron",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 35,
+      "max": 50
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "K",
+     "label": "Cast Irons: Alloy \u201cSG\u201d Iron Nickel Hard \u00b7 >250 HB \u00b7 White Band",
+     "material": "Cast Irons: Alloy \u201cSG\u201d Iron Nickel Hard",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 12,
+      "max": 45
+     },
+     "feed": null,
+     "operation": "tapping",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 High Performance Color Band for Drills & Taps (Tapping columns)",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "1 (PDF page 1 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    }
+   ]
+  }
+ ]
+}
