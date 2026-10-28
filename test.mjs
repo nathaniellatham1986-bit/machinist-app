@@ -73,6 +73,10 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
 { const cs = JSON.parse(fs.readFileSync('data/accupro-tap.json')).tools.flatMap(t => t.conditions);
   assert.equal(cs.length, 25); assert.ok(cs.every(c => c.feed === null));
   const m = cs.find(c => c.label.startsWith('Stainless Steels: Martensitic')); assert.deepEqual([m.sfm.min, m.sfm.max], [12, 35]); }
+// Accupro thread mills (p2): SFM + FPT by diameter band
+{ const cs = JSON.parse(fs.readFileSync('data/accupro-threadmill.json')).tools[0].conditions;
+  assert.deepEqual(cs.map(c => c.sfm.value), [1700, 525, 100, 600, 600]);
+  assert.deepEqual(cs[2].feed.bands, [[0.085, 0.235, 0.0003], [0.3, 0.37, 0.0006], [0.45, 0.49, 0.001], [0.62, 0.74, 0.0013]]); }
 // link-materials: hardness numbers are not grades
 { const { matchIds } = await import('./scripts/link-materials.mjs');
   assert.deepEqual(matchIds('M', 'Austenitic stainless <321 HB'), []);

@@ -1,0 +1,255 @@
+{
+ "schema": 1,
+ "brand": "Accupro",
+ "tools": [
+  {
+   "mode": "mill",
+   "brand": "Accupro",
+   "series": "Thread Mills",
+   "type": "Thread mill",
+   "notes": "MSC Accupro thread mill chart (p.2): SFM by material, feed per tooth (FPT) by cutting-diameter band. Series/EDP and flutes not stated.",
+   "conditions": [
+    {
+     "iso": "N",
+     "label": "Non Ferrous",
+     "material": "Non Ferrous",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 1700
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "bands": [
+       [
+        0.085,
+        0.235,
+        0.0003
+       ],
+       [
+        0.3,
+        0.37,
+        0.0006
+       ],
+       [
+        0.45,
+        0.49,
+        0.001
+       ],
+       [
+        0.62,
+        0.74,
+        0.0013
+       ]
+      ]
+     },
+     "operation": "thread milling",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 Recommended Speed & Feed Information for Thread Mills",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "2 (PDF page 2 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "M",
+     "label": "Stainless Steel",
+     "material": "Stainless Steel",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 525
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "bands": [
+       [
+        0.085,
+        0.235,
+        0.0003
+       ],
+       [
+        0.3,
+        0.37,
+        0.0006
+       ],
+       [
+        0.45,
+        0.49,
+        0.001
+       ],
+       [
+        0.62,
+        0.74,
+        0.0013
+       ]
+      ]
+     },
+     "operation": "thread milling",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 Recommended Speed & Feed Information for Thread Mills",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "2 (PDF page 2 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "S",
+     "label": "High Temp Alloys",
+     "material": "High Temp Alloys",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 100
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "bands": [
+       [
+        0.085,
+        0.235,
+        0.0003
+       ],
+       [
+        0.3,
+        0.37,
+        0.0006
+       ],
+       [
+        0.45,
+        0.49,
+        0.001
+       ],
+       [
+        0.62,
+        0.74,
+        0.0013
+       ]
+      ]
+     },
+     "operation": "thread milling",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 Recommended Speed & Feed Information for Thread Mills",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "2 (PDF page 2 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "P",
+     "label": "Steel",
+     "material": "Steel",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 600
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "bands": [
+       [
+        0.085,
+        0.235,
+        0.0003
+       ],
+       [
+        0.3,
+        0.37,
+        0.0006
+       ],
+       [
+        0.45,
+        0.49,
+        0.001
+       ],
+       [
+        0.62,
+        0.74,
+        0.0013
+       ]
+      ]
+     },
+     "operation": "thread milling",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 Recommended Speed & Feed Information for Thread Mills",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "2 (PDF page 2 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    },
+    {
+     "iso": "K",
+     "label": "Cast Iron",
+     "material": "Cast Iron",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 600
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "bands": [
+       [
+        0.085,
+        0.235,
+        0.0003
+       ],
+       [
+        0.3,
+        0.37,
+        0.0006
+       ],
+       [
+        0.45,
+        0.49,
+        0.001
+       ],
+       [
+        0.62,
+        0.74,
+        0.0013
+       ]
+      ]
+     },
+     "operation": "thread milling",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Accupro (MSC Industrial Supply)",
+      "catalog": "Accupro Technical Information \u2013 Recommended Speed & Feed Information for Thread Mills",
+      "url": "https://cdn.mscdirect.com/global/media/pdf/search/accupro/accupro-general-purpose-s-f.pdf",
+      "edition": "PDF created 2014-12-19 (MSC094_Final_ver5d)",
+      "page": "2 (PDF page 2 of 16)",
+      "retrieved": "2026-10-27",
+      "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
+     }
+    }
+   ]
+  }
+ ]
+}
