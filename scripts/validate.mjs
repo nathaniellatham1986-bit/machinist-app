@@ -14,7 +14,18 @@ const KINDS = ['catalog', 'label', 'calculator', 'shop'];
 const SPEED_UNITS = ['ft/min', 'm/min'];
 const LEN_UNITS = ['in', 'mm'];
 const FEED_KINDS = ['fz', 'ipr', 'pitch'];
-const TOOL_KEYS = new Set(['mode', 'brand', 'series', 'type', 'flutes', 'coating', 'grade', 'diameters_in', 'diameters_mm', 'notes', 'conditions']);
+const TOOL_KEYS = new Set(['mode', 'brand', 'series', 'type', 'flutes', 'coating', 'grade', 'diameters_in', 'diameters_mm', 'notes', 'conditions', 'specs']);
+// specs: tool attributes copied from the maker's own page/catalog (cited). A field is absent when not printed; never guessed.
+export const SPEC_SUBSTRATE = ['carbide', 'hss'], SPEC_COAT = ['uncoated', 'tin', 'ticn', 'al-based', 'diamond', 'nonferrous', 'other'], SPEC_END = ['square', 'ball', 'bull'];
+const SPEC_KEYS = new Set(['substrate', 'flutes', 'coating', 'coatingClass', 'endShape', 'source']);
+function specs(sp, w, err) { if (!sp || typeof sp !== 'object') return err(w, 'specs must be an object');
+  for (const k of Object.keys(sp)) if (!SPEC_KEYS.has(k)) err(w, `unknown specs key "${k}"`);
+  if ('substrate' in sp && !SPEC_SUBSTRATE.includes(sp.substrate)) err(w, `specs.substrate must be ${SPEC_SUBSTRATE.join('|')}`);
+  if ('flutes' in sp && !(Number.isInteger(sp.flutes) && sp.flutes >= 1 && sp.flutes <= 16)) err(w, 'specs.flutes must be an integer 1-16');
+  if ('coatingClass' in sp && !SPEC_COAT.includes(sp.coatingClass)) err(w, `specs.coatingClass must be ${SPEC_COAT.join('|')}`);
+  if ('coatingClass' in sp && !isStr(sp.coating)) err(w, 'specs.coatingClass needs the printed specs.coating');
+  if ('endShape' in sp && !SPEC_END.includes(sp.endShape)) err(w, `specs.endShape must be ${SPEC_END.join('|')}`);
+  if (!sp.source || !isStr(sp.source.url) || !isStr(sp.source.retrieved)) err(w, 'specs.source needs url and retrieved'); }
 const COND_KEYS = new Set(['fzPerD', 'label', 'iso', 'subgroup', 'material', 'status', 'coolant', 'sfm', 'feed', 'ap', 'ae', 'apx', 'aex', 'source', 'materials', 'sourceGroup', 'strictMaterials',
   'noseRadius', 'leadAngle', 'toolLife', 'insertWidth', 'chipbreaker', 'geometry', 'kind', 'table', 'woc', 'operation', 'insert', 'grade', 'note', 'coolantNote', 'altSources', 'printed']);
 const SRC_KEYS = new Set(['kind', 'manufacturer', 'catalog', 'edition', 'url', 'page', 'notes', 'derivation', 'retrieved']);
@@ -116,6 +127,7 @@ export function validate(doc, name = 'file') {
   doc.tools.forEach((t, ti) => {
     const tw = `tools[${ti}]`;
     for (const k of Object.keys(t)) if (!TOOL_KEYS.has(k)) err(tw, `unknown tool key "${k}"`);
+    if ('specs' in t) specs(t.specs, tw + '.specs', err);
     if (!MODES.includes(t.mode)) err(tw, `mode must be one of ${MODES.join('|')}`);
     if (!isStr(t.brand)) err(tw, 'brand is required');
     if (!isStr(t.series)) err(tw, 'series is required');
