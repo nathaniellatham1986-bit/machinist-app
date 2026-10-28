@@ -184,7 +184,17 @@
      "sourceGroup": "Stainless, austenitic (304)"
     }
    ],
-   "notes": "Sheet lists HSS-E and HSS-E-PM, bright and hard-coated columns; pick the one matching your tap. Only stainless rows are on this sheet."
+   "notes": "Sheet lists HSS-E and HSS-E-PM, bright and hard-coated columns; pick the one matching your tap. Only stainless rows are on this sheet.",
+   "specs": {
+    "substrate": "hss",
+    "coating": "TiN",
+    "coatingClass": "tin",
+    "source": {
+     "url": "https://www.guhring.com/ProductsServices/SeriesDetails?Series=3909",
+     "retrieved": "2026-10-28",
+     "notes": "maker product page(s): https://www.guhring.com/ProductsServices/SeriesDetails?Series=3909"
+    }
+   }
   }
  ]
 }
