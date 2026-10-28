@@ -130,7 +130,7 @@ function fillTool() { const cur = $('tool').value, b = $('brand').value, words =
   $('tn').textContent = !hits.length && mode === 'turn' && $('top').value === 'Face' ? '(none: no record says facing)' : hits.length > MAXOPT ? `(${MAXOPT} of ${hits.length}; refine search)` : `(${hits.length})`;
   if (PASSFB) $('tn').textContent += ` · no ${$('pass').value} data, showing Any`;
   if (list.length && bad(list[0][0])) { $('tool').add(new Option(noAt(list[0][0]) && !(iso && rank(list[0][0]) >= 2) ? `Pick a tool — no ${b || 'listed'} tool has manufacturer data at Ø${dD.toFixed(3)} in for this material` : `Pick a tool — none covers this Ø with data for this material`, ''), 0); $('tool').value = ''; }
-  const curT = SUM.find(x => x.key === cur); if (curT && !TUSER && bad(curT)) { $('tool').value = $('tool').options[0].value; updateFindLink(); return fillGrade(); }
+  const curT = SUM.find(x => x.key === cur); if (curT && !TUSER && bad(curT)) { $('tool').value = $('tool').options[0]?.value ?? ''; updateFindLink(); return fillGrade(); }
   if (cur && !GROUPS[cur]) { const g = Object.keys(GROUPS).find(k => GROUPS[k].includes(cur)); if (g) $('tool').value = g; } else if ([...$('tool').options].some(o => o.value === cur)) $('tool').value = cur; updateFindLink(); return fillGrade(); }
 async function fillGrade(keep) { const keys = GROUPS[$('tool').value] ?? ($('tool').value ? [$('tool').value] : []); await Promise.all(keys.map(ensure));
   const cur = keep ?? (GUSER ? $('grade').value : ''), L = gradeList(keys.map(k => ({ key: k, tool: toolBy(k) })).filter(m => m.tool), c => isoOk(c) && !!hasData(c));
