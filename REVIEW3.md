@@ -154,3 +154,77 @@ Upper bound, 12,284 filled, by type: Drill 2,436, End mill (unknown geometry) 4,
 5. **Effort.** Step 1 is the bulk, about 3,200 tools across 36 brands from their own catalogs, and it's a library-sized data job. Steps 2–4 are small, roughly one session.
 
 Rung 4 (generic chart) remains NOT approved. After rung 3, the honest remaining holes are an estimated 14,634+ (upper bound), mostly brass, taps, and tool/material classes no other maker prints.
+
+## Everyday-materials coverage matrix (Step 1, read-only), 2026-10-28
+
+Approved by Nathaniel ("Go", App Build room). Nothing was tagged or loaded. Counter: /tmp/r3/cov.mjs.
+
+Method:
+- Only catalog or label rows with an SFM count. Estimates and shop-proven rows are left out.
+- A row counts for a material if the app's own `matchMat` matches it and `matBad` doesn't reject it, with the 303/304 rule from estimate.js.
+- Tool types come from `kindOf`: End mill, Drill, Tap and Thread mill. Turning, boring, part-off, insert mills, reamers and counterbores are left out.
+
+Each cell shows **brands with a cited number**, then (brands whose row names the grade itself) in brackets. The rest match through the ISO group, which the app accepts. ⚠ marks a thin cell (0–1 brands).
+
+| Material | End mill | Drill | Tap | Thread mill |
+|---|---|---|---|---|
+| 1018 / mild (p-mild) | 28 (13) | 16 (7) | 5 (3) | 8 (3) |
+| 4140 annealed | 26 (7) | 13 (6) | 4 (2) | 7 (2) |
+| 4140 pre-hard 28–40 HRC | 26 (7) | 16 (7) | 3 (1) | 8 (2) |
+| 304/316 (single entry) | 11 (11) | 9 (9) | 3 (3) | 3 (3) |
+| 17-4 PH | 24 (14) | 14 (7) | 3 (2) | 7 (3) |
+| 6061 | 18 (5) | 12 (4) | 3 (2) | 6 (2) |
+| Gray iron | 21 (16) | 12 (9) | 3 (2) | 6 (3) |
+| Ti-6Al-4V | 19 (10) | 8 (5) | 2 (0) | 8 (1) |
+| 303 | 5 (5) | 2 (2) | 2 (2) | 2 (2) |
+| Brass C360 | 15 (0) | 9 (0) | **1 (0) ⚠ Iscar only** | 6 (0) |
+| Ductile iron | 20 (15) | 12 (10) | 3 (2) | 6 (4) |
+
+Only one cell is thin by the 0–1 rule: brass taps. Near-thin cells (2–3 brands):
+- **Taps:** 4140 pre-hard (Iscar, OSG, Walter), 304/316 (Accupro, Guhring, YG-1), 17-4 (OSG, Walter, YG-1), 6061, gray iron and ductile iron (Accupro, Iscar, OSG each), Ti-6Al-4V (Iscar, OSG), 303 (Guhring, YG-1).
+- **Thread mills:** 304/316 (Allied, Harvey, Kodiak), 303 (Allied, Harvey).
+- **Drills:** 303 (Kodiak, Kyocera SGS).
+
+Brass is never printed as a named grade; it always matches through the N group. The Ti-6Al-4V tap cells also rest on group matches.
+
+**304/316 single entry.** `ss304` reads "Stainless, austenitic (304, 316)". Because of the 303/304 rule, only rows that name 304 or 316 count, which is why its cells are smaller (11/9/3/3) than 17-4's. 316 has no row or hardness of its own, so a 316-only row and a 304-only row both feed the same entry. Splitting it into separate 304 and 316 entries is a data job. Do it only where a maker prints the two separately, so each entry's count would likely shrink. No combos change until then.
+
+### Tools that supply these cells: fields recorded vs missing (1,794 tools)
+Recorded means stated in the tool's own fields or text. End shape applies to end mills only.
+
+| Brand | Tools | Substrate | Flutes | Coating | End shape (of end mills) |
+|---|---|---|---|---|---|
+| Harvey Tool | 495* | 2 | 27 | 0 | 385/460 |
+| OSG | 291 | 62 | 46 | 7 | 18/75 |
+| FRAISA | 183 | 0 | 152 | 0 | 165/183 |
+| Guhring | 152 | 1 | 2 | 1 | 3/23 |
+| Seco | 125 | 5 | 0 | 0 | 0/105 |
+| Kyocera SGS | 69 | 68 | 24 | 0 | 0/53 |
+| Walter | 67 | 61 | 0 | 5 | 0/1 |
+| Iscar | 52 | 29 | 0 | 11 | 0/17 |
+| Dormer Pramet | 51 | 51 | 46 | 0 | 0/51 |
+| Emuge | 50 | 47 | 8 | 3 | 13/47 |
+| Helical | 43 | 43 | 0 | 0 | 0/43 |
+| Mitsubishi | 33 | 31 | 25 | 0 | 0/29 |
+| Niagara | 24 | 0 | 24 | 0 | 20/24 |
+| Korloy | 21 | 21 | 21 | 0 | 0/21 |
+| Kodiak | 20 | 10 | 11 | 9 | 0/14 |
+| Tungaloy | 19 | 2 | 1 | 0 | 0/1 |
+| Accupro | 17 | 0 | 0 | 1 | 0/3 |
+| YG-1 | 12 | 12 | 10 | 2 | 2/11 |
+| MAPAL | 10 | 0 | 0 | 0 | 0/10 |
+| Kennametal | 8 | 7 | 5 | 2 | 0/6 |
+| Allied | 7 | 5 | 0 | 1 | 0/0 |
+| Others (Garr 6, Sumitomo 6, Carmex 5, Lakeshore 5, Nachi 4, M.A. Ford 3, Kyocera 2, Sandvik 2, Data Flute 1, Hertel 1) | 35 | – | – | – | – |
+
+\*Harvey is about 505 tools. About 10 more appear as stray keys in the raw output because a counter bug splits on a "#" inside their series names.
+
+Totals: substrate ~570 of 1,794 recorded, flutes ~430, coating ~45. Coating is the biggest gap. End shape is recorded for about 600 of 1,270 end mills.
+
+### Recommended tagging order
+1. **Shop brands from memory:** Kennametal (8), Iscar (52), Guhring (152), Allied (7), Sumitomo (6) and Sandvik (2). These total about 227 tools and are the tooling the shop actually runs. Guhring is the main gap: substrate, flutes and coating are all almost entirely missing.
+2. **Quoted brands:** OSG (291), YG-1 (12), Emuge (50), Harvey (~505), Tungaloy (19) and Mitsubishi (33). OSG and Harvey hold most of the depth. Harvey needs coating and substrate, and Harvey is all solid carbide per its catalog, but that must be cited.
+3. **Tap and thread-mill depth** (the near-thin cells): taps from Accupro, OSG, Walter and YG-1; thread mills from Allied, Harvey and Kodiak.
+4. **Deep end-mill brands last:** FRAISA, Seco, Kyocera SGS, Helical, Dormer and the rest.
+
+This covers about 1,794 tools rather than ~3,200. Steps 1–2 total about 1,100 tools.
