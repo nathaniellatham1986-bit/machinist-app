@@ -95,3 +95,62 @@ Hole count measured first (/tmp/holes.mjs, every mill/drill/tap tool × each of 
 - Adding 4340-ann/ht as non-gummy alloy (not in the brief): 2 (Accupro General Purpose: 4140-ann←4340-ann, 4140-ht←4340-ht; the second rests on the open 4340-ht question).
 - Also treating "no hardness on either side" as a match: 5 (adds gray↔ductile iron on Hertel HSS and Sandvik CoroMill 390).
 Also: our materials list has no separate 316/316L/321 (ss304 = "304, 316"), so the 304↔316 test case cannot exist in the app.
+
+## Rung 3 (other maker's number, same tool class): count and plan, 2026-10-27
+
+Approved by Nathaniel ("go", App Build room) for the count and the plan only. Nothing is built. Counter: /tmp/r3/r3.mjs (read-only, uses calc.js matchMat/matBad/kindOf/endGeom/tapTypeOf/gradesOf/rowDia/sizeRange).
+
+Guards as counted: different brand; same mode (mill/drill/tap only) and kindOf; same end geometry (mill) or tap type (tap); same substrate (carbide/HSS) from the tool's own text; same coating class (uncoated, TiN, TiCN, Al-based, diamond/DLC, ZrN/TiB2); flutes within 1 (end mills, thread mills); a source row size in the same size band (<1/8, 1/8–1/4, 1/4–1/2, 1/2–1, ≥1 in); material by strict named match only (matchMat = 'named', not matBad, 303/304 rule from estimate.js); catalog/label rows only; lowest SFM low end, with feed from the same row. Coolant is checked at runtime against the chosen mode, so these counts are an upper bound before coolant.
+
+### (a)/(b) Counts (holes = 26,918 tool × material combos with no row)
+
+| Scenario | Filled | Still holes |
+|---|---|---|
+| All guards, as agreed | **0** | 26,918 |
+| Same, but unknown substrate is assumed carbide | **0** | 26,918 |
+| Substrate guard kept, flute/coating/end-geometry guards dropped | 2,896 | 24,022 |
+| Upper bound: assume carbide and drop the flute/coating/end-geometry guards | 12,284 | 14,634 |
+
+Why the agreed guards fill 0: the data doesn't hold the fields the guards check.
+- Substrate is unknown for 22,252 holes. There's no substrate field, and tool text names carbide or HSS for only about 20% of tools. Harvey (663 tools), FRAISA (269), Guhring (155), Accupro, Niagara, Union Tool and MAPAL never say it.
+- Flutes: only 456 of 3,189 tools carry `flutes`.
+- Coating: only 44 tools carry `coating`, and `grade` is mostly insert grades.
+- End geometry is unknown on 6,192 end-mill holes.
+
+Relaxed scenario, 2,896 filled, by type: Drill 746, End mill (geometry unknown) 2,094, Thread mill 31, ball 15, bull 10, Tap 0. By material: plastic 341, al6061 229, h13-hard 221, ss400 180, ti64 180, ss17-4ph 175, ductile 185, in718 170, gray-iron 169, ss303 150, ss304 139, p20-pre 95, p-mild 94, p20-ann 90, 4140-ann 89, 4340-ann 88, p-alloy 74, 4140-ht 71, 4340-ht 70, h13-ann 86, brass 0.
+
+Upper bound, 12,284 filled, by type: Drill 2,436, End mill (unknown geometry) 4,629, bull 1,964, ball 1,076, square 931, Thread mill 654, indexable "Insert" mills 578 (these should be excluded, same as turning), Reamer 14, Counterbore 2, Tap 0. Taps fill 0 in every scenario because no other maker's tap row passes the strict match and tap-type guard.
+
+### (c) Examples (relaxed scenario, the source row the counter picked)
+1. Accupro Color Band drill (Blue) × p-mild ← OSG NEXUS GDS/GDR "Steels 1035, 1045", 60 SFM low, OSG Tooling Solutions catalog p.350
+2. same × p-alloy ← OSG VPH "Alloy Steels 4140, 4330", 30 SFM, p.342
+3. same × ss303 ← Kyocera SGS 2 Flute Drills 101 "Free machining 303, 416…", 88 SFM, 2023 Global Catalog p.344
+4. same × ss17-4ph ← SGS 101M/108M "304, 316, 321, 13-8, 15-5, 17-4, Custom 450 ≤40 HRc", 43 SFM, p.346
+5. same × ss400 ← Guhring 280/281 "martensitic HRC<46", 20 SFM, chart p.1
+6. same × al6061 ← OSG MAX-MINI WX-MS "Aluminum 6061, 7075", 100 SFM, p.332
+7. same × gray-iron ← SGS Hi-PerCarb 141K 5D "Gray cast iron ≤220 Bhn", 91 SFM
+8. same × ti64 ← OSG HELIOS 10D/15D/20D "Ti-6Al-4V", 20 SFM, p.348
+9. same × in718 ← Tungaloy deeptri-drill "Inconel 718 · AH725 · ø14–18", 66 SFM (product page)
+10. same × 4340-ann ← OSG V-Select "Alloy Steels 4140, 4340", 40 SFM, p.349
+11. Allied AccuThread 856 thread mill × ti64 ← Kodiak High Performance Thread Mill "Titanium 6Al-4V", 80 SFM, p.222
+12. Dormer S129 end mill (4 fl) × al6061 ← Garr TMS/TMR "Aluminum 6061-T6", 300 SFM, p.304
+13. Dormer S108 end mill (2 fl) × h13-hard ← Kyocera SGS Power-Carb 57 "Tool steels … ≤65 HRc · Slot", 52 SFM, p.117
+14. Carmex CR-Supercut (aluminum end mill) × ti64 ← OSG AE-VML multi-flute "Ti-6Al-4V", 65 SFM, p.1341
+
+### (d) Risky pairings seen
+- **Purpose-built tools get numbers for materials they're not made for** (example 14: an aluminum-only end mill gets a titanium number). We need a guard: borrow only into materials the target tool's own maker lists for that tool. This is estimate.js `ownNames` rule B.
+- **Flute mismatch**: 745 upper-bound fills cross flute count by more than one, or one side is unknown (example 13: a 2-flute tool takes a row whose flute count isn't stated).
+- **Hardness collapses**: rows without a printed hardness ("Alloy Steels 4140, 4330") would fill both 4140-ann and 4140-ht, and both 4340-ann and 4340-ht, with one number. Heat-treated targets should require a printed hardness on the source row.
+- **Wide hardness bands**: "≤65 HRc" covers both H13 annealed and hardened.
+- **Insert-type mills** pass kindOf as "Insert" (578 fills). Their numbers depend on insert grade, just like turning, so exclude them.
+- **Multi-grade stainless rows** (304/316/321/17-4) fill 17-4 PH. That's a named match, but 17-4 annealed versus H900 isn't separated.
+- **Accupro Color Band drills** were classed as carbide only from note text. Their substrate needs checking against the catalog.
+
+### (e) Plan (not started)
+1. **Data commit (the main job).** Add `substrate`, `flutes` and `coatingClass` to each tool, transcribed only from the maker's own page and cited. Leave a field unset rather than guess. Validator: enum check. Also add `endGeom` where the series name doesn't say it. Until this is done, rung 3 fills 0 under the agreed guards.
+2. **Logic commit.** In estimate.js, add `borrowOtherMaker()` with the same signature as `estimate()`, called in calc.js only after the maker row, then `estimate()`, then the borrowed-material estimate all return nothing. Guards as listed, plus: ownNames, no insert/turn/bore/part-off, coolant match (`coolModes`), feed via `feedLow` (never from a larger Ø), DOC/WOC from the same row, with the lower value kept. Use a kill switch (`RUNG3_ON`). Results are never written to recall or saved setups as maker data.
+3. **UI commit.** Purple value and the label "Starting point, work up from here. From [Brand, series, page], not this maker's number. Check with your tool's maker." Amber and red overrides stay unchanged.
+4. **Tests.** Before and after: 0 existing rows and 0 existing estimates change. 10+ spot checks. 303 never comes from a 304-only row. No turning, boring or part-off results. Coolant mismatch refuses. A 2-flute target never takes a 6-flute row. An aluminum-only tool never gets ti64. Screenshots.
+5. **Effort.** Step 1 is the bulk, about 3,200 tools across 36 brands from their own catalogs, and it's a library-sized data job. Steps 2–4 are small, roughly one session.
+
+Rung 4 (generic chart) remains NOT approved. After rung 3, the honest remaining holes are an estimated 14,634+ (upper bound), mostly brass, taps, and tool/material classes no other maker prints.
