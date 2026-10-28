@@ -15,7 +15,7 @@ const SPEED_UNITS = ['ft/min', 'm/min'];
 const LEN_UNITS = ['in', 'mm'];
 const FEED_KINDS = ['fz', 'ipr', 'pitch'];
 const TOOL_KEYS = new Set(['mode', 'brand', 'series', 'type', 'flutes', 'coating', 'grade', 'diameters_in', 'diameters_mm', 'notes', 'conditions']);
-const COND_KEYS = new Set(['fzPerD', 'label', 'iso', 'subgroup', 'material', 'status', 'coolant', 'sfm', 'feed', 'ap', 'ae', 'apx', 'aex', 'source', 'materials', 'sourceGroup',
+const COND_KEYS = new Set(['fzPerD', 'label', 'iso', 'subgroup', 'material', 'status', 'coolant', 'sfm', 'feed', 'ap', 'ae', 'apx', 'aex', 'source', 'materials', 'sourceGroup', 'strictMaterials',
   'noseRadius', 'leadAngle', 'toolLife', 'insertWidth', 'chipbreaker', 'geometry', 'kind', 'table', 'woc', 'operation', 'insert', 'grade', 'note', 'coolantNote', 'altSources', 'printed']);
 const SRC_KEYS = new Set(['kind', 'manufacturer', 'catalog', 'edition', 'url', 'page', 'notes', 'derivation', 'retrieved']);
 

@@ -77,6 +77,13 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
 { const cs = JSON.parse(fs.readFileSync('data/accupro-threadmill.json')).tools[0].conditions;
   assert.deepEqual(cs.map(c => c.sfm.value), [1700, 525, 100, 600, 600]);
   assert.deepEqual(cs[2].feed.bands, [[0.085, 0.235, 0.0003], [0.3, 0.37, 0.0006], [0.45, 0.49, 0.001], [0.62, 0.74, 0.0013]]); }
+// strictMaterials rows (Accupro drill/tap/thread mill): no ISO-group fallback; "Under 35 Rc" is a ceiling
+{ const { matchMat, hardnessHB } = await import('./calc.js'); const M = JSON.parse(fs.readFileSync('data/materials.json')), ms = M.materials ?? M, g = id => ms.find(m => m.id === id);
+  assert.deepEqual(hardnessHB('Under 35 Rc')[0], 0);
+  const row = { label: 'Carbon Alloy Steels: Free Cutting Mild Steel · <120 HB · Green Band', iso: 'P', strictMaterials: true };
+  assert.equal(matchMat(g('4140-ann'), row), null); assert.equal(matchMat(g('p-mild'), row), null);
+  assert.equal(matchMat(g('4140-ann'), { ...row, strictMaterials: undefined }), 'group'); // other brands keep group matching
+  for (const f of ['drill', 'tap', 'threadmill']) assert.ok(JSON.parse(fs.readFileSync(`data/accupro-${f}.json`)).tools.every(t => t.conditions.every(c => c.strictMaterials === true))); }
 // link-materials: hardness numbers are not grades
 { const { matchIds } = await import('./scripts/link-materials.mjs');
   assert.deepEqual(matchIds('M', 'Austenitic stainless <321 HB'), []);

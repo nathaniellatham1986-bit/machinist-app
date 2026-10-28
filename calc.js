@@ -72,7 +72,7 @@ export const hrcToHb = h => { const T = HRC_HB; if (h <= T[0][0]) return T[0][1]
   for (let i = 1; i < T.length; i++) if (h <= T[i][0]) { const [a, x] = T[i - 1], [b, y] = T[i]; return x + (y - x) * (h - a) / (b - a); } return T.at(-1)[1]; };
 export function hardnessHB(text) {
   const s = String(text ?? ''), U = '(HRC|Rc|HRc|HB\\w*|BHN|HB)';
-  let m = s.match(new RegExp(`(≤|<=|<|up to|max\\.?)?\\s*(\\d+(?:\\.\\d+)?)(?:\\s*[-–~]\\s*(\\d+(?:\\.\\d+)?))?\\s*${U}\\b`, 'i'));
+  let m = s.match(new RegExp(`(≤|<=|<|up to|under|max\\.?)?\\s*(\\d+(?:\\.\\d+)?)(?:\\s*[-–~]\\s*(\\d+(?:\\.\\d+)?))?\\s*${U}\\b`, 'i'));
   let le, a, b, u; if (m) [, le, a, b, u] = m; else { m = s.match(new RegExp(`${U}\\s*(≤|<=|<)?\\s*(\\d+)(?:\\s*[-–~]\\s*(\\d+))?`, 'i')); if (!m) return null; [, u, le, a, b] = m; }
   const hrc = /r/i.test(u) && !/bhn/i.test(u), f = x => hrc ? hrcToHb(+x) : +x;
   return le && !b ? [0, f(a)] : [f(a), f(b ?? a)]; }
@@ -81,7 +81,7 @@ export function matchMat(m, c) {
   const text = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' ');
   if (c.materials?.includes(m.id) || (m.named && new RegExp(m.named, 'i').test(text))) {
     if (!m.hb) return 'named'; const h = hardnessBand(text); return !h || (h[0] <= m.hb[1] && h[1] >= m.hb[0]) ? 'named' : null; }
-  if (c.materials && !m.named) return null;
+  if (c.materials && !m.named || c.strictMaterials) return null; // strictMaterials: the row matches only its own materials list or a printed grade name, never an ISO-group fallback
   if (c.iso !== '*' && c.iso !== m.iso) return null;
   if (m.group && !new RegExp(m.group, 'i').test(text)) return null;
   if (m.hb) { const h = hardnessBand(text); if (h && !(h[0] <= m.hb[1] && h[1] >= m.hb[0])) return null; }
