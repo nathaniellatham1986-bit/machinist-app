@@ -239,13 +239,16 @@ export const toolLifeOf = c => { if (!c) return null; if (c.toolLife > 0) return
 // Override classification for a tapped SFM / feed box. p = picked spec {min,max,def}; eps = "same value" tolerance; dp = display decimals.
 // 'mfr' = unchanged; 'within' = inside manufacturer's published range (amber); 'out' = YOUR VALUE, NOT MANUFACTURER (red).
 export function classifyOverride(v, p, eps = 0, dp = 0) {
-  const f = x => x.toFixed(dp), r = (state, side, label, note = '') => ({ state, side, label, note });
+  // eps only decides "same as the mfr default". Range limits are compared exactly (unrounded), never widened by eps,
+  // and printed rounded INWARD (min up, max down) so every value inside the printed range really is inside the maker's range.
+  const f = x => x.toFixed(dp), k = 10 ** dp, up = x => f(Math.ceil(x * k - 1e-9) / k), dn = x => f(Math.floor(x * k + 1e-9) / k), t = 1e-9;
+  const r = (state, side, label, note = '') => ({ state, side, label, note });
   if (!p || v == null || !isFinite(v) || Math.abs(v - p.def) <= eps) return r('mfr', null, '');
   if (p.min != null && p.max == null) { // min-only
-    if (v < p.min - eps) return r('out', 'below', 'YOUR VALUE, NOT MANUFACTURER', `below mfr minimum (${f(p.min)})`);
-    return r('within', null, `Adjusted, at/above mfr minimum ${f(p.min)}`, v > p.min * 1.25 ? 'mfr minimum only, no upper limit published' : ''); }
-  if (p.min != null && p.max != null && p.max > p.min) { const rg = `${f(p.min)}–${f(p.max)}`;
-    if (v >= p.min - eps && v <= p.max + eps) return r('within', null, `Adjusted, within mfr range ${rg}`);
+    if (v < p.min - t) return r('out', 'below', 'YOUR VALUE, NOT MANUFACTURER', `below mfr minimum (${up(p.min)})`);
+    return r('within', null, `Adjusted, at/above mfr minimum ${up(p.min)}`, v > p.min * 1.25 ? 'mfr minimum only, no upper limit published' : ''); }
+  if (p.min != null && p.max != null && p.max > p.min) { const rg = `${up(p.min)}–${dn(p.max)}`;
+    if (v >= p.min - t && v <= p.max + t) return r('within', null, `Adjusted, within mfr range ${rg}`);
     const side = v > p.max ? 'above' : 'below'; return r('out', side, 'YOUR VALUE, NOT MANUFACTURER', `${side} mfr range (${rg})`); }
   const n = p.def, side = v > n ? 'above' : 'below'; // single number
   if (Math.abs(v - n) <= Math.abs(n) * 0.2 + eps) return r('within', null, `Adjusted from mfr value ${f(n)}`);

@@ -446,3 +446,21 @@ console.log('estimate tests ok');
     if (m.includes('4140-ht')) assert.fail('accupro mill 4140-ht link ' + c.label);
     if ((m.includes('4340-ann')) ) assert.ok(c.label.includes('<32 HRC'), c.label); }
   assert.equal(n, 9, 'accupro mill 4140-ann links'); }
+// classifyOverride boundaries: eps (2 SFM "same as default") must never widen the mfr range (bug: 526 showed amber for 459–525).
+{ const { classifyOverride: C } = await import('./calc.js');
+  const B = { min: 459, max: 525, def: 492 }, s = v => C(v, B, 2, 0);
+  assert.equal(s(526).state, 'out'); assert.equal(s(526).side, 'above'); assert.equal(s(527).state, 'out');
+  assert.equal(s(525).state, 'within'); assert.equal(s(525.4).state, 'out'); assert.equal(s(459).state, 'within');
+  assert.equal(s(458).state, 'out'); assert.equal(s(457).state, 'out'); assert.equal(s(493).state, 'mfr');
+  const U = { min: 458.6, max: 525.4, def: 492 }, u = v => C(v, U, 2, 0);
+  assert.equal(u(525).state, 'within'); assert.equal(u(525.4).state, 'within'); assert.equal(u(525.6).state, 'out'); assert.equal(u(526).state, 'out');
+  assert.match(u(500).label, /459–525/); assert.equal(u(458).state, 'out'); assert.equal(u(459).state, 'within');
+  const V = { min: 459, max: 525.6, def: 492 }; assert.match(C(500, V, 2, 0).label, /459–525\b/); assert.equal(C(526, V, 2, 0).state, 'out'); assert.equal(C(525.6, V, 2, 0).state, 'within');
+  const F = { min: 0.002, max: 0.00525, def: 0.004 }, g = v => C(v, F, 5e-5, 4);
+  assert.equal(g(0.00525).state, 'within'); assert.equal(g(0.00526).state, 'out'); assert.equal(g(0.0053).state, 'out'); assert.equal(g(0.00199).state, 'out');
+  assert.match(g(0.003).label, /0\.0020–0\.0052/);
+  const M = { min: 300, max: null, def: 300 }; assert.equal(C(298.5, M, 2, 0).state, 'mfr'); assert.equal(C(297, M, 2, 0).state, 'out'); }
+// Real case: Iscar BHR rough boring head 140–160 m/min = 459.3–524.9 SFM. 526 and 525 are above the maker's max -> red.
+{ const { classifyOverride: C } = await import('./calc.js'); const k = 3.28084, p = { min: 140 * k, max: 160 * k, def: 150 * k };
+  assert.equal(C(526, p, 2, 0).state, 'out'); assert.equal(C(525, p, 2, 0).state, 'out'); assert.equal(C(524, p, 2, 0).state, 'within');
+  assert.equal(C(459, p, 2, 0).state, 'out'); assert.equal(C(460, p, 2, 0).state, 'within'); assert.match(C(500, p, 2, 0).label, /460–524/); }
