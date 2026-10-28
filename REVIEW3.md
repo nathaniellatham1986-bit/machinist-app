@@ -82,3 +82,8 @@ Mill/Drill: Published diameters + Tool dia + Flutes now sit after Brand/Type, be
 - All 285 rows in data/accupro-mill.json now carry strictMaterials; the 40 existing links are unchanged. No ISO-group fallback anymore.
 - Match diff: 0 non-Accupro lines changed; 218 Accupro mill rows lost group matches. Picker: only Accupro changed (14 combos dropped mill coverage: 4140-ann/ht, 4340, p20, h13, brass-c360, cast irons, 17-4, 303, ti64, in718).
 - 390x844 shots (shots/ui/accupro/mill_*_strict.png): mild → "Low Alloy Steels Maraging--10XX, 11XX, 13XX <32 HRC" 100 SFM / .0030; 304 → "Austenitic--200 Series, 302, 303, 304L, 316L <32 HRC" 100 / .0025; 6061 → "Aluminum Alloys--2024..6061-T6/T651.. <32 HRC" 800 / .0060; 4140 annealed → Accupro not offered (no linked row; "41xx" rows not linked to 4140).
+
+## Accupro end mills: 4140/4340 annealed links (3764e92)
+- 9 p.8 "Alloy Steels: 40xx, 41xx, 42xx, 43xx, 44xx, 46xx, 86xx Series · <32 HRC" rows → +4140-ann, +4340-ann. p.5 "High Strength Steels--4340, 6150, 52100, H-11, H-13 · <32 HRC" → +4340-ann (no 41xx printed, so no 4140). Row notes cite the wording. strictMaterials kept; no 4140-ht, no >32/>42 rows.
+- Match diff: only those 9 rows changed (+4140-ann,+4340-ann named); the High Strength row already matched 4340-ann/4340-ht by name. Picker: only Accupro mill 4140-ann 0/3→1/3, 4340-ann 1/3→2/3.
+- Shots: 4140 ann → HP Progressive Helix, Shallow Slotting <32, 180 SFM (180–220) / .0028, p.8; 4340 ann → General Purpose, High Strength <32, 150 (150–250) / .0024, p.5; mild unchanged 100 / .0030 p.5.
