@@ -304,3 +304,36 @@ export const commonDrillMm = mm => { if (!(mm > 0)) return null; const st = mm <
 // Row has manufacturer numbers usable on their own (same rule as index fullIsos), and matches this material (not a wrong class / hardness).
 export const rowUsable = (t, c) => (c.printed || c.sfm && (c.feed || t.mode === 'tap' || t.mode === 'turn' && turnOpOf(t, c) === 'Thread')) && c.status !== 'shop-proven';
 export const matRowOk = (m, c) => !!matchMat(m, c) && !matBad(m, c);
+// ---- Indexable cutter bodies (INDEXABLE-DESIGN.md). Kill switch: set INDEXABLE_ON = false (or open the app with ?indexable=0).
+// Only tools that carry printed `bodies` and only when a printed body diameter is chosen take this path; every other tool is untouched.
+export const INDEXABLE_ON = true;
+export const INDEXABLE_DRILL_FAMILIES = []; // indexable-drill hard stop is built but enabled for no family until the max depth is cited (Sandvik 880 stays off)
+const inchOf = v => v ? (v.unit === 'mm' ? v.value / 25.4 : v.value) : null;
+export const bodyDc = b => inchOf(b.dc);
+export const bodyDias = t => (t?.bodies ?? []).map(b => +bodyDc(b).toFixed(4));
+export const bodyAt = (t, dIn) => !(dIn > 0) ? null : (t?.bodies ?? []).find(b => Math.abs(bodyDc(b) - dIn) < 5e-3) ?? null;
+const wocKey = (o, woc) => Object.keys(o ?? {}).find(k => Math.abs(+k - woc) < 1e-6);
+// Pair one printed speed row (vc-by-grade) with one printed feed row (insert-selection): same SMG subgroup, the SAME grade, the exact ae/D column.
+// Nothing is borrowed: fz is printed only for the insert's own grade, so any other grade gets fz = null ("No data").
+export function indexablePair(t, feedRow, grade, woc) {
+  const vc = (t?.conditions ?? []).find(c => c.kind === 'vc-by-grade' && c.subgroup === feedRow.subgroup && c.grade === grade && Math.abs(c.woc - woc) < 1e-6 && c.sfm) ?? null;
+  const k = grade === feedRow.grade ? wocKey(feedRow.feed?.byWoc, woc) : null, raw = k != null ? feedRow.feed.byWoc[k] : null;
+  const fz0 = raw == null ? null : typeof raw === 'number' ? raw : pick(raw)?.def ?? null, fz = fz0 == null ? null : feedRow.feed.unit === 'mm' ? fz0 / 25.4 : fz0;
+  return { vc, sfm: vc ? pick(vc.sfm)?.def ?? null : null, fz, fzWhy: fz != null ? null : grade !== feedRow.grade ? 'grade' : 'woc' };
+}
+export const indexableWocs = feedRow => Object.keys(feedRow?.feed?.byWoc ?? {}).map(Number).sort((a, b) => b - a);
+// RPM = SFM x 3.82 / Dc, hard-capped by the printed cutter max rpm and the machine max; IPM = RPM x inserts installed x fz (fz unchanged when fewer are installed).
+export function millIndexable({ sfm, body, inserts, fz, woc, ap, maxRpm, maxHp, iso }) {
+  const dc = bodyDc(body), want = rpm(sfm, dc); let r = want, cappedBy = null;
+  for (const [v, by] of [[body.maxRpm, 'cutter'], [maxRpm, 'machine']]) if (v > 0 && r > v) { r = v; cappedBy = by; }
+  const n = Math.min(Math.max(1, Math.floor(inserts || body.z)), body.z), ae = woc * dc;
+  let feed = fz != null ? r * n * fz : null, hp = feed != null ? feed * ae * ap * (UNIT_HP[iso] ?? 1) : null, hpCapped = false;
+  if (maxHp && hp > maxHp) { feed *= maxHp / hp; hp = maxHp; hpCapped = true; }
+  const apMax = inchOf(body.apMax);
+  return { rpm: r, rpmWanted: want, cappedBy, sfmActual: r * dc / 3.82, inserts: n, fz, ipm: feed, hp, hpCapped, mrr: feed != null ? feed * ae * ap : null, ae, apMax, apWarn: apMax != null && ap > apMax + 1e-9 };
+}
+// Indexable drill depth hard stop: only for a family listed in INDEXABLE_DRILL_FAMILIES and a body with a printed maxDepth (xD).
+export function drillDepthStop({ family, body, depth, d }) {
+  if (!INDEXABLE_DRILL_FAMILIES.includes(family) || !body?.maxDepth || !(d > 0)) return { enabled: false, stop: false };
+  const lim = body.maxDepth.value * d; return { enabled: true, stop: depth > lim + 1e-9, limit: lim };
+}
