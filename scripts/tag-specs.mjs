@@ -2,10 +2,11 @@
 // Sources: (1) --ext <json>: maker product pages already fetched {seriesNo: {url, retrieved, material, coating, flutes}}; with "_key":"sf" keyed by the record's SF_<id>.pdf source instead;
 // (2) the tool record's own printed series/type title (copied from the maker's catalog), cited to that record's source.
 // Never guesses: a field is set only when printed, and for multi-series records only when every series agrees. Never overwrites.
-// Usage: node scripts/tag-specs.mjs "<Brand>" [--ext file.json] [--dry]
+// (3) --znotes: flute count from the printed z column recorded in each row's source notes ("z=N"), only when every row agrees.
+// Usage: node scripts/tag-specs.mjs "<Brand>" [--ext file.json] [--znotes] [--dry]
 import fs from 'node:fs';
 import { matchMat, matBad, kindOf, endGeom, brandName } from '../calc.js';
-const [brand, ...rest] = process.argv.slice(2); const dry = rest.includes('--dry'); const ei = rest.indexOf('--ext');
+const [brand, ...rest] = process.argv.slice(2); const dry = rest.includes('--dry'); const ZN = rest.includes('--znotes'); const ei = rest.indexOf('--ext');
 const EXT = ei >= 0 ? JSON.parse(fs.readFileSync(rest[ei + 1])) : null;
 const MATS = ['p-mild', '4140-ann', '4140-ht', 'ss304', 'ss17-4ph', 'al6061', 'gray-iron', 'ti64', 'ss303', 'brass-c360', 'ductile-iron'];
 const KINDS = ['End mill', 'Drill', 'Tap', 'Thread mill'];
@@ -34,6 +35,8 @@ for (const f of fs.readdirSync('data').filter(f => f.endsWith('.json') && !['mat
         const f1 = agree(pg.map(p => p.flutes ?? null)); if (f1 && !sp.flutes) sp.flutes = +f1;
         if (t.mode === 'tap') for (const k of ['cutOrForm', 'fluteStyle', 'holeType']) { const v = agree(pg.map(p => p[k] ?? null)); if (v && !sp[k]) sp[k] = v; }
         if (JSON.stringify(sp) !== before) { from.push(...pg.map(p => p.url)); pgPrinted.push(...pg.filter(p => p.printed).map(p => (p.page ? `p.${p.page} ` : '') + `"${p.printed}"`)); } } }
+    let zn = null; if (ZN && sp.flutes == null) { const z = new Set((t.conditions || []).flatMap(c => [...String(c.source?.notes ?? '').matchAll(/\bz=(\d+)\b/g)].map(m => +m[1]))); const zs = t.conditions.find(c => /\bz=\d/.test(c.source?.notes ?? ''))?.source;
+      if (z.size === 1) { sp.flutes = [...z][0]; zn = `flutes from printed z column (z=${sp.flutes} on every row) of ${zs?.catalog ?? 'record source'}${zs?.page ? ' p.' + zs.page : ''}`; } }
     const title = `${t.series} ${t.type ?? ''}`;
     const a = { substrate: sub(title), flutes: fluteOf(title), endShape: t.mode === 'mill' && kindOf(t) === 'End mill' ? endGeom(t) : null };
     const cm = [...new Set([...title.matchAll(COAT_RX)].map(m => m[0]))];
@@ -42,6 +45,7 @@ for (const f of fs.readdirSync('data').filter(f => f.endsWith('.json') && !['mat
     if (JSON.stringify(sp) === before) continue;
     const cs = t.conditions.find(c => c.source?.url)?.source;
     const parts = []; if (from.length) parts.push('maker page(s): ' + [...new Set(from)].join(' ; ') + (pgPrinted.length ? ` (printed: ${pgPrinted.join(' ; ')})` : ''));
+    if (zn) parts.push(zn);
     if (tt) parts.push(`printed tool title "${title.trim()}" in ${cs?.catalog ?? 'record source'}${cs?.page ? ' p.' + cs.page : ''}`);
     src = { url: from[0] ?? cs?.url, retrieved: new Date().toLocaleDateString('en-CA'), notes: parts.join(' | ') };
     for (const k of Object.keys(cnt)) if (sp[k] != null && !before.includes(`"${k}"`)) cnt[k]++;
