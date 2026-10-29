@@ -95,3 +95,12 @@ formula, not DERIVED). No start → midpoint of the printed multipliers, labeled
 Boring heads and boring bars. `feed.kind` is `fz` (per tooth / per cutting edge, as printed for boring heads) or `ipr` (where the catalog prints per rev). Diameter keys/ranges are the bore diameter. Tool `flutes` = number of effective cutting edges (default 1 in the app).
 App: RPM from SFM at the bore diameter (capped by machine max); IPM = RPM × fz × edges, or RPM × ipr. Nose-radius columns go in separate conditions with `noseRadius`.
 Diameter cap for bore tools: 24 in (CB206F head to 21.5 in).
+
+## Indexable cutter bodies (`tools[].bodies`)
+Optional, mill/drill only. One entry per printed body part number, copied from the maker's body table:
+`{ part, type: face|shoulder|high-feed|round|drill, dc: {value, unit}, z, apMax?: {value, unit}, kapr?: {deg, page}, maxRpm?, maxDepth?: {value, unit: 'xD'}, insert, source: {kind, manufacturer, catalog, edition, url, page} }`.
+- `z` is the printed pocket count. The app's "Inserts installed" defaults to it and cannot exceed it; fz is not changed when fewer are installed.
+- `maxRpm` is the printed cutter maximum and is a hard cap on spindle RPM.
+- `insert` is the printed insert family (e.g. `OF..07`); it must match at least one condition `insert`/`geometry`.
+- `source.page` is the printed page number (not the PDF page index).
+- Nothing is copied between bodies; a field the table does not print is left out.

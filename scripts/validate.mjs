@@ -14,7 +14,7 @@ const KINDS = ['catalog', 'label', 'calculator', 'shop'];
 const SPEED_UNITS = ['ft/min', 'm/min'];
 const LEN_UNITS = ['in', 'mm'];
 const FEED_KINDS = ['fz', 'ipr', 'pitch'];
-const TOOL_KEYS = new Set(['mode', 'brand', 'series', 'type', 'flutes', 'coating', 'grade', 'diameters_in', 'diameters_mm', 'notes', 'conditions', 'specs']);
+const TOOL_KEYS = new Set(['mode', 'brand', 'series', 'type', 'flutes', 'coating', 'grade', 'diameters_in', 'diameters_mm', 'notes', 'conditions', 'specs', 'bodies']);
 // specs: tool attributes copied from the maker's own page/catalog (cited). A field is absent when not printed; never guessed.
 export const SPEC_SUBSTRATE = ['carbide', 'hss'], SPEC_COAT = ['uncoated', 'tin', 'ticn', 'al-based', 'diamond', 'nonferrous', 'other'], SPEC_END = ['square', 'ball', 'bull'];
 const SPEC_KEYS = new Set(['substrate', 'flutes', 'coating', 'coatingClass', 'endShape', 'cutOrForm', 'fluteStyle', 'holeType', 'source']);
@@ -120,6 +120,27 @@ function depth(a, where, err) {
   for (const k of Object.keys(a)) if (!['min', 'max', 'value', 'unit'].includes(k)) err(where, `unknown key "${k}"`);
 }
 
+// bodies: indexable cutter bodies exactly as printed in the maker's body table (one entry per part number). Optional; tools without it are unchanged.
+export const BODY_TYPES = ['face', 'shoulder', 'high-feed', 'round', 'drill'];
+const BODY_KEYS = new Set(['part', 'type', 'dc', 'z', 'apMax', 'kapr', 'maxRpm', 'maxDepth', 'insert', 'source']);
+function bodies(b, t, w, err) { if (!Array.isArray(b) || !b.length) return err(w, 'bodies must be a non-empty array');
+  if (!['mill', 'drill'].includes(t.mode)) err(w, 'bodies are for mill and drill tools');
+  const codes = t.conditions?.flatMap(c => [c.insert, c.geometry].filter(Boolean)) ?? [];
+  b.forEach((x, i) => { const bw = `${w}[${i}]`; if (!x || typeof x !== 'object') return err(bw, 'must be an object');
+    for (const k of Object.keys(x)) if (!BODY_KEYS.has(k)) err(bw, `unknown body key "${k}"`);
+    if (!isStr(x.part)) err(bw, 'part (printed part number) is required');
+    if (!BODY_TYPES.includes(x.type)) err(bw, `type must be ${BODY_TYPES.join('|')}`);
+    if ((x.type === 'drill') !== (t.mode === 'drill')) err(bw, 'type "drill" goes with mode drill only');
+    for (const k of ['dc', 'apMax']) if (k in x || k === 'dc') { const v = x[k]; if (!v || !(isNum(v.value) && v.value > 0) || !LEN_UNITS.includes(v.unit)) err(bw, `${k} must be {value > 0, unit: in|mm}`);
+      else if (k === 'dc') { const why = diaProblem(v.value, v.unit, t); if (why) err(bw, `dc ${why}`); } }
+    if (!(Number.isInteger(x.z) && x.z >= 1 && x.z <= 60)) err(bw, 'z (printed pocket count) must be an integer 1-60');
+    if ('kapr' in x && !(isNum(x.kapr?.deg) && x.kapr.deg >= 10 && x.kapr.deg <= 90 && isStr(String(x.kapr.page ?? '')))) err(bw, 'kapr must be {deg 10-90, page}');
+    if ('maxRpm' in x && !(isNum(x.maxRpm) && x.maxRpm > 0)) err(bw, 'maxRpm must be a positive number');
+    if ('maxDepth' in x && !(isNum(x.maxDepth?.value) && x.maxDepth.value > 0 && x.maxDepth.unit === 'xD')) err(bw, "maxDepth must be {value > 0, unit: 'xD'}");
+    if (!isStr(x.insert)) err(bw, 'insert (printed insert designation, e.g. OF..07) is required');
+    else { const re = new RegExp('^' + x.insert.split('..').map(p => p.replace(/[^A-Za-z0-9]/g, '')).join('[A-Z]{2}')); if (!codes.some(c => re.test(c))) err(bw, `insert ${x.insert} matches no condition insert/geometry`); }
+    if (!x.source?.page) err(bw, 'source.page (printed page) is required');
+    source(x.source, { status: 'verified' }, bw + '.source', err); }); }
 export function validate(doc, name = 'file') {
   const errors = []; const err = (where, msg) => errors.push(`${name}: ${where}: ${msg}`);
   if (!doc || typeof doc !== 'object' || Array.isArray(doc)) { err('$', 'top level must be an object'); return errors; }
@@ -131,6 +152,7 @@ export function validate(doc, name = 'file') {
     const tw = `tools[${ti}]`;
     for (const k of Object.keys(t)) if (!TOOL_KEYS.has(k)) err(tw, `unknown tool key "${k}"`);
     if ('specs' in t) specs(t.specs, tw + '.specs', err);
+    if ('bodies' in t) bodies(t.bodies, t, tw + '.bodies', err);
     if (!MODES.includes(t.mode)) err(tw, `mode must be one of ${MODES.join('|')}`);
     if (!isStr(t.brand)) err(tw, 'brand is required');
     if (!isStr(t.series)) err(tw, 'series is required');
