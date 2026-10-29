@@ -29680,7 +29680,7 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "value": 627
+      "value": 1627
      },
      "table": "High Speed Light Milling 2, column 1",
      "status": "derived",
@@ -29793,7 +29793,7 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "value": 231
+      "value": 1231
      },
      "table": "High Speed Light Milling 2, column 2",
      "status": "derived",
@@ -29906,7 +29906,7 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "value": 231
+      "value": 1231
      },
      "table": "High Speed Light Milling 2, column 2",
      "status": "derived",
@@ -30019,7 +30019,7 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "value": 231
+      "value": 1231
      },
      "table": "High Speed Light Milling 2, column 2",
      "status": "derived",
