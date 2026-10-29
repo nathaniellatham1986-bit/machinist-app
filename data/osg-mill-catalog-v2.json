@@ -35979,7 +35979,8 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "value": 700
+      "min": 600,
+      "max": 1700
      },
      "table": "Side Milling 1, column 1",
      "status": "derived",
@@ -36092,7 +36093,8 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "value": 700
+      "min": 600,
+      "max": 1700
      },
      "table": "Side Milling 1, column 2",
      "status": "derived",
@@ -36205,7 +36207,8 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "value": 200
+      "min": 400,
+      "max": 1200
      },
      "table": "Side Milling 1, column 3",
      "status": "derived",
