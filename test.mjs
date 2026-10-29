@@ -468,3 +468,23 @@ console.log('estimate tests ok');
 { const { matchMat } = await import('./calc.js'); const MATS = JSON.parse(fs.readFileSync('data/materials.json')).materials, d = JSON.parse(fs.readFileSync('data/accupro-mill.json', 'utf8'));
   const c = d.tools.flatMap(t => t.conditions).find(c => /High Strength Steels--4340/.test(c.label) && /<32 HRC/.test(c.label));
   assert.ok(c.excludeMaterials?.includes('4340-ht')); assert.equal(matchMat(MATS.find(m => m.id === '4340-ht'), c), null); assert.equal(matchMat(MATS.find(m => m.id === '4340-ann'), c), 'named'); console.log('4340-ht unlink ok'); }
+// Indexable bodies (Seco R220.43, catalog p.132/p.135/p.137/p.138).
+{ const C = await import('./calc.js'); const { spawnSync } = await import('node:child_process');
+  const T = f => C.withPairs(J('./data/seco-mill-r220-43-' + f + '.json').tools[0]), t7 = T('07'), t5 = T('05');
+  const row = (t, sg) => t.conditions.find(c => c.kind === 'insert-selection' && c.subgroup === 'SMG v2 ' + sg);
+  const b4 = C.bodyAt(t7, 3.94); assert.equal(b4.z, 6);
+  const P = C.indexablePair(t7, row(t7, 'P1'), 'MP2500', 1); assert.deepEqual([P.sfm, P.fz], [830, .01]);
+  const m = C.millIndexable({ sfm: P.sfm, body: b4, inserts: 6, fz: P.fz, woc: 1, ap: .12 }); assert.equal(Math.round(m.rpm), 805); assert.equal(+m.ipm.toFixed(1), 48.3); assert.equal(m.cappedBy, null);
+  const m4 = C.millIndexable({ sfm: P.sfm, body: b4, inserts: 4, fz: P.fz, woc: 1, ap: .12 }); assert.equal(m4.fz, .01); assert.equal(+m4.ipm.toFixed(1), 32.2); // fewer inserts: fz unchanged
+  assert.equal(C.millIndexable({ sfm: 830, body: b4, inserts: 9, fz: .01, woc: 1, ap: .1 }).inserts, 6); // can't exceed pockets
+  const N = C.indexablePair(t7, row(t7, 'N1'), 'H15', .1), b2 = C.bodyAt(t7, 1.97), mc = C.millIndexable({ sfm: N.sfm, body: b2, inserts: 4, fz: N.fz, woc: .1, ap: .12 });
+  assert.equal(mc.cappedBy, 'cutter'); assert.equal(mc.rpm, 6000); assert.ok(mc.rpmWanted > 7000); assert.equal(Math.round(mc.sfmActual), 3094); assert.equal(+mc.ipm.toFixed(0), 312);
+  const nb = C.indexablePair(t7, row(t7, 'P1'), 'MP1500', 1); assert.equal(nb.sfm, 940); assert.equal(nb.fz, null); // no borrowing feed across grades
+  assert.equal(C.indexablePair(t5, row(t5, 'N1'), 'H15', 1).sfm, null); // p.134 prints no H15 speed
+  assert.ok(C.millIndexable({ sfm: 830, body: b4, inserts: 6, fz: .01, woc: 1, ap: .25 }).apWarn); assert.ok(!m.apWarn);
+  assert.equal(C.millIndexable({ sfm: 830, body: b4, inserts: 6, fz: .01, woc: 1, ap: .1, maxRpm: 500 }).cappedBy, 'machine');
+  assert.deepEqual(C.drillDepthStop({ family: 'Sandvik 880', body: { maxDepth: { value: 3 } }, depth: 9, d: 1 }), { enabled: false, stop: false });
+  const bad = J('./data/seco-mill-r220-43-07.json'); bad.tools[0].bodies[0].z = 0; bad.tools[0].bodies[1].insert = 'XX..99'; bad.tools[0].bodies[2].kapr.deg = 5;
+  fs.writeFileSync('/tmp/bad-bodies.json', JSON.stringify(bad)); const v = spawnSync('node', ['scripts/validate.mjs', '/tmp/bad-bodies.json'], { encoding: 'utf8' });
+  assert.notEqual(v.status, 0); assert.match(v.stdout + v.stderr, /\bz\b/); assert.match(v.stdout + v.stderr, /insert/); assert.match(v.stdout + v.stderr, /kapr/);
+  console.log('indexable ok'); }
