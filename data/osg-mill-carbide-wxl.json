@@ -1715,7 +1715,16 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 3,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/Tech%20Pg.%20Standard%202Fl%20%26%203FL%20Carbide.pdf",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Standard 2 & 3 Flute Carbide (footnotes: Series 402, 403, 412, 422, 445, 462, 482), fractional Micrograin carbide end mill\" in OSG 2024 Catalog tech page: Standard 2 Flute and 3 Flute Carbide, Side Milling (Fractional) p.1 of PDF"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -3430,7 +3439,16 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 3,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/Tech%20Pg.%20Standard%202Fl%20%26%203FL%20Carbide.pdf",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Standard 2 & 3 Flute Carbide (footnotes: Series 402, 403, 412, 422, 445, 462, 482), metric Micrograin carbide end mill\" in OSG 2024 Catalog tech page: Standard 2 Flute and 3 Flute Carbide, Side Milling (Metric) p.2 of PDF"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -4975,7 +4993,16 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/Tech%20Pg.%20Standard%204Fl%20%26%20Multi%20Flute%20Carbide.pdf",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Standard 4 Flute & Multi Flute Carbide (footnotes: Series 404, 464, 484), fractional Carbide end mill\" in OSG 2024 Catalog tech page: Standard 4 Flute and Multi Flute Carbide, Side Milling (Fractional) p.1 of PDF"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -6520,7 +6547,16 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/Tech%20Pg.%20Standard%204Fl%20%26%20Multi%20Flute%20Carbide.pdf",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Standard 4 Flute & Multi Flute Carbide (footnotes: Series 404, 464, 484), metric Carbide end mill\" in OSG 2024 Catalog tech page: Standard 4 Flute and Multi Flute Carbide, Side Milling (Metric) p.1 of PDF"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -8019,7 +8055,16 @@
      }
     }
    ],
-   "flutes": 2
+   "flutes": 2,
+   "specs": {
+    "substrate": "carbide",
+    "endShape": "bull",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/Tech%20pg.%20List%20(s)-%203770.pdf",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"List 3770 WXL carbide end mill, corner radius, regular length\" in OSG 2024 Catalog tech page: List 3770: 2 Flute, Corner Radius, Regular Length (WXL), Slotting p.1 of PDF"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -9128,7 +9173,16 @@
      }
     }
    ],
-   "flutes": 2
+   "flutes": 2,
+   "specs": {
+    "substrate": "carbide",
+    "endShape": "ball",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/Tech%20pg.%20List%20(s)-%203610.pdf",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"List 3610 (EXOCARB WXL) WXL carbide ball end mill, regular length\" in OSG 2024 Catalog tech page: List 3610 - EXOCARB WXL: Ball End, Regular Length, 2 Flute, Standard Milling p.1 of PDF"
+    }
+   }
   }
  ]
 }

@@ -15889,7 +15889,15 @@
      },
      "iso": "N"
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Performance Coolant-Through Carbide Drills \u2014 List HP253: HY-PRO\u00ae CARB: 3D Coolant-Through; List HP255: HY-PRO\u00ae CARB: 5D Coolant-Through; List HP258: HY-PRO\u00ae CARB: 8D Coolant-Through see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.334"
+    }
+   }
   },
   {
    "mode": "drill",
@@ -16284,7 +16292,15 @@
      },
      "iso": "H"
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Performance Coolant-Through Carbide Drills General Drilling Operations Work Special Alloy Steels, Hardened Steels see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.335"
+    }
+   }
   },
   {
    "mode": "drill",
@@ -17323,7 +17339,15 @@
      },
      "iso": "N"
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Performance Carbide Drills \u2014 List HP243: HY-PRO\u00ae CARB: 3D; List HP245: HY-PRO\u00ae CARB: 5D see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.336"
+    }
+   }
   },
   {
    "mode": "drill",
@@ -17766,7 +17790,15 @@
      },
      "iso": "H"
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Performance Carbide Drills General Drilling Operations Work Special Alloy Steels, Hardened Steels see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.337"
+    }
+   }
   },
   {
    "mode": "drill",
@@ -18258,7 +18290,15 @@
      },
      "iso": "N"
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"CARBIDE List 215, 220D, 200 & 233* General Drilling Operations see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.338"
+    }
+   }
   },
   {
    "mode": "drill",
@@ -18750,7 +18790,15 @@
      },
      "iso": "H"
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"CARBIDE General Drilling Operations Work see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.339"
+    }
+   }
   },
   {
    "mode": "drill",
@@ -19283,7 +19331,15 @@
      },
      "iso": "O"
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"CARBIDE List 215, 220D, 200 & 233* (Continued) Aerospace Operations see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.340"
+    }
+   }
   },
   {
    "mode": "drill",
@@ -20259,7 +20315,15 @@
      },
      "iso": "H"
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"CARBIDE List 300D General Drilling Operations see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.341"
+    }
+   }
   },
   {
    "mode": "drill",
@@ -23090,7 +23154,15 @@
      },
      "iso": "H"
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "hss",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"V-HO GDR Cobalt High Speed Steel Work Titanium Alloy Hardened Steel see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.347"
+    }
+   }
   },
   {
    "mode": "drill",
@@ -27050,7 +27122,15 @@
      },
      "iso": "H"
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "hss",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Cobalt High Speed Steel \u2014 List 1000: EX-GOLD\u00ae: Stub; List 1500: EX-GOLD\u00ae: Jobbers see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.352"
+    }
+   }
   },
   {
    "mode": "drill",
@@ -28504,7 +28584,16 @@
      },
      "iso": "H"
     }
-   ]
+   ],
+   "specs": {
+    "coating": "TiN",
+    "coatingClass": "tin",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"List 1200 - EX-SPOT TiN-NC-LDS \u2014 List 1200: EX-SPOT TiN-NC-LDS; List 1250: EX-SPOT LS-NC-LDS see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.354"
+    }
+   }
   }
  ]
 }

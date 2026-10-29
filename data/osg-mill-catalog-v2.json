@@ -2937,7 +2937,15 @@
      }
     }
    ],
-   "flutes": 4
+   "flutes": 4,
+   "specs": {
+    "flutes": 4,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"AE-VMSS \u2014 List 8206: A Brand AE-VMSS: 4 Flute, Stub Length; List 8226: A Brand AE-VMSS-RA: 4 Flute, Stub Length, Right Angle Type see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1336"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -5307,7 +5315,15 @@
      }
     }
    ],
-   "flutes": 4
+   "flutes": 4,
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"AE-VML Advanced Performance Anti-Vibration Carbide End Mills List 8201 & 8207 - A Brand AE-VML: Multi-Flute, Long Length see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1340"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -7270,7 +7286,15 @@
      }
     }
    ],
-   "flutes": 4
+   "flutes": 4,
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"AE-VML Advanced Performance Anti-Vibration Carbide End Mills List 8201 & 8207 - A Brand AE-VML: Multi-Flute, Long Length (Cont.) see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1341"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -9640,7 +9664,15 @@
      }
     }
    ],
-   "flutes": 4
+   "flutes": 4,
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"AE-VML Advanced Performance Anti-Vibration Carbide End Mills List 8201 & 8207 - A Brand AE-VML: Multi-Flute, Long Length (Cont.) see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1342"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -10626,7 +10658,15 @@
      }
     }
    ],
-   "flutes": 4
+   "flutes": 4,
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"AE-VML Advanced Performance Anti-Vibration Carbide End Mills List 8201 & 8207 - A Brand AE-VML: Multi-Flute, Long Length (Cont.) see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1343"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -14691,7 +14731,15 @@
      }
     }
    ],
-   "flutes": 3
+   "flutes": 3,
+   "specs": {
+    "flutes": 3,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"AE-VTSS \u2014 List 8233: A Brand AE-VTSS: 3 Flute, Stub Length; List 8333: A Brand AE-VTSS: 3 Flute, Stub Length see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1345"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -16788,7 +16836,15 @@
      }
     }
    ],
-   "flutes": 3
+   "flutes": 3,
+   "specs": {
+    "flutes": 3,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"AE-VTSS \u2014 List 8233: A Brand AE-VTSS: 3 Flute, Stub Length; List 8333: A Brand AE-VTSS: 3 Flute, Stub Length see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1346"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -19256,7 +19312,16 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "endShape": "square",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"A Brand AE-MSS-H Advanced Performance Carbide End Mills with DUROREY Coating List 8441, 8541: Multi-Flute, Stub Length, Reduced Neck, Square End see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1347"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -21112,7 +21177,15 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"A Brand AE-MS-H & AE-CR-MS-H Advanced Performance Carbide End Mills with DUROREY Coating List 8440, 8540, 8470, 8570: Multi-Flute, Regular Length, Square & Corner Rad. see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1348"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -22964,7 +23037,15 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"A Brand AE-MS-H & AE-CR-MS-H Advanced Performance Carbide End Mills with DUROREY Coating List 8440, 8540, 8470, 8570: Multi-Flute, Regular Length, Square & Corner Rad. (Cont.) see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1349"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -23916,7 +23997,16 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "endShape": "square",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"A Brand AE-ML-H Advanced Performance Carbide End Mills with Long LOC for Hardened Steels List 8442, 8542: Multi-Flute, Long Length, Square see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1350"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -25100,7 +25190,17 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "flutes": 3,
+    "coating": "DLC",
+    "coatingClass": "diamond",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"A Brand AE-VTS-N & AE-CR-VTS-N Advanced Performance DLC Coated End Mills for Non-Ferrous Materials List 8830, 8930, 8870, 8970: 3-Flute, Regular Length, Reduced Neck see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1351"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -25692,7 +25792,17 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "flutes": 3,
+    "coating": "DLC",
+    "coatingClass": "diamond",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"A Brand AE-VTS-N & AE-CR-VTS-N Advanced Performance DLC Coated End Mills for Non-Ferrous Materials List 8830, 8930, 8870, 8970: 3-Flute, Regular Length, Reduced Neck (Continued) see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1352"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -26784,7 +26894,16 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "coating": "DLC",
+    "coatingClass": "diamond",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"A Brand AE-TL-N Advanced Performance DLC Coated End Mills for Non-Ferrous Materials List 8630, 8730: 3xD Length of Cut see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1353"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -27373,7 +27492,16 @@
      }
     }
    ],
-   "flutes": 2
+   "flutes": 2,
+   "specs": {
+    "flutes": 2,
+    "endShape": "square",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"WXL\u00ae \u2014 List 3619: EXOCARB\u00ae WXL\u00ae: 2 Flute, Square End, Stub Length see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1354"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -28509,7 +28637,15 @@
      }
     }
    ],
-   "flutes": 2
+   "flutes": 2,
+   "specs": {
+    "flutes": 2,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"WXL\u00ae \u2014 List 3620: EXOCARB\u00ae WXL\u00ae: Stub Length, 2 Flute; List 3621: EXOCARB\u00ae WXL\u00ae: Regular Length, 2 Flute see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1357"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -30210,7 +30346,15 @@
      }
     }
    ],
-   "flutes": 4
+   "flutes": 4,
+   "specs": {
+    "flutes": 4,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"WXL\u00ae \u2014 List 3604: EXOCARB\u00ae WXL\u00ae: Regular Length, 4 Flute see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1368"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -30645,7 +30789,18 @@
      "iso": "N"
     }
    ],
-   "flutes": 2
+   "flutes": 2,
+   "specs": {
+    "flutes": 2,
+    "endShape": "ball",
+    "coating": "Diamond",
+    "coatingClass": "diamond",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Diamond \u2014 List 7020: Stub Length, 2 Flute; List 7120: Regular Length, 2 Flute; List 7010: Long Length, 2 Flute; List 7110: Ball End, Regular Length, 2 Flute see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1382"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -30974,7 +31129,17 @@
      "iso": "N"
     }
    ],
-   "flutes": 4
+   "flutes": 4,
+   "specs": {
+    "flutes": 4,
+    "coating": "Diamond",
+    "coatingClass": "diamond",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Diamond \u2014 List 7040: Inch, Stub Length, 4 Flute; List 7041: Long Length, 4 Flute; List 7042: Stub Length, 4 Flute, Long Shank; List 7072: Inch, Stub Length, 4 Flute, Long Shank, Corner Radius; List 7030: Ball End, Regular Length, 4 Flute; List 7031: Ball End, Long Length, 4 Flute; List 7032: Inch, Ball End, S see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1383"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -33955,7 +34120,16 @@
      }
     }
    ],
-   "flutes": 4
+   "flutes": 4,
+   "specs": {
+    "flutes": 4,
+    "endShape": "bull",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB VGX \u2014 List VG441: 4 Flute; List VG434: 4 Flute - Corner Radius; List VG436: 4 Flute - Corner Chamfer see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1386"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -35776,7 +35950,15 @@
      }
     }
    ],
-   "flutes": 4
+   "flutes": 4,
+   "specs": {
+    "flutes": 4,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB VGX \u2014 List VG446: 4 Flute - Reduced Neck; List VG464: 4 Flute - Extended Length see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1387"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -36803,7 +36985,15 @@
      }
     }
    ],
-   "flutes": 3
+   "flutes": 3,
+   "specs": {
+    "flutes": 3,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB VGM3-AL \u2014 List VGM3-AL: 3 Flute see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1388"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -38116,7 +38306,15 @@
      }
     }
    ],
-   "flutes": 5
+   "flutes": 5,
+   "specs": {
+    "flutes": 5,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB VGM5 \u2014 List VGM5: 5 Flute see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1389"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -39305,7 +39503,15 @@
      }
     }
    ],
-   "flutes": 5
+   "flutes": 5,
+   "specs": {
+    "flutes": 5,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB VGM5-LN \u2014 List VGM5-LN: 5 Flute, Long Neck see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1390"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -40218,7 +40424,15 @@
      }
     }
    ],
-   "flutes": 6
+   "flutes": 6,
+   "specs": {
+    "flutes": 6,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB VGM6 \u2014 List VGM6: 6 Flute see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1391"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -41311,7 +41525,15 @@
      }
     }
    ],
-   "flutes": 7
+   "flutes": 7,
+   "specs": {
+    "flutes": 7,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB VGM7 \u2014 List VGM7: 7 Flute see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1392"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -42853,7 +43075,15 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB Performance Sub-Micrograin Carbide End Mills List HP421 see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1393"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -44277,7 +44507,15 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB Performance Sub-Micrograin Carbide End Mills List HP441 see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1394"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -45395,7 +45633,15 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB Performance Sub-Micrograin Carbide End Mills List HP421, HP441 (Continued) see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1396"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -47209,7 +47455,15 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB Performance Sub-Micrograin Carbide End Mills List HP460 see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1398"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -48053,7 +48307,15 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB Performance Sub-Micrograin Carbide End Mills Slotting see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1399"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -48677,7 +48939,15 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB Performance Sub-Micrograin Carbide End Mills List HP400 see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1400"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -49287,7 +49557,15 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB Performance Sub-Micrograin Carbide End Mills Slotting (Fractional) see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1401"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -49723,7 +50001,16 @@
      "iso": "S"
     }
    ],
-   "flutes": 2
+   "flutes": 2,
+   "specs": {
+    "substrate": "hss",
+    "flutes": 2,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HSS-CO End Mills 2 Flute Standard 2 Flute HSS-Co see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1408"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -50159,7 +50446,16 @@
      "iso": "O"
     }
    ],
-   "flutes": 2
+   "flutes": 2,
+   "specs": {
+    "substrate": "hss",
+    "flutes": 2,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HSS-CO End Mills 2 Flute Slotting see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1409"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -54113,7 +54409,15 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "flutes": 2,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae V \u2014 List 573: Regular Length, 2 Flute; List 574: Regular Length, Multiple Flute see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1414"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -58483,7 +58787,15 @@
      }
     }
    ],
-   "flutes": 3
+   "flutes": 3,
+   "specs": {
+    "flutes": 3,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Single End \u2014 List 531: Single End - Regular Length - 3 Flute; List 532: Double End - Regular Length - 3 Flute; List 536: Single End - Long Length - 3 Flute see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1417"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -64411,7 +64723,15 @@
      }
     }
    ],
-   "flutes": 3
+   "flutes": 3,
+   "specs": {
+    "flutes": 3,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Roughing Cut \u2014 List 410: Stub Length - 3 Flute - Regular Pitch; List 490: Multiple Flute - Regular Pitch - General Purpose - Center Hole see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1422"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -64632,7 +64952,15 @@
      }
     }
    ],
-   "flutes": 3
+   "flutes": 3,
+   "specs": {
+    "flutes": 3,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Roughing Cut \u2014 List 430E: For Aluminum - 3 Flute see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1423"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -67078,7 +67406,16 @@
      }
     }
    ],
-   "flutes": 4
+   "flutes": 4,
+   "specs": {
+    "flutes": 4,
+    "endShape": "bull",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"AE-LN-CR-VMS \u2014 List 8220: A Brand AE-LN-CR-VMS: 4 Flute, Long Neck, Corner Radius see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1427"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -70105,7 +70442,16 @@
      }
     }
    ],
-   "flutes": 4
+   "flutes": 4,
+   "specs": {
+    "flutes": 4,
+    "endShape": "bull",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"WXL\u00ae \u2014 List 3670: EXOCARB\u00ae WXL\u00ae: 4 Flute, Regular Length, Corner Radius see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1436"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -71762,7 +72108,16 @@
      }
     }
    ],
-   "flutes": 4
+   "flutes": 4,
+   "specs": {
+    "flutes": 4,
+    "endShape": "bull",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"WXL\u00ae \u2014 List 4445: 4 Flute, Corner Radius, High Helix, Regular Length see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1438"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -74274,7 +74629,15 @@
      }
     }
    ],
-   "flutes": 4
+   "flutes": 4,
+   "specs": {
+    "flutes": 4,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"AERO ROUGHER \u2014 List 2015: Regular Length, 4 Flute, Roughing see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1452"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -75452,7 +75815,15 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB Performance Sub-Micrograin Carbide End Mills List HP432 see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1457"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -76630,7 +77001,15 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB Performance Sub-Micrograin Carbide End Mills List HP434 see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1458"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -77538,7 +77917,15 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB Performance Sub-Micrograin Carbide End Mills List HP432, HP434: (Continued) see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1459"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -78711,7 +79098,16 @@
      }
     }
    ],
-   "flutes": 2
+   "flutes": 2,
+   "specs": {
+    "flutes": 2,
+    "endShape": "ball",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"WXL\u00ae \u2014 List 4413: Ball Nose, Regular Length, 2 Flute, Sphere Type see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1482"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -80090,7 +80486,16 @@
      }
     }
    ],
-   "flutes": 4
+   "flutes": 4,
+   "specs": {
+    "flutes": 4,
+    "endShape": "ball",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"WXL\u00ae \u2014 List 4581: 4 Flute, Ball End, Tapered see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1484"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -81129,7 +81534,16 @@
      }
     }
    ],
-   "flutes": 2
+   "flutes": 2,
+   "specs": {
+    "flutes": 2,
+    "endShape": "ball",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"AERO BLIZZARD \u2014 List 2010: Ball End, Regular Length, 2 Flute see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1491"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -84061,7 +84475,16 @@
      }
     }
    ],
-   "flutes": 4
+   "flutes": 4,
+   "specs": {
+    "flutes": 4,
+    "endShape": "ball",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB VGX \u2014 List VG441BN: 4 Flute - Ball Nose see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1494"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -85485,7 +85908,15 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB Performance Sub-Micrograin Carbide End Mills List HP421BN, HP441BN see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1495"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -86909,7 +87340,15 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB Performance Sub-Micrograin Carbide End Mills List HP421BN, HP441BN: (continued) see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1496"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -87661,7 +88100,15 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB Performance Sub-Micrograin Carbide End Mills List HP419 see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1497"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -89227,7 +89674,15 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"HY-PRO\u00ae CARB Performance Sub-Micrograin Carbide End Mills List HP418 see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1499"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -90826,7 +91281,16 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "endShape": "ball",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Carbide Micrograin Carbide End Mills Standard Ball Nose Carbide 2 Flute and 3 Flute see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1501"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -91872,7 +92336,17 @@
      }
     }
    ],
-   "flutes": 4
+   "flutes": 4,
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "endShape": "ball",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Carbide Micrograin Carbide End Mills Standard Ball Nose Carbide 4 Flute and Multiple Flute see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1502"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -93742,7 +94216,15 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "endShape": "ball",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Ball End \u2014 List 521: Single End, Regular Length, 2 Flute; List 523: Double End, Regular Length, 2 Flute; List 526: Single End, Regular Length, 2 Flute, Extension Type; List 544: Single End, Regular Length, 4 Flute; List 621: Ball End, Regular Length, 2 Flute; List 644: Ball End, Regular Length, Multiple Flute see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1504"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -95444,7 +95926,15 @@
       }
      }
     }
-   ]
+   ],
+   "specs": {
+    "endShape": "ball",
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Roughing Cut \u2014 List 440: Ball End - Multiple Flute - General Purpose - Regular Pitch see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1505"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -96432,7 +96922,15 @@
      }
     }
    ],
-   "flutes": 3
+   "flutes": 3,
+   "specs": {
+    "flutes": 3,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Single End \u2014 List 591: 1\u02da Taper on Side - 3 Flute see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1511"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -99574,7 +100072,15 @@
      }
     }
    ],
-   "flutes": 3
+   "flutes": 3,
+   "specs": {
+    "flutes": 3,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Single End \u2014 List 593: 2\u02da Taper on Side - 3 Flute; List 594: 3\u02da Taper on Side - 3 Flute see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1512"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -101201,7 +101707,15 @@
      }
     }
    ],
-   "flutes": 3
+   "flutes": 3,
+   "specs": {
+    "flutes": 3,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Single End \u2014 List 595: 5\u02da Taper on Side - 3 Flute; List 596: 7\u02da Taper on Side - 3 Flute see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1513"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -102601,7 +103115,15 @@
      }
     }
    ],
-   "flutes": 3
+   "flutes": 3,
+   "specs": {
+    "flutes": 3,
+    "source": {
+     "url": "https://osgtool.com/content/literature/8002024CA/",
+     "retrieved": "2026-10-28",
+     "notes": "printed tool title \"Single End \u2014 List 597: 10\u02da Taper on Side - 3 Flute see series\" in OSG Tooling Solutions Product Catalog (technical pages) p.1514"
+    }
+   }
   }
  ]
 }

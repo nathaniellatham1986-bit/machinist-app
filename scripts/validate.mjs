@@ -17,7 +17,8 @@ const FEED_KINDS = ['fz', 'ipr', 'pitch'];
 const TOOL_KEYS = new Set(['mode', 'brand', 'series', 'type', 'flutes', 'coating', 'grade', 'diameters_in', 'diameters_mm', 'notes', 'conditions', 'specs']);
 // specs: tool attributes copied from the maker's own page/catalog (cited). A field is absent when not printed; never guessed.
 export const SPEC_SUBSTRATE = ['carbide', 'hss'], SPEC_COAT = ['uncoated', 'tin', 'ticn', 'al-based', 'diamond', 'nonferrous', 'other'], SPEC_END = ['square', 'ball', 'bull'];
-const SPEC_KEYS = new Set(['substrate', 'flutes', 'coating', 'coatingClass', 'endShape', 'source']);
+const SPEC_KEYS = new Set(['substrate', 'flutes', 'coating', 'coatingClass', 'endShape', 'cutOrForm', 'fluteStyle', 'holeType', 'source']);
+export const SPEC_CUTFORM = ['cut', 'form'], SPEC_FLUTESTYLE = ['spiral point', 'spiral flute', 'straight flute'], SPEC_HOLE = ['through', 'blind'];
 function specs(sp, w, err) { if (!sp || typeof sp !== 'object') return err(w, 'specs must be an object');
   for (const k of Object.keys(sp)) if (!SPEC_KEYS.has(k)) err(w, `unknown specs key "${k}"`);
   if ('substrate' in sp && !SPEC_SUBSTRATE.includes(sp.substrate)) err(w, `specs.substrate must be ${SPEC_SUBSTRATE.join('|')}`);
@@ -25,6 +26,8 @@ function specs(sp, w, err) { if (!sp || typeof sp !== 'object') return err(w, 's
   if ('coatingClass' in sp && !SPEC_COAT.includes(sp.coatingClass)) err(w, `specs.coatingClass must be ${SPEC_COAT.join('|')}`);
   if ('coatingClass' in sp && !isStr(sp.coating)) err(w, 'specs.coatingClass needs the printed specs.coating');
   if ('endShape' in sp && !SPEC_END.includes(sp.endShape)) err(w, `specs.endShape must be ${SPEC_END.join('|')}`);
+  for (const [k, ok] of [['cutOrForm', SPEC_CUTFORM], ['fluteStyle', SPEC_FLUTESTYLE], ['holeType', SPEC_HOLE]]) if (k in sp && !ok.includes(sp[k])) err(w, `specs.${k} must be ${ok.join('|')}`);
+  if ('fluteStyle' in sp && sp.cutOrForm === 'form') err(w, 'specs.fluteStyle is for cut taps');
   if (!sp.source || !isStr(sp.source.url) || !isStr(sp.source.retrieved)) err(w, 'specs.source needs url and retrieved'); }
 const COND_KEYS = new Set(['fzPerD', 'label', 'iso', 'subgroup', 'material', 'status', 'coolant', 'sfm', 'feed', 'ap', 'ae', 'apx', 'aex', 'source', 'materials', 'sourceGroup', 'strictMaterials', 'excludeMaterials',
   'noseRadius', 'leadAngle', 'toolLife', 'insertWidth', 'chipbreaker', 'geometry', 'kind', 'table', 'woc', 'operation', 'insert', 'grade', 'note', 'coolantNote', 'altSources', 'printed']);
