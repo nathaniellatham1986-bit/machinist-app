@@ -21202,7 +21202,8 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "value": 20
+      "min": 950,
+      "max": 1020
      },
      "table": "High Speed Milling 1, column 1",
      "status": "verified",
@@ -21432,7 +21433,8 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "value": 20
+      "min": 950,
+      "max": 1020
      },
      "table": "High Speed Milling 1, column 1",
      "status": "verified",
@@ -21662,7 +21664,8 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "value": 20
+      "min": 950,
+      "max": 1020
      },
      "table": "High Speed Milling 1, column 1",
      "status": "verified",
@@ -21892,7 +21895,8 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "value": 20
+      "min": 950,
+      "max": 1020
      },
      "table": "High Speed Milling 1, column 1",
      "status": "verified",
