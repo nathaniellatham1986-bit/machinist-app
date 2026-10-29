@@ -1,7 +1,7 @@
 import { MODES, migrate, forMode, upsertMachine, dedupeMachines, removeMachine } from './recall.js';
 import { enhance } from './combo.js';
 import { estimate, ESTIMATES_ON, EST_MODES, sizeTxt } from './estimate.js';
-import { matBad, brandUsable, commonDrillMm, nice, compute, sulph303, dataAt, dataRank, withPairs, noDataWhy, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, classifyOverride, classifyEng, engFrac, drillTier, rowDia, rowExcludes, toolLifeOf } from './calc.js';
+import { matBad, brandUsable, commonDrillMm, nice, compute, sulph303, dataAt, dataRank, withPairs, noDataWhy, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf as kindOf0, INDEXABLE_ON, bodyAt, bodyDc, indexablePair, indexableWocs, millIndexable, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, classifyOverride, classifyEng, engFrac, drillTier, rowDia, rowExcludes, toolLifeOf } from './calc.js';
 let PASSNOTE = ''; // Review3 #4: set when the chosen Pass has no rows for this tool
 const $ = id => document.getElementById(id);
 const J = u => fetch(u).then(r => r.json());
@@ -11,6 +11,11 @@ const MM = 25.4, toIn = (v, u) => (u === 'mm' ? v / MM : v);
 const spdK = u => (u === 'm/min' ? 3.2808 : 1);
 // Lazy data: index.json lists every tool; a brand file is fetched only when one of its tools is picked.
 const SUM = idx.files.flatMap(f => f.tools.map(t => ({ ...t, file: f.file, key: f.file + '#' + t.i })));
+// Indexable bodies (kill switch: INDEXABLE_ON in calc.js, or ?indexable=0). Only index entries with printed bodies (bd) change.
+const IXON = INDEXABLE_ON && new URLSearchParams(location.search).get('indexable') !== '0';
+const BODY_KIND = { face: 'Face mill', shoulder: 'Shoulder mill', 'high-feed': 'High-feed mill', round: 'Round-insert mill', drill: 'Indexable drill' };
+const kindOf = t => { const b = IXON && (t?.bk ?? t?.bodies?.[0]?.type); return b ? BODY_KIND[b] ?? kindOf0(t) : kindOf0(t); };
+if (IXON) for (const t of SUM) if (t.bd?.length) Object.assign(t, { ps: t.bd, dr: [Math.min(...t.bd) - 5e-3, Math.max(...t.bd) + 5e-3], dd: (t.bIsos ?? []).flatMap(i => t.bd.map(x => [i, x - 5e-3, x + 5e-3])), fullIsos: t.bIsos ?? [] });
 const DOCS = {};
 const ensure = async key => { const f = key?.split('#')[0]; if (f && !DOCS[f]) { const d = await J('data/' + f); d.tools = d.tools.map(withPairs); DOCS[f] = d; } };
 const toolBy = key => { if (!key) return null; const [f, i] = key.split('#'); return DOCS[f]?.tools[+i] ?? null; };
@@ -137,7 +142,7 @@ async function fillGrade(keep) { const keys = GROUPS[$('tool').value] ?? ($('too
   const s = $('grade'); s.length = 0; const kd = kindOf(SUM.find(x => x.key === keys[0]) ?? {});
   const ts = SUM.find(x => x.key === keys[0]) ?? {}, tx = `${ts.type ?? ''} ${ts.series ?? ''}`;
   $('gradeT').textContent = kd === 'Tap' || ts.coating || (!/Insert|Boring/.test(kd) && !/insert|indexable/i.test(tx) && /solid|end ?mill|HSS|twist|carbide drill/i.test(tx)) ? 'Coating' : 'Grade';
-  $('gradeL').hidden = L.length < 2 && keys.length < 2; if ($('gradeL').hidden) { $('gNote').textContent = ''; return fillCond(); }
+  $('gradeL').hidden = ixTool() || L.length < 2 && keys.length < 2; // indexable cutters pick grade in #ixGr if ($('gradeL').hidden) { $('gNote').textContent = ''; return fillCond(); }
   L.filter(o => o.has).forEach(o => s.add(new Option(o.g, o.id)));
   L.filter(o => !o.has).forEach(o => { const x = new Option(`${o.g} · No mfr data for this material`, o.id); x.disabled = true; x.style.color = '#777'; s.add(x); });
   const mat = matSel()?.name ?? (idx.materialGroups.find(([k]) => k === $('iso').value)?.[1]) ?? 'this material', { pick: P, why } = pickGrade(L, cur);
@@ -178,7 +183,7 @@ async function fillCond() {
     const same = pool.filter(([, c]) => (c.subgroup ?? c.label) === sg), mid = same[Math.floor((same.length - 1) / 2)];
     const best = mid || opts.find(([, c]) => full(c) && c.source.kind === 'catalog') || opts.find(([, c]) => full(c)) || opts.find(([, c]) => hasData(c) && !(mode === 'drill' && rowExcludes(c, inV('d')))) || opts[0]; if (best) $('cond').value = best[0]; }
   if (t?.flutes) $('z').value = t.flutes;
-  fill(); recent();
+  fillIx(); fill(); recent();
 }
 function coolNote() { const c = curTool()?.conditions[$('cond').value];
   $('coolNote').textContent = c ? (c.coolant ? `Coolant (source): ${c.coolant}` : 'Coolant: not stated by source') : '';
@@ -252,7 +257,7 @@ function fill() { setupSum();
   if (mode === 'drill' && c?.feed?.kind === 'fz' && fd) { const z = t.flutes; fd = z ? { ...fd, def: fd.def * z, min: fd.min && fd.min * z, max: fd.max && fd.max * z, basis: `feed/rev = printed chip load × ${z} flutes (printed)` } : null; } // every mode: range-only records start at the LOW end (labeled)
   OUTROW = mode === 'drill' && c && rowExcludes(c, d); if (OUTROW) { sp = null; fd = null; } // never borrow an out-of-size printed row
   if (shop) { if (sp) sp.basis = 'SHOP-PROVEN value, not manufacturer'; if (fd) fd.basis = 'SHOP-PROVEN value, not manufacturer'; }
-  ESTTRY = false; if (ESTIMATES_ON && EST_MODES.includes(mode) && t && matSel() && !shop && (!sp || (!fd && mode !== 'tap')) && !((mode === 'mill' || mode === 'drill') && printedAt(c, d))) {
+  ESTTRY = false; if (ESTIMATES_ON && EST_MODES.includes(mode) && t && !ixTool() && matSel() && !shop && (!sp || (!fd && mode !== 'tap')) && !((mode === 'mill' || mode === 'drill') && printedAt(c, d))) {
     ESTTRY = true; const s = SUM.find(x => x.key === realKey()), e = estimate({ target: { ...s, mode }, targetTool: t, targetKey: s?.key, cands: estCands().map(x => ({ key: x.key, tool: toolBy(x.key) })).filter(x => x.tool), mat: matSel(), d, cool, need: { sfm: !sp, fpt: !fd && mode !== 'tap' } });
     if (!sp && e.sfm) sp = { def: e.sfm.def, min: null, max: null, est: e.sfm, basis: 'ESTIMATE' }; if (!fd && e.fpt) fd = { def: e.fpt.def, min: null, max: null, est: e.fpt, basis: 'ESTIMATE' }; }
   SP = sp; FD = fd; defs = { sfm: sp?.def ?? null, fpt: mode === 'tap' ? inV('fpt') : fd?.def ?? null };
@@ -330,6 +335,7 @@ function run() { tapBox(); updateFindLink(); favMark();
   if (GP() && !(inV('d') > 0)) { $('cards').innerHTML = `<div class="out"><span class="warn">Enter the real stock diameter first — RPM for ${$('top').value.toLowerCase()} comes from it.</span></div>`; $('bar').innerHTML = '<small>Enter stock Ø</small>'; return; }
   if (!curTool()) { const m = needMsg() ? needMsg() + ' to see manufacturer numbers.' : ($('tool').options[0]?.text.includes('manufacturer data at Ø') ? $('tool').options[0].text.replace(/^Pick a tool — /, '').replace(/^no/, 'No') + '. Pick a tool to see its nearest published sizes, or change Ø.' : `${$('brand').value} has no ${mode} tool with data for this material and these filters.`);
     $('cards').innerHTML = `<div class="out"><span class="warn">${m}</span></div>`; $('bar').innerHTML = `<small>${m}</small>`; return; } if (PART()) $('fD').value = '0'; if (mode === 'mill') readEng();
+  if (ixTool()) return runIx();
   const v = inV, tag = k => mine(k) && $(k).value ? ' <span class="tag warn">YOUR VALUE, NOT MANUFACTURER</span>' : '';
   const c = curTool()?.conditions[$('cond').value];
   let w = '';
@@ -493,3 +499,58 @@ function updateFindLink() {
   const q = p.filter(x => x && !/^(undefined|null|NaN)$/.test(x) && !/DERIVED|MFR|YOUR VALUE/i.test(x)).join(' ').replace(/\s+/g, ' ').trim();
   a.href = 'https://www.mscdirect.com/browse/tn?searchterm=' + encodeURIComponent(q); a.dataset.q = q; a.textContent = 'Find this tool ↗'; a.title = 'MSC search: ' + q; a.hidden = false;
 }
+
+// ---- Indexable bodies: Inserts installed / Insert / Grade rows and the printed-only result cards.
+function ixTool() { const t = curTool(); return IXON && mode === 'mill' && t?.bodies?.length ? t : null; }
+let IXN = { key: '', user: false };
+function fillIx() { if (!IXON) return; const t = ixTool(); $('ixRows').hidden = !t; $('zLbl').hidden = !!t || !$('zLbl').dataset.show.split(' ').includes(mode); if (!t) return;
+  const rows = t.conditions.map((c, i) => [c, i]).filter(([c]) => c.kind === 'insert-selection' && isoOk(c)), s = $('ixIns'), prev = s.value; s.length = 0;
+  if (!rows.length) s.add(new Option('No data: no insert printed for this material', ''));
+  rows.forEach(([c, i]) => s.add(new Option(`${(c.subgroup ?? c.iso).replace('SMG v2 ', 'SMG ')} · ${c.insert} · ${c.grade}`, i)));
+  const mp = c => matPref(matSel()?.id, c, matSel()), best = rows.slice().sort(([a], [b]) => mp(a) - mp(b))[0];
+  s.value = rows.some(([, i]) => String(i) === prev) ? prev : best ? String(best[1]) : '';
+  if (s.value !== '') $('cond').value = s.value; // printed recommended ap prefills DOC
+  fillIxGrade(); ixInserts(); }
+function fillIxGrade() { const t = ixTool(), f = t?.conditions[$('ixIns').value], g = $('ixGr'), prev = g.value; g.length = 0;
+  if (!f) { g.add(new Option('No data', '')); return; }
+  const gs = [...new Set(t.conditions.filter(c => c.kind === 'vc-by-grade' && c.subgroup === f.subgroup && c.sfm).map(c => c.grade))].sort((a, b) => (b === f.grade) - (a === f.grade));
+  if (!gs.length) g.add(new Option(`No data: no speed printed for ${f.subgroup}`, ''));
+  if (!gs.includes(f.grade)) g.add(new Option(`${f.grade} · No data (no speed printed for this grade)`, f.grade), 0);
+  gs.forEach(x => g.add(new Option(x === f.grade ? `${x} · speed + feed printed` : `${x} · speed only, no feed printed`, x)));
+  g.value = [...g.options].some(o => o.value === prev) && prev ? prev : f.grade; }
+function ixInserts() { const b = bodyAt(ixTool(), inV('d')), n = $('ixN'), k = `${$('tool').value}|${b?.part ?? ''}`;
+  if (k !== IXN.key) { IXN = { key: k, user: false }; } n.max = b?.z ?? ''; n.disabled = !b;
+  if (!b) { n.value = ''; $('ixZn').textContent = '(pick a printed body)'; return; }
+  if (!IXN.user || !(+n.value >= 1)) n.value = b.z; if (+n.value > b.z) n.value = b.z; if (+n.value < 1) n.value = 1; n.value = Math.floor(+n.value);
+  $('ixZn').textContent = `(${b.z} pockets printed)`; }
+$('ixIns').onchange = () => { $('cond').value = $('ixIns').value; fillIxGrade(); fill(); };
+$('ixGr').onchange = () => run();
+$('ixN').onchange = () => { IXN.user = true; ixInserts(); run(); };
+const ixHost = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return ''; } };
+const ixCite = s => s ? `${esc(String(s.manufacturer).replace(/\s+Tools?$/i, ''))} catalog p.${esc(s.page)}${s.url ? ', hosted by ' + esc(ixHost(s.url)) : ''}` : '';
+function runIx() { const t = ixTool(), d = inV('d'), body = bodyAt(t, d), f = t.conditions[$('ixIns').value], gr = $('ixGr').value; ixInserts();
+  const card = (k, val, b, cls = '') => `<div class="card ${cls}"><div class="k">${k}</div><div class="v">${val}</div><div class="b">${b}</div></div>`, NO = '<span class="warn">No data</span>';
+  const done = (html, bar) => { $('cards').innerHTML = html; $('out').hidden = true; $('bar').innerHTML = bar + (!$('mach').value ? '<span class="warn" style="font-size:15px;width:100%">No machine selected — RPM not limited</span>' : '');
+    $('cards').querySelectorAll('[data-ixd]').forEach(x => x.onclick = () => { setIn('d', +x.dataset.ixd); showEng(); fill(); });
+    $('cards').querySelectorAll('[data-ixw]').forEach(x => x.onclick = () => { frac.ae = +x.dataset.ixw; ENG.ae = 'mfg'; showEng(); run(); }); };
+  if (!body) return done(`<div class="out"><span class="warn">Pick a printed ${esc(t.series)} body. Seco prints these cutter diameters:</span><br>${t.bodies.map(b => `<button class="chip" data-ixd="${bodyDc(b)}">Ø ${bodyDc(b).toFixed(2)} in · ${esc(b.part)} · ${b.z} inserts</button>`).join(' ')}<br><small>${ixCite(t.bodies[0].source)}</small></div>`, '<small>Pick a printed body Ø</small>');
+  if (!f) return done(`<div class="out"><span class="warn">No data: Seco prints no ${esc(t.series)} insert for this material.</span></div>`, '<small>No data</small>');
+  const wocs = indexableWocs(f), at = x => wocs.find(w => Math.abs(w - x) < 1e-6);
+  if (at(frac.ae) == null && ENG.ae !== 'yours') { frac.ae = wocs[0]; ENG.ae = 'mfg'; showEng(); }
+  const woc = at(frac.ae), pct = x => `${+(x * 100).toFixed(0)}%`, dc = bodyDc(body), sg = esc((f.subgroup ?? f.iso).replace('SMG v2 ', 'SMG '));
+  if (woc == null) return done(`<div class="out"><span class="warn">No data at WOC ${pct(frac.ae)} of Dc.</span> Seco prints fz for ${esc(f.insert)} only at ae = ${wocs.map(pct).join(', ')} of Dc (${ixCite(f.source)}).<br>${wocs.map(w => `<button class="chip" data-ixw="${w}">WOC ${pct(w)} = ${(w * dc).toFixed(3)} in</button>`).join(' ')}</div>`, '<small>No data at this WOC</small>');
+  if (ENG.ap !== 'yours' && f.ap?.value && d) { frac.ap = toIn(f.ap.value, f.ap.unit) / d; ENG.ap = 'mfg'; showEng(); }
+  const P = indexablePair(t, f, gr, woc), ap = ENG.ap !== 'yours' && f.ap?.value ? toIn(f.ap.value, f.ap.unit) : frac.ap * d, n = +$('ixN').value || body.z;
+  const o = P.sfm != null ? millIndexable({ sfm: P.sfm, body, inserts: n, fz: P.fz, woc, ap, maxRpm: inV('maxRpm'), maxHp: inV('maxHp'), iso: f.iso }) : null;
+  const capTxt = o?.cappedBy === 'cutter' ? `<span class="warn">Limited by cutter max RPM</span> (${body.maxRpm} rpm, ${ixCite(body.source)}) · actual ${uSp(o.sfmActual)} ${metric ? 'm/min' : 'SFM'}` : o?.cappedBy === 'machine' ? `<span class="warn">capped at machine max RPM</span> · actual ${uSp(o.sfmActual)} ${metric ? 'm/min' : 'SFM'}` : '';
+  let cards = card(metric ? 'Speed (m/min)' : 'SFM', P.sfm != null ? uSp(P.sfm) + (o?.cappedBy ? ` <small>→ ${uSp(o.sfmActual)}</small>` : '') : NO,
+      P.sfm != null ? `${esc(gr)} · ${sg} · ae ${pct(woc)} · ${ixCite(P.vc.source)}` : `Seco prints no speed for ${esc(gr || 'this grade')} in ${sg} at ae ${pct(woc)}`)
+    + card('RPM', o ? Math.round(o.rpm) : NO, o ? (capTxt || `SFM × 3.82 ÷ Dc ${dc.toFixed(2)} in`) : 'needs a printed speed')
+    + card(`Chip load (${UL()}/insert)`, P.fz != null ? uFeed(P.fz) : NO, P.fz != null ? `${esc(f.insert)} · ${esc(f.grade)} · printed at ae ${pct(woc)} · ${ixCite(f.source)}` : P.fzWhy === 'grade' ? `Seco prints fz for ${esc(f.insert)} with ${esc(f.grade)} only; none for ${esc(gr)}` : 'not printed at this WOC')
+    + card(metric ? 'mm/min' : 'IPM', o?.ipm != null ? uIpm(o.ipm) : NO, o?.ipm != null ? `RPM × ${o.inserts} insert${o.inserts > 1 ? 's' : ''} × fz${o.inserts < body.z ? ` · ${o.inserts} of ${body.z} pockets filled; fz unchanged` : ''}${o.hpCapped ? ' · <span class="warn">reduced to machine HP</span>' : ''}` : 'needs printed speed and feed');
+  const apW = o?.apWarn ?? (ap > (body.apMax?.value ?? Infinity) + 1e-9);
+  cards += card('Body', `<span style="font-size:22px">${esc(body.part)}</span>`, `Dc ${dc.toFixed(2)} in · ${body.z} pockets · max ${body.maxRpm} rpm · ap max ${body.apMax?.value ?? '?'} in${body.kapr ? ` · κr ${body.kapr.deg}° (Seco p.${esc(body.kapr.page)})` : ''} · ${ixCite(body.source)}`, 'wide')
+    + card('DOC / WOC', `<span style="font-size:22px">DOC ${uLen(ap, 3)}<br>WOC ${pct(woc)} = ${uLen(woc * dc, 3)}</span>`, (apW ? `<span class="amb">DOC is over this insert's max ap ${body.apMax.value} in (${ixCite(body.source)})</span> · ` : '') + `recommended ap ${f.ap ? f.ap.value + ' ' + f.ap.unit : 'not printed'} (${ixCite(f.source)})`, 'wide');
+  const note = `<div class="out"><small>fz used as printed at its WOC: no chip-thinning applied. Seco prints no entering-angle correction for ${esc(t.series)}, so none is applied. Speed and feed are both Seco rows for the same grade; nothing borrowed.</small></div>`;
+  done((apW ? `<div class="out"><span class="amb">DOC ${uLen(ap, 3)} is over the ${body.apMax.value} in max ap for ${esc(body.insert)}.</span></div>` : '') + `<div class="cards">${cards}</div>` + note,
+    (o ? `<span>${Math.round(o.rpm)} <small>RPM</small></span><span>${o.ipm != null ? uIpm(o.ipm) : '—'} <small>${metric ? 'mm/min' : 'IPM'}</small></span>` : '<small>No data</small>') + `<small>${esc(body.part)}</small>`); }

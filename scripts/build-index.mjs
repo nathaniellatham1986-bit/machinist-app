@@ -42,6 +42,8 @@ for (const f of files) {
     ...(t.conditions.some(c => c.materials?.includes('ss303') && !shared303(c)) ? { only303: true } : {}),
     mats: [...new Set(t.conditions.flatMap(c => c.materials ?? []))].sort(),
     ...((u => u.length ? { nm: u } : {})(MATERIALS.filter(m => t.conditions.some(c => rowUsable(t, c) && (c.iso === m.iso || c.iso === '*')) && !t.conditions.some(c => rowUsable(t, c) && matRowOk(m, c) && !(c.iso === '*' && m.iso !== 'N' && /non-?ferrous/i.test(`${t.series} ${t.type ?? ''}`)))).map(m => m.id))),
+    ...(t.bodies?.length ? { bd: t.bodies.map(b => +(b.dc.unit === 'mm' ? b.dc.value / 25.4 : b.dc.value).toFixed(4)), bk: t.bodies[0].type, // indexable bodies: printed Dc list; ISOs where a feed row and a same-grade speed row are both printed
+      bIsos: [...new Set(t.conditions.filter(f => f.kind === 'insert-selection' && f.feed && t.conditions.some(v => v.kind === 'vc-by-grade' && v.sfm && v.subgroup === f.subgroup && v.grade === f.grade)).map(f => f.iso))].sort() } : {}),
     shop: t.conditions.some(c => c.status === 'shop-proven') }));
   out.push({ file: f, brand: doc.brand, modes: [...new Set(tools.map(t => t.mode))].sort(), records: doc.tools.reduce((n, t) => n + t.conditions.length, 0), tools });
 }
