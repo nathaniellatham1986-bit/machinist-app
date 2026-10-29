@@ -21222,13 +21222,6 @@
      "printed": {
       "unit": "in",
       "byDiameter": {
-       "0.0394": {
-        "rpm": 3763,
-        "tableFeed": {
-         "value": 225.8,
-         "unit": "ipm"
-        }
-       },
        "0.0625": {
         "rpm": 50000,
         "tableFeed": {
@@ -21420,6 +21413,13 @@
        },
        "0.7874": {
         "rpm": 4780,
+        "tableFeed": {
+         "value": 225.8,
+         "unit": "ipm"
+        }
+       },
+       "1.0000": {
+        "rpm": 3763,
         "tableFeed": {
          "value": 225.8,
          "unit": "ipm"
@@ -21453,13 +21453,6 @@
      "printed": {
       "unit": "in",
       "byDiameter": {
-       "0.0394": {
-        "rpm": 3763,
-        "tableFeed": {
-         "value": 225.8,
-         "unit": "ipm"
-        }
-       },
        "0.0625": {
         "rpm": 50000,
         "tableFeed": {
@@ -21651,6 +21644,13 @@
        },
        "0.7874": {
         "rpm": 4780,
+        "tableFeed": {
+         "value": 225.8,
+         "unit": "ipm"
+        }
+       },
+       "1.0000": {
+        "rpm": 3763,
         "tableFeed": {
          "value": 225.8,
          "unit": "ipm"
@@ -21684,13 +21684,6 @@
      "printed": {
       "unit": "in",
       "byDiameter": {
-       "0.0394": {
-        "rpm": 3763,
-        "tableFeed": {
-         "value": 225.8,
-         "unit": "ipm"
-        }
-       },
        "0.0625": {
         "rpm": 50000,
         "tableFeed": {
@@ -21882,6 +21875,13 @@
        },
        "0.7874": {
         "rpm": 4780,
+        "tableFeed": {
+         "value": 225.8,
+         "unit": "ipm"
+        }
+       },
+       "1.0000": {
+        "rpm": 3763,
         "tableFeed": {
          "value": 225.8,
          "unit": "ipm"
@@ -21915,13 +21915,6 @@
      "printed": {
       "unit": "in",
       "byDiameter": {
-       "0.0394": {
-        "rpm": 3763,
-        "tableFeed": {
-         "value": 225.8,
-         "unit": "ipm"
-        }
-       },
        "0.0625": {
         "rpm": 50000,
         "tableFeed": {
@@ -22117,6 +22110,13 @@
          "value": 225.8,
          "unit": "ipm"
         }
+       },
+       "1.0000": {
+        "rpm": 3763,
+        "tableFeed": {
+         "value": 225.8,
+         "unit": "ipm"
+        }
        }
       }
      }
@@ -22146,13 +22146,6 @@
      "printed": {
       "unit": "in",
       "byDiameter": {
-       "0.0394": {
-        "rpm": 1756,
-        "tableFeed": {
-         "value": 73.7,
-         "unit": "ipm"
-        }
-       },
        "0.0625": {
         "rpm": 28092,
         "tableFeed": {
@@ -22344,6 +22337,13 @@
        },
        "0.7874": {
         "rpm": 2230,
+        "tableFeed": {
+         "value": 73.7,
+         "unit": "ipm"
+        }
+       },
+       "1.0000": {
+        "rpm": 1756,
         "tableFeed": {
          "value": 73.7,
          "unit": "ipm"
@@ -22377,13 +22377,6 @@
      "printed": {
       "unit": "in",
       "byDiameter": {
-       "0.0394": {
-        "rpm": 1756,
-        "tableFeed": {
-         "value": 73.7,
-         "unit": "ipm"
-        }
-       },
        "0.0625": {
         "rpm": 28092,
         "tableFeed": {
@@ -22575,6 +22568,13 @@
        },
        "0.7874": {
         "rpm": 2230,
+        "tableFeed": {
+         "value": 73.7,
+         "unit": "ipm"
+        }
+       },
+       "1.0000": {
+        "rpm": 1756,
         "tableFeed": {
          "value": 73.7,
          "unit": "ipm"
@@ -22608,13 +22608,6 @@
      "printed": {
       "unit": "in",
       "byDiameter": {
-       "0.0394": {
-        "rpm": 1756,
-        "tableFeed": {
-         "value": 73.7,
-         "unit": "ipm"
-        }
-       },
        "0.0625": {
         "rpm": 28092,
         "tableFeed": {
@@ -22806,6 +22799,13 @@
        },
        "0.7874": {
         "rpm": 2230,
+        "tableFeed": {
+         "value": 73.7,
+         "unit": "ipm"
+        }
+       },
+       "1.0000": {
+        "rpm": 1756,
         "tableFeed": {
          "value": 73.7,
          "unit": "ipm"
@@ -22839,13 +22839,6 @@
      "printed": {
       "unit": "in",
       "byDiameter": {
-       "0.0394": {
-        "rpm": 1756,
-        "tableFeed": {
-         "value": 73.7,
-         "unit": "ipm"
-        }
-       },
        "0.0625": {
         "rpm": 28092,
         "tableFeed": {
@@ -23037,6 +23030,13 @@
        },
        "0.7874": {
         "rpm": 2230,
+        "tableFeed": {
+         "value": 73.7,
+         "unit": "ipm"
+        }
+       },
+       "1.0000": {
+        "rpm": 1756,
         "tableFeed": {
          "value": 73.7,
          "unit": "ipm"
