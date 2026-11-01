@@ -3498,7 +3498,15 @@
      "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
     }
    ],
-   "notes": "Allied tables say to refer to the coolant charts (catalog pp.126-127) to run at these values; coolant condition not transcribed, so coolant = not stated. 303 is not listed by Allied; it is not mapped. GEN2 coolant charts not transcribed."
+   "notes": "Allied tables say to refer to the coolant charts (catalog pp.126-127) to run at these values; coolant condition not transcribed, so coolant = not stated. 303 is not listed by Allied; it is not mapped. GEN2 coolant charts not transcribed.",
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://alliedmachine.com/AlliedMachine/media/AlliedLiterature/Catalogs/AMPC/A30-TAS/A30-TAS_US-EN.pdf?ext=.pdf#page=118",
+     "retrieved": "2026-11-01",
+     "notes": "printed tool title \"GEN2 T-A carbide AM300 (4C21P / 4C11P)\" in T-A Drilling Systems catalog A30-TAS (Imperial) p.GEN2 T-A Recommended Drilling Data, Carbide Inserts (Imperial), A30:114 (PDF p.118)"
+    }
+   }
   },
   {
    "mode": "drill",
@@ -4754,7 +4762,15 @@
      "sourceGroup": "Stainless Steel 300 Series (304, 316, 17-4PH, etc.)"
     }
    ],
-   "notes": "Allied tables say to refer to the coolant charts (catalog pp.126-127) to run at these values; coolant condition not transcribed, so coolant = not stated. 303 is not listed by Allied; it is not mapped. Only 3/8\"-11/16\" feed columns transcribed."
+   "notes": "Allied tables say to refer to the coolant charts (catalog pp.126-127) to run at these values; coolant condition not transcribed, so coolant = not stated. 303 is not listed by Allied; it is not mapped. Only 3/8\"-11/16\" feed columns transcribed.",
+   "specs": {
+    "substrate": "hss",
+    "source": {
+     "url": "https://alliedmachine.com/AlliedMachine/media/AlliedLiterature/Catalogs/AMPC/A30-TAS/A30-TAS_US-EN.pdf?ext=.pdf#page=116",
+     "retrieved": "2026-11-01",
+     "notes": "printed tool title \"GEN2 T-A HSS / super cobalt (TiN or AM200)\" in T-A Drilling Systems catalog A30-TAS (Imperial) p.GEN2 T-A Recommended Drilling Data, HSS Inserts (Imperial), A30:112 (PDF p.116)"
+    }
+   }
   },
   {
    "mode": "drill",
