@@ -493,3 +493,12 @@ console.log('estimate tests ok');
   assert.deepEqual(usedFzParts(0.5, 0.5, 1.5), []);
   assert.deepEqual(usedFzParts(0.125, 0.5, 1.5), ['thinning +15%']);
   assert.deepEqual(usedFzParts(0.125, 0.5, 2.5), ['thinning +15%', 'stickout -20%']); }
+// Live tooling profile (LIVE-TOOL-PLAN.md): user-entered only, lathe types only, old profiles unchanged
+{ const { liveFrom, upsertMachine: up, dedupeMachines: dd } = await import('./recall.js');
+  assert.equal(liveFrom({ type: 'mill', on: true, rpm: 6000 }), null); assert.equal(liveFrom({ type: 'lathe', on: false, rpm: 6000 }), null);
+  assert.deepEqual(liveFrom({ type: 'lathe', on: true, rpm: '', hp: '', torque: '', holder: '' }), { rpm: null, hp: null, torqueNm: null, torqueU: 'nm', holder: null });
+  assert.deepEqual(liveFrom({ type: 'swiss', on: true, rpm: '6000', hp: '5', torque: '20', torqueU: 'ftlb', holder: 'both' }), { rpm: 6000, hp: 5, torqueNm: 27.12, torqueU: 'ftlb', holder: 'both' });
+  const L = { name: 'Shop lathe', type: 'lathe', rpm: 4000, hp: 20, thrIpm: null }, LL = { ...L, live: { rpm: 6000, hp: 5, torqueNm: 30, torqueU: 'nm', holder: 'axial' } };
+  let a = up([L], LL); assert.equal(a.action, 'updated'); assert.equal(a.list.length, 1); assert.equal(a.list[0].live.rpm, 6000);
+  a = up(a.list, { ...LL, live: { ...LL.live } }); assert.equal(a.action, 'existing');
+  assert.equal(dd([L, { ...L }]).list.length, 1); assert.equal(dd([L, LL]).list.length, 2); console.log('live profile ok'); }

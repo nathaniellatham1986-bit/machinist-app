@@ -1,4 +1,4 @@
-import { MODES, migrate, forMode, upsertMachine, dedupeMachines, removeMachine } from './recall.js';
+import { MODES, migrate, forMode, upsertMachine, dedupeMachines, removeMachine, liveFrom, LATHE_TYPES } from './recall.js';
 import { enhance } from './combo.js';
 import { estimate, ESTIMATES_ON, EST_MODES, sizeTxt } from './estimate.js';
 import { matBad, brandUsable, commonDrillMm, nice, compute, sulph303, dataAt, dataRank, withPairs, noDataWhy, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf as kindOf0, INDEXABLE_ON, bodyAt, bodyDc, indexablePair, indexableWocs, millIndexable, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, usedFzParts, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, classifyOverride, classifyEng, engFrac, drillTier, rowDia, rowExcludes, toolLifeOf } from './calc.js';
@@ -22,7 +22,7 @@ const toolBy = key => { if (!key) return null; const [f, i] = key.split('#'); re
 const realKey = () => $('grade').value.split('|')[0] || $('tool').value, curTool = () => toolBy(realKey());
 const threads = await J('data/threads.json');
 threads.threads.forEach((t, i) => $('thr').add(new Option(t.name, i)));
-const q = new URLSearchParams(location.search);
+const q = new URLSearchParams(location.search), LIVE = q.get('live') !== '0'; // kill switch: ?live=0 hides and ignores live tooling
 // Units: values are kept in inches internally; metric only changes what is shown/typed.
 let metric = false; const LEN = ['d', 'fD', 'so', 'apT', 'hd', 'bd', 'len'];
 const UF = k => !metric ? 1 : LEN.includes(k) || k === 'fpt' ? 25.4 : k === 'sfm' ? 0.3048 : 1;
@@ -61,9 +61,12 @@ function applyMachine() { const m = LS.get('machines', [])[$('mach').value]; LS.
   $('maxRpm').value = m?.rpm || ''; $('maxHp').value = m?.hp || ''; run(); }
 $('mSave').onclick = () => { const n = $('mName').value.trim(); if (!n) return; const m = LS.get('machines', []);
   const r = { name: n, type: $('mType').value, rpm: +$('mRpm').value || null, hp: +$('mHp').value || null, thrIpm: +$('mThr').value || null };
+  const lv = LIVE ? liveFrom({ type: r.type, on: $('mLive').checked, rpm: $('mLRpm').value, hp: $('mLHp').value, torque: $('mLTq').value, torqueU: $('mLTqU').value, holder: $('mLHold').value }) : null; if (lv) r.live = lv;
   if (PRE) { r.preset = PRE.ref; r.source = PRE.url; r.user = ['type', 'rpm', 'hp', 'thrIpm'].filter(k => r[k] !== PRE[k]); if (!r.user.length) delete r.user; }
   const u = upsertMachine(m, r); LS.set('machines', u.list); machines(); $('mach').value = u.index; applyMachine(); $('mAdd').open = false; };
-$('mDel').onclick = () => { $('pB').value = ''; $('pB').onchange(); ['mName', 'mThr', 'mRpm', 'mHp'].forEach(k => $(k).value = ''); $('mType').value = 'mill'; };
+$('mDel').onclick = () => { $('pB').value = ''; $('pB').onchange(); ['mName', 'mThr', 'mRpm', 'mHp', 'mLRpm', 'mLHp', 'mLTq', 'mLHold'].forEach(k => $(k).value = ''); $('mLive').checked = false; $('mType').value = 'mill'; liveUI(); };
+function liveUI() { $('liveBox').hidden = !LIVE || !LATHE_TYPES.includes($('mType').value); $('liveF').hidden = $('liveBox').hidden || !$('mLive').checked; }
+$('mType').addEventListener('change', liveUI); $('mLive').addEventListener('change', liveUI);
 enhance($('mach'), { action: o => o.value === '' ? null : { label: '✕', title: 'Delete this saved machine', run: () => {
   const last = Object.fromEntries(MODES.map(md => [md, LS.get('lastMachine:' + md, '')])), r = removeMachine(LS.get('machines', []), +o.value, last);
   LS.set('machines', r.list); MODES.forEach(md => LS.set('lastMachine:' + md, r.last[md])); machines(); $('mach').value = r.last[mode]; applyMachine(); } } });
@@ -78,7 +81,7 @@ $('pM').onchange = () => { const m = MDOC?.models[$('pM').value]; $('pS').length
 $('pS').onchange = () => { const m = MDOC.models[$('pM').value], s = m.spindles[$('pS').value || 0], hp = preHp(s);
   const der = s.hp_cont == null && s.hp_peak == null && hp != null; const which = s.hp_cont != null || (s.hp_peak == null && s.kw_cont != null) ? 'continuous' : 'peak';
   PRE = { ref: `${MDOC.builder} ${m.model} · ${s.option}`, url: m.source.url, type: mTypeOf(m.type), rpm: s.rpm, hp, thrIpm: m.max_thread_ipm ?? null };
-  $('mName').value = `${MDOC.builder} ${m.model}` + (m.spindles.length > 1 ? ` (${s.option})` : ''); $('mType').value = PRE.type; $('mRpm').value = s.rpm ?? ''; $('mHp').value = hp ?? ''; $('mThr').value = PRE.thrIpm ?? '';
+  $('mName').value = `${MDOC.builder} ${m.model}` + (m.spindles.length > 1 ? ` (${s.option})` : ''); $('mType').value = PRE.type; liveUI(); $('mRpm').value = s.rpm ?? ''; $('mHp').value = hp ?? ''; $('mThr').value = PRE.thrIpm ?? '';
   $('pNote').innerHTML = `BUILDER SPEC · ${s.rpm ?? '?'} rpm · ${hp ?? '?'} HP ${which}${der ? ' (DERIVED from kW × 1.341)' : ''}${s.taper ? ' · ' + s.taper : ''}${s.torque_nm ? ' · ' + s.torque_nm + ' Nm' : ''}${s.rating_note ? ' · ' + s.rating_note : ''}${m.type === 'grinder' ? ' · grinder: not used for feeds/speeds limits' : ''} · <a href="${m.source.url}" target="_blank" rel="noopener">source</a> (accessed ${m.source.accessed}). Fields stay editable; changed fields save as YOUR VALUE.`; };
 // Selection chain: material -> brand -> tool -> condition
 function setMode(m) {

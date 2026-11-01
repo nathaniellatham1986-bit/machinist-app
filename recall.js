@@ -12,7 +12,14 @@ export const forMode = (list, mode) => list.map((s, i) => [s, i]).filter(([s]) =
 // Machine profiles: no duplicates. Key = builder preset ref (builder+model+spindle option) or custom name.
 const MVALS = ['type', 'rpm', 'hp', 'thrIpm'];
 export const machKey = x => x.preset ? 'p:' + x.preset : 'c:' + String(x.name || '').trim().toLowerCase();
-export const sameMach = (a, b) => machKey(a) === machKey(b) && MVALS.every(k => (a[k] ?? null) === (b[k] ?? null));
+export const sameMach = (a, b) => machKey(a) === machKey(b) && MVALS.every(k => (a[k] ?? null) === (b[k] ?? null)) && JSON.stringify(a.live ?? null) === JSON.stringify(b.live ?? null);
+// Live tooling (lathe turrets): only lathe-type profiles; every limit is the user's own number from the manual (null = not entered).
+export const LATHE_TYPES = ['lathe', 'swiss', 'mill-turn'];
+export const FTLB_NM = 1.35582;
+export function liveFrom({ type, on, rpm, hp, torque, torqueU, holder }) {
+  if (!on || !LATHE_TYPES.includes(type)) return null; const n = x => (+x > 0 ? +x : null), t = n(torque);
+  return { rpm: n(rpm), hp: n(hp), torqueNm: t == null ? null : torqueU === 'ftlb' ? +(t * FTLB_NM).toFixed(2) : t, torqueU: torqueU === 'ftlb' ? 'ftlb' : 'nm', holder: ['axial', 'radial', 'both'].includes(holder) ? holder : null };
+}
 // Returns { list, index, action }: 'existing' (identical, just select), 'updated' (same key, edited values, in place), 'added'.
 export function upsertMachine(list, r) {
   const out = list.slice(), same = out.findIndex(x => sameMach(x, r));
