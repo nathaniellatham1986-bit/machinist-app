@@ -488,3 +488,8 @@ console.log('estimate tests ok');
   fs.writeFileSync('/tmp/bad-bodies.json', JSON.stringify(bad)); const v = spawnSync('node', ['scripts/validate.mjs', '/tmp/bad-bodies.json'], { encoding: 'utf8' });
   assert.notEqual(v.status, 0); assert.match(v.stdout + v.stderr, /\bz\b/); assert.match(v.stdout + v.stderr, /insert/); assert.match(v.stdout + v.stderr, /kapr/);
   console.log('indexable ok'); }
+
+{ const { usedFzParts } = await import('./calc.js'); // Item 19: Feed IPM card lists only factors that are not 1
+  assert.deepEqual(usedFzParts(0.5, 0.5, 1.5), []);
+  assert.deepEqual(usedFzParts(0.125, 0.5, 1.5), ['thinning +15%']);
+  assert.deepEqual(usedFzParts(0.125, 0.5, 2.5), ['thinning +15%', 'stickout -20%']); }
