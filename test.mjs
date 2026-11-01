@@ -502,3 +502,10 @@ console.log('estimate tests ok');
   let a = up([L], LL); assert.equal(a.action, 'updated'); assert.equal(a.list.length, 1); assert.equal(a.list[0].live.rpm, 6000);
   a = up(a.list, { ...LL, live: { ...LL.live } }); assert.equal(a.action, 'existing');
   assert.equal(dd([L, { ...L }]).list.length, 1); assert.equal(dd([L, LL]).list.length, 2); console.log('live profile ok'); }
+{ const { showMach, machLimits } = await import('./recall.js'); // live tooling: pickers + limits
+  const L = { name: 'L', type: 'lathe', rpm: 4000, hp: 20 }, LL = { ...L, live: { rpm: 6000, hp: 5, torqueNm: null, holder: null } }, M = { name: 'M', type: 'mill', rpm: 8100, hp: 30 };
+  assert.equal(showMach(L, 'mill', true), false); assert.equal(showMach(LL, 'mill', true), true); assert.equal(showMach(LL, 'drill', true), true); assert.equal(showMach(LL, 'mill', false), false);
+  assert.equal(showMach(LL, 'turn', true), true); assert.equal(showMach(M, 'mill', true), true); assert.equal(showMach(M, 'turn', true), false);
+  assert.deepEqual(machLimits(LL, 'mill', true), { rpm: 6000, hp: 5, live: LL.live }); assert.deepEqual(machLimits(LL, 'turn', true), { rpm: 4000, hp: 20, live: null });
+  assert.deepEqual(machLimits(LL, 'mill', false), { rpm: 4000, hp: 20, live: null }); assert.deepEqual(machLimits(M, 'mill', true), { rpm: 8100, hp: 30, live: null });
+  assert.equal(machLimits({ ...L, live: { rpm: null, hp: null } }, 'mill', true).rpm, null); console.log('live limits ok'); }

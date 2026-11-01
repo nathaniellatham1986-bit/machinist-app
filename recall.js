@@ -39,3 +39,12 @@ export function removeMachine(list, i, last) {
   const out = {}; for (const [k, v] of Object.entries(last)) out[k] = v === '' || v == null ? '' : +v === i ? '' : +v > i ? String(+v - 1) : String(v);
   return { list: list.filter((_, j) => j !== i), last: out };
 }
+
+// Which saved machines show in a mode, and which limits apply. Lathe/swiss show on Mill/Drill only with live tooling; then the live-tool numbers are the limits.
+export const showMach = (x, mode, liveOn) => x.type !== 'grinder' && (mode === 'bore' || x.type === 'mill-turn' || (['lathe', 'swiss'].includes(x.type)) === (mode === 'turn')
+  || (!!liveOn && !!x.live && ['mill', 'drill'].includes(mode) && ['lathe', 'swiss'].includes(x.type)));
+export function machLimits(m, mode, liveOn) {
+  if (!m) return { rpm: null, hp: null, live: null };
+  const lv = liveOn && m.live && LATHE_TYPES.includes(m.type) && ['mill', 'drill'].includes(mode) ? m.live : null;
+  return lv ? { rpm: lv.rpm, hp: lv.hp, live: lv } : { rpm: m.rpm || null, hp: m.hp || null, live: null };
+}
