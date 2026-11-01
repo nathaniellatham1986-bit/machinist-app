@@ -324,7 +324,15 @@
       "notes": "Slotting: reduce fz 20%."
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://www.sumecsl.com/docs/Kennametal/Kennametal-Innovations-2020%5F2.pdf",
+     "retrieved": "2026-11-01",
+     "notes": "printed tool title \"HARVI I TE solid carbide end mill\" in Kennametal Innovations 2020 — HARVI I TE 4 Flutes Application Data (side milling A)"
+    }
+   }
   },
   {
    "mode": "mill",
@@ -546,7 +554,15 @@
       "notes": "Slotting: reduce fz 10%."
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://content.syndigo.com/asset/d902ad4e-2fb6-4c92-87fd-d066ce458fca/original.pdf",
+     "retrieved": "2026-11-01",
+     "notes": "printed tool title \"HARVI I UADE (extended reach) solid carbide end mill\" in High-Performance Solid Carbide End Mills • HARVI I — UADE Application Data (KCPM15)"
+    }
+   }
   }
  ]
 }
