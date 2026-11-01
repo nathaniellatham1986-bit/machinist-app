@@ -281,7 +281,15 @@
       "edition": "edition not stated (distributor-hosted)"
      }
     }
-   ]
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "source": {
+     "url": "https://www.directools.com/documents/all/Sandvik_5739942_Catalog.pdf",
+     "retrieved": "2026-11-01",
+     "notes": "printed tool title \"CoroMill Plura (general, inch tools) solid carbide end mill\" in Sandvik Coromant catalog — CoroMill Plura cutting data, starting values (Roughing, ap x ae > Dc)"
+    }
+   }
   }
  ]
 }
