@@ -739,7 +739,6 @@
    ],
    "specs": {
     "flutes": 4,
-    "endShape": "square",
     "source": {
      "url": "https://ipaper.ipapercms.dk/secotools/us-catalogs/navigator-niagara-cutter-solid-milling-catalog-2023/?Page=46",
      "retrieved": "2026-11-01",
@@ -1484,7 +1483,6 @@
    ],
    "specs": {
     "flutes": 4,
-    "endShape": "bull",
     "source": {
      "url": "https://ipaper.ipapercms.dk/secotools/us-catalogs/navigator-niagara-cutter-solid-milling-catalog-2023/?Page=46",
      "retrieved": "2026-11-01",
@@ -2229,7 +2227,6 @@
    ],
    "specs": {
     "flutes": 4,
-    "endShape": "ball",
     "source": {
      "url": "https://ipaper.ipapercms.dk/secotools/us-catalogs/navigator-niagara-cutter-solid-milling-catalog-2023/?Page=46",
      "retrieved": "2026-11-01",
@@ -2788,7 +2785,6 @@
    ],
    "specs": {
     "flutes": 4,
-    "endShape": "bull",
     "source": {
      "url": "https://ipaper.ipapercms.dk/secotools/us-catalogs/navigator-niagara-cutter-solid-milling-catalog-2023/?Page=48",
      "retrieved": "2026-11-01",
@@ -3347,7 +3343,6 @@
    ],
    "specs": {
     "flutes": 4,
-    "endShape": "ball",
     "source": {
      "url": "https://ipaper.ipapercms.dk/secotools/us-catalogs/navigator-niagara-cutter-solid-milling-catalog-2023/?Page=48",
      "retrieved": "2026-11-01",
@@ -4265,7 +4260,6 @@
    ],
    "specs": {
     "flutes": 4,
-    "endShape": "bull",
     "source": {
      "url": "https://ipaper.ipapercms.dk/secotools/us-catalogs/navigator-niagara-cutter-solid-milling-catalog-2023/?Page=49",
      "retrieved": "2026-11-01",
@@ -5183,7 +5177,6 @@
    ],
    "specs": {
     "flutes": 4,
-    "endShape": "ball",
     "source": {
      "url": "https://ipaper.ipapercms.dk/secotools/us-catalogs/navigator-niagara-cutter-solid-milling-catalog-2023/?Page=49",
      "retrieved": "2026-11-01",
@@ -5901,7 +5894,6 @@
    ],
    "specs": {
     "flutes": 4,
-    "endShape": "bull",
     "source": {
      "url": "https://ipaper.ipapercms.dk/secotools/us-catalogs/navigator-niagara-cutter-solid-milling-catalog-2023/?Page=51",
      "retrieved": "2026-11-01",
@@ -6619,7 +6611,6 @@
    ],
    "specs": {
     "flutes": 4,
-    "endShape": "ball",
     "source": {
      "url": "https://ipaper.ipapercms.dk/secotools/us-catalogs/navigator-niagara-cutter-solid-milling-catalog-2023/?Page=51",
      "retrieved": "2026-11-01",
@@ -7210,7 +7201,6 @@
    ],
    "specs": {
     "flutes": 5,
-    "endShape": "bull",
     "source": {
      "url": "https://ipaper.ipapercms.dk/secotools/us-catalogs/navigator-niagara-cutter-solid-milling-catalog-2023/?Page=62",
      "retrieved": "2026-11-01",
@@ -9469,7 +9459,6 @@
    ],
    "specs": {
     "flutes": 6,
-    "endShape": "bull",
     "source": {
      "url": "https://ipaper.ipapercms.dk/secotools/us-catalogs/navigator-niagara-cutter-solid-milling-catalog-2023/?Page=75",
      "retrieved": "2026-11-01",
@@ -10115,7 +10104,6 @@
    ],
    "specs": {
     "flutes": 6,
-    "endShape": "square",
     "source": {
      "url": "https://ipaper.ipapercms.dk/secotools/us-catalogs/navigator-niagara-cutter-solid-milling-catalog-2023/?Page=76",
      "retrieved": "2026-11-01",
@@ -10761,7 +10749,6 @@
    ],
    "specs": {
     "flutes": 6,
-    "endShape": "bull",
     "source": {
      "url": "https://ipaper.ipapercms.dk/secotools/us-catalogs/navigator-niagara-cutter-solid-milling-catalog-2023/?Page=76",
      "retrieved": "2026-11-01",
@@ -11957,7 +11944,6 @@
    ],
    "specs": {
     "flutes": 6,
-    "endShape": "ball",
     "source": {
      "url": "https://ipaper.ipapercms.dk/secotools/us-catalogs/navigator-niagara-cutter-solid-milling-catalog-2023/?Page=76",
      "retrieved": "2026-11-01",
@@ -13153,7 +13139,6 @@
    ],
    "specs": {
     "flutes": 6,
-    "endShape": "ball",
     "source": {
      "url": "https://ipaper.ipapercms.dk/secotools/us-catalogs/navigator-niagara-cutter-solid-milling-catalog-2023/?Page=76",
      "retrieved": "2026-11-01",
@@ -13663,7 +13648,6 @@
    ],
    "specs": {
     "flutes": 6,
-    "endShape": "square",
     "source": {
      "url": "https://ipaper.ipapercms.dk/secotools/us-catalogs/navigator-niagara-cutter-solid-milling-catalog-2023/?Page=79",
      "retrieved": "2026-11-01",
@@ -14173,7 +14157,6 @@
    ],
    "specs": {
     "flutes": 6,
-    "endShape": "bull",
     "source": {
      "url": "https://ipaper.ipapercms.dk/secotools/us-catalogs/navigator-niagara-cutter-solid-milling-catalog-2023/?Page=79",
      "retrieved": "2026-11-01",
@@ -16294,7 +16277,6 @@
    ],
    "specs": {
     "flutes": 7,
-    "endShape": "bull",
     "source": {
      "url": "https://ipaper.ipapercms.dk/secotools/us-catalogs/navigator-niagara-cutter-solid-milling-catalog-2023/?Page=80",
      "retrieved": "2026-11-01",
@@ -16804,7 +16786,6 @@
    ],
    "specs": {
     "flutes": 7,
-    "endShape": "bull",
     "source": {
      "url": "https://ipaper.ipapercms.dk/secotools/us-catalogs/navigator-niagara-cutter-solid-milling-catalog-2023/?Page=82",
      "retrieved": "2026-11-01",
@@ -17831,7 +17812,6 @@
    ],
    "specs": {
     "flutes": 6,
-    "endShape": "bull",
     "source": {
      "url": "https://ipaper.ipapercms.dk/secotools/us-catalogs/navigator-niagara-cutter-solid-milling-catalog-2023/?Page=166",
      "retrieved": "2026-11-01",
