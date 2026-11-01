@@ -189,10 +189,11 @@
     "substrate": "hss",
     "coating": "TiN",
     "coatingClass": "tin",
+    "cutOrForm": "cut",
     "source": {
-     "url": "https://www.guhring.com/ProductsServices/SeriesDetails?Series=3909",
-     "retrieved": "2026-10-28",
-     "notes": "maker product page(s): https://www.guhring.com/ProductsServices/SeriesDetails?Series=3909"
+     "url": "https://guhring.com/media/speedfeed/3909.pdf#page=1",
+     "retrieved": "2026-11-01",
+     "notes": "maker page(s): https://guhring.com/media/speedfeed/3909.pdf#page=1 (printed: p.1 \"BLUE ring cut taps\")"
     }
    }
   }
