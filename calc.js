@@ -8,6 +8,8 @@ export const stickoutFactor = (so, d) => Math.max(0.5, 1 - Math.max(0, so / d - 
 // Display helper: which DERIVED factors (not 1) turn the catalog fpt into the fpt used for IPM. Same factors as compute().
 export const usedFzParts = (ae, d, so) => [['thinning', thinFactor(ae, d)], ['stickout', stickoutFactor(so, d)]]
   .filter(([, f]) => Math.abs(f - 1) > 1e-9).map(([n, f]) => `${n} ${f > 1 ? '+' : '-'}${Math.round(Math.abs(f - 1) * 100)}%`);
+// DERIVED: feed per spindle rev for a milling tool = chip load × flutes.
+export const iprFromFz = (fz, z) => (fz > 0 && z > 0 ? fz * z : 0);
 // DERIVED: spindle torque needed for a power at an RPM. N·m = 9549 × kW / RPM (kW = HP × 0.7457).
 export const torqueNeedNm = (hp, rpm) => (hp > 0 && rpm > 0 ? 9549 * hp * 0.7457 / rpm : 0);
 // DERIVED power estimate: MRR x handbook-style unit power per ISO group (not manufacturer data).
