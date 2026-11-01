@@ -2,6 +2,7 @@
 // Sources: (1) --ext <json>: maker product pages already fetched {seriesNo: {url, retrieved, material, coating, flutes}}; with "_key":"sf" keyed by the record's SF_<id>.pdf source instead;
 // (2) the tool record's own printed series/type title (copied from the maker's catalog), cited to that record's source.
 // Never guesses: a field is set only when printed, and for multi-series records only when every series agrees. Never overwrites.
+// Flute ranges ("4-5 flutes", "2 to 4 FL") are not a count: flutes stays blank (schema has no range field).
 // (3) --znotes: flute count from the printed z column recorded in each row's source notes ("z=N"), only when every row agrees.
 // "_key":"series" keys the ext file by the record's exact series string; ext entries may carry endShape (ball|bull|square) read from the printed product title.
 // Usage: node scripts/tag-specs.mjs "<Brand>" [--ext file.json] [--znotes] [--dry]
@@ -19,7 +20,7 @@ export const coatClass = s => { s = String(s ?? ''); if (!s.trim()) return null;
   if (/uncoated|\bbright\b|steam oxide|\boxide\b|Perrox|Ferrox|bronze oxide/i.test(s)) return 'uncoated'; return null; };
 const COAT_RX = /\b(AlTiN|TiAlN|AlCrN|AlTiCrN|TiSiN|AlTiSiN|TiCN|TiN|ZrN|TiB2|DLC|diamond|CVD diamond|nACo|nano-?FIREX|FIREX|uncoated|bright|steam oxide)\b/ig;
 const sub = s => { const c = /carbide|\bVHM\b/i.test(s), h = /\bHSS|HSCO|HSS-?E|\bcobalt\b|\bM42\b|powder.?metal|\bPM\b/i.test(s); return c && !h ? 'carbide' : h && !c ? 'hss' : null; };
-const fluteOf = s => { const v = [...new Set([...s.matchAll(/\b(\d{1,2})\s*[- ]?\s*(?:flutes?|FL)\b/ig)].map(m => +m[1]))]; const multi = /\d\s*(?:\/|&|,|\band\b|\bor\b)\s*\d\s*(?:(?:\/|&|,|\band\b|\bor\b)\s*\d\s*)?[- ]?(?:flutes?|FL)\b/i.test(s); return v.length === 1 && !multi ? v[0] : null; };
+const fluteOf = s => { const v = [...new Set([...s.matchAll(/\b(\d{1,2})\s*[- ]?\s*(?:flutes?|FL)\b/ig)].map(m => +m[1]))]; const multi = /\d\s*(?:\/|&|,|-|–|\bto\b|\band\b|\bor\b)\s*\d\s*(?:(?:\/|&|,|\band\b|\bor\b)\s*\d\s*)?[- ]?(?:flutes?|FL)\b/i.test(s); return v.length === 1 && !multi ? v[0] : null; };
 const agree = a => { const v = [...new Set(a)]; return v.length === 1 && v[0] != null ? v[0] : null; };
 const feeds = t => { for (const c of t.conditions || []) { if (!c.sfm || c.status === 'shop-proven' || !c.source || !['catalog', 'label'].includes(c.source.kind)) continue; for (const m of M) if (matchMat(m, c) && !matBad(m, c)) return true; } return false; };
 const esc = (raw, s) => /\\u00[8-9a-f]|\\u[1-9a-f]/i.test(raw) ? s.replace(/[\u007f-\uffff]/g, c => '\\u' + c.charCodeAt(0).toString(16).padStart(4, '0')) : s;
