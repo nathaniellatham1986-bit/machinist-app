@@ -509,3 +509,4 @@ console.log('estimate tests ok');
   assert.deepEqual(machLimits(LL, 'mill', true), { rpm: 6000, hp: 5, live: LL.live }); assert.deepEqual(machLimits(LL, 'turn', true), { rpm: 4000, hp: 20, live: null });
   assert.deepEqual(machLimits(LL, 'mill', false), { rpm: 4000, hp: 20, live: null }); assert.deepEqual(machLimits(M, 'mill', true), { rpm: 8100, hp: 30, live: null });
   assert.equal(machLimits({ ...L, live: { rpm: null, hp: null } }, 'mill', true).rpm, null); console.log('live limits ok'); }
+{ const { torqueNeedNm } = await import('./calc.js'); assert.ok(Math.abs(torqueNeedNm(1, 1000) - 7.12) < 0.01); assert.equal(torqueNeedNm(0, 1000), 0); assert.equal(torqueNeedNm(2, 0), 0); console.log('torque ok'); }
