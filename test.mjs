@@ -511,3 +511,38 @@ console.log('estimate tests ok');
   assert.equal(machLimits({ ...L, live: { rpm: null, hp: null } }, 'mill', true).rpm, null); console.log('live limits ok'); }
 { const { torqueNeedNm } = await import('./calc.js'); assert.ok(Math.abs(torqueNeedNm(1, 1000) - 7.12) < 0.01); assert.equal(torqueNeedNm(0, 1000), 0); assert.equal(torqueNeedNm(2, 0), 0); console.log('torque ok'); }
 { const { iprFromFz } = await import('./calc.js'); assert.ok(Math.abs(iprFromFz(0.0038, 4) - 0.0152) < 1e-9); assert.equal(iprFromFz(0, 4), 0); assert.equal(iprFromFz(0.002, 0), 0); console.log('ipr ok'); }
+// Rung 3: another maker's row, only for a true no-data tool. Guards are each asserted below.
+{ const { borrowOther } = await import('./estimate.js'); const M = id => IDX.materials.find(m => m.id === id);
+  const src = (brand, page) => ({ kind: 'catalog', manufacturer: brand, catalog: 'Cat', edition: '2024', url: 'https://example.com/' + brand, page });
+  const spec = (o = {}) => ({ substrate: 'carbide', flutes: 4, coatingClass: 'al-based', endShape: 'square', ...o });
+  const row = (iso, sfm, feed, page, matId) => ({ label: matId, iso, materials: [matId], status: 'verified', coolant: 'flood', sfm: { min: sfm, max: sfm + 40, unit: 'ft/min' }, feed: { kind: 'fz', unit: 'in', byDiameter: { '0.5': { min: feed, max: feed + 0.001 } } }, source: src('D', page) });
+  const tool = (brand, series, rows, sp = spec(), o = {}) => ({ mode: 'mill', brand, series, type: 'square end mill', specs: sp, diameters_in: [.25, .75], conditions: rows, ...o });
+  const mat = M('4140-ann'), go = (target, donors, extra = {}) => borrowOther({ target, targetTool: target, targetKey: 'T', cands: donors.map((t, i) => ({ key: 'd' + i, tool: t })), mat, d: .5, ...extra });
+  const donor = (series, sfm, feed, page = '10') => tool('Other', series, [row('P', sfm, feed, page, '4140-ann')]);
+  const bare = (o = {}, sp) => tool('Mine', 'Mine series', [], sp, o);
+  const hit = go(bare(), [donor('High', 200, 0.001, '1'), donor('Low', 80, 0.004, '2')]); // low speed row has the higher feed — must not mix
+  assert.equal(hit.sfm.def, 80); assert.equal(hit.fpt.def, 0.004); assert.equal(hit.sfm.series, 'Low'); assert.equal(hit.fpt.series, hit.sfm.series); assert.equal(hit.sfm.page, hit.fpt.page); assert.equal(hit.sfm.page, 'p.2');
+  assert.ok(hit.sfm.derived && hit.sfm.est && hit.sfm.rung === 3 && hit.sfm.url === hit.fpt.url);
+  assert.equal(go(bare(), [tool('Other', 'Cross', [row('M', 50, 0.001, '3', '4140-ann')])]).sfm, null); // named 4140 on an M row is still a cross-ISO borrow
+  assert.equal(go(bare(), [tool('Other', 'Star', [row('*', 50, 0.001, '4', '4140-ann')])]).sfm, null); // '*' is not an ISO group
+  assert.equal(go(bare({ mode: 'turn', series: 'CNMG', type: 'turning insert' }), [donor('Low', 80, 0.004)]).sfm, null);
+  assert.equal(go(bare({ mode: 'bore', series: 'Bar', type: 'boring bar' }), [donor('Low', 80, 0.004)]).sfm, null);
+  assert.equal(go(bare({ series: 'Part-off blade', type: 'part-off' }), [donor('Low', 80, 0.004)]).sfm, null);
+  assert.equal(go(bare({ mode: 'tap', series: 'Spiral', type: 'tap' }), [tool('Other', 'Tap donor', [row('P', 80, 0.004, '5', '4140-ann')], spec(), { mode: 'tap', type: 'tap', series: 'Tap donor' })]).sfm, null);
+  assert.equal(go(bare(), [tool('Other', 'Cut-off', [row('P', 40, 0.0005, '6', '4140-ann')], spec(), { type: 'part-off' })]).sfm, null); // part-off donor never used
+  const real = tool('Mine', 'Mine series', [row('P', 300, 0.002, '9', '4140-ann')]);
+  assert.equal(go(real, [donor('Low', 80, 0.004)]).sfm, null); assert.equal(go(real, [donor('Low', 80, 0.004)]).fpt, null); // never overrides real data
+  const speedOnly = tool('Mine', 'Mine series', [{ label: '4140-ann', iso: 'P', materials: ['4140-ann'], status: 'verified', sfm: { value: 250, unit: 'ft/min' }, source: src('Mine', '1') }]);
+  assert.equal(go(speedOnly, [donor('Low', 80, 0.004)]).sfm, null);
+  assert.equal(go(bare(), [donor('Low', 80, 0.004)], { on: false }).sfm, null); // kill switch
+  assert.equal(go(bare(), [tool('Mine', 'Sibling', [row('P', 70, 0.003, '1', '4140-ann')])]).sfm, null); // same maker is not "other maker"
+  assert.equal(go(bare({}, { substrate: 'carbide' }), [donor('Low', 80, 0.004)]).sfm, null); // no flutes tag
+  assert.equal(go(bare(), [tool('Other', 'NoFl', [row('P', 80, 0.004, '7', '4140-ann')], { substrate: 'carbide', coatingClass: 'al-based', endShape: 'square' })]).sfm, null);
+  assert.equal(go(bare(), [tool('Other', '2fl', [row('P', 80, 0.004, '8', '4140-ann')], spec({ flutes: 2 }))]).sfm, null);
+  assert.equal(go(bare(), [tool('Other', 'Tin', [row('P', 80, 0.004, '8', '4140-ann')], spec({ coatingClass: 'tin' }))]).sfm, null);
+  assert.equal(go(bare({}, spec({ endShape: 'ball' })), [donor('Low', 80, 0.004)]).sfm, null);
+  const open = spec(); delete open.coatingClass; delete open.endShape;
+  assert.equal(go(bare({}, open), [tool('Other', 'Any', [row('P', 90, 0.002, '11', '4140-ann')], spec({ coatingClass: 'tin', endShape: 'ball' }))]).sfm.def, 90); // coating and end shape apply only where tagged
+  const app = fs.readFileSync('app.js', 'utf8'), html = fs.readFileSync('index.html', 'utf8');
+  assert.match(app, /Estimate from other maker:/); assert.match(app, /get\('r3'\) !== '0'/); assert.match(html, /\.card\.r3\{/);
+  console.log('rung 3 tests ok'); }

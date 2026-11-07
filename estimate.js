@@ -1,8 +1,37 @@
 // ESTIMATES (DERIVED, NOT MANUFACTURER DATA). Pure. Built at runtime from the SAME maker's other published records; never stored in data files.
 // Rules (agreed with Nathaniel, App Build chat 2026-10-25): same brand only; same tool kind and mode; same material (303/304 never mixed);
 // published size must cover the entered Ø or sit within 25% of it; stated coolant must match; >=2 distinct source tools; LOWEST low end used (no averaging).
-import { pick, matchMat, coolModes, shared303, kindOf, rowDia, sizeRange, gradesOf, brandName, endGeom, ownNames } from './calc.js';
+import { pick, matchMat, coolModes, shared303, kindOf, rowDia, sizeRange, gradesOf, brandName, endGeom, ownNames, matRowOk } from './calc.js';
 export const ESTIMATES_ON = true; // kill switch
+// Rung 3 (DERIVED): another maker's row, only when this tool has no speed or feed for the material. ?r3=0 disables it.
+export const RUNG3_ON = true;
+const R3_KINDS = new Set(['End mill', 'Drill', 'Thread mill']);
+const r3Cut = t => !t || (t.mode !== 'mill' && t.mode !== 'drill') || !R3_KINDS.has(kindOf(t)) || /\b(boring|part-?off|parting|cut-?off)\b/i.test(`${t.series ?? ''} ${t.type ?? ''}`);
+const pageTxt = p => p == null || p === '' ? '' : /^\d/.test(String(p)) ? 'p.' + p : String(p);
+// Cited tags only. Missing substrate or flutes never matches. Coating and end shape count only when this tool has them.
+const r3Spec = t => { const s = t?.specs; return s?.substrate && s.flutes != null ? s : null; };
+const hasReal = (t, mat) => (t?.conditions ?? []).some(c => (c.printed || c.sfm || c.feed) && matRowOk(mat, c));
+export function borrowOther({ target, targetTool, targetKey, cands, mat, d, on = RUNG3_ON }) {
+  const out = { sfm: null, fpt: null }; if (!on || !target || !mat || !(d > 0) || r3Cut(target)) return out;
+  const sp = r3Spec(target) || r3Spec(targetTool); if (!sp) return out;
+  const tool = targetTool ?? target; if (hasReal(tool, mat)) return out; // never override a real number for this tool
+  const fk = target.mode === 'mill' ? 'fz' : 'ipr'; let best = null;
+  for (const { key, tool: t } of cands ?? []) {
+    if (!t || key === targetKey || brandName(t.brand) === brandName(target.brand) || r3Cut(t)) continue;
+    const ds = r3Spec(t); if (!ds || kindOf(t) !== kindOf(target) || ds.substrate !== sp.substrate || ds.flutes !== sp.flutes) continue;
+    if (sp.coatingClass && ds.coatingClass !== sp.coatingClass) continue; // untagged donor does not qualify
+    if (sp.endShape && ds.endShape !== sp.endShape) continue;
+    for (const c of t.conditions ?? []) {
+      if (c.iso !== mat.iso || !'PMKNSH'.includes(c.iso)) continue; // never cross ISO groups; '*' is not a group
+      if (c.status === 'shop-proven' || !c.source || !['catalog', 'label'].includes(c.source.kind)) continue;
+      if (!matRowOk(mat, c) || !c.sfm || !c.feed || (c.feed.kind ?? fk) !== fk) continue;
+      const sv = lowOf(c.sfm, SPK(c.sfm.unit)), f = feedLow(c, t, d); if (!(sv > 0) || !(f?.v > 0)) continue;
+      const row = { sv, fv: f.v, brand: brandName(t.brand), series: t.series, page: pageTxt(c.source.page), url: c.source.url ?? null };
+      if (!best || row.sv < best.sv || row.sv === best.sv && row.fv < best.fv) best = row; // lowest speed low end; feed from that same row
+    } }
+  if (!best) return out;
+  const meta = { derived: true, est: true, rung: 3, brand: best.brand, series: best.series, page: best.page, url: best.url };
+  out.sfm = { def: best.sv, ...meta }; out.fpt = { def: best.fv, ...meta }; return out; }
 export const EST_MIN = 2, EST_BAND = 0.25, EST_MODES = ['mill', 'drill', 'tap'];
 const toIn = (v, u) => (u === 'mm' ? v / 25.4 : v), SPK = u => (u === 'm/min' ? 3.2808 : 1);
 const inR = (r, d) => !!r && d >= r[0] - 1e-6 && d <= r[1] + 1e-6;

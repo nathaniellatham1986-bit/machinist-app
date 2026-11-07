@@ -24,6 +24,7 @@ for (const f of files) {
     ...(t.type ? { type: t.type } : {}),
     ...(t.grade || t.coating || seriesGrade(t) ? { grade: String(t.grade ?? t.coating ?? seriesGrade(t)) } : {}),
     ...(t.coating ? { coating: true } : {}),
+    ...(t.specs?.substrate && Number.isInteger(t.specs.flutes) ? { sp: [t.specs.substrate, t.specs.flutes, t.specs.coatingClass || '', t.specs.endShape || ''] } : {}),
     isos: [...new Set(t.conditions.map(c => c.iso))].sort(),
     ...(() => { const so = t.conditions.filter(c => c.sfm && !c.feed && c.status !== 'shop-proven'), fo = t.conditions.filter(c => c.feed && !c.sfm && c.status !== 'shop-proven'), u = a => [...new Set(a.map(c => c.iso))].sort();
       return { ...(so.length ? { speedIsos: u(so) } : {}), ...(fo.length ? { feedIsos: u(fo) } : {}) }; })(),
