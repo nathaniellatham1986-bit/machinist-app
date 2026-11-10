@@ -8,7 +8,12 @@
    "series": "X-Power Pro GM639 / GM649 / GM212 (4-flute corner radius, side)",
    "type": "Y-coated solid carbide end mill, 4 flute, corner radius, side cutting",
    "flutes": 4,
-   "diameters_in": [0.25, 0.3125, 0.375, 0.5],
+   "diameters_in": [
+    0.25,
+    0.3125,
+    0.375,
+    0.5
+   ],
    "notes": "Left-hand table on the inch spread. The right-hand table on the same PDF page is GM103 and is not in this record.",
    "specs": {
     "substrate": "carbide",
@@ -24,7 +29,7 @@
    },
    "conditions": [
     {
-     "label": "Carbon steels, alloy steels, cast iron, ~ HRc30, ~ 1000 N/mm2 · side",
+     "label": "Carbon steels, alloy steels, cast iron, ~ HRc30, ~ 1000 N/mm2 \u00b7 side",
      "iso": "P",
      "status": "verified",
      "coolant": null,
@@ -32,15 +37,42 @@
      "operation": "side",
      "table": "GM639, GM649, GM212 4 flute corner radius side cutting",
      "strictMaterials": true,
-     "materials": ["p-mild", "p-alloy"],
+     "materials": [
+      "p-mild",
+      "p-alloy"
+     ],
      "sourceGroup": "Carbon steels, alloy steels, ~ HRc30, ~ 1000 N/mm2",
      "printed": {
       "unit": "in",
       "byDiameter": {
-       "0.25": {"rpm": 2890, "tableFeed": {"value": 9.4, "unit": "ipm"}},
-       "0.3125": {"rpm": 2200, "tableFeed": {"value": 9.9, "unit": "ipm"}},
-       "0.375": {"rpm": 1850, "tableFeed": {"value": 9.9, "unit": "ipm"}},
-       "0.5": {"rpm": 1510, "tableFeed": {"value": 7.8, "unit": "ipm"}}
+       "0.25": {
+        "rpm": 2890,
+        "tableFeed": {
+         "value": 9.4,
+         "unit": "ipm"
+        }
+       },
+       "0.3125": {
+        "rpm": 2200,
+        "tableFeed": {
+         "value": 9.9,
+         "unit": "ipm"
+        }
+       },
+       "0.375": {
+        "rpm": 1850,
+        "tableFeed": {
+         "value": 9.9,
+         "unit": "ipm"
+        }
+       },
+       "0.5": {
+        "rpm": 1510,
+        "tableFeed": {
+         "value": 7.8,
+         "unit": "ipm"
+        }
+       }
       }
      },
      "source": {
@@ -55,7 +87,7 @@
      }
     },
     {
-     "label": "Cast iron, ~ HRc30, ~ 1000 N/mm2 · side",
+     "label": "Cast iron, ~ HRc30, ~ 1000 N/mm2 \u00b7 side",
      "iso": "K",
      "status": "verified",
      "coolant": null,
@@ -66,10 +98,34 @@
      "printed": {
       "unit": "in",
       "byDiameter": {
-       "0.25": {"rpm": 2890, "tableFeed": {"value": 9.4, "unit": "ipm"}},
-       "0.3125": {"rpm": 2200, "tableFeed": {"value": 9.9, "unit": "ipm"}},
-       "0.375": {"rpm": 1850, "tableFeed": {"value": 9.9, "unit": "ipm"}},
-       "0.5": {"rpm": 1510, "tableFeed": {"value": 7.8, "unit": "ipm"}}
+       "0.25": {
+        "rpm": 2890,
+        "tableFeed": {
+         "value": 9.4,
+         "unit": "ipm"
+        }
+       },
+       "0.3125": {
+        "rpm": 2200,
+        "tableFeed": {
+         "value": 9.9,
+         "unit": "ipm"
+        }
+       },
+       "0.375": {
+        "rpm": 1850,
+        "tableFeed": {
+         "value": 9.9,
+         "unit": "ipm"
+        }
+       },
+       "0.5": {
+        "rpm": 1510,
+        "tableFeed": {
+         "value": 7.8,
+         "unit": "ipm"
+        }
+       }
       }
      },
      "source": {
@@ -84,7 +140,7 @@
      }
     },
     {
-     "label": "Alloy steels, tool steels, HRc30 ~ HRc50, 1000 ~ 1750 N/mm2 · side",
+     "label": "Alloy steels, tool steels, HRc30 ~ HRc50, 1000 ~ 1750 N/mm2 \u00b7 side",
      "iso": "P",
      "status": "verified",
      "coolant": null,
@@ -92,15 +148,41 @@
      "operation": "side",
      "table": "GM639, GM649, GM212 4 flute corner radius side cutting",
      "strictMaterials": true,
-     "materials": ["p-alloy"],
+     "materials": [
+      "p-alloy"
+     ],
      "sourceGroup": "Alloy steels, tool steels, HRc30 ~ HRc50, 1000 ~ 1750 N/mm2",
      "printed": {
       "unit": "in",
       "byDiameter": {
-       "0.25": {"rpm": 2310, "tableFeed": {"value": 7.8, "unit": "ipm"}},
-       "0.3125": {"rpm": 1740, "tableFeed": {"value": 7.8, "unit": "ipm"}},
-       "0.375": {"rpm": 1510, "tableFeed": {"value": 7.8, "unit": "ipm"}},
-       "0.5": {"rpm": 1280, "tableFeed": {"value": 6.9, "unit": "ipm"}}
+       "0.25": {
+        "rpm": 2310,
+        "tableFeed": {
+         "value": 7.8,
+         "unit": "ipm"
+        }
+       },
+       "0.3125": {
+        "rpm": 1740,
+        "tableFeed": {
+         "value": 7.8,
+         "unit": "ipm"
+        }
+       },
+       "0.375": {
+        "rpm": 1510,
+        "tableFeed": {
+         "value": 7.8,
+         "unit": "ipm"
+        }
+       },
+       "0.5": {
+        "rpm": 1280,
+        "tableFeed": {
+         "value": 6.9,
+         "unit": "ipm"
+        }
+       }
       }
      },
      "source": {
@@ -115,7 +197,7 @@
      }
     },
     {
-     "label": "Hardened steels, HRc50 ~ HRc55, 1750 ~ 2000 N/mm2 · side",
+     "label": "Hardened steels, HRc50 ~ HRc55, 1750 ~ 2000 N/mm2 \u00b7 side",
      "iso": "H",
      "status": "verified",
      "coolant": null,
@@ -126,10 +208,34 @@
      "printed": {
       "unit": "in",
       "byDiameter": {
-       "0.25": {"rpm": 1510, "tableFeed": {"value": 3.6, "unit": "ipm"}},
-       "0.3125": {"rpm": 1160, "tableFeed": {"value": 3.6, "unit": "ipm"}},
-       "0.375": {"rpm": 920, "tableFeed": {"value": 3.6, "unit": "ipm"}},
-       "0.5": {"rpm": 770, "tableFeed": {"value": 3.1, "unit": "ipm"}}
+       "0.25": {
+        "rpm": 1510,
+        "tableFeed": {
+         "value": 3.6,
+         "unit": "ipm"
+        }
+       },
+       "0.3125": {
+        "rpm": 1160,
+        "tableFeed": {
+         "value": 3.6,
+         "unit": "ipm"
+        }
+       },
+       "0.375": {
+        "rpm": 920,
+        "tableFeed": {
+         "value": 3.6,
+         "unit": "ipm"
+        }
+       },
+       "0.5": {
+        "rpm": 770,
+        "tableFeed": {
+         "value": 3.1,
+         "unit": "ipm"
+        }
+       }
       }
      },
      "source": {
@@ -141,6 +247,608 @@
       "page": "44 (PDF page 23)",
       "retrieved": "2026-11-10",
       "notes": "Right column of the left-hand table. Chart prints RPM and inch/min, not SFM."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "YG-1",
+   "series": "X-Power Pro GM218 (6-flute extra long, side)",
+   "type": "Y-coated solid carbide end mill, 6 flute, 45 degree helix, extra long, side cutting",
+   "flutes": 6,
+   "diameters_in": [
+    0.25,
+    0.375,
+    0.5,
+    0.75
+   ],
+   "notes": "The chart prints 6&8 flute and one IPM column for both.",
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 6,
+    "coating": "Y-Coated",
+    "coatingClass": "other",
+    "source": {
+     "url": "https://www.yg1usa.com/downloads/X-POWER%20PRO.pdf#page=24",
+     "retrieved": "2026-11-10",
+     "notes": "Heading prints Y-COATED SOLID CARBIDE END MILLS, 6&8 FLUTE 45\u00b0 HELIX EXTRA LONG LENGTH - SIDE CUTTING."
+    }
+   },
+   "conditions": [
+    {
+     "label": "Non-alloyed steels and alloy steels, cast iron, ~ HRc40, ~ 1250 N/mm2 \u00b7 side",
+     "iso": "P",
+     "status": "verified",
+     "coolant": null,
+     "sfm": null,
+     "operation": "side",
+     "table": "GM218 6 and 8 flute extra long side cutting",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.25": {
+        "rpm": 2270,
+        "tableFeed": {
+         "value": 19.4,
+         "unit": "ipm"
+        }
+       },
+       "0.375": {
+        "rpm": 1360,
+        "tableFeed": {
+         "value": 17.3,
+         "unit": "ipm"
+        }
+       },
+       "0.5": {
+        "rpm": 1130,
+        "tableFeed": {
+         "value": 16.3,
+         "unit": "ipm"
+        }
+       },
+       "0.75": {
+        "rpm": 680,
+        "tableFeed": {
+         "value": 11.2,
+         "unit": "ipm"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 X-Power Pro (YU-XP19) recommended cutting conditions, GM218 extra long side cutting",
+      "edition": "YU-XP19, PDF created 2019-04-04",
+      "url": "https://www.yg1usa.com/downloads/X-POWER%20PRO.pdf#page=24",
+      "page": "46 (PDF page 24)",
+      "retrieved": "2026-11-10",
+      "notes": "Left table on PDF page 24 (printed page 46). Chart prints one RPM and IPM table for both 6-flute and 8-flute tools. Derived chip load divides that IPM by the flute count. Right-hand table on this spread is not included. Same column also says cast iron."
+     },
+     "materials": [
+      "p-mild",
+      "p-alloy"
+     ],
+     "sourceGroup": "Non-alloyed steels and alloy steels, ~ HRc40, ~ 1250 N/mm2"
+    },
+    {
+     "label": "Cast iron, ~ HRc40, ~ 1250 N/mm2 \u00b7 side",
+     "iso": "K",
+     "status": "verified",
+     "coolant": null,
+     "sfm": null,
+     "operation": "side",
+     "table": "GM218 6 and 8 flute extra long side cutting",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.25": {
+        "rpm": 2270,
+        "tableFeed": {
+         "value": 19.4,
+         "unit": "ipm"
+        }
+       },
+       "0.375": {
+        "rpm": 1360,
+        "tableFeed": {
+         "value": 17.3,
+         "unit": "ipm"
+        }
+       },
+       "0.5": {
+        "rpm": 1130,
+        "tableFeed": {
+         "value": 16.3,
+         "unit": "ipm"
+        }
+       },
+       "0.75": {
+        "rpm": 680,
+        "tableFeed": {
+         "value": 11.2,
+         "unit": "ipm"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 X-Power Pro (YU-XP19) recommended cutting conditions, GM218 extra long side cutting",
+      "edition": "YU-XP19, PDF created 2019-04-04",
+      "url": "https://www.yg1usa.com/downloads/X-POWER%20PRO.pdf#page=24",
+      "page": "46 (PDF page 24)",
+      "retrieved": "2026-11-10",
+      "notes": "Left table on PDF page 24 (printed page 46). Chart prints one RPM and IPM table for both 6-flute and 8-flute tools. Derived chip load divides that IPM by the flute count. Right-hand table on this spread is not included. Same column as non-alloyed steels and alloy steels. Grey and ductile are not named."
+     }
+    },
+    {
+     "label": "Alloy steels and heat resistant steels, HRc40 ~ HRc50, 1250 ~ 1750 N/mm2 \u00b7 side",
+     "iso": "P",
+     "status": "verified",
+     "coolant": null,
+     "sfm": null,
+     "operation": "side",
+     "table": "GM218 6 and 8 flute extra long side cutting",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.25": {
+        "rpm": 1700,
+        "tableFeed": {
+         "value": 14.3,
+         "unit": "ipm"
+        }
+       },
+       "0.375": {
+        "rpm": 1020,
+        "tableFeed": {
+         "value": 12.2,
+         "unit": "ipm"
+        }
+       },
+       "0.5": {
+        "rpm": 860,
+        "tableFeed": {
+         "value": 11.2,
+         "unit": "ipm"
+        }
+       },
+       "0.75": {
+        "rpm": 510,
+        "tableFeed": {
+         "value": 8.2,
+         "unit": "ipm"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 X-Power Pro (YU-XP19) recommended cutting conditions, GM218 extra long side cutting",
+      "edition": "YU-XP19, PDF created 2019-04-04",
+      "url": "https://www.yg1usa.com/downloads/X-POWER%20PRO.pdf#page=24",
+      "page": "46 (PDF page 24)",
+      "retrieved": "2026-11-10",
+      "notes": "Left table on PDF page 24 (printed page 46). Chart prints one RPM and IPM table for both 6-flute and 8-flute tools. Derived chip load divides that IPM by the flute count. Right-hand table on this spread is not included. Same column also says heat resistant steels."
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy steels, HRc40 ~ HRc50, 1250 ~ 1750 N/mm2"
+    },
+    {
+     "label": "Heat resistant steels, HRc40 ~ HRc50, 1250 ~ 1750 N/mm2 \u00b7 side",
+     "iso": "S",
+     "status": "verified",
+     "coolant": null,
+     "sfm": null,
+     "operation": "side",
+     "table": "GM218 6 and 8 flute extra long side cutting",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.25": {
+        "rpm": 1700,
+        "tableFeed": {
+         "value": 14.3,
+         "unit": "ipm"
+        }
+       },
+       "0.375": {
+        "rpm": 1020,
+        "tableFeed": {
+         "value": 12.2,
+         "unit": "ipm"
+        }
+       },
+       "0.5": {
+        "rpm": 860,
+        "tableFeed": {
+         "value": 11.2,
+         "unit": "ipm"
+        }
+       },
+       "0.75": {
+        "rpm": 510,
+        "tableFeed": {
+         "value": 8.2,
+         "unit": "ipm"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 X-Power Pro (YU-XP19) recommended cutting conditions, GM218 extra long side cutting",
+      "edition": "YU-XP19, PDF created 2019-04-04",
+      "url": "https://www.yg1usa.com/downloads/X-POWER%20PRO.pdf#page=24",
+      "page": "46 (PDF page 24)",
+      "retrieved": "2026-11-10",
+      "notes": "Left table on PDF page 24 (printed page 46). Chart prints one RPM and IPM table for both 6-flute and 8-flute tools. Derived chip load divides that IPM by the flute count. Right-hand table on this spread is not included. Same column as alloy steels. No alloy name is printed."
+     }
+    },
+    {
+     "label": "Hardened steels, HRc50 ~ HRc55, 1750 ~ 2080 N/mm2 \u00b7 side",
+     "iso": "H",
+     "status": "verified",
+     "coolant": null,
+     "sfm": null,
+     "operation": "side",
+     "table": "GM218 6 and 8 flute extra long side cutting",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.25": {
+        "rpm": 1420,
+        "tableFeed": {
+         "value": 10.2,
+         "unit": "ipm"
+        }
+       },
+       "0.375": {
+        "rpm": 860,
+        "tableFeed": {
+         "value": 9.2,
+         "unit": "ipm"
+        }
+       },
+       "0.5": {
+        "rpm": 700,
+        "tableFeed": {
+         "value": 8.7,
+         "unit": "ipm"
+        }
+       },
+       "0.75": {
+        "rpm": 430,
+        "tableFeed": {
+         "value": 6.1,
+         "unit": "ipm"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 X-Power Pro (YU-XP19) recommended cutting conditions, GM218 extra long side cutting",
+      "edition": "YU-XP19, PDF created 2019-04-04",
+      "url": "https://www.yg1usa.com/downloads/X-POWER%20PRO.pdf#page=24",
+      "page": "46 (PDF page 24)",
+      "retrieved": "2026-11-10",
+      "notes": "Left table on PDF page 24 (printed page 46). Chart prints one RPM and IPM table for both 6-flute and 8-flute tools. Derived chip load divides that IPM by the flute count. Right-hand table on this spread is not included."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "YG-1",
+   "series": "X-Power Pro GM218 (8-flute extra long, side)",
+   "type": "Y-coated solid carbide end mill, 8 flute, 45 degree helix, extra long, side cutting",
+   "flutes": 8,
+   "diameters_in": [
+    0.25,
+    0.375,
+    0.5,
+    0.75
+   ],
+   "notes": "The chart prints 6&8 flute and one IPM column for both.",
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 8,
+    "coating": "Y-Coated",
+    "coatingClass": "other",
+    "source": {
+     "url": "https://www.yg1usa.com/downloads/X-POWER%20PRO.pdf#page=24",
+     "retrieved": "2026-11-10",
+     "notes": "Heading prints Y-COATED SOLID CARBIDE END MILLS, 6&8 FLUTE 45\u00b0 HELIX EXTRA LONG LENGTH - SIDE CUTTING."
+    }
+   },
+   "conditions": [
+    {
+     "label": "Non-alloyed steels and alloy steels, cast iron, ~ HRc40, ~ 1250 N/mm2 \u00b7 side",
+     "iso": "P",
+     "status": "verified",
+     "coolant": null,
+     "sfm": null,
+     "operation": "side",
+     "table": "GM218 6 and 8 flute extra long side cutting",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.25": {
+        "rpm": 2270,
+        "tableFeed": {
+         "value": 19.4,
+         "unit": "ipm"
+        }
+       },
+       "0.375": {
+        "rpm": 1360,
+        "tableFeed": {
+         "value": 17.3,
+         "unit": "ipm"
+        }
+       },
+       "0.5": {
+        "rpm": 1130,
+        "tableFeed": {
+         "value": 16.3,
+         "unit": "ipm"
+        }
+       },
+       "0.75": {
+        "rpm": 680,
+        "tableFeed": {
+         "value": 11.2,
+         "unit": "ipm"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 X-Power Pro (YU-XP19) recommended cutting conditions, GM218 extra long side cutting",
+      "edition": "YU-XP19, PDF created 2019-04-04",
+      "url": "https://www.yg1usa.com/downloads/X-POWER%20PRO.pdf#page=24",
+      "page": "46 (PDF page 24)",
+      "retrieved": "2026-11-10",
+      "notes": "Left table on PDF page 24 (printed page 46). Chart prints one RPM and IPM table for both 6-flute and 8-flute tools. Derived chip load divides that IPM by the flute count. Right-hand table on this spread is not included. Same column also says cast iron."
+     },
+     "materials": [
+      "p-mild",
+      "p-alloy"
+     ],
+     "sourceGroup": "Non-alloyed steels and alloy steels, ~ HRc40, ~ 1250 N/mm2"
+    },
+    {
+     "label": "Cast iron, ~ HRc40, ~ 1250 N/mm2 \u00b7 side",
+     "iso": "K",
+     "status": "verified",
+     "coolant": null,
+     "sfm": null,
+     "operation": "side",
+     "table": "GM218 6 and 8 flute extra long side cutting",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.25": {
+        "rpm": 2270,
+        "tableFeed": {
+         "value": 19.4,
+         "unit": "ipm"
+        }
+       },
+       "0.375": {
+        "rpm": 1360,
+        "tableFeed": {
+         "value": 17.3,
+         "unit": "ipm"
+        }
+       },
+       "0.5": {
+        "rpm": 1130,
+        "tableFeed": {
+         "value": 16.3,
+         "unit": "ipm"
+        }
+       },
+       "0.75": {
+        "rpm": 680,
+        "tableFeed": {
+         "value": 11.2,
+         "unit": "ipm"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 X-Power Pro (YU-XP19) recommended cutting conditions, GM218 extra long side cutting",
+      "edition": "YU-XP19, PDF created 2019-04-04",
+      "url": "https://www.yg1usa.com/downloads/X-POWER%20PRO.pdf#page=24",
+      "page": "46 (PDF page 24)",
+      "retrieved": "2026-11-10",
+      "notes": "Left table on PDF page 24 (printed page 46). Chart prints one RPM and IPM table for both 6-flute and 8-flute tools. Derived chip load divides that IPM by the flute count. Right-hand table on this spread is not included. Same column as non-alloyed steels and alloy steels. Grey and ductile are not named."
+     }
+    },
+    {
+     "label": "Alloy steels and heat resistant steels, HRc40 ~ HRc50, 1250 ~ 1750 N/mm2 \u00b7 side",
+     "iso": "P",
+     "status": "verified",
+     "coolant": null,
+     "sfm": null,
+     "operation": "side",
+     "table": "GM218 6 and 8 flute extra long side cutting",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.25": {
+        "rpm": 1700,
+        "tableFeed": {
+         "value": 14.3,
+         "unit": "ipm"
+        }
+       },
+       "0.375": {
+        "rpm": 1020,
+        "tableFeed": {
+         "value": 12.2,
+         "unit": "ipm"
+        }
+       },
+       "0.5": {
+        "rpm": 860,
+        "tableFeed": {
+         "value": 11.2,
+         "unit": "ipm"
+        }
+       },
+       "0.75": {
+        "rpm": 510,
+        "tableFeed": {
+         "value": 8.2,
+         "unit": "ipm"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 X-Power Pro (YU-XP19) recommended cutting conditions, GM218 extra long side cutting",
+      "edition": "YU-XP19, PDF created 2019-04-04",
+      "url": "https://www.yg1usa.com/downloads/X-POWER%20PRO.pdf#page=24",
+      "page": "46 (PDF page 24)",
+      "retrieved": "2026-11-10",
+      "notes": "Left table on PDF page 24 (printed page 46). Chart prints one RPM and IPM table for both 6-flute and 8-flute tools. Derived chip load divides that IPM by the flute count. Right-hand table on this spread is not included. Same column also says heat resistant steels."
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy steels, HRc40 ~ HRc50, 1250 ~ 1750 N/mm2"
+    },
+    {
+     "label": "Heat resistant steels, HRc40 ~ HRc50, 1250 ~ 1750 N/mm2 \u00b7 side",
+     "iso": "S",
+     "status": "verified",
+     "coolant": null,
+     "sfm": null,
+     "operation": "side",
+     "table": "GM218 6 and 8 flute extra long side cutting",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.25": {
+        "rpm": 1700,
+        "tableFeed": {
+         "value": 14.3,
+         "unit": "ipm"
+        }
+       },
+       "0.375": {
+        "rpm": 1020,
+        "tableFeed": {
+         "value": 12.2,
+         "unit": "ipm"
+        }
+       },
+       "0.5": {
+        "rpm": 860,
+        "tableFeed": {
+         "value": 11.2,
+         "unit": "ipm"
+        }
+       },
+       "0.75": {
+        "rpm": 510,
+        "tableFeed": {
+         "value": 8.2,
+         "unit": "ipm"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 X-Power Pro (YU-XP19) recommended cutting conditions, GM218 extra long side cutting",
+      "edition": "YU-XP19, PDF created 2019-04-04",
+      "url": "https://www.yg1usa.com/downloads/X-POWER%20PRO.pdf#page=24",
+      "page": "46 (PDF page 24)",
+      "retrieved": "2026-11-10",
+      "notes": "Left table on PDF page 24 (printed page 46). Chart prints one RPM and IPM table for both 6-flute and 8-flute tools. Derived chip load divides that IPM by the flute count. Right-hand table on this spread is not included. Same column as alloy steels. No alloy name is printed."
+     }
+    },
+    {
+     "label": "Hardened steels, HRc50 ~ HRc55, 1750 ~ 2080 N/mm2 \u00b7 side",
+     "iso": "H",
+     "status": "verified",
+     "coolant": null,
+     "sfm": null,
+     "operation": "side",
+     "table": "GM218 6 and 8 flute extra long side cutting",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.25": {
+        "rpm": 1420,
+        "tableFeed": {
+         "value": 10.2,
+         "unit": "ipm"
+        }
+       },
+       "0.375": {
+        "rpm": 860,
+        "tableFeed": {
+         "value": 9.2,
+         "unit": "ipm"
+        }
+       },
+       "0.5": {
+        "rpm": 700,
+        "tableFeed": {
+         "value": 8.7,
+         "unit": "ipm"
+        }
+       },
+       "0.75": {
+        "rpm": 430,
+        "tableFeed": {
+         "value": 6.1,
+         "unit": "ipm"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 X-Power Pro (YU-XP19) recommended cutting conditions, GM218 extra long side cutting",
+      "edition": "YU-XP19, PDF created 2019-04-04",
+      "url": "https://www.yg1usa.com/downloads/X-POWER%20PRO.pdf#page=24",
+      "page": "46 (PDF page 24)",
+      "retrieved": "2026-11-10",
+      "notes": "Left table on PDF page 24 (printed page 46). Chart prints one RPM and IPM table for both 6-flute and 8-flute tools. Derived chip load divides that IPM by the flute count. Right-hand table on this spread is not included."
      }
     }
    ]
