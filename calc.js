@@ -304,6 +304,11 @@ export const withPairs = t => { const cs = t.conditions ?? []; if (t.mode !== 't
 export const noDataWhy = (t, mid, iso) => { const has = a => !(mid && t.nm?.includes(mid)) && (a ?? []).some(i => !iso || i === iso || i === '*');
   const sp = has(t.speedIsos), fd = has(t.feedIsos);
   return sp && !fd ? 'speed only, no feed printed' : fd && !sp ? 'feed only, no speed printed' : sp && fd ? 'speed and feed on separate rows' : 'no data for this material'; };
+const PARTIAL_WHY = ['feed only, no speed printed', 'speed only, no feed printed'];
+// Brand or tool-list label when every reason is the same partial-data phrase. '' when any tool has a full row, or the reasons differ, or one is a real gap.
+export const sharedPartial = whys => { const u = [...new Set(whys)]; return u.length === 1 && PARTIAL_WHY.includes(u[0]) ? u[0] : ''; };
+// Placeholder when the listed tools are partial-data only (one phrase, or both phrases when the list mixes them).
+export const partialListNote = whys => { const u = [...new Set(whys)]; if (!u.length || u.some(w => !PARTIAL_WHY.includes(w))) return ''; return u.length === 1 ? u[0] : 'feed only, no speed printed, or speed only, no feed printed'; };
 export const dataRank = (t, mid, iso) => { if (mid && t.nm?.includes(mid)) return 2; const f = t.fullIsos || [], ok = i => !iso || i === iso || i === '*';
   return f.some(x => !x.includes('~') && ok(x)) ? 0 : f.some(x => ok(x.replace('~', ''))) ? 1 : 2; };
 // Nearest standard metric twist-drill size (DIN 338 steps: 0.05 mm ≤3 mm, 0.1 mm ≤13 mm, 0.5 mm above). DERIVED common size, not manufacturer data.
