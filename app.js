@@ -510,7 +510,7 @@ if (q.get('d')) { $('d').value = q.get('d'); fill(); }
 if (q.get('open')) document.querySelector('#src details')?.setAttribute('open', '');
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
 
-// MSC search for the exact tool picked: brand, series, grade/coating, size (native unit), flutes, type. Rebuilt on every run().
+// MSC search for the exact tool picked. An ordering code (insert) is the whole search; otherwise brand, series, grade, size, flutes, type. Rebuilt on every run().
 function mscBrand(b) { return ({ 'Allied': 'Allied Machine', 'Helical Solutions': 'Helical Solutions', 'Sandvik Coromant': 'Sandvik Coromant',  'Kodiak Cutting Tools': 'Kodiak', 'Sumitomo Electric Hardmetal': 'Sumitomo', 'Sumitomo Electric': 'Sumitomo', 'Mitsubishi Materials': 'Mitsubishi', 'KYOCERA SGS': 'SGS', 'Kyocera SGS': 'SGS', 'Dormer Pramet': 'Dormer', 'Lakeshore Carbide': 'Lakeshore', 'Data Flute': 'Data Flute', 'Garr Tool': 'Garr', 'Harvey Tool': 'Harvey Tool', 'Union Tool': 'Union Tool', 'ISCAR': 'Iscar', 'KORLOY': 'Korloy', 'FRAISA': 'Fraisa', 'MAPAL': 'Mapal' })[b]; }
 function fracIn(x) { for (const den of [2, 4, 8, 16, 32, 64]) { const n = x * den; if (Math.abs(n - Math.round(n)) < 1e-4) { const w = Math.floor(Math.round(n) / den), r = Math.round(n) % den, g = (a, b) => b ? g(b, a % b) : a, k = g(r, den);
   return r ? `${w ? w + '-' : ''}${r / k}/${den / k}"` : `${w}"`; } } return +x.toFixed(4) + '"'; };
@@ -522,6 +522,9 @@ function findQuery() { const t = curTool(); if (!t || /shop-proven/i.test(t.bran
   series = series.split(/\s+/).filter(w => w && !/^(\d{1,2}x?|e\.g\.|and|for|of|the|with|&|\/|[-–—·])$/i.test(w) && w.toLowerCase() !== brand.toLowerCase() && !brand.toLowerCase().includes(w.toLowerCase())).slice(0, 3).join(' ');
   const gSel = $('grade'); let grade = !$('gradeL').hidden && gSel.selectedIndex >= 0 ? gSel.options[gSel.selectedIndex].textContent.replace(/ · .*$/, '') : (t.grade || t.coating || c.grade || '');
   grade = String(grade).split(/\s*[\/,]\s*|\s+or\s+/)[0].replace(/\(.*?\)/g, '').trim(); if (!/^[A-Z0-9][\w.\-]{1,11}$/i.test(grade) || /^(any|none|uncoated|carbide|hss|-)$/i.test(grade) && !/^(TiN|AlTiN|TiAlN|TiCN)$/i.test(grade)) grade = '';
+  const codes = String(c.insert ?? '').split(/\s*\/\s*/).map(s => s.trim()).filter(s => /\d/.test(s) && /[A-Z]/.test(s) && /-/.test(s) && !/insert|negative|positive|inboard|outboard/i.test(s));
+  // A printed ordering code is the MSC search. Extra words ("insert", series) keep the exact designation from matching.
+  if (codes.length) { const g = grade && !codes[0].includes(grade) ? grade : ''; return [brand, codes[0], g]; }
   const insD = /\d/.test(c.insert ?? '') && /[A-Z]/.test(c.insert) && !/insert|negative|positive|inboard|outboard/i.test(c.insert) ? c.insert.trim() : '';
   const parts = [brand];
   if (insD) parts.push(insD); else if (series && !(grade && series.includes(grade))) parts.push(series); else if (series) parts.push(series);
