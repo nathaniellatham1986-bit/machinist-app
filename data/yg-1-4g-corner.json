@@ -1,0 +1,4599 @@
+{
+ "schema": 1,
+ "brand": "YG-1",
+ "tools": [
+  {
+   "mode": "mill",
+   "brand": "YG-1",
+   "series": "4G Mills GMF19 (2-flute long neck corner radius)",
+   "type": "solid carbide end mill, 2-flute, corner radius",
+   "flutes": 2,
+   "diameters_in": [
+    0.008,
+    0.012,
+    0.015,
+    0.02,
+    0.024,
+    0.031,
+    0.046875,
+    0.0625,
+    0.078125,
+    0.125,
+    0.1875,
+    0.25,
+    0.3125,
+    0.375,
+    0.5,
+    0.625,
+    0.75
+   ],
+   "notes": "Corner radius (bull nose). Ap is the printed axial depth in inches for that neck length. Ball-nose charts are not in this file: several radius labels in the text layer do not match the size sequence.",
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 2,
+    "coating": "YG-1 Special Tailored Coating",
+    "coatingClass": "other",
+    "endShape": "bull",
+    "source": {
+     "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+     "retrieved": "2026-11-10",
+     "notes": "Cutting-condition pages print CORNER RADIUS. Contents (PDF page 3, printed page 2) prints the flute count: GMF19 2-flute, GMF20 and GMF21 4-flute. Cover prints YG-1 Special Tailored Coating."
+    }
+   },
+   "conditions": [
+    {
+     "label": "Non-alloyed steels and alloy steels, ~ HRc 35, ~ 1100 N/mm2 \u00b7 flute length group 1",
+     "iso": "P",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF19 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.008": {
+        "rpm": 44290,
+        "tableFeed": {
+         "value": 5.31,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0006,
+         "unit": "in"
+        }
+       },
+       "0.012": {
+        "rpm": 49210,
+        "tableFeed": {
+         "value": 7.68,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0017,
+         "unit": "in"
+        }
+       },
+       "0.015": {
+        "rpm": 52490,
+        "tableFeed": {
+         "value": 8.27,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0021,
+         "unit": "in"
+        }
+       },
+       "0.02": {
+        "rpm": 42320,
+        "tableFeed": {
+         "value": 8.46,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.004,
+         "unit": "in"
+        }
+       },
+       "0.024": {
+        "rpm": 35830,
+        "tableFeed": {
+         "value": 9.65,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0033,
+         "unit": "in"
+        }
+       },
+       "0.031": {
+        "rpm": 36980,
+        "tableFeed": {
+         "value": 10.04,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0062,
+         "unit": "in"
+        }
+       },
+       "0.046875": {
+        "rpm": 27800,
+        "tableFeed": {
+         "value": 9.25,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0094,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 24940,
+        "tableFeed": {
+         "value": 11.22,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0125,
+         "unit": "in"
+        }
+       },
+       "0.078125": {
+        "rpm": 21770,
+        "tableFeed": {
+         "value": 12.2,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0109,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 15020,
+        "tableFeed": {
+         "value": 12.2,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.025,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 11550,
+        "tableFeed": {
+         "value": 20.67,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0375,
+         "unit": "in"
+        }
+       },
+       "0.25": {
+        "rpm": 8980,
+        "tableFeed": {
+         "value": 22.24,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.05,
+         "unit": "in"
+        }
+       },
+       "0.3125": {
+        "rpm": 7260,
+        "tableFeed": {
+         "value": 25.39,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0437,
+         "unit": "in"
+        }
+       },
+       "0.375": {
+        "rpm": 6300,
+        "tableFeed": {
+         "value": 26.38,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0525,
+         "unit": "in"
+        }
+       },
+       "0.5": {
+        "rpm": 4720,
+        "tableFeed": {
+         "value": 18.5,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.1,
+         "unit": "in"
+        }
+       },
+       "0.625": {
+        "rpm": 3750,
+        "tableFeed": {
+         "value": 17.91,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.125,
+         "unit": "in"
+        }
+       },
+       "0.75": {
+        "rpm": 3150,
+        "tableFeed": {
+         "value": 13.58,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.15,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF19 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+      "page": "printed page 41 (PDF page 42)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says cast iron. Cast iron is a separate condition with the same RPM and IPM. Flute-length group 1 of 4: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.008 in at LOC 0.046875 in; 0.012 in at LOC 0.046875 in; 0.015 in at LOC 0.046875, 0.0625 in; 0.02 in at LOC 0.046875 in; 0.024 in at LOC 0.078125 in; 0.031 in at LOC 0.078125 in; 0.046875 in at LOC 0.125 in; 0.0625 in at LOC 0.15625 in; 0.078125 in at LOC 0.25, 0.3125, 0.375 in; 0.125 in at LOC 0.3125, 0.375 in; 0.1875 in at LOC 0.375, 0.5 in; 0.25 in at LOC 0.75 in; 0.3125 in at LOC 1 in; 0.375 in at LOC 1.1875 in; 0.5 in at LOC 1.25 in; 0.625 in at LOC 1.375 in; 0.75 in at LOC 1.5 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     },
+     "materials": [
+      "p-mild",
+      "p-alloy"
+     ],
+     "sourceGroup": "Non-alloyed steels and alloy steels, ~ HRc 35, ~ 1100 N/mm2"
+    },
+    {
+     "label": "Cast iron, ~ HRc 35, ~ 1100 N/mm2 \u00b7 flute length group 1",
+     "iso": "K",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF19 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.008": {
+        "rpm": 44290,
+        "tableFeed": {
+         "value": 5.31,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0006,
+         "unit": "in"
+        }
+       },
+       "0.012": {
+        "rpm": 49210,
+        "tableFeed": {
+         "value": 7.68,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0017,
+         "unit": "in"
+        }
+       },
+       "0.015": {
+        "rpm": 52490,
+        "tableFeed": {
+         "value": 8.27,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0021,
+         "unit": "in"
+        }
+       },
+       "0.02": {
+        "rpm": 42320,
+        "tableFeed": {
+         "value": 8.46,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.004,
+         "unit": "in"
+        }
+       },
+       "0.024": {
+        "rpm": 35830,
+        "tableFeed": {
+         "value": 9.65,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0033,
+         "unit": "in"
+        }
+       },
+       "0.031": {
+        "rpm": 36980,
+        "tableFeed": {
+         "value": 10.04,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0062,
+         "unit": "in"
+        }
+       },
+       "0.046875": {
+        "rpm": 27800,
+        "tableFeed": {
+         "value": 9.25,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0094,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 24940,
+        "tableFeed": {
+         "value": 11.22,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0125,
+         "unit": "in"
+        }
+       },
+       "0.078125": {
+        "rpm": 21770,
+        "tableFeed": {
+         "value": 12.2,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0109,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 15020,
+        "tableFeed": {
+         "value": 12.2,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.025,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 11550,
+        "tableFeed": {
+         "value": 20.67,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0375,
+         "unit": "in"
+        }
+       },
+       "0.25": {
+        "rpm": 8980,
+        "tableFeed": {
+         "value": 22.24,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.05,
+         "unit": "in"
+        }
+       },
+       "0.3125": {
+        "rpm": 7260,
+        "tableFeed": {
+         "value": 25.39,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0437,
+         "unit": "in"
+        }
+       },
+       "0.375": {
+        "rpm": 6300,
+        "tableFeed": {
+         "value": 26.38,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0525,
+         "unit": "in"
+        }
+       },
+       "0.5": {
+        "rpm": 4720,
+        "tableFeed": {
+         "value": 18.5,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.1,
+         "unit": "in"
+        }
+       },
+       "0.625": {
+        "rpm": 3750,
+        "tableFeed": {
+         "value": 17.91,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.125,
+         "unit": "in"
+        }
+       },
+       "0.75": {
+        "rpm": 3150,
+        "tableFeed": {
+         "value": 13.58,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.15,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF19 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+      "page": "printed page 41 (PDF page 42)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says non-alloyed steels and alloy steels. Grey and ductile are not named. Flute-length group 1 of 4: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.008 in at LOC 0.046875 in; 0.012 in at LOC 0.046875 in; 0.015 in at LOC 0.046875, 0.0625 in; 0.02 in at LOC 0.046875 in; 0.024 in at LOC 0.078125 in; 0.031 in at LOC 0.078125 in; 0.046875 in at LOC 0.125 in; 0.0625 in at LOC 0.15625 in; 0.078125 in at LOC 0.25, 0.3125, 0.375 in; 0.125 in at LOC 0.3125, 0.375 in; 0.1875 in at LOC 0.375, 0.5 in; 0.25 in at LOC 0.75 in; 0.3125 in at LOC 1 in; 0.375 in at LOC 1.1875 in; 0.5 in at LOC 1.25 in; 0.625 in at LOC 1.375 in; 0.75 in at LOC 1.5 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    },
+    {
+     "label": "Non-alloyed steels and alloy steels, ~ HRc 35, ~ 1100 N/mm2 \u00b7 flute length group 2",
+     "iso": "P",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF19 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.012": {
+        "rpm": 44290,
+        "tableFeed": {
+         "value": 6.3,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0009,
+         "unit": "in"
+        }
+       },
+       "0.015": {
+        "rpm": 47240,
+        "tableFeed": {
+         "value": 6.69,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0012,
+         "unit": "in"
+        }
+       },
+       "0.02": {
+        "rpm": 42320,
+        "tableFeed": {
+         "value": 8.46,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0028,
+         "unit": "in"
+        }
+       },
+       "0.024": {
+        "rpm": 32240,
+        "tableFeed": {
+         "value": 7.87,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0019,
+         "unit": "in"
+        }
+       },
+       "0.031": {
+        "rpm": 33280,
+        "tableFeed": {
+         "value": 8.07,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0025,
+         "unit": "in"
+        }
+       },
+       "0.046875": {
+        "rpm": 27800,
+        "tableFeed": {
+         "value": 9.25,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0066,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 24940,
+        "tableFeed": {
+         "value": 11.22,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0087,
+         "unit": "in"
+        }
+       },
+       "0.078125": {
+        "rpm": 19590,
+        "tableFeed": {
+         "value": 10.04,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0063,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 15020,
+        "tableFeed": {
+         "value": 12.2,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0175,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 11550,
+        "tableFeed": {
+         "value": 20.67,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0263,
+         "unit": "in"
+        }
+       },
+       "0.25": {
+        "rpm": 8980,
+        "tableFeed": {
+         "value": 22.24,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.035,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF19 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+      "page": "printed page 41 (PDF page 42)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says cast iron. Cast iron is a separate condition with the same RPM and IPM. Flute-length group 2 of 4: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.012 in at LOC 0.078125 in; 0.015 in at LOC 0.078125, 0.09375 in; 0.02 in at LOC 0.0625, 0.078125 in; 0.024 in at LOC 0.125, 0.15625 in; 0.031 in at LOC 0.15625 in; 0.046875 in at LOC 0.15625 in; 0.0625 in at LOC 0.25, 0.3125 in; 0.078125 in at LOC 0.5, 0.5625, 0.625 in; 0.125 in at LOC 0.5, 0.625 in; 0.1875 in at LOC 0.625, 0.75 in; 0.25 in at LOC 1.1875 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     },
+     "materials": [
+      "p-mild",
+      "p-alloy"
+     ],
+     "sourceGroup": "Non-alloyed steels and alloy steels, ~ HRc 35, ~ 1100 N/mm2"
+    },
+    {
+     "label": "Cast iron, ~ HRc 35, ~ 1100 N/mm2 \u00b7 flute length group 2",
+     "iso": "K",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF19 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.012": {
+        "rpm": 44290,
+        "tableFeed": {
+         "value": 6.3,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0009,
+         "unit": "in"
+        }
+       },
+       "0.015": {
+        "rpm": 47240,
+        "tableFeed": {
+         "value": 6.69,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0012,
+         "unit": "in"
+        }
+       },
+       "0.02": {
+        "rpm": 42320,
+        "tableFeed": {
+         "value": 8.46,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0028,
+         "unit": "in"
+        }
+       },
+       "0.024": {
+        "rpm": 32240,
+        "tableFeed": {
+         "value": 7.87,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0019,
+         "unit": "in"
+        }
+       },
+       "0.031": {
+        "rpm": 33280,
+        "tableFeed": {
+         "value": 8.07,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0025,
+         "unit": "in"
+        }
+       },
+       "0.046875": {
+        "rpm": 27800,
+        "tableFeed": {
+         "value": 9.25,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0066,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 24940,
+        "tableFeed": {
+         "value": 11.22,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0087,
+         "unit": "in"
+        }
+       },
+       "0.078125": {
+        "rpm": 19590,
+        "tableFeed": {
+         "value": 10.04,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0063,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 15020,
+        "tableFeed": {
+         "value": 12.2,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0175,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 11550,
+        "tableFeed": {
+         "value": 20.67,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0263,
+         "unit": "in"
+        }
+       },
+       "0.25": {
+        "rpm": 8980,
+        "tableFeed": {
+         "value": 22.24,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.035,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF19 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+      "page": "printed page 41 (PDF page 42)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says non-alloyed steels and alloy steels. Grey and ductile are not named. Flute-length group 2 of 4: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.012 in at LOC 0.078125 in; 0.015 in at LOC 0.078125, 0.09375 in; 0.02 in at LOC 0.0625, 0.078125 in; 0.024 in at LOC 0.125, 0.15625 in; 0.031 in at LOC 0.15625 in; 0.046875 in at LOC 0.15625 in; 0.0625 in at LOC 0.25, 0.3125 in; 0.078125 in at LOC 0.5, 0.5625, 0.625 in; 0.125 in at LOC 0.5, 0.625 in; 0.1875 in at LOC 0.625, 0.75 in; 0.25 in at LOC 1.1875 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    },
+    {
+     "label": "Non-alloyed steels and alloy steels, ~ HRc 35, ~ 1100 N/mm2 \u00b7 flute length group 3",
+     "iso": "P",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF19 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.02": {
+        "rpm": 38090,
+        "tableFeed": {
+         "value": 6.89,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0016,
+         "unit": "in"
+        }
+       },
+       "0.024": {
+        "rpm": 28660,
+        "tableFeed": {
+         "value": 6.1,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0012,
+         "unit": "in"
+        }
+       },
+       "0.031": {
+        "rpm": 33280,
+        "tableFeed": {
+         "value": 8.07,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0015,
+         "unit": "in"
+        }
+       },
+       "0.046875": {
+        "rpm": 25020,
+        "tableFeed": {
+         "value": 7.48,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0037,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 22450,
+        "tableFeed": {
+         "value": 9.06,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.005,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 13520,
+        "tableFeed": {
+         "value": 10.04,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.01,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 10390,
+        "tableFeed": {
+         "value": 16.73,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.015,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF19 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+      "page": "printed page 41 (PDF page 42)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says cast iron. Cast iron is a separate condition with the same RPM and IPM. Flute-length group 3 of 4: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.02 in at LOC 0.125, 0.15625 in; 0.024 in at LOC 0.25 in; 0.031 in at LOC 0.25 in; 0.046875 in at LOC 0.25, 0.3125, 0.375 in; 0.0625 in at LOC 0.375, 0.5 in; 0.125 in at LOC 0.75, 1 in; 0.1875 in at LOC 1, 1.1875 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     },
+     "materials": [
+      "p-mild",
+      "p-alloy"
+     ],
+     "sourceGroup": "Non-alloyed steels and alloy steels, ~ HRc 35, ~ 1100 N/mm2"
+    },
+    {
+     "label": "Cast iron, ~ HRc 35, ~ 1100 N/mm2 \u00b7 flute length group 3",
+     "iso": "K",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF19 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.02": {
+        "rpm": 38090,
+        "tableFeed": {
+         "value": 6.89,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0016,
+         "unit": "in"
+        }
+       },
+       "0.024": {
+        "rpm": 28660,
+        "tableFeed": {
+         "value": 6.1,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0012,
+         "unit": "in"
+        }
+       },
+       "0.031": {
+        "rpm": 33280,
+        "tableFeed": {
+         "value": 8.07,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0015,
+         "unit": "in"
+        }
+       },
+       "0.046875": {
+        "rpm": 25020,
+        "tableFeed": {
+         "value": 7.48,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0037,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 22450,
+        "tableFeed": {
+         "value": 9.06,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.005,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 13520,
+        "tableFeed": {
+         "value": 10.04,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.01,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 10390,
+        "tableFeed": {
+         "value": 16.73,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.015,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF19 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+      "page": "printed page 41 (PDF page 42)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says non-alloyed steels and alloy steels. Grey and ductile are not named. Flute-length group 3 of 4: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.02 in at LOC 0.125, 0.15625 in; 0.024 in at LOC 0.25 in; 0.031 in at LOC 0.25 in; 0.046875 in at LOC 0.25, 0.3125, 0.375 in; 0.0625 in at LOC 0.375, 0.5 in; 0.125 in at LOC 0.75, 1 in; 0.1875 in at LOC 1, 1.1875 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    },
+    {
+     "label": "Non-alloyed steels and alloy steels, ~ HRc 35, ~ 1100 N/mm2 \u00b7 flute length group 4",
+     "iso": "P",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF19 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.031": {
+        "rpm": 29590,
+        "tableFeed": {
+         "value": 6.5,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0015,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF19 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+      "page": "printed page 41 (PDF page 42)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says cast iron. Cast iron is a separate condition with the same RPM and IPM. Flute-length group 4 of 4: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.031 in at LOC 0.3125 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     },
+     "materials": [
+      "p-mild",
+      "p-alloy"
+     ],
+     "sourceGroup": "Non-alloyed steels and alloy steels, ~ HRc 35, ~ 1100 N/mm2"
+    },
+    {
+     "label": "Cast iron, ~ HRc 35, ~ 1100 N/mm2 \u00b7 flute length group 4",
+     "iso": "K",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF19 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.031": {
+        "rpm": 29590,
+        "tableFeed": {
+         "value": 6.5,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0015,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF19 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+      "page": "printed page 41 (PDF page 42)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says non-alloyed steels and alloy steels. Grey and ductile are not named. Flute-length group 4 of 4: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.031 in at LOC 0.3125 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    },
+    {
+     "label": "Alloy steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2 \u00b7 flute length group 1",
+     "iso": "P",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF19 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.008": {
+        "rpm": 30560,
+        "tableFeed": {
+         "value": 2.36,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0005,
+         "unit": "in"
+        }
+       },
+       "0.012": {
+        "rpm": 31500,
+        "tableFeed": {
+         "value": 3.35,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0013,
+         "unit": "in"
+        }
+       },
+       "0.015": {
+        "rpm": 33600,
+        "tableFeed": {
+         "value": 3.54,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0016,
+         "unit": "in"
+        }
+       },
+       "0.02": {
+        "rpm": 27560,
+        "tableFeed": {
+         "value": 3.74,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.003,
+         "unit": "in"
+        }
+       },
+       "0.024": {
+        "rpm": 23620,
+        "tableFeed": {
+         "value": 4.33,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0025,
+         "unit": "in"
+        }
+       },
+       "0.031": {
+        "rpm": 24380,
+        "tableFeed": {
+         "value": 4.33,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0046,
+         "unit": "in"
+        }
+       },
+       "0.046875": {
+        "rpm": 18140,
+        "tableFeed": {
+         "value": 3.94,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.007,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 15310,
+        "tableFeed": {
+         "value": 4.92,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0094,
+         "unit": "in"
+        }
+       },
+       "0.078125": {
+        "rpm": 13910,
+        "tableFeed": {
+         "value": 5.51,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0082,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 9730,
+        "tableFeed": {
+         "value": 5.91,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0187,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 7350,
+        "tableFeed": {
+         "value": 9.84,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0281,
+         "unit": "in"
+        }
+       },
+       "0.25": {
+        "rpm": 5670,
+        "tableFeed": {
+         "value": 11.22,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0375,
+         "unit": "in"
+        }
+       },
+       "0.3125": {
+        "rpm": 4590,
+        "tableFeed": {
+         "value": 11.81,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0328,
+         "unit": "in"
+        }
+       },
+       "0.375": {
+        "rpm": 4200,
+        "tableFeed": {
+         "value": 12.4,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0394,
+         "unit": "in"
+        }
+       },
+       "0.5": {
+        "rpm": 3160,
+        "tableFeed": {
+         "value": 10.04,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.075,
+         "unit": "in"
+        }
+       },
+       "0.625": {
+        "rpm": 2540,
+        "tableFeed": {
+         "value": 8.27,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0937,
+         "unit": "in"
+        }
+       },
+       "0.75": {
+        "rpm": 2050,
+        "tableFeed": {
+         "value": 5.71,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.1125,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF19 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+      "page": "printed page 41 (PDF page 42)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says heat resistant steels. Flute-length group 1 of 4: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.008 in at LOC 0.046875 in; 0.012 in at LOC 0.046875 in; 0.015 in at LOC 0.046875, 0.0625 in; 0.02 in at LOC 0.046875 in; 0.024 in at LOC 0.078125 in; 0.031 in at LOC 0.078125 in; 0.046875 in at LOC 0.125 in; 0.0625 in at LOC 0.15625 in; 0.078125 in at LOC 0.25, 0.3125, 0.375 in; 0.125 in at LOC 0.3125, 0.375 in; 0.1875 in at LOC 0.375, 0.5 in; 0.25 in at LOC 0.75 in; 0.3125 in at LOC 1 in; 0.375 in at LOC 1.1875 in; 0.5 in at LOC 1.25 in; 0.625 in at LOC 1.375 in; 0.75 in at LOC 1.5 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2"
+    },
+    {
+     "label": "Heat resistant steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2 \u00b7 flute length group 1",
+     "iso": "S",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF19 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.008": {
+        "rpm": 30560,
+        "tableFeed": {
+         "value": 2.36,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0005,
+         "unit": "in"
+        }
+       },
+       "0.012": {
+        "rpm": 31500,
+        "tableFeed": {
+         "value": 3.35,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0013,
+         "unit": "in"
+        }
+       },
+       "0.015": {
+        "rpm": 33600,
+        "tableFeed": {
+         "value": 3.54,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0016,
+         "unit": "in"
+        }
+       },
+       "0.02": {
+        "rpm": 27560,
+        "tableFeed": {
+         "value": 3.74,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.003,
+         "unit": "in"
+        }
+       },
+       "0.024": {
+        "rpm": 23620,
+        "tableFeed": {
+         "value": 4.33,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0025,
+         "unit": "in"
+        }
+       },
+       "0.031": {
+        "rpm": 24380,
+        "tableFeed": {
+         "value": 4.33,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0046,
+         "unit": "in"
+        }
+       },
+       "0.046875": {
+        "rpm": 18140,
+        "tableFeed": {
+         "value": 3.94,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.007,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 15310,
+        "tableFeed": {
+         "value": 4.92,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0094,
+         "unit": "in"
+        }
+       },
+       "0.078125": {
+        "rpm": 13910,
+        "tableFeed": {
+         "value": 5.51,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0082,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 9730,
+        "tableFeed": {
+         "value": 5.91,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0187,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 7350,
+        "tableFeed": {
+         "value": 9.84,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0281,
+         "unit": "in"
+        }
+       },
+       "0.25": {
+        "rpm": 5670,
+        "tableFeed": {
+         "value": 11.22,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0375,
+         "unit": "in"
+        }
+       },
+       "0.3125": {
+        "rpm": 4590,
+        "tableFeed": {
+         "value": 11.81,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0328,
+         "unit": "in"
+        }
+       },
+       "0.375": {
+        "rpm": 4200,
+        "tableFeed": {
+         "value": 12.4,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0394,
+         "unit": "in"
+        }
+       },
+       "0.5": {
+        "rpm": 3160,
+        "tableFeed": {
+         "value": 10.04,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.075,
+         "unit": "in"
+        }
+       },
+       "0.625": {
+        "rpm": 2540,
+        "tableFeed": {
+         "value": 8.27,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0937,
+         "unit": "in"
+        }
+       },
+       "0.75": {
+        "rpm": 2050,
+        "tableFeed": {
+         "value": 5.71,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.1125,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF19 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+      "page": "printed page 41 (PDF page 42)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says alloy steels. No alloy name (no 718, no Ti-6Al-4V) is printed in this column. Flute-length group 1 of 4: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.008 in at LOC 0.046875 in; 0.012 in at LOC 0.046875 in; 0.015 in at LOC 0.046875, 0.0625 in; 0.02 in at LOC 0.046875 in; 0.024 in at LOC 0.078125 in; 0.031 in at LOC 0.078125 in; 0.046875 in at LOC 0.125 in; 0.0625 in at LOC 0.15625 in; 0.078125 in at LOC 0.25, 0.3125, 0.375 in; 0.125 in at LOC 0.3125, 0.375 in; 0.1875 in at LOC 0.375, 0.5 in; 0.25 in at LOC 0.75 in; 0.3125 in at LOC 1 in; 0.375 in at LOC 1.1875 in; 0.5 in at LOC 1.25 in; 0.625 in at LOC 1.375 in; 0.75 in at LOC 1.5 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    },
+    {
+     "label": "Alloy steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2 \u00b7 flute length group 2",
+     "iso": "P",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF19 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.012": {
+        "rpm": 28350,
+        "tableFeed": {
+         "value": 2.76,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0007,
+         "unit": "in"
+        }
+       },
+       "0.015": {
+        "rpm": 30240,
+        "tableFeed": {
+         "value": 2.76,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0009,
+         "unit": "in"
+        }
+       },
+       "0.02": {
+        "rpm": 27560,
+        "tableFeed": {
+         "value": 3.74,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0021,
+         "unit": "in"
+        }
+       },
+       "0.024": {
+        "rpm": 21260,
+        "tableFeed": {
+         "value": 3.54,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0015,
+         "unit": "in"
+        }
+       },
+       "0.031": {
+        "rpm": 21950,
+        "tableFeed": {
+         "value": 3.54,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0019,
+         "unit": "in"
+        }
+       },
+       "0.046875": {
+        "rpm": 18140,
+        "tableFeed": {
+         "value": 3.94,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0049,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 15310,
+        "tableFeed": {
+         "value": 4.92,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0066,
+         "unit": "in"
+        }
+       },
+       "0.078125": {
+        "rpm": 12520,
+        "tableFeed": {
+         "value": 4.53,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0047,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 9730,
+        "tableFeed": {
+         "value": 5.91,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0131,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 7350,
+        "tableFeed": {
+         "value": 9.84,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0197,
+         "unit": "in"
+        }
+       },
+       "0.25": {
+        "rpm": 5670,
+        "tableFeed": {
+         "value": 11.22,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0263,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF19 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+      "page": "printed page 41 (PDF page 42)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says heat resistant steels. Flute-length group 2 of 4: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.012 in at LOC 0.078125 in; 0.015 in at LOC 0.078125, 0.09375 in; 0.02 in at LOC 0.0625, 0.078125 in; 0.024 in at LOC 0.125, 0.15625 in; 0.031 in at LOC 0.15625 in; 0.046875 in at LOC 0.15625 in; 0.0625 in at LOC 0.25, 0.3125 in; 0.078125 in at LOC 0.5, 0.5625, 0.625 in; 0.125 in at LOC 0.5, 0.625 in; 0.1875 in at LOC 0.625, 0.75 in; 0.25 in at LOC 1.1875 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2"
+    },
+    {
+     "label": "Heat resistant steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2 \u00b7 flute length group 2",
+     "iso": "S",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF19 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.012": {
+        "rpm": 28350,
+        "tableFeed": {
+         "value": 2.76,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0007,
+         "unit": "in"
+        }
+       },
+       "0.015": {
+        "rpm": 30240,
+        "tableFeed": {
+         "value": 2.76,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0009,
+         "unit": "in"
+        }
+       },
+       "0.02": {
+        "rpm": 27560,
+        "tableFeed": {
+         "value": 3.74,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0021,
+         "unit": "in"
+        }
+       },
+       "0.024": {
+        "rpm": 21260,
+        "tableFeed": {
+         "value": 3.54,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0015,
+         "unit": "in"
+        }
+       },
+       "0.031": {
+        "rpm": 21950,
+        "tableFeed": {
+         "value": 3.54,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0019,
+         "unit": "in"
+        }
+       },
+       "0.046875": {
+        "rpm": 18140,
+        "tableFeed": {
+         "value": 3.94,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0049,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 15310,
+        "tableFeed": {
+         "value": 4.92,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0066,
+         "unit": "in"
+        }
+       },
+       "0.078125": {
+        "rpm": 12520,
+        "tableFeed": {
+         "value": 4.53,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0047,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 9730,
+        "tableFeed": {
+         "value": 5.91,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0131,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 7350,
+        "tableFeed": {
+         "value": 9.84,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0197,
+         "unit": "in"
+        }
+       },
+       "0.25": {
+        "rpm": 5670,
+        "tableFeed": {
+         "value": 11.22,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0263,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF19 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+      "page": "printed page 41 (PDF page 42)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says alloy steels. No alloy name (no 718, no Ti-6Al-4V) is printed in this column. Flute-length group 2 of 4: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.012 in at LOC 0.078125 in; 0.015 in at LOC 0.078125, 0.09375 in; 0.02 in at LOC 0.0625, 0.078125 in; 0.024 in at LOC 0.125, 0.15625 in; 0.031 in at LOC 0.15625 in; 0.046875 in at LOC 0.15625 in; 0.0625 in at LOC 0.25, 0.3125 in; 0.078125 in at LOC 0.5, 0.5625, 0.625 in; 0.125 in at LOC 0.5, 0.625 in; 0.1875 in at LOC 0.625, 0.75 in; 0.25 in at LOC 1.1875 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    },
+    {
+     "label": "Alloy steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2 \u00b7 flute length group 3",
+     "iso": "P",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF19 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.02": {
+        "rpm": 24800,
+        "tableFeed": {
+         "value": 2.95,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0012,
+         "unit": "in"
+        }
+       },
+       "0.024": {
+        "rpm": 18900,
+        "tableFeed": {
+         "value": 2.76,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0009,
+         "unit": "in"
+        }
+       },
+       "0.031": {
+        "rpm": 21950,
+        "tableFeed": {
+         "value": 3.54,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0012,
+         "unit": "in"
+        }
+       },
+       "0.046875": {
+        "rpm": 16330,
+        "tableFeed": {
+         "value": 3.15,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0028,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 13780,
+        "tableFeed": {
+         "value": 3.94,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0037,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 8760,
+        "tableFeed": {
+         "value": 4.72,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0075,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 6610,
+        "tableFeed": {
+         "value": 8.07,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0113,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF19 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+      "page": "printed page 41 (PDF page 42)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says heat resistant steels. Flute-length group 3 of 4: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.02 in at LOC 0.125, 0.15625 in; 0.024 in at LOC 0.25 in; 0.031 in at LOC 0.25 in; 0.046875 in at LOC 0.25, 0.3125, 0.375 in; 0.0625 in at LOC 0.375, 0.5 in; 0.125 in at LOC 0.75, 1 in; 0.1875 in at LOC 1, 1.1875 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2"
+    },
+    {
+     "label": "Heat resistant steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2 \u00b7 flute length group 3",
+     "iso": "S",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF19 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.02": {
+        "rpm": 24800,
+        "tableFeed": {
+         "value": 2.95,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0012,
+         "unit": "in"
+        }
+       },
+       "0.024": {
+        "rpm": 18900,
+        "tableFeed": {
+         "value": 2.76,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0009,
+         "unit": "in"
+        }
+       },
+       "0.031": {
+        "rpm": 21950,
+        "tableFeed": {
+         "value": 3.54,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0012,
+         "unit": "in"
+        }
+       },
+       "0.046875": {
+        "rpm": 16330,
+        "tableFeed": {
+         "value": 3.15,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0028,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 13780,
+        "tableFeed": {
+         "value": 3.94,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0037,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 8760,
+        "tableFeed": {
+         "value": 4.72,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0075,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 6610,
+        "tableFeed": {
+         "value": 8.07,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0113,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF19 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+      "page": "printed page 41 (PDF page 42)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says alloy steels. No alloy name (no 718, no Ti-6Al-4V) is printed in this column. Flute-length group 3 of 4: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.02 in at LOC 0.125, 0.15625 in; 0.024 in at LOC 0.25 in; 0.031 in at LOC 0.25 in; 0.046875 in at LOC 0.25, 0.3125, 0.375 in; 0.0625 in at LOC 0.375, 0.5 in; 0.125 in at LOC 0.75, 1 in; 0.1875 in at LOC 1, 1.1875 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    },
+    {
+     "label": "Alloy steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2 \u00b7 flute length group 4",
+     "iso": "P",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF19 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.031": {
+        "rpm": 19510,
+        "tableFeed": {
+         "value": 2.76,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0012,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF19 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+      "page": "printed page 41 (PDF page 42)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says heat resistant steels. Flute-length group 4 of 4: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.031 in at LOC 0.3125 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2"
+    },
+    {
+     "label": "Heat resistant steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2 \u00b7 flute length group 4",
+     "iso": "S",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF19 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.031": {
+        "rpm": 19510,
+        "tableFeed": {
+         "value": 2.76,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0012,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF19 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+      "page": "printed page 41 (PDF page 42)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says alloy steels. No alloy name (no 718, no Ti-6Al-4V) is printed in this column. Flute-length group 4 of 4: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.031 in at LOC 0.3125 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    },
+    {
+     "label": "Hardened steels, HRc 45 ~ HRc 55, 1500 ~ 2000 N/mm2 \u00b7 flute length group 1",
+     "iso": "H",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF19 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.008": {
+        "rpm": 18740,
+        "tableFeed": {
+         "value": 1.38,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0004,
+         "unit": "in"
+        }
+       },
+       "0.012": {
+        "rpm": 19690,
+        "tableFeed": {
+         "value": 1.97,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.001,
+         "unit": "in"
+        }
+       },
+       "0.015": {
+        "rpm": 21000,
+        "tableFeed": {
+         "value": 1.97,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0013,
+         "unit": "in"
+        }
+       },
+       "0.02": {
+        "rpm": 16830,
+        "tableFeed": {
+         "value": 2.36,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0024,
+         "unit": "in"
+        }
+       },
+       "0.024": {
+        "rpm": 14270,
+        "tableFeed": {
+         "value": 2.56,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.002,
+         "unit": "in"
+        }
+       },
+       "0.031": {
+        "rpm": 14730,
+        "tableFeed": {
+         "value": 2.56,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0037,
+         "unit": "in"
+        }
+       },
+       "0.046875": {
+        "rpm": 11090,
+        "tableFeed": {
+         "value": 2.36,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0056,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 9640,
+        "tableFeed": {
+         "value": 2.56,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0075,
+         "unit": "in"
+        }
+       },
+       "0.078125": {
+        "rpm": 8710,
+        "tableFeed": {
+         "value": 3.15,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0066,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 5950,
+        "tableFeed": {
+         "value": 2.95,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.015,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 4790,
+        "tableFeed": {
+         "value": 4.92,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0225,
+         "unit": "in"
+        }
+       },
+       "0.25": {
+        "rpm": 3710,
+        "tableFeed": {
+         "value": 5.12,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.03,
+         "unit": "in"
+        }
+       },
+       "0.3125": {
+        "rpm": 3040,
+        "tableFeed": {
+         "value": 5.51,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0263,
+         "unit": "in"
+        }
+       },
+       "0.375": {
+        "rpm": 2540,
+        "tableFeed": {
+         "value": 5.71,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0315,
+         "unit": "in"
+        }
+       },
+       "0.5": {
+        "rpm": 1890,
+        "tableFeed": {
+         "value": 4.53,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.06,
+         "unit": "in"
+        }
+       },
+       "0.625": {
+        "rpm": 1550,
+        "tableFeed": {
+         "value": 3.74,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.075,
+         "unit": "in"
+        }
+       },
+       "0.75": {
+        "rpm": 1260,
+        "tableFeed": {
+         "value": 2.95,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.09,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF19 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+      "page": "printed page 41 (PDF page 42)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. No grade name is printed. Flute-length group 1 of 4: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.008 in at LOC 0.046875 in; 0.012 in at LOC 0.046875 in; 0.015 in at LOC 0.046875, 0.0625 in; 0.02 in at LOC 0.046875 in; 0.024 in at LOC 0.078125 in; 0.031 in at LOC 0.078125 in; 0.046875 in at LOC 0.125 in; 0.0625 in at LOC 0.15625 in; 0.078125 in at LOC 0.25, 0.3125, 0.375 in; 0.125 in at LOC 0.3125, 0.375 in; 0.1875 in at LOC 0.375, 0.5 in; 0.25 in at LOC 0.75 in; 0.3125 in at LOC 1 in; 0.375 in at LOC 1.1875 in; 0.5 in at LOC 1.25 in; 0.625 in at LOC 1.375 in; 0.75 in at LOC 1.5 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    },
+    {
+     "label": "Hardened steels, HRc 45 ~ HRc 55, 1500 ~ 2000 N/mm2 \u00b7 flute length group 2",
+     "iso": "H",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF19 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.012": {
+        "rpm": 17720,
+        "tableFeed": {
+         "value": 1.57,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0006,
+         "unit": "in"
+        }
+       },
+       "0.015": {
+        "rpm": 18900,
+        "tableFeed": {
+         "value": 1.77,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0007,
+         "unit": "in"
+        }
+       },
+       "0.02": {
+        "rpm": 16830,
+        "tableFeed": {
+         "value": 2.36,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0017,
+         "unit": "in"
+        }
+       },
+       "0.024": {
+        "rpm": 12840,
+        "tableFeed": {
+         "value": 1.97,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0011,
+         "unit": "in"
+        }
+       },
+       "0.031": {
+        "rpm": 13260,
+        "tableFeed": {
+         "value": 2.17,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0015,
+         "unit": "in"
+        }
+       },
+       "0.046875": {
+        "rpm": 11090,
+        "tableFeed": {
+         "value": 2.36,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0039,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 9640,
+        "tableFeed": {
+         "value": 2.56,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0052,
+         "unit": "in"
+        }
+       },
+       "0.078125": {
+        "rpm": 7840,
+        "tableFeed": {
+         "value": 2.56,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0037,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 5950,
+        "tableFeed": {
+         "value": 2.95,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0105,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 4790,
+        "tableFeed": {
+         "value": 4.92,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0157,
+         "unit": "in"
+        }
+       },
+       "0.25": {
+        "rpm": 3710,
+        "tableFeed": {
+         "value": 5.12,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.021,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF19 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+      "page": "printed page 41 (PDF page 42)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. No grade name is printed. Flute-length group 2 of 4: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.012 in at LOC 0.078125 in; 0.015 in at LOC 0.078125, 0.09375 in; 0.02 in at LOC 0.0625, 0.078125 in; 0.024 in at LOC 0.125, 0.15625 in; 0.031 in at LOC 0.15625 in; 0.046875 in at LOC 0.15625 in; 0.0625 in at LOC 0.25, 0.3125 in; 0.078125 in at LOC 0.5, 0.5625, 0.625 in; 0.125 in at LOC 0.5, 0.625 in; 0.1875 in at LOC 0.625, 0.75 in; 0.25 in at LOC 1.1875 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    },
+    {
+     "label": "Hardened steels, HRc 45 ~ HRc 55, 1500 ~ 2000 N/mm2 \u00b7 flute length group 3",
+     "iso": "H",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF19 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.02": {
+        "rpm": 15150,
+        "tableFeed": {
+         "value": 1.97,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0009,
+         "unit": "in"
+        }
+       },
+       "0.024": {
+        "rpm": 11420,
+        "tableFeed": {
+         "value": 1.57,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0007,
+         "unit": "in"
+        }
+       },
+       "0.031": {
+        "rpm": 13260,
+        "tableFeed": {
+         "value": 2.17,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0009,
+         "unit": "in"
+        }
+       },
+       "0.046875": {
+        "rpm": 9980,
+        "tableFeed": {
+         "value": 1.97,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0022,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 8670,
+        "tableFeed": {
+         "value": 2.17,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.003,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 5360,
+        "tableFeed": {
+         "value": 2.36,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.006,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 4310,
+        "tableFeed": {
+         "value": 3.94,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.009,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF19 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+      "page": "printed page 41 (PDF page 42)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. No grade name is printed. Flute-length group 3 of 4: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.02 in at LOC 0.125, 0.15625 in; 0.024 in at LOC 0.25 in; 0.031 in at LOC 0.25 in; 0.046875 in at LOC 0.25, 0.3125, 0.375 in; 0.0625 in at LOC 0.375, 0.5 in; 0.125 in at LOC 0.75, 1 in; 0.1875 in at LOC 1, 1.1875 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    },
+    {
+     "label": "Hardened steels, HRc 45 ~ HRc 55, 1500 ~ 2000 N/mm2 \u00b7 flute length group 4",
+     "iso": "H",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF19 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.031": {
+        "rpm": 11790,
+        "tableFeed": {
+         "value": 1.57,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0009,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF19 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+      "page": "printed page 41 (PDF page 42)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. No grade name is printed. Flute-length group 4 of 4: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.031 in at LOC 0.3125 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "YG-1",
+   "series": "4G Mills GMF20 (4-flute corner radius)",
+   "type": "solid carbide end mill, 4-flute, corner radius",
+   "flutes": 4,
+   "diameters_in": [
+    0.046875,
+    0.078125,
+    0.125,
+    0.1875,
+    0.203125,
+    0.25,
+    0.3125,
+    0.375,
+    0.5,
+    0.625,
+    0.75
+   ],
+   "notes": "Corner radius (bull nose). Ap is the printed axial depth in inches for that neck length. Ball-nose charts are not in this file: several radius labels in the text layer do not match the size sequence.",
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "YG-1 Special Tailored Coating",
+    "coatingClass": "other",
+    "endShape": "bull",
+    "source": {
+     "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+     "retrieved": "2026-11-10",
+     "notes": "Cutting-condition pages print CORNER RADIUS. Contents (PDF page 3, printed page 2) prints the flute count: GMF19 2-flute, GMF20 and GMF21 4-flute. Cover prints YG-1 Special Tailored Coating."
+    }
+   },
+   "conditions": [
+    {
+     "label": "Non-alloyed steels and alloy steels, ~ HRc 35, ~ 1100 N/mm2",
+     "iso": "P",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF20 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.046875": {
+        "rpm": 25000,
+        "tableFeed": {
+         "value": 12.01,
+         "unit": "ipm"
+        }
+       },
+       "0.078125": {
+        "rpm": 18100,
+        "tableFeed": {
+         "value": 12.8,
+         "unit": "ipm"
+        }
+       },
+       "0.125": {
+        "rpm": 12500,
+        "tableFeed": {
+         "value": 12.6,
+         "unit": "ipm"
+        }
+       },
+       "0.1875": {
+        "rpm": 9400,
+        "tableFeed": {
+         "value": 15.75,
+         "unit": "ipm"
+        }
+       },
+       "0.203125": {
+        "rpm": 8900,
+        "tableFeed": {
+         "value": 16.34,
+         "unit": "ipm"
+        }
+       },
+       "0.25": {
+        "rpm": 7500,
+        "tableFeed": {
+         "value": 15.94,
+         "unit": "ipm"
+        }
+       },
+       "0.3125": {
+        "rpm": 6000,
+        "tableFeed": {
+         "value": 18.31,
+         "unit": "ipm"
+        }
+       },
+       "0.375": {
+        "rpm": 5300,
+        "tableFeed": {
+         "value": 19.09,
+         "unit": "ipm"
+        }
+       },
+       "0.5": {
+        "rpm": 3900,
+        "tableFeed": {
+         "value": 13.39,
+         "unit": "ipm"
+        }
+       },
+       "0.625": {
+        "rpm": 3100,
+        "tableFeed": {
+         "value": 11.02,
+         "unit": "ipm"
+        }
+       },
+       "0.75": {
+        "rpm": 2600,
+        "tableFeed": {
+         "value": 9.45,
+         "unit": "ipm"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF20 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=43",
+      "page": "printed page 42 (PDF page 43)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says cast iron. Cast iron is a separate condition with the same RPM and IPM. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored."
+     },
+     "materials": [
+      "p-mild",
+      "p-alloy"
+     ],
+     "sourceGroup": "Non-alloyed steels and alloy steels, ~ HRc 35, ~ 1100 N/mm2"
+    },
+    {
+     "label": "Cast iron, ~ HRc 35, ~ 1100 N/mm2",
+     "iso": "K",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF20 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.046875": {
+        "rpm": 25000,
+        "tableFeed": {
+         "value": 12.01,
+         "unit": "ipm"
+        }
+       },
+       "0.078125": {
+        "rpm": 18100,
+        "tableFeed": {
+         "value": 12.8,
+         "unit": "ipm"
+        }
+       },
+       "0.125": {
+        "rpm": 12500,
+        "tableFeed": {
+         "value": 12.6,
+         "unit": "ipm"
+        }
+       },
+       "0.1875": {
+        "rpm": 9400,
+        "tableFeed": {
+         "value": 15.75,
+         "unit": "ipm"
+        }
+       },
+       "0.203125": {
+        "rpm": 8900,
+        "tableFeed": {
+         "value": 16.34,
+         "unit": "ipm"
+        }
+       },
+       "0.25": {
+        "rpm": 7500,
+        "tableFeed": {
+         "value": 15.94,
+         "unit": "ipm"
+        }
+       },
+       "0.3125": {
+        "rpm": 6000,
+        "tableFeed": {
+         "value": 18.31,
+         "unit": "ipm"
+        }
+       },
+       "0.375": {
+        "rpm": 5300,
+        "tableFeed": {
+         "value": 19.09,
+         "unit": "ipm"
+        }
+       },
+       "0.5": {
+        "rpm": 3900,
+        "tableFeed": {
+         "value": 13.39,
+         "unit": "ipm"
+        }
+       },
+       "0.625": {
+        "rpm": 3100,
+        "tableFeed": {
+         "value": 11.02,
+         "unit": "ipm"
+        }
+       },
+       "0.75": {
+        "rpm": 2600,
+        "tableFeed": {
+         "value": 9.45,
+         "unit": "ipm"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF20 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=43",
+      "page": "printed page 42 (PDF page 43)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says non-alloyed steels and alloy steels. Grey and ductile are not named. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored."
+     }
+    },
+    {
+     "label": "Alloy steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2",
+     "iso": "P",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF20 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.046875": {
+        "rpm": 15870,
+        "tableFeed": {
+         "value": 8.86,
+         "unit": "ipm"
+        }
+       },
+       "0.078125": {
+        "rpm": 11650,
+        "tableFeed": {
+         "value": 9.45,
+         "unit": "ipm"
+        }
+       },
+       "0.125": {
+        "rpm": 8090,
+        "tableFeed": {
+         "value": 9.65,
+         "unit": "ipm"
+        }
+       },
+       "0.1875": {
+        "rpm": 5960,
+        "tableFeed": {
+         "value": 12.2,
+         "unit": "ipm"
+        }
+       },
+       "0.203125": {
+        "rpm": 5620,
+        "tableFeed": {
+         "value": 13.78,
+         "unit": "ipm"
+        }
+       },
+       "0.25": {
+        "rpm": 4760,
+        "tableFeed": {
+         "value": 13.39,
+         "unit": "ipm"
+        }
+       },
+       "0.3125": {
+        "rpm": 3830,
+        "tableFeed": {
+         "value": 14.37,
+         "unit": "ipm"
+        }
+       },
+       "0.375": {
+        "rpm": 3440,
+        "tableFeed": {
+         "value": 14.96,
+         "unit": "ipm"
+        }
+       },
+       "0.5": {
+        "rpm": 2630,
+        "tableFeed": {
+         "value": 11.81,
+         "unit": "ipm"
+        }
+       },
+       "0.625": {
+        "rpm": 2120,
+        "tableFeed": {
+         "value": 9.06,
+         "unit": "ipm"
+        }
+       },
+       "0.75": {
+        "rpm": 1720,
+        "tableFeed": {
+         "value": 7.48,
+         "unit": "ipm"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF20 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=43",
+      "page": "printed page 42 (PDF page 43)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says heat resistant steels. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored."
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2"
+    },
+    {
+     "label": "Heat resistant steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2",
+     "iso": "S",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF20 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.046875": {
+        "rpm": 15870,
+        "tableFeed": {
+         "value": 8.86,
+         "unit": "ipm"
+        }
+       },
+       "0.078125": {
+        "rpm": 11650,
+        "tableFeed": {
+         "value": 9.45,
+         "unit": "ipm"
+        }
+       },
+       "0.125": {
+        "rpm": 8090,
+        "tableFeed": {
+         "value": 9.65,
+         "unit": "ipm"
+        }
+       },
+       "0.1875": {
+        "rpm": 5960,
+        "tableFeed": {
+         "value": 12.2,
+         "unit": "ipm"
+        }
+       },
+       "0.203125": {
+        "rpm": 5620,
+        "tableFeed": {
+         "value": 13.78,
+         "unit": "ipm"
+        }
+       },
+       "0.25": {
+        "rpm": 4760,
+        "tableFeed": {
+         "value": 13.39,
+         "unit": "ipm"
+        }
+       },
+       "0.3125": {
+        "rpm": 3830,
+        "tableFeed": {
+         "value": 14.37,
+         "unit": "ipm"
+        }
+       },
+       "0.375": {
+        "rpm": 3440,
+        "tableFeed": {
+         "value": 14.96,
+         "unit": "ipm"
+        }
+       },
+       "0.5": {
+        "rpm": 2630,
+        "tableFeed": {
+         "value": 11.81,
+         "unit": "ipm"
+        }
+       },
+       "0.625": {
+        "rpm": 2120,
+        "tableFeed": {
+         "value": 9.06,
+         "unit": "ipm"
+        }
+       },
+       "0.75": {
+        "rpm": 1720,
+        "tableFeed": {
+         "value": 7.48,
+         "unit": "ipm"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF20 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=43",
+      "page": "printed page 42 (PDF page 43)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says alloy steels. No alloy name (no 718, no Ti-6Al-4V) is printed in this column. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored."
+     }
+    },
+    {
+     "label": "Hardened steels, HRc 45 ~ HRc 55, 1500 ~ 2000 N/mm2",
+     "iso": "H",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF20 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.046875": {
+        "rpm": 9830,
+        "tableFeed": {
+         "value": 4.72,
+         "unit": "ipm"
+        }
+       },
+       "0.078125": {
+        "rpm": 7260,
+        "tableFeed": {
+         "value": 5.12,
+         "unit": "ipm"
+        }
+       },
+       "0.125": {
+        "rpm": 4990,
+        "tableFeed": {
+         "value": 4.92,
+         "unit": "ipm"
+        }
+       },
+       "0.1875": {
+        "rpm": 3830,
+        "tableFeed": {
+         "value": 5.71,
+         "unit": "ipm"
+        }
+       },
+       "0.203125": {
+        "rpm": 3680,
+        "tableFeed": {
+         "value": 6.5,
+         "unit": "ipm"
+        }
+       },
+       "0.25": {
+        "rpm": 3100,
+        "tableFeed": {
+         "value": 6.3,
+         "unit": "ipm"
+        }
+       },
+       "0.3125": {
+        "rpm": 2540,
+        "tableFeed": {
+         "value": 6.69,
+         "unit": "ipm"
+        }
+       },
+       "0.375": {
+        "rpm": 2120,
+        "tableFeed": {
+         "value": 7.09,
+         "unit": "ipm"
+        }
+       },
+       "0.5": {
+        "rpm": 1590,
+        "tableFeed": {
+         "value": 5.12,
+         "unit": "ipm"
+        }
+       },
+       "0.625": {
+        "rpm": 1290,
+        "tableFeed": {
+         "value": 4.53,
+         "unit": "ipm"
+        }
+       },
+       "0.75": {
+        "rpm": 1050,
+        "tableFeed": {
+         "value": 3.74,
+         "unit": "ipm"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF20 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=43",
+      "page": "printed page 42 (PDF page 43)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. No grade name is printed. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "YG-1",
+   "series": "4G Mills GMF21 (4-flute long neck corner radius)",
+   "type": "solid carbide end mill, 4-flute, corner radius",
+   "flutes": 4,
+   "diameters_in": [
+    0.046875,
+    0.0625,
+    0.078125,
+    0.125,
+    0.1875,
+    0.25,
+    0.3125,
+    0.375,
+    0.5,
+    0.625,
+    0.75
+   ],
+   "notes": "Corner radius (bull nose). Ap is the printed axial depth in inches for that neck length. Ball-nose charts are not in this file: several radius labels in the text layer do not match the size sequence.",
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "YG-1 Special Tailored Coating",
+    "coatingClass": "other",
+    "endShape": "bull",
+    "source": {
+     "url": "https://www.yg1usa.com/downloads/4G.pdf#page=42",
+     "retrieved": "2026-11-10",
+     "notes": "Cutting-condition pages print CORNER RADIUS. Contents (PDF page 3, printed page 2) prints the flute count: GMF19 2-flute, GMF20 and GMF21 4-flute. Cover prints YG-1 Special Tailored Coating."
+    }
+   },
+   "conditions": [
+    {
+     "label": "Non-alloyed steels and alloy steels, ~ HRc 35, ~ 1100 N/mm2 \u00b7 flute length group 1",
+     "iso": "P",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF21 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.046875": {
+        "rpm": 29980,
+        "tableFeed": {
+         "value": 14.57,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.001,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 24940,
+        "tableFeed": {
+         "value": 13.78,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0013,
+         "unit": "in"
+        }
+       },
+       "0.078125": {
+        "rpm": 21770,
+        "tableFeed": {
+         "value": 15.16,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0017,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 15020,
+        "tableFeed": {
+         "value": 14.96,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0037,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 11550,
+        "tableFeed": {
+         "value": 21.06,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0056,
+         "unit": "in"
+        }
+       },
+       "0.25": {
+        "rpm": 8980,
+        "tableFeed": {
+         "value": 18.9,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0075,
+         "unit": "in"
+        }
+       },
+       "0.3125": {
+        "rpm": 7260,
+        "tableFeed": {
+         "value": 21.85,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0066,
+         "unit": "in"
+        }
+       },
+       "0.375": {
+        "rpm": 6300,
+        "tableFeed": {
+         "value": 22.64,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0079,
+         "unit": "in"
+        }
+       },
+       "0.5": {
+        "rpm": 4720,
+        "tableFeed": {
+         "value": 15.94,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.015,
+         "unit": "in"
+        }
+       },
+       "0.625": {
+        "rpm": 3750,
+        "tableFeed": {
+         "value": 13.19,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0187,
+         "unit": "in"
+        }
+       },
+       "0.75": {
+        "rpm": 3150,
+        "tableFeed": {
+         "value": 11.22,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0225,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF21 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=44",
+      "page": "printed page 43 (PDF page 44)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says cast iron. Cast iron is a separate condition with the same RPM and IPM. Flute-length group 1 of 3: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.046875 in at LOC 0.15625 in; 0.0625 in at LOC 0.25, 0.3125 in; 0.078125 in at LOC 0.25, 0.3125, 0.375 in; 0.125 in at LOC 0.3125, 0.375 in; 0.1875 in at LOC 0.375, 0.5 in; 0.25 in at LOC 0.75 in; 0.3125 in at LOC 1, 1.375 in; 0.375 in at LOC 1.1875, 1.5 in; 0.5 in at LOC 1.25 in; 0.625 in at LOC 1.375 in; 0.75 in at LOC 1.5 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     },
+     "materials": [
+      "p-mild",
+      "p-alloy"
+     ],
+     "sourceGroup": "Non-alloyed steels and alloy steels, ~ HRc 35, ~ 1100 N/mm2"
+    },
+    {
+     "label": "Cast iron, ~ HRc 35, ~ 1100 N/mm2 \u00b7 flute length group 1",
+     "iso": "K",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF21 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.046875": {
+        "rpm": 29980,
+        "tableFeed": {
+         "value": 14.57,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.001,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 24940,
+        "tableFeed": {
+         "value": 13.78,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0013,
+         "unit": "in"
+        }
+       },
+       "0.078125": {
+        "rpm": 21770,
+        "tableFeed": {
+         "value": 15.16,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0017,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 15020,
+        "tableFeed": {
+         "value": 14.96,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0037,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 11550,
+        "tableFeed": {
+         "value": 21.06,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0056,
+         "unit": "in"
+        }
+       },
+       "0.25": {
+        "rpm": 8980,
+        "tableFeed": {
+         "value": 18.9,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0075,
+         "unit": "in"
+        }
+       },
+       "0.3125": {
+        "rpm": 7260,
+        "tableFeed": {
+         "value": 21.85,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0066,
+         "unit": "in"
+        }
+       },
+       "0.375": {
+        "rpm": 6300,
+        "tableFeed": {
+         "value": 22.64,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0079,
+         "unit": "in"
+        }
+       },
+       "0.5": {
+        "rpm": 4720,
+        "tableFeed": {
+         "value": 15.94,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.015,
+         "unit": "in"
+        }
+       },
+       "0.625": {
+        "rpm": 3750,
+        "tableFeed": {
+         "value": 13.19,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0187,
+         "unit": "in"
+        }
+       },
+       "0.75": {
+        "rpm": 3150,
+        "tableFeed": {
+         "value": 11.22,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0225,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF21 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=44",
+      "page": "printed page 43 (PDF page 44)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says non-alloyed steels and alloy steels. Grey and ductile are not named. Flute-length group 1 of 3: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.046875 in at LOC 0.15625 in; 0.0625 in at LOC 0.25, 0.3125 in; 0.078125 in at LOC 0.25, 0.3125, 0.375 in; 0.125 in at LOC 0.3125, 0.375 in; 0.1875 in at LOC 0.375, 0.5 in; 0.25 in at LOC 0.75 in; 0.3125 in at LOC 1, 1.375 in; 0.375 in at LOC 1.1875, 1.5 in; 0.5 in at LOC 1.25 in; 0.625 in at LOC 1.375 in; 0.75 in at LOC 1.5 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    },
+    {
+     "label": "Non-alloyed steels and alloy steels, ~ HRc 35, ~ 1100 N/mm2 \u00b7 flute length group 2",
+     "iso": "P",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF21 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.046875": {
+        "rpm": 26990,
+        "tableFeed": {
+         "value": 11.81,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0006,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 22450,
+        "tableFeed": {
+         "value": 11.22,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0007,
+         "unit": "in"
+        }
+       },
+       "0.078125": {
+        "rpm": 19590,
+        "tableFeed": {
+         "value": 12.2,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0009,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 15020,
+        "tableFeed": {
+         "value": 14.96,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0026,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 11550,
+        "tableFeed": {
+         "value": 21.06,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0039,
+         "unit": "in"
+        }
+       },
+       "0.5": {
+        "rpm": 4720,
+        "tableFeed": {
+         "value": 15.94,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0105,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF21 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=44",
+      "page": "printed page 43 (PDF page 44)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says cast iron. Cast iron is a separate condition with the same RPM and IPM. Flute-length group 2 of 3: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.046875 in at LOC 0.25, 0.3125 in; 0.0625 in at LOC 0.375, 0.5 in; 0.078125 in at LOC 0.5 in; 0.125 in at LOC 0.5, 0.625 in; 0.1875 in at LOC 0.625, 0.75 in; 0.5 in at LOC 1.75 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     },
+     "materials": [
+      "p-mild",
+      "p-alloy"
+     ],
+     "sourceGroup": "Non-alloyed steels and alloy steels, ~ HRc 35, ~ 1100 N/mm2"
+    },
+    {
+     "label": "Cast iron, ~ HRc 35, ~ 1100 N/mm2 \u00b7 flute length group 2",
+     "iso": "K",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF21 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.046875": {
+        "rpm": 26990,
+        "tableFeed": {
+         "value": 11.81,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0006,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 22450,
+        "tableFeed": {
+         "value": 11.22,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0007,
+         "unit": "in"
+        }
+       },
+       "0.078125": {
+        "rpm": 19590,
+        "tableFeed": {
+         "value": 12.2,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0009,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 15020,
+        "tableFeed": {
+         "value": 14.96,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0026,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 11550,
+        "tableFeed": {
+         "value": 21.06,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0039,
+         "unit": "in"
+        }
+       },
+       "0.5": {
+        "rpm": 4720,
+        "tableFeed": {
+         "value": 15.94,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0105,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF21 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=44",
+      "page": "printed page 43 (PDF page 44)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says non-alloyed steels and alloy steels. Grey and ductile are not named. Flute-length group 2 of 3: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.046875 in at LOC 0.25, 0.3125 in; 0.0625 in at LOC 0.375, 0.5 in; 0.078125 in at LOC 0.5 in; 0.125 in at LOC 0.5, 0.625 in; 0.1875 in at LOC 0.625, 0.75 in; 0.5 in at LOC 1.75 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    },
+    {
+     "label": "Non-alloyed steels and alloy steels, ~ HRc 35, ~ 1100 N/mm2 \u00b7 flute length group 3",
+     "iso": "P",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF21 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.125": {
+        "rpm": 13520,
+        "tableFeed": {
+         "value": 12.01,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0015,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 10390,
+        "tableFeed": {
+         "value": 17.13,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0022,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF21 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=44",
+      "page": "printed page 43 (PDF page 44)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says cast iron. Cast iron is a separate condition with the same RPM and IPM. Flute-length group 3 of 3: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.125 in at LOC 0.75, 1 in; 0.1875 in at LOC 1 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     },
+     "materials": [
+      "p-mild",
+      "p-alloy"
+     ],
+     "sourceGroup": "Non-alloyed steels and alloy steels, ~ HRc 35, ~ 1100 N/mm2"
+    },
+    {
+     "label": "Cast iron, ~ HRc 35, ~ 1100 N/mm2 \u00b7 flute length group 3",
+     "iso": "K",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF21 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.125": {
+        "rpm": 13520,
+        "tableFeed": {
+         "value": 12.01,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0015,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 10390,
+        "tableFeed": {
+         "value": 17.13,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0022,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF21 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=44",
+      "page": "printed page 43 (PDF page 44)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says non-alloyed steels and alloy steels. Grey and ductile are not named. Flute-length group 3 of 3: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.125 in at LOC 0.75, 1 in; 0.1875 in at LOC 1 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    },
+    {
+     "label": "Alloy steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2 \u00b7 flute length group 1",
+     "iso": "P",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF21 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.046875": {
+        "rpm": 19050,
+        "tableFeed": {
+         "value": 10.43,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0007,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 15310,
+        "tableFeed": {
+         "value": 10.04,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.001,
+         "unit": "in"
+        }
+       },
+       "0.078125": {
+        "rpm": 13910,
+        "tableFeed": {
+         "value": 11.02,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0012,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 9730,
+        "tableFeed": {
+         "value": 11.61,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0028,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 7350,
+        "tableFeed": {
+         "value": 17.72,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0042,
+         "unit": "in"
+        }
+       },
+       "0.25": {
+        "rpm": 5670,
+        "tableFeed": {
+         "value": 15.94,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0056,
+         "unit": "in"
+        }
+       },
+       "0.3125": {
+        "rpm": 4590,
+        "tableFeed": {
+         "value": 17.13,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0049,
+         "unit": "in"
+        }
+       },
+       "0.375": {
+        "rpm": 4200,
+        "tableFeed": {
+         "value": 17.72,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0059,
+         "unit": "in"
+        }
+       },
+       "0.5": {
+        "rpm": 3160,
+        "tableFeed": {
+         "value": 14.17,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0113,
+         "unit": "in"
+        }
+       },
+       "0.625": {
+        "rpm": 2540,
+        "tableFeed": {
+         "value": 11.02,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0141,
+         "unit": "in"
+        }
+       },
+       "0.75": {
+        "rpm": 2050,
+        "tableFeed": {
+         "value": 8.66,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0169,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF21 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=44",
+      "page": "printed page 43 (PDF page 44)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says heat resistant steels. Flute-length group 1 of 3: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.046875 in at LOC 0.15625 in; 0.0625 in at LOC 0.25, 0.3125 in; 0.078125 in at LOC 0.25, 0.3125, 0.375 in; 0.125 in at LOC 0.3125, 0.375 in; 0.1875 in at LOC 0.375, 0.5 in; 0.25 in at LOC 0.75 in; 0.3125 in at LOC 1, 1.375 in; 0.375 in at LOC 1.1875, 1.5 in; 0.5 in at LOC 1.25 in; 0.625 in at LOC 1.375 in; 0.75 in at LOC 1.5 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2"
+    },
+    {
+     "label": "Heat resistant steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2 \u00b7 flute length group 1",
+     "iso": "S",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF21 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.046875": {
+        "rpm": 19050,
+        "tableFeed": {
+         "value": 10.43,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0007,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 15310,
+        "tableFeed": {
+         "value": 10.04,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.001,
+         "unit": "in"
+        }
+       },
+       "0.078125": {
+        "rpm": 13910,
+        "tableFeed": {
+         "value": 11.02,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0012,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 9730,
+        "tableFeed": {
+         "value": 11.61,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0028,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 7350,
+        "tableFeed": {
+         "value": 17.72,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0042,
+         "unit": "in"
+        }
+       },
+       "0.25": {
+        "rpm": 5670,
+        "tableFeed": {
+         "value": 15.94,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0056,
+         "unit": "in"
+        }
+       },
+       "0.3125": {
+        "rpm": 4590,
+        "tableFeed": {
+         "value": 17.13,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0049,
+         "unit": "in"
+        }
+       },
+       "0.375": {
+        "rpm": 4200,
+        "tableFeed": {
+         "value": 17.72,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0059,
+         "unit": "in"
+        }
+       },
+       "0.5": {
+        "rpm": 3160,
+        "tableFeed": {
+         "value": 14.17,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0113,
+         "unit": "in"
+        }
+       },
+       "0.625": {
+        "rpm": 2540,
+        "tableFeed": {
+         "value": 11.02,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0141,
+         "unit": "in"
+        }
+       },
+       "0.75": {
+        "rpm": 2050,
+        "tableFeed": {
+         "value": 8.66,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0169,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF21 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=44",
+      "page": "printed page 43 (PDF page 44)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says alloy steels. No alloy name (no 718, no Ti-6Al-4V) is printed in this column. Flute-length group 1 of 3: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.046875 in at LOC 0.15625 in; 0.0625 in at LOC 0.25, 0.3125 in; 0.078125 in at LOC 0.25, 0.3125, 0.375 in; 0.125 in at LOC 0.3125, 0.375 in; 0.1875 in at LOC 0.375, 0.5 in; 0.25 in at LOC 0.75 in; 0.3125 in at LOC 1, 1.375 in; 0.375 in at LOC 1.1875, 1.5 in; 0.5 in at LOC 1.25 in; 0.625 in at LOC 1.375 in; 0.75 in at LOC 1.5 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    },
+    {
+     "label": "Alloy steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2 \u00b7 flute length group 2",
+     "iso": "P",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF21 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.046875": {
+        "rpm": 17140,
+        "tableFeed": {
+         "value": 8.46,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0004,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 13780,
+        "tableFeed": {
+         "value": 8.07,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0006,
+         "unit": "in"
+        }
+       },
+       "0.078125": {
+        "rpm": 12520,
+        "tableFeed": {
+         "value": 9.06,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0007,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 9730,
+        "tableFeed": {
+         "value": 11.61,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.002,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 7350,
+        "tableFeed": {
+         "value": 17.72,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.003,
+         "unit": "in"
+        }
+       },
+       "0.5": {
+        "rpm": 3160,
+        "tableFeed": {
+         "value": 14.17,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0079,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF21 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=44",
+      "page": "printed page 43 (PDF page 44)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says heat resistant steels. Flute-length group 2 of 3: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.046875 in at LOC 0.25, 0.3125 in; 0.0625 in at LOC 0.375, 0.5 in; 0.078125 in at LOC 0.5 in; 0.125 in at LOC 0.5, 0.625 in; 0.1875 in at LOC 0.625, 0.75 in; 0.5 in at LOC 1.75 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2"
+    },
+    {
+     "label": "Heat resistant steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2 \u00b7 flute length group 2",
+     "iso": "S",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF21 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.046875": {
+        "rpm": 17140,
+        "tableFeed": {
+         "value": 8.46,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0004,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 13780,
+        "tableFeed": {
+         "value": 8.07,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0006,
+         "unit": "in"
+        }
+       },
+       "0.078125": {
+        "rpm": 12520,
+        "tableFeed": {
+         "value": 9.06,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0007,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 9730,
+        "tableFeed": {
+         "value": 11.61,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.002,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 7350,
+        "tableFeed": {
+         "value": 17.72,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.003,
+         "unit": "in"
+        }
+       },
+       "0.5": {
+        "rpm": 3160,
+        "tableFeed": {
+         "value": 14.17,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0079,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF21 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=44",
+      "page": "printed page 43 (PDF page 44)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says alloy steels. No alloy name (no 718, no Ti-6Al-4V) is printed in this column. Flute-length group 2 of 3: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.046875 in at LOC 0.25, 0.3125 in; 0.0625 in at LOC 0.375, 0.5 in; 0.078125 in at LOC 0.5 in; 0.125 in at LOC 0.5, 0.625 in; 0.1875 in at LOC 0.625, 0.75 in; 0.5 in at LOC 1.75 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    },
+    {
+     "label": "Alloy steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2 \u00b7 flute length group 3",
+     "iso": "P",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF21 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.125": {
+        "rpm": 8760,
+        "tableFeed": {
+         "value": 9.25,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0011,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 6610,
+        "tableFeed": {
+         "value": 14.37,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0017,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF21 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=44",
+      "page": "printed page 43 (PDF page 44)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says heat resistant steels. Flute-length group 3 of 3: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.125 in at LOC 0.75, 1 in; 0.1875 in at LOC 1 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     },
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Alloy steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2"
+    },
+    {
+     "label": "Heat resistant steels, HRc 35 ~ HRc 45, 1110 ~ 1500 N/mm2 \u00b7 flute length group 3",
+     "iso": "S",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF21 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.125": {
+        "rpm": 8760,
+        "tableFeed": {
+         "value": 9.25,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0011,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 6610,
+        "tableFeed": {
+         "value": 14.37,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0017,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF21 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=44",
+      "page": "printed page 43 (PDF page 44)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. Same printed column also says alloy steels. No alloy name (no 718, no Ti-6Al-4V) is printed in this column. Flute-length group 3 of 3: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.125 in at LOC 0.75, 1 in; 0.1875 in at LOC 1 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    },
+    {
+     "label": "Hardened steels, HRc 45 ~ HRc 55, 1500 ~ 2000 N/mm2 \u00b7 flute length group 1",
+     "iso": "H",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF21 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.046875": {
+        "rpm": 11790,
+        "tableFeed": {
+         "value": 5.51,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0006,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 9640,
+        "tableFeed": {
+         "value": 5.12,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0008,
+         "unit": "in"
+        }
+       },
+       "0.078125": {
+        "rpm": 8710,
+        "tableFeed": {
+         "value": 5.91,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.001,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 5950,
+        "tableFeed": {
+         "value": 5.51,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0022,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 4790,
+        "tableFeed": {
+         "value": 8.27,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0034,
+         "unit": "in"
+        }
+       },
+       "0.25": {
+        "rpm": 3710,
+        "tableFeed": {
+         "value": 7.48,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0045,
+         "unit": "in"
+        }
+       },
+       "0.3125": {
+        "rpm": 3040,
+        "tableFeed": {
+         "value": 7.87,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0039,
+         "unit": "in"
+        }
+       },
+       "0.375": {
+        "rpm": 2540,
+        "tableFeed": {
+         "value": 8.27,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0047,
+         "unit": "in"
+        }
+       },
+       "0.5": {
+        "rpm": 1890,
+        "tableFeed": {
+         "value": 5.91,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.009,
+         "unit": "in"
+        }
+       },
+       "0.625": {
+        "rpm": 1550,
+        "tableFeed": {
+         "value": 5.31,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0113,
+         "unit": "in"
+        }
+       },
+       "0.75": {
+        "rpm": 1260,
+        "tableFeed": {
+         "value": 4.13,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0135,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF21 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=44",
+      "page": "printed page 43 (PDF page 44)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. No grade name is printed. Flute-length group 1 of 3: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.046875 in at LOC 0.15625 in; 0.0625 in at LOC 0.25, 0.3125 in; 0.078125 in at LOC 0.25, 0.3125, 0.375 in; 0.125 in at LOC 0.3125, 0.375 in; 0.1875 in at LOC 0.375, 0.5 in; 0.25 in at LOC 0.75 in; 0.3125 in at LOC 1, 1.375 in; 0.375 in at LOC 1.1875, 1.5 in; 0.5 in at LOC 1.25 in; 0.625 in at LOC 1.375 in; 0.75 in at LOC 1.5 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    },
+    {
+     "label": "Hardened steels, HRc 45 ~ HRc 55, 1500 ~ 2000 N/mm2 \u00b7 flute length group 2",
+     "iso": "H",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF21 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.046875": {
+        "rpm": 10610,
+        "tableFeed": {
+         "value": 4.53,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0004,
+         "unit": "in"
+        }
+       },
+       "0.0625": {
+        "rpm": 8670,
+        "tableFeed": {
+         "value": 4.13,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0004,
+         "unit": "in"
+        }
+       },
+       "0.078125": {
+        "rpm": 7840,
+        "tableFeed": {
+         "value": 4.72,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0006,
+         "unit": "in"
+        }
+       },
+       "0.125": {
+        "rpm": 5950,
+        "tableFeed": {
+         "value": 5.51,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0016,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 4790,
+        "tableFeed": {
+         "value": 8.27,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0024,
+         "unit": "in"
+        }
+       },
+       "0.5": {
+        "rpm": 1890,
+        "tableFeed": {
+         "value": 5.91,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0063,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF21 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=44",
+      "page": "printed page 43 (PDF page 44)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. No grade name is printed. Flute-length group 2 of 3: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.046875 in at LOC 0.25, 0.3125 in; 0.0625 in at LOC 0.375, 0.5 in; 0.078125 in at LOC 0.5 in; 0.125 in at LOC 0.5, 0.625 in; 0.1875 in at LOC 0.625, 0.75 in; 0.5 in at LOC 1.75 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    },
+    {
+     "label": "Hardened steels, HRc 45 ~ HRc 55, 1500 ~ 2000 N/mm2 \u00b7 flute length group 3",
+     "iso": "H",
+     "status": "verified",
+     "coolant": "Dry & Wet Cutting",
+     "sfm": null,
+     "operation": "normal speed",
+     "table": "GMF21 recommended cutting conditions",
+     "strictMaterials": true,
+     "printed": {
+      "unit": "in",
+      "byDiameter": {
+       "0.125": {
+        "rpm": 5360,
+        "tableFeed": {
+         "value": 4.53,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0009,
+         "unit": "in"
+        }
+       },
+       "0.1875": {
+        "rpm": 4310,
+        "tableFeed": {
+         "value": 6.69,
+         "unit": "ipm"
+        },
+        "ap": {
+         "value": 0.0013,
+         "unit": "in"
+        }
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 4G Mills GMF21 recommended cutting conditions",
+      "edition": "4G Mills YU-4G13, PDF created 2013-11-08",
+      "url": "https://www.yg1usa.com/downloads/4G.pdf#page=44",
+      "page": "printed page 43 (PDF page 44)",
+      "retrieved": "2026-11-10",
+      "notes": "Chart prints RPM and inch/min, not SFM or chip load. SFM and chip load on the card are derived from those printed columns. No grade name is printed. Flute-length group 3 of 3: where one diameter is printed at more than one length of cut with different RPM or IPM, each distinct pair is its own condition. Lengths in this condition: 0.125 in at LOC 0.75, 1 in; 0.1875 in at LOC 1 in. Coolant from the catalog cover (\"Dry & Wet Cutting\") and the back page (\"dry and wet cut recommended together\"). Depth figures under the table are column-specific and, on some columns, smaller for small diameters, so a single ap\u00d7D / ae\u00d7D is not stored except the per-diameter Ap(inch) copied onto each printed diameter."
+     }
+    }
+   ]
+  }
+ ]
+}
