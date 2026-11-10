@@ -450,7 +450,7 @@ function run() { tapBox(); updateFindLink(); favMark();
     $('cards').innerHTML = `<div class="out"><span class="warn">Catalogs don't print facing separately. Use the Turn numbers for the same insert.</span><br><button id="faceTurn" class="chip">Switch Operation to Turn</button></div>`;
     $('faceTurn').onclick = () => { $('top').value = 'Turn'; fillBrand(); }; }
   $('out').hidden = true;
-  $('bar').innerHTML = BAR.length ? BAR.map(([k, x]) => `<span>${x} <small>${k}</small></span>`).join('') + `<small>${t ? (mode === 'tap' ? geo(t) : short(t.series)) : ''}</small>` + (usesR3 ? '<small class="r3w">OTHER MAKER</small>' : usesEst ? '<small class="estw">ESTIMATE</small>' : '') : TH() && t && !threadPitchIn(+$('tpi').value, $('pitchU').value) ? '<small>Enter TPI</small>' : `<small>${half || 'No manufacturer data for this combo'}</small>`;
+  $('bar').innerHTML = BAR.length ? BAR.map(([k, x]) => `<span>${x} <small>${k}</small></span>`).join('') + `<small class="tn" title="${esc(t ? (mode === 'tap' ? geo(t) : short(t.series)) : '')}">${t ? (mode === 'tap' ? geo(t) : short(t.series)) : ''}</small>` + (usesR3 ? '<small class="r3w">OTHER MAKER</small>' : usesEst ? '<small class="estw">ESTIMATE</small>' : '') : TH() && t && !threadPitchIn(+$('tpi').value, $('pitchU').value) ? '<small>Enter TPI</small>' : `<small>${half || 'No manufacturer data for this combo'}</small>`;
   if (!$('mach').value) $('bar').innerHTML += '<span class="warn" style="font-size:15px;width:100%">No machine selected — RPM not limited</span>';
 }
 $('cards').onclick = e => { if (e.target.closest('.estd')) return; const rs = e.target.closest('[data-reset]')?.dataset.reset; if (rs) { setIn(rs, defs[rs]); return run(); }
