@@ -237,9 +237,10 @@ export const rangeText = (p, dp) => !p ? '' : p.min == null ? p.def.toFixed(dp) 
 // A printed row diameter in the label, e.g. 'DC ø13~ø15.5' (mm), in inches with a small tolerance.
 export const labelDia = c => { const m = String(c.label ?? '').match(/ø\s*([\d.]+)\s*[~–-]\s*ø?\s*([\d.]+)/); return m ? [m[1] / 25.4 - 1e-4, m[2] / 25.4 + 1e-4] : null; };
 export function drillSpans(t) { const out = new Set(), sr = sizeRange(t), toIn = (v, u) => (u === 'mm' ? v / 25.4 : v), r4 = x => Math.round(x * 1e4) / 1e4;
-  for (const c of t.conditions) { const f = c.feed; if (!c.sfm || c.status === 'shop-proven') continue; const u = f?.unit ? toIn(1, f.unit) : 1, add = (a, b) => out.add(JSON.stringify([c.iso, r4(a), r4(b)]));
+  for (const c of t.conditions) { const f = c.feed; if (c.status === 'shop-proven' || (!c.sfm && !c.printed?.byDiameter)) continue; const u = f?.unit ? toIn(1, f.unit) : 1, add = (a, b) => out.add(JSON.stringify([c.iso, r4(a), r4(b)]));
     if (f?.bands) f.bands.forEach(([a, z]) => add(a * u - 1e-4, z * u + 1e-4));
     else if (f?.byDiameter) Object.keys(f.byDiameter).forEach(k => add(toIn(+k, f.unit) - 0.02, toIn(+k, f.unit) + 0.02));
+    else if (c.printed?.byDiameter) Object.keys(c.printed.byDiameter).forEach(k => add(toIn(+k, c.printed.unit) - 0.02, toIn(+k, c.printed.unit) + 0.02));
     else if (f?.range && labelDia(c)) add(...labelDia(c));
     else if ((f?.range || c.fzPerD) && sr) add(sr[0] - 1e-4, sr[1] + 1e-4);
     else if (c.fzPerD) add(0, 99); } // a plain range with no printed diameter does not count as data at a size
