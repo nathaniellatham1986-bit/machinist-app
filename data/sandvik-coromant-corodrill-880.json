@@ -728,9 +728,12 @@
    "type": "indexable insert drill (CoroDrill 880), peripheral insert 880-06 04 W08H-P-LM 4334",
    "grade": "4334",
    "diameters_in": [
-    1.1811
+    1.1811,
+    1.25,
+    1.312,
+    1.375
    ],
-   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 06 peripheral insert: 880-D3000L32-03 (1.1811 in)",
+   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 06 peripheral insert: 880-D3000L32-03 (1.1811 in) Also printed in Sandvik Coromant Rotating Tools 2015, CoroDrill 880, cylindrical shank with flat (ISO 9766), 3×D (https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf): p. K50 880-D3050L32-03 DC 30.50 mm, 880-D3100L40-03 DC 31.00 mm, 880-D3150L40-03 DC 31.50 mm, 880-D3200L40-03 DC 32.00 mm, 880-D3250L40-03 DC 32.50 mm, 880-D3300L40-03 DC 33.00 mm, 880-D3350L40-03 DC 33.50 mm, 880-D3400L40-03 DC 34.00 mm, 880-D3450L40-03 DC 34.50 mm, 880-D3500L40-03 DC 35.00 mm; p. K51 880-D3550L40-03 DC 35.50 mm; p. K54 A880-D1250LX38-03 DC 1.250 in, A880-D1312LX38-03 DC 1.312 in, A880-D1375LX38-03 DC 1.375 in. Spot-check 2026-11-10: https://www.sandvik.coromant.com/en-us/product-details?c=880-D3200L40-03 prints DC 1.2598 in.",
    "conditions": [
     {
      "label": "Reference material P2.1.Z.AN, 175 HB (start values, LxD 3)",
@@ -764,8 +767,22 @@
       "catalog": "Sandvik Coromant product page 880-06 04 W08H-P-LM 4334: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-06+04+w08h-p-lm+4334",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 06 are printed in Sandvik Coromant Rotating Tools 2015 pp. K50–K51 (metric 30.50–35.50 mm) and p. K54 (inch 1.250, 1.312, 1.375), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K50–K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     },
     {
      "label": "Reference material M1.0.Z.AQ, 200 HB (start values, LxD 3)",
@@ -799,8 +816,22 @@
       "catalog": "Sandvik Coromant product page 880-06 04 W08H-P-LM 4334: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-06+04+w08h-p-lm+4334",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 06 are printed in Sandvik Coromant Rotating Tools 2015 pp. K50–K51 (metric 30.50–35.50 mm) and p. K54 (inch 1.250, 1.312, 1.375), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K50–K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     },
     {
      "label": "Reference material K2.2.C.UT, 245 HB (start values, LxD 3)",
@@ -834,9 +865,36 @@
       "catalog": "Sandvik Coromant product page 880-06 04 W08H-P-LM 4334: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-06+04+w08h-p-lm+4334",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 06 are printed in Sandvik Coromant Rotating Tools 2015 pp. K50–K51 (metric 30.50–35.50 mm) and p. K54 (inch 1.250, 1.312, 1.375), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K50–K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     }
+   ],
+   "diameters_mm": [
+    30.5,
+    31,
+    31.5,
+    32,
+    32.5,
+    33,
+    33.5,
+    34,
+    34.5,
+    35,
+    35.5
    ]
   },
   {
@@ -846,9 +904,13 @@
    "type": "indexable insert drill (CoroDrill 880), peripheral insert 880-07 04 W10H-P-LM 4334",
    "grade": "4334",
    "diameters_in": [
+    1.437,
+    1.5,
+    1.562,
+    1.625,
     1.6535
    ],
-   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 07 peripheral insert: 880-D4200L40-03 (1.6535 in)",
+   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 07 peripheral insert: 880-D4200L40-03 (1.6535 in) Also printed in Sandvik Coromant Rotating Tools 2015, CoroDrill 880, cylindrical shank with flat (ISO 9766), 3×D (https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf): p. K51 880-D3600L40-03 DC 36.00 mm, 880-D3700L40-03 DC 37.00 mm, 880-D3800L40-03 DC 38.00 mm, 880-D3900L40-03 DC 39.00 mm, 880-D4000L40-03 DC 40.00 mm, 880-D4100L40-03 DC 41.00 mm; p. K54 A880-D1437LX38-03 DC 1.437 in, A880-D1500LX38-03 DC 1.500 in, A880-D1562LX38-03 DC 1.562 in, A880-D1625LX38-03 DC 1.625 in. Spot-check 2026-11-10: https://www.sandvik.coromant.com/en-us/product-details?c=A880-D1500LX38-03 prints DC 1.5 in; https://www.sandvik.coromant.com/en-us/product-details?c=880-D4100L40-03 prints DC 1.6142 in.",
    "conditions": [
     {
      "label": "Reference material P2.1.Z.AN, 175 HB (start values, LxD 3)",
@@ -882,8 +944,22 @@
       "catalog": "Sandvik Coromant product page 880-07 04 W10H-P-LM 4334: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-07+04+w10h-p-lm+4334",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 07 are printed in Sandvik Coromant Rotating Tools 2015 p. K51 (metric 36.00–41.00 mm) and p. K54 (inch 1.437, 1.500, 1.562, 1.625), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     },
     {
      "label": "Reference material M1.0.Z.AQ, 200 HB (start values, LxD 3)",
@@ -917,8 +993,22 @@
       "catalog": "Sandvik Coromant product page 880-07 04 W10H-P-LM 4334: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-07+04+w10h-p-lm+4334",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 07 are printed in Sandvik Coromant Rotating Tools 2015 p. K51 (metric 36.00–41.00 mm) and p. K54 (inch 1.437, 1.500, 1.562, 1.625), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     },
     {
      "label": "Reference material K2.2.C.UT, 245 HB (start values, LxD 3)",
@@ -952,9 +1042,31 @@
       "catalog": "Sandvik Coromant product page 880-07 04 W10H-P-LM 4334: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-07+04+w10h-p-lm+4334",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 07 are printed in Sandvik Coromant Rotating Tools 2015 p. K51 (metric 36.00–41.00 mm) and p. K54 (inch 1.437, 1.500, 1.562, 1.625), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     }
+   ],
+   "diameters_mm": [
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
    ]
   },
   {
@@ -1502,9 +1614,12 @@
    "type": "indexable insert drill (CoroDrill 880), peripheral insert 880-06 04 W08H-P-MS N124",
    "grade": "N124",
    "diameters_in": [
-    1.1811
+    1.1811,
+    1.25,
+    1.312,
+    1.375
    ],
-   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 06 peripheral insert: 880-D3000L32-03 (1.1811 in)",
+   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 06 peripheral insert: 880-D3000L32-03 (1.1811 in) Also printed in Sandvik Coromant Rotating Tools 2015, CoroDrill 880, cylindrical shank with flat (ISO 9766), 3×D (https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf): p. K50 880-D3050L32-03 DC 30.50 mm, 880-D3100L40-03 DC 31.00 mm, 880-D3150L40-03 DC 31.50 mm, 880-D3200L40-03 DC 32.00 mm, 880-D3250L40-03 DC 32.50 mm, 880-D3300L40-03 DC 33.00 mm, 880-D3350L40-03 DC 33.50 mm, 880-D3400L40-03 DC 34.00 mm, 880-D3450L40-03 DC 34.50 mm, 880-D3500L40-03 DC 35.00 mm; p. K51 880-D3550L40-03 DC 35.50 mm; p. K54 A880-D1250LX38-03 DC 1.250 in, A880-D1312LX38-03 DC 1.312 in, A880-D1375LX38-03 DC 1.375 in. Spot-check 2026-11-10: https://www.sandvik.coromant.com/en-us/product-details?c=880-D3200L40-03 prints DC 1.2598 in.",
    "conditions": [
     {
      "label": "Reference material N1.3.C.AG, 90 HB (start values, LxD 3)",
@@ -1538,9 +1653,36 @@
       "catalog": "Sandvik Coromant product page 880-06 04 W08H-P-MS N124: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-06+04+w08h-p-ms+n124",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 06 are printed in Sandvik Coromant Rotating Tools 2015 pp. K50–K51 (metric 30.50–35.50 mm) and p. K54 (inch 1.250, 1.312, 1.375), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K50–K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     }
+   ],
+   "diameters_mm": [
+    30.5,
+    31,
+    31.5,
+    32,
+    32.5,
+    33,
+    33.5,
+    34,
+    34.5,
+    35,
+    35.5
    ]
   },
   {
@@ -1550,9 +1692,13 @@
    "type": "indexable insert drill (CoroDrill 880), peripheral insert 880-07 04 W10H-P-MS N124",
    "grade": "N124",
    "diameters_in": [
+    1.437,
+    1.5,
+    1.562,
+    1.625,
     1.6535
    ],
-   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 07 peripheral insert: 880-D4200L40-03 (1.6535 in)",
+   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 07 peripheral insert: 880-D4200L40-03 (1.6535 in) Also printed in Sandvik Coromant Rotating Tools 2015, CoroDrill 880, cylindrical shank with flat (ISO 9766), 3×D (https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf): p. K51 880-D3600L40-03 DC 36.00 mm, 880-D3700L40-03 DC 37.00 mm, 880-D3800L40-03 DC 38.00 mm, 880-D3900L40-03 DC 39.00 mm, 880-D4000L40-03 DC 40.00 mm, 880-D4100L40-03 DC 41.00 mm; p. K54 A880-D1437LX38-03 DC 1.437 in, A880-D1500LX38-03 DC 1.500 in, A880-D1562LX38-03 DC 1.562 in, A880-D1625LX38-03 DC 1.625 in. Spot-check 2026-11-10: https://www.sandvik.coromant.com/en-us/product-details?c=A880-D1500LX38-03 prints DC 1.5 in; https://www.sandvik.coromant.com/en-us/product-details?c=880-D4100L40-03 prints DC 1.6142 in.",
    "conditions": [
     {
      "label": "Reference material N1.3.C.AG, 90 HB (start values, LxD 3)",
@@ -1586,9 +1732,31 @@
       "catalog": "Sandvik Coromant product page 880-07 04 W10H-P-MS N124: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-07+04+w10h-p-ms+n124",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 07 are printed in Sandvik Coromant Rotating Tools 2015 p. K51 (metric 36.00–41.00 mm) and p. K54 (inch 1.437, 1.500, 1.562, 1.625), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     }
+   ],
+   "diameters_mm": [
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
    ]
   },
   {
@@ -2416,9 +2584,12 @@
    "type": "indexable insert drill (CoroDrill 880), peripheral insert 880-06 04 W08H-P-LM 4344",
    "grade": "4344",
    "diameters_in": [
-    1.1811
+    1.1811,
+    1.25,
+    1.312,
+    1.375
    ],
-   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 06 peripheral insert: 880-D3000L32-03 (1.1811 in)",
+   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 06 peripheral insert: 880-D3000L32-03 (1.1811 in) Also printed in Sandvik Coromant Rotating Tools 2015, CoroDrill 880, cylindrical shank with flat (ISO 9766), 3×D (https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf): p. K50 880-D3050L32-03 DC 30.50 mm, 880-D3100L40-03 DC 31.00 mm, 880-D3150L40-03 DC 31.50 mm, 880-D3200L40-03 DC 32.00 mm, 880-D3250L40-03 DC 32.50 mm, 880-D3300L40-03 DC 33.00 mm, 880-D3350L40-03 DC 33.50 mm, 880-D3400L40-03 DC 34.00 mm, 880-D3450L40-03 DC 34.50 mm, 880-D3500L40-03 DC 35.00 mm; p. K51 880-D3550L40-03 DC 35.50 mm; p. K54 A880-D1250LX38-03 DC 1.250 in, A880-D1312LX38-03 DC 1.312 in, A880-D1375LX38-03 DC 1.375 in. Spot-check 2026-11-10: https://www.sandvik.coromant.com/en-us/product-details?c=880-D3200L40-03 prints DC 1.2598 in.",
    "conditions": [
     {
      "label": "Reference material P2.1.Z.AN, 175 HB (start values, LxD 3)",
@@ -2452,8 +2623,22 @@
       "catalog": "Sandvik Coromant product page 880-06 04 W08H-P-LM 4344: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-06+04+w08h-p-lm+4344",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 06 are printed in Sandvik Coromant Rotating Tools 2015 pp. K50–K51 (metric 30.50–35.50 mm) and p. K54 (inch 1.250, 1.312, 1.375), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K50–K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     },
     {
      "label": "Reference material M1.0.Z.AQ, 200 HB (start values, LxD 3)",
@@ -2487,8 +2672,22 @@
       "catalog": "Sandvik Coromant product page 880-06 04 W08H-P-LM 4344: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-06+04+w08h-p-lm+4344",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 06 are printed in Sandvik Coromant Rotating Tools 2015 pp. K50–K51 (metric 30.50–35.50 mm) and p. K54 (inch 1.250, 1.312, 1.375), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K50–K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     },
     {
      "label": "Reference material K2.2.C.UT, 245 HB (start values, LxD 3)",
@@ -2522,9 +2721,36 @@
       "catalog": "Sandvik Coromant product page 880-06 04 W08H-P-LM 4344: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-06+04+w08h-p-lm+4344",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 06 are printed in Sandvik Coromant Rotating Tools 2015 pp. K50–K51 (metric 30.50–35.50 mm) and p. K54 (inch 1.250, 1.312, 1.375), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K50–K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     }
+   ],
+   "diameters_mm": [
+    30.5,
+    31,
+    31.5,
+    32,
+    32.5,
+    33,
+    33.5,
+    34,
+    34.5,
+    35,
+    35.5
    ]
   },
   {
@@ -2534,9 +2760,13 @@
    "type": "indexable insert drill (CoroDrill 880), peripheral insert 880-07 04 W10H-P-LM 4344",
    "grade": "4344",
    "diameters_in": [
+    1.437,
+    1.5,
+    1.562,
+    1.625,
     1.6535
    ],
-   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 07 peripheral insert: 880-D4200L40-03 (1.6535 in)",
+   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 07 peripheral insert: 880-D4200L40-03 (1.6535 in) Also printed in Sandvik Coromant Rotating Tools 2015, CoroDrill 880, cylindrical shank with flat (ISO 9766), 3×D (https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf): p. K51 880-D3600L40-03 DC 36.00 mm, 880-D3700L40-03 DC 37.00 mm, 880-D3800L40-03 DC 38.00 mm, 880-D3900L40-03 DC 39.00 mm, 880-D4000L40-03 DC 40.00 mm, 880-D4100L40-03 DC 41.00 mm; p. K54 A880-D1437LX38-03 DC 1.437 in, A880-D1500LX38-03 DC 1.500 in, A880-D1562LX38-03 DC 1.562 in, A880-D1625LX38-03 DC 1.625 in. Spot-check 2026-11-10: https://www.sandvik.coromant.com/en-us/product-details?c=A880-D1500LX38-03 prints DC 1.5 in; https://www.sandvik.coromant.com/en-us/product-details?c=880-D4100L40-03 prints DC 1.6142 in.",
    "conditions": [
     {
      "label": "Reference material P2.1.Z.AN, 175 HB (start values, LxD 3)",
@@ -2570,8 +2800,22 @@
       "catalog": "Sandvik Coromant product page 880-07 04 W10H-P-LM 4344: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-07+04+w10h-p-lm+4344",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 07 are printed in Sandvik Coromant Rotating Tools 2015 p. K51 (metric 36.00–41.00 mm) and p. K54 (inch 1.437, 1.500, 1.562, 1.625), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     },
     {
      "label": "Reference material M1.0.Z.AQ, 200 HB (start values, LxD 3)",
@@ -2605,8 +2849,22 @@
       "catalog": "Sandvik Coromant product page 880-07 04 W10H-P-LM 4344: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-07+04+w10h-p-lm+4344",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 07 are printed in Sandvik Coromant Rotating Tools 2015 p. K51 (metric 36.00–41.00 mm) and p. K54 (inch 1.437, 1.500, 1.562, 1.625), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     },
     {
      "label": "Reference material K2.2.C.UT, 245 HB (start values, LxD 3)",
@@ -2640,9 +2898,31 @@
       "catalog": "Sandvik Coromant product page 880-07 04 W10H-P-LM 4344: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-07+04+w10h-p-lm+4344",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 07 are printed in Sandvik Coromant Rotating Tools 2015 p. K51 (metric 36.00–41.00 mm) and p. K54 (inch 1.437, 1.500, 1.562, 1.625), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     }
+   ],
+   "diameters_mm": [
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
    ]
   },
   {
@@ -3491,9 +3771,12 @@
    "type": "indexable insert drill (CoroDrill 880), peripheral insert 880-06 04 W06H-P-GM 4344",
    "grade": "4344",
    "diameters_in": [
-    1.1811
+    1.1811,
+    1.25,
+    1.312,
+    1.375
    ],
-   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 06 peripheral insert: 880-D3000L32-03 (1.1811 in)",
+   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 06 peripheral insert: 880-D3000L32-03 (1.1811 in) Also printed in Sandvik Coromant Rotating Tools 2015, CoroDrill 880, cylindrical shank with flat (ISO 9766), 3×D (https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf): p. K50 880-D3050L32-03 DC 30.50 mm, 880-D3100L40-03 DC 31.00 mm, 880-D3150L40-03 DC 31.50 mm, 880-D3200L40-03 DC 32.00 mm, 880-D3250L40-03 DC 32.50 mm, 880-D3300L40-03 DC 33.00 mm, 880-D3350L40-03 DC 33.50 mm, 880-D3400L40-03 DC 34.00 mm, 880-D3450L40-03 DC 34.50 mm, 880-D3500L40-03 DC 35.00 mm; p. K51 880-D3550L40-03 DC 35.50 mm; p. K54 A880-D1250LX38-03 DC 1.250 in, A880-D1312LX38-03 DC 1.312 in, A880-D1375LX38-03 DC 1.375 in. Spot-check 2026-11-10: https://www.sandvik.coromant.com/en-us/product-details?c=880-D3200L40-03 prints DC 1.2598 in.",
    "conditions": [
     {
      "label": "Reference material P2.1.Z.AN, 175 HB (start values, LxD 3)",
@@ -3527,8 +3810,22 @@
       "catalog": "Sandvik Coromant product page 880-06 04 W06H-P-GM 4344: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-06+04+w06h-p-gm+4344",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 06 are printed in Sandvik Coromant Rotating Tools 2015 pp. K50–K51 (metric 30.50–35.50 mm) and p. K54 (inch 1.250, 1.312, 1.375), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K50–K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     },
     {
      "label": "Reference material M1.0.Z.AQ, 200 HB (start values, LxD 3)",
@@ -3562,8 +3859,22 @@
       "catalog": "Sandvik Coromant product page 880-06 04 W06H-P-GM 4344: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-06+04+w06h-p-gm+4344",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 06 are printed in Sandvik Coromant Rotating Tools 2015 pp. K50–K51 (metric 30.50–35.50 mm) and p. K54 (inch 1.250, 1.312, 1.375), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K50–K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     },
     {
      "label": "Reference material K2.2.C.UT, 245 HB (start values, LxD 3)",
@@ -3597,9 +3908,36 @@
       "catalog": "Sandvik Coromant product page 880-06 04 W06H-P-GM 4344: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-06+04+w06h-p-gm+4344",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 06 are printed in Sandvik Coromant Rotating Tools 2015 pp. K50–K51 (metric 30.50–35.50 mm) and p. K54 (inch 1.250, 1.312, 1.375), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K50–K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     }
+   ],
+   "diameters_mm": [
+    30.5,
+    31,
+    31.5,
+    32,
+    32.5,
+    33,
+    33.5,
+    34,
+    34.5,
+    35,
+    35.5
    ]
   },
   {
@@ -3609,9 +3947,13 @@
    "type": "indexable insert drill (CoroDrill 880), peripheral insert 880-07 04 W06H-P-GM 4344",
    "grade": "4344",
    "diameters_in": [
+    1.437,
+    1.5,
+    1.562,
+    1.625,
     1.6535
    ],
-   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 07 peripheral insert: 880-D4200L40-03 (1.6535 in)",
+   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 07 peripheral insert: 880-D4200L40-03 (1.6535 in) Also printed in Sandvik Coromant Rotating Tools 2015, CoroDrill 880, cylindrical shank with flat (ISO 9766), 3×D (https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf): p. K51 880-D3600L40-03 DC 36.00 mm, 880-D3700L40-03 DC 37.00 mm, 880-D3800L40-03 DC 38.00 mm, 880-D3900L40-03 DC 39.00 mm, 880-D4000L40-03 DC 40.00 mm, 880-D4100L40-03 DC 41.00 mm; p. K54 A880-D1437LX38-03 DC 1.437 in, A880-D1500LX38-03 DC 1.500 in, A880-D1562LX38-03 DC 1.562 in, A880-D1625LX38-03 DC 1.625 in. Spot-check 2026-11-10: https://www.sandvik.coromant.com/en-us/product-details?c=A880-D1500LX38-03 prints DC 1.5 in; https://www.sandvik.coromant.com/en-us/product-details?c=880-D4100L40-03 prints DC 1.6142 in.",
    "conditions": [
     {
      "label": "Reference material P2.1.Z.AN, 175 HB (start values, LxD 3)",
@@ -3645,8 +3987,22 @@
       "catalog": "Sandvik Coromant product page 880-07 04 W06H-P-GM 4344: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-07+04+w06h-p-gm+4344",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 07 are printed in Sandvik Coromant Rotating Tools 2015 p. K51 (metric 36.00–41.00 mm) and p. K54 (inch 1.437, 1.500, 1.562, 1.625), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     },
     {
      "label": "Reference material M1.0.Z.AQ, 200 HB (start values, LxD 3)",
@@ -3680,8 +4036,22 @@
       "catalog": "Sandvik Coromant product page 880-07 04 W06H-P-GM 4344: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-07+04+w06h-p-gm+4344",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 07 are printed in Sandvik Coromant Rotating Tools 2015 p. K51 (metric 36.00–41.00 mm) and p. K54 (inch 1.437, 1.500, 1.562, 1.625), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     },
     {
      "label": "Reference material K2.2.C.UT, 245 HB (start values, LxD 3)",
@@ -3715,9 +4085,31 @@
       "catalog": "Sandvik Coromant product page 880-07 04 W06H-P-GM 4344: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-07+04+w06h-p-gm+4344",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 07 are printed in Sandvik Coromant Rotating Tools 2015 p. K51 (metric 36.00–41.00 mm) and p. K54 (inch 1.437, 1.500, 1.562, 1.625), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     }
+   ],
+   "diameters_mm": [
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
    ]
   },
   {
@@ -4685,9 +5077,12 @@
    "type": "indexable insert drill (CoroDrill 880), peripheral insert 880-06 04 W10H-P-GR 4334",
    "grade": "4334",
    "diameters_in": [
-    1.1811
+    1.1811,
+    1.25,
+    1.312,
+    1.375
    ],
-   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 06 peripheral insert: 880-D3000L32-03 (1.1811 in)",
+   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 06 peripheral insert: 880-D3000L32-03 (1.1811 in) Also printed in Sandvik Coromant Rotating Tools 2015, CoroDrill 880, cylindrical shank with flat (ISO 9766), 3×D (https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf): p. K50 880-D3050L32-03 DC 30.50 mm, 880-D3100L40-03 DC 31.00 mm, 880-D3150L40-03 DC 31.50 mm, 880-D3200L40-03 DC 32.00 mm, 880-D3250L40-03 DC 32.50 mm, 880-D3300L40-03 DC 33.00 mm, 880-D3350L40-03 DC 33.50 mm, 880-D3400L40-03 DC 34.00 mm, 880-D3450L40-03 DC 34.50 mm, 880-D3500L40-03 DC 35.00 mm; p. K51 880-D3550L40-03 DC 35.50 mm; p. K54 A880-D1250LX38-03 DC 1.250 in, A880-D1312LX38-03 DC 1.312 in, A880-D1375LX38-03 DC 1.375 in. Spot-check 2026-11-10: https://www.sandvik.coromant.com/en-us/product-details?c=880-D3200L40-03 prints DC 1.2598 in.",
    "conditions": [
     {
      "label": "Reference material P2.1.Z.AN, 175 HB (start values, LxD 3)",
@@ -4721,8 +5116,22 @@
       "catalog": "Sandvik Coromant product page 880-06 04 W10H-P-GR 4334: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-06+04+w10h-p-gr+4334",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 06 are printed in Sandvik Coromant Rotating Tools 2015 pp. K50–K51 (metric 30.50–35.50 mm) and p. K54 (inch 1.250, 1.312, 1.375), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K50–K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     },
     {
      "label": "Reference material M1.0.Z.AQ, 200 HB (start values, LxD 3)",
@@ -4756,8 +5165,22 @@
       "catalog": "Sandvik Coromant product page 880-06 04 W10H-P-GR 4334: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-06+04+w10h-p-gr+4334",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 06 are printed in Sandvik Coromant Rotating Tools 2015 pp. K50–K51 (metric 30.50–35.50 mm) and p. K54 (inch 1.250, 1.312, 1.375), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K50–K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     },
     {
      "label": "Reference material K2.2.C.UT, 245 HB (start values, LxD 3)",
@@ -4791,9 +5214,36 @@
       "catalog": "Sandvik Coromant product page 880-06 04 W10H-P-GR 4334: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-06+04+w10h-p-gr+4334",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 06 are printed in Sandvik Coromant Rotating Tools 2015 pp. K50–K51 (metric 30.50–35.50 mm) and p. K54 (inch 1.250, 1.312, 1.375), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K50–K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     }
+   ],
+   "diameters_mm": [
+    30.5,
+    31,
+    31.5,
+    32,
+    32.5,
+    33,
+    33.5,
+    34,
+    34.5,
+    35,
+    35.5
    ]
   },
   {
@@ -4803,9 +5253,13 @@
    "type": "indexable insert drill (CoroDrill 880), peripheral insert 880-07 04 W12H-P-GR 4334",
    "grade": "4334",
    "diameters_in": [
+    1.437,
+    1.5,
+    1.562,
+    1.625,
     1.6535
    ],
-   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 07 peripheral insert: 880-D4200L40-03 (1.6535 in)",
+   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 07 peripheral insert: 880-D4200L40-03 (1.6535 in) Also printed in Sandvik Coromant Rotating Tools 2015, CoroDrill 880, cylindrical shank with flat (ISO 9766), 3×D (https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf): p. K51 880-D3600L40-03 DC 36.00 mm, 880-D3700L40-03 DC 37.00 mm, 880-D3800L40-03 DC 38.00 mm, 880-D3900L40-03 DC 39.00 mm, 880-D4000L40-03 DC 40.00 mm, 880-D4100L40-03 DC 41.00 mm; p. K54 A880-D1437LX38-03 DC 1.437 in, A880-D1500LX38-03 DC 1.500 in, A880-D1562LX38-03 DC 1.562 in, A880-D1625LX38-03 DC 1.625 in. Spot-check 2026-11-10: https://www.sandvik.coromant.com/en-us/product-details?c=A880-D1500LX38-03 prints DC 1.5 in; https://www.sandvik.coromant.com/en-us/product-details?c=880-D4100L40-03 prints DC 1.6142 in.",
    "conditions": [
     {
      "label": "Reference material P2.1.Z.AN, 175 HB (start values, LxD 3)",
@@ -4839,8 +5293,22 @@
       "catalog": "Sandvik Coromant product page 880-07 04 W12H-P-GR 4334: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-07+04+w12h-p-gr+4334",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 07 are printed in Sandvik Coromant Rotating Tools 2015 p. K51 (metric 36.00–41.00 mm) and p. K54 (inch 1.437, 1.500, 1.562, 1.625), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     },
     {
      "label": "Reference material M1.0.Z.AQ, 200 HB (start values, LxD 3)",
@@ -4874,8 +5342,22 @@
       "catalog": "Sandvik Coromant product page 880-07 04 W12H-P-GR 4334: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-07+04+w12h-p-gr+4334",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 07 are printed in Sandvik Coromant Rotating Tools 2015 p. K51 (metric 36.00–41.00 mm) and p. K54 (inch 1.437, 1.500, 1.562, 1.625), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     },
     {
      "label": "Reference material K2.2.C.UT, 245 HB (start values, LxD 3)",
@@ -4909,9 +5391,31 @@
       "catalog": "Sandvik Coromant product page 880-07 04 W12H-P-GR 4334: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-07+04+w12h-p-gr+4334",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 07 are printed in Sandvik Coromant Rotating Tools 2015 p. K51 (metric 36.00–41.00 mm) and p. K54 (inch 1.437, 1.500, 1.562, 1.625), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     }
+   ],
+   "diameters_mm": [
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
    ]
   },
   {
@@ -5669,9 +6173,12 @@
    "type": "indexable insert drill (CoroDrill 880), peripheral insert 880-06 04 W08H-P-MS 2044",
    "grade": "2044",
    "diameters_in": [
-    1.1811
+    1.1811,
+    1.25,
+    1.312,
+    1.375
    ],
-   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 06 peripheral insert: 880-D3000L32-03 (1.1811 in)",
+   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 06 peripheral insert: 880-D3000L32-03 (1.1811 in) Also printed in Sandvik Coromant Rotating Tools 2015, CoroDrill 880, cylindrical shank with flat (ISO 9766), 3×D (https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf): p. K50 880-D3050L32-03 DC 30.50 mm, 880-D3100L40-03 DC 31.00 mm, 880-D3150L40-03 DC 31.50 mm, 880-D3200L40-03 DC 32.00 mm, 880-D3250L40-03 DC 32.50 mm, 880-D3300L40-03 DC 33.00 mm, 880-D3350L40-03 DC 33.50 mm, 880-D3400L40-03 DC 34.00 mm, 880-D3450L40-03 DC 34.50 mm, 880-D3500L40-03 DC 35.00 mm; p. K51 880-D3550L40-03 DC 35.50 mm; p. K54 A880-D1250LX38-03 DC 1.250 in, A880-D1312LX38-03 DC 1.312 in, A880-D1375LX38-03 DC 1.375 in. Spot-check 2026-11-10: https://www.sandvik.coromant.com/en-us/product-details?c=880-D3200L40-03 prints DC 1.2598 in.",
    "conditions": [
     {
      "label": "Reference material M1.0.Z.AQ, 200 HB (start values, LxD 3)",
@@ -5705,8 +6212,22 @@
       "catalog": "Sandvik Coromant product page 880-06 04 W08H-P-MS 2044: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-06+04+w08h-p-ms+2044",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 06 are printed in Sandvik Coromant Rotating Tools 2015 pp. K50–K51 (metric 30.50–35.50 mm) and p. K54 (inch 1.250, 1.312, 1.375), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K50–K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     },
     {
      "label": "Reference material S2.0.Z.AG, 350 HB (start values, LxD 3)",
@@ -5740,9 +6261,36 @@
       "catalog": "Sandvik Coromant product page 880-06 04 W08H-P-MS 2044: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-06+04+w08h-p-ms+2044",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 06 are printed in Sandvik Coromant Rotating Tools 2015 pp. K50–K51 (metric 30.50–35.50 mm) and p. K54 (inch 1.250, 1.312, 1.375), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K50–K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     }
+   ],
+   "diameters_mm": [
+    30.5,
+    31,
+    31.5,
+    32,
+    32.5,
+    33,
+    33.5,
+    34,
+    34.5,
+    35,
+    35.5
    ]
   },
   {
@@ -5752,9 +6300,13 @@
    "type": "indexable insert drill (CoroDrill 880), peripheral insert 880-07 04 W10H-P-MS 2044",
    "grade": "2044",
    "diameters_in": [
+    1.437,
+    1.5,
+    1.562,
+    1.625,
     1.6535
    ],
-   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 07 peripheral insert: 880-D4200L40-03 (1.6535 in)",
+   "notes": "diameters_in are the exact DC values of CoroDrill 880 -03 drill bodies whose Sandvik product page lists a size 07 peripheral insert: 880-D4200L40-03 (1.6535 in) Also printed in Sandvik Coromant Rotating Tools 2015, CoroDrill 880, cylindrical shank with flat (ISO 9766), 3×D (https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf): p. K51 880-D3600L40-03 DC 36.00 mm, 880-D3700L40-03 DC 37.00 mm, 880-D3800L40-03 DC 38.00 mm, 880-D3900L40-03 DC 39.00 mm, 880-D4000L40-03 DC 40.00 mm, 880-D4100L40-03 DC 41.00 mm; p. K54 A880-D1437LX38-03 DC 1.437 in, A880-D1500LX38-03 DC 1.500 in, A880-D1562LX38-03 DC 1.562 in, A880-D1625LX38-03 DC 1.625 in. Spot-check 2026-11-10: https://www.sandvik.coromant.com/en-us/product-details?c=A880-D1500LX38-03 prints DC 1.5 in; https://www.sandvik.coromant.com/en-us/product-details?c=880-D4100L40-03 prints DC 1.6142 in.",
    "conditions": [
     {
      "label": "Reference material M1.0.Z.AQ, 200 HB (start values, LxD 3)",
@@ -5788,8 +6340,22 @@
       "catalog": "Sandvik Coromant product page 880-07 04 W10H-P-MS 2044: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-07+04+w10h-p-ms+2044",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 07 are printed in Sandvik Coromant Rotating Tools 2015 p. K51 (metric 36.00–41.00 mm) and p. K54 (inch 1.437, 1.500, 1.562, 1.625), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     },
     {
      "label": "Reference material S2.0.Z.AG, 350 HB (start values, LxD 3)",
@@ -5823,9 +6389,31 @@
       "catalog": "Sandvik Coromant product page 880-07 04 W10H-P-MS 2044: Start values (LxD 3), inch",
       "edition": "live product data (edition not stated)",
       "url": "https://www.sandvik.coromant.com/en-us/product-details?c=880-07+04+w10h-p-ms+2044",
-      "retrieved": "2026-10-24"
-     }
+      "retrieved": "2026-10-24",
+      "notes": " Body diameters in the 1.2–1.65 in gap for insert size 07 are printed in Sandvik Coromant Rotating Tools 2015 p. K51 (metric 36.00–41.00 mm) and p. K54 (inch 1.437, 1.500, 1.562, 1.625), https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf. Speeds on this row stay from the insert product page."
+     },
+     "altSources": [
+      {
+       "source": {
+        "kind": "catalog",
+        "manufacturer": "Sandvik Coromant",
+        "catalog": "Rotating Tools 2015, CoroDrill 880 cylindrical shank diameters (ISO 9766, 3×D). Not the speed table.",
+        "edition": "2015",
+        "url": "https://productivitysolution.co.th/wp-content/uploads/2017/Downloadfiles/Sandvik/Rotating%20Tools%202015%20Chapter%20K.pdf",
+        "page": "K51, K54",
+        "notes": "Printed DC values added for this insert size. Cutting speed and feed stay on the insert product page."
+       }
+      }
+     ]
     }
+   ],
+   "diameters_mm": [
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
    ]
   },
   {
