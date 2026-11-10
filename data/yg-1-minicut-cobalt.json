@@ -1,0 +1,976 @@
+{
+ "schema": 1,
+ "brand": "YG-1",
+ "tools": [
+  {
+   "mode": "mill",
+   "brand": "YG-1",
+   "series": "Minicut Cobalt 993 (inch, 6-flute)",
+   "type": "cobalt roughing end mill",
+   "flutes": 6,
+   "notes": "Chart footnote: feeds are given for 6-flute end mills. The catalog also lists 4-flute 993 sizes; chip load here is per tooth as printed for the 6-flute chart. Hardness column header says Brinell but no hardness number is printed.",
+   "specs": {
+    "flutes": 6,
+    "source": {
+     "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=13",
+     "retrieved": "2026-11-10",
+     "notes": "Flute count from the chart footnote or the product heading in this catalog. Substrate is printed as cobalt, which is not one of the spec substrate tags, so substrate is left off. No coating name is printed."
+    }
+   },
+   "conditions": [
+    {
+     "label": "Titanium alloy \u00b7 Side cutting",
+     "iso": "S",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "ft/min",
+      "min": 50,
+      "max": 80
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0035,
+       "1": 0.004,
+       "1.25": 0.005,
+       "1.5": 0.0055,
+       "2": 0.006
+      }
+     },
+     "operation": "side",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 993 (inch, 6-flute)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=13",
+      "page": "13",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 50\u201380 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 1.5\u00d7D, Ae 0.2\u20130.5\u00d7D. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "apx": 1.5
+    },
+    {
+     "label": "Titanium alloy \u00b7 Slotting",
+     "iso": "S",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "ft/min",
+      "min": 50,
+      "max": 80
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0025,
+       "1": 0.003,
+       "1.25": 0.004,
+       "1.5": 0.0045,
+       "2": 0.005
+      }
+     },
+     "operation": "slot",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 993 (inch, 6-flute)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=13",
+      "page": "13",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 50\u201380 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 0.5\u20130.8\u00d7D, Ae 1\u00d7D. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "aex": 1
+    },
+    {
+     "label": "Stainless steel \u00b7 Side cutting",
+     "iso": "M",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "ft/min",
+      "min": 40,
+      "max": 80
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0035,
+       "1": 0.004,
+       "1.25": 0.005,
+       "1.5": 0.0055,
+       "2": 0.006
+      }
+     },
+     "operation": "side",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 993 (inch, 6-flute)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=13",
+      "page": "13",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 40\u201380 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 1.5\u00d7D, Ae 0.2\u20130.5\u00d7D. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "apx": 1.5
+    },
+    {
+     "label": "Stainless steel \u00b7 Slotting",
+     "iso": "M",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "ft/min",
+      "min": 40,
+      "max": 80
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0025,
+       "1": 0.003,
+       "1.25": 0.004,
+       "1.5": 0.0045,
+       "2": 0.005
+      }
+     },
+     "operation": "slot",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 993 (inch, 6-flute)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=13",
+      "page": "13",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 40\u201380 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 0.5\u20130.8\u00d7D, Ae 1\u00d7D. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "aex": 1
+    }
+   ],
+   "diameters_in": [
+    0.75,
+    1,
+    1.25,
+    1.5,
+    2
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "YG-1",
+   "series": "Minicut Cobalt 993M (metric, 6-flute)",
+   "type": "cobalt roughing end mill",
+   "flutes": 6,
+   "notes": "Metric table on the same page as 993 inch. Feeds given for 6-flute end mills. Speed unit on the chart is m/min.",
+   "specs": {
+    "flutes": 6,
+    "source": {
+     "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=13",
+     "retrieved": "2026-11-10",
+     "notes": "Flute count from the chart footnote or the product heading in this catalog. Substrate is printed as cobalt, which is not one of the spec substrate tags, so substrate is left off. No coating name is printed."
+    }
+   },
+   "conditions": [
+    {
+     "label": "Titanium alloy \u00b7 Side cutting",
+     "iso": "S",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "m/min",
+      "min": 15,
+      "max": 25
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "mm",
+      "byDiameter": {
+       "20": 0.089,
+       "25": 0.102,
+       "32": 0.127,
+       "40": 0.14,
+       "50": 0.152
+      }
+     },
+     "operation": "side",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 993M (metric, 6-flute)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=13",
+      "page": "13",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 15\u201325 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 1.5\u00d7D, Ae 0.2\u20130.5\u00d7D. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "apx": 1.5
+    },
+    {
+     "label": "Titanium alloy \u00b7 Slotting",
+     "iso": "S",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "m/min",
+      "min": 15,
+      "max": 25
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "mm",
+      "byDiameter": {
+       "20": 0.064,
+       "25": 0.076,
+       "32": 0.102,
+       "40": 0.114,
+       "50": 0.127
+      }
+     },
+     "operation": "slot",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 993M (metric, 6-flute)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=13",
+      "page": "13",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 15\u201325 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 0.5\u20130.8\u00d7D, Ae 1\u00d7D. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "aex": 1
+    },
+    {
+     "label": "Stainless steel \u00b7 Side cutting",
+     "iso": "M",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "m/min",
+      "min": 12,
+      "max": 25
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "mm",
+      "byDiameter": {
+       "20": 0.089,
+       "25": 0.102,
+       "32": 0.127,
+       "40": 0.14,
+       "50": 0.152
+      }
+     },
+     "operation": "side",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 993M (metric, 6-flute)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=13",
+      "page": "13",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 12\u201325 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 1.5\u00d7D, Ae 0.2\u20130.5\u00d7D. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "apx": 1.5
+    },
+    {
+     "label": "Stainless steel \u00b7 Slotting",
+     "iso": "M",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "m/min",
+      "min": 12,
+      "max": 25
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "mm",
+      "byDiameter": {
+       "20": 0.064,
+       "25": 0.076,
+       "32": 0.102,
+       "40": 0.114,
+       "50": 0.127
+      }
+     },
+     "operation": "slot",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 993M (metric, 6-flute)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=13",
+      "page": "13",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 12\u201325 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 0.5\u20130.8\u00d7D, Ae 1\u00d7D. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "aex": 1
+    }
+   ],
+   "diameters_mm": [
+    20,
+    25,
+    32,
+    40,
+    50
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "YG-1",
+   "series": "Minicut Cobalt 865 (inch, 6-flute)",
+   "type": "cobalt end mill",
+   "flutes": 6,
+   "notes": "865 inch chart prints side cutting only. Feeds given for 6-flute end mills. The cover calls 865 the 6-flute model.",
+   "specs": {
+    "flutes": 6,
+    "source": {
+     "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=14",
+     "retrieved": "2026-11-10",
+     "notes": "Flute count from the chart footnote or the product heading in this catalog. Substrate is printed as cobalt, which is not one of the spec substrate tags, so substrate is left off. No coating name is printed."
+    }
+   },
+   "conditions": [
+    {
+     "label": "Titanium alloy \u00b7 Side cutting",
+     "iso": "S",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "ft/min",
+      "min": 50,
+      "max": 80
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.004,
+       "1": 0.0045,
+       "1.25": 0.005,
+       "1.5": 0.0055,
+       "2": 0.006
+      }
+     },
+     "operation": "side",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 865 (inch, 6-flute)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=14",
+      "page": "14",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 50\u201380 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 1.5\u00d7D, Ae 0.03\u20130.05\u00d7D. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "apx": 1.5
+    },
+    {
+     "label": "Stainless steel \u00b7 Side cutting",
+     "iso": "M",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "ft/min",
+      "min": 40,
+      "max": 80
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.004,
+       "1": 0.0045,
+       "1.25": 0.005,
+       "1.5": 0.0055,
+       "2": 0.006
+      }
+     },
+     "operation": "side",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 865 (inch, 6-flute)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=14",
+      "page": "14",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 40\u201380 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 1.5\u00d7D, Ae 0.03\u20130.05\u00d7D. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "apx": 1.5
+    }
+   ],
+   "diameters_in": [
+    0.75,
+    1,
+    1.25,
+    1.5,
+    2
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "YG-1",
+   "series": "Minicut Cobalt 865M (metric, 6-flute)",
+   "type": "cobalt end mill",
+   "flutes": 6,
+   "notes": "865 metric chart prints side cutting only. Speed unit m/min.",
+   "specs": {
+    "flutes": 6,
+    "source": {
+     "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=14",
+     "retrieved": "2026-11-10",
+     "notes": "Flute count from the chart footnote or the product heading in this catalog. Substrate is printed as cobalt, which is not one of the spec substrate tags, so substrate is left off. No coating name is printed."
+    }
+   },
+   "conditions": [
+    {
+     "label": "Titanium alloy \u00b7 Side cutting",
+     "iso": "S",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "m/min",
+      "min": 15,
+      "max": 25
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "mm",
+      "byDiameter": {
+       "20": 0.089,
+       "25": 0.102,
+       "32": 0.127,
+       "40": 0.14,
+       "50": 0.152
+      }
+     },
+     "operation": "side",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 865M (metric, 6-flute)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=14",
+      "page": "14",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 15\u201325 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 1.5\u00d7D, Ae 0.03\u20130.05\u00d7D. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "apx": 1.5
+    },
+    {
+     "label": "Stainless steel \u00b7 Side cutting",
+     "iso": "M",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "m/min",
+      "min": 12,
+      "max": 25
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "mm",
+      "byDiameter": {
+       "20": 0.089,
+       "25": 0.102,
+       "32": 0.127,
+       "40": 0.14,
+       "50": 0.152
+      }
+     },
+     "operation": "side",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 865M (metric, 6-flute)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=14",
+      "page": "14",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 12\u201325 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 1.5\u00d7D, Ae 0.03\u20130.05\u00d7D. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "apx": 1.5
+    }
+   ],
+   "diameters_mm": [
+    20,
+    25,
+    32,
+    40,
+    50
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "YG-1",
+   "series": "Minicut Cobalt 836 (inch, 6-flute chart)",
+   "type": "cobalt end mill",
+   "flutes": 6,
+   "notes": "Product heading prints 836 as 4-flute and 6-flute. The cutting chart says feeds are given for 6-flute end mills, so this record is the 6-flute chart.",
+   "specs": {
+    "flutes": 6,
+    "source": {
+     "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=14",
+     "retrieved": "2026-11-10",
+     "notes": "Flute count from the chart footnote or the product heading in this catalog. Substrate is printed as cobalt, which is not one of the spec substrate tags, so substrate is left off. No coating name is printed."
+    }
+   },
+   "conditions": [
+    {
+     "label": "Titanium alloy \u00b7 Side cutting",
+     "iso": "S",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "ft/min",
+      "min": 50,
+      "max": 80
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0035,
+       "1": 0.0035,
+       "1.25": 0.004,
+       "1.5": 0.004,
+       "2": 0.005
+      }
+     },
+     "operation": "side",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 836 (inch, 6-flute chart)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=14",
+      "page": "14",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 50\u201380 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 1.5\u00d7D, Ae 0.2\u20130.5\u00d7D. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "apx": 1.5
+    },
+    {
+     "label": "Titanium alloy \u00b7 Slotting",
+     "iso": "S",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "ft/min",
+      "min": 50,
+      "max": 80
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0025,
+       "1": 0.0025,
+       "1.25": 0.003,
+       "1.5": 0.003,
+       "2": 0.004
+      }
+     },
+     "operation": "slot",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 836 (inch, 6-flute chart)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=14",
+      "page": "14",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 50\u201380 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 0.5\u20130.8\u00d7D, Ae 1\u00d7D. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "aex": 1
+    },
+    {
+     "label": "Stainless steel \u00b7 Side cutting",
+     "iso": "M",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "ft/min",
+      "min": 40,
+      "max": 80
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0035,
+       "1": 0.0035,
+       "1.25": 0.004,
+       "1.5": 0.004,
+       "2": 0.005
+      }
+     },
+     "operation": "side",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 836 (inch, 6-flute chart)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=14",
+      "page": "14",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 40\u201380 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 1.5\u00d7D, Ae 0.2\u20130.5\u00d7D. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "apx": 1.5
+    },
+    {
+     "label": "Stainless steel \u00b7 Slotting",
+     "iso": "M",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "ft/min",
+      "min": 40,
+      "max": 80
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0025,
+       "1": 0.0025,
+       "1.25": 0.003,
+       "1.5": 0.003,
+       "2": 0.004
+      }
+     },
+     "operation": "slot",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 836 (inch, 6-flute chart)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=14",
+      "page": "14",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 40\u201380 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 0.5\u20130.8\u00d7D, Ae 1\u00d7D. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "aex": 1
+    }
+   ],
+   "diameters_in": [
+    0.75,
+    1,
+    1.25,
+    1.5,
+    2
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "YG-1",
+   "series": "Minicut Cobalt 836M (metric, 6-flute chart)",
+   "type": "cobalt end mill",
+   "flutes": 6,
+   "notes": "836M metric chart. \u00d850 slotting fz is copied as printed (.102).",
+   "specs": {
+    "flutes": 6,
+    "source": {
+     "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=15",
+     "retrieved": "2026-11-10",
+     "notes": "Flute count from the chart footnote or the product heading in this catalog. Substrate is printed as cobalt, which is not one of the spec substrate tags, so substrate is left off. No coating name is printed."
+    }
+   },
+   "conditions": [
+    {
+     "label": "Titanium alloy \u00b7 Side cutting",
+     "iso": "S",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "m/min",
+      "min": 15,
+      "max": 25
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "mm",
+      "byDiameter": {
+       "20": 0.089,
+       "25": 0.089,
+       "32": 0.102,
+       "40": 0.102,
+       "50": 0.127
+      }
+     },
+     "operation": "side",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 836M (metric, 6-flute chart)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=15",
+      "page": "15",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 15\u201325 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 1.5\u00d7D, Ae 0.2\u20130.5\u00d7D. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "apx": 1.5
+    },
+    {
+     "label": "Titanium alloy \u00b7 Slotting",
+     "iso": "S",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "m/min",
+      "min": 15,
+      "max": 25
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "mm",
+      "byDiameter": {
+       "20": 0.064,
+       "25": 0.076,
+       "32": 0.102,
+       "40": 0.114,
+       "50": 0.102
+      }
+     },
+     "operation": "slot",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 836M (metric, 6-flute chart)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=15",
+      "page": "15",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 15\u201325 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 0.5\u20130.8\u00d7D, Ae 1\u00d7D. The \u00d850 mm slotting fz is printed .102, not a continuation of the previous column.. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "aex": 1
+    },
+    {
+     "label": "Stainless steel \u00b7 Side cutting",
+     "iso": "M",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "m/min",
+      "min": 12,
+      "max": 25
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "mm",
+      "byDiameter": {
+       "20": 0.089,
+       "25": 0.089,
+       "32": 0.102,
+       "40": 0.102,
+       "50": 0.127
+      }
+     },
+     "operation": "side",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 836M (metric, 6-flute chart)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=15",
+      "page": "15",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 12\u201325 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 1.5\u00d7D, Ae 0.2\u20130.5\u00d7D. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "apx": 1.5
+    },
+    {
+     "label": "Stainless steel \u00b7 Slotting",
+     "iso": "M",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "m/min",
+      "min": 12,
+      "max": 25
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "mm",
+      "byDiameter": {
+       "20": 0.064,
+       "25": 0.076,
+       "32": 0.102,
+       "40": 0.114,
+       "50": 0.102
+      }
+     },
+     "operation": "slot",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 836M (metric, 6-flute chart)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=15",
+      "page": "15",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 12\u201325 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 0.5\u20130.8\u00d7D, Ae 1\u00d7D. \u00d850 mm slotting fz printed .102.. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "aex": 1
+    }
+   ],
+   "diameters_mm": [
+    20,
+    25,
+    32,
+    40,
+    50
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "YG-1",
+   "series": "Minicut Cobalt 930 (inch, 3-flute)",
+   "type": "cobalt 3-flute wave-cut end mill for aluminum",
+   "flutes": 3,
+   "notes": "Product page prints unique 3-flute wave design. 6061 is not named, so aluminum 6061 is not linked. 930M metric chart is not loaded: the text extract of the \u00d810 mm side-cutting RPM does not match the slotting RPM on the same diameter (1100 vs 11000), so the metric row was left out rather than corrected.",
+   "specs": {
+    "flutes": 3,
+    "source": {
+     "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=15",
+     "retrieved": "2026-11-10",
+     "notes": "Flute count from the chart footnote or the product heading in this catalog. Substrate is printed as cobalt, which is not one of the spec substrate tags, so substrate is left off. No coating name is printed."
+    }
+   },
+   "conditions": [
+    {
+     "label": "Aluminum alloy \u00b7 Side cutting",
+     "iso": "N",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "ft/min",
+      "min": 1000,
+      "max": 2000
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.375": 0.0026,
+       "0.5": 0.0039,
+       "0.625": 0.0052,
+       "0.75": 0.0065,
+       "1": 0.0092,
+       "1.25": 0.0118
+      }
+     },
+     "operation": "side",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 930 (inch, 3-flute)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=15",
+      "page": "15",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 1000\u20132000 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 1.5\u00d7D, Ae 0.2\u20130.5\u00d7D. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "apx": 1.5
+    },
+    {
+     "label": "Aluminum alloy \u00b7 Slotting",
+     "iso": "N",
+     "status": "verified",
+     "coolant": "Coolant needs to be used when machining (slotting or profiling) with these end mills.",
+     "sfm": {
+      "unit": "ft/min",
+      "min": 1000,
+      "max": 2000
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.375": 0.002,
+       "0.5": 0.003,
+       "0.625": 0.004,
+       "0.75": 0.005,
+       "1": 0.007,
+       "1.25": 0.009
+      }
+     },
+     "operation": "slot",
+     "table": "RECOMMENDED CUTTING CONDITIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Minicut Cobalt recommended cutting conditions, Minicut Cobalt 930 (inch, 3-flute)",
+      "edition": "Minicut Cobalt MC-CE18, PDF created 2018-09-07 (YG1MCCE180818001)",
+      "url": "https://www.yg1usa.com/downloads/Minicut%20Cobalt.pdf#page=15",
+      "page": "15",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the printed range 1000\u20132000 (no start inside the range). RPM and IPM columns are also printed and are not stored, so the card does not show a second speed. Depth: Ap 0.5\u20130.8\u00d7D, Ae 1\u00d7D. Footnote: feeds are given for the flute count named on the chart. For long-length tools or less rigid conditions, reduce speeds and feeds (no reduced numbers are printed)."
+     },
+     "aex": 1
+    }
+   ],
+   "diameters_in": [
+    0.375,
+    0.5,
+    0.625,
+    0.75,
+    1,
+    1.25
+   ]
+  }
+ ]
+}
