@@ -1,7 +1,7 @@
 import { MODES, migrate, forMode, upsertMachine, dedupeMachines, removeMachine, liveFrom, LATHE_TYPES, showMach, machLimits } from './recall.js';
 import { enhance } from './combo.js';
 import { estimate, borrowOther, ESTIMATES_ON, EST_MODES, RUNG3_ON, sizeTxt } from './estimate.js';
-import { matBad, brandUsable, commonDrillMm, nice, compute, sulph303, dataAt, dataRank, withPairs, noDataWhy, sharedPartial, partialListNote, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf as kindOf0, INDEXABLE_ON, bodyAt, bodyDc, indexablePair, indexableWocs, millIndexable, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, usedFzParts, torqueNeedNm, iprFromFz, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, classifyOverride, classifyEng, engFrac, drillTier, rowDia, rowExcludes, toolLifeOf } from './calc.js';
+import { matBad, brandUsable, commonDrillMm, nice, compute, sulph303, dataAt, dataRank, withPairs, noDataWhy, sharedPartial, partialListNote, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf as kindOf0, INDEXABLE_ON, bodyAt, bodyDc, indexablePair, indexableWocs, millIndexable, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, usedFzParts, torqueNeedNm, iprFromFz, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, classifyOverride, classifyEng, engFrac, drillTier, rowDia, rowExcludes, toolLifeOf, GRADE_ALIASES } from './calc.js';
 let PASSNOTE = ''; // Review3 #4: set when the chosen Pass has no rows for this tool
 const $ = id => document.getElementById(id);
 const J = u => fetch(u).then(r => r.json());
@@ -36,7 +36,8 @@ let mode = q.get('mode') || 'mill', defs = {};
 const MATS = idx.materials, matSel = () => MATS.find(m => m.id === $('mat').value);
 $('matPick').add(new Option('Pick a material', ''));
 for (const [k, n] of idx.materialGroups) { $('matPick').add(new Option(`${n}, any · ISO ${k}`, k));
-  MATS.filter(m => m.iso === k).forEach(m => $('matPick').add(new Option(`\u00a0\u00a0${m.name} · ISO ${k}`, k + ':' + m.id))); }
+  MATS.filter(m => m.iso === k).forEach(m => { $('matPick').add(new Option(`\u00a0\u00a0${m.name} · ISO ${k}`, k + ':' + m.id));
+    for (const g of GRADE_ALIASES.filter(x => x.id === m.id)) { const o = new Option(`${g.grade} → ${m.name} · ${g.how === 'standard' ? 'standard class' : 'in maker tables'}`, `${k}:${m.id}#${g.grade}`); o.dataset.hideempty = '1'; $('matPick').add(o); } }); }
 const syncPick = () => { $('matPick').value = $('iso').value + ($('mat').value ? ':' + $('mat').value : ''); };
 const fillMat = () => { if (matSel() && matSel().iso !== $('iso').value) $('iso').value = matSel().iso; syncPick(); };
 const isoOk = c => { const m = matSel(); if (m) return !!matchMat(m, c) && !matBad(m, c); // wrong class/hardness rows never match
@@ -222,7 +223,7 @@ const diaList = c => { const f = diaFeed(c); if (!f) return []; const u = toIn(1
   if (f.byDiameter) return Object.keys(f.byDiameter).map(k => +k * u).sort((x, y) => x - y);
   if (f.bands) return f.bands.map(([a, z]) => (a + z) / 2 * u); return []; };
 // Mill/Drill with a brand: Published diameters = every published size of that brand + type (all series, deduped); with 'Only tools with data' and a material, only sizes some tool has data at.
-let BDIA = null; function fillBrandDia(hits) { BDIA = null; if (!(mode === 'mill' || mode === 'drill') || !$('brand').value) return;
+let BDIA = null; function fillBrandDia(hits) { BDIA = null; if (!(mode === 'mill' || mode === 'drill') || !$('brand').value) { $('dPickL').hidden = true; return; }
   const iso = matSel()?.iso || $('iso').value, od = $('onlyData').checked && !!iso, set = new Map();
   for (const t of hits) for (const x of t.ps ?? []) if (!od || dataAt(t, x, iso)) set.set(x.toFixed(3), x);
   BDIA = [...set.values()].sort((a, b) => a - b); const s = $('dPick'); s.length = 0; $('dPickL').hidden = !BDIA.length; if (!BDIA.length) return;
@@ -268,7 +269,8 @@ function engHtml(k, st) { if (st !== 'yours') return esc(TAG[st]); const o = eng
 function engTags() { if ($('aeX')) $('aeX').innerHTML = esc($('aeX').textContent) + engHtml('ae', ENG.ae); if ($('apX')) $('apX').innerHTML = esc($('apX').textContent) + engHtml('ap', ENG.ap);
   const tl = $('apTX'); if (tl) tl.innerHTML = engHtml('apT', ENG.ap).replace(/^ · /, ''); }
 function setupSum() { const c = curTool()?.conditions[$('cond').value], P = $('pass'), K = $('cut');
-  $('setupSum').textContent = '· ' + [!P.closest('label').hidden && mode !== 'drill' && mode !== 'tap' ? `Pass ${P.value || 'Any'}` : '', mode === 'mill' ? `Cut ${K.value || 'Any'}` : '', c ? c.label.slice(0, 60) : 'no condition'].filter(Boolean).join(' · '); }
+  const nSizes = $('dPickL').hidden ? 0 : [...$('dPick').options].filter(o => o.value !== '').length, sizes = nSizes ? `${nSizes} sizes` : '';
+  $('setupSum').textContent = '· ' + [sizes, !P.closest('label').hidden && mode !== 'drill' && mode !== 'tap' ? `Pass ${P.value || 'Any'}` : '', mode === 'mill' ? `Cut ${K.value || 'Any'}` : '', c ? c.label.slice(0, 60) : 'no condition'].filter(Boolean).join(' · '); }
 function fill() { setupSum();
   const t = curTool(), c = t?.conditions[$('cond').value];
   fillDia(c);
@@ -395,8 +397,9 @@ function run() { tapBox(); updateFindLink(); favMark();
   else {
   const noEst = ESTTRY ? '<span class="estw">No estimate available</span> (fewer than 2 matching published tools from this maker)' : '';
   half = c && !v('sfm') && c.feed && !c.sfm ? (allMat(c) ? 'Feed table, all materials: feed only, no speed printed' : 'feed only, no speed printed') : c && v('sfm') && !v('fpt') && c.sfm && !c.feed && mode !== 'tap' && !TH() ? 'speed only, no feed printed' : '';
-  cards += v('sfm') ? card(SPL, uSp(v('sfm')), sfmB + (c && matSel()?.id === 'ss304' && sulph303(c) && !SP?.est ? ' · <b>row is for sulphured stainless (303 type), not 304</b>' : '') + (SP?.est ? (ovc('sfm').state === 'out' ? ` · ESTIMATE was ${uSp(SP.def)}` : '') : ovc('sfm').state !== 'mfr' && SP ? ` · manufacturer ${fmt(SP, 0)}` : ''), ovCls(ovc('sfm')) + (sfmSt === 'r3' ? ' wide' : ''), SP ? 'sfm' : '', SP?.est ? 'Reset to estimate' : null) : card(SPL, 'No manufacturer data', half || (c && allMat(c) ? 'Feed table, all materials: no speed printed' : noEst), 'none');
-  cards += v('fpt') ? card(fk, uFeed(v('fpt')), fB + (mode !== 'tap' && !TH() && FD?.est ? (ovc('fpt').state === 'out' ? ` · ESTIMATE was ${uFeed(FD.def)}` : '') : mode !== 'tap' && !TH() && ovc('fpt').state !== 'mfr' && FD ? ` · manufacturer ${fmt(FD, 4)}` : ''), (mode !== 'tap' && !TH() ? ovCls(ovc('fpt')) : '') + (fSt === 'r3' ? ' wide' : ''), FD && mode !== 'tap' && !TH() ? 'fpt' : '', FD?.est ? 'Reset to estimate' : null) : (TH() && !threadPitchIn(+$('tpi').value, $('pitchU').value) ? card(fk, 'Enter TPI', 'Feed per rev = thread pitch; type the TPI (or pitch) above', 'none') : card(fk, 'No manufacturer data' + (c?.feed ? ' at this diameter' : ''), half || (mode !== 'tap' ? noEst : ''), 'none'));
+  let srcC = '';
+  srcC += v('sfm') ? card(SPL, uSp(v('sfm')), sfmB + (c && matSel()?.id === 'ss304' && sulph303(c) && !SP?.est ? ' · <b>row is for sulphured stainless (303 type), not 304</b>' : '') + (SP?.est ? (ovc('sfm').state === 'out' ? ` · ESTIMATE was ${uSp(SP.def)}` : '') : ovc('sfm').state !== 'mfr' && SP ? ` · manufacturer ${fmt(SP, 0)}` : ''), ovCls(ovc('sfm')) + (sfmSt === 'r3' ? ' wide' : ''), SP ? 'sfm' : '', SP?.est ? 'Reset to estimate' : null) : card(SPL, 'No manufacturer data', half || (c && allMat(c) ? 'Feed table, all materials: no speed printed' : noEst), 'none');
+  srcC += v('fpt') ? card(fk, uFeed(v('fpt')), fB + (mode !== 'tap' && !TH() && FD?.est ? (ovc('fpt').state === 'out' ? ` · ESTIMATE was ${uFeed(FD.def)}` : '') : mode !== 'tap' && !TH() && ovc('fpt').state !== 'mfr' && FD ? ` · manufacturer ${fmt(FD, 4)}` : ''), (mode !== 'tap' && !TH() ? ovCls(ovc('fpt')) : '') + (fSt === 'r3' ? ' wide' : ''), FD && mode !== 'tap' && !TH() ? 'fpt' : '', FD?.est ? 'Reset to estimate' : null) : (TH() && !threadPitchIn(+$('tpi').value, $('pitchU').value) ? card(fk, 'Enter TPI', 'Feed per rev = thread pitch; type the TPI (or pitch) above', 'none') : card(fk, 'No manufacturer data' + (c?.feed ? ' at this diameter' : ''), half || (mode !== 'tap' ? noEst : ''), 'none'));
   let o = null, extra = '';
   if (v('sfm') && v('fpt') && v('d')) {
     if (mode === 'mill') { o = compute({ sfm: v('sfm'), d: v('d'), fpt: v('fpt'), z: v('z'), ae: frac.ae * v('d'), ap: frac.ap * v('d'), stickout: v('so'), maxRpm: v('maxRpm'), maxHp: v('maxHp'), iso: c?.iso });
@@ -419,6 +422,7 @@ function run() { tapBox(); updateFindLink(); favMark();
     cards += (mode === 'mill' && LV && iprFromFz(v('fpt'), v('z')) ? card(metric ? 'Feed mm/rev' : 'Feed IPR', uFeed(iprFromFz(v('fpt'), v('z'))), 'DERIVED (printed chip load × Z flutes) · for the lathe live-tool feed') : '') + card('RPM', Math.round(o.rpm), [(o.capped ? `<span class="warn">capped at ${LV?.rpm ? 'live-tool max RPM (YOUR VALUE)' : 'machine max RPM'}</span>` : ''), calc, boreRpmB].filter(Boolean).join(' · ')) + (TH() ? '' : card(FPL, uIpm(o.ipm, mode === 'mill' ? 1 : 2), [calc + soN, boreIpmB].filter(Boolean).join(' · '))) + extra;
     BAR.push(['RPM', Math.round(o.rpm)], BAR.ipr ? [metric ? 'mm/rev' : 'IPR', uFeed(v('fpt'))] : [metric ? 'mm/min' : 'IPM', uIpm(o.ipm, mode === 'mill' ? 1 : 2)]);
   }
+  cards += srcC;
   }
   $('apT').closest('label').style.display = PG() ? 'none' : '';
   if (c && !PG()) { const apU = c.ap ? toIn(1, c.ap.unit) : 1, d = v('d'); let doc = [];
@@ -481,7 +485,10 @@ document.querySelectorAll('[data-mode]').forEach(b => { b.onclick = () => setMod
 $('unit').onclick = () => { const KS = [...LEN, 'sfm', 'fpt'], x = Object.fromEntries(KS.map(k => [k, $(k).value === '' ? '' : inV(k)])); metric = !metric; LS.set('metric', metric);
   KS.forEach(k => setIn(k, x[k])); $('aeU').options[1].text = $('apU').options[1].text = UL(); showEng(); $('sfmLbl').firstChild.textContent = metric ? 'Speed (m/min)' : 'SFM';
   $('feedLbl').firstChild.textContent = $('feedLbl').firstChild.textContent.replace(/\b(in|mm)\//, UL() + '/').replace(/\((in|mm)\)/, `(${UL()})`); $('unit').textContent = metric ? 'mm' : 'inch'; document.querySelectorAll('.u').forEach(e => e.textContent = `(${UL()})`); run(); };
-$('matPick').onchange = () => { TUSER = false; const [i, m] = $('matPick').value.split(':'); $('iso').value = i; $('mat').value = m ?? ''; fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillKind; $('cq').oninput = fillCond; $('tool').onchange = () => { TUSER = true; GUSER = false; $('cq').value = ''; fillGrade(''); }; $('grade').onchange = () => { GUSER = true; fillGrade(); updateFindLink(); }; $('mach').onchange = applyMachine;
+$('matPick').onchange = () => { TUSER = false; const [i, rest] = $('matPick').value.split(':'); const [m, grade] = (rest ?? '').split('#'); $('iso').value = i; $('mat').value = m ?? '';
+  const hit = grade && GRADE_ALIASES.find(g => g.grade === grade && g.id === m), nm = matSel()?.name ?? '';
+  $('matNote').textContent = !hit ? '' : hit.how === 'standard' ? `${hit.grade} · standard class, same group as ${nm}. Not its own number in this app.` : `${hit.grade} · in maker tables for this group. Same manufacturer rows as ${nm}, not a separate ${hit.grade} number.`;
+  if (grade) syncPick(); fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillKind; $('cq').oninput = fillCond; $('tool').onchange = () => { TUSER = true; GUSER = false; $('cq').value = ''; fillGrade(''); }; $('grade').onchange = () => { GUSER = true; fillGrade(); updateFindLink(); }; $('mach').onchange = applyMachine;
 $('cond').onchange = () => { fill(); recent(); }; $('cool').onchange = () => { if (mode === 'drill') { const k = $('tool').value; if (!TUSER) $('tool').value = ''; fillTool(); if ($('tool').value === k) fill(); } else fill(); }; $('thr').onchange = fillBrand; $('d').onchange = () => { TUSER = false; TUSER_D = inV('d') > 0; if (mode === 'mill') showEng(); if (mode === 'drill' || mode === 'mill') { const k = $('tool').value; fillTool(); if ($('tool').value === k) return fill(); return; } fill(); };
 ['ae', 'aeU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ae') ENG.ae = 'yours'; readEng(); }));
 ['ap', 'apU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ap') ENG.ap = 'yours'; readEng(); }));

@@ -567,3 +567,15 @@ console.log('estimate tests ok');
   assert.equal(d.tools.reduce((n, t) => n + t.conditions.length, 0), 207);
   assert.ok(matPref('4140-ann', g6) < matPref('4140-ann', g1));
   console.log('iscar parting speeds ok'); }
+{ const { GRADE_ALIASES, matchMat } = await import('./calc.js');
+  const mats = JSON.parse(fs.readFileSync('data/materials.json', 'utf8')).materials, ids = new Set(mats.map(m => m.id));
+  for (const g of GRADE_ALIASES) { assert.ok(ids.has(g.id), g.grade); assert.ok(g.how === 'table' || g.how === 'standard'); }
+  const one = (grade, id, how) => assert.ok(GRADE_ALIASES.some(g => g.grade === grade && g.id === id && g.how === how), grade + ' ' + id);
+  one('1045', 'p-mild', 'table'); one('7075', 'al6061', 'table'); one('A2', 'h13-ann', 'table'); one('D2', 'p20-pre', 'table'); one('316L', 'ss304', 'table'); one('4130', 'p-alloy', 'table');
+  one('4142', '4140-ann', 'standard'); one('4142', '4140-ht', 'standard');
+  assert.ok(!GRADE_ALIASES.some(g => (g.grade === 'A2' || g.grade === 'D2') && g.id === 'h13-hard'));
+  for (const [g, id] of [['1018', 'p-mild'], ['4140', '4140-ann'], ['316', 'ss304'], ['304', 'ss304'], ['6061', 'al6061'], ['H13', 'h13-ann']]) assert.match(mats.find(m => m.id === id).name, new RegExp(g));
+  const mild = mats.find(m => m.id === 'p-mild');
+  assert.equal(matchMat(mild, { label: 'Non-alloy steel (1018, A36, 1045)', iso: 'P', materials: ['p-mild'], sourceGroup: 'Non-alloy steel (1018, A36, 1045)' }), 'named');
+  assert.ok(!mats.some(m => /4142|7075|\b1045\b/.test(`${m.name} ${m.named || ''}`)));
+  console.log('grade alias tests pass'); }

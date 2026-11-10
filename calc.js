@@ -94,6 +94,21 @@ export function matchMat(m, c) {
   if (m.group && !new RegExp(m.group, 'i').test(text)) return null;
   if (m.hb) { const h = hardnessBand(text); if (h && !(h[0] <= m.hb[1] && h[1] >= m.hb[0])) return null; }
   return 'group'; }
+// Picker aliases only. Choosing one sets an existing material id. matchMat does not read this, so no speed or feed changes.
+// 'table' = a loaded maker table prints that grade in this material's group. 'standard' = well-known class membership, labeled as such.
+export const GRADE_ALIASES = [
+  ['1020', 'p-mild'], ['1045', 'p-mild'], ['1050', 'p-mild'], ['12L14', 'p-mild'], ['1215', 'p-mild'],
+  ['304L', 'ss304'], ['316L', 'ss304'], ['321', 'ss304'],
+  ['410', 'ss400'], ['416', 'ss400'],
+  ['13-8', 'ss17-4ph'], ['15-5', 'ss17-4ph'],
+  ['2024', 'al6061'], ['6063', 'al6061'], ['7075', 'al6061'],
+  ['4130', 'p-alloy'], ['4330', 'p-alloy'], ['8620', 'p-alloy'],
+  ['A2', 'h13-ann'], ['A2', 'p20-ann'], ['A2', 'p20-pre'],
+  ['D2', 'h13-ann'], ['D2', 'p20-ann'], ['D2', 'p20-pre'],
+].map(([grade, id]) => ({ grade, id, how: 'table' })).concat([
+  { grade: '4142', id: '4140-ann', how: 'standard' },
+  { grade: '4142', id: '4140-ht', how: 'standard' },
+]);
 // Plain condition choices mapped from the record's own label/operation text.
 export const passOf = c => { const s = `${c.label} ${c.operation ?? ''} ${c.subgroup ?? ''}`; return /finish|light/i.test(s) ? 'Finish' : /rough|heavy/i.test(s) ? 'Rough' : 'Medium'; };
 export const cutOf = c => { const s = `${c.label} ${c.operation ?? ''}`; return /\bHEM\b|dynamic|trochoid|high.?eff|adaptive|HPC/i.test(s) ? 'HEM' : /slot|full width|groov/i.test(s) ? 'Slot' : /side|profil|periph|contour|shoulder/i.test(s) ? 'Side' : ''; };
