@@ -546,3 +546,17 @@ console.log('estimate tests ok');
   const app = fs.readFileSync('app.js', 'utf8'), html = fs.readFileSync('index.html', 'utf8');
   assert.match(app, /Estimate from other maker:/); assert.match(app, /get\('r3'\) !== '0'/); assert.match(html, /\.card\.r3\{/);
   console.log('rung 3 tests ok'); }
+// Iscar parting speeds: the metric user-guide table (p.613), unit fixed by the inch edition's (SFM) title. Group 30 stays blank.
+{ const { turnOpsOf, matPref } = await import('./calc.js');
+  const d = JSON.parse(fs.readFileSync('data/iscar-parting-speeds.json', 'utf8'));
+  const cell = (grade, g) => d.tools.find(t => t.grade === grade).conditions.find(c => c.subgroup === 'ISCAR ' + g);
+  const g6 = cell('IC1010/IC908/808/1008', 6), g1 = cell('IC907/807', 1);
+  assert.deepEqual(g6.sfm, { unit: 'm/min', min: 105, max: 160 });
+  assert.equal(g6.feed, undefined); assert.equal(g6.iso, 'P'); assert.equal(g6.operation, 'parting');
+  assert.ok(g6.source.url.endsWith('/files/page/615.jpg')); assert.match(g6.source.page, /^613\b/);
+  assert.equal(g1.altSources[0].sfm.unit, 'ft/min'); assert.deepEqual([g1.altSources[0].sfm.min, g1.altSources[0].sfm.max], [525, 785]);
+  assert.ok(g1.altSources[0].source.url.endsWith('/files/page/605.jpg'));
+  assert.ok(d.tools.every(t => turnOpsOf(t).join() === 'Part' && t.conditions.every(c => c.subgroup !== 'ISCAR 30' && c.sfm && !c.feed)));
+  assert.equal(d.tools.reduce((n, t) => n + t.conditions.length, 0), 207);
+  assert.ok(matPref('4140-ann', g6) < matPref('4140-ann', g1));
+  console.log('iscar parting speeds ok'); }
