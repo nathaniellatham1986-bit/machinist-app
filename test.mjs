@@ -411,7 +411,14 @@ console.log('estimate tests ok');
   assert.equal(noDataWhy({ speedIsos: ['P'] }, '4140-ann', 'P'), 'speed only, no feed printed');
   assert.equal(noDataWhy({ feedIsos: ['*'] }, '4140-ann', 'P'), 'feed only, no speed printed');
   assert.equal(noDataWhy({ speedIsos: ['P'], nm: ['4140-ann'] }, '4140-ann', 'P'), 'no data for this material');
-  assert.equal(noDataWhy({}, 'x', 'P'), 'no data for this material'); }
+  assert.equal(noDataWhy({}, 'x', 'P'), 'no data for this material');
+  const { sharedPartial, partialListNote } = await import('./calc.js');
+  assert.equal(sharedPartial(['speed only, no feed printed', 'speed only, no feed printed']), 'speed only, no feed printed');
+  assert.equal(sharedPartial(['feed only, no speed printed']), 'feed only, no speed printed');
+  assert.equal(sharedPartial(['speed only, no feed printed', 'feed only, no speed printed']), '');
+  assert.equal(sharedPartial(['speed only, no feed printed', 'no data for this material']), '');
+  assert.equal(partialListNote(['feed only, no speed printed', 'speed only, no feed printed']), 'feed only, no speed printed, or speed only, no feed printed');
+  assert.equal(partialListNote(['no data for this material']), ''); }
 // ME1: Dormer S116 has no M data at 0.5 in (published 12 and 14 mm only), so it must never be the auto-picked default there.
 { const { dataAt } = await import('./calc.js'); const fs = await import('node:fs'); const ix = JSON.parse(fs.readFileSync('data/index.json'));
   const t = ix.files.find(f => f.file === 'dormer-pramet-mill-endmills.json').tools.find(t => t.series === 'Dormer S116');
