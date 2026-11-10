@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-const C='fs-5644b61e74',F=['./','index.html','app.js','calc.js','estimate.js','recall.js','combo.js','manifest.json','data/index.json','data/threads.json'];
-=======
-const C='fs-16f32912a8',F=['./','index.html','app.js','calc.js','estimate.js','recall.js','combo.js','manifest.json','data/index.json','data/threads.json'];
->>>>>>> 401e479 (Rebuild the tool index and service-worker cache.)
+const C='fs-f285bfbdd9',F=['./','index.html','app.js','calc.js','estimate.js','recall.js','combo.js','manifest.json','data/index.json','data/threads.json'];
 // Shell is precached; brand data files are cached on first use (lazy). Cache name is stamped by scripts/build-index.mjs.
 self.oninstall=e=>{self.skipWaiting();e.waitUntil(caches.open(C).then(c=>c.addAll(F)))};
 self.onactivate=e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==C).map(x=>caches.delete(x)))).then(()=>self.clients.claim()));

@@ -1,0 +1,1824 @@
+{
+ "schema": 1,
+ "brand": "Union Tool",
+ "tools": [
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "DLC-ALES 3010-0300",
+   "type": "DLCCOAT 3 flute square end mill with chip breaker for aluminum",
+   "coating": "DLCCOAT",
+   "flutes": 3,
+   "diameters_mm": [
+    1.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 3,
+    "coating": "DLCCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=4",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.4 (printed p.3) prints \"DLCCOAT 3 Flute Square End Mills for Aluminum Milling\" and \"DLC\". Substrate from the safety page (PDF p.6), which prints 超硬エンドミル."
+    }
+   },
+   "notes": "Square end mill with chip breaker. Overall length, shank diameter and taper angle are on the dimension table (PDF p.4, printed p.3) and are not stored. January 2025 launch is printed on that page.",
+   "conditions": [
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Vertical",
+     "iso": "N",
+     "operation": "Vertical",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "1": {
+        "rpm": 26000,
+        "tableFeed": {
+         "value": 150,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 1,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 3 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Slotting",
+     "iso": "N",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "1": {
+        "rpm": 26000,
+        "tableFeed": {
+         "value": 500,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 1,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 3 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Side milling",
+     "iso": "N",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "1": {
+        "rpm": 26000,
+        "tableFeed": {
+         "value": 420,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 3,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 0.1,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 3 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "DLC-ALES 3010-0500",
+   "type": "DLCCOAT 3 flute square end mill with chip breaker for aluminum",
+   "coating": "DLCCOAT",
+   "flutes": 3,
+   "diameters_mm": [
+    1.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 3,
+    "coating": "DLCCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=4",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.4 (printed p.3) prints \"DLCCOAT 3 Flute Square End Mills for Aluminum Milling\" and \"DLC\". Substrate from the safety page (PDF p.6), which prints 超硬エンドミル."
+    }
+   },
+   "notes": "Square end mill with chip breaker. Overall length, shank diameter and taper angle are on the dimension table (PDF p.4, printed p.3) and are not stored. January 2025 launch is printed on that page.",
+   "conditions": [
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Side milling",
+     "iso": "N",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "1": {
+        "rpm": 26000,
+        "tableFeed": {
+         "value": 210,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 5,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 0.1,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 5 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "DLC-ALES 3020-0600",
+   "type": "DLCCOAT 3 flute square end mill with chip breaker for aluminum",
+   "coating": "DLCCOAT",
+   "flutes": 3,
+   "diameters_mm": [
+    2.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 3,
+    "coating": "DLCCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=4",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.4 (printed p.3) prints \"DLCCOAT 3 Flute Square End Mills for Aluminum Milling\" and \"DLC\". Substrate from the safety page (PDF p.6), which prints 超硬エンドミル."
+    }
+   },
+   "notes": "Square end mill with chip breaker. Overall length, shank diameter and taper angle are on the dimension table (PDF p.4, printed p.3) and are not stored. January 2025 launch is printed on that page.",
+   "conditions": [
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Vertical",
+     "iso": "N",
+     "operation": "Vertical",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "2": {
+        "rpm": 26000,
+        "tableFeed": {
+         "value": 225,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 6 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Slotting",
+     "iso": "N",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "2": {
+        "rpm": 26000,
+        "tableFeed": {
+         "value": 650,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 6 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Side milling",
+     "iso": "N",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "2": {
+        "rpm": 26000,
+        "tableFeed": {
+         "value": 700,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 6,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 0.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 6 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "DLC-ALES 3020-1000",
+   "type": "DLCCOAT 3 flute square end mill with chip breaker for aluminum",
+   "coating": "DLCCOAT",
+   "flutes": 3,
+   "diameters_mm": [
+    2.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 3,
+    "coating": "DLCCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=4",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.4 (printed p.3) prints \"DLCCOAT 3 Flute Square End Mills for Aluminum Milling\" and \"DLC\". Substrate from the safety page (PDF p.6), which prints 超硬エンドミル."
+    }
+   },
+   "notes": "Square end mill with chip breaker. Overall length, shank diameter and taper angle are on the dimension table (PDF p.4, printed p.3) and are not stored. January 2025 launch is printed on that page.",
+   "conditions": [
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Side milling",
+     "iso": "N",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "2": {
+        "rpm": 26000,
+        "tableFeed": {
+         "value": 350,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 10,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 0.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 10 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "DLC-ALES 3030-0900",
+   "type": "DLCCOAT 3 flute square end mill with chip breaker for aluminum",
+   "coating": "DLCCOAT",
+   "flutes": 3,
+   "diameters_mm": [
+    3.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 3,
+    "coating": "DLCCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=4",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.4 (printed p.3) prints \"DLCCOAT 3 Flute Square End Mills for Aluminum Milling\" and \"DLC\". Substrate from the safety page (PDF p.6), which prints 超硬エンドミル."
+    }
+   },
+   "notes": "Square end mill with chip breaker. Overall length, shank diameter and taper angle are on the dimension table (PDF p.4, printed p.3) and are not stored. January 2025 launch is printed on that page.",
+   "conditions": [
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Vertical",
+     "iso": "N",
+     "operation": "Vertical",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "3": {
+        "rpm": 26000,
+        "tableFeed": {
+         "value": 225,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 3,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 9 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Slotting",
+     "iso": "N",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "3": {
+        "rpm": 26000,
+        "tableFeed": {
+         "value": 800,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 3,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 9 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Side milling",
+     "iso": "N",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "3": {
+        "rpm": 26000,
+        "tableFeed": {
+         "value": 1200,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 9,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 0.3,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 9 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "DLC-ALES 3030-1500",
+   "type": "DLCCOAT 3 flute square end mill with chip breaker for aluminum",
+   "coating": "DLCCOAT",
+   "flutes": 3,
+   "diameters_mm": [
+    3.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 3,
+    "coating": "DLCCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=4",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.4 (printed p.3) prints \"DLCCOAT 3 Flute Square End Mills for Aluminum Milling\" and \"DLC\". Substrate from the safety page (PDF p.6), which prints 超硬エンドミル."
+    }
+   },
+   "notes": "Square end mill with chip breaker. Overall length, shank diameter and taper angle are on the dimension table (PDF p.4, printed p.3) and are not stored. January 2025 launch is printed on that page.",
+   "conditions": [
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Side milling",
+     "iso": "N",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "3": {
+        "rpm": 26000,
+        "tableFeed": {
+         "value": 600,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 15,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 0.3,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 15 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "DLC-ALES 3040-1200",
+   "type": "DLCCOAT 3 flute square end mill with chip breaker for aluminum",
+   "coating": "DLCCOAT",
+   "flutes": 3,
+   "diameters_mm": [
+    4.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 3,
+    "coating": "DLCCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=4",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.4 (printed p.3) prints \"DLCCOAT 3 Flute Square End Mills for Aluminum Milling\" and \"DLC\". Substrate from the safety page (PDF p.6), which prints 超硬エンドミル."
+    }
+   },
+   "notes": "Square end mill with chip breaker. Overall length, shank diameter and taper angle are on the dimension table (PDF p.4, printed p.3) and are not stored. January 2025 launch is printed on that page.",
+   "conditions": [
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Vertical",
+     "iso": "N",
+     "operation": "Vertical",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "4": {
+        "rpm": 26000,
+        "tableFeed": {
+         "value": 300,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 12 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Slotting",
+     "iso": "N",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "4": {
+        "rpm": 26000,
+        "tableFeed": {
+         "value": 1000,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 12 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Side milling",
+     "iso": "N",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "4": {
+        "rpm": 26000,
+        "tableFeed": {
+         "value": 1500,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 12,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 0.4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 12 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "DLC-ALES 3040-2000",
+   "type": "DLCCOAT 3 flute square end mill with chip breaker for aluminum",
+   "coating": "DLCCOAT",
+   "flutes": 3,
+   "diameters_mm": [
+    4.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 3,
+    "coating": "DLCCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=4",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.4 (printed p.3) prints \"DLCCOAT 3 Flute Square End Mills for Aluminum Milling\" and \"DLC\". Substrate from the safety page (PDF p.6), which prints 超硬エンドミル."
+    }
+   },
+   "notes": "Square end mill with chip breaker. Overall length, shank diameter and taper angle are on the dimension table (PDF p.4, printed p.3) and are not stored. January 2025 launch is printed on that page.",
+   "conditions": [
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Side milling",
+     "iso": "N",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "4": {
+        "rpm": 23500,
+        "tableFeed": {
+         "value": 1100,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 20,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 0.4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 20 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "DLC-ALES 3050-1500",
+   "type": "DLCCOAT 3 flute square end mill with chip breaker for aluminum",
+   "coating": "DLCCOAT",
+   "flutes": 3,
+   "diameters_mm": [
+    5.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 3,
+    "coating": "DLCCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=4",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.4 (printed p.3) prints \"DLCCOAT 3 Flute Square End Mills for Aluminum Milling\" and \"DLC\". Substrate from the safety page (PDF p.6), which prints 超硬エンドミル."
+    }
+   },
+   "notes": "Square end mill with chip breaker. Overall length, shank diameter and taper angle are on the dimension table (PDF p.4, printed p.3) and are not stored. January 2025 launch is printed on that page.",
+   "conditions": [
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Vertical",
+     "iso": "N",
+     "operation": "Vertical",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "5": {
+        "rpm": 23000,
+        "tableFeed": {
+         "value": 300,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 5,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 15 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Slotting",
+     "iso": "N",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "5": {
+        "rpm": 23000,
+        "tableFeed": {
+         "value": 1000,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 5,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 15 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Side milling",
+     "iso": "N",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "5": {
+        "rpm": 23000,
+        "tableFeed": {
+         "value": 1600,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 15,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 0.5,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 15 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "DLC-ALES 3050-2500",
+   "type": "DLCCOAT 3 flute square end mill with chip breaker for aluminum",
+   "coating": "DLCCOAT",
+   "flutes": 3,
+   "diameters_mm": [
+    5.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 3,
+    "coating": "DLCCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=4",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.4 (printed p.3) prints \"DLCCOAT 3 Flute Square End Mills for Aluminum Milling\" and \"DLC\". Substrate from the safety page (PDF p.6), which prints 超硬エンドミル."
+    }
+   },
+   "notes": "Square end mill with chip breaker. Overall length, shank diameter and taper angle are on the dimension table (PDF p.4, printed p.3) and are not stored. January 2025 launch is printed on that page.",
+   "conditions": [
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Side milling",
+     "iso": "N",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "5": {
+        "rpm": 18000,
+        "tableFeed": {
+         "value": 1100,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 25,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 0.5,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 25 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "DLC-ALES 3060-1800",
+   "type": "DLCCOAT 3 flute square end mill with chip breaker for aluminum",
+   "coating": "DLCCOAT",
+   "flutes": 3,
+   "diameters_mm": [
+    6.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 3,
+    "coating": "DLCCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=4",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.4 (printed p.3) prints \"DLCCOAT 3 Flute Square End Mills for Aluminum Milling\" and \"DLC\". Substrate from the safety page (PDF p.6), which prints 超硬エンドミル."
+    }
+   },
+   "notes": "Square end mill with chip breaker. Overall length, shank diameter and taper angle are on the dimension table (PDF p.4, printed p.3) and are not stored. January 2025 launch is printed on that page.",
+   "conditions": [
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Vertical",
+     "iso": "N",
+     "operation": "Vertical",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 19500,
+        "tableFeed": {
+         "value": 300,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 6,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 18 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Slotting",
+     "iso": "N",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 19500,
+        "tableFeed": {
+         "value": 900,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 6,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 18 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Side milling",
+     "iso": "N",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 19500,
+        "tableFeed": {
+         "value": 1800,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 18,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 0.6,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 18 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "DLC-ALES 3060-3000",
+   "type": "DLCCOAT 3 flute square end mill with chip breaker for aluminum",
+   "coating": "DLCCOAT",
+   "flutes": 3,
+   "diameters_mm": [
+    6.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 3,
+    "coating": "DLCCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=4",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.4 (printed p.3) prints \"DLCCOAT 3 Flute Square End Mills for Aluminum Milling\" and \"DLC\". Substrate from the safety page (PDF p.6), which prints 超硬エンドミル."
+    }
+   },
+   "notes": "Square end mill with chip breaker. Overall length, shank diameter and taper angle are on the dimension table (PDF p.4, printed p.3) and are not stored. January 2025 launch is printed on that page.",
+   "conditions": [
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Side milling",
+     "iso": "N",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 14500,
+        "tableFeed": {
+         "value": 1200,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 30,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 0.6,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 30 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "DLC-ALES 3080-2400",
+   "type": "DLCCOAT 3 flute square end mill with chip breaker for aluminum",
+   "coating": "DLCCOAT",
+   "flutes": 3,
+   "diameters_mm": [
+    8.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 3,
+    "coating": "DLCCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=4",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.4 (printed p.3) prints \"DLCCOAT 3 Flute Square End Mills for Aluminum Milling\" and \"DLC\". Substrate from the safety page (PDF p.6), which prints 超硬エンドミル."
+    }
+   },
+   "notes": "Square end mill with chip breaker. Overall length, shank diameter and taper angle are on the dimension table (PDF p.4, printed p.3) and are not stored. January 2025 launch is printed on that page.",
+   "conditions": [
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Vertical",
+     "iso": "N",
+     "operation": "Vertical",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 14500,
+        "tableFeed": {
+         "value": 300,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 8,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 24 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Slotting",
+     "iso": "N",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 14500,
+        "tableFeed": {
+         "value": 950,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 8,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 24 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Side milling",
+     "iso": "N",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 14500,
+        "tableFeed": {
+         "value": 1900,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 24,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 0.8,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 24 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "DLC-ALES 3080-4000",
+   "type": "DLCCOAT 3 flute square end mill with chip breaker for aluminum",
+   "coating": "DLCCOAT",
+   "flutes": 3,
+   "diameters_mm": [
+    8.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 3,
+    "coating": "DLCCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=4",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.4 (printed p.3) prints \"DLCCOAT 3 Flute Square End Mills for Aluminum Milling\" and \"DLC\". Substrate from the safety page (PDF p.6), which prints 超硬エンドミル."
+    }
+   },
+   "notes": "Square end mill with chip breaker. Overall length, shank diameter and taper angle are on the dimension table (PDF p.4, printed p.3) and are not stored. January 2025 launch is printed on that page.",
+   "conditions": [
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Side milling",
+     "iso": "N",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 11000,
+        "tableFeed": {
+         "value": 1300,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 40,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 0.8,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 40 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "DLC-ALES 3100-3000",
+   "type": "DLCCOAT 3 flute square end mill with chip breaker for aluminum",
+   "coating": "DLCCOAT",
+   "flutes": 3,
+   "diameters_mm": [
+    10.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 3,
+    "coating": "DLCCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=4",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.4 (printed p.3) prints \"DLCCOAT 3 Flute Square End Mills for Aluminum Milling\" and \"DLC\". Substrate from the safety page (PDF p.6), which prints 超硬エンドミル."
+    }
+   },
+   "notes": "Square end mill with chip breaker. Overall length, shank diameter and taper angle are on the dimension table (PDF p.4, printed p.3) and are not stored. January 2025 launch is printed on that page.",
+   "conditions": [
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Vertical",
+     "iso": "N",
+     "operation": "Vertical",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 11500,
+        "tableFeed": {
+         "value": 250,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 10,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 30 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Slotting",
+     "iso": "N",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 11500,
+        "tableFeed": {
+         "value": 1000,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 10,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 30 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Side milling",
+     "iso": "N",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 11500,
+        "tableFeed": {
+         "value": 2000,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 30,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 30 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "DLC-ALES 3100-5000",
+   "type": "DLCCOAT 3 flute square end mill with chip breaker for aluminum",
+   "coating": "DLCCOAT",
+   "flutes": 3,
+   "diameters_mm": [
+    10.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 3,
+    "coating": "DLCCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=4",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.4 (printed p.3) prints \"DLCCOAT 3 Flute Square End Mills for Aluminum Milling\" and \"DLC\". Substrate from the safety page (PDF p.6), which prints 超硬エンドミル."
+    }
+   },
+   "notes": "Square end mill with chip breaker. Overall length, shank diameter and taper angle are on the dimension table (PDF p.4, printed p.3) and are not stored. January 2025 launch is printed on that page.",
+   "conditions": [
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Side milling",
+     "iso": "N",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 9000,
+        "tableFeed": {
+         "value": 1200,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 50,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 50 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "DLC-ALES 3120-3600",
+   "type": "DLCCOAT 3 flute square end mill with chip breaker for aluminum",
+   "coating": "DLCCOAT",
+   "flutes": 3,
+   "diameters_mm": [
+    12.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 3,
+    "coating": "DLCCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=4",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.4 (printed p.3) prints \"DLCCOAT 3 Flute Square End Mills for Aluminum Milling\" and \"DLC\". Substrate from the safety page (PDF p.6), which prints 超硬エンドミル."
+    }
+   },
+   "notes": "Square end mill with chip breaker. Overall length, shank diameter and taper angle are on the dimension table (PDF p.4, printed p.3) and are not stored. January 2025 launch is printed on that page.",
+   "conditions": [
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Vertical",
+     "iso": "N",
+     "operation": "Vertical",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 9700,
+        "tableFeed": {
+         "value": 200,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 12,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 36 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Slotting",
+     "iso": "N",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 9700,
+        "tableFeed": {
+         "value": 1000,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 12,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 36 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Side milling",
+     "iso": "N",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 9700,
+        "tableFeed": {
+         "value": 2000,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 36,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 36 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "DLC-ALES 3120-6000",
+   "type": "DLCCOAT 3 flute square end mill with chip breaker for aluminum",
+   "coating": "DLCCOAT",
+   "flutes": 3,
+   "diameters_mm": [
+    12.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 3,
+    "coating": "DLCCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=4",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.4 (printed p.3) prints \"DLCCOAT 3 Flute Square End Mills for Aluminum Milling\" and \"DLC\". Substrate from the safety page (PDF p.6), which prints 超硬エンドミル."
+    }
+   },
+   "notes": "Square end mill with chip breaker. Overall length, shank diameter and taper angle are on the dimension table (PDF p.4, printed p.3) and are not stored. January 2025 launch is printed on that page.",
+   "conditions": [
+    {
+     "label": "ALUMINUM ALLOYS A5052 / A7075 · Side milling",
+     "iso": "N",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Recommend water soluble coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 7500,
+        "tableFeed": {
+         "value": 1200,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 60,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 60 mm is printed on this row. The schema has no length-of-cut field. The page legend prints 3D tools (L/D=3) as ap 3D and ae 0.1D, and 5D tools (L/D=5) as ap 5D and ae 0.1D. Stored ap and ae are the millimetre cells, not a conversion of that legend. A dash in the table is omitted. Parameters assume the shortest overhang and water-soluble coolant. Recommend a non-contact height setter because the bottom corner is sharp.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL DLC-ALES leaflet, Milling Conditions",
+      "edition": "202411_DLC-ALES_re_10KA (January 2025 launch printed on the dimension page)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/endmill_dlc-ales.pdf#page=5",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed for A5052/A7075. SFM and chip load are not in the table."
+     }
+    }
+   ]
+  }
+ ]
+}

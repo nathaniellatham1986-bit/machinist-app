@@ -1,0 +1,5487 @@
+{
+ "schema": 1,
+ "brand": "Union Tool",
+ "tools": [
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4060-0900",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    6.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 6000,
+        "tableFeed": {
+         "value": 1600,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 9.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 9 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 6000,
+        "tableFeed": {
+         "value": 700,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 6.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 9 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 6000,
+        "tableFeed": {
+         "value": 1100,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 9.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 9 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 6000,
+        "tableFeed": {
+         "value": 700,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 6.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 9 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 6000,
+        "tableFeed": {
+         "value": 1100,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 9.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 9 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 6000,
+        "tableFeed": {
+         "value": 700,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 6.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 9 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4060-1300",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    6.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 6000,
+        "tableFeed": {
+         "value": 1600,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 13.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 13 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 6000,
+        "tableFeed": {
+         "value": 700,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 6.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 13 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 6000,
+        "tableFeed": {
+         "value": 1100,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 13.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 13 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 6000,
+        "tableFeed": {
+         "value": 700,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 6.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 13 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 6000,
+        "tableFeed": {
+         "value": 1100,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 13.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 13 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 6000,
+        "tableFeed": {
+         "value": 700,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 6.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 13 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4060-1800",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    6.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 6000,
+        "tableFeed": {
+         "value": 1170,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 18.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 18 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 6000,
+        "tableFeed": {
+         "value": 560,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 6.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 18 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 4800,
+        "tableFeed": {
+         "value": 800,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 18.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 18 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 4200,
+        "tableFeed": {
+         "value": 350,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 6.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 18 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 4800,
+        "tableFeed": {
+         "value": 800,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 18.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 18 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "6": {
+        "rpm": 4200,
+        "tableFeed": {
+         "value": 350,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 6.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 18 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4070-1050",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    7.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "7": {
+        "rpm": 5000,
+        "tableFeed": {
+         "value": 1450,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 10.5,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 10.5 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "7": {
+        "rpm": 5000,
+        "tableFeed": {
+         "value": 625,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 7.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 10.5 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "7": {
+        "rpm": 5000,
+        "tableFeed": {
+         "value": 1025,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 10.5,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 10.5 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "7": {
+        "rpm": 5000,
+        "tableFeed": {
+         "value": 625,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 7.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 10.5 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "7": {
+        "rpm": 5000,
+        "tableFeed": {
+         "value": 1025,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 10.5,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 10.5 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "7": {
+        "rpm": 5000,
+        "tableFeed": {
+         "value": 625,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 7.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 10.5 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4070-1600",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    7.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "7": {
+        "rpm": 5000,
+        "tableFeed": {
+         "value": 1450,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 16.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 16 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "7": {
+        "rpm": 5000,
+        "tableFeed": {
+         "value": 625,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 7.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 16 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "7": {
+        "rpm": 5000,
+        "tableFeed": {
+         "value": 1025,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 16.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 16 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "7": {
+        "rpm": 5000,
+        "tableFeed": {
+         "value": 625,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 7.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 16 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "7": {
+        "rpm": 5000,
+        "tableFeed": {
+         "value": 1025,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 16.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 16 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "7": {
+        "rpm": 5000,
+        "tableFeed": {
+         "value": 625,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 7.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 16 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4070-2100",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    7.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "7": {
+        "rpm": 5000,
+        "tableFeed": {
+         "value": 1060,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 21.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 21 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "7": {
+        "rpm": 5000,
+        "tableFeed": {
+         "value": 500,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 7.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 21 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "7": {
+        "rpm": 4000,
+        "tableFeed": {
+         "value": 750,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 21.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 21 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "7": {
+        "rpm": 3500,
+        "tableFeed": {
+         "value": 300,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 7.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 21 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "7": {
+        "rpm": 4000,
+        "tableFeed": {
+         "value": 750,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 21.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 21 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "7": {
+        "rpm": 3500,
+        "tableFeed": {
+         "value": 300,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 7.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 21 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4080-1200",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    8.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 4300,
+        "tableFeed": {
+         "value": 1300,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 12.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.6,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 12 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 4300,
+        "tableFeed": {
+         "value": 550,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 8.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 12 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 4300,
+        "tableFeed": {
+         "value": 950,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 12.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.6,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 12 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 4300,
+        "tableFeed": {
+         "value": 550,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 8.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 12 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 4300,
+        "tableFeed": {
+         "value": 950,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 12.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.6,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 12 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 4000,
+        "tableFeed": {
+         "value": 500,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 8.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 12 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4080-1900",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    8.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 4300,
+        "tableFeed": {
+         "value": 1300,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 19.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.6,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 19 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 4300,
+        "tableFeed": {
+         "value": 550,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 8.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 19 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 4300,
+        "tableFeed": {
+         "value": 950,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 19.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.6,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 19 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 4300,
+        "tableFeed": {
+         "value": 550,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 8.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 19 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 4300,
+        "tableFeed": {
+         "value": 950,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 19.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.6,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 19 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 4000,
+        "tableFeed": {
+         "value": 500,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 8.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 19 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4080-2400",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    8.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 4300,
+        "tableFeed": {
+         "value": 950,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 24.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.6,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 24 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 4300,
+        "tableFeed": {
+         "value": 440,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 8.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 24 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 3440,
+        "tableFeed": {
+         "value": 695,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 24.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.6,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 24 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 3000,
+        "tableFeed": {
+         "value": 275,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 8.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 24 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 3440,
+        "tableFeed": {
+         "value": 695,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 24.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.6,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 24 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "8": {
+        "rpm": 3000,
+        "tableFeed": {
+         "value": 275,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 8.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 24 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4090-1350",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    9.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "9": {
+        "rpm": 3700,
+        "tableFeed": {
+         "value": 1150,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 13.5,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.8,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 13.5 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "9": {
+        "rpm": 3500,
+        "tableFeed": {
+         "value": 475,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 9.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 13.5 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "9": {
+        "rpm": 3700,
+        "tableFeed": {
+         "value": 875,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 13.5,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.8,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 13.5 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "9": {
+        "rpm": 3500,
+        "tableFeed": {
+         "value": 475,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 9.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 13.5 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "9": {
+        "rpm": 3700,
+        "tableFeed": {
+         "value": 875,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 13.5,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.8,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 13.5 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "9": {
+        "rpm": 3150,
+        "tableFeed": {
+         "value": 430,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 9.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 13.5 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4090-1900",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    9.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "9": {
+        "rpm": 3700,
+        "tableFeed": {
+         "value": 1150,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 19.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.8,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 19 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "9": {
+        "rpm": 3500,
+        "tableFeed": {
+         "value": 475,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 9.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 19 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "9": {
+        "rpm": 3700,
+        "tableFeed": {
+         "value": 875,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 19.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.8,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 19 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "9": {
+        "rpm": 3500,
+        "tableFeed": {
+         "value": 475,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 9.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 19 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "9": {
+        "rpm": 3700,
+        "tableFeed": {
+         "value": 875,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 19.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.8,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 19 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "9": {
+        "rpm": 3150,
+        "tableFeed": {
+         "value": 430,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 9.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 19 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4090-2700",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    9.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "9": {
+        "rpm": 3700,
+        "tableFeed": {
+         "value": 840,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 27.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.8,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 27 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "9": {
+        "rpm": 3500,
+        "tableFeed": {
+         "value": 380,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 9.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 27 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "9": {
+        "rpm": 2960,
+        "tableFeed": {
+         "value": 640,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 27.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.8,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 27 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "9": {
+        "rpm": 2450,
+        "tableFeed": {
+         "value": 240,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 9.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 27 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "9": {
+        "rpm": 2960,
+        "tableFeed": {
+         "value": 640,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 27.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 1.8,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 27 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "9": {
+        "rpm": 2450,
+        "tableFeed": {
+         "value": 240,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 9.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 27 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4100-1500",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    10.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 3200,
+        "tableFeed": {
+         "value": 1000,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 15.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 15 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 2900,
+        "tableFeed": {
+         "value": 400,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 10.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 15 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 3200,
+        "tableFeed": {
+         "value": 800,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 15.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 15 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 2900,
+        "tableFeed": {
+         "value": 400,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 10.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 15 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 3200,
+        "tableFeed": {
+         "value": 800,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 15.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 15 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 2900,
+        "tableFeed": {
+         "value": 400,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 10.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 15 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4100-2200",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    10.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 3200,
+        "tableFeed": {
+         "value": 1000,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 22.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 22 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 2900,
+        "tableFeed": {
+         "value": 400,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 10.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 22 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 3200,
+        "tableFeed": {
+         "value": 800,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 22.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 22 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 2900,
+        "tableFeed": {
+         "value": 400,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 10.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 22 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 3200,
+        "tableFeed": {
+         "value": 800,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 22.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 22 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 2900,
+        "tableFeed": {
+         "value": 400,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 10.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 22 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4100-3000",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    10.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 3200,
+        "tableFeed": {
+         "value": 730,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 30.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 30 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 2900,
+        "tableFeed": {
+         "value": 320,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 10.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 30 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 2650,
+        "tableFeed": {
+         "value": 580,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 30.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 30 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 2000,
+        "tableFeed": {
+         "value": 200,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 10.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 30 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 2650,
+        "tableFeed": {
+         "value": 580,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 30.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 30 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "10": {
+        "rpm": 2000,
+        "tableFeed": {
+         "value": 200,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 10.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 30 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4110-1650",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    11.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "11": {
+        "rpm": 2900,
+        "tableFeed": {
+         "value": 900,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 16.5,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 16.5 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "11": {
+        "rpm": 2650,
+        "tableFeed": {
+         "value": 340,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 11.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 16.5 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "11": {
+        "rpm": 2900,
+        "tableFeed": {
+         "value": 725,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 16.5,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 16.5 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "11": {
+        "rpm": 2650,
+        "tableFeed": {
+         "value": 340,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 11.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 16.5 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "11": {
+        "rpm": 2900,
+        "tableFeed": {
+         "value": 725,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 16.5,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 16.5 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "11": {
+        "rpm": 2380,
+        "tableFeed": {
+         "value": 300,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 11.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 16.5 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4110-2200",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    11.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "11": {
+        "rpm": 2900,
+        "tableFeed": {
+         "value": 900,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 22.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 22 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "11": {
+        "rpm": 2650,
+        "tableFeed": {
+         "value": 340,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 11.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 22 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "11": {
+        "rpm": 2900,
+        "tableFeed": {
+         "value": 725,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 22.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 22 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "11": {
+        "rpm": 2650,
+        "tableFeed": {
+         "value": 340,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 11.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 22 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "11": {
+        "rpm": 2900,
+        "tableFeed": {
+         "value": 725,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 22.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 22 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "11": {
+        "rpm": 2380,
+        "tableFeed": {
+         "value": 300,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 11.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 22 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4110-3300",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    11.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "11": {
+        "rpm": 2900,
+        "tableFeed": {
+         "value": 650,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 33.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 33 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "11": {
+        "rpm": 2650,
+        "tableFeed": {
+         "value": 270,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 11.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 33 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "11": {
+        "rpm": 2400,
+        "tableFeed": {
+         "value": 530,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 33.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 33 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "11": {
+        "rpm": 1820,
+        "tableFeed": {
+         "value": 170,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 11.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 33 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "11": {
+        "rpm": 2400,
+        "tableFeed": {
+         "value": 530,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 33.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.2,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 33 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "11": {
+        "rpm": 1820,
+        "tableFeed": {
+         "value": 170,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 11.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 33 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4120-1800",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    12.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 2650,
+        "tableFeed": {
+         "value": 800,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 18.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 18 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 2420,
+        "tableFeed": {
+         "value": 300,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 12.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 18 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 2650,
+        "tableFeed": {
+         "value": 650,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 18.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 18 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 2420,
+        "tableFeed": {
+         "value": 300,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 12.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 18 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 2650,
+        "tableFeed": {
+         "value": 650,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 18.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 18 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 2420,
+        "tableFeed": {
+         "value": 300,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 12.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 18 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4120-2600",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    12.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 2650,
+        "tableFeed": {
+         "value": 800,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 26.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 26 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 2420,
+        "tableFeed": {
+         "value": 300,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 12.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 26 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 2650,
+        "tableFeed": {
+         "value": 650,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 26.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 26 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 2420,
+        "tableFeed": {
+         "value": 300,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 12.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 26 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 2650,
+        "tableFeed": {
+         "value": 650,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 26.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 26 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 2420,
+        "tableFeed": {
+         "value": 300,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 12.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 26 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "Union Tool",
+   "series": "CESUS 4120-3600",
+   "type": "UTSCOAT 4 flute square end mill for stainless steels",
+   "coating": "UTSCOAT",
+   "flutes": 4,
+   "diameters_mm": [
+    12.0
+   ],
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "coating": "UTSCOAT",
+    "endShape": "square",
+    "source": {
+     "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=2",
+     "retrieved": "2026-11-10",
+     "notes": "PDF p.2 (printed p.2) prints \"UTSCOAT 4 Flutes Highly Efficient Square End Mills for Stainless Steels\" and \"Carbide material\" (超硬母材)."
+    }
+   },
+   "notes": "Square end mill, variable pitch and variable helix as printed on PDF p.2. Overall length and shank diameter are on the dimension table and are not stored.",
+   "conditions": [
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 2650,
+        "tableFeed": {
+         "value": 580,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 36.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 36 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "CARBON STEELS S45C / S50C annealed (~225HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 2420,
+        "tableFeed": {
+         "value": 240,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 12.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 36 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Side milling",
+     "iso": "P",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 2200,
+        "tableFeed": {
+         "value": 475,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 36.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 36 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "ALLOY STEELS SK / SCM annealed (225～325HB) · Slotting",
+     "iso": "P",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Every coolant offers stable milling.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 1650,
+        "tableFeed": {
+         "value": 150,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 12.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 36 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     }
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Side milling",
+     "iso": "M",
+     "operation": "Side milling",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 2200,
+        "tableFeed": {
+         "value": 475,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 36.0,
+         "unit": "mm"
+        },
+        "ae": {
+         "value": 2.4,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 36 mm is printed on this row. The schema has no length-of-cut field. The table footer prints side-milling ap as all flute length and ae as 0.2D; the stored ap and ae are the millimetre cells. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Side milling",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min, ap and ae copied as printed. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    },
+    {
+     "label": "STAINLESS STEELS SUS304 · Slotting",
+     "iso": "M",
+     "operation": "Slotting",
+     "status": "verified",
+     "coolant": "Use water soluble or oil coolant.",
+     "sfm": null,
+     "strictMaterials": true,
+     "printed": {
+      "unit": "mm",
+      "byDiameter": {
+       "12": {
+        "rpm": 1650,
+        "tableFeed": {
+         "value": 150,
+         "unit": "mm/min"
+        },
+        "ap": {
+         "value": 12.0,
+         "unit": "mm"
+        }
+       }
+      }
+     },
+     "note": "Length of cut 36 mm is printed on this row. Slotting ae is not a column. The footer prints slotting ap as 1D; the stored ap is the millimetre cell. Parameters assume the shortest overhang. Decrease spindle speed and feed together if chatter occurs.",
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "Union Tool",
+      "catalog": "UNION TOOL CESUS leaflet, Milling Conditions, Slotting",
+      "edition": "1811 SUS2_6KA (PDF created 2018-10-15)",
+      "url": "https://www.uniontool.co.jp/assets/pdf/catalog/em-cesus_vol2.pdf#page=4",
+      "page": "4",
+      "retrieved": "2026-11-10",
+      "notes": "RPM, mm/min and ap copied as printed. The slotting table has no ae column. SFM and chip load are not in the table."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "STAINLESS STEELS SUS304"
+    }
+   ]
+  }
+ ]
+}
