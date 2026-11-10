@@ -1,0 +1,850 @@
+{
+ "schema": 1,
+ "brand": "YG-1",
+ "tools": [
+  {
+   "mode": "mill",
+   "brand": "YG-1",
+   "series": "Sine-Power E2F64 (4-flute)",
+   "type": "HSS Co8% rougher, flat shank, bright",
+   "flutes": 4,
+   "diameters_in": [
+    0.75,
+    1,
+    1.25,
+    1.5,
+    2
+   ],
+   "notes": "E2F64 is stocked in 4 and 6 flutes (product table, PDF page 4). The cutting chart is one table. Chip load is per tooth. The printed IPM column follows 6 flutes.",
+   "specs": {
+    "substrate": "hss",
+    "flutes": 4,
+    "coating": "Bright",
+    "coatingClass": "uncoated",
+    "source": {
+     "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=4",
+     "retrieved": "2026-11-10",
+     "notes": "Product page prints HSS Co8, Bright, and 4 and 6 flutes. Technical overview (PDF page 3) prints Coating Uncoated on the example."
+    }
+   },
+   "conditions": [
+    {
+     "label": "Stainless Steel - Free Machining, 303, 416, 420F, 430F, 440F, M < 250 BHN \u00b7 Profiling",
+     "iso": "M",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 88,
+      "max": 132,
+      "start": 110
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.002,
+       "1": 0.003,
+       "1.25": 0.004,
+       "1.5": 0.005,
+       "2": 0.006
+      }
+     },
+     "operation": "profiling",
+     "table": "SPEED AND FEED RECOMMENDATIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Sine-Power E2F64 cutting data, Speed and Feed Recommendations (inch)",
+      "edition": "Sine-Power high performance HSS rougher, PDF created 2015-03-02",
+      "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=5",
+      "page": "5",
+      "retrieved": "2026-11-10",
+      "notes": "Bold SFM 110 is the printed recommendation; (88-132) is the printed range. RPM column is the speed at 110 SFM (not stored). The depth figure beside this row prints 2 and 0.5 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
+     },
+     "materials": [
+      "ss303",
+      "ss400"
+     ],
+     "sourceGroup": "Stainless Steel - Free Machining, 303, 416, 420F, 430F, 440F, M < 250 BHN"
+    },
+    {
+     "label": "Stainless Steel - Free Machining, 303, 416, 420F, 430F, 440F, M < 250 BHN \u00b7 Slotting",
+     "iso": "M",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 76,
+      "max": 114,
+      "start": 95
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0025,
+       "1": 0.0035,
+       "1.25": 0.0045,
+       "1.5": 0.0055,
+       "2": 0.0065
+      }
+     },
+     "operation": "slotting",
+     "table": "SPEED AND FEED RECOMMENDATIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Sine-Power E2F64 cutting data, Speed and Feed Recommendations (inch)",
+      "edition": "Sine-Power high performance HSS rougher, PDF created 2015-03-02",
+      "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=5",
+      "page": "5",
+      "retrieved": "2026-11-10",
+      "notes": "Bold SFM 95 is the printed recommendation; (76-114) is the printed range. RPM column is the speed at 95 SFM (not stored). The depth figure beside this row prints 1 and 1 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
+     },
+     "materials": [
+      "ss303",
+      "ss400"
+     ],
+     "sourceGroup": "Stainless Steel - Free Machining, 303, 416, 420F, 430F, 440F, M < 250 BHN"
+    },
+    {
+     "label": "Stainless Steel - Difficult, 304, 304L, 316, 316L, M < 275 BHN \u00b7 Profiling",
+     "iso": "M",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 80,
+      "max": 120,
+      "start": 100
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.002,
+       "1": 0.003,
+       "1.25": 0.004,
+       "1.5": 0.005,
+       "2": 0.006
+      }
+     },
+     "operation": "profiling",
+     "table": "SPEED AND FEED RECOMMENDATIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Sine-Power E2F64 cutting data, Speed and Feed Recommendations (inch)",
+      "edition": "Sine-Power high performance HSS rougher, PDF created 2015-03-02",
+      "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=5",
+      "page": "5",
+      "retrieved": "2026-11-10",
+      "notes": "Bold SFM 100 is the printed recommendation; (80-120) is the printed range. RPM column is the speed at 100 SFM (not stored). The depth figure beside this row prints 1.5 and 0.5 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "Stainless Steel - Difficult, 304, 304L, 316, 316L, M < 275 BHN"
+    },
+    {
+     "label": "Stainless Steel - Difficult, 304, 304L, 316, 316L, M < 275 BHN \u00b7 Slotting",
+     "iso": "M",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 64,
+      "max": 96,
+      "start": 80
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0025,
+       "1": 0.0035,
+       "1.25": 0.0045,
+       "1.5": 0.0055,
+       "2": 0.0065
+      }
+     },
+     "operation": "slotting",
+     "table": "SPEED AND FEED RECOMMENDATIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Sine-Power E2F64 cutting data, Speed and Feed Recommendations (inch)",
+      "edition": "Sine-Power high performance HSS rougher, PDF created 2015-03-02",
+      "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=5",
+      "page": "5",
+      "retrieved": "2026-11-10",
+      "notes": "Bold SFM 80 is the printed recommendation; (64-96) is the printed range. RPM column is the speed at 80 SFM (not stored). The depth figure beside this row prints 1 and 1 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "Stainless Steel - Difficult, 304, 304L, 316, 316L, M < 275 BHN"
+    },
+    {
+     "label": "Stainless Steel PH, 13-8 PH, 15-5 PH, 17-4 PH, Custom 450, M < 325 BHN \u00b7 Profiling",
+     "iso": "M",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 68,
+      "max": 102,
+      "start": 85
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.002,
+       "1": 0.003,
+       "1.25": 0.004,
+       "1.5": 0.005,
+       "2": 0.006
+      }
+     },
+     "operation": "profiling",
+     "table": "SPEED AND FEED RECOMMENDATIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Sine-Power E2F64 cutting data, Speed and Feed Recommendations (inch)",
+      "edition": "Sine-Power high performance HSS rougher, PDF created 2015-03-02",
+      "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=5",
+      "page": "5",
+      "retrieved": "2026-11-10",
+      "notes": "Bold SFM 85 is the printed recommendation; (68-102) is the printed range. RPM column is the speed at 85 SFM (not stored). The depth figure beside this row prints 1.5 and 0.5 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
+     },
+     "materials": [
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel PH, 13-8 PH, 15-5 PH, 17-4 PH, Custom 450, M < 325 BHN"
+    },
+    {
+     "label": "Stainless Steel PH, 13-8 PH, 15-5 PH, 17-4 PH, Custom 450, M < 325 BHN \u00b7 Slotting",
+     "iso": "M",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 60,
+      "max": 90,
+      "start": 75
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0025,
+       "1": 0.0035,
+       "1.25": 0.0045,
+       "1.5": 0.0055,
+       "2": 0.0065
+      }
+     },
+     "operation": "slotting",
+     "table": "SPEED AND FEED RECOMMENDATIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Sine-Power E2F64 cutting data, Speed and Feed Recommendations (inch)",
+      "edition": "Sine-Power high performance HSS rougher, PDF created 2015-03-02",
+      "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=5",
+      "page": "5",
+      "retrieved": "2026-11-10",
+      "notes": "Bold SFM 75 is the printed recommendation; (60-90) is the printed range. RPM column is the speed at 75 SFM (not stored). The depth figure beside this row prints 1 and 1 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
+     },
+     "materials": [
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel PH, 13-8 PH, 15-5 PH, 17-4 PH, Custom 450, M < 325 BHN"
+    },
+    {
+     "label": "Titanium Base Alloy, pure titanium, Ti6Al4V, Ti6Al2Sn4Zr2Mo, Ti4Al4Mo2Sn0.5Si, S < 350 BHN \u00b7 Profiling",
+     "iso": "S",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 60,
+      "max": 90,
+      "start": 75
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0017,
+       "1": 0.0025,
+       "1.25": 0.003,
+       "1.5": 0.0035,
+       "2": 0.0045
+      }
+     },
+     "operation": "profiling",
+     "table": "SPEED AND FEED RECOMMENDATIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Sine-Power E2F64 cutting data, Speed and Feed Recommendations (inch)",
+      "edition": "Sine-Power high performance HSS rougher, PDF created 2015-03-02",
+      "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=5",
+      "page": "5",
+      "retrieved": "2026-11-10",
+      "notes": "Bold SFM 75 is the printed recommendation; (60-90) is the printed range. RPM column is the speed at 75 SFM (not stored). The depth figure beside this row prints 2 and 0.5 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
+     },
+     "materials": [
+      "ti64"
+     ],
+     "sourceGroup": "Titanium Base Alloy, pure titanium, Ti6Al4V, Ti6Al2Sn4Zr2Mo, Ti4Al4Mo2Sn0.5Si, S < 350 BHN"
+    },
+    {
+     "label": "Titanium Base Alloy, pure titanium, Ti6Al4V, Ti6Al2Sn4Zr2Mo, Ti4Al4Mo2Sn0.5Si, S < 350 BHN \u00b7 Slotting",
+     "iso": "S",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 52,
+      "max": 78,
+      "start": 65
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0017,
+       "1": 0.0025,
+       "1.25": 0.003,
+       "1.5": 0.0035,
+       "2": 0.0045
+      }
+     },
+     "operation": "slotting",
+     "table": "SPEED AND FEED RECOMMENDATIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Sine-Power E2F64 cutting data, Speed and Feed Recommendations (inch)",
+      "edition": "Sine-Power high performance HSS rougher, PDF created 2015-03-02",
+      "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=5",
+      "page": "5",
+      "retrieved": "2026-11-10",
+      "notes": "Bold SFM 65 is the printed recommendation; (52-78) is the printed range. RPM column is the speed at 65 SFM (not stored). The depth figure beside this row prints 1 and 1 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
+     },
+     "materials": [
+      "ti64"
+     ],
+     "sourceGroup": "Titanium Base Alloy, pure titanium, Ti6Al4V, Ti6Al2Sn4Zr2Mo, Ti4Al4Mo2Sn0.5Si, S < 350 BHN"
+    },
+    {
+     "label": "Titanium Base Alloy - Difficult, Ti10Al2Fe3Al, Ti5Al5V5Mo3Cr, Ti7Al4Mo, Ti3Al8V6Cr4Zr4Mo, Ti6Al6V6Sn, Ti15V3Cr3Sn3Al, S < 450 BHN \u00b7 Profiling",
+     "iso": "S",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 48,
+      "max": 72,
+      "start": 60
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0017,
+       "1": 0.0025,
+       "1.25": 0.003,
+       "1.5": 0.0035,
+       "2": 0.0045
+      }
+     },
+     "operation": "profiling",
+     "table": "SPEED AND FEED RECOMMENDATIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Sine-Power E2F64 cutting data, Speed and Feed Recommendations (inch)",
+      "edition": "Sine-Power high performance HSS rougher, PDF created 2015-03-02",
+      "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=5",
+      "page": "5",
+      "retrieved": "2026-11-10",
+      "notes": "Bold SFM 60 is the printed recommendation; (48-72) is the printed range. RPM column is the speed at 60 SFM (not stored). The depth figure beside this row prints 1.5 and 0.5 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
+     }
+    },
+    {
+     "label": "Titanium Base Alloy - Difficult, Ti10Al2Fe3Al, Ti5Al5V5Mo3Cr, Ti7Al4Mo, Ti3Al8V6Cr4Zr4Mo, Ti6Al6V6Sn, Ti15V3Cr3Sn3Al, S < 450 BHN \u00b7 Slotting",
+     "iso": "S",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 32,
+      "max": 48,
+      "start": 40
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0017,
+       "1": 0.0025,
+       "1.25": 0.003,
+       "1.5": 0.0035,
+       "2": 0.0045
+      }
+     },
+     "operation": "slotting",
+     "table": "SPEED AND FEED RECOMMENDATIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Sine-Power E2F64 cutting data, Speed and Feed Recommendations (inch)",
+      "edition": "Sine-Power high performance HSS rougher, PDF created 2015-03-02",
+      "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=5",
+      "page": "5",
+      "retrieved": "2026-11-10",
+      "notes": "Bold SFM 40 is the printed recommendation; (32-48) is the printed range. RPM column is the speed at 40 SFM (not stored). The depth figure beside this row prints 1 and 1 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
+     }
+    }
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "YG-1",
+   "series": "Sine-Power E2F64 (6-flute)",
+   "type": "HSS Co8% rougher, flat shank, bright",
+   "flutes": 6,
+   "diameters_in": [
+    0.75,
+    1,
+    1.25,
+    1.5,
+    2
+   ],
+   "notes": "E2F64 is stocked in 4 and 6 flutes (product table, PDF page 4). The cutting chart is one table. Chip load is per tooth. The printed IPM column follows 6 flutes.",
+   "specs": {
+    "substrate": "hss",
+    "flutes": 6,
+    "coating": "Bright",
+    "coatingClass": "uncoated",
+    "source": {
+     "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=4",
+     "retrieved": "2026-11-10",
+     "notes": "Product page prints HSS Co8, Bright, and 4 and 6 flutes. Technical overview (PDF page 3) prints Coating Uncoated on the example."
+    }
+   },
+   "conditions": [
+    {
+     "label": "Stainless Steel - Free Machining, 303, 416, 420F, 430F, 440F, M < 250 BHN \u00b7 Profiling",
+     "iso": "M",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 88,
+      "max": 132,
+      "start": 110
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.002,
+       "1": 0.003,
+       "1.25": 0.004,
+       "1.5": 0.005,
+       "2": 0.006
+      }
+     },
+     "operation": "profiling",
+     "table": "SPEED AND FEED RECOMMENDATIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Sine-Power E2F64 cutting data, Speed and Feed Recommendations (inch)",
+      "edition": "Sine-Power high performance HSS rougher, PDF created 2015-03-02",
+      "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=5",
+      "page": "5",
+      "retrieved": "2026-11-10",
+      "notes": "Bold SFM 110 is the printed recommendation; (88-132) is the printed range. RPM column is the speed at 110 SFM (not stored). The depth figure beside this row prints 2 and 0.5 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
+     },
+     "materials": [
+      "ss303",
+      "ss400"
+     ],
+     "sourceGroup": "Stainless Steel - Free Machining, 303, 416, 420F, 430F, 440F, M < 250 BHN"
+    },
+    {
+     "label": "Stainless Steel - Free Machining, 303, 416, 420F, 430F, 440F, M < 250 BHN \u00b7 Slotting",
+     "iso": "M",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 76,
+      "max": 114,
+      "start": 95
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0025,
+       "1": 0.0035,
+       "1.25": 0.0045,
+       "1.5": 0.0055,
+       "2": 0.0065
+      }
+     },
+     "operation": "slotting",
+     "table": "SPEED AND FEED RECOMMENDATIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Sine-Power E2F64 cutting data, Speed and Feed Recommendations (inch)",
+      "edition": "Sine-Power high performance HSS rougher, PDF created 2015-03-02",
+      "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=5",
+      "page": "5",
+      "retrieved": "2026-11-10",
+      "notes": "Bold SFM 95 is the printed recommendation; (76-114) is the printed range. RPM column is the speed at 95 SFM (not stored). The depth figure beside this row prints 1 and 1 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
+     },
+     "materials": [
+      "ss303",
+      "ss400"
+     ],
+     "sourceGroup": "Stainless Steel - Free Machining, 303, 416, 420F, 430F, 440F, M < 250 BHN"
+    },
+    {
+     "label": "Stainless Steel - Difficult, 304, 304L, 316, 316L, M < 275 BHN \u00b7 Profiling",
+     "iso": "M",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 80,
+      "max": 120,
+      "start": 100
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.002,
+       "1": 0.003,
+       "1.25": 0.004,
+       "1.5": 0.005,
+       "2": 0.006
+      }
+     },
+     "operation": "profiling",
+     "table": "SPEED AND FEED RECOMMENDATIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Sine-Power E2F64 cutting data, Speed and Feed Recommendations (inch)",
+      "edition": "Sine-Power high performance HSS rougher, PDF created 2015-03-02",
+      "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=5",
+      "page": "5",
+      "retrieved": "2026-11-10",
+      "notes": "Bold SFM 100 is the printed recommendation; (80-120) is the printed range. RPM column is the speed at 100 SFM (not stored). The depth figure beside this row prints 1.5 and 0.5 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "Stainless Steel - Difficult, 304, 304L, 316, 316L, M < 275 BHN"
+    },
+    {
+     "label": "Stainless Steel - Difficult, 304, 304L, 316, 316L, M < 275 BHN \u00b7 Slotting",
+     "iso": "M",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 64,
+      "max": 96,
+      "start": 80
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0025,
+       "1": 0.0035,
+       "1.25": 0.0045,
+       "1.5": 0.0055,
+       "2": 0.0065
+      }
+     },
+     "operation": "slotting",
+     "table": "SPEED AND FEED RECOMMENDATIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Sine-Power E2F64 cutting data, Speed and Feed Recommendations (inch)",
+      "edition": "Sine-Power high performance HSS rougher, PDF created 2015-03-02",
+      "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=5",
+      "page": "5",
+      "retrieved": "2026-11-10",
+      "notes": "Bold SFM 80 is the printed recommendation; (64-96) is the printed range. RPM column is the speed at 80 SFM (not stored). The depth figure beside this row prints 1 and 1 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "Stainless Steel - Difficult, 304, 304L, 316, 316L, M < 275 BHN"
+    },
+    {
+     "label": "Stainless Steel PH, 13-8 PH, 15-5 PH, 17-4 PH, Custom 450, M < 325 BHN \u00b7 Profiling",
+     "iso": "M",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 68,
+      "max": 102,
+      "start": 85
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.002,
+       "1": 0.003,
+       "1.25": 0.004,
+       "1.5": 0.005,
+       "2": 0.006
+      }
+     },
+     "operation": "profiling",
+     "table": "SPEED AND FEED RECOMMENDATIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Sine-Power E2F64 cutting data, Speed and Feed Recommendations (inch)",
+      "edition": "Sine-Power high performance HSS rougher, PDF created 2015-03-02",
+      "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=5",
+      "page": "5",
+      "retrieved": "2026-11-10",
+      "notes": "Bold SFM 85 is the printed recommendation; (68-102) is the printed range. RPM column is the speed at 85 SFM (not stored). The depth figure beside this row prints 1.5 and 0.5 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
+     },
+     "materials": [
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel PH, 13-8 PH, 15-5 PH, 17-4 PH, Custom 450, M < 325 BHN"
+    },
+    {
+     "label": "Stainless Steel PH, 13-8 PH, 15-5 PH, 17-4 PH, Custom 450, M < 325 BHN \u00b7 Slotting",
+     "iso": "M",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 60,
+      "max": 90,
+      "start": 75
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0025,
+       "1": 0.0035,
+       "1.25": 0.0045,
+       "1.5": 0.0055,
+       "2": 0.0065
+      }
+     },
+     "operation": "slotting",
+     "table": "SPEED AND FEED RECOMMENDATIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Sine-Power E2F64 cutting data, Speed and Feed Recommendations (inch)",
+      "edition": "Sine-Power high performance HSS rougher, PDF created 2015-03-02",
+      "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=5",
+      "page": "5",
+      "retrieved": "2026-11-10",
+      "notes": "Bold SFM 75 is the printed recommendation; (60-90) is the printed range. RPM column is the speed at 75 SFM (not stored). The depth figure beside this row prints 1 and 1 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
+     },
+     "materials": [
+      "ss17-4ph"
+     ],
+     "sourceGroup": "Stainless Steel PH, 13-8 PH, 15-5 PH, 17-4 PH, Custom 450, M < 325 BHN"
+    },
+    {
+     "label": "Titanium Base Alloy, pure titanium, Ti6Al4V, Ti6Al2Sn4Zr2Mo, Ti4Al4Mo2Sn0.5Si, S < 350 BHN \u00b7 Profiling",
+     "iso": "S",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 60,
+      "max": 90,
+      "start": 75
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0017,
+       "1": 0.0025,
+       "1.25": 0.003,
+       "1.5": 0.0035,
+       "2": 0.0045
+      }
+     },
+     "operation": "profiling",
+     "table": "SPEED AND FEED RECOMMENDATIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Sine-Power E2F64 cutting data, Speed and Feed Recommendations (inch)",
+      "edition": "Sine-Power high performance HSS rougher, PDF created 2015-03-02",
+      "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=5",
+      "page": "5",
+      "retrieved": "2026-11-10",
+      "notes": "Bold SFM 75 is the printed recommendation; (60-90) is the printed range. RPM column is the speed at 75 SFM (not stored). The depth figure beside this row prints 2 and 0.5 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
+     },
+     "materials": [
+      "ti64"
+     ],
+     "sourceGroup": "Titanium Base Alloy, pure titanium, Ti6Al4V, Ti6Al2Sn4Zr2Mo, Ti4Al4Mo2Sn0.5Si, S < 350 BHN"
+    },
+    {
+     "label": "Titanium Base Alloy, pure titanium, Ti6Al4V, Ti6Al2Sn4Zr2Mo, Ti4Al4Mo2Sn0.5Si, S < 350 BHN \u00b7 Slotting",
+     "iso": "S",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 52,
+      "max": 78,
+      "start": 65
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0017,
+       "1": 0.0025,
+       "1.25": 0.003,
+       "1.5": 0.0035,
+       "2": 0.0045
+      }
+     },
+     "operation": "slotting",
+     "table": "SPEED AND FEED RECOMMENDATIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Sine-Power E2F64 cutting data, Speed and Feed Recommendations (inch)",
+      "edition": "Sine-Power high performance HSS rougher, PDF created 2015-03-02",
+      "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=5",
+      "page": "5",
+      "retrieved": "2026-11-10",
+      "notes": "Bold SFM 65 is the printed recommendation; (52-78) is the printed range. RPM column is the speed at 65 SFM (not stored). The depth figure beside this row prints 1 and 1 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
+     },
+     "materials": [
+      "ti64"
+     ],
+     "sourceGroup": "Titanium Base Alloy, pure titanium, Ti6Al4V, Ti6Al2Sn4Zr2Mo, Ti4Al4Mo2Sn0.5Si, S < 350 BHN"
+    },
+    {
+     "label": "Titanium Base Alloy - Difficult, Ti10Al2Fe3Al, Ti5Al5V5Mo3Cr, Ti7Al4Mo, Ti3Al8V6Cr4Zr4Mo, Ti6Al6V6Sn, Ti15V3Cr3Sn3Al, S < 450 BHN \u00b7 Profiling",
+     "iso": "S",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 48,
+      "max": 72,
+      "start": 60
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0017,
+       "1": 0.0025,
+       "1.25": 0.003,
+       "1.5": 0.0035,
+       "2": 0.0045
+      }
+     },
+     "operation": "profiling",
+     "table": "SPEED AND FEED RECOMMENDATIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Sine-Power E2F64 cutting data, Speed and Feed Recommendations (inch)",
+      "edition": "Sine-Power high performance HSS rougher, PDF created 2015-03-02",
+      "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=5",
+      "page": "5",
+      "retrieved": "2026-11-10",
+      "notes": "Bold SFM 60 is the printed recommendation; (48-72) is the printed range. RPM column is the speed at 60 SFM (not stored). The depth figure beside this row prints 1.5 and 0.5 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
+     }
+    },
+    {
+     "label": "Titanium Base Alloy - Difficult, Ti10Al2Fe3Al, Ti5Al5V5Mo3Cr, Ti7Al4Mo, Ti3Al8V6Cr4Zr4Mo, Ti6Al6V6Sn, Ti15V3Cr3Sn3Al, S < 450 BHN \u00b7 Slotting",
+     "iso": "S",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 32,
+      "max": 48,
+      "start": 40
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.75": 0.0017,
+       "1": 0.0025,
+       "1.25": 0.003,
+       "1.5": 0.0035,
+       "2": 0.0045
+      }
+     },
+     "operation": "slotting",
+     "table": "SPEED AND FEED RECOMMENDATIONS",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 Sine-Power E2F64 cutting data, Speed and Feed Recommendations (inch)",
+      "edition": "Sine-Power high performance HSS rougher, PDF created 2015-03-02",
+      "url": "https://www.yg1usa.com/downloads/Sine-Power.pdf#page=5",
+      "page": "5",
+      "retrieved": "2026-11-10",
+      "notes": "Bold SFM 40 is the printed recommendation; (32-48) is the printed range. RPM column is the speed at 40 SFM (not stored). The depth figure beside this row prints 1 and 1 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
+     }
+    }
+   ]
+  }
+ ]
+}

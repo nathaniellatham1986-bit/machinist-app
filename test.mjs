@@ -243,6 +243,9 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
 { const { drillSpans, dataAt } = await import('./calc.js');
   const t = { mode: 'drill', series: 'DRZ', conditions: [{ iso: 'P', label: 'Alloy steel · DC ø13~ø15.5', sfm: { min: 1, max: 2 }, feed: { unit: 'mm', range: { min: .06, max: .1 } } }] }; t.dd = drillSpans(t);
   assert.equal(dataAt(t, 0.5, 'P'), false); assert.equal(dataAt(t, 0.55, 'P'), true);
+  const printedOnly = { mode: 'mill', series: '4G', conditions: [{ iso: 'P', sfm: null, printed: { unit: 'in', byDiameter: { '0.25': { rpm: 5300, tableFeed: { value: 14.29, unit: 'ipm' } } } } }] };
+  printedOnly.dd = drillSpans(printedOnly);
+  assert.equal(dataAt(printedOnly, 0.25, 'P'), true); assert.equal(dataAt(printedOnly, 0.5, 'P'), false);
   console.log('ME11 #6 label row diameter tests pass'); }
 { const { rowExcludes } = await import('./calc.js');
   assert.equal(rowExcludes({ label: 'Alloy steel · DC ø13~ø15.5' }, 0.5), true); assert.equal(rowExcludes({ label: 'Alloy steel · DC ø13~ø15.5' }, 0.55), false);
@@ -579,3 +582,9 @@ console.log('estimate tests ok');
   assert.equal(matchMat(mild, { label: 'Non-alloy steel (1018, A36, 1045)', iso: 'P', materials: ['p-mild'], sourceGroup: 'Non-alloy steel (1018, A36, 1045)' }), 'named');
   assert.ok(!mats.some(m => /4142|7075|\b1045\b/.test(`${m.name} ${m.named || ''}`)));
   console.log('grade alias tests pass'); }
+{ const { execFileSync } = await import('node:child_process');
+  const files = execFileSync('git', ['ls-files', '-z', '--', '*.js', '*.json', '*.html'], { encoding: 'utf8' }).split('\0').filter(Boolean);
+  const marks = ['<'.repeat(7), '>'.repeat(7)];
+  const bad = files.filter(f => { const s = fs.readFileSync(f, 'utf8'); return marks.some(m => s.includes(m)); });
+  assert.deepEqual(bad, []);
+  console.log('conflict marker tests pass'); }

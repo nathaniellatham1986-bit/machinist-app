@@ -1,0 +1,3208 @@
+{
+ "schema": 1,
+ "brand": "YG-1",
+ "tools": [
+  {
+   "mode": "mill",
+   "brand": "YG-1",
+   "series": "TitaNox-Power UGMG42, UGMG43 (side, 4-flute)",
+   "type": "solid carbide end mill, side, 4 flute",
+   "notes": "Chart is shared by the series codes in the heading.",
+   "conditions": [
+    {
+     "label": "Non-alloy steel (VDI 3323 1-5) \u00b7 side",
+     "iso": "P",
+     "subgroup": "VDI 3323 1-5",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 525.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.0011,
+       "0.3125": 0.0014,
+       "0.375": 0.0017,
+       "0.5": 0.0021,
+       "0.625": 0.0025,
+       "0.75": 0.003,
+       "1": 0.0033
+      }
+     },
+     "operation": "side",
+     "table": "UGMG42, UGMG43 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=32",
+      "page": "32",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.4\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.4,
+     "apx": 1.0,
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Non-alloy steel (VDI 3323 1-5)"
+    },
+    {
+     "label": "Low alloy steel (VDI 3323 6-8) \u00b7 side",
+     "iso": "P",
+     "subgroup": "VDI 3323 6-8",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 525.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.0011,
+       "0.3125": 0.0014,
+       "0.375": 0.0017,
+       "0.5": 0.0021,
+       "0.625": 0.0025,
+       "0.75": 0.003,
+       "1": 0.0033
+      }
+     },
+     "operation": "side",
+     "table": "UGMG42, UGMG43 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=32",
+      "page": "32",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.4\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.4,
+     "apx": 1.0,
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Low alloy steel (VDI 3323 6-8)"
+    },
+    {
+     "label": "Low alloy steel (VDI 3323 9) \u00b7 side",
+     "iso": "P",
+     "subgroup": "VDI 3323 9",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 490.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.001,
+       "0.3125": 0.0014,
+       "0.375": 0.0017,
+       "0.5": 0.0019,
+       "0.625": 0.0025,
+       "0.75": 0.0028,
+       "1": 0.0033
+      }
+     },
+     "operation": "side",
+     "table": "UGMG42, UGMG43 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=32",
+      "page": "32",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.4\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.4,
+     "apx": 1.0,
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Low alloy steel (VDI 3323 9)"
+    },
+    {
+     "label": "High alloyed steel and tool steel (VDI 3323 10) \u00b7 side",
+     "iso": "P",
+     "subgroup": "VDI 3323 10",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 490.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.0011,
+       "0.3125": 0.0014,
+       "0.375": 0.0018,
+       "0.5": 0.0021,
+       "0.625": 0.0026,
+       "0.75": 0.003,
+       "1": 0.0033
+      }
+     },
+     "operation": "side",
+     "table": "UGMG42, UGMG43 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=32",
+      "page": "32",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.4\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.4,
+     "apx": 1.0
+    },
+    {
+     "label": "High alloyed steel and tool steel (VDI 3323 11.1) \u00b7 side",
+     "iso": "P",
+     "subgroup": "VDI 3323 11.1",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 490.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.001,
+       "0.3125": 0.0014,
+       "0.375": 0.0017,
+       "0.5": 0.0019,
+       "0.625": 0.0025,
+       "0.75": 0.0028,
+       "1": 0.0033
+      }
+     },
+     "operation": "side",
+     "table": "UGMG42, UGMG43 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=32",
+      "page": "32",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.4\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.4,
+     "apx": 1.0
+    },
+    {
+     "label": "Stainless steel (SUS 420, X40Cr13, 420) (VDI 3323 12-13) \u00b7 side",
+     "iso": "M",
+     "subgroup": "VDI 3323 12-13",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 510.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.0013,
+       "0.3125": 0.0018,
+       "0.375": 0.0022,
+       "0.5": 0.0026,
+       "0.625": 0.0034,
+       "0.75": 0.0037,
+       "1": 0.0045
+      }
+     },
+     "operation": "side",
+     "table": "UGMG42, UGMG43 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=32",
+      "page": "32",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.4\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.4,
+     "apx": 1.0,
+     "materials": [
+      "ss400"
+     ],
+     "sourceGroup": "Stainless steel (SUS 420, X40Cr13, 420) (VDI 3323 12-13)"
+    },
+    {
+     "label": "Stainless steel (SUS 316, 316, X5CrNiMo 17 12 2) (VDI 3323 14.1) \u00b7 side",
+     "iso": "M",
+     "subgroup": "VDI 3323 14.1",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 345.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.001,
+       "0.3125": 0.0013,
+       "0.375": 0.0016,
+       "0.5": 0.0019,
+       "0.625": 0.0024,
+       "0.75": 0.0028,
+       "1": 0.0032
+      }
+     },
+     "operation": "side",
+     "table": "UGMG42, UGMG43 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=32",
+      "page": "32",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae None\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "apx": 1.0,
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "Stainless steel (SUS 316, 316, X5CrNiMo 17 12 2) (VDI 3323 14.1)"
+    },
+    {
+     "label": "Stainless steel (SUS 630, PH 15-5) (VDI 3323 14.2) \u00b7 side",
+     "iso": "M",
+     "subgroup": "VDI 3323 14.2",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 145.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.0006,
+       "0.3125": 0.0008,
+       "0.375": 0.001,
+       "0.5": 0.0013,
+       "0.625": 0.0016,
+       "0.75": 0.0018,
+       "1": 0.0021
+      }
+     },
+     "operation": "side",
+     "table": "UGMG42, UGMG43 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=32",
+      "page": "32",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.4\u00d7D and ap 0.6\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.4,
+     "apx": 0.6,
+     "excludeMaterials": [
+      "ss17-4ph"
+     ]
+    },
+    {
+     "label": "Grey cast iron (VDI 3323 15-20) \u00b7 side",
+     "iso": "K",
+     "subgroup": "VDI 3323 15-20",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 575.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.0008,
+       "0.3125": 0.0011,
+       "0.375": 0.0014,
+       "0.5": 0.0017,
+       "0.625": 0.0021,
+       "0.75": 0.0024,
+       "1": 0.0028
+      }
+     },
+     "operation": "side",
+     "table": "UGMG42, UGMG43 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=32",
+      "page": "32",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.4\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.4,
+     "apx": 1.0,
+     "materials": [
+      "gray-iron"
+     ],
+     "sourceGroup": "Grey cast iron (VDI 3323 15-20)"
+    },
+    {
+     "label": "Heat Resistant Super Alloys (Inconel 718, NiCr20TiAl, 2.4631, NiCu30Al, 2.4375, X12 NiCrSi 36-16, 1.4864, G-X120Mn12, 1.3401) (VDI 3323 31-35) \u00b7 side",
+     "iso": "S",
+     "subgroup": "VDI 3323 31-35",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 105.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.0008,
+       "0.3125": 0.001,
+       "0.375": 0.0013,
+       "0.5": 0.0015,
+       "0.625": 0.0019,
+       "0.75": 0.0022,
+       "1": 0.0026
+      }
+     },
+     "operation": "side",
+     "table": "UGMG42, UGMG43 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=32",
+      "page": "32",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.3\u00d7D and ap 0.6\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.3,
+     "apx": 0.6,
+     "materials": [
+      "in718"
+     ],
+     "sourceGroup": "Heat Resistant Super Alloys (Inconel 718, NiCr20TiAl, 2.4631, NiCu30Al, 2.4375, X12 NiCrSi 36-16, 1.4864, G-X120Mn12, 1.3401) (VDI 3323 31-35)"
+    },
+    {
+     "label": "Titanium Alloys (TiAl6V4, 3.7165, HB 400 Rm, HB 1050 Rm) (VDI 3323 36-37) \u00b7 side",
+     "iso": "S",
+     "subgroup": "VDI 3323 36-37",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 230.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.0013,
+       "0.3125": 0.0019,
+       "0.375": 0.0022,
+       "0.5": 0.0026,
+       "0.625": 0.0034,
+       "0.75": 0.0037,
+       "1": 0.0045
+      }
+     },
+     "operation": "side",
+     "table": "UGMG42, UGMG43 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=32",
+      "page": "32",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.4\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.4,
+     "apx": 1.0,
+     "materials": [
+      "ti64"
+     ],
+     "sourceGroup": "Titanium Alloys (TiAl6V4, 3.7165, HB 400 Rm, HB 1050 Rm) (VDI 3323 36-37)",
+     "excludeMaterials": [
+      "ss400"
+     ]
+    }
+   ],
+   "flutes": 4,
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "source": {
+     "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=32",
+     "retrieved": "2026-11-10",
+     "notes": "Cutting-condition heading prints the flute count and the catalog calls the line solid carbide. Y-Coating and C-Coating are both on the selection guide, so coating is not tagged on this record."
+    }
+   },
+   "diameters_in": [
+    0.25,
+    0.3125,
+    0.375,
+    0.5,
+    0.625,
+    0.75,
+    1.0
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "YG-1",
+   "series": "TitaNox-Power UGMG42, UGMG43 (slotting, 4-flute)",
+   "type": "solid carbide end mill, slotting, 4 flute",
+   "notes": "Chart is shared by the series codes in the heading.",
+   "conditions": [
+    {
+     "label": "Non-alloy steel (VDI 3323 1-5) \u00b7 slotting",
+     "iso": "P",
+     "subgroup": "VDI 3323 1-5",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 410.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.001,
+       "0.3125": 0.0013,
+       "0.375": 0.0017,
+       "0.5": 0.0019,
+       "0.625": 0.0025,
+       "0.75": 0.0028,
+       "1": 0.0033
+      }
+     },
+     "operation": "slotting",
+     "table": "UGMG42, UGMG43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=33",
+      "page": "33",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 1.0,
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Non-alloy steel (VDI 3323 1-5)"
+    },
+    {
+     "label": "Low alloy steel (VDI 3323 6-8) \u00b7 slotting",
+     "iso": "P",
+     "subgroup": "VDI 3323 6-8",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 410.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.001,
+       "0.3125": 0.0013,
+       "0.375": 0.0017,
+       "0.5": 0.0019,
+       "0.625": 0.0025,
+       "0.75": 0.0028,
+       "1": 0.0033
+      }
+     },
+     "operation": "slotting",
+     "table": "UGMG42, UGMG43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=33",
+      "page": "33",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 1.0,
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Low alloy steel (VDI 3323 6-8)"
+    },
+    {
+     "label": "Low alloy steel (VDI 3323 9) \u00b7 slotting",
+     "iso": "P",
+     "subgroup": "VDI 3323 9",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 395.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.001,
+       "0.3125": 0.0013,
+       "0.375": 0.0017,
+       "0.5": 0.0019,
+       "0.625": 0.0025,
+       "0.75": 0.0028,
+       "1": 0.003
+      }
+     },
+     "operation": "slotting",
+     "table": "UGMG42, UGMG43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=33",
+      "page": "33",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 1.0,
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Low alloy steel (VDI 3323 9)"
+    },
+    {
+     "label": "High alloyed steel and tool steel (VDI 3323 10) \u00b7 slotting",
+     "iso": "P",
+     "subgroup": "VDI 3323 10",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 410.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.001,
+       "0.3125": 0.0013,
+       "0.375": 0.0017,
+       "0.5": 0.0019,
+       "0.625": 0.0025,
+       "0.75": 0.0028,
+       "1": 0.0033
+      }
+     },
+     "operation": "slotting",
+     "table": "UGMG42, UGMG43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=33",
+      "page": "33",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 1.0
+    },
+    {
+     "label": "High alloyed steel and tool steel (VDI 3323 11.1) \u00b7 slotting",
+     "iso": "P",
+     "subgroup": "VDI 3323 11.1",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 395.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.001,
+       "0.3125": 0.0013,
+       "0.375": 0.0017,
+       "0.5": 0.0019,
+       "0.625": 0.0025,
+       "0.75": 0.0028,
+       "1": 0.003
+      }
+     },
+     "operation": "slotting",
+     "table": "UGMG42, UGMG43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=33",
+      "page": "33",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 1.0
+    },
+    {
+     "label": "Stainless steel (SUS 420, X40Cr13, 420) (VDI 3323 12-13) \u00b7 slotting",
+     "iso": "M",
+     "subgroup": "VDI 3323 12-13",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 410.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.0013,
+       "0.3125": 0.0018,
+       "0.375": 0.0022,
+       "0.5": 0.0026,
+       "0.625": 0.0032,
+       "0.75": 0.0037,
+       "1": 0.0041
+      }
+     },
+     "operation": "slotting",
+     "table": "UGMG42, UGMG43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=33",
+      "page": "33",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 1.0,
+     "materials": [
+      "ss400"
+     ],
+     "sourceGroup": "Stainless steel (SUS 420, X40Cr13, 420) (VDI 3323 12-13)"
+    },
+    {
+     "label": "Stainless steel (SUS 316, 316, X5CrNiMo 17 12 2) (VDI 3323 14.1) \u00b7 slotting",
+     "iso": "M",
+     "subgroup": "VDI 3323 14.1",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 280.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.001,
+       "0.3125": 0.0013,
+       "0.375": 0.0016,
+       "0.5": 0.0019,
+       "0.625": 0.0024,
+       "0.75": 0.0028,
+       "1": 0.0032
+      }
+     },
+     "operation": "slotting",
+     "table": "UGMG42, UGMG43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=33",
+      "page": "33",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 1.0,
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "Stainless steel (SUS 316, 316, X5CrNiMo 17 12 2) (VDI 3323 14.1)"
+    },
+    {
+     "label": "Stainless steel (SUS 630, PH 15-5) (VDI 3323 14.2) \u00b7 slotting",
+     "iso": "M",
+     "subgroup": "VDI 3323 14.2",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 120.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.0006,
+       "0.3125": 0.0008,
+       "0.375": 0.001,
+       "0.5": 0.0013,
+       "0.625": 0.0016,
+       "0.75": 0.0018,
+       "1": 0.0021
+      }
+     },
+     "operation": "slotting",
+     "table": "UGMG42, UGMG43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=33",
+      "page": "33",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 0.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 0.5,
+     "excludeMaterials": [
+      "ss17-4ph"
+     ]
+    },
+    {
+     "label": "Grey cast iron (VDI 3323 15-20) \u00b7 slotting",
+     "iso": "K",
+     "subgroup": "VDI 3323 15-20",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 460.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.0008,
+       "0.3125": 0.0011,
+       "0.375": 0.0014,
+       "0.5": 0.0017,
+       "0.625": 0.0021,
+       "0.75": 0.0024,
+       "1": 0.0026
+      }
+     },
+     "operation": "slotting",
+     "table": "UGMG42, UGMG43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=33",
+      "page": "33",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 1.0,
+     "materials": [
+      "gray-iron"
+     ],
+     "sourceGroup": "Grey cast iron (VDI 3323 15-20)"
+    },
+    {
+     "label": "Heat Resistant Super Alloys (Inconel 718, NiCr20TiAl, 2.4631, NiCu30Al, 2.4375, X12 NiCrSi 36-16, 1.4864, G-X120Mn12, 1.3401) (VDI 3323 31-35) \u00b7 slotting",
+     "iso": "S",
+     "subgroup": "VDI 3323 31-35",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 80.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.0007,
+       "0.3125": 0.0009,
+       "0.375": 0.0012,
+       "0.5": 0.0014,
+       "0.625": 0.0017,
+       "0.75": 0.002,
+       "1": 0.0022
+      }
+     },
+     "operation": "slotting",
+     "table": "UGMG42, UGMG43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=33",
+      "page": "33",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 0.4\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 0.4,
+     "materials": [
+      "in718"
+     ],
+     "sourceGroup": "Heat Resistant Super Alloys (Inconel 718, NiCr20TiAl, 2.4631, NiCu30Al, 2.4375, X12 NiCrSi 36-16, 1.4864, G-X120Mn12, 1.3401) (VDI 3323 31-35)"
+    },
+    {
+     "label": "Titanium Alloys (TiAl6V4, 3.7165, HB 400 Rm, HB 1050 Rm) (VDI 3323 36-37) \u00b7 slotting",
+     "iso": "S",
+     "subgroup": "VDI 3323 36-37",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 180.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.25": 0.0013,
+       "0.3125": 0.0018,
+       "0.375": 0.0022,
+       "0.5": 0.0026,
+       "0.625": 0.0034,
+       "0.75": 0.0037,
+       "1": 0.0041
+      }
+     },
+     "operation": "slotting",
+     "table": "UGMG42, UGMG43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMG42, UGMG43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=33",
+      "page": "33",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 1.0,
+     "materials": [
+      "ti64"
+     ],
+     "sourceGroup": "Titanium Alloys (TiAl6V4, 3.7165, HB 400 Rm, HB 1050 Rm) (VDI 3323 36-37)",
+     "excludeMaterials": [
+      "ss400"
+     ]
+    }
+   ],
+   "flutes": 4,
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 4,
+    "source": {
+     "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=33",
+     "retrieved": "2026-11-10",
+     "notes": "Cutting-condition heading prints the flute count and the catalog calls the line solid carbide. Y-Coating and C-Coating are both on the selection guide, so coating is not tagged on this record."
+    }
+   },
+   "diameters_in": [
+    0.25,
+    0.3125,
+    0.375,
+    0.5,
+    0.625,
+    0.75,
+    1.0
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "YG-1",
+   "series": "TitaNox-Power UGMH12, UGMG32, UGMG34, UGMH06, UGMH07 (side, 5-flute)",
+   "type": "solid carbide end mill, side, 5 flute",
+   "notes": "Chart is shared by the series codes in the heading.",
+   "conditions": [
+    {
+     "label": "Non-alloy steel (VDI 3323 1-5) \u00b7 side",
+     "iso": "P",
+     "subgroup": "VDI 3323 1-5",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 470.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0004,
+       "0.1875": 0.0007,
+       "0.25": 0.0013,
+       "0.3125": 0.0015,
+       "0.375": 0.002,
+       "0.5": 0.0025,
+       "0.5625": 0.0027,
+       "0.625": 0.003,
+       "0.6875": 0.0033,
+       "0.75": 0.0035,
+       "1": 0.004,
+       "1.25": 0.0046
+      }
+     },
+     "operation": "side",
+     "table": "UGMH12, UGMG32, UGMG34, UGMH06, UGMH07 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMH12, UGMG32, UGMG34, UGMH06, UGMH07, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=34",
+      "page": "34",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.3\u00d7D and ap 1.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.3,
+     "apx": 1.5,
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Non-alloy steel (VDI 3323 1-5)"
+    },
+    {
+     "label": "Low alloy steel (VDI 3323 6-8) \u00b7 side",
+     "iso": "P",
+     "subgroup": "VDI 3323 6-8",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 470.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0004,
+       "0.1875": 0.0007,
+       "0.25": 0.0013,
+       "0.3125": 0.0015,
+       "0.375": 0.002,
+       "0.5": 0.0025,
+       "0.5625": 0.0027,
+       "0.625": 0.003,
+       "0.6875": 0.0033,
+       "0.75": 0.0035,
+       "1": 0.004,
+       "1.25": 0.0046
+      }
+     },
+     "operation": "side",
+     "table": "UGMH12, UGMG32, UGMG34, UGMH06, UGMH07 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMH12, UGMG32, UGMG34, UGMH06, UGMH07, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=34",
+      "page": "34",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.3\u00d7D and ap 1.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.3,
+     "apx": 1.5,
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Low alloy steel (VDI 3323 6-8)"
+    },
+    {
+     "label": "Low alloy steel (VDI 3323 9) \u00b7 side",
+     "iso": "P",
+     "subgroup": "VDI 3323 9",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 330.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0004,
+       "0.1875": 0.0007,
+       "0.25": 0.0013,
+       "0.3125": 0.0015,
+       "0.375": 0.002,
+       "0.5": 0.0025,
+       "0.5625": 0.0027,
+       "0.625": 0.003,
+       "0.6875": 0.0033,
+       "0.75": 0.0035,
+       "1": 0.004,
+       "1.25": 0.0046
+      }
+     },
+     "operation": "side",
+     "table": "UGMH12, UGMG32, UGMG34, UGMH06, UGMH07 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMH12, UGMG32, UGMG34, UGMH06, UGMH07, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=34",
+      "page": "34",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.3\u00d7D and ap 1.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.3,
+     "apx": 1.5,
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Low alloy steel (VDI 3323 9)"
+    },
+    {
+     "label": "High alloyed steel and tool steel (VDI 3323 10) \u00b7 side",
+     "iso": "P",
+     "subgroup": "VDI 3323 10",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 470.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0004,
+       "0.1875": 0.0007,
+       "0.25": 0.0013,
+       "0.3125": 0.0015,
+       "0.375": 0.002,
+       "0.5": 0.0025,
+       "0.5625": 0.0027,
+       "0.625": 0.003,
+       "0.6875": 0.0033,
+       "0.75": 0.0035,
+       "1": 0.004,
+       "1.25": 0.0046
+      }
+     },
+     "operation": "side",
+     "table": "UGMH12, UGMG32, UGMG34, UGMH06, UGMH07 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMH12, UGMG32, UGMG34, UGMH06, UGMH07, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=34",
+      "page": "34",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.3\u00d7D and ap 1.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.3,
+     "apx": 1.5
+    },
+    {
+     "label": "High alloyed steel and tool steel (VDI 3323 11.1) \u00b7 side",
+     "iso": "P",
+     "subgroup": "VDI 3323 11.1",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 330.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0004,
+       "0.1875": 0.0007,
+       "0.25": 0.0013,
+       "0.3125": 0.0015,
+       "0.375": 0.002,
+       "0.5": 0.0025,
+       "0.5625": 0.0027,
+       "0.625": 0.003,
+       "0.6875": 0.0033,
+       "0.75": 0.0035,
+       "1": 0.004,
+       "1.25": 0.0046
+      }
+     },
+     "operation": "side",
+     "table": "UGMH12, UGMG32, UGMG34, UGMH06, UGMH07 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMH12, UGMG32, UGMG34, UGMH06, UGMH07, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=34",
+      "page": "34",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.3\u00d7D and ap 1.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.3,
+     "apx": 1.5
+    },
+    {
+     "label": "Stainless steel (SUS 420, X40Cr13, 420) (VDI 3323 12-13) \u00b7 side",
+     "iso": "M",
+     "subgroup": "VDI 3323 12-13",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 385.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0003,
+       "0.1875": 0.0004,
+       "0.25": 0.0009,
+       "0.3125": 0.001,
+       "0.375": 0.0012,
+       "0.5": 0.0018,
+       "0.5625": 0.002,
+       "0.625": 0.0021,
+       "0.6875": 0.0022,
+       "0.75": 0.0024,
+       "1": 0.0028,
+       "1.25": 0.0033
+      }
+     },
+     "operation": "side",
+     "table": "UGMH12, UGMG32, UGMG34, UGMH06, UGMH07 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMH12, UGMG32, UGMG34, UGMH06, UGMH07, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=34",
+      "page": "34",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.3\u00d7D and ap 1.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.3,
+     "apx": 1.5,
+     "materials": [
+      "ss400"
+     ],
+     "sourceGroup": "Stainless steel (SUS 420, X40Cr13, 420) (VDI 3323 12-13)"
+    },
+    {
+     "label": "Stainless steel (SUS 316, 316, X5CrNiMo 17 12 2) (VDI 3323 14.1) \u00b7 side",
+     "iso": "M",
+     "subgroup": "VDI 3323 14.1",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 270.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0004,
+       "0.1875": 0.0005,
+       "0.25": 0.0012,
+       "0.3125": 0.0013,
+       "0.375": 0.0015,
+       "0.5": 0.0025,
+       "0.5625": 0.0026,
+       "0.625": 0.0027,
+       "0.6875": 0.0028,
+       "0.75": 0.003,
+       "1": 0.0035,
+       "1.25": 0.0041
+      }
+     },
+     "operation": "side",
+     "table": "UGMH12, UGMG32, UGMG34, UGMH06, UGMH07 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMH12, UGMG32, UGMG34, UGMH06, UGMH07, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=34",
+      "page": "34",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Ae/Ap not stored for this row."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "Stainless steel (SUS 316, 316, X5CrNiMo 17 12 2) (VDI 3323 14.1)"
+    },
+    {
+     "label": "Stainless steel (SUS 630, PH 15-5) (VDI 3323 14.2) \u00b7 side",
+     "iso": "M",
+     "subgroup": "VDI 3323 14.2",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 195.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0004,
+       "0.1875": 0.0005,
+       "0.25": 0.0012,
+       "0.3125": 0.0013,
+       "0.375": 0.0015,
+       "0.5": 0.0025,
+       "0.5625": 0.0026,
+       "0.625": 0.0027,
+       "0.6875": 0.0028,
+       "0.75": 0.003,
+       "1": 0.0035,
+       "1.25": 0.0041
+      }
+     },
+     "operation": "side",
+     "table": "UGMH12, UGMG32, UGMG34, UGMH06, UGMH07 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMH12, UGMG32, UGMG34, UGMH06, UGMH07, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=34",
+      "page": "34",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.3\u00d7D and ap 1.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.3,
+     "apx": 1.5,
+     "excludeMaterials": [
+      "ss17-4ph"
+     ]
+    },
+    {
+     "label": "Grey cast iron (VDI 3323 15-20) \u00b7 side",
+     "iso": "K",
+     "subgroup": "VDI 3323 15-20",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 350.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0006,
+       "0.1875": 0.0008,
+       "0.25": 0.0017,
+       "0.3125": 0.0019,
+       "0.375": 0.0025,
+       "0.5": 0.0031,
+       "0.5625": 0.0034,
+       "0.625": 0.0038,
+       "0.6875": 0.0041,
+       "0.75": 0.0044,
+       "1": 0.005,
+       "1.25": 0.0057
+      }
+     },
+     "operation": "side",
+     "table": "UGMH12, UGMG32, UGMG34, UGMH06, UGMH07 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMH12, UGMG32, UGMG34, UGMH06, UGMH07, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=34",
+      "page": "34",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.3\u00d7D and ap 1.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.3,
+     "apx": 1.5,
+     "materials": [
+      "gray-iron"
+     ],
+     "sourceGroup": "Grey cast iron (VDI 3323 15-20)"
+    },
+    {
+     "label": "Heat Resistant Super Alloys (Inconel 718, NiCr20TiAl, 2.4631, NiCu30Al, 2.4375, X12 NiCrSi 36-16, 1.4864, G-X120Mn12, 1.3401) (VDI 3323 31-35) \u00b7 side",
+     "iso": "S",
+     "subgroup": "VDI 3323 31-35",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 100.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0004,
+       "0.1875": 0.0005,
+       "0.25": 0.0008,
+       "0.3125": 0.0009,
+       "0.375": 0.0011,
+       "0.5": 0.0017,
+       "0.5625": 0.0018,
+       "0.625": 0.0019,
+       "0.6875": 0.0019,
+       "0.75": 0.0021,
+       "1": 0.0024,
+       "1.25": 0.0027
+      }
+     },
+     "operation": "side",
+     "table": "UGMH12, UGMG32, UGMG34, UGMH06, UGMH07 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMH12, UGMG32, UGMG34, UGMH06, UGMH07, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=34",
+      "page": "34",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.1\u00d7D and ap 1.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.1,
+     "apx": 1.5,
+     "materials": [
+      "in718"
+     ],
+     "sourceGroup": "Heat Resistant Super Alloys (Inconel 718, NiCr20TiAl, 2.4631, NiCu30Al, 2.4375, X12 NiCrSi 36-16, 1.4864, G-X120Mn12, 1.3401) (VDI 3323 31-35)"
+    },
+    {
+     "label": "Titanium Alloys (TiAl6V4, 3.7165, HB 400 Rm, HB 1050 Rm) (VDI 3323 36-37) \u00b7 side",
+     "iso": "S",
+     "subgroup": "VDI 3323 36-37",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 225.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0004,
+       "0.1875": 0.0004,
+       "0.25": 0.0011,
+       "0.3125": 0.0011,
+       "0.375": 0.0013,
+       "0.5": 0.0022,
+       "0.5625": 0.0023,
+       "0.625": 0.0024,
+       "0.6875": 0.0025,
+       "0.75": 0.0027,
+       "1": 0.0031,
+       "1.25": 0.0036
+      }
+     },
+     "operation": "side",
+     "table": "UGMH12, UGMG32, UGMG34, UGMH06, UGMH07 side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, UGMH12, UGMG32, UGMG34, UGMH06, UGMH07, side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=34",
+      "page": "34",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.2\u00d7D and ap 1.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.2,
+     "apx": 1.5,
+     "materials": [
+      "ti64"
+     ],
+     "sourceGroup": "Titanium Alloys (TiAl6V4, 3.7165, HB 400 Rm, HB 1050 Rm) (VDI 3323 36-37)",
+     "excludeMaterials": [
+      "ss400"
+     ]
+    }
+   ],
+   "flutes": 5,
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 5,
+    "source": {
+     "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=34",
+     "retrieved": "2026-11-10",
+     "notes": "Cutting-condition heading prints the flute count and the catalog calls the line solid carbide. Y-Coating and C-Coating are both on the selection guide, so coating is not tagged on this record."
+    }
+   },
+   "diameters_in": [
+    0.125,
+    0.1875,
+    0.25,
+    0.3125,
+    0.375,
+    0.5,
+    0.5625,
+    0.625,
+    0.6875,
+    0.75,
+    1.0,
+    1.25
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "YG-1",
+   "series": "TitaNox-Power EMI42, EMI43 (heavy side, 5-flute)",
+   "type": "solid carbide end mill, heavy side, 5 flute",
+   "notes": "Chart is shared by the series codes in the heading.",
+   "conditions": [
+    {
+     "label": "Non-alloy steel (VDI 3323 1-5) \u00b7 heavy side",
+     "iso": "P",
+     "subgroup": "VDI 3323 1-5",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 500.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0009,
+       "0.15625": 0.0011,
+       "0.1875": 0.0013,
+       "0.21875": 0.0014,
+       "0.25": 0.0016,
+       "0.3125": 0.0018,
+       "0.375": 0.0022,
+       "0.4375": 0.0027,
+       "0.5": 0.0031,
+       "0.625": 0.0037,
+       "0.75": 0.0043,
+       "1": 0.0049
+      }
+     },
+     "operation": "heavy side",
+     "table": "EMI42, EMI43 heavy side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, heavy side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=38",
+      "page": "38",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.5\u00d7D and ap 1.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.5,
+     "apx": 1.5,
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Non-alloy steel (VDI 3323 1-5)"
+    },
+    {
+     "label": "Low alloy steel (VDI 3323 6-8) \u00b7 heavy side",
+     "iso": "P",
+     "subgroup": "VDI 3323 6-8",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 500.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0009,
+       "0.15625": 0.0011,
+       "0.1875": 0.0013,
+       "0.21875": 0.0014,
+       "0.25": 0.0016,
+       "0.3125": 0.0018,
+       "0.375": 0.0022,
+       "0.4375": 0.0027,
+       "0.5": 0.0031,
+       "0.625": 0.0037,
+       "0.75": 0.0043,
+       "1": 0.0049
+      }
+     },
+     "operation": "heavy side",
+     "table": "EMI42, EMI43 heavy side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, heavy side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=38",
+      "page": "38",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.5\u00d7D and ap 1.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.5,
+     "apx": 1.5,
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Low alloy steel (VDI 3323 6-8)"
+    },
+    {
+     "label": "Low alloy steel (VDI 3323 9) \u00b7 heavy side",
+     "iso": "P",
+     "subgroup": "VDI 3323 9",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 400.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0005,
+       "0.15625": 0.0007,
+       "0.1875": 0.0008,
+       "0.21875": 0.0011,
+       "0.25": 0.0012,
+       "0.3125": 0.0014,
+       "0.375": 0.0017,
+       "0.4375": 0.0021,
+       "0.5": 0.0024,
+       "0.625": 0.0028,
+       "0.75": 0.0033,
+       "1": 0.0038
+      }
+     },
+     "operation": "heavy side",
+     "table": "EMI42, EMI43 heavy side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, heavy side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=38",
+      "page": "38",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.5\u00d7D and ap 1.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.5,
+     "apx": 1.5,
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Low alloy steel (VDI 3323 9)"
+    },
+    {
+     "label": "High alloyed steel and tool steel (VDI 3323 10) \u00b7 heavy side",
+     "iso": "P",
+     "subgroup": "VDI 3323 10",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 450.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0009,
+       "0.15625": 0.0011,
+       "0.1875": 0.0013,
+       "0.21875": 0.0014,
+       "0.25": 0.0016,
+       "0.3125": 0.0018,
+       "0.375": 0.0022,
+       "0.4375": 0.0027,
+       "0.5": 0.0031,
+       "0.625": 0.0037,
+       "0.75": 0.0043,
+       "1": 0.0049
+      }
+     },
+     "operation": "heavy side",
+     "table": "EMI42, EMI43 heavy side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, heavy side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=38",
+      "page": "38",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.5\u00d7D and ap 1.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.5,
+     "apx": 1.5
+    },
+    {
+     "label": "High alloyed steel and tool steel (VDI 3323 11.1) \u00b7 heavy side",
+     "iso": "P",
+     "subgroup": "VDI 3323 11.1",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 400.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0005,
+       "0.15625": 0.0007,
+       "0.1875": 0.0008,
+       "0.21875": 0.0011,
+       "0.25": 0.0012,
+       "0.3125": 0.0014,
+       "0.375": 0.0017,
+       "0.4375": 0.0021,
+       "0.5": 0.0024,
+       "0.625": 0.0028,
+       "0.75": 0.0033,
+       "1": 0.0038
+      }
+     },
+     "operation": "heavy side",
+     "table": "EMI42, EMI43 heavy side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, heavy side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=38",
+      "page": "38",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.5\u00d7D and ap 1.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.5,
+     "apx": 1.5
+    },
+    {
+     "label": "Stainless steel (SUS 420, X40Cr13, 420) (VDI 3323 12-13) \u00b7 heavy side",
+     "iso": "M",
+     "subgroup": "VDI 3323 12-13",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 250.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0005,
+       "0.15625": 0.0006,
+       "0.1875": 0.0007,
+       "0.21875": 0.0009,
+       "0.25": 0.001,
+       "0.3125": 0.0012,
+       "0.375": 0.0015,
+       "0.4375": 0.0018,
+       "0.5": 0.0021,
+       "0.625": 0.0024,
+       "0.75": 0.0028,
+       "1": 0.0032
+      }
+     },
+     "operation": "heavy side",
+     "table": "EMI42, EMI43 heavy side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, heavy side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=38",
+      "page": "38",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.5\u00d7D and ap 1.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.5,
+     "apx": 1.5,
+     "materials": [
+      "ss400"
+     ],
+     "sourceGroup": "Stainless steel (SUS 420, X40Cr13, 420) (VDI 3323 12-13)"
+    },
+    {
+     "label": "Stainless steel (SUS 316, 316, X5CrNiMo 17 12 2) (VDI 3323 14.1) \u00b7 heavy side",
+     "iso": "M",
+     "subgroup": "VDI 3323 14.1",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 300.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0005,
+       "0.15625": 0.0007,
+       "0.1875": 0.0008,
+       "0.21875": 0.0011,
+       "0.25": 0.0013,
+       "0.3125": 0.0014,
+       "0.375": 0.0018,
+       "0.4375": 0.0023,
+       "0.5": 0.0026,
+       "0.625": 0.0028,
+       "0.75": 0.0031,
+       "1": 0.0036
+      }
+     },
+     "operation": "heavy side",
+     "table": "EMI42, EMI43 heavy side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, heavy side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=38",
+      "page": "38",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Ae/Ap not stored for this row."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "Stainless steel (SUS 316, 316, X5CrNiMo 17 12 2) (VDI 3323 14.1)"
+    },
+    {
+     "label": "Stainless steel (SUS 630, PH 15-5) (VDI 3323 14.2) \u00b7 heavy side",
+     "iso": "M",
+     "subgroup": "VDI 3323 14.2",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 200.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0005,
+       "0.15625": 0.0006,
+       "0.1875": 0.0007,
+       "0.21875": 0.0009,
+       "0.25": 0.001,
+       "0.3125": 0.0011,
+       "0.375": 0.0014,
+       "0.4375": 0.0018,
+       "0.5": 0.0021,
+       "0.625": 0.0022,
+       "0.75": 0.0025,
+       "1": 0.0029
+      }
+     },
+     "operation": "heavy side",
+     "table": "EMI42, EMI43 heavy side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, heavy side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=38",
+      "page": "38",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.5\u00d7D and ap 1.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.5,
+     "apx": 1.5,
+     "excludeMaterials": [
+      "ss17-4ph"
+     ]
+    },
+    {
+     "label": "Grey cast iron (VDI 3323 15-20) \u00b7 heavy side",
+     "iso": "K",
+     "subgroup": "VDI 3323 15-20",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 370.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0007,
+       "0.15625": 0.0008,
+       "0.1875": 0.001,
+       "0.21875": 0.0012,
+       "0.25": 0.0014,
+       "0.3125": 0.0016,
+       "0.375": 0.0019,
+       "0.4375": 0.0023,
+       "0.5": 0.0026,
+       "0.625": 0.0032,
+       "0.75": 0.0037,
+       "1": 0.0042
+      }
+     },
+     "operation": "heavy side",
+     "table": "EMI42, EMI43 heavy side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, heavy side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=38",
+      "page": "38",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.5\u00d7D and ap 1.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.5,
+     "apx": 1.5,
+     "materials": [
+      "gray-iron"
+     ],
+     "sourceGroup": "Grey cast iron (VDI 3323 15-20)"
+    },
+    {
+     "label": "Heat Resistant Super Alloys (Inconel 718, NiCr20TiAl, 2.4631, NiCu30Al, 2.4375, X12 NiCrSi 36-16, 1.4864, G-X120Mn12, 1.3401) (VDI 3323 31-35) \u00b7 heavy side",
+     "iso": "S",
+     "subgroup": "VDI 3323 31-35",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 90.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0004,
+       "0.15625": 0.0005,
+       "0.1875": 0.0006,
+       "0.21875": 0.0009,
+       "0.25": 0.001,
+       "0.3125": 0.0012,
+       "0.375": 0.0014,
+       "0.4375": 0.0017,
+       "0.5": 0.0019,
+       "0.625": 0.0021,
+       "0.75": 0.0023,
+       "1": 0.0027
+      }
+     },
+     "operation": "heavy side",
+     "table": "EMI42, EMI43 heavy side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, heavy side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=38",
+      "page": "38",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.2\u00d7D and ap 1.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.2,
+     "apx": 1.5,
+     "materials": [
+      "in718"
+     ],
+     "sourceGroup": "Heat Resistant Super Alloys (Inconel 718, NiCr20TiAl, 2.4631, NiCu30Al, 2.4375, X12 NiCrSi 36-16, 1.4864, G-X120Mn12, 1.3401) (VDI 3323 31-35)"
+    },
+    {
+     "label": "Titanium Alloys (TiAl6V4, 3.7165, HB 400 Rm, HB 1050 Rm) (VDI 3323 36-37) \u00b7 heavy side",
+     "iso": "S",
+     "subgroup": "VDI 3323 36-37",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 160.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0004,
+       "0.15625": 0.0005,
+       "0.1875": 0.0006,
+       "0.21875": 0.0009,
+       "0.25": 0.001,
+       "0.3125": 0.0012,
+       "0.375": 0.0014,
+       "0.4375": 0.0017,
+       "0.5": 0.0019,
+       "0.625": 0.0021,
+       "0.75": 0.0023,
+       "1": 0.0027
+      }
+     },
+     "operation": "heavy side",
+     "table": "EMI42, EMI43 heavy side",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, heavy side",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=38",
+      "page": "38",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.5\u00d7D and ap 1.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.5,
+     "apx": 1.5,
+     "materials": [
+      "ti64"
+     ],
+     "sourceGroup": "Titanium Alloys (TiAl6V4, 3.7165, HB 400 Rm, HB 1050 Rm) (VDI 3323 36-37)",
+     "excludeMaterials": [
+      "ss400"
+     ]
+    }
+   ],
+   "flutes": 5,
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 5,
+    "source": {
+     "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=38",
+     "retrieved": "2026-11-10",
+     "notes": "Cutting-condition heading prints the flute count and the catalog calls the line solid carbide. Y-Coating and C-Coating are both on the selection guide, so coating is not tagged on this record."
+    }
+   },
+   "diameters_in": [
+    0.125,
+    0.15625,
+    0.1875,
+    0.21875,
+    0.25,
+    0.3125,
+    0.375,
+    0.4375,
+    0.5,
+    0.625,
+    0.75,
+    1.0
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "YG-1",
+   "series": "TitaNox-Power EMI42, EMI43 (peel, 5-flute)",
+   "type": "solid carbide end mill, peel, 5 flute",
+   "notes": "Chart is shared by the series codes in the heading.",
+   "conditions": [
+    {
+     "label": "Non-alloy steel (VDI 3323 1-5) \u00b7 peel",
+     "iso": "P",
+     "subgroup": "VDI 3323 1-5",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 650.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0012,
+       "0.15625": 0.0015,
+       "0.1875": 0.0018,
+       "0.21875": 0.0019,
+       "0.25": 0.0022,
+       "0.3125": 0.0026,
+       "0.375": 0.0031,
+       "0.4375": 0.0038,
+       "0.5": 0.0043,
+       "0.625": 0.0051,
+       "0.75": 0.006,
+       "1": 0.0068
+      }
+     },
+     "operation": "peel",
+     "table": "EMI42, EMI43 peel",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, peel",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=39",
+      "page": "39",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.08\u00d7D and ap 2.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.08,
+     "apx": 2.0,
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Non-alloy steel (VDI 3323 1-5)"
+    },
+    {
+     "label": "Low alloy steel (VDI 3323 6-8) \u00b7 peel",
+     "iso": "P",
+     "subgroup": "VDI 3323 6-8",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 650.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0012,
+       "0.15625": 0.0015,
+       "0.1875": 0.0018,
+       "0.21875": 0.0019,
+       "0.25": 0.0022,
+       "0.3125": 0.0026,
+       "0.375": 0.0031,
+       "0.4375": 0.0038,
+       "0.5": 0.0043,
+       "0.625": 0.0051,
+       "0.75": 0.006,
+       "1": 0.0068
+      }
+     },
+     "operation": "peel",
+     "table": "EMI42, EMI43 peel",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, peel",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=39",
+      "page": "39",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.08\u00d7D and ap 2.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.08,
+     "apx": 2.0,
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Low alloy steel (VDI 3323 6-8)"
+    },
+    {
+     "label": "Low alloy steel (VDI 3323 9) \u00b7 peel",
+     "iso": "P",
+     "subgroup": "VDI 3323 9",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 650.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0007,
+       "0.15625": 0.0009,
+       "0.1875": 0.0011,
+       "0.21875": 0.0015,
+       "0.25": 0.0017,
+       "0.3125": 0.002,
+       "0.375": 0.0024,
+       "0.4375": 0.0029,
+       "0.5": 0.0033,
+       "0.625": 0.004,
+       "0.75": 0.0046,
+       "1": 0.0053
+      }
+     },
+     "operation": "peel",
+     "table": "EMI42, EMI43 peel",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, peel",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=39",
+      "page": "39",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.08\u00d7D and ap 2.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.08,
+     "apx": 2.0,
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Low alloy steel (VDI 3323 9)"
+    },
+    {
+     "label": "High alloyed steel and tool steel (VDI 3323 10) \u00b7 peel",
+     "iso": "P",
+     "subgroup": "VDI 3323 10",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 580.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0012,
+       "0.15625": 0.0015,
+       "0.1875": 0.0018,
+       "0.21875": 0.0019,
+       "0.25": 0.0022,
+       "0.3125": 0.0026,
+       "0.375": 0.0031,
+       "0.4375": 0.0038,
+       "0.5": 0.0043,
+       "0.625": 0.0051,
+       "0.75": 0.006,
+       "1": 0.0068
+      }
+     },
+     "operation": "peel",
+     "table": "EMI42, EMI43 peel",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, peel",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=39",
+      "page": "39",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.08\u00d7D and ap 2.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.08,
+     "apx": 2.0
+    },
+    {
+     "label": "High alloyed steel and tool steel (VDI 3323 11.1) \u00b7 peel",
+     "iso": "P",
+     "subgroup": "VDI 3323 11.1",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 550.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0007,
+       "0.15625": 0.0009,
+       "0.1875": 0.0011,
+       "0.21875": 0.0015,
+       "0.25": 0.0017,
+       "0.3125": 0.002,
+       "0.375": 0.0024,
+       "0.4375": 0.0029,
+       "0.5": 0.0033,
+       "0.625": 0.004,
+       "0.75": 0.0046,
+       "1": 0.0053
+      }
+     },
+     "operation": "peel",
+     "table": "EMI42, EMI43 peel",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, peel",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=39",
+      "page": "39",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.08\u00d7D and ap 2.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.08,
+     "apx": 2.0
+    },
+    {
+     "label": "Stainless steel (SUS 420, X40Cr13, 420) (VDI 3323 12-13) \u00b7 peel",
+     "iso": "M",
+     "subgroup": "VDI 3323 12-13",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 350.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0007,
+       "0.15625": 0.0008,
+       "0.1875": 0.001,
+       "0.21875": 0.0013,
+       "0.25": 0.0015,
+       "0.3125": 0.0016,
+       "0.375": 0.0021,
+       "0.4375": 0.0025,
+       "0.5": 0.0029,
+       "0.625": 0.0034,
+       "0.75": 0.0039,
+       "1": 0.0045
+      }
+     },
+     "operation": "peel",
+     "table": "EMI42, EMI43 peel",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, peel",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=39",
+      "page": "39",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.06\u00d7D and ap 2.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.06,
+     "apx": 2.0,
+     "materials": [
+      "ss400"
+     ],
+     "sourceGroup": "Stainless steel (SUS 420, X40Cr13, 420) (VDI 3323 12-13)"
+    },
+    {
+     "label": "Stainless steel (SUS 316, 316, X5CrNiMo 17 12 2) (VDI 3323 14.1) \u00b7 peel",
+     "iso": "M",
+     "subgroup": "VDI 3323 14.1",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 425.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0007,
+       "0.15625": 0.0009,
+       "0.1875": 0.0011,
+       "0.21875": 0.0016,
+       "0.25": 0.0018,
+       "0.3125": 0.0019,
+       "0.375": 0.0025,
+       "0.4375": 0.0032,
+       "0.5": 0.0036,
+       "0.625": 0.0039,
+       "0.75": 0.0044,
+       "1": 0.0051
+      }
+     },
+     "operation": "peel",
+     "table": "EMI42, EMI43 peel",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, peel",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=39",
+      "page": "39",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Ae/Ap not stored for this row."
+     },
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "Stainless steel (SUS 316, 316, X5CrNiMo 17 12 2) (VDI 3323 14.1)"
+    },
+    {
+     "label": "Stainless steel (SUS 630, PH 15-5) (VDI 3323 14.2) \u00b7 peel",
+     "iso": "M",
+     "subgroup": "VDI 3323 14.2",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 300.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0007,
+       "0.15625": 0.0008,
+       "0.1875": 0.001,
+       "0.21875": 0.0012,
+       "0.25": 0.0014,
+       "0.3125": 0.0015,
+       "0.375": 0.002,
+       "0.4375": 0.0025,
+       "0.5": 0.0029,
+       "0.625": 0.0031,
+       "0.75": 0.0035,
+       "1": 0.0041
+      }
+     },
+     "operation": "peel",
+     "table": "EMI42, EMI43 peel",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, peel",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=39",
+      "page": "39",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.06\u00d7D and ap 2.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.06,
+     "apx": 2.0,
+     "excludeMaterials": [
+      "ss17-4ph"
+     ]
+    },
+    {
+     "label": "Grey cast iron (VDI 3323 15-20) \u00b7 peel",
+     "iso": "K",
+     "subgroup": "VDI 3323 15-20",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 550.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0009,
+       "0.15625": 0.0012,
+       "0.1875": 0.0014,
+       "0.21875": 0.0018,
+       "0.25": 0.002,
+       "0.3125": 0.0022,
+       "0.375": 0.0027,
+       "0.4375": 0.0032,
+       "0.5": 0.0037,
+       "0.625": 0.0045,
+       "0.75": 0.0052,
+       "1": 0.0059
+      }
+     },
+     "operation": "peel",
+     "table": "EMI42, EMI43 peel",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, peel",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=39",
+      "page": "39",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.07\u00d7D and ap 2.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.07,
+     "apx": 2.0,
+     "materials": [
+      "gray-iron"
+     ],
+     "sourceGroup": "Grey cast iron (VDI 3323 15-20)"
+    },
+    {
+     "label": "Heat Resistant Super Alloys (Inconel 718, NiCr20TiAl, 2.4631, NiCu30Al, 2.4375, X12 NiCrSi 36-16, 1.4864, G-X120Mn12, 1.3401) (VDI 3323 31-35) \u00b7 peel",
+     "iso": "S",
+     "subgroup": "VDI 3323 31-35",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 120.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0004,
+       "0.15625": 0.0005,
+       "0.1875": 0.0006,
+       "0.21875": 0.0009,
+       "0.25": 0.001,
+       "0.3125": 0.0012,
+       "0.375": 0.0014,
+       "0.4375": 0.0017,
+       "0.5": 0.0019,
+       "0.625": 0.0021,
+       "0.75": 0.0023,
+       "1": 0.0027
+      }
+     },
+     "operation": "peel",
+     "table": "EMI42, EMI43 peel",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, peel",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=39",
+      "page": "39",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.04\u00d7D and ap 2.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.04,
+     "apx": 2.0,
+     "materials": [
+      "in718"
+     ],
+     "sourceGroup": "Heat Resistant Super Alloys (Inconel 718, NiCr20TiAl, 2.4631, NiCu30Al, 2.4375, X12 NiCrSi 36-16, 1.4864, G-X120Mn12, 1.3401) (VDI 3323 31-35)"
+    },
+    {
+     "label": "Titanium Alloys (TiAl6V4, 3.7165, HB 400 Rm, HB 1050 Rm) (VDI 3323 36-37) \u00b7 peel",
+     "iso": "S",
+     "subgroup": "VDI 3323 36-37",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 300.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0004,
+       "0.15625": 0.0005,
+       "0.1875": 0.0006,
+       "0.21875": 0.0009,
+       "0.25": 0.001,
+       "0.3125": 0.0012,
+       "0.375": 0.0014,
+       "0.4375": 0.0017,
+       "0.5": 0.0019,
+       "0.625": 0.0021,
+       "0.75": 0.0023,
+       "1": 0.0027
+      }
+     },
+     "operation": "peel",
+     "table": "EMI42, EMI43 peel",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, peel",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=39",
+      "page": "39",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 0.05\u00d7D and ap 2.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 0.05,
+     "apx": 2.0,
+     "materials": [
+      "ti64"
+     ],
+     "sourceGroup": "Titanium Alloys (TiAl6V4, 3.7165, HB 400 Rm, HB 1050 Rm) (VDI 3323 36-37)",
+     "excludeMaterials": [
+      "ss400"
+     ]
+    }
+   ],
+   "flutes": 5,
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 5,
+    "source": {
+     "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=39",
+     "retrieved": "2026-11-10",
+     "notes": "Cutting-condition heading prints the flute count and the catalog calls the line solid carbide. Y-Coating and C-Coating are both on the selection guide, so coating is not tagged on this record."
+    }
+   },
+   "diameters_in": [
+    0.125,
+    0.15625,
+    0.1875,
+    0.21875,
+    0.25,
+    0.3125,
+    0.375,
+    0.4375,
+    0.5,
+    0.625,
+    0.75,
+    1.0
+   ]
+  },
+  {
+   "mode": "mill",
+   "brand": "YG-1",
+   "series": "TitaNox-Power EMI42, EMI43 (slotting, 5-flute)",
+   "type": "solid carbide end mill, slotting, 5 flute",
+   "notes": "Chart is shared by the series codes in the heading.",
+   "conditions": [
+    {
+     "label": "Non-alloy steel (VDI 3323 1-5) \u00b7 slotting",
+     "iso": "P",
+     "subgroup": "VDI 3323 1-5",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 275.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0007,
+       "0.15625": 0.0008,
+       "0.1875": 0.001,
+       "0.21875": 0.0011,
+       "0.25": 0.0013,
+       "0.3125": 0.0015,
+       "0.375": 0.0018,
+       "0.4375": 0.0021,
+       "0.5": 0.0024,
+       "0.625": 0.0029,
+       "0.75": 0.0034,
+       "1": 0.0039
+      }
+     },
+     "operation": "slotting",
+     "table": "EMI42, EMI43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=40",
+      "page": "40",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 1.0,
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "Non-alloy steel (VDI 3323 1-5)"
+    },
+    {
+     "label": "Low alloy steel (VDI 3323 6-8) \u00b7 slotting",
+     "iso": "P",
+     "subgroup": "VDI 3323 6-8",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 275.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0007,
+       "0.15625": 0.0008,
+       "0.1875": 0.001,
+       "0.21875": 0.0011,
+       "0.25": 0.0013,
+       "0.3125": 0.0015,
+       "0.375": 0.0018,
+       "0.4375": 0.0021,
+       "0.5": 0.0024,
+       "0.625": 0.0029,
+       "0.75": 0.0034,
+       "1": 0.0039
+      }
+     },
+     "operation": "slotting",
+     "table": "EMI42, EMI43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=40",
+      "page": "40",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 1.0,
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Low alloy steel (VDI 3323 6-8)"
+    },
+    {
+     "label": "Low alloy steel (VDI 3323 9) \u00b7 slotting",
+     "iso": "P",
+     "subgroup": "VDI 3323 9",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 275.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0004,
+       "0.15625": 0.0005,
+       "0.1875": 0.0006,
+       "0.21875": 0.0009,
+       "0.25": 0.001,
+       "0.3125": 0.0011,
+       "0.375": 0.0014,
+       "0.4375": 0.0017,
+       "0.5": 0.0019,
+       "0.625": 0.0023,
+       "0.75": 0.0026,
+       "1": 0.003
+      }
+     },
+     "operation": "slotting",
+     "table": "EMI42, EMI43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=40",
+      "page": "40",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 1.0,
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "Low alloy steel (VDI 3323 9)"
+    },
+    {
+     "label": "High alloyed steel and tool steel (VDI 3323 10) \u00b7 slotting",
+     "iso": "P",
+     "subgroup": "VDI 3323 10",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 230.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0007,
+       "0.15625": 0.0008,
+       "0.1875": 0.001,
+       "0.21875": 0.0011,
+       "0.25": 0.0013,
+       "0.3125": 0.0015,
+       "0.375": 0.0018,
+       "0.4375": 0.0021,
+       "0.5": 0.0024,
+       "0.625": 0.0029,
+       "0.75": 0.0034,
+       "1": 0.0039
+      }
+     },
+     "operation": "slotting",
+     "table": "EMI42, EMI43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=40",
+      "page": "40",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 0.75\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 0.75
+    },
+    {
+     "label": "High alloyed steel and tool steel (VDI 3323 11.1) \u00b7 slotting",
+     "iso": "P",
+     "subgroup": "VDI 3323 11.1",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 250.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0004,
+       "0.15625": 0.0005,
+       "0.1875": 0.0006,
+       "0.21875": 0.0009,
+       "0.25": 0.001,
+       "0.3125": 0.0011,
+       "0.375": 0.0014,
+       "0.4375": 0.0017,
+       "0.5": 0.0019,
+       "0.625": 0.0023,
+       "0.75": 0.0026,
+       "1": 0.003
+      }
+     },
+     "operation": "slotting",
+     "table": "EMI42, EMI43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=40",
+      "page": "40",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 0.75\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 0.75
+    },
+    {
+     "label": "Stainless steel (SUS 420, X40Cr13, 420) (VDI 3323 12-13) \u00b7 slotting",
+     "iso": "M",
+     "subgroup": "VDI 3323 12-13",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 225.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0004,
+       "0.15625": 0.0005,
+       "0.1875": 0.0006,
+       "0.21875": 0.0007,
+       "0.25": 0.0008,
+       "0.3125": 0.0009,
+       "0.375": 0.0012,
+       "0.4375": 0.0015,
+       "0.5": 0.0017,
+       "0.625": 0.0019,
+       "0.75": 0.0022,
+       "1": 0.0026
+      }
+     },
+     "operation": "slotting",
+     "table": "EMI42, EMI43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=40",
+      "page": "40",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 0.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 0.5,
+     "materials": [
+      "ss400"
+     ],
+     "sourceGroup": "Stainless steel (SUS 420, X40Cr13, 420) (VDI 3323 12-13)"
+    },
+    {
+     "label": "Stainless steel (SUS 316, 316, X5CrNiMo 17 12 2) (VDI 3323 14.1) \u00b7 slotting",
+     "iso": "M",
+     "subgroup": "VDI 3323 14.1",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 250.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0004,
+       "0.15625": 0.0005,
+       "0.1875": 0.0006,
+       "0.21875": 0.0009,
+       "0.25": 0.001,
+       "0.3125": 0.0011,
+       "0.375": 0.0014,
+       "0.4375": 0.0018,
+       "0.5": 0.0021,
+       "0.625": 0.0023,
+       "0.75": 0.0025,
+       "1": 0.0029
+      }
+     },
+     "operation": "slotting",
+     "table": "EMI42, EMI43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=40",
+      "page": "40",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap None\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "materials": [
+      "ss304"
+     ],
+     "sourceGroup": "Stainless steel (SUS 316, 316, X5CrNiMo 17 12 2) (VDI 3323 14.1)"
+    },
+    {
+     "label": "Stainless steel (SUS 630, PH 15-5) (VDI 3323 14.2) \u00b7 slotting",
+     "iso": "M",
+     "subgroup": "VDI 3323 14.2",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 200.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0004,
+       "0.15625": 0.0005,
+       "0.1875": 0.0006,
+       "0.21875": 0.0007,
+       "0.25": 0.0008,
+       "0.3125": 0.0009,
+       "0.375": 0.0011,
+       "0.4375": 0.0015,
+       "0.5": 0.0017,
+       "0.625": 0.0018,
+       "0.75": 0.002,
+       "1": 0.0023
+      }
+     },
+     "operation": "slotting",
+     "table": "EMI42, EMI43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=40",
+      "page": "40",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 0.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 0.5,
+     "excludeMaterials": [
+      "ss17-4ph"
+     ]
+    },
+    {
+     "label": "Grey cast iron (VDI 3323 15-20) \u00b7 slotting",
+     "iso": "K",
+     "subgroup": "VDI 3323 15-20",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 260.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0005,
+       "0.15625": 0.0007,
+       "0.1875": 0.0008,
+       "0.21875": 0.001,
+       "0.25": 0.0011,
+       "0.3125": 0.0013,
+       "0.375": 0.0015,
+       "0.4375": 0.0018,
+       "0.5": 0.0021,
+       "0.625": 0.0026,
+       "0.75": 0.003,
+       "1": 0.0034
+      }
+     },
+     "operation": "slotting",
+     "table": "EMI42, EMI43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=40",
+      "page": "40",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 1.0\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 1.0,
+     "materials": [
+      "gray-iron"
+     ],
+     "sourceGroup": "Grey cast iron (VDI 3323 15-20)"
+    },
+    {
+     "label": "Heat Resistant Super Alloys (Inconel 718, NiCr20TiAl, 2.4631, NiCu30Al, 2.4375, X12 NiCrSi 36-16, 1.4864, G-X120Mn12, 1.3401) (VDI 3323 31-35) \u00b7 slotting",
+     "iso": "S",
+     "subgroup": "VDI 3323 31-35",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 64.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0003,
+       "0.15625": 0.0004,
+       "0.1875": 0.0005,
+       "0.21875": 0.0007,
+       "0.25": 0.0008,
+       "0.3125": 0.001,
+       "0.375": 0.0011,
+       "0.4375": 0.0013,
+       "0.5": 0.0015,
+       "0.625": 0.0017,
+       "0.75": 0.0019,
+       "1": 0.0021
+      }
+     },
+     "operation": "slotting",
+     "table": "EMI42, EMI43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=40",
+      "page": "40",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 0.4\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 0.4,
+     "materials": [
+      "in718"
+     ],
+     "sourceGroup": "Heat Resistant Super Alloys (Inconel 718, NiCr20TiAl, 2.4631, NiCu30Al, 2.4375, X12 NiCrSi 36-16, 1.4864, G-X120Mn12, 1.3401) (VDI 3323 31-35)"
+    },
+    {
+     "label": "Titanium Alloys (TiAl6V4, 3.7165, HB 400 Rm, HB 1050 Rm) (VDI 3323 36-37) \u00b7 slotting",
+     "iso": "S",
+     "subgroup": "VDI 3323 36-37",
+     "status": "verified",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "value": 160.0
+     },
+     "feed": {
+      "kind": "fz",
+      "unit": "in",
+      "byDiameter": {
+       "0.125": 0.0003,
+       "0.15625": 0.0004,
+       "0.1875": 0.0005,
+       "0.21875": 0.0007,
+       "0.25": 0.0008,
+       "0.3125": 0.001,
+       "0.375": 0.0011,
+       "0.4375": 0.0013,
+       "0.5": 0.0015,
+       "0.625": 0.0017,
+       "0.75": 0.0019,
+       "1": 0.0021
+      }
+     },
+     "operation": "slotting",
+     "table": "EMI42, EMI43 slotting",
+     "strictMaterials": true,
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "YG-1",
+      "catalog": "YG-1 TitaNox-Power (YU-TP26) recommended cutting conditions, EMI42, EMI43, slotting",
+      "edition": "YU-TP26 TitaNox-Power, PDF created 2026-07-13",
+      "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=40",
+      "page": "40",
+      "retrieved": "2026-11-10",
+      "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Stored ae 1.0\u00d7D and ap 0.5\u00d7D from the Ae/Ap column on this row."
+     },
+     "aex": 1.0,
+     "apx": 0.5,
+     "materials": [
+      "ti64"
+     ],
+     "sourceGroup": "Titanium Alloys (TiAl6V4, 3.7165, HB 400 Rm, HB 1050 Rm) (VDI 3323 36-37)",
+     "excludeMaterials": [
+      "ss400"
+     ]
+    }
+   ],
+   "flutes": 5,
+   "specs": {
+    "substrate": "carbide",
+    "flutes": 5,
+    "source": {
+     "url": "https://www.yg1usa.com/downloads/YU-TP26_TitaNox.pdf#page=40",
+     "retrieved": "2026-11-10",
+     "notes": "Cutting-condition heading prints the flute count and the catalog calls the line solid carbide. Y-Coating and C-Coating are both on the selection guide, so coating is not tagged on this record."
+    }
+   },
+   "diameters_in": [
+    0.125,
+    0.15625,
+    0.1875,
+    0.21875,
+    0.25,
+    0.3125,
+    0.375,
+    0.4375,
+    0.5,
+    0.625,
+    0.75,
+    1.0
+   ]
+  }
+ ]
+}
