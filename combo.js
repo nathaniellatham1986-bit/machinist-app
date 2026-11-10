@@ -17,7 +17,7 @@ export function enhance(sel, opts = {}) {
   new MutationObserver(sync).observe(sel, { childList: true, subtree: true, attributes: true });
   sel.addEventListener('change', sync);
   let hits = [];
-  const show = q => { const o = [...sel.options]; hits = filterOpts(o.map(x => x.text), q).filter(i => !o[i].disabled || q === '');
+  const show = q => { const o = [...sel.options]; hits = filterOpts(o.map(x => x.text), q).filter(i => (!o[i].disabled || q === '') && !(o[i].dataset.hideempty != null && !q.trim()));
     list.innerHTML = ''; hits.slice(0, 200).forEach(i => { const b = document.createElement('div'); b.className = 'combo-row' + (o[i].disabled ? ' off' : '') + (i === sel.selectedIndex ? ' cur' : ''); b.dataset.i = i; const t = document.createElement('span'); t.className = 'combo-txt'; t.textContent = o[i].text; b.append(t); const a = opts.action?.(o[i]); if (a) { const x = document.createElement('button'); x.type = 'button'; x.className = 'combo-act'; x.textContent = a.label; x.title = a.title || ''; x.onclick = e => { e.stopPropagation(); if (!x.classList.contains('armed')) { x.classList.add('armed'); x.textContent = 'Delete?'; return; } a.run(); inp.value = ''; show(''); }; b.append(x); } list.append(b); });
     if (!hits.length) list.innerHTML = '<div class="combo-row off">No match</div>'; list.hidden = false; };
   const pick = i => { const o = sel.options[i]; if (!o || o.disabled) return; list.hidden = true; inp.blur(); sel.selectedIndex = i; inp.value = txt(); sel.dispatchEvent(new Event('change', { bubbles: true })); };
