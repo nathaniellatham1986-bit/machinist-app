@@ -582,3 +582,9 @@ console.log('estimate tests ok');
   assert.equal(matchMat(mild, { label: 'Non-alloy steel (1018, A36, 1045)', iso: 'P', materials: ['p-mild'], sourceGroup: 'Non-alloy steel (1018, A36, 1045)' }), 'named');
   assert.ok(!mats.some(m => /4142|7075|\b1045\b/.test(`${m.name} ${m.named || ''}`)));
   console.log('grade alias tests pass'); }
+{ const { execFileSync } = await import('node:child_process');
+  const files = execFileSync('git', ['ls-files', '-z', '--', '*.js', '*.json', '*.html'], { encoding: 'utf8' }).split('\0').filter(Boolean);
+  const marks = ['<'.repeat(7), '>'.repeat(7)];
+  const bad = files.filter(f => { const s = fs.readFileSync(f, 'utf8'); return marks.some(m => s.includes(m)); });
+  assert.deepEqual(bad, []);
+  console.log('conflict marker tests pass'); }
