@@ -13799,7 +13799,8 @@
      },
      "iso": "M",
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "General Drilling Operations \u00b7 Austenitic Stainless Steels 304, 316"
     },
@@ -14504,7 +14505,8 @@
      },
      "iso": "M",
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "General Drilling Operations \u00b7 Austenitic Stainless Steels 304, 316"
     },

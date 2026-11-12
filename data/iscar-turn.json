@@ -282,7 +282,8 @@
      },
      "materials": [
       "ss303",
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "Iscar group 14: austenitic stainless"
     }
@@ -478,7 +479,8 @@
      },
      "materials": [
       "ss303",
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "Iscar group 14: austenitic stainless"
     },
@@ -617,7 +619,8 @@
      },
      "materials": [
       "ss303",
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "Iscar group 14: austenitic stainless"
     },
@@ -756,7 +759,8 @@
      },
      "materials": [
       "ss303",
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "Iscar group 14: austenitic stainless"
     },
@@ -895,7 +899,8 @@
      },
      "materials": [
       "ss303",
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "Iscar group 14: austenitic stainless"
     }
@@ -1042,7 +1047,8 @@
      },
      "materials": [
       "ss303",
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "Iscar group 14: austenitic stainless"
     }

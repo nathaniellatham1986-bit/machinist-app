@@ -74,7 +74,8 @@
      },
      "materials": [
       "ss303",
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "M2.1 austenitic 303/304/316"
     }

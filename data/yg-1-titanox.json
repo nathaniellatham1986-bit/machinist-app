@@ -297,7 +297,7 @@
      },
      "apx": 1.0,
      "materials": [
-      "ss304"
+      "ss316"
      ],
      "sourceGroup": "Stainless steel (SUS 316, 316, X5CrNiMo 17 12 2) (VDI 3323 14.1)"
     },
@@ -792,7 +792,7 @@
      "aex": 1.0,
      "apx": 1.0,
      "materials": [
-      "ss304"
+      "ss316"
      ],
      "sourceGroup": "Stainless steel (SUS 316, 316, X5CrNiMo 17 12 2) (VDI 3323 14.1)"
     },
@@ -1320,7 +1320,7 @@
       "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Ae/Ap not stored for this row."
      },
      "materials": [
-      "ss304"
+      "ss316"
      ],
      "sourceGroup": "Stainless steel (SUS 316, 316, X5CrNiMo 17 12 2) (VDI 3323 14.1)"
     },
@@ -1873,7 +1873,7 @@
       "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Ae/Ap not stored for this row."
      },
      "materials": [
-      "ss304"
+      "ss316"
      ],
      "sourceGroup": "Stainless steel (SUS 316, 316, X5CrNiMo 17 12 2) (VDI 3323 14.1)"
     },
@@ -2426,7 +2426,7 @@
       "notes": "SFM is the same in every diameter column; IPT is per diameter. RPM and IPM columns are the speed and feed at that SFM and IPT (not stored). Footnote: (0.7D) applies to UGMG42K998, UGMG42K999 and UGMGK801 because of the short double-core length. Maximum recommended depth shown. Reduce feed about 50% if length of cut is over 3\u00d7D (the reduced number is not printed). Ae/Ap not stored for this row."
      },
      "materials": [
-      "ss304"
+      "ss316"
      ],
      "sourceGroup": "Stainless steel (SUS 316, 316, X5CrNiMo 17 12 2) (VDI 3323 14.1)"
     },
@@ -2980,7 +2980,7 @@
      },
      "aex": 1.0,
      "materials": [
-      "ss304"
+      "ss316"
      ],
      "sourceGroup": "Stainless steel (SUS 316, 316, X5CrNiMo 17 12 2) (VDI 3323 14.1)"
     },

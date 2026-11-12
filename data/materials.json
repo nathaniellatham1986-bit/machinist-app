@@ -1,5 +1,5 @@
 {
- "note": "Specific materials shown in the Material picker. Map a record here ONLY when its source names that material (or a group that plainly covers it, e.g. 'austenitic stainless'). 303 stays separate from 304/316. Entries with 'named' (regex) link a record only when its own text names the alloy; otherwise the app shows the ISO group whose printed description ('group' regex) and printed hardness ('hb', HB range) fit, labeled 'matched by group'.",
+ "note": "Specific materials shown in the Material picker. Map a record here ONLY when its source names that material (or a group that plainly covers it, e.g. 'austenitic stainless'). 303 stays separate from 304 and 316. 304 is ss304 and 316 is ss316. The id ss304 used to be the lumped '304, 316' entry; it is kept so saved favorites, recents, and ?mat=ss304 still open 304. A maker line that lumps them (304/316, austenitic stainless, 300 series) lists both ids and sourceGroup stays the maker's wording. No hardness is stored on 304 or 316: printed hardness differs by row. Entries with 'named' (regex) link a record only when its own text names the alloy; otherwise the app shows the ISO group whose printed description ('group' regex) and printed hardness ('hb', HB range) fit, labeled 'matched by group'.",
  "materials": [
   {
    "id": "p-mild",
@@ -14,7 +14,12 @@
   {
    "id": "ss304",
    "iso": "M",
-   "name": "Stainless, austenitic (304, 316)"
+   "name": "Stainless, austenitic (304)"
+  },
+  {
+   "id": "ss316",
+   "iso": "M",
+   "name": "Stainless, austenitic (316)"
   },
   {
    "id": "ss303",

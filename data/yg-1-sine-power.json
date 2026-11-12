@@ -146,7 +146,8 @@
       "notes": "Bold SFM 100 is the printed recommendation; (80-120) is the printed range. RPM column is the speed at 100 SFM (not stored). The depth figure beside this row prints 1.5 and 0.5 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "Stainless Steel - Difficult, 304, 304L, 316, 316L, M < 275 BHN"
     },
@@ -186,7 +187,8 @@
       "notes": "Bold SFM 80 is the printed recommendation; (64-96) is the printed range. RPM column is the speed at 80 SFM (not stored). The depth figure beside this row prints 1 and 1 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "Stainless Steel - Difficult, 304, 304L, 316, 316L, M < 275 BHN"
     },
@@ -568,7 +570,8 @@
       "notes": "Bold SFM 100 is the printed recommendation; (80-120) is the printed range. RPM column is the speed at 100 SFM (not stored). The depth figure beside this row prints 1.5 and 0.5 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "Stainless Steel - Difficult, 304, 304L, 316, 316L, M < 275 BHN"
     },
@@ -608,7 +611,8 @@
       "notes": "Bold SFM 80 is the printed recommendation; (64-96) is the printed range. RPM column is the speed at 80 SFM (not stored). The depth figure beside this row prints 1 and 1 with no unit and no \u00d7D, so ap/ae are not stored. Printed IPM matches 6 flutes within rounding (3/4 in free-machining profiling: 560 RPM \u00d7 0.0020 \u00d7 6 = 6.72, chart prints 7). Footnotes: maximum recommended depth shown; reduce speed and feed for material harder than listed."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "Stainless Steel - Difficult, 304, 304L, 316, 316L, M < 275 BHN"
     },
