@@ -422,7 +422,8 @@
       "notes": "Printed SFM range 16\u201349. Suitability mark \u25ce (\u25ce excellent, \u25cb good). TRF04 metric p.12 and TRF14 inch p.8 share this column. Blank cells on this chart are not filled in. Feed is the thread pitch; the chart does not print a separate feed. VDI groups 19\u201320, 29\u201330 and 31\u201341 have no SFM in this column."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "VDI 3323 14 \u00b7 Stainless steel, austenitic \u00b7 180 HB \u00b7 10 HRc \u00b7 examples SUS 316, 316, X5CrNiMo 17 12 2"
     },
@@ -1176,7 +1177,8 @@
       "notes": "Printed SFM range 16\u201349. Suitability mark \u25ce (\u25ce excellent, \u25cb good). TRF24 metric p.16 and TRF34 inch p.14 share this column. Blank cells on this chart are not filled in. Feed is the thread pitch; the chart does not print a separate feed. VDI groups 19\u201320, 29\u201330 and 31\u201341 have no SFM in this column."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "VDI 3323 14 \u00b7 Stainless steel, austenitic \u00b7 180 HB \u00b7 10 HRc \u00b7 examples SUS 316, 316, X5CrNiMo 17 12 2"
     },
@@ -1930,7 +1932,8 @@
       "notes": "Printed SFM range 26\u201366. Suitability mark \u25ce (\u25ce excellent, \u25cb good). TRK04 metric p.20 and TRK14 inch p.17 share this column. Blank cells on this chart are not filled in. Feed is the thread pitch; the chart does not print a separate feed. VDI groups 19\u201320, 29\u201330 and 31\u201341 have no SFM in this column."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "VDI 3323 14 \u00b7 Stainless steel, austenitic \u00b7 180 HB \u00b7 10 HRc \u00b7 examples SUS 316, 316, X5CrNiMo 17 12 2"
     },
@@ -2684,7 +2687,8 @@
       "notes": "Printed SFM range 16\u201354. Suitability mark \u25ce (\u25ce excellent, \u25cb good). TRF26 p.25 and TRF25 p.22 share this column. Blank cells on this chart are not filled in. Feed is the thread pitch; the chart does not print a separate feed. VDI groups 19\u201320, 29\u201330 and 31\u201341 have no SFM in this column."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "VDI 3323 14 \u00b7 Stainless steel, austenitic \u00b7 180 HB \u00b7 10 HRc \u00b7 examples SUS 316, 316, X5CrNiMo 17 12 2"
     },
@@ -3438,7 +3442,8 @@
       "notes": "Printed SFM range 16\u201354. Suitability mark \u25ce (\u25ce excellent, \u25cb good). TRF28 p.29 and TRF27 p.27 share this column. Blank cells on this chart are not filled in. Feed is the thread pitch; the chart does not print a separate feed. VDI groups 19\u201320, 29\u201330 and 31\u201341 have no SFM in this column."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "VDI 3323 14 \u00b7 Stainless steel, austenitic \u00b7 180 HB \u00b7 10 HRc \u00b7 examples SUS 316, 316, X5CrNiMo 17 12 2"
     },
@@ -4191,7 +4196,8 @@
       "notes": "Printed SFM range 26\u201373. Suitability mark \u25ce (\u25ce excellent, \u25cb good). TRK16 p.32 and TRK15 p.30 share this column. Hole-type header on this column is not stored: the text layer and the column grid do not agree (blind vs through), so holeType is left off. Blank cells on this chart are not filled in. Feed is the thread pitch; the chart does not print a separate feed. VDI groups 19\u201320, 29\u201330 and 31\u201341 have no SFM in this column."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "VDI 3323 14 \u00b7 Stainless steel, austenitic \u00b7 180 HB \u00b7 10 HRc \u00b7 examples SUS 316, 316, X5CrNiMo 17 12 2"
     },
@@ -4945,7 +4951,8 @@
       "notes": "Printed SFM range 16\u201349. Suitability mark \u25ce (\u25ce excellent, \u25cb good). TRF29 p.36 and TRF30 p.34 share this column. Blank cells on this chart are not filled in. Feed is the thread pitch; the chart does not print a separate feed. VDI groups 19\u201320, 29\u201330 and 31\u201341 have no SFM in this column."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "VDI 3323 14 \u00b7 Stainless steel, austenitic \u00b7 180 HB \u00b7 10 HRc \u00b7 examples SUS 316, 316, X5CrNiMo 17 12 2"
     },
@@ -5699,7 +5706,8 @@
       "notes": "Printed SFM range 26\u201366. Suitability mark \u25ce (\u25ce excellent, \u25cb good). TRK29 p.40 and TRK30 p.38 share this column. Blank cells on this chart are not filled in. Feed is the thread pitch; the chart does not print a separate feed. VDI groups 19\u201320, 29\u201330 and 31\u201341 have no SFM in this column."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "VDI 3323 14 \u00b7 Stainless steel, austenitic \u00b7 180 HB \u00b7 10 HRc \u00b7 examples SUS 316, 316, X5CrNiMo 17 12 2"
     },
@@ -6451,7 +6459,8 @@
       "notes": "Printed SFM range 10\u201330. Suitability mark \u25ce (\u25ce excellent, \u25cb good). TRR13 p.44 and TRR11 p.42 share this column. Header prints blind/through, so holeType is omitted. Blank cells on this chart are not filled in. Feed is the thread pitch; the chart does not print a separate feed. VDI groups 19\u201320, 29\u201330 and 31\u201341 have no SFM in this column."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "VDI 3323 14 \u00b7 Stainless steel, austenitic \u00b7 180 HB \u00b7 10 HRc \u00b7 examples SUS 316, 316, X5CrNiMo 17 12 2"
     },
@@ -7083,7 +7092,8 @@
       "notes": "Printed SFM range 10\u201330. Suitability mark \u25ce (\u25ce excellent, \u25cb good). TRR12 p.50 and TRR10 p.46 share this column. Header prints blind/through, so holeType is omitted. Blank cells on this chart are not filled in. Feed is the thread pitch; the chart does not print a separate feed. VDI groups 19\u201320, 29\u201330 and 31\u201341 have no SFM in this column."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "VDI 3323 14 \u00b7 Stainless steel, austenitic \u00b7 180 HB \u00b7 10 HRc \u00b7 examples SUS 316, 316, X5CrNiMo 17 12 2"
     },
@@ -7715,7 +7725,8 @@
       "notes": "Printed SFM range 10\u201330. Suitability mark \u25ce (\u25ce excellent, \u25cb good). TRR17 p.54 and TRR15 p.53 share this column. Header prints blind/through, so holeType is omitted. Blank cells on this chart are not filled in. Feed is the thread pitch; the chart does not print a separate feed. VDI groups 19\u201320, 29\u201330 and 31\u201341 have no SFM in this column."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "VDI 3323 14 \u00b7 Stainless steel, austenitic \u00b7 180 HB \u00b7 10 HRc \u00b7 examples SUS 316, 316, X5CrNiMo 17 12 2"
     },
@@ -8347,7 +8358,8 @@
       "notes": "Printed SFM range 10\u201330. Suitability mark \u25ce (\u25ce excellent, \u25cb good). TRR16 p.57 and TRR14 p.55 share this column. Header prints blind/through, so holeType is omitted. Blank cells on this chart are not filled in. Feed is the thread pitch; the chart does not print a separate feed. VDI groups 19\u201320, 29\u201330 and 31\u201341 have no SFM in this column."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "VDI 3323 14 \u00b7 Stainless steel, austenitic \u00b7 180 HB \u00b7 10 HRc \u00b7 examples SUS 316, 316, X5CrNiMo 17 12 2"
     },

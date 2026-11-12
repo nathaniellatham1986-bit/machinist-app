@@ -89,7 +89,10 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
   assert.deepEqual(matchIds('M', 'Austenitic stainless <321 HB'), []);
   assert.deepEqual(matchIds('M', 'Stainless 420 HB'), []);
   assert.deepEqual(matchIds('M', 'HRC 30 martensitic'), []);
-  assert.deepEqual(matchIds('M', 'AISI 321, 347 stainless'), ['ss304']);
+  assert.deepEqual(matchIds('M', 'AISI 321, 347 stainless'), []); // 321/347 are not 304 or 316
+  assert.deepEqual(matchIds('M', 'Stainless 304'), ['ss304']);
+  assert.deepEqual(matchIds('M', 'Stainless steel 316'), ['ss316']);
+  assert.deepEqual(matchIds('M', '304/316'), ['ss304', 'ss316']);
   assert.deepEqual(matchIds('P', 'AISI 4140, 300 HB'), ['p-alloy']); }
 // 303 printed together with 304/316 is "shared", ranked after 303-specific rows.
 { const { shared303 } = await import('./calc.js');
@@ -164,6 +167,8 @@ const pe = TJ.find(x => x.series.startsWith('PENTA') && x.conditions[0].sfm).con
 { const { matPref } = await import('./calc.js');
   assert.equal(matPref('ss304', { label: 'Austenitic stainless — CMC 05.21 / MC M1.0.0.AN' }), 0);
   assert.equal(matPref('ss304', { label: 'Ferritic/martensitic stainless — CMC 05.11' }), 2);
+  assert.equal(matPref('ss316', { label: 'Austenitic stainless — CMC 05.21 / MC M1.0.0.AN' }), 0);
+  assert.equal(matPref('ss316', { label: 'Ferritic/martensitic stainless — CMC 05.11' }), 2);
   console.log('ME2 austenitic pref tests pass'); }
 { const { threadPitchIn } = await import('./calc.js');
   assert.equal(threadPitchIn(20, 'tpi'), 0.05); assert.ok(Math.abs(threadPitchIn(1.5, 'mm') - 0.059055) < 1e-5); assert.equal(threadPitchIn(0, 'tpi'), null);
@@ -574,14 +579,59 @@ console.log('estimate tests ok');
   const mats = JSON.parse(fs.readFileSync('data/materials.json', 'utf8')).materials, ids = new Set(mats.map(m => m.id));
   for (const g of GRADE_ALIASES) { assert.ok(ids.has(g.id), g.grade); assert.ok(g.how === 'table' || g.how === 'standard'); }
   const one = (grade, id, how) => assert.ok(GRADE_ALIASES.some(g => g.grade === grade && g.id === id && g.how === how), grade + ' ' + id);
-  one('1045', 'p-mild', 'table'); one('7075', 'al6061', 'table'); one('A2', 'h13-ann', 'table'); one('D2', 'p20-pre', 'table'); one('316L', 'ss304', 'table'); one('4130', 'p-alloy', 'table');
+  one('1045', 'p-mild', 'table'); one('7075', 'al6061', 'table'); one('A2', 'h13-ann', 'table'); one('D2', 'p20-pre', 'table'); one('304L', 'ss304', 'table'); one('316L', 'ss316', 'table'); one('321', 'ss304', 'table'); one('4130', 'p-alloy', 'table');
   one('4142', '4140-ann', 'standard'); one('4142', '4140-ht', 'standard');
   assert.ok(!GRADE_ALIASES.some(g => (g.grade === 'A2' || g.grade === 'D2') && g.id === 'h13-hard'));
-  for (const [g, id] of [['1018', 'p-mild'], ['4140', '4140-ann'], ['316', 'ss304'], ['304', 'ss304'], ['6061', 'al6061'], ['H13', 'h13-ann']]) assert.match(mats.find(m => m.id === id).name, new RegExp(g));
+  for (const [g, id] of [['1018', 'p-mild'], ['4140', '4140-ann'], ['316', 'ss316'], ['304', 'ss304'], ['6061', 'al6061'], ['H13', 'h13-ann']]) assert.match(mats.find(m => m.id === id).name, new RegExp(g));
+  assert.doesNotMatch(mats.find(m => m.id === 'ss304').name, /316/);
   const mild = mats.find(m => m.id === 'p-mild');
   assert.equal(matchMat(mild, { label: 'Non-alloy steel (1018, A36, 1045)', iso: 'P', materials: ['p-mild'], sourceGroup: 'Non-alloy steel (1018, A36, 1045)' }), 'named');
   assert.ok(!mats.some(m => /4142|7075|\b1045\b/.test(`${m.name} ${m.named || ''}`)));
   console.log('grade alias tests pass'); }
+// Item 12: 304 and 316 are separate grades. A 304-only row does not feed 316. A lumped row feeds both and keeps the maker's wording. Speeds and feeds are unchanged.
+{ const { matchMat, resolveMatId, rpm } = await import('./calc.js');
+  const { austeniticCover } = await import('./scripts/grade-cover.mjs');
+  const crypto = await import('node:crypto');
+  const mats = JSON.parse(fs.readFileSync('data/materials.json', 'utf8')).materials, g = id => mats.find(m => m.id === id);
+  assert.equal(resolveMatId('ss304'), 'ss304');
+  assert.match(g(resolveMatId('ss304')).name, /304/); assert.doesNotMatch(g('ss304').name, /316/);
+  assert.match(g('ss316').name, /316/); assert.equal(g('ss304').hb, undefined); assert.equal(g('ss316').hb, undefined);
+  assert.match(g('p-mild').name, /A36/); assert.match(g('p-alloy').name, /4140/); assert.match(g('ss400').name, /400/); assert.match(g('ss303').name, /303/);
+  const sand = JSON.parse(fs.readFileSync('data/sandvik-coromant-sandvik-coromill-390-pocket-guide-first-choice.json', 'utf8'));
+  const s316 = sand.tools[0].conditions.find(c => c.sourceGroup === 'Stainless steel 316' && c.sfm?.value === 720);
+  assert.deepEqual(s316.materials, ['ss316']); assert.equal(s316.sfm.value, 720);
+  assert.equal(matchMat(g('ss316'), s316), 'named'); assert.equal(matchMat(g('ss304'), s316), null);
+  assert.equal(Math.round(rpm(720, 0.5)), 5501);
+  const xv = JSON.parse(fs.readFileSync('data/m-a-ford-maford-mill-xv7.json', 'utf8'));
+  const lump = xv.tools.flatMap(t => t.conditions).find(c => c.sourceGroup === 'Stainless Steels - Austenitic 304, 316 (≤ 28 HRC) · ae 5% D' && c.sfm?.value === 525);
+  assert.ok(lump.materials.includes('ss304') && lump.materials.includes('ss316'));
+  assert.equal(matchMat(g('ss304'), lump), 'named'); assert.equal(matchMat(g('ss316'), lump), 'named');
+  assert.equal(lump.sourceGroup, 'Stainless Steels - Austenitic 304, 316 (≤ 28 HRC) · ae 5% D');
+  assert.equal(Math.round(rpm(525, 0.5)), 4011);
+  const gu = JSON.parse(fs.readFileSync('data/guhring-tap.json', 'utf8')).tools[0].conditions.find(c => c.sourceGroup === 'Stainless, austenitic (304)');
+  assert.deepEqual(gu.materials, ['ss304']); assert.deepEqual([gu.sfm.min, gu.sfm.max], [20, 30]);
+  assert.equal(matchMat(g('ss304'), gu), 'named'); assert.equal(matchMat(g('ss316'), gu), null);
+  const ford = JSON.parse(fs.readFileSync('data/m-a-ford-maford-mill-gp-metric.json', 'utf8')).tools[1];
+  const mod = ford.conditions.find(c => /Moderately Difficult/.test(c.sourceGroup) && c.sfm.value === 75);
+  const dif = ford.conditions.find(c => /Difficult to Machine/.test(c.sourceGroup) && c.sfm.value === 65);
+  assert.ok(mod.materials.includes('ss304') && !mod.materials.includes('ss316'));
+  assert.deepEqual(dif.materials, ['ss316']); assert.equal(dif.sfm.value, 65); assert.equal(mod.sfm.value, 75);
+  assert.equal(matchMat(g('ss304'), dif), null); assert.equal(matchMat(g('ss316'), mod), null);
+  const easy = ford.conditions.find(c => /Easy to Machine/.test(c.sourceGroup));
+  assert.ok(!easy.materials.includes('ss304') && !easy.materials.includes('ss316'));
+  const dataDir = 'data', files = fs.readdirSync(dataDir).filter(f => f.endsWith('.json') && !['index.json', 'materials.json', 'threads.json'].includes(f) && !f.startsWith('_')).sort();
+  const h = crypto.createHash('sha256'); let n = 0;
+  for (const f of files) { const doc = JSON.parse(fs.readFileSync(dataDir + '/' + f, 'utf8')); if (!doc.tools) continue;
+    doc.tools.forEach((t, ti) => t.conditions.forEach((c, ci) => { n++;
+      h.update(JSON.stringify([f, ti, ci, c.sfm ?? null, c.feed ?? null, c.fzPerD ?? null, c.printed ?? null, c.ap ?? null, c.ae ?? null, c.apx ?? null, c.aex ?? null]));
+      if (!(c.materials || []).includes('ss304') && !(c.materials || []).includes('ss316')) return;
+      const cover = austeniticCover(c.sourceGroup || c.material || c.label || '');
+      if (cover === '316') assert.ok(c.materials.includes('ss316') && !c.materials.includes('ss304'), f);
+      else if (cover === 'both') assert.ok(c.materials.includes('ss304') && c.materials.includes('ss316'), f + ' ' + (c.sourceGroup || '').slice(0, 60));
+      else assert.ok(c.materials.includes('ss304') && !c.materials.includes('ss316'), cover + ' ' + f); })); }
+  assert.equal(n, 139033);
+  assert.equal(h.digest('hex'), '737a7fa3d7a200801a1d60df84dc3bd407f1bc1414f024f96c50a40475d85d4b');
+  console.log('304/316 split tests pass'); }
 { const { execFileSync } = await import('node:child_process');
   const files = execFileSync('git', ['ls-files', '-z', '--', '*.js', '*.json', '*.html'], { encoding: 'utf8' }).split('\0').filter(Boolean);
   const marks = ['<'.repeat(7), '>'.repeat(7)];

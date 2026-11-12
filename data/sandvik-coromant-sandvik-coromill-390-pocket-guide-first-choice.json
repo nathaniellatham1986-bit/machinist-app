@@ -72,7 +72,7 @@
       "notes": "First choice insert (390-07) for 'Roughing' as printed: insert 08M-PM 4340, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated. Full ordering code printed by Sandvik Coromant on the product page, retrieved 2026-11-10: ISO \"390R-070208M-PM 4340\" on https://www.sandvik.coromant.com/en-us/product-details?c=390R-070208M-PM+4340. The product page has no catalog page number."
      },
      "materials": [
-      "ss304"
+      "ss316"
      ],
      "sourceGroup": "Stainless steel 316"
     },
@@ -260,7 +260,7 @@
       "notes": "First choice insert (390-07) for 'Medium' as printed: insert 08E-MM 1040, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated. Full ordering code printed by Sandvik Coromant on the product page, retrieved 2026-11-10: ISO \"390R-070208E-MM 1040\" on https://www.sandvik.coromant.com/en-us/product-details?c=390R-070208E-MM+1040. The product page has no catalog page number."
      },
      "materials": [
-      "ss304"
+      "ss316"
      ],
      "sourceGroup": "Stainless steel 316"
     },
@@ -448,7 +448,7 @@
       "notes": "First choice insert (390-07) for 'Finishing' as printed: insert 08E-ML 1040, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated. Full ordering code printed by Sandvik Coromant on the product page, retrieved 2026-11-10: ISO \"390R-070208E-ML 1040\" on https://www.sandvik.coromant.com/en-us/product-details?c=390R-070208E-ML+1040. The product page has no catalog page number."
      },
      "materials": [
-      "ss304"
+      "ss316"
      ],
      "sourceGroup": "Stainless steel 316"
     },
@@ -644,7 +644,7 @@
       "notes": "First choice insert (390-11 & 17) for 'Roughing' as printed: insert 10M-PH 4340, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated. Full ordering code printed by Sandvik Coromant on the product page, retrieved 2026-11-10: ISO \"R390-11 T3 10M-PH 4340\" on https://www.sandvik.coromant.com/en-us/product-details?c=R390-11+T3+10M-PH+4340. The product page has no catalog page number. Product page for R390-17 04 10M-PH 4340 says product not found, so no size 17 ordering code is stored."
      },
      "materials": [
-      "ss304"
+      "ss316"
      ],
      "sourceGroup": "Stainless steel 316"
     },
@@ -833,7 +833,7 @@
       "notes": "First choice insert (390-11 & 17) for 'Medium' as printed: insert 08E-MM 1040, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated."
      },
      "materials": [
-      "ss304"
+      "ss316"
      ],
      "sourceGroup": "Stainless steel 316"
     },
@@ -1021,7 +1021,7 @@
       "notes": "First choice insert (390-11 & 17) for 'Finishing' as printed: insert 08E-ML 1040, Vc in sfm, Fz in inches per tooth. Workpiece example as printed. Printed: if the material is not listed, contact a Sandvik Coromant sales engineer. Coolant not stated. Full ordering code printed by Sandvik Coromant on the product page, retrieved 2026-11-10: ISO \"R390-11 T3 08E-ML 1040\" on https://www.sandvik.coromant.com/en-us/product-details?c=R390-11+T3+08E-ML+1040; ISO \"R390-17 04 08E-ML 1040\" on https://www.sandvik.coromant.com/en-us/product-details?c=R390-17+04+08E-ML+1040. The product page has no catalog page number."
      },
      "materials": [
-      "ss304"
+      "ss316"
      ],
      "sourceGroup": "Stainless steel 316"
     },

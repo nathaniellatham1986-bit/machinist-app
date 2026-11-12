@@ -98,7 +98,7 @@ export function matchMat(m, c) {
 // 'table' = a loaded maker table prints that grade in this material's group. 'standard' = well-known class membership, labeled as such.
 export const GRADE_ALIASES = [
   ['1020', 'p-mild'], ['1045', 'p-mild'], ['1050', 'p-mild'], ['12L14', 'p-mild'], ['1215', 'p-mild'],
-  ['304L', 'ss304'], ['316L', 'ss304'], ['321', 'ss304'],
+  ['304L', 'ss304'], ['316L', 'ss316'], ['321', 'ss304'], // 321 has no printed row of its own, so it stays on 304. The picker note says it is not a 321 number.
   ['410', 'ss400'], ['416', 'ss400'],
   ['13-8', 'ss17-4ph'], ['15-5', 'ss17-4ph'],
   ['2024', 'al6061'], ['6063', 'al6061'], ['7075', 'al6061'],
@@ -109,6 +109,9 @@ export const GRADE_ALIASES = [
   { grade: '4142', id: '4140-ann', how: 'standard' },
   { grade: '4142', id: '4140-ht', how: 'standard' },
 ]);
+// The lumped austenitic picker id was ss304 ("304, 316"). That id is now 304.
+// Favorites, recents, and ?mat=ss304 still open 304. 316 is ss316.
+export const resolveMatId = id => id === 'ss304' ? 'ss304' : id;
 // Plain condition choices mapped from the record's own label/operation text.
 export const passOf = c => { const s = `${c.label} ${c.operation ?? ''} ${c.subgroup ?? ''}`; return /finish|light/i.test(s) ? 'Finish' : /rough|heavy/i.test(s) ? 'Rough' : 'Medium'; };
 export const cutOf = c => { const s = `${c.label} ${c.operation ?? ''}`; return /\bHEM\b|dynamic|trochoid|high.?eff|adaptive|HPC/i.test(s) ? 'HEM' : /slot|full width|groov/i.test(s) ? 'Slot' : /side|profil|periph|contour|shoulder/i.test(s) ? 'Side' : ''; };
@@ -191,13 +194,13 @@ export const hardnessBand = text => { const s = String(text ?? ''), m = s.match(
 const hbOff = (m, s) => { if (!m?.hb) return false; const h = hardnessBand(s); return !!h && !(h[0] <= m.hb[1] && h[1] >= m.hb[0]); };
 export const matPrefOld = (id, c) => { const s = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' ');
   if (ALLOY_IDS.test(id ?? '')) return NONALLOY.test(s) ? 2 : ALLOY.test(s) ? 0 : 1;
-  if (id === 'ss304') return AUST.test(s) && !NONAUST.test(s) ? 0 : NONAUST.test(s) ? 2 : 1;
+  if (id === 'ss304' || id === 'ss316') return AUST.test(s) && !NONAUST.test(s) ? 0 : NONAUST.test(s) ? 2 : 1;
   return 1; };
 export const matBad = (m, c) => { const s = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' ').replace(/\([^)]*not transcribed[^)]*\)/gi, ''), k = MAT_CLASS.find(([r]) => r.test(m?.id ?? ''));
-  return hbOff(m, s) || !!k && k[2].test(s) && !k[1].test(s.replace(k[2], '')) && !k[3]?.test(s) || m?.id === 'ss304' && NONAUST.test(s) && !AUST.test(s); };
+  return hbOff(m, s) || !!k && k[2].test(s) && !k[1].test(s.replace(k[2], '')) && !k[3]?.test(s) || (m?.id === 'ss304' || m?.id === 'ss316') && NONAUST.test(s) && !AUST.test(s); };
 // Alloy-steel ids: a non-alloy row is a fallback only (1), never preferred over an alloy row (0).
 export const matPref = (id, c, m = { id }) => { const s = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' ');
-  if (id === 'ss304') return AUST.test(s) && !NONAUST.test(s) ? 0 : NONAUST.test(s) ? 2 : 1;
+  if (id === 'ss304' || id === 'ss316') return AUST.test(s) && !NONAUST.test(s) ? 0 : NONAUST.test(s) ? 2 : 1;
   if (matBad(m, c)) return 2; if (ALLOY_IDS.test(id ?? '') && NONALLOY.test(s) && !ALLOY.test(s.replace(new RegExp(NONALLOY.source, 'gi'), ''))) return 1; const k = MAT_CLASS.find(([r]) => r.test(id ?? '')); return k && k[1].test(s) ? 0 : 1; };
 // Published diameter range of a tool in inches: [min, max] from diameters_in/mm, feed.byDiameter keys or feed.bands. null if none printed.
 export const sizeRange = t => { const v = [];

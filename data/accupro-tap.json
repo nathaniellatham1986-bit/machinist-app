@@ -58,7 +58,8 @@
       "notes": "Same 16-page document Nathaniel supplied as an attachment (identical page text). Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\"."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "strictMaterials": true,
      "sourceGroup": "Stainless Steels: Austenitic"

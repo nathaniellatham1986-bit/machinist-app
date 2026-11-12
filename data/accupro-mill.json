@@ -295,7 +295,8 @@
      },
      "materials": [
       "ss303",
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "Austenitic--200 Series, 302, 303, 304L, 316L",
      "strictMaterials": true
@@ -5991,7 +5992,8 @@
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar",
      "strictMaterials": true
@@ -6141,7 +6143,8 @@
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar",
      "strictMaterials": true
@@ -6294,7 +6297,8 @@
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar",
      "strictMaterials": true
@@ -6447,7 +6451,8 @@
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar",
      "strictMaterials": true
@@ -6600,7 +6605,8 @@
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar",
      "strictMaterials": true
@@ -6753,7 +6759,8 @@
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar",
      "strictMaterials": true
@@ -6905,7 +6912,8 @@
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar",
      "strictMaterials": true
@@ -7055,7 +7063,8 @@
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar",
      "strictMaterials": true
@@ -7205,7 +7214,8 @@
       "notes": "Accupro is an MSC Industrial Supply brand; chart states the rates are \"suggested by the manufacturer\". Chart: \"starting point based on a coated tool. Reduce rates up to 50% using an uncoated tool.\" The same sheet was also supplied by Nathaniel on 2026-10-27 (page text and numbers checked identical)."
      },
      "materials": [
-      "ss304"
+      "ss304",
+      "ss316"
      ],
      "sourceGroup": "Stainless Steel - Austenitic, Moderately Difficult to Cut: 304, 304L, 316, 321, Invar, Kovar",
      "strictMaterials": true

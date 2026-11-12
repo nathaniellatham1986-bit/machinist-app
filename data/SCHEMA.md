@@ -80,7 +80,7 @@ same length unit as D. Needs `start` or both `min` and `max`; multipliers are > 
 formula, not DERIVED). No start → midpoint of the printed multipliers, labeled MIDPOINT.
 
 ## Materials
-`data/materials.json` lists specific materials. 303 (free-machining, sulfurized) is its own entry. 304 and 316 (standard austenitic, work-hardening) share the entry ss304. `groups` holds the plain ISO group names used by the picker. To add a material, add it to that file with its ISO group.
+`data/materials.json` lists specific materials. 303 (free-machining, sulfurized) is its own entry. 304 is `ss304` and 316 is `ss316`. The id `ss304` used to be the lumped 304/316 entry and still opens 304, so older saved setups keep working. A row that names only one grade lists only that id. A row the maker lumps (304/316, austenitic stainless, 300 series) lists both, and `sourceGroup` stays the maker's wording. Neither entry stores a hardness: makers print hardness on the row, and it is not one number. `groups` holds the plain ISO group names used by the picker. To add a material, add it to that file with its ISO group.
 
 ## Schema 1 additions (Seco merge)
 - `iso: "O"` — non-ISO manufacturer groups (composites, graphite, plastics). The manufacturer code stays in `subgroup` (e.g. `SMG v2 GR1`).

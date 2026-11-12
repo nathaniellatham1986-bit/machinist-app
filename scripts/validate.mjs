@@ -186,10 +186,14 @@ export function validate(doc, name = 'file') {
         else for (const m of c.materials) { if (!MAT[m]) err(w, `unknown material "${m}" (see data/materials.json)`); else if (c.iso !== '*' && MAT[m].iso !== c.iso) err(w, `material ${m} is ISO ${MAT[m].iso}, condition is ISO ${c.iso}`); }
         if (!isStr(c.sourceGroup)) err(w, "materials requires sourceGroup: the source's own wording for the material group");
         if (c.materials?.includes('ss303') && !/303|free.?machin|sulph|sulfur|austenitic/i.test(c.sourceGroup ?? '')) err(w, 'ss303 only when the source names 303, free-machining stainless, or austenitic stainless as a group');
-        if (c.materials?.includes('ss304') && !/304|316|austenitic/i.test(c.sourceGroup ?? '')) err(w, 'ss304 only when the source names 304 or austenitic stainless');
+        if (c.materials?.includes('ss304') && !/304|316|austenitic|300\s*series/i.test(c.sourceGroup ?? '')) err(w, 'ss304 only when the source names 304, austenitic stainless, or a 300-series group');
+        if (c.materials?.includes('ss316') && !/316|austenitic|300\s*series/i.test(c.sourceGroup ?? '')) err(w, 'ss316 only when the source names 316, austenitic stainless, or a 300-series group');
+        if (c.materials?.includes('ss304') && /\b316/.test(c.sourceGroup ?? '') && !/304|austenitic|300\s*series/i.test(c.sourceGroup ?? '')) err(w, 'a 316-only source group does not map to ss304');
+        if (c.materials?.includes('ss316') && /\b304/.test(c.sourceGroup ?? '') && !/316|austenitic|300\s*series/i.test(c.sourceGroup ?? '')) err(w, 'a 304-only source group does not map to ss316');
       }
       if (c.iso === 'M' && /free.?machin/i.test(c.label) && /30[4]|316/.test(c.label) && !/303/.test(c.label)) err(w, '304/316 are not free-machining; keep 303 separate');
       if (c.materials?.includes('ss304') && /free.?machin|sulph|sulfur/i.test(c.sourceGroup ?? '') && !/304|316|austenitic/i.test(c.sourceGroup)) err(w, 'free-machining source group maps to ss303, not ss304');
+      if (c.materials?.includes('ss316') && /free.?machin|sulph|sulfur/i.test(c.sourceGroup ?? '') && !/304|316|austenitic/i.test(c.sourceGroup)) err(w, 'free-machining source group maps to ss303, not ss316');
       for (const k of ['noseRadius', 'insertWidth']) if (k in c) { const v = c[k]; if (!v || !LEN_UNITS.includes(v.unit) || !(isNum(v.value) || isStr(v.label))) err(w, `${k} must be {value|label, unit: in|mm}`); }
       if ('leadAngle' in c && !(isNum(c.leadAngle?.deg) && isStr(c.leadAngle?.convention))) err(w, 'leadAngle must be {deg, convention} (e.g. convention "entering angle kr")');
       if ('toolLife' in c && !(isNum(c.toolLife) && c.toolLife > 0)) err(w, 'toolLife must be minutes (number)');

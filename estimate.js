@@ -41,7 +41,7 @@ export const nearSize = (r, d) => !!r && d > 0 && (d >= r[0] - 1e-6 && d <= r[1]
 const lowOf = (spec, k) => { const p = pick(spec, k); return p ? (p.min ?? p.def) : null; };
 // Material: named match preferred; 303 and 304 only from rows naming that grade alone.
 function matOk(m, c) { const r = matchMat(m, c); if (!r) return null; if (c.iso === '*' && r !== 'named') return null;
-  if (m.id === 'ss303' || m.id === 'ss304') { if (r !== 'named') return null; const both = c.materials?.includes('ss303') && c.materials?.includes('ss304');
+  if (m.id === 'ss303' || m.id === 'ss304' || m.id === 'ss316') { if (r !== 'named') return null; const both = c.materials?.includes('ss303') && (c.materials.includes('ss304') || c.materials.includes('ss316'));
     if (both || (m.id === 'ss303' ? shared303(c) : /\b303\b/.test(`${c.label} ${c.sourceGroup ?? ''}`))) return null; }
   return r; }
 // Chip load / IPR at Ø d from a record: exact Ø, else nearest SMALLER published Ø within 25% (smaller = lower chip load; never extrapolated up).
