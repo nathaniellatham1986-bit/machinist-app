@@ -300,9 +300,48 @@
   {
    "mode": "turn",
    "brand": "Iscar",
-   "series": "CNMG (chipformer/grade TBD)",
-   "conditions": [],
-   "notes": "Not yet sourced; need exact chipformer and grade."
+   "series": "CNMG 432-TF IC908 / CNMG 120408-TF IC908",
+   "type": "turning insert",
+   "notes": "Box label data only. Iscar gives a range and prints no start value. Designations on the box: CNMG 432-TF IC908 and CNMG 120408-TF IC908. Item 05594061. The application icons are suitability only, not cutting data.",
+   "conditions": [
+    {
+     "label": "CNMG 432-TF IC908 / CNMG 120408-TF IC908 · box label · ISO P",
+     "iso": "P",
+     "coolant": null,
+     "grade": "IC908",
+     "chipbreaker": "TF",
+     "insert": "CNMG 432-TF",
+     "sfm": {
+      "min": 120,
+      "max": 200,
+      "unit": "m/min"
+     },
+     "feed": {
+      "kind": "ipr",
+      "unit": "mm",
+      "range": {
+       "min": 0.12,
+       "max": 0.35
+      }
+     },
+     "ap": {
+      "min": 1,
+      "max": 4,
+      "unit": "mm"
+     },
+     "status": "verified",
+     "sourceGroup": "ISO P",
+     "note": "The box prints fz with units mm/rev and ipr. Stored as feed per revolution, not per tooth. Coolant not stated.",
+     "source": {
+      "kind": "label",
+      "manufacturer": "Iscar",
+      "catalog": "Iscar box label, CNMG 432-TF IC908 (also CNMG 120408-TF IC908), photographed by the shop supervisor",
+      "edition": "Nov 12, 2026",
+      "url": null,
+      "notes": "Printed under ISO P: Vc = 120-200 m/min, 400-660 sfm; fz = 0.12-0.35 mm/rev, 0.0047-0.0137 ipr; ap = 1.00-4.00 mm, 0.039-0.157 inch. Coolant not stated. Item 05594061. Lot/code 1236343115-1825501. Made in Israel. Grade IC908, 10 PCS. T 3357677. GREENIN, Iscar, Member IMC Group. ISO application icons (suitability only, not these cutting numbers): checks under P, M, K, S, and H; no check under N."
+     }
+    }
+   ]
   },
   {
    "mode": "turn",
