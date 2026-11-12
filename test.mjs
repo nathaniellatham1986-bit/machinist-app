@@ -629,9 +629,35 @@ console.log('estimate tests ok');
       if (cover === '316') assert.ok(c.materials.includes('ss316') && !c.materials.includes('ss304'), f);
       else if (cover === 'both') assert.ok(c.materials.includes('ss304') && c.materials.includes('ss316'), f + ' ' + (c.sourceGroup || '').slice(0, 60));
       else assert.ok(c.materials.includes('ss304') && !c.materials.includes('ss316'), cover + ' ' + f); })); }
-  assert.equal(n, 139033);
-  assert.equal(h.digest('hex'), '737a7fa3d7a200801a1d60df84dc3bd407f1bc1414f024f96c50a40475d85d4b');
+  assert.equal(n, 139034);
+  assert.equal(h.digest('hex'), 'afe17f5a0b0e53bbd4288e983703fbbdfcb8a4dd6ea0d60ea7a2f8c6ac9118be');
   console.log('304/316 split tests pass'); }
+// Iscar CNMG 432-TF IC908 box label: ISO P range only. Midpoint of the printed range; no M/K/S/H/N numbers; TBD stub gone.
+{ const { pick, matchMat } = await import('./calc.js');
+  const mats = J('./data/materials.json').materials, g = id => mats.find(m => m.id === id);
+  const doc = J('./data/iscar-turn.json');
+  assert.ok(!doc.tools.some(t => /chipformer\/grade TBD|Not yet sourced/.test(`${t.series} ${t.notes ?? ''}`)));
+  const hits = doc.tools.filter(t => /CNMG/.test(t.series));
+  assert.equal(hits.length, 1);
+  const t = hits[0];
+  assert.match(t.series, /CNMG 432-TF IC908/); assert.match(t.series, /CNMG 120408-TF IC908/);
+  assert.equal(t.mode, 'turn'); assert.equal(t.brand, 'Iscar'); assert.equal(t.conditions.length, 1);
+  const c = t.conditions[0];
+  assert.equal(c.iso, 'P'); assert.equal(c.materials, undefined); assert.equal(c.sourceGroup, 'ISO P');
+  assert.equal(c.coolant, null); assert.equal(c.status, 'verified'); assert.equal(c.feed.kind, 'ipr');
+  assert.equal(c.source.kind, 'label'); assert.equal(c.source.url, null); assert.equal(c.grade, 'IC908'); assert.equal(c.chipbreaker, 'TF');
+  assert.deepEqual([c.sfm.min, c.sfm.max, c.sfm.unit], [120, 200, 'm/min']); assert.equal('start' in c.sfm, false);
+  assert.deepEqual([c.feed.range.min, c.feed.range.max, c.feed.unit], [0.12, 0.35, 'mm']); assert.equal('start' in c.feed.range, false);
+  assert.deepEqual([c.ap.min, c.ap.max, c.ap.unit], [1, 4, 'mm']); assert.equal((c.ap.min + c.ap.max) / 2, 2.5);
+  const sp = pick(c.sfm, 3.2808), fd = pick(c.feed.range, 1 / 25.4);
+  assert.match(sp.basis, /MIDPOINT/); assert.ok(Math.abs(sp.def - 160 * 3.2808) < 1e-9, String(sp.def)); assert.equal(Math.round(sp.def), 525);
+  assert.match(fd.basis, /MIDPOINT/); assert.ok(Math.abs(fd.def * 25.4 - 0.235) < 1e-9); assert.ok(Math.abs(fd.def - 0.0093) < 0.0001, String(fd.def));
+  const { matBad } = await import('./calc.js');
+  for (const id of ['p-mild', '4140-ann']) { assert.equal(matchMat(g(id), c), 'group', id); assert.equal(matBad(g(id), c), false, id); }
+  for (const id of ['ss304', 'ss316']) assert.equal(matchMat(g(id), c), null, id);
+  const shown = (await import('./calc.js')).lowEnd(sp);
+  assert.ok(Math.abs(shown.def - 120 * 3.2808) < 1e-9, String(shown.def)); assert.match(shown.basis, /^LOW END/);
+  console.log('CNMG 432-TF IC908 box label tests pass'); }
 { const { execFileSync } = await import('node:child_process');
   const files = execFileSync('git', ['ls-files', '-z', '--', '*.js', '*.json', '*.html'], { encoding: 'utf8' }).split('\0').filter(Boolean);
   const marks = ['<'.repeat(7), '>'.repeat(7)];
