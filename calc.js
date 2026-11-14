@@ -180,6 +180,8 @@ const STEEL_OTHER = 'stainless|cast iron|alumin|titan|nickel';
 export const MAT_CLASS = [
   [/^(p-alloy|4140|4340)/, /\b4xxx\b|\b4[13]xx\b|alloy|\b4[13]\d\d\b|CrMo|CrNiMo|\bSCM|\bSNCM/i, new RegExp(`non.?alloy|unalloy|free.?(machin|cut)|\\bmild\\b|carbon steel|tool steel|die steel|mou?ld steel|${STEEL_OTHER}`, 'i'), /heat.?treat|quench|temper|Verg[uü]t/i],
   [/^(p20|h13)/, /tool steel|die steel|mou?ld|\bP20\b|\bH13\b|1\.23\d\d|SKD/i, new RegExp(`carbon steel|\\bmild\\b|non.?alloy|unalloy|free.?(machin|cut)|structural|${STEEL_OTHER}`, 'i')],
+  // Preference for 1030/1040/1045/1050 and "medium carbon" is carbonBand() in matPref, not this regex.
+  // The 10xx token stays so matBad's strip-and-retest does not newly reject a row whose only class token is a grade number in an insert code.
   [/^p-mild/, /\bmild\b|low.?carbon|non.?alloy|unalloy|carbon steel|structural|\b10[1-4]\d\b|A36/i, new RegExp(`tool steel|die steel|mou?ld|hardened|${STEEL_OTHER}`, 'i')],
   [/^ti64/, /Ti-?6Al|titanium alloy|\balloy|α.?β|alpha.?beta|grade 5/i, /pure titan|commercially pure|\bCP\b|unalloy|\bgrade [1-4]\b/i],
   [/^in718/, /nickel alloy|inconel|\b718\b|Ni.?based|super ?alloy/i, /titan|cobalt|pure nickel|nickel 20[01]/i],
@@ -198,10 +200,46 @@ export const matPrefOld = (id, c) => { const s = [c.label, c.sourceGroup, c.subg
   return 1; };
 export const matBad = (m, c) => { const s = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' ').replace(/\([^)]*not transcribed[^)]*\)/gi, ''), k = MAT_CLASS.find(([r]) => r.test(m?.id ?? ''));
   return hbOff(m, s) || !!k && k[2].test(s) && !k[1].test(s.replace(k[2], '')) && !k[3]?.test(s) || (m?.id === 'ss304' || m?.id === 'ss316') && NONAUST.test(s) && !AUST.test(s); };
+// Printed row text. Decimal commas (0,25) and dashes are normalized so carbon windows compare as 0.25.
+export const rowBits = c => [c?.label, c?.sourceGroup, c?.subgroup, c?.material].filter(Boolean).join(' ');
+const normCarbon = s => String(s ?? '').replace(/(\d),(\d)/g, '$1.$2').replace(/[–—−]/g, '-').replace(/…/g, '...').replace(/[\u2009\u202f\u00a0]/g, ' ');
+// 'low' = the maker printed this row for low-carbon / mild / 1018 / A36 / ≤0.25% C (a combined "low & medium" row still counts: it names low-carbon).
+// 'med' = medium- or high-carbon only (1030/1040/1045/1050, "medium carbon", "high carbon", 0.25–0.55% C, >0.55% C). Not a mild row.
+// '' = no carbon split named. Strength numbers (Rm 1050, 1050 HB) are not grades.
+export function carbonBand(text) {
+  const s = normCarbon(text);
+  const low = /\blow[- ]carbon|\blow\s*&\s*medium\s+carbon|\blow\s+and\s+medium\s+carbon|\bmild\b|\b1018\b|\bA36\b|(?:≤|<=|<)\s*0\.25\b|(?:≤|<=|<)\s*0\.30?\b(?!\d)|0\.1\d?\s*(?:-|\.{3}|to)+\s*0\.25\b/i.test(s);
+  if (low) return 'low';
+  const bare = s.replace(/\b(?:hb|hrc|hrb|hv|rm)\s*\d+(?:\.\d+)?/gi, ' ').replace(/\b\d+(?:\.\d+)?\s*(?:hb|hrc|hrb|hv|rm|mpa|n\/mm²?)\b/gi, ' ');
+  const words = /medium[- ]carbon|med\.?\s*carbon|meduim\s*carbon|high[- ]carbon|(?:≥|>=|>)\s*0\.25\b|(?:≥|>=|>)\s*0\.30?\b(?!\d)|0\.25\s*(?:-|\.{3}|to)+\s*0\.55\b|0\.55\s*(?:-|\.{3}|to)+\s*0\.8\d?\b|(?:≥|>=|>)\s*0\.55\b|about\s*0\.45\s*%\s*c/i.test(bare);
+  // A bare 1045/1050 counts only in steel wording. "320 | 1080" on a cast row is a strength, not AISI 1080.
+  const grades = /steel|carbon|\baisi\b/i.test(s) && /(?<![\w.])10(?:30|35|40|45|50|55|60|65|70|75|80|84|95)\b|\b10l50\b|\bS45C\b|\bCk45\b|\bC45\b/i.test(bare);
+  const range = /\b1030\s*-\s*1095\b/i.test(bare);
+  return words || grades || range ? 'med' : '';
+}
+// A medium/high-carbon row used for mild steel. Shown only with mildCarbonNote (same warn style as a 303 row on 304).
+export const medForMild = c => carbonBand(rowBits(c)) === 'med';
+export function mildCarbonNote(m, c, tool) {
+  if (m?.id !== 'p-mild' || !c || !medForMild(c)) return '';
+  const maker = c.source?.manufacturer || 'The maker';
+  const named = String(c.sourceGroup || c.label || '').replace(/\s+/g, ' ').trim();
+  const hasLow = !!tool?.conditions?.some(x => x !== c && carbonBand(rowBits(x)) === 'low' && (x.sfm || x.feed || x.printed) && x.status !== 'shop-proven');
+  const tail = hasLow ? 'A low-carbon / 1018 / A36 row is on this tool; pick it under Conditions.' : `${maker} prints no low-carbon / 1018 / A36 row for this tool here.`;
+  return `${maker} prints this for medium- or high-carbon steel, not 1018/A36. Row: “${named}”. ${tail}`;
+}
 // Alloy-steel ids: a non-alloy row is a fallback only (1), never preferred over an alloy row (0).
+// Mild steel: a printed low-carbon / 1018 / A36 / ≤0.25% C row is 0. A medium/high-carbon row keeps its other score (often 0, because the words "carbon steel" match) so it is not replaced by an unrelated class. dropMedWhenLow() is what makes the low-carbon row win.
 export const matPref = (id, c, m = { id }) => { const s = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' ');
   if (id === 'ss304' || id === 'ss316') return AUST.test(s) && !NONAUST.test(s) ? 0 : NONAUST.test(s) ? 2 : 1;
-  if (matBad(m, c)) return 2; if (ALLOY_IDS.test(id ?? '') && NONALLOY.test(s) && !ALLOY.test(s.replace(new RegExp(NONALLOY.source, 'gi'), ''))) return 1; const k = MAT_CLASS.find(([r]) => r.test(id ?? '')); return k && k[1].test(s) ? 0 : 1; };
+  if (matBad(m, c)) return 2;
+  if (id === 'p-mild' && carbonBand(s) === 'low') return 0;
+  if (ALLOY_IDS.test(id ?? '') && NONALLOY.test(s) && !ALLOY.test(s.replace(new RegExp(NONALLOY.source, 'gi'), ''))) return 1; const k = MAT_CLASS.find(([r]) => r.test(id ?? '')); return k && k[1].test(s) ? 0 : 1; };
+// When this material is mild steel and the candidate rows include one the maker printed for low-carbon / 1018 / A36 / ≤0.25% C, drop medium- and high-carbon rows. If none of those low-carbon rows are in the set, the medium/high row stays and the card warns.
+export const dropMedWhenLow = (rows, id) => {
+  if (id !== 'p-mild' || !rows?.some(c => carbonBand(rowBits(c)) === 'low')) return rows ?? [];
+  const kept = rows.filter(c => carbonBand(rowBits(c)) !== 'med');
+  return kept.length ? kept : rows;
+};
 // Published diameter range of a tool in inches: [min, max] from diameters_in/mm, feed.byDiameter keys or feed.bands. null if none printed.
 export const sizeRange = t => { const v = [];
   (t.diameters_in ?? []).forEach(x => v.push(+x)); (t.diameters_mm ?? []).forEach(x => v.push(x / 25.4));
@@ -300,7 +338,7 @@ export const endGeom = t => { const s = `${t?.series ?? ''} ${t?.type ?? ''}`, g
 // The tool's own records must name this material (same ISO group or the material by name) before any estimate is offered.
 // Materials with a class rule (alloy steel, tool steel, Ti alloy, nickel alloy, ...) need a row naming that class (e.g. Ti rows never qualify Inconel 718); others need a row in the same ISO group.
 export const ownNames = (t, m) => { const k = MAT_CLASS.find(([r]) => r.test(m?.id ?? ''));
-  return !!t?.conditions?.some(c => { if (matchMat(m, c) === 'named') return true; if (!c.iso || c.iso === '*' || c.iso !== m.iso || matBad(m, c)) return false;
+  return !!t?.conditions?.some(c => { if (m?.id === 'p-mild' && medForMild(c)) return false; if (matchMat(m, c) === 'named') return true; if (!c.iso || c.iso === '*' || c.iso !== m.iso || matBad(m, c)) return false;
     const s = [c.label, c.sourceGroup, c.subgroup, c.material].filter(Boolean).join(' '); return !k || k[1].test(s) || !!k[3]?.test(s); }); };
 // A tool counts as "has data" for a material only when one manufacturer record carries both SFM and feed (tap: SFM) for its ISO group —
 // the same test the series list ranks by (fullIsos). Rows with only a speed table or only a feed table are not usable on their own.
