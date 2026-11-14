@@ -217,7 +217,7 @@ export function validateFile(p) {
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const dataDir = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'data');
   const files = process.argv.slice(2).length ? process.argv.slice(2)
-    : fs.readdirSync(dataDir).filter(f => f.endsWith('.json') && !NON_BRAND.has(f)).map(f => path.join(dataDir, f));
+    : fs.readdirSync(dataDir).filter(f => f.endsWith('.json') && !NON_BRAND.has(f) && !f.startsWith('_')).map(f => path.join(dataDir, f));
   let bad = 0;
   for (const f of files) { const e = validateFile(f); if (e.length) { bad++; e.forEach(x => console.error(x)); } else console.log(`ok ${path.basename(f)}`); }
   process.exit(bad ? 1 : 0);
