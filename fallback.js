@@ -132,6 +132,7 @@ function packHit(step, h, target) {
   const text = step === 1 ? '' : describe(step, h, target);
   return {
     step, estimate: step > 1, sfm: h.row?.sfm ?? h.sfm, fpt: h.fpt ?? null, feedKind: h.row?.feed?.kind || h.feedKind || 'fz',
+    sub: h.tool?.sub || h.sub || '',
     text, url: h.row?.url || h.url || '', page: h.row?.page || h.page || '', brand: h.tool?.brand || h.brand, series: h.tool?.series || h.series,
     slotFactor: h.factor || 1, catalog: h.row?.catalog || h.catalog || '', derived: h.derived || [],
   };
@@ -152,7 +153,24 @@ function bestRow(tool, { mat, iso, cut, d, nearest, cutOk }) {
   return best;
 }
 // First step that has a number. maxStep stops early (1 = old exact-only behavior).
-export function resolveFeed({ tool, mat, iso, mode, cut = '', d, pool = [], baseline = null, maxStep = 5 }) {
+const sameMetal = (a, b) => !!a && !!b && a === b;
+export function noRowLine(tool, mat) {
+  const series = String(tool?.series || '').replace(/^Series\s+/i, '');
+  const what = { M: 'stainless', N: 'aluminum', K: 'cast iron', S: 'high-temp alloy', H: 'hardened steel', P: 'steel' }[mat?.iso] || 'this material';
+  return `${tool?.brand || 'This tool'} ${series} prints no ${what} row.`;
+}
+// Guhring article numbers start with the series id (maker page Series=205). "205-18,260" maps only when one loaded series owns that id.
+export function matchPart(text, tools) {
+  const m = String(text || '').trim().match(/^(\d{3,4})(?:\b|[-/])/);
+  if (!m) return null;
+  const re = new RegExp(`Series\\s*${m[1]}(?:\\s*/|\\s+|$)`);
+  const hits = (tools || []).filter(t => re.test(t.series || ''));
+  const brands = [...new Set(hits.map(t => t.brand))];
+  const series = [...new Set(hits.map(t => t.series))];
+  if (!hits.length || brands.length !== 1 || series.length !== 1) return null;
+  return { brand: brands[0], series: series[0], key: hits[0].key };
+}
+export function resolveFeed({ tool, mat, iso, mode, cut = '', d, pool = [], baseline = null, maxStep = 5, strictMetal = true }) {
   if (!(d > 0)) return null;
   const target = { tool, mat, iso, mode, cut, d };
   if (tool) {
@@ -173,6 +191,8 @@ export function resolveFeed({ tool, mat, iso, mode, cut = '', d, pool = [], base
     if (!t || t.key === tool?.key || t.mode !== (tool?.mode || mode)) return null;
     if (step === 3 && t.brand !== tool?.brand) return null;
     if (step === 4 && (!tool || t.brand === tool.brand || t.kind !== tool.kind)) return null;
+    if (tool?.kind && t.kind !== tool.kind) return null;
+    if (strictMetal && !sameMetal(tool?.sub, t.sub)) return null;
     const row = bestRow(t, { mat, iso, cut: '', d, nearest: true, cutOk: () => true });
     if (!row) return null;
     const dia = row.fd?.at != null ? Math.abs(row.fd.at - d) : 0;
@@ -196,9 +216,9 @@ export function resolveFeed({ tool, mat, iso, mode, cut = '', d, pool = [], base
   }
   if (maxStep < 5 || !baseline) return null;
   const q = { mode: tool?.mode || mode, kind: tool?.kind || 'End mill', sub: tool?.sub || 'unspecified', coat: 'uncoated', iso: iso || mat?.iso, d, feedKind: (tool?.mode || mode) === 'mill' ? 'fz' : 'ipr' };
-  const cell = lookupBaseline(baseline, q, false);
+  const cell = strictMetal ? lookupSameMetal(baseline, q) : lookupBaseline(baseline, q, true);
   if (!cell) return null;
-  const h = { brand: cell.c.brand, series: cell.c.series, page: cell.c.page, url: cell.c.url, catalog: cell.c.catalog, sfm: cell.c.sfm, fpt: cell.c.feed, factor: cut === 'Slot' ? SLOT_FACTOR : 1, derived: cell.derived, feedKind: cell.c.feedKind, row: null };
+  const h = { brand: cell.c.brand, series: cell.c.series, page: cell.c.page, url: cell.c.url, catalog: cell.c.catalog, sfm: cell.c.sfm, fpt: cell.c.feed, factor: cut === 'Slot' ? SLOT_FACTOR : 1, derived: cell.derived, feedKind: cell.c.feedKind, row: null, sub: cell.c.sub };
   if (h.factor === SLOT_FACTOR) h.fpt *= SLOT_FACTOR;
   return packHit(5, h, target);
 }
@@ -257,6 +277,19 @@ function cellScore(c, q, relax) {
   if (c.sub !== q.sub) { score += c.sub === 'unspecified' || q.sub === 'unspecified' ? 3 : 12; derived.push('tool material'); }
   return { score, derived };
 }
+export function lookupSameMetal(base, q) {
+  let best = null;
+  for (const c of base?.cells || []) {
+    if (c.mode !== q.mode || c.kind !== q.kind || c.iso !== q.iso) continue;
+    if (q.feedKind && c.feedKind !== q.feedKind) continue;
+    if (!sameMetal(q.sub || 'unspecified', c.sub || 'unspecified')) continue;
+    let score = Math.abs(c.dia - q.d);
+    const derived = [];
+    if (c.coat !== q.coat) { score += 5; derived.push('coating'); }
+    if (!best || score < best.score - 1e-9 || (Math.abs(score - best.score) < 1e-9 && c.sfm < best.c.sfm)) best = { c, score, derived };
+  }
+  return best;
+}
 export function lookupBaseline(base, q, relax = true) {
   const cells = base?.cells || [];
   let best = null;
@@ -289,7 +322,7 @@ export function genericQuote({ baseline, mode, kind, sub = 'hss', coat = 'uncoat
   }
   if (unsure && (coat === 'uncoated' || coat === '' || coat == null)) useCoat = 'uncoated';
   const q = { mode, kind, sub: useSub, coat: useCoat, iso, d, feedKind };
-  let hit = lookupBaseline(baseline, q, false) || lookupBaseline(baseline, q, true);
+  let hit = lookupSameMetal(baseline, q);
   if (!hit) return null;
   let fpt = hit.c.feed, sfm = hit.c.sfm;
   const matWord = useSub === 'hss' ? 'HSS' : useSub;

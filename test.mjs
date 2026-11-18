@@ -816,15 +816,59 @@ console.log('estimate tests ok');
     const old = resolveFeed({ ...q, maxStep: 1 });
     if (old?.step === 1) before[1]++; else before.none++;
     const now = resolveFeed(q);
-    assert.ok(now && now.sfm > 0, tool.kind + ' ' + mat.id + ' ' + cut + ' ' + dia);
+    if (!now) { after.none = (after.none || 0) + 1; continue; }
+    assert.ok(now.sfm > 0, tool.kind + ' ' + mat.id + ' ' + cut + ' ' + dia);
     if (tool.mode !== 'tap') assert.ok(now.fpt > 0, tool.series);
     if (now.step > 1) { assert.equal(now.estimate, true); assert.match(now.text, /^Estimate:/); assert.ok(now.url || now.page, now.text); }
+    if (now.step >= 3 && tool.sub && tool.sub !== 'unspecified' && now.sub && now.sub !== 'unspecified') assert.equal(now.sub, tool.sub);
     after[now.step]++;
     if (!ex[now.step]) ex[now.step] = { key: tool.key, mat: mat.id, cut, d: dia, text: now.text.slice(0, 160) };
   }
   console.log('fallback steps before', before, 'after', after);
   console.log('step examples', JSON.stringify(ex));
   console.log('fallback ladder sample pass'); }
+{ const { resolveFeed, packTool, matchPart, noRowLine } = await import('./fallback.js');
+  const { rpm } = await import('./calc.js');
+  const mild = IDX.materials.find(m => m.id === 'p-mild');
+  const ss = IDX.materials.find(m => m.id === 'ss304');
+  const gdoc = JSON.parse(fs.readFileSync('data/guhring-drill-ipr-v2.json', 'utf8'));
+  const raw205 = gdoc.tools.find(t => /205/.test(t.series));
+  const t205 = packTool(raw205, 'guhring-drill-ipr-v2.json#205');
+  assert.equal(t205.sub, 'hss');
+  assert.match(noRowLine(t205, ss), /Guhring 205 \/ 206 prints no stainless row/);
+  const files = fs.readdirSync('data').filter(f => f.endsWith('.json') && !['index.json', 'materials.json', 'threads.json', '_baseline.json'].includes(f) && !f.startsWith('_'));
+  const pool = [];
+  for (const f of files) { const doc = JSON.parse(fs.readFileSync('data/' + f, 'utf8')); if (!doc.tools) continue;
+    doc.tools.forEach((t, i) => { const p = packTool(t, f + '#' + i); if (p && (p.mode === 'mill' || p.mode === 'drill')) pool.push(p); }); }
+  const base = JSON.parse(fs.readFileSync('data/_baseline.json', 'utf8'));
+  const hit = resolveFeed({ tool: t205, mat: ss, iso: 'M', mode: 'drill', d: 0.719, pool, baseline: base });
+  assert.ok(hit && hit.sfm > 0 && hit.fpt > 0, JSON.stringify(hit));
+  assert.notEqual(hit.sub, 'carbide');
+  assert.equal(hit.estimate, true);
+  assert.match(hit.text, /Estimate:/);
+  const r = rpm(hit.sfm, 0.719);
+  assert.ok(hit.sfm >= 20 && hit.sfm <= 80, 'sfm ' + hit.sfm);
+  assert.ok(r >= 100 && r <= 400, 'rpm ' + r);
+  assert.ok(hit.fpt >= 0.004 && hit.fpt <= 0.016, 'ipr ' + hit.fpt);
+  console.log('205/304 HSS borrow', { step: hit.step, sub: hit.sub, sfm: hit.sfm, ipr: hit.fpt, rpm: +r.toFixed(1), from: hit.brand + ' ' + hit.series });
+  const mats = ['p-mild', 'ss304', 'gray-iron', 'al6061', 'ti64', 'h13-hard'].map(id => IDX.materials.find(m => m.id === id));
+  const metalTools = pool.filter(t => t.sub === 'hss' || t.sub === 'cobalt' || t.sub === 'carbide');
+  const before = { cross: 0, ok: 0 }, after = { cross: 0, ok: 0 };
+  const cross = (tool, res) => !!(res && res.step >= 3 && res.sub && res.sub !== 'unspecified' && tool.sub !== res.sub);
+  for (const tool of metalTools) for (const mat of mats) {
+    const q = { tool, mat, iso: mat.iso, mode: tool.mode, d: 0.5, pool, baseline: base };
+    const old = resolveFeed({ ...q, strictMetal: false });
+    if (cross(tool, old)) before.cross++; else before.ok++;
+    const now = resolveFeed(q);
+    if (cross(tool, now)) after.cross++; else after.ok++;
+    assert.equal(cross(tool, now), false, tool.series + ' ' + mat.id + ' ' + now?.sub);
+  }
+  console.log('metal borrow sweep', { tools: metalTools.length, before, after });
+  const listed = [{ key: 'a', brand: 'Guhring', series: 'Series 205 / 206', mode: 'drill' }, { key: 'b', brand: 'Guhring', series: 'Series 6065', mode: 'drill' }];
+  assert.equal(matchPart('205-18,260', listed).key, 'a');
+  assert.equal(matchPart('6065', listed).series, 'Series 6065');
+  assert.equal(matchPart('nope', listed), null);
+  console.log('part number and metal-borrow tests pass'); }
 { const { execFileSync } = await import('node:child_process');
   const files = execFileSync('git', ['ls-files', '-z', '--', '*.js', '*.json', '*.html'], { encoding: 'utf8' }).split('\0').filter(Boolean);
   const marks = ['<'.repeat(7), '>'.repeat(7)];

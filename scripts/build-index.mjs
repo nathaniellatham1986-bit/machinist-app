@@ -1,7 +1,7 @@
 // Regenerate data/index.json from every brand file in data/, and stamp sw.js with a content-hash cache name.
 // Never edit data/index.json by hand. Usage: node scripts/build-index.mjs
 import { shared303, sizeRange, brandName, seriesGrade, coolModes, passOf, drillSpans, turnOpOf, rowUsable, matRowOk, withPairs } from '../calc.js';
-import { resetBaseline, noteBaseline, baselineDoc } from '../fallback.js';
+import { resetBaseline, noteBaseline, baselineDoc, substrateOf } from '../fallback.js';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -28,6 +28,8 @@ for (const f of files) {
     ...(t.grade || t.coating || seriesGrade(t) ? { grade: String(t.grade ?? t.coating ?? seriesGrade(t)) } : {}),
     ...(t.coating ? { coating: true } : {}),
     ...(t.specs?.substrate && Number.isInteger(t.specs.flutes) ? { sp: [t.specs.substrate, t.specs.flutes, t.specs.coatingClass || '', t.specs.endShape || ''] } : {}),
+    sub: substrateOf(t),
+    ...(t.specs?.coating ? { coatName: t.specs.coating } : {}),
     isos: [...new Set(t.conditions.map(c => c.iso))].sort(),
     ...(() => { const so = t.conditions.filter(c => c.sfm && !c.feed && c.status !== 'shop-proven'), fo = t.conditions.filter(c => c.feed && !c.sfm && c.status !== 'shop-proven'), u = a => [...new Set(a.map(c => c.iso))].sort();
       return { ...(so.length ? { speedIsos: u(so) } : {}), ...(fo.length ? { feedIsos: u(fo) } : {}) }; })(),
