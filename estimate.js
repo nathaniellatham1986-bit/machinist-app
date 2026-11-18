@@ -2,6 +2,8 @@
 // Rules (agreed with Nathaniel, App Build chat 2026-10-25): same brand only; same tool kind and mode; same material (303/304 never mixed);
 // published size must cover the entered Ø or sit within 25% of it; stated coolant must match; >=2 distinct source tools; LOWEST low end used (no averaging).
 import { pick, matchMat, coolModes, shared303, kindOf, rowDia, sizeRange, gradesOf, brandName, endGeom, ownNames, matRowOk } from './calc.js';
+import { substrateOf } from './fallback.js';
+const sameSub = (a, b) => (a || 'unspecified') === (b || 'unspecified');
 export const ESTIMATES_ON = true; // kill switch
 // Rung 3 (DERIVED): another maker's row, only when this tool has no speed or feed for the material. ?r3=0 disables it.
 export const RUNG3_ON = true;
@@ -19,6 +21,7 @@ export function borrowOther({ target, targetTool, targetKey, cands, mat, d, on =
   for (const { key, tool: t } of cands ?? []) {
     if (!t || key === targetKey || brandName(t.brand) === brandName(target.brand) || r3Cut(t)) continue;
     const ds = r3Spec(t); if (!ds || kindOf(t) !== kindOf(target) || ds.substrate !== sp.substrate || ds.flutes !== sp.flutes) continue;
+    if (!sameSub(substrateOf(targetTool || target), substrateOf(t))) continue;
     if (sp.coatingClass && ds.coatingClass !== sp.coatingClass) continue; // untagged donor does not qualify
     if (sp.endShape && ds.endShape !== sp.endShape) continue;
     for (const c of t.conditions ?? []) {
@@ -63,6 +66,7 @@ export function estimate({ target, targetTool, targetKey, cands, geom = true, ow
   const rows = { sfm: [], fpt: [] };
   for (const { key, tool: t } of cands) {
     if (!t || key === targetKey || brandName(t.brand) !== brandName(target.brand) || t.mode !== target.mode || kindOf(t) !== kind || geom && eg && endGeom(t) !== eg) continue;
+    if (!sameSub(substrateOf(targetTool || target), substrateOf(t))) continue;
     for (const c of t.conditions) {
       if (c.status === 'shop-proven' || !c.source || !['catalog', 'label'].includes(c.source.kind)) continue;
       const mm = matOk(mat, c); if (!mm) continue;

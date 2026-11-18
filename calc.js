@@ -1,12 +1,19 @@
 // Pure math. Inputs in inch units.
 export const rpm = (sfm, d) => sfm * 3.82 / d;
 export const ipm = (r, fpt, z) => r * fpt * z;
-// Radial chip thinning: when ae < D/2, raise fpt so actual chip = target.
+// Radial chip thinning: when ae < D/2, raise fpt so actual chip = target. Uncapped formula (display of "would have been" only).
 export const thinFactor = (ae, d) => (ae >= d / 2 ? 1 : d / (2 * Math.sqrt(d * ae - ae * ae)));
+// APP LIMIT, not a manufacturer number: adjusted chip load stays at or under this multiple of the chip load being thinned.
+export const THIN_CAP = 2;
+export function appliedThin(ae, d, cap = THIN_CAP) {
+  const raw0 = thinFactor(ae, d), raw = Number.isFinite(raw0) && raw0 > 0 ? raw0 : 1;
+  const limit = cap > 0 ? cap : Infinity, factor = Math.min(raw, limit);
+  return { factor, raw, capped: raw > limit + 1e-9, cap: Number.isFinite(limit) ? limit : null };
+}
 // DERIVED shop rule (not manufacturer): reduce feed for stickout over 3xD, 10% per extra D, floor 50%.
 export const stickoutFactor = (so, d) => Math.max(0.5, 1 - Math.max(0, so / d - 3) * 0.1);
-// Display helper: which DERIVED factors (not 1) turn the catalog fpt into the fpt used for IPM. Same factors as compute().
-export const usedFzParts = (ae, d, so) => [['thinning', thinFactor(ae, d)], ['stickout', stickoutFactor(so, d)]]
+// Display helper: which DERIVED factors (not 1) turn the catalog fpt into the fpt used for IPM. Same cap as compute().
+export const usedFzParts = (ae, d, so, cap = THIN_CAP) => [['thinning', appliedThin(ae, d, cap).factor], ['stickout', stickoutFactor(so, d)]]
   .filter(([, f]) => Math.abs(f - 1) > 1e-9).map(([n, f]) => `${n} ${f > 1 ? '+' : '-'}${Math.round(Math.abs(f - 1) * 100)}%`);
 // DERIVED: feed per spindle rev for a milling tool = chip load × flutes.
 export const iprFromFz = (fz, z) => (fz > 0 && z > 0 ? fz * z : 0);
@@ -15,13 +22,14 @@ export const torqueNeedNm = (hp, rpm) => (hp > 0 && rpm > 0 ? 9549 * hp * 0.7457
 // DERIVED power estimate: MRR x handbook-style unit power per ISO group (not manufacturer data).
 export const UNIT_HP = { P: 1.0, M: 1.2, K: 0.6, N: 0.3, S: 1.8, H: 1.6 };
 const cap = (r, max) => (max && r > max ? [max, true] : [r, false]);
-export function compute({ sfm, d, fpt, z, ae, ap, stickout, maxRpm, maxHp, iso }) {
-  const f = fpt * thinFactor(ae, d) * stickoutFactor(stickout, d);
+export function compute({ sfm, d, fpt, z, ae, ap, stickout, maxRpm, maxHp, iso, thinCap = THIN_CAP, thin = true }) {
+  const th = thin ? appliedThin(ae, d, thinCap) : { factor: 1, raw: appliedThin(ae, d, thinCap).raw, capped: false, cap: thinCap > 0 ? thinCap : null };
+  const f = fpt * th.factor * stickoutFactor(stickout, d);
   const [r, capped] = cap(rpm(sfm, d), maxRpm);
   let feed = ipm(r, f, z);
   let hp = feed * ae * ap * (UNIT_HP[iso] ?? 1), hpCapped = false;
   if (maxHp && hp > maxHp) { feed *= maxHp / hp; hp = maxHp; hpCapped = true; }
-  return { rpm: r, fpt: f, ipm: feed, hp, mrr: feed * ae * ap, capped, hpCapped };
+  return { rpm: r, fpt: f, ipm: feed, hp, mrr: feed * ae * ap, capped, hpCapped, thin: th };
 }
 // Drilling: IPM = RPM x IPR.
 export function drill({ sfm, d, ipr, maxRpm }) { const [r, capped] = cap(rpm(sfm, d), maxRpm); return { rpm: r, capped, ipm: r * ipr }; }
