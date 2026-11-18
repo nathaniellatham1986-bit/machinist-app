@@ -12,7 +12,7 @@ const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dataDir = path.join(root, 'data');
 const MATERIAL_GROUPS = Object.entries(JSON.parse(fs.readFileSync(path.join(dataDir, 'materials.json'))).groups);
 const COOLANTS = ['flood', 'air', 'dry'];
-const SHELL = ['./', 'index.html', 'app.js', 'calc.js', 'estimate.js', 'fallback.js', 'recall.js', 'combo.js', 'manifest.json', 'data/index.json', 'data/threads.json'];
+const SHELL = ['./', 'index.html', 'app.js', 'calc.js', 'estimate.js', 'fallback.js', 'recall.js', 'combo.js', 'manifest.json', 'data/index.json', 'data/threads.json', 'data/_baseline.json'];
 
 resetBaseline();
 const files = fs.readdirSync(dataDir).filter(f => f.endsWith('.json') && !NON_BRAND.has(f) && !f.startsWith('_')).sort();
