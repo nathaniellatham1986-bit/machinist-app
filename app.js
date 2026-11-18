@@ -594,10 +594,12 @@ $('ae').onchange = () => { readEng(); const t = curTool();
   if (isGen()) return fillGeneric();
   if (t?.conditions[$('cond').value]?.feed?.byWoc) fill(); };
 $('genMat').onchange = () => { if ($('genMat').value === 'unsure') $('genCoat').value = 'uncoated'; if (isGen() || !$('tool').value) fillGeneric(); else fillTool(); };
-$('pn').onchange = async () => { const hit = matchPart($('pn').value, SUM.filter(t => t.mode === mode));
+$('pn').onchange = async () => { const hit = matchPart($('pn').value, SUM);
   if (!hit) { $('pnNote').textContent = 'Not found - using generic numbers'; $('brand').value = GENERIC; $('tool').value = ''; return fillKind(); }
-  $('pnNote').textContent = ''; $('brand').value = hit.brand; TUSER = true; await fillKind();
-  if ([...$('tool').options].some(o => o.value === hit.key)) { $('tool').value = hit.key; await fillGrade(''); } else { $('pnNote').textContent = 'Not found - using generic numbers'; $('brand').value = GENERIC; return fillKind(); } };
+  if (hit.mode && hit.mode !== mode) await setMode(hit.mode);
+  $('pnNote').textContent = ''; $('brand').value = hit.brand; TUSER = true; KEEP = hit.key; await fillKind(); KEEP = '';
+  const opt = [...$('tool').options].find(o => o.value === hit.key || (GROUPS[o.value] || []).includes(hit.key));
+  if (opt) { $('tool').value = opt.value; await fillGrade(''); } else { $('pnNote').textContent = 'Not found - using generic numbers'; $('brand').value = GENERIC; return fillKind(); } };
 $('genCoat').onchange = fillGeneric;
 ['z', 'sfm', 'fpt', 'ae', 'ap', 'apT', 'len'].forEach(k => $(k).oninput = run); $('sup').onchange = run;
 if (LS.get('metric', false)) $('unit').onclick(); $('cool').value = LS.get('lastCoolant', 'flood'); machines(); { const m = LS.get('machines', [])[$('mach').value]; if (m) { const L = machLimits(m, mode, LIVE); $('maxRpm').value = L.rpm || ''; $('maxHp').value = L.hp || ''; } }

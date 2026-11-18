@@ -168,7 +168,7 @@ export function matchPart(text, tools) {
   const brands = [...new Set(hits.map(t => t.brand))];
   const series = [...new Set(hits.map(t => t.series))];
   if (!hits.length || brands.length !== 1 || series.length !== 1) return null;
-  return { brand: brands[0], series: series[0], key: hits[0].key };
+  return { brand: brands[0], series: series[0], key: hits[0].key, mode: hits[0].mode || '' };
 }
 export function resolveFeed({ tool, mat, iso, mode, cut = '', d, pool = [], baseline = null, maxStep = 5, strictMetal = true }) {
   if (!(d > 0)) return null;
@@ -225,23 +225,42 @@ export function resolveFeed({ tool, mat, iso, mode, cut = '', d, pool = [], base
 
 // ---- step 5 baseline, built from catalog rows already in data/ ----
 const CELLS = new Map();
+const SPECIALTY = /micro|deep.?hole|high.?feed|hi.?feed/i;
 export function resetBaseline() { CELLS.clear(); }
-function consider(cell) {
+// One printed row per cell. Odd count: the middle row. Even count: the lower of the two middle rows. Not an average.
+export function medianRow(rows) {
+  if (!rows?.length) return null;
+  const s = rows.slice().sort((a, b) => a.sfm - b.sfm || a.feed - b.feed || String(a.brand).localeCompare(String(b.brand)) || String(a.series).localeCompare(String(b.series)));
+  return s[Math.floor((s.length - 1) / 2)];
+}
+function consider(cell, rowId) {
   const k = [cell.mode, cell.kind, cell.sub, cell.coat, cell.iso, cell.dia, cell.feedKind].join('|');
-  const prev = CELLS.get(k);
-  if (!prev || cell.sfm < prev.sfm - 1e-9 || (Math.abs(cell.sfm - prev.sfm) < 1e-9 && cell.feed < prev.feed)) CELLS.set(k, cell);
+  const list = CELLS.get(k) ?? [];
+  const prev = list.find(x => x.rowId === rowId);
+  if (!prev || Math.abs(cell.at - cell.dia) < Math.abs(prev.at - prev.dia)) {
+    if (prev) list[list.indexOf(prev)] = { ...cell, rowId };
+    else list.push({ ...cell, rowId });
+    CELLS.set(k, list);
+  }
 }
 export function noteBaseline(t) {
   if (!t?.conditions) return;
+  if (SPECIALTY.test(`${t.series ?? ''} ${t.type ?? ''}`)) return;
   const sub = substrateOf(t), kind = kindOf(t);
   for (const c of t.conditions) {
     if (!c?.sfm || !c.feed || c.status === 'shop-proven' || c.paired || c.iso === '*' || !c.source || !['catalog', 'label'].includes(c.source.kind)) continue;
     if (!c.source.url && !c.source.page) continue;
-    const sfm = lowNum(c.sfm, SPK(c.sfm.unit));
+    const sfm = lowNum(c.sfm, SPK(c.sfm.unit)); // start value when the row prints one, otherwise the low end
     const feed = packFeed(c.feed);
     if (!(sfm > 0) || !feed) continue;
     const coat = coatOf(t, c), cite = { brand: brandName(t.brand), series: t.series || '', page: c.source.page || '', url: c.source.url || '', catalog: c.source.catalog || '' };
-    const add = (dia, fpt) => { if (!(dia > 0) || !(fpt > 0)) return; consider({ mode: t.mode, kind, sub, coat, iso: c.iso, dia: bandOf(dia), sfm, feed: fpt, feedKind: feed.kind, at: dia, ...cite }); };
+    const rowId = `${cite.brand}|${cite.series}|${c.label || ''}|${c.iso}|${sfm}`;
+    const add = (dia, fpt) => {
+      if (!(dia >= 1 / 16) || !(fpt > 0)) return; // under 1/16 in stays out of general cells
+      const band = bandOf(dia);
+      if (Math.max(dia, band) / Math.min(dia, band) > 2) return; // same kind and substrate already; diameter within about 2x
+      consider({ mode: t.mode, kind, sub, coat, iso: c.iso, dia: band, sfm, feed: fpt, feedKind: feed.kind, at: dia, ...cite }, rowId);
+    };
     if (feed.range != null) {
       const dias = (t.diameters_in?.length ? t.diameters_in : t.diameters_mm?.map(x => x / 25.4)) || [];
       if (dias.length) dias.forEach(x => add(x, feed.range));
@@ -252,12 +271,12 @@ export function noteBaseline(t) {
   }
 }
 export function baselineDoc() {
-  const cells = [...CELLS.values()];
+  const cells = [...CELLS.values()].map(list => { const row = medianRow(list); if (!row) return null; const { rowId, ...cell } = row; return cell; }).filter(Boolean);
   const coats = [...new Set(cells.map(c => c.coat))].filter(c => c && c !== 'unspecified').sort();
   const kinds = {};
   for (const c of cells) (kinds[c.mode] ??= new Set()).add(c.kind);
   return {
-    note: 'GENERATED from published catalog rows by scripts/build-index.mjs. Each cell is the lowest low end of one source row, not an average. Do not hand-edit.',
+    note: 'GENERATED from published catalog rows by scripts/build-index.mjs. Each cell is the median printed row (lower of the two middle rows when the count is even), not an average. Do not hand-edit.',
     coats, kinds: Object.fromEntries([...Object.entries(kinds)].map(([m, s]) => [m, [...s].sort()])),
     cells,
   };
