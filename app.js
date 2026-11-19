@@ -613,7 +613,7 @@ $('pn').onchange = async () => { const hit = matchPart($('pn').value, SUM);
 $('genCoat').onchange = fillGeneric;
 document.querySelectorAll('[data-path]').forEach(b => b.onclick = () => { const p = b.dataset.path; LS.set('path', p);
   if (p === 'gen') { if (!isGen()) { $('brand').value = GENERIC; $('pn').value = ''; $('pnNote').textContent = ''; return $('brand').onchange(); } pathUI(); }
-  else { pathUI(); $('pn').focus(); } });
+  else pathUI(); }); // no focus jump: keep the screen where it is so material stays in view
 ['z', 'sfm', 'fpt', 'ae', 'ap', 'apT', 'len'].forEach(k => $(k).oninput = run); $('sup').onchange = run;
 if (LS.get('metric', false)) $('unit').onclick(); $('cool').value = LS.get('lastCoolant', 'flood'); machines(); { const m = LS.get('machines', [])[$('mach').value]; if (m) { const L = machLimits(m, mode, LIVE); $('maxRpm').value = L.rpm || ''; $('maxHp').value = L.hp || ''; } }
 recallList();
