@@ -140,11 +140,13 @@ function showGen(on) {
   pathUI();
 }
 // Generic tool vs I have the label (mill/drill). Other tabs always need the label.
+let GENBACK = false; // Known tool fell back to generic
 const PATH = () => (mode === 'mill' || mode === 'drill') ? LS.get('path', 'gen') : 'label';
 function pathUI() { const mm = mode === 'mill' || mode === 'drill', p = PATH(), gen = p === 'gen';
   $('pathRow').hidden = !mm; $('pGen').classList.toggle('on', gen); $('pLbl').classList.toggle('on', !gen);
   ['pnL', 'bkRow'].forEach(k => $(k).hidden = gen); if (gen) $('seriesL').hidden = true;
-  if (mm && !gen && !isGen()) $('genBox').hidden = true;
+  // Known tool: the tool's data sets HSS/carbide and coating, so hide those boxes unless the tool wasn't found (or Generic was picked as the brand).
+  if (mm && !gen && !(isGen() && GENBACK)) $('genBox').hidden = true;
   // Label fields sit above the results on Mill/Drill; other tabs keep them in the tool section.
   const box = mm ? $('lblBox') : null; ['pnL', 'bkRow', 'seriesL'].forEach(k => box ? box.append($(k)) : $('thrL').before($(k)));
   $('refS').textContent = mm ? 'More options' : 'Brand and exact tool'; if (!mm) $('refine').open = true; }
@@ -594,7 +596,7 @@ $('unit').onclick = () => { const KS = [...LEN, 'sfm', 'fpt'], x = Object.fromEn
 $('matPick').onchange = () => { TUSER = false; const [i, rest] = $('matPick').value.split(':'); const [m, grade] = (rest ?? '').split('#'); $('iso').value = i; $('mat').value = m ?? '';
   const hit = grade && GRADE_ALIASES.find(g => g.grade === grade && g.id === m), nm = matSel()?.name ?? '';
   $('matNote').textContent = !hit ? '' : hit.how === 'standard' ? `${hit.grade} · standard class, same group as ${nm}. Not its own number in this app.` : `${hit.grade} · in maker tables for this group. Same manufacturer rows as ${nm}, not a separate ${hit.grade} number.`;
-  if (grade) syncPick(); fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillKind; $('cq').oninput = fillCond; $('tool').onchange = () => { TUSER = true; GUSER = false; $('cq').value = ''; fillGrade(''); }; $('grade').onchange = () => { GUSER = true; fillGrade(); updateFindLink(); }; $('mach').onchange = applyMachine;
+  if (grade) syncPick(); fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = () => { GENBACK = isGen(); return fillKind(); }; $('cq').oninput = fillCond; $('tool').onchange = () => { TUSER = true; GUSER = false; $('cq').value = ''; fillGrade(''); }; $('grade').onchange = () => { GUSER = true; fillGrade(); updateFindLink(); }; $('mach').onchange = applyMachine;
 $('cond').onchange = () => { fill(); recent(); }; $('cool').onchange = () => { if (mode === 'drill') { const k = $('tool').value; if (!TUSER) $('tool').value = ''; fillTool(); if ($('tool').value === k) fill(); } else fill(); }; $('thr').onchange = fillBrand; $('d').onchange = () => { TUSER = false; TUSER_D = inV('d') > 0; if (mode === 'mill') showEng(); if (mode === 'drill' || mode === 'mill') { const k = $('tool').value; fillTool(); if ($('tool').value === k) return fill(); return; } fill(); };
 ['ae', 'aeU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ae') ENG.ae = 'yours'; readEng(); }));
 ['ap', 'apU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ap') ENG.ap = 'yours'; readEng(); }));
@@ -605,15 +607,16 @@ $('ae').onchange = () => { readEng(); const t = curTool();
   if (t?.conditions[$('cond').value]?.feed?.byWoc) fill(); };
 $('genMat').onchange = () => { if ($('genMat').value === 'unsure') $('genCoat').value = 'uncoated'; if (isGen() || !$('tool').value) fillGeneric(); else fillTool(); };
 $('pn').onchange = async () => { const hit = matchPart($('pn').value, SUM);
+  GENBACK = !hit;
   if (!hit) { $('pnNote').textContent = 'Not found - using generic numbers'; $('brand').value = GENERIC; $('tool').value = ''; return fillKind(); }
   if (hit.mode && hit.mode !== mode) await setMode(hit.mode);
   $('pnNote').textContent = ''; $('brand').value = hit.brand; TUSER = true; KEEP = hit.key; await fillKind(); KEEP = '';
   const opt = [...$('tool').options].find(o => o.value === hit.key || (GROUPS[o.value] || []).includes(hit.key));
-  if (opt) { $('tool').value = opt.value; await fillGrade(''); } else { $('pnNote').textContent = 'Not found - using generic numbers'; $('brand').value = GENERIC; return fillKind(); } };
+  if (opt) { $('tool').value = opt.value; await fillGrade(''); } else { GENBACK = true; $('pnNote').textContent = 'Not found - using generic numbers'; $('brand').value = GENERIC; return fillKind(); } };
 $('genCoat').onchange = fillGeneric;
 document.querySelectorAll('[data-path]').forEach(b => b.onclick = () => { const p = b.dataset.path; LS.set('path', p);
-  if (p === 'gen') { if (!isGen()) { $('brand').value = GENERIC; $('pn').value = ''; $('pnNote').textContent = ''; return $('brand').onchange(); } pathUI(); }
-  else pathUI(); }); // no focus jump: keep the screen where it is so material stays in view
+  if (p === 'gen') { if (!isGen()) { $('brand').value = GENERIC; $('tool').length = 0; $('pn').value = ''; $('pnNote').textContent = ''; return $('brand').onchange(); } pathUI(); }
+  else { GENBACK = false; pathUI(); } }); // no focus jump: keep the screen where it is so material stays in view
 ['z', 'sfm', 'fpt', 'ae', 'ap', 'apT', 'len'].forEach(k => $(k).oninput = run); $('sup').onchange = run;
 if (LS.get('metric', false)) $('unit').onclick(); $('cool').value = LS.get('lastCoolant', 'flood'); machines(); { const m = LS.get('machines', [])[$('mach').value]; if (m) { const L = machLimits(m, mode, LIVE); $('maxRpm').value = L.rpm || ''; $('maxHp').value = L.hp || ''; } }
 recallList();
