@@ -767,7 +767,8 @@ console.log('estimate tests ok');
   assert.match(appSrc, /Generic \/ Unknown/);
   assert.match(html, /Carbide is noticeably heavier and dull gray\. HSS is lighter and often shiny\./);
   assert.match(html, /Shop guide, colour is a hint, not proof/);
-  assert.match(html, /<summary>What color is it\?<\/summary>/); // guide folded behind a tap
+  assert.match(html, /<summary>What color is it\?<\/summary>/); for (const k of ['tin', 'zrn', 'ticn', 'altin', 'dlc', 'uncoated']) assert.match(html, new RegExp(`class="cg" data-coat="${k}"`)); // one tappable line per coating
+  // guide folded behind a tap
   assert.match(html, /data-path="gen">Generic tool</); assert.match(html, /data-path="label">Known tool</);
   assert.doesNotMatch(html + appSrc, /Advanced/i); assert.doesNotMatch(appSrc, /\$\('mat'\)\.value = 'p-mild'/); // material never defaulted (fresh pick every open)
   assert.doesNotMatch(appSrc, /\$\('pn'\)\.focus\(\)/); // Known tool must not jump past Material
