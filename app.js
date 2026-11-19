@@ -140,11 +140,15 @@ function showGen(on) {
   pathUI();
 }
 // Generic tool vs I have the label (mill/drill). Other tabs always need the label.
+let PNWAIT = false; // part number matched, waiting on a material
+let KNOWN = null; // known-tool entries kept while Generic is showing
+let GENBACK = false; // Known tool fell back to generic
 const PATH = () => (mode === 'mill' || mode === 'drill') ? LS.get('path', 'gen') : 'label';
 function pathUI() { const mm = mode === 'mill' || mode === 'drill', p = PATH(), gen = p === 'gen';
   $('pathRow').hidden = !mm; $('pGen').classList.toggle('on', gen); $('pLbl').classList.toggle('on', !gen);
   ['pnL', 'bkRow'].forEach(k => $(k).hidden = gen); if (gen) $('seriesL').hidden = true;
-  if (mm && !gen && !isGen()) $('genBox').hidden = true;
+  // Known tool: the tool's data sets HSS/carbide and coating, so hide those boxes unless the tool wasn't found (or Generic was picked as the brand).
+  if (mm && !gen && !(isGen() && GENBACK)) $('genBox').hidden = true;
   // Label fields sit above the results on Mill/Drill; other tabs keep them in the tool section.
   const box = mm ? $('lblBox') : null; ['pnL', 'bkRow', 'seriesL'].forEach(k => box ? box.append($(k)) : $('thrL').before($(k)));
   $('refS').textContent = mm ? 'More options' : 'Brand and exact tool'; if (!mm) $('refine').open = true; }
@@ -349,7 +353,7 @@ function loadedPacks(skip) { const out = []; for (const f of Object.keys(DOCS)) 
 function asEst(fb, def) { const pg = String(fb.page || '').match(/\d+/)?.[0] || ''; return { def, min: null, max: null, est: { rung: 3, text: fb.text, url: fb.url, brand: fb.brand, series: fb.series, page: pg ? 'p.' + pg : '' }, basis: 'ESTIMATE' }; }
 function fillGeneric() {
   const mat = matSel(), iso = mat?.iso || $('iso').value, d = inV('d');
-  if (!iso || !(d > 0)) { $('cards').innerHTML = `<div class="out"><span class="warn">${!iso ? 'Pick a workpiece material' : 'Enter a diameter'}</span></div>`; $('bar').innerHTML = '<small>Generic / Unknown</small>'; return; }
+  if (!iso || !(d > 0)) { $('cards').innerHTML = `<div class="out"><span class="warn" style="font-size:28px">${!iso ? 'Pick the material you\'re cutting' : 'Enter a diameter'}</span></div>`; $('bar').innerHTML = `<small>${!iso ? 'Pick the material you\'re cutting' : 'Generic / Unknown'}</small>`; return; }
   if (mode === 'mill') readEng();
   const q = genericQuote({ baseline: BASE, mode, kind: $('kind').value || 'End mill', sub: $('genMat').value === 'unsure' ? 'hss' : $('genMat').value, coat: $('genCoat').value, unsure: $('genMat').value === 'unsure', d, z: +$('z').value || (mode === 'drill' ? 2 : 4), iso, ae: mode === 'mill' ? frac.ae * d : undefined, ap: mode === 'mill' ? frac.ap * d : inV('apT'), maxRpm: inV('maxRpm'), maxHp: inV('maxHp') });
   if (!q) { $('cards').innerHTML = '<div class="out"><span class="warn">No baseline is loaded for this selection.</span></div>'; $('bar').innerHTML = '<small>Generic / Unknown</small>'; return; }
@@ -594,7 +598,7 @@ $('unit').onclick = () => { const KS = [...LEN, 'sfm', 'fpt'], x = Object.fromEn
 $('matPick').onchange = () => { TUSER = false; const [i, rest] = $('matPick').value.split(':'); const [m, grade] = (rest ?? '').split('#'); $('iso').value = i; $('mat').value = m ?? '';
   const hit = grade && GRADE_ALIASES.find(g => g.grade === grade && g.id === m), nm = matSel()?.name ?? '';
   $('matNote').textContent = !hit ? '' : hit.how === 'standard' ? `${hit.grade} · standard class, same group as ${nm}. Not its own number in this app.` : `${hit.grade} · in maker tables for this group. Same manufacturer rows as ${nm}, not a separate ${hit.grade} number.`;
-  if (grade) syncPick(); fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = fillKind; $('cq').oninput = fillCond; $('tool').onchange = () => { TUSER = true; GUSER = false; $('cq').value = ''; fillGrade(''); }; $('grade').onchange = () => { GUSER = true; fillGrade(); updateFindLink(); }; $('mach').onchange = applyMachine;
+  if (grade) syncPick(); fillBrand(); }; $('onlyData').onchange = fillBrand; $('brand').onchange = () => { GENBACK = isGen(); return fillKind(); }; $('cq').oninput = fillCond; $('tool').onchange = () => { TUSER = true; GUSER = false; $('cq').value = ''; fillGrade(''); }; $('grade').onchange = () => { GUSER = true; fillGrade(); updateFindLink(); }; $('mach').onchange = applyMachine;
 $('cond').onchange = () => { fill(); recent(); }; $('cool').onchange = () => { if (mode === 'drill') { const k = $('tool').value; if (!TUSER) $('tool').value = ''; fillTool(); if ($('tool').value === k) fill(); } else fill(); }; $('thr').onchange = fillBrand; $('d').onchange = () => { TUSER = false; TUSER_D = inV('d') > 0; if (mode === 'mill') showEng(); if (mode === 'drill' || mode === 'mill') { const k = $('tool').value; fillTool(); if ($('tool').value === k) return fill(); return; } fill(); };
 ['ae', 'aeU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ae') ENG.ae = 'yours'; readEng(); }));
 ['ap', 'apU'].forEach(i => $(i).addEventListener('input', () => { if (i === 'ap') ENG.ap = 'yours'; readEng(); }));
@@ -605,19 +609,24 @@ $('ae').onchange = () => { readEng(); const t = curTool();
   if (t?.conditions[$('cond').value]?.feed?.byWoc) fill(); };
 $('genMat').onchange = () => { if ($('genMat').value === 'unsure') $('genCoat').value = 'uncoated'; if (isGen() || !$('tool').value) fillGeneric(); else fillTool(); };
 $('pn').onchange = async () => { const hit = matchPart($('pn').value, SUM);
+  GENBACK = !hit;
   if (!hit) { $('pnNote').textContent = 'Not found - using generic numbers'; $('brand').value = GENERIC; $('tool').value = ''; return fillKind(); }
   if (hit.mode && hit.mode !== mode) await setMode(hit.mode);
+  if (!$('iso').value) { PNWAIT = true; $('pnNote').textContent = `Found: ${hit.brand} ${hit.series || ''}. Now pick the material.`; return; } // look it up once a material is picked
+  PNWAIT = false;
   $('pnNote').textContent = ''; $('brand').value = hit.brand; TUSER = true; KEEP = hit.key; await fillKind(); KEEP = '';
   const opt = [...$('tool').options].find(o => o.value === hit.key || (GROUPS[o.value] || []).includes(hit.key));
-  if (opt) { $('tool').value = opt.value; await fillGrade(''); } else { $('pnNote').textContent = 'Not found - using generic numbers'; $('brand').value = GENERIC; return fillKind(); } };
+  if (opt) { $('tool').value = opt.value; await fillGrade(''); } else { GENBACK = true; $('pnNote').textContent = 'Not found - using generic numbers'; $('brand').value = GENERIC; return fillKind(); } };
 $('genCoat').onchange = fillGeneric;
 document.querySelectorAll('[data-path]').forEach(b => b.onclick = () => { const p = b.dataset.path; LS.set('path', p);
-  if (p === 'gen') { if (!isGen()) { $('brand').value = GENERIC; $('pn').value = ''; $('pnNote').textContent = ''; return $('brand').onchange(); } pathUI(); }
-  else { pathUI(); $('pn').focus(); } });
+  if (p === 'gen') { if (!isGen()) { KNOWN = { pn: $('pn').value, brand: $('brand').value, tool: $('tool').value }; $('brand').value = GENERIC; $('tool').length = 0; $('pn').value = ''; $('pnNote').textContent = ''; return $('brand').onchange(); } pathUI(); }
+  else { GENBACK = false; pathUI(); const k = KNOWN; KNOWN = null; if (k?.pn) { $('pn').value = k.pn; return $('pn').onchange(); }
+    if (k?.brand) { $('brand').value = k.brand; TUSER = true; KEEP = k.tool; return fillKind().then(() => { KEEP = ''; if ([...$('tool').options].some(o => o.value === k.tool)) { $('tool').value = k.tool; fillGrade(''); } }); } } }); // no focus jump: keep the screen where it is so material stays in view
+{ const mo = $('matPick').onchange; $('matPick').onchange = async (...x) => { await mo(...x); if (PNWAIT && $('iso').value) $('pn').onchange(); }; }
 ['z', 'sfm', 'fpt', 'ae', 'ap', 'apT', 'len'].forEach(k => $(k).oninput = run); $('sup').onchange = run;
 if (LS.get('metric', false)) $('unit').onclick(); $('cool').value = LS.get('lastCoolant', 'flood'); machines(); { const m = LS.get('machines', [])[$('mach').value]; if (m) { const L = machLimits(m, mode, LIVE); $('maxRpm').value = L.rpm || ''; $('maxHp').value = L.hp || ''; } }
 recallList();
-if (!q.get('mat') && !$('mat').value && (mode === 'mill' || mode === 'drill')) { $('iso').value = 'P'; $('mat').value = 'p-mild'; fillMat(); }
+// Material is never remembered or defaulted: a fresh pick every open (Nathaniel, Nov 19 2026). A defaulted mild-steel number on a stainless part burns tools.
 if (q.get('iso')) $('iso').value = q.get('iso');
 if (q.get('mat')) $('mat').value = resolveMatId(q.get('mat')); fillMat();
 if (q.get('d')) $('d').value = q.get('d');
