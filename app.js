@@ -617,7 +617,10 @@ $('pn').onchange = async () => { const hit = matchPart($('pn').value, SUM);
   $('pnNote').textContent = ''; $('brand').value = hit.brand; TUSER = true; KEEP = hit.key; await fillKind(); KEEP = '';
   const opt = [...$('tool').options].find(o => o.value === hit.key || (GROUPS[o.value] || []).includes(hit.key));
   if (opt) { $('tool').value = opt.value; await fillGrade(''); } else { GENBACK = true; $('pnNote').textContent = 'Not found - using generic numbers'; $('brand').value = GENERIC; return fillKind(); } };
-$('genCoat').onchange = fillGeneric;
+$('genCoat').onchange = () => { coatMark(); fillGeneric(); };
+// Colour guide is the picker: tap a line to set Coated. A coating with no baseline row falls back to 'type unknown' (TiN numbers).
+const coatMark = () => document.querySelectorAll('.cg').forEach(b => b.classList.toggle('on', b.dataset.coat === $('genCoat').value));
+document.querySelectorAll('.cg').forEach(b => b.onclick = () => { const s = $('genCoat'), k = b.dataset.coat; s.value = [...s.options].some(o => o.value === k) ? k : 'unknown'; coatMark(); $('coatGuide').open = false; fillGeneric(); });
 document.querySelectorAll('[data-path]').forEach(b => b.onclick = () => { const p = b.dataset.path; LS.set('path', p);
   if (p === 'gen') { if (!isGen()) { KNOWN = { pn: $('pn').value, brand: $('brand').value, tool: $('tool').value }; $('brand').value = GENERIC; $('tool').length = 0; $('pn').value = ''; $('pnNote').textContent = ''; return $('brand').onchange(); } pathUI(); }
   else { GENBACK = false; pathUI(); const k = KNOWN; KNOWN = null; if (k?.pn) { $('pn').value = k.pn; return $('pn').onchange(); }
