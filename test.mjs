@@ -767,6 +767,10 @@ console.log('estimate tests ok');
   assert.match(appSrc, /Generic \/ Unknown/);
   assert.match(html, /Carbide is noticeably heavier and dull gray\. HSS is lighter and often shiny\./);
   assert.match(html, /Shop guide, colour is a hint, not proof/);
+  assert.match(html, /<summary>What color is it\?<\/summary>/); // guide folded behind a tap
+  assert.match(html, /data-path="gen">Generic tool</); assert.match(html, /data-path="label">Known tool</);
+  assert.doesNotMatch(html + appSrc, /Advanced/i); assert.doesNotMatch(appSrc, /CALCULATED:/);
+  assert.ok(html.indexOf('id="mach"') < html.indexOf('id="refine"') && html.indexOf('id="ae"') < html.indexOf('id="refine"') && html.indexOf('id="cut"') < html.indexOf('id="refine"')); // machine, cut, WOC/DOC up top
   assert.match(html, /Gold = TiN \(general purpose\)/);
   assert.match(html, /Pale champagne gold = ZrN/);
   assert.match(html, /Blue-gray to rose-violet = TiCN/);
