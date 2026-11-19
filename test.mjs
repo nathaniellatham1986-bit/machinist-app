@@ -769,7 +769,9 @@ console.log('estimate tests ok');
   assert.match(html, /Shop guide, colour is a hint, not proof/);
   assert.match(html, /<summary>What color is it\?<\/summary>/); // guide folded behind a tap
   assert.match(html, /data-path="gen">Generic tool</); assert.match(html, /data-path="label">Known tool</);
-  assert.doesNotMatch(html + appSrc, /Advanced/i); assert.doesNotMatch(appSrc, /CALCULATED:/);
+  assert.doesNotMatch(html + appSrc, /Advanced/i); assert.doesNotMatch(appSrc, /\$\('mat'\)\.value = 'p-mild'/); // material never defaulted (fresh pick every open)
+  assert.doesNotMatch(appSrc, /\$\('pn'\)\.focus\(\)/); // Known tool must not jump past Material
+  assert.doesNotMatch(appSrc, /CALCULATED:/);
   assert.ok(html.indexOf('id="mach"') < html.indexOf('id="refine"') && html.indexOf('id="ae"') < html.indexOf('id="refine"') && html.indexOf('id="cut"') < html.indexOf('id="refine"')); // machine, cut, WOC/DOC up top
   assert.match(html, /Gold = TiN \(general purpose\)/);
   assert.match(html, /Pale champagne gold = ZrN/);
