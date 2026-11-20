@@ -777,7 +777,7 @@ console.log('estimate tests ok');
   assert.match(html, /Gold = TiN \(general purpose\)/);
   assert.match(html, /Pale champagne gold = ZrN/);
   assert.match(html, /Blue-gray to rose-violet = TiCN/);
-  assert.match(html, /Violet, dark gray, or near-black = TiAlN\/AlTiN/);
+  assert.match(html, /Violet, dark gray, or near-black = TiAlN\/AlTiN/); assert.match(html, /Carbide tools only\. Black on HSS is black oxide\./); assert.match(html, /data-coat="uncoated"><i[^>]*><\/i><span>Dull black on HSS = black oxide\. Run it as uncoated\./);
   assert.match(html, /Dark gray with a rainbow sheen = DLC\/diamond/);
   const base = JSON.parse(fs.readFileSync('data/_baseline.json', 'utf8'));
   assert.ok(base.cells.length > 20, 'baseline cells ' + base.cells.length);
