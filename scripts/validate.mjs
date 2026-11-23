@@ -30,7 +30,7 @@ function specs(sp, w, err) { if (!sp || typeof sp !== 'object') return err(w, 's
   if ('fluteStyle' in sp && sp.cutOrForm === 'form') err(w, 'specs.fluteStyle is for cut taps');
   if (!sp.source || !isStr(sp.source.url) || !isStr(sp.source.retrieved)) err(w, 'specs.source needs url and retrieved'); }
 const COND_KEYS = new Set(['fzPerD', 'label', 'iso', 'subgroup', 'material', 'status', 'coolant', 'sfm', 'feed', 'ap', 'ae', 'apx', 'aex', 'source', 'materials', 'sourceGroup', 'strictMaterials', 'excludeMaterials',
-  'noseRadius', 'leadAngle', 'toolLife', 'insertWidth', 'chipbreaker', 'geometry', 'kind', 'table', 'woc', 'operation', 'insert', 'grade', 'note', 'coolantNote', 'altSources', 'printed']);
+  'noseRadius', 'leadAngle', 'toolLife', 'insertWidth', 'chipbreaker', 'geometry', 'kind', 'table', 'woc', 'operation', 'insert', 'grade', 'note', 'coolantNote', 'altSources', 'printed', 'review']);
 const SRC_KEYS = new Set(['kind', 'manufacturer', 'catalog', 'edition', 'url', 'page', 'notes', 'derivation', 'retrieved']);
 
 const isNum = v => typeof v === 'number' && Number.isFinite(v) && v >= 0;
