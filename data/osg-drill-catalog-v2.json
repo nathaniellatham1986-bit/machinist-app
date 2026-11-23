@@ -1098,6 +1098,7 @@
      },
      "table": "General Drilling Operations 2, column 2",
      "status": "verified",
+     "review": "OSG p.306 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -1158,6 +1159,7 @@
      },
      "table": "General Drilling Operations 2, column 2",
      "status": "derived",
+     "review": "OSG p.306 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -4782,6 +4784,7 @@
      },
      "table": "General Drilling Operations 1, column 2",
      "status": "derived",
+     "review": "OSG p.314 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -4831,6 +4834,7 @@
      },
      "table": "General Drilling Operations 1, column 3",
      "status": "derived",
+     "review": "OSG p.314 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -4876,6 +4880,7 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "derived",
+     "review": "OSG p.314 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5015,6 +5020,7 @@
      },
      "table": "General Drilling Operations 2, column 2",
      "status": "derived",
+     "review": "OSG p.314 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5060,6 +5066,7 @@
      },
      "table": "General Drilling Operations 2, column 3",
      "status": "derived",
+     "review": "OSG p.314 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5105,6 +5112,7 @@
      },
      "table": "General Drilling Operations 2, column 4",
      "status": "derived",
+     "review": "OSG p.314 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5150,6 +5158,7 @@
      },
      "table": "General Drilling Operations 2, column 5",
      "status": "derived",
+     "review": "OSG p.314 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5195,6 +5204,7 @@
      },
      "table": "General Drilling Operations 2, column 5",
      "status": "derived",
+     "review": "OSG p.314 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5289,6 +5299,7 @@
      },
      "table": "General Drilling Operations 1, column 2",
      "status": "derived",
+     "review": "OSG p.315 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5334,6 +5345,7 @@
      },
      "table": "General Drilling Operations 1, column 3",
      "status": "derived",
+     "review": "OSG p.315 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5375,6 +5387,7 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "derived",
+     "review": "OSG p.315 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5461,6 +5474,7 @@
      },
      "table": "General Drilling Operations 2, column 2",
      "status": "derived",
+     "review": "OSG p.315 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5502,6 +5516,7 @@
      },
      "table": "General Drilling Operations 2, column 3",
      "status": "derived",
+     "review": "OSG p.315 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5543,6 +5558,7 @@
      },
      "table": "General Drilling Operations 2, column 4",
      "status": "derived",
+     "review": "OSG p.315 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5584,6 +5600,7 @@
      },
      "table": "General Drilling Operations 2, column 5",
      "status": "derived",
+     "review": "OSG p.315 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5617,6 +5634,7 @@
      },
      "table": "General Drilling Operations 2, column 5",
      "status": "derived",
+     "review": "OSG p.315 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -6472,6 +6490,7 @@
      },
      "table": "General Drilling Operations 2, column 3",
      "status": "verified",
+     "review": "OSG p.316 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -6532,6 +6551,7 @@
      },
      "table": "General Drilling Operations 2, column 3",
      "status": "derived",
+     "review": "OSG p.316 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -6605,6 +6625,7 @@
      },
      "table": "General Drilling Operations 2, column 6",
      "status": "verified",
+     "review": "OSG p.316 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -6665,6 +6686,7 @@
      },
      "table": "General Drilling Operations 2, column 6",
      "status": "verified",
+     "review": "OSG p.316 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -6725,6 +6747,7 @@
      },
      "table": "General Drilling Operations 2, column 6",
      "status": "derived",
+     "review": "OSG p.316 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -6798,6 +6821,7 @@
      },
      "table": "General Drilling Operations 2, column 6",
      "status": "derived",
+     "review": "OSG p.316 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -8216,6 +8240,7 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "verified",
+     "review": "OSG p.318 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -8292,6 +8317,7 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "derived",
+     "review": "OSG p.318 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -10072,6 +10098,7 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "verified",
+     "review": "OSG p.320 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -10132,6 +10159,7 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "derived",
+     "review": "OSG p.320 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -10205,6 +10233,7 @@
      },
      "table": "General Drilling Operations 1, column 5",
      "status": "verified",
+     "review": "OSG p.320 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -10265,6 +10294,7 @@
      },
      "table": "General Drilling Operations 1, column 5",
      "status": "derived",
+     "review": "OSG p.320 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -20815,6 +20845,7 @@
      },
      "table": "General Drilling Operations 1, column 5",
      "status": "verified",
+     "review": "OSG p.342 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -20883,6 +20914,7 @@
      },
      "table": "General Drilling Operations 1, column 5",
      "status": "derived",
+     "review": "OSG p.342 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -21565,6 +21597,7 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "verified",
+     "review": "OSG p.344 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -21625,6 +21658,7 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "derived",
+     "review": "OSG p.344 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -23918,6 +23952,7 @@
      },
      "table": "General Drilling Operations 1, column 5",
      "status": "derived",
+     "review": "OSG p.349 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -23983,6 +24018,7 @@
      },
      "table": "General Drilling Operations 1, column 5",
      "status": "derived",
+     "review": "OSG p.349 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -24048,6 +24084,7 @@
      },
      "table": "General Drilling Operations 1, column 6",
      "status": "derived",
+     "review": "OSG p.349 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -24561,6 +24598,7 @@
      },
      "table": "General Drilling Operations 1, column 5",
      "status": "verified",
+     "review": "OSG p.350 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -24621,6 +24659,7 @@
      },
      "table": "General Drilling Operations 1, column 5",
      "status": "derived",
+     "review": "OSG p.350 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -24690,6 +24729,7 @@
      },
      "table": "Work 1, column 3",
      "status": "verified",
+     "review": "OSG p.351 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -24750,6 +24790,7 @@
      },
      "table": "Work 1, column 3",
      "status": "derived",
+     "review": "OSG p.351 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -24811,6 +24852,7 @@
      },
      "table": "Work 1, column 4",
      "status": "verified",
+     "review": "OSG p.351 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -24871,6 +24913,7 @@
      },
      "table": "Work 1, column 4",
      "status": "derived",
+     "review": "OSG p.351 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -24932,6 +24975,7 @@
      },
      "table": "Work 1, column 5",
      "status": "verified",
+     "review": "OSG p.351 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -24992,6 +25036,7 @@
      },
      "table": "Work 1, column 5",
      "status": "derived",
+     "review": "OSG p.351 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -25053,6 +25098,7 @@
      },
      "table": "Work 1, column 6",
      "status": "verified",
+     "review": "OSG p.351 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -25113,6 +25159,7 @@
      },
      "table": "Work 1, column 6",
      "status": "derived",
+     "review": "OSG p.351 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -27163,6 +27210,7 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "verified",
+     "review": "OSG p.353 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -27231,6 +27279,7 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "verified",
+     "review": "OSG p.353 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -27303,6 +27352,7 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "derived",
+     "review": "OSG p.353 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -27404,6 +27454,7 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "derived",
+     "review": "OSG p.353 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -27509,6 +27560,7 @@
      },
      "table": "General Drilling Operations 1, column 5",
      "status": "verified",
+     "review": "OSG p.353 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -27577,6 +27629,7 @@
      },
      "table": "General Drilling Operations 1, column 5",
      "status": "derived",
+     "review": "OSG p.353 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -27678,6 +27731,7 @@
      },
      "table": "General Drilling Operations 1, column 6",
      "status": "verified",
+     "review": "OSG p.353 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -27746,6 +27800,7 @@
      },
      "table": "General Drilling Operations 1, column 6",
      "status": "derived",
+     "review": "OSG p.353 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -27847,6 +27902,7 @@
      },
      "table": "General Drilling Operations 1, column 7",
      "status": "verified",
+     "review": "OSG p.353 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -27915,6 +27971,7 @@
      },
      "table": "General Drilling Operations 1, column 7",
      "status": "derived",
+     "review": "OSG p.353 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -28381,6 +28438,7 @@
      },
      "table": "General Drilling Operations 1, column 5",
      "status": "derived",
+     "review": "OSG p.354 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -28446,6 +28504,7 @@
      },
      "table": "General Drilling Operations 1, column 6",
      "status": "derived",
+     "review": "OSG p.354 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",

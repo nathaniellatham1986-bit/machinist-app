@@ -896,6 +896,26 @@ console.log('estimate tests ok');
   assert.equal(matchPart('6065', listed).series, 'Series 6065');
   assert.equal(matchPart('nope', listed), null);
   console.log('part number and metal-borrow tests pass'); }
+{ // OSG drill rows whose printed columns are shifted or unconfirmed (stage 1): flagged rows give no numbers anywhere, and the card says Check catalog
+  const C = await import('./calc.js'), F = await import('./fallback.js');
+  const doc = J('./data/osg-drill-catalog-v2.json'), micro = doc.tools.find(t => t.conditions.some(c => /page=314/.test(c.source.url)));
+  const al = micro.conditions.find(c => /Aluminum Alloy 5025/.test(c.label)), s3 = micro.conditions.find(c => /300 Series Austenitic/.test(c.label));
+  assert.equal(al.review, 'OSG p.314 columns under review'); assert.equal(s3.review, 'OSG p.314 columns under review');
+  assert.ok(!micro.conditions.find(c => /Carbon Steels, Mild Steels/.test(c.label)).review); // column 1 matches the page: still usable
+  const held = C.holdReview(micro);
+  assert.equal(held.conditions.length, micro.conditions.length); // row positions unchanged
+  for (const c of held.conditions.filter(c => c.review)) { assert.equal(c.sfm, undefined); assert.equal(c.feed, undefined); assert.equal(c.printed, undefined); assert.ok(!C.rowUsable(held, c)); }
+  const mats = Object.fromEntries(IDX.materials.map(m => [m.id, m]));
+  assert.ok(held.conditions.some(c => c.review && C.matchMat(mats.ss304, c))); // the card's Check catalog line finds the 304 row
+  const only = { ...micro, conditions: micro.conditions.filter(c => c.review) };
+  assert.equal(F.packTool(C.holdReview(only)), null); assert.ok(F.packTool(only)); // no other-maker or baseline borrowing from a flagged row
+  F.resetBaseline(); F.noteBaseline(C.holdReview(only)); assert.equal(F.baselineDoc().cells.length, 0); F.resetBaseline();
+  const ent = IDX.files.find(f => f.file === 'osg-drill-catalog-v2.json').tools[doc.tools.indexOf(micro)];
+  assert.ok(!ent.fullIsos.includes('N')); // the index no longer claims printed aluminum data for ADO-MICRO p.314
+  const appSrc = fs.readFileSync('app.js', 'utf8');
+  assert.match(appSrc, /withPairs\(holdReview\(t\)\)/); assert.match(appSrc, /Check catalog: \$\{esc\(rv\.join/); assert.match(appSrc, /if \(!c\.review && okC\(c\)/);
+  const n = doc.tools.flatMap(t => t.conditions).filter(c => c.review).length; assert.ok(n >= 50, 'flagged rows ' + n);
+  console.log('OSG drill review-flag tests pass', n); }
 { const { execFileSync } = await import('node:child_process');
   const files = execFileSync('git', ['ls-files', '-z', '--', '*.js', '*.json', '*.html'], { encoding: 'utf8' }).split('\0').filter(Boolean);
   const marks = ['<'.repeat(7), '>'.repeat(7)];

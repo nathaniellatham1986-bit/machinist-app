@@ -356,6 +356,12 @@ export const brandUsable = (t, m, onlyData = true) => { if (m && !(t.mats.includ
 // Turning: a tool whose record holds a speed-only table (by material group) and a feed-only insert table ('all materials')
 // from DIFFERENT catalog pages gets paired rows. Each paired row keeps both sources (source = speed page, feedSource = feed page)
 // and is flagged paired, so the UI never shows it as one manufacturer row. Same tool record only; never across tools or brands.
+// Rows tagged `review` (printed columns not yet confirmed against the page) are held back: the loaded copy keeps the row's
+// label/material/page so the card can say "Check catalog", but drops every number, so no speed or feed is ever read from it.
+// Row positions stay the same, so saved condition indices still point at the same rows.
+const REVIEW_DROP = ['sfm', 'feed', 'printed', 'ap', 'ae', 'apx', 'aex', 'fzPerD'];
+export const holdReview = t => !t?.conditions?.some(c => c.review) ? t
+  : { ...t, conditions: t.conditions.map(c => c.review ? Object.fromEntries(Object.entries(c).filter(([k]) => !REVIEW_DROP.includes(k))) : c) };
 const pageOf = s => `${s?.url ?? ''}|${s?.page ?? ''}`;
 export const withPairs = t => { const cs = t.conditions ?? []; if (t.mode !== 'turn' || cs.some(c => c.paired)) return t;
   const S = cs.filter(c => c.sfm && !c.feed && c.iso && c.iso !== '*' && c.status !== 'shop-proven' && turnOpOf(t, c) !== 'Thread'),

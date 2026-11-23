@@ -2,7 +2,7 @@ import { MODES, migrate, forMode, upsertMachine, dedupeMachines, removeMachine, 
 import { enhance } from './combo.js';
 import { estimate, borrowOther, ESTIMATES_ON, EST_MODES, RUNG3_ON, sizeTxt } from './estimate.js';
 import { packTool, resolveFeed, genericQuote, preferFinish, radialCovers, thinNote, COAT_LABEL, substrateOf, noRowLine, matchPart } from './fallback.js';
-import { matBad, brandUsable, commonDrillMm, nice, compute, sulph303, medForMild, mildCarbonNote, dropMedWhenLow, dataAt, dataRank, withPairs, noDataWhy, sharedPartial, partialListNote, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf as kindOf0, INDEXABLE_ON, bodyAt, bodyDc, indexablePair, indexableWocs, millIndexable, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, usedFzParts, torqueNeedNm, iprFromFz, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, classifyOverride, classifyEng, engFrac, drillTier, rowDia, rowExcludes, toolLifeOf, GRADE_ALIASES, resolveMatId } from './calc.js';
+import { matBad, brandUsable, commonDrillMm, nice, compute, sulph303, medForMild, mildCarbonNote, dropMedWhenLow, dataAt, dataRank, withPairs, holdReview, noDataWhy, sharedPartial, partialListNote, drill, turn, tap, pick, coolModes, COOL_NAMES, shared303, printedAt, printedRun, matchMat, passOf, cutOf, turnOpOf, turnOpsOf, kindOf as kindOf0, INDEXABLE_ON, bodyAt, bodyDc, indexablePair, indexableWocs, millIndexable, tapTypeOf, boreLimit, gradeList, pickGrade, gradesOf, geoName, css, stickoutFactor, usedFzParts, torqueNeedNm, iprFromFz, fzFromPerD, matPref, threadPitchIn, inRange, isTaperThread, threadFeed, pitchCovers, distinctName, lowEnd, drillRank, isGun, isMFDrill, rangeText, classifyOverride, classifyEng, engFrac, drillTier, rowDia, rowExcludes, toolLifeOf, GRADE_ALIASES, resolveMatId } from './calc.js';
 let PASSNOTE = ''; // Review3 #4: set when the chosen Pass has no rows for this tool
 const $ = id => document.getElementById(id);
 const J = u => fetch(u).then(r => r.json());
@@ -18,7 +18,7 @@ const BODY_KIND = { face: 'Face mill', shoulder: 'Shoulder mill', 'high-feed': '
 const kindOf = t => { const b = IXON && (t?.bk ?? t?.bodies?.[0]?.type); return b ? BODY_KIND[b] ?? kindOf0(t) : kindOf0(t); };
 if (IXON) for (const t of SUM) if (t.bd?.length) Object.assign(t, { ps: t.bd, dr: [Math.min(...t.bd) - 5e-3, Math.max(...t.bd) + 5e-3], dd: (t.bIsos ?? []).flatMap(i => t.bd.map(x => [i, x - 5e-3, x + 5e-3])), fullIsos: t.bIsos ?? [] });
 const DOCS = {};
-const ensure = async key => { const f = key?.split('#')[0]; if (f && !DOCS[f]) { const d = await J('data/' + f); d.tools = d.tools.map(withPairs); DOCS[f] = d; } };
+const ensure = async key => { const f = key?.split('#')[0]; if (f && !DOCS[f]) { const d = await J('data/' + f); d.tools = d.tools.map(t => withPairs(holdReview(t))); DOCS[f] = d; } };
 const toolBy = key => { if (!key) return null; const [f, i] = key.split('#'); return DOCS[f]?.tools[+i] ?? null; };
 const realKey = () => $('grade').value.split('|')[0] || $('tool').value, curTool = () => toolBy(realKey());
 const BASE = await J('data/_baseline.json').catch(() => ({ cells: [], coats: [], kinds: {} }));
@@ -261,7 +261,7 @@ async function fillCond() {
   const okC = c => okP(c) && (PASSNOTE || !$('pass').value || passOf(c) === $('pass').value);
   fillTurnOpts(t, okC);
   const nrOk = c => mode !== 'turn' || ((!$('nose').value || nrKey(c) === $('nose').value) && (!$('cb').value || (c.chipbreaker ?? '') === $('cb').value));
-  (t?.conditions || []).forEach((c, i) => { if (okC(c) && nrOk(c) && cw.every(w => c.label.toLowerCase().includes(w)) && nc++ < 400) $('cond').add(new Option(nice(c.label) + (allMat(c) ? ' · Feed table, all materials' : '') + (c.status === 'shop-proven' ? ' · SHOP-PROVEN' : '') + (austGrade() && sulph303(c) ? ` · sulphured stainless (303 type), NOT ${austGrade()}` : '') + (matSel()?.id === 'p-mild' && medForMild(c) ? ' · medium/high-carbon, NOT 1018/A36' : '') + (matSel() && !allMat(c) && matchMat(matSel(), c) === 'group' && !(austGrade() && sulph303(c)) ? ` · matched by group: ${c.sourceGroup ?? c.subgroup ?? c.material ?? 'ISO ' + c.iso}` : '') + (matSel()?.id === 'ss303' && shared303(c) ? ' · 303 grouped with 304/316 as printed' : ''), i)); });
+  (t?.conditions || []).forEach((c, i) => { if (!c.review && okC(c) && nrOk(c) && cw.every(w => c.label.toLowerCase().includes(w)) && nc++ < 400) $('cond').add(new Option(nice(c.label) + (allMat(c) ? ' · Feed table, all materials' : '') + (c.status === 'shop-proven' ? ' · SHOP-PROVEN' : '') + (austGrade() && sulph303(c) ? ` · sulphured stainless (303 type), NOT ${austGrade()}` : '') + (matSel()?.id === 'p-mild' && medForMild(c) ? ' · medium/high-carbon, NOT 1018/A36' : '') + (matSel() && !allMat(c) && matchMat(matSel(), c) === 'group' && !(austGrade() && sulph303(c)) ? ` · matched by group: ${c.sourceGroup ?? c.subgroup ?? c.material ?? 'ISO ' + c.iso}` : '') + (matSel()?.id === 'ss303' && shared303(c) ? ' · 303 grouped with 304/316 as printed' : ''), i)); });
   { const opts = [...$('cond').options].map(o => [o.value, t.conditions[+o.value]]), full = c => (c.printed || c.sfm && (c.feed || mode === 'tap')) && c.status !== 'shop-proven' && !(mode === 'drill' && rowExcludes(c, inV('d')));
     const want = matSel()?.iso || $('iso').value || 'P', cat = opts.filter(([, c]) => full(c) && c.source.kind === 'catalog');
     // Speed-only and feed-only rows are not "full", but the same material preference still picks among them (4140 takes the alloy row, not the first non-alloy row).
@@ -470,7 +470,9 @@ function run() { tapBox(); updateFindLink(); favMark();
   const c = curTool()?.conditions[$('cond').value];
   let w = '';
   const held = curTool();
-  if (held && matSel() && !(held.conditions || []).some(c => isoOk(c) && (c.sfm || c.feed || c.printed))) w += `<div class="out"><span class="warn">${esc(noRowLine(held, matSel()))}</span></div>`;
+  const rv = held && matSel() ? [...new Set((held.conditions || []).filter(c => c.review && isoOk(c)).map(c => c.review))] : []; // rows held back by holdReview
+  if (rv.length) w += `<div class="warn">Check catalog: ${esc(rv.join('; '))}. The printed row for this material is held back until it is checked against the page, so the numbers below do not come from it.</div>`;
+  else if (held && matSel() && !(held.conditions || []).some(c => isoOk(c) && (c.sfm || c.feed || c.printed))) w += `<div class="out"><span class="warn">${esc(noRowLine(held, matSel()))}</span></div>`;
   if (mode === 'turn') {
     if (c?.ap && v('apT')) { const u = toIn(1, c.ap.unit), a = v('apT'); if ((c.ap.min != null && a < c.ap.min * u - 1e-6) || a > c.ap.max * u + 1e-6) w += `<div class="warn">DOC ${a} in is outside the ${c.status === 'shop-proven' ? 'recorded' : 'manufacturer'} range</div>`; }
     if (/Groove|Part/.test($('top').value)) w += `<div class="out">${c?.insertWidth ? `Blade / insert width: ${c.insertWidth.value ?? c.insertWidth.label} ${c.insertWidth.unit} (manufacturer)<br>` : ''}Reduce feed near center${$('top').value === 'Part' ? ' (last ~0.1 in before part-off)' : ''}. <span class="tag">GENERAL GUIDANCE, not manufacturer data</span></div>`;
