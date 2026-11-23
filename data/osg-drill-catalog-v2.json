@@ -13134,7 +13134,8 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "value": 20
+      "min": 2,
+      "max": 20
      },
      "table": "High Performance Micro Carbide Drills 1, column 1",
      "status": "derived",
@@ -13198,7 +13199,8 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "value": 20
+      "min": 2,
+      "max": 20
      },
      "table": "High Performance Micro Carbide Drills 1, column 1",
      "status": "derived",
@@ -13262,7 +13264,8 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "value": 20
+      "min": 2,
+      "max": 20
      },
      "table": "High Performance Micro Carbide Drills 1, column 2",
      "status": "derived",
@@ -13326,7 +13329,8 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "value": 20
+      "min": 2,
+      "max": 20
      },
      "table": "High Performance Micro Carbide Drills 1, column 2",
      "status": "derived",
@@ -13386,11 +13390,12 @@
      "iso": "H"
     },
     {
-     "label": "High Performance Micro Carbide Drills \u00b7 High Performance Micro Carbide Drills ABOUT OSG Aluminum Alloys, Cast Aluminum",
+     "label": "High Performance Micro Carbide Drills \u00b7 Aluminum Alloys, Cast Aluminum",
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "value": 30
+      "min": 2,
+      "max": 30
      },
      "table": "High Performance Micro Carbide Drills 1, column 3",
      "status": "derived",
@@ -13450,10 +13455,14 @@
      "iso": "N"
     },
     {
-     "label": "Work \u00b7 High Heat Material Ti-Alloy 2-7 SFM",
+     "label": "High Performance Micro Carbide Drills \u00b7 High Heat Material Ti-Alloy",
      "coolant": null,
-     "sfm": null,
-     "table": "Work 2, column 1",
+     "sfm": {
+      "unit": "ft/min",
+      "min": 2,
+      "max": 7
+     },
+     "table": "High Performance Micro Carbide Drills 2, column 1",
      "status": "derived",
      "feed": {
       "kind": "ipr",
@@ -13511,10 +13520,14 @@
      "iso": "S"
     },
     {
-     "label": "Work \u00b7 Inconel, Waspaloy 2-5 SFM",
+     "label": "High Performance Micro Carbide Drills \u00b7 High Heat Material Inconel, Waspaloy",
      "coolant": null,
-     "sfm": null,
-     "table": "Work 2, column 2",
+     "sfm": {
+      "unit": "ft/min",
+      "min": 2,
+      "max": 5
+     },
+     "table": "High Performance Micro Carbide Drills 2, column 2",
      "status": "derived",
      "feed": {
       "kind": "ipr",

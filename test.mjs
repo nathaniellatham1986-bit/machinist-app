@@ -630,7 +630,7 @@ console.log('estimate tests ok');
       else if (cover === 'both') assert.ok(c.materials.includes('ss304') && c.materials.includes('ss316'), f + ' ' + (c.sourceGroup || '').slice(0, 60));
       else assert.ok(c.materials.includes('ss304') && !c.materials.includes('ss316'), cover + ' ' + f); })); }
   assert.equal(n, 139034);
-  assert.equal(h.digest('hex'), 'afe17f5a0b0e53bbd4288e983703fbbdfcb8a4dd6ea0d60ea7a2f8c6ac9118be');
+  assert.equal(h.digest('hex'), 'f758f2d225f5bc6d1672b666be9e9c8ebb3dfadfc33ebf491b4c669bb38e649a');
   console.log('304/316 split tests pass'); }
 // Iscar CNMG 432-TF IC908 box label: ISO P range only. Midpoint of the printed range; no M/K/S/H/N numbers; TBD stub gone.
 { const { pick, matchMat } = await import('./calc.js');
