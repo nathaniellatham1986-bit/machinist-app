@@ -629,8 +629,8 @@ console.log('estimate tests ok');
       if (cover === '316') assert.ok(c.materials.includes('ss316') && !c.materials.includes('ss304'), f);
       else if (cover === 'both') assert.ok(c.materials.includes('ss304') && c.materials.includes('ss316'), f + ' ' + (c.sourceGroup || '').slice(0, 60));
       else assert.ok(c.materials.includes('ss304') && !c.materials.includes('ss316'), cover + ' ' + f); })); }
-  assert.equal(n, 139034);
-  assert.equal(h.digest('hex'), 'e7bfb2d8c0c125841bf608873ac639b8aa6c01bbf196a726b7d03561cd78b699');
+  assert.equal(n, 139054);
+  assert.equal(h.digest('hex'), '82825b23e5603093739ca35b682ee0230066217f77a695b134517664b7c3f9a2'); // MS2MD derived rows split per printed size (generic-pick-fix)
   console.log('304/316 split tests pass'); }
 // Iscar CNMG 432-TF IC908 box label: ISO P range only. Midpoint of the printed range; no M/K/S/H/N numbers; TBD stub gone.
 { const { pick, matchMat } = await import('./calc.js');
@@ -884,7 +884,30 @@ console.log('estimate tests ok');
     assert.ok(tap.rpm > 0 && tap.fpt === 0.05 && tap.ipm > 0, 'tap 1/4-20 ' + JSON.stringify(tap));
     assert.match(gq('drill', 'cobalt', 'ss304', 0.25).caution, /Coated-tool number/); // only coated cobalt rows printed for 304
     const d15 = gq('drill', 'hss', 'p-mild', 15 / 64);
-    assert.doesNotMatch(d15.text, /alloy/i, 'mild-steel drill used an alloy row: ' + d15.text);
+    assert.doesNotMatch(d15.text, /\balloy/i, 'mild-steel drill used an alloy row: ' + d15.text); // "Unalloyed" rows are mild steel
+    // Generic pick fix (ME): one printed row near the middle, low-end speed, middle chip load, no light/ball/derived rows.
+    const s304 = gq('mill', 'carbide', 'ss304', 0.5);
+    assert.ok(Math.abs(s304.fpt - 0.0019) < 0.0002, '304 carbide 1/2 fpt ' + s304.fpt);
+    assert.equal(s304.note, "Don't go lighter than this, rubbing work-hardens it.");
+    assert.equal(gq('mill', 'carbide', 'ss316', 0.5).note, "Don't go lighter than this, rubbing work-hardens it.");
+    assert.equal(mild.note, ''); assert.equal(ht.note, '');
+    assert.ok(ht.fpt >= 0.0015, '4140 HT fpt ' + ht.fpt);
+    const h13c = gq('mill', 'carbide', 'h13-hard', 0.5);
+    assert.doesNotMatch(`${h13c.series} ${h13c.text}`, /56B|ball|HSM|Fin\b|finish/i, 'H13 hard from a light-cut row: ' + h13c.text);
+    assert.ok(h13c.fpt >= 0.002 && h13c.sfm <= 250, 'H13 hard carbide ' + h13c.sfm + ' ' + h13c.fpt);
+    assert.match(h13.warn, /use carbide/);
+    const hssMild = gq('mill', 'hss', 'p-mild', 0.5);
+    for (const id of ['4140-ann', '4140-ht']) { const q = gq('mill', 'hss', id, 0.5); assert.ok(q.sfm <= hssMild.sfm && q.capped, id + ' HSS ' + q.sfm); assert.match(q.text, /Capped at mild steel/); }
+    assert.equal(gq('mill', 'hss', 'plastic', 0.5).capped, false);
+    for (const q of [s304, ht, h13c]) assert.match(q.text, /Speed: (low end of printed range [^;]+|as printed); chip load: (middle of printed range|as printed)/);
+    // Dormer pages: each tool cites its PDF page (verified +1 fix), e.g. S212 on p.20, S221 on p.24.
+    { const dd = JSON.parse(fs.readFileSync('data/dormer-pramet-mill-endmills.json', 'utf8')), pgOf = sr => new Set(dd.tools.find(t => new RegExp(`\\b${sr}\\b`).test(t.series)).conditions.map(c => String(c.source.page).match(/\d+/)[0]));
+      assert.deepEqual([...pgOf('S212')], ['20']); assert.deepEqual([...pgOf('S221')], ['24']);
+      assert.ok(dd.tools.filter(t => /^S2/.test(t.series.replace(/^Dormer /, '')) && !/S20[67]/.test(t.series)).every(t => /AlTiN/.test(t.coating)), 'Dormer S2xx AlTiN'); }
+    // Mitsubishi MS2MD derived rows: one speed per printed size (12 mm hardened = 143.3 m/min, not the 100.5 of the 1 mm size).
+    { const md = JSON.parse(fs.readFileSync('data/mitsubishi-materials-mitsubishi-mill-solid-endmills.json', 'utf8')).tools.find(t => t.series === 'MS2MD');
+      const r12 = md.conditions.find(c => c.status === 'derived' && /45-55HRC/.test(c.label) && c.feed.byDiameter['12']);
+      assert.equal(r12.sfm.value, 143.3); assert.equal(Object.keys(r12.feed.byDiameter).length, 1); }
     let n = 0;
     for (const m of mats) for (const [mode, subs, ds] of [['mill', ['hss', 'cobalt', 'carbide'], [0.125, 0.5, 1]], ['drill', ['hss', 'cobalt', 'carbide'], [0.125, 0.5]], ['turn', ['carbide'], [1, 3]], ['tap', ['hss'], [0.25]]])
       for (const sub of subs) for (const d of ds) for (const coat of ['uncoated', 'altin']) {

@@ -228,18 +228,21 @@ export function resolveFeed({ tool, mat, iso, mode, cut = '', d, pool = [], base
 // No mat = ISO-group cell (median of every row in the group). mat = cell for one app material, built only from rows that
 // match it (tier: see matTier). Numbers are the row's printed low end.
 const CELLS = new Map();
-const SPECIALTY = /micro|miniature|long.?reach|reduced.?neck|barrel|deep.?hole|high.?feed|hi.?feed/i;
+const SPECIALTY = /micro|miniature|long.?reach|reduced.?neck|extra.?long|barrel|ball.?nose|deep.?hole|high.?feed|hi.?feed/i;
 const SUPERHARD = /\bCBN\b|\bPCD\b|ceramic|cermet|diamond|SUMIBORON|SUMIDIA|\bBNC?\d/i;
 const HT_WORDS = /harden|heat.?treated|pre.?hard|quench|\btempered\b|Verg[uü]t/i;
 let MATS = [];
 export function resetBaseline() { CELLS.clear(); }
 export function setBaselineMaterials(list) { MATS = list || []; }
 // Low end of the printed range: the safe end of the maker's own numbers. A printed start is used only when no minimum is printed.
+// Middle of a printed range (a single printed value is used as printed).
+const midNum = (spec, k) => { if (spec == null) return null; const v = typeof spec === 'number' ? spec : spec.min != null && spec.max != null ? (spec.min + spec.max) / 2 : spec.value ?? spec.start ?? spec.min ?? spec.max; return v > 0 ? v * k : null; };
+const span = (spec, k) => spec && typeof spec === 'object' && spec.min != null && spec.max != null && spec.max > spec.min ? [spec.min * k, spec.max * k] : null;
 const minNum = (spec, k) => { if (spec == null) return null; const v = typeof spec === 'number' ? spec : spec.min ?? spec.value ?? spec.start ?? spec.max; return v > 0 ? v * k : null; };
 // Rows printed for a light radial cut (finishing, HEM, ae/D under 25%) do not serve the default 25% stepover.
 export function lightRow(c) {
   const s = `${c?.operation ?? ''} ${c?.label ?? ''}`;
-  if (/\bfinish/i.test(s) || cutOf(c) === 'HEM') return true;
+  if (/\bfinish|[-–]\s*Fin\b/i.test(s) || cutOf(c) === 'HEM') return true; // Helical prints finishing rows as "… - Fin"
   const m = s.match(/a[er]\s*\/\s*Dc?\s*=\s*(\d*\.?\d+)/i) || s.match(/\ba[er]\s*=\s*(\d*\.?\d+)\s*[x×]?\s*D\b/i);
   if (m && +m[1] < 0.25) return true;
   const r = radialLimit(c); return !!r && r.maxFrac != null && r.maxFrac < 0.25;
@@ -262,13 +265,21 @@ export function matTier(m, c) {
   if (m.id === 'p-mild' && carbonBand(s) === 'med') return null; // 1045/1050 rows are not mild steel
   if (m.hb && m.hb[0] >= 250 && !band && !HT_WORDS.test(s)) return null; // heat-treated pick: the row must print a hardness or say hardened
   if (m.hb && m.hb[1] <= 240 && !band && HT_WORDS.test(s)) return null; // annealed pick: never a hardened row
-  // A heat-treated pick prefers rows printed for a window above annealed; an annealed pick prefers rows that stop near annealed.
-  const broad = !m.hb ? 0 : m.hb[0] >= 250 ? (band && band[0] >= 200 ? 0 : 1) : m.hb[1] <= 240 ? (band && band[1] <= 310 ? 0 : 1) : 0;
+  // A heat-treated pick prefers rows printed for a closed window above annealed (an open "over Rc 32" is broad); an annealed pick prefers rows that stop near annealed.
+  const broad = !m.hb ? 0 : m.hb[0] >= 250 ? (band && band[0] >= 200 && band[1] <= 1000 ? 0 : 1) : m.hb[1] <= 240 ? (band && band[1] <= 310 ? 0 : 1) : 0;
   if (matchMat(m, c) === 'named') return broad;
   if (matPref(m.id, c, m) === 0) return 2 + broad;
   return m.hb && band ? 4 + broad : null;
 }
 // One printed row per cell. Odd count: the middle row. Even count: the lower of the two middle rows. Not an average.
+// The one printed row closest to both the middle speed and the middle chip load of the matched rows (no blending).
+export function middleRow(rows) {
+  if (!rows?.length) return null;
+  const med = xs => { const s = xs.slice().sort((a, b) => a - b), n = s.length; return n ? (n % 2 ? s[(n - 1) / 2] : (s[n / 2 - 1] + s[n / 2]) / 2) : null; };
+  const ms = med(rows.map(x => x.sfm)), mf = med(rows.map(x => x.feed).filter(x => x > 0));
+  const dist = x => Math.abs(x.sfm / ms - 1) + (mf && x.feed > 0 ? Math.abs(x.feed / mf - 1) : 0);
+  return rows.slice().sort((a, b) => dist(a) - dist(b) || a.sfm - b.sfm || (a.feed ?? 0) - (b.feed ?? 0) || String(a.brand).localeCompare(String(b.brand)) || String(a.series).localeCompare(String(b.series)))[0];
+}
 export function medianRow(rows) {
   if (!rows?.length) return null;
   const s = rows.slice().sort((a, b) => a.sfm - b.sfm || (a.feed ?? 0) - (b.feed ?? 0) || String(a.brand).localeCompare(String(b.brand)) || String(a.series).localeCompare(String(b.series)));
@@ -289,13 +300,16 @@ export function noteBaseline(t) {
   if (SPECIALTY.test(`${t.series ?? ''} ${t.type ?? ''}`)) return;
   const sub = substrateOf(t), kind = kindOf(t), tap = t.mode === 'tap';
   for (const c of t.conditions) {
-    if (!c?.sfm || (!c.feed && !tap) || c.status === 'shop-proven' || c.paired || c.iso === '*' || !c.source || !['catalog', 'label'].includes(c.source.kind)) continue;
+    if (!c?.sfm || (!c.feed && !tap) || c.status === 'shop-proven' || c.status === 'derived' || c.paired || c.iso === '*' || !c.source || !['catalog', 'label'].includes(c.source.kind)) continue;
     if (!pageNum(c.source.page) || lightRow(c)) continue; // every baseline number cites a page; light-cut rows stay out
     const sfm = minNum(c.sfm, SPK(c.sfm.unit));
-    const feed = tap ? null : packFeed(c.feed, minNum);
+    const feed = tap ? null : packFeed(c.feed, midNum); // speed at the low end, chip load at the middle of the printed range
+    const fk = c.feed?.unit ? toIn(1, c.feed.unit) : 1, fSpan = tap ? null : span(c.feed?.range, fk), sSpan = span(c.sfm, SPK(c.sfm.unit));
+    const apIn = d => { const a = c.ap; if (!a) return null; const v = a.max ?? a.value ?? a.min; if (!(v > 0)) return null; return /xD|D$/.test(a.unit || '') ? v * d : toIn(v, a.unit); };
     if (!(sfm > 0) || (!tap && !feed)) continue;
     const coat = coatOf(t, c), cite = { brand: brandName(t.brand), series: t.series || '', page: c.source.page || '', url: c.source.url || '', catalog: c.source.catalog || '', row: String(c.sourceGroup || c.label || '').slice(0, 140) };
     const hb = hardnessBand(rowBits(c)), extra = hb ? { hb: hb.map(Math.round) } : {};
+    if (sSpan) extra.sfmHi = Math.round(sSpan[1]); if (fSpan) extra.fRange = fSpan.map(x => +x.toFixed(5));
     if (t.mode === 'turn') extra.op = SUPERHARD.test(`${t.series ?? ''} ${t.type ?? ''} ${t.grade ?? ''} ${c.grade ?? ''} ${c.label ?? ''}`) ? 'Superhard' : turnOpOf(t, c);
     // Same ISO group. Plastics (app group O) also take rows that name them under another group (ISCAR files "fiber plastics" under N).
     const mats = MATS.map(m => [m.id, m.iso === c.iso ? matTier(m, c) : m.iso === 'O' && matchMat(m, c) === 'named' ? matTier(m, c) : null]).filter(([, k]) => k != null);
@@ -306,7 +320,8 @@ export function noteBaseline(t) {
       if (!(dia >= 1 / 16) || !(fpt > 0)) return; // under 1/16 in stays out of general cells
       const band = bandOf(dia);
       if (Math.max(dia, band) / Math.min(dia, band) > 2) return; // same kind and substrate already; diameter within about 2x
-      put({ mode: t.mode, kind, sub, coat, iso: c.iso, dia: band, sfm, feed: fpt, feedKind: feed.kind, at: dia, ...extra, ...cite });
+      const ap = apIn(dia); if (ap != null && ap <= 0.1 * dia + 1e-9) return; // printed depth of cut 0.1xD or less: a light-cut row
+      put({ mode: t.mode, kind, sub, coat, iso: c.iso, dia: band, sfm, feed: fpt, feedKind: feed.kind, at: dia, ...(ap != null ? { ap: +ap.toFixed(4) } : {}), ...extra, ...cite });
     };
     if (feed.range != null) {
       const span = diaSpan(c.label), dias = (t.diameters_in?.length ? t.diameters_in : t.diameters_mm?.map(x => x / 25.4)) || [];
@@ -321,13 +336,13 @@ export function noteBaseline(t) {
 export function baselineDoc() {
   const cells = [...CELLS.values()].map(list => {
     const best = Math.min(...list.map(x => x.tier ?? 0)), rows = list.filter(x => (x.tier ?? 0) === best);
-    const row = medianRow(rows);
+    const row = middleRow(rows);
     if (!row) return null; const { rowId, ...cell } = row; return cell; }).filter(Boolean);
   const coats = [...new Set(cells.map(c => c.coat))].filter(c => c && c !== 'unspecified').sort();
   const kinds = {};
   for (const c of cells) (kinds[c.mode] ??= new Set()).add(c.kind);
   return {
-    note: 'GENERATED from published catalog rows by scripts/build-index.mjs. Each cell is the median printed row (lower of the two middle rows when the count is even), at the low end of its printed range, not an average. Cells with "mat" hold only rows matched to that material (most specific rows only). Do not hand-edit.',
+    note: 'GENERATED from published catalog rows by scripts/build-index.mjs. Each cell is the one printed row closest to the middle speed and middle chip load of its rows: speed at the low end of that printed range, chip load at the middle of it. Cells with "mat" hold only rows matched to that material (most specific rows only). Do not hand-edit.',
     coats, kinds: Object.fromEntries([...Object.entries(kinds)].map(([m, s]) => [m, [...s].sort()])),
     cells,
   };
@@ -393,6 +408,7 @@ export function genericCell(base, q, mat) {
   const hit = best(cells.filter(c => !c.mat && c.iso === q.iso && ok(c) && hbOk(c)));
   return hit ? { c: hit.c, group: true } : null;
 }
+const fmt = (x, d) => d ? (+x).toFixed(d).replace(/^0(?=\.)/, '') : String(Math.round(x));
 const HARD = m => !!m && (m.iso === 'H' || (m.hb && m.hb[0] >= 371)); // about 40 HRC and up
 const inchMm = x => `${x.toFixed(3)} in (${(x * 25.4).toFixed(1)} mm)`;
 // Generic / unknown tool: step-5 baseline only. "Not sure" is HSS. Coating unknown uses TiN, else uncoated.
@@ -416,8 +432,21 @@ export function genericQuote({ baseline, mode, kind, sub = 'hss', coat = 'uncoat
     carbide: [['cobalt', 'No carbide row printed; cobalt row used (slower than carbide)'], ['hss', 'No carbide row printed; HSS row used (slower than carbide)']] };
   if (mode === 'mill' || mode === 'drill') for (const [alt, note] of ALT[useSub] || []) { if (hit) break; hit = genericCell(baseline, { ...q, subs: [alt] }, mat); if (hit) subNote = note; }
   if (!hit) return null;
-  const c = hit.c, sfm = c.sfm, fpt = mode === 'tap' ? (pitch ?? null) : c.feed;
+  const c = hit.c, fpt = mode === 'tap' ? (pitch ?? null) : c.feed;
+  let sfm = c.sfm, capNote = '';
+  // HSS in 4140 never runs faster than HSS in mild steel: cap at the generic HSS mild-steel speed (derived, not printed for 4140).
+  if ((mode === 'mill' || mode === 'drill') && useSub === 'hss' && /^4140/.test(mat?.id || '')) {
+    const mild = genericCell(baseline, { ...q, iso: 'P' }, { id: 'p-mild', iso: 'P' });
+    if (mild && !mild.group && mild.c.sfm < sfm) { sfm = mild.c.sfm; capNote = `Capped at mild steel: ${fmt(sfm)} SFM from ${mild.c.brand} ${mild.c.series}${pageNum(mild.c.page) ? ' p. ' + pageNum(mild.c.page) : ''} (derived, not printed for 4140; 4140 row prints ${fmt(c.sfm)})`; }
+  }
   const matWord = { hss: 'HSS', cobalt: 'cobalt', carbide: 'carbide' }[useSub] || useSub;
+  // Stainless: the chip load shown is the floor (ME, App Build): rubbing work-hardens it.
+  const note = c.iso === 'M' && mode !== 'tap' ? "Don't go lighter than this, rubbing work-hardens it." : '';
+  // Hardened steel from a hard-milling row (shallow printed depth or a hard-milling series): say so on the card.
+  let hardNote = '';
+  const lightAp = c.ap != null && c.ap <= 0.25 * (c.at || d); // printed depth a quarter of D or less
+  if (mode === 'mill' && HARD(mat) && (lightAp || /hard.?mill|high.?hard/i.test(`${c.series} ${c.row}`)))
+    hardNote = `Hard-milling end mill, light cuts only${lightAp ? ` (about ${c.ap.toFixed(3).replace(/^0/, '')}" deep)` : ''}.`;
   if (useCoat === 'uncoated' && COATED(c.coat)) caution = `Coated-tool number. Uncoated ${matWord} needs a slower speed.`;
   let text;
   if (unsure && useCoat === 'uncoated' && !coatNote && !warn) text = 'Generic HSS uncoated (tool material unknown)';
@@ -430,7 +459,11 @@ export function genericQuote({ baseline, mode, kind, sub = 'hss', coat = 'uncoat
   text += '. ' + (hit.group ? `Group number (ISO ${iso})${short ? `, not ${short}-specific` : ''}` : c.tier >= 4 ? `Matched by printed hardness, not a ${short} row` : `${short} row`);
   if (subNote) text += '. ' + subNote;
   const pg = pageNum(c.page);
-  text += `. Low end of printed range. Source: ${c.brand} ${c.series}${pg ? ' p. ' + pg : ''}${c.row ? `, row “${c.row}”` : ''}.`;
+  const rng = (a, b, d) => `${fmt(a, d)}–${fmt(b, d)}`;
+  text += `. Speed: ${c.sfmHi > c.sfm ? `low end of printed range ${rng(c.sfm, c.sfmHi)} SFM` : 'as printed'}`;
+  if (mode !== 'tap' && fpt) text += `; chip load: ${c.fRange ? `middle of printed range ${rng(c.fRange[0], c.fRange[1], 4)}` : 'as printed'}`;
+  text += `. Source: ${c.brand} ${c.series}${pg ? ' p. ' + pg : ''}${c.row ? `, row “${c.row}”` : ''}.`;
+  if (capNote) text += ' ' + capNote + '.';
   if ((mode === 'mill' || mode === 'drill') && c.at > 0 && Math.abs(c.at - d) > 0.01) text += ` Printed for the ${inchMm(c.at)} size, used for ${inchMm(d)}.`;
   const runAe = ae != null ? ae : (mode === 'mill' ? 0.25 * d : d);
   let rpm = 0, ipm = 0, thin = null;
@@ -438,7 +471,7 @@ export function genericQuote({ baseline, mode, kind, sub = 'hss', coat = 'uncoat
   else if (mode === 'turn') { const o = turn({ sfm, d, ipr: fpt, ap: ap != null ? ap : 0.04, maxRpm }); rpm = o.rpm; ipm = o.ipm; }
   else { const o = drill({ sfm, d, ipr: fpt ?? 0, maxRpm }); rpm = o.rpm; ipm = o.ipm; }
   return {
-    step: 5, estimate: true, sfm, fpt, feedKind, rpm, ipm, thin, text, warn, caution, group: hit.group, coatUsed: useCoat, coatNote, unsure,
+    step: 5, estimate: true, sfm, fpt, feedKind, rpm, ipm, thin, text, warn, caution, note, hardNote, capped: !!capNote, group: hit.group, coatUsed: useCoat, coatNote, unsure,
     url: c.url, page: c.page, brand: c.brand, series: c.series, catalog: c.catalog, derived: [],
   };
 }
