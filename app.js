@@ -52,9 +52,9 @@ function feedAt(f, dIn) {
   if (f.bands) { const u = toIn(1, f.unit), b = f.bands.find(([a, z]) => dIn >= a * u - 1e-4 && dIn <= z * u + 1e-4); return b ? pick({ value: b[2] }, u) : null; }
   if (f.byWoc) { const e = Object.entries(f.byWoc).find(([k]) => Math.abs(+k - frac.ae) < 0.005);
     return e ? pick(typeof e[1] === 'object' ? e[1] : { value: e[1] }, toIn(1, f.unit)) : null; }
-  for (const [k, v] of Object.entries(f.byDiameter || {})) if (Math.abs(toIn(+k, f.unit) - dIn) < 0.02)
-    return pick(typeof v === 'object' ? v : { value: v }, toIn(1, f.unit));
-  return null;
+  // nearest printed size within 0.02 in (micro drills print sizes closer than that: 0.7 mm and 1 mm are 0.012 in apart)
+  let best = null, gap = 0.02; for (const [k, v] of Object.entries(f.byDiameter || {})) { const g = Math.abs(toIn(+k, f.unit) - dIn); if (g < gap) { gap = g; best = v; } }
+  return best == null ? null : pick(typeof best === 'object' ? best : { value: best }, toIn(1, f.unit));
 }
 const fmt = rangeText;
 // Machines

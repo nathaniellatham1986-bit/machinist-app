@@ -1098,7 +1098,6 @@
      },
      "table": "General Drilling Operations 2, column 2",
      "status": "verified",
-     "review": "OSG p.306 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -1113,10 +1112,10 @@
        },
        "0.25": {
         "min": 0.006,
-        "max": 0.01
+        "max": 0.009
        },
        "0.375": {
-        "min": 0.007,
+        "min": 0.008,
         "max": 0.012
        },
        "0.4375": {
@@ -1145,7 +1144,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=306",
       "page": "306 (PDF p.306)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 2mm: 11,890 0.002-0.004; 3mm: 7,920 0.002-0.005; 0.125\": 7,490 0.003-0.005; 4mm: 5,940 0.003-0.006; 0.1875\": 4,990 0.004-0.007; 6mm: 3,960 0.005-0.009; 0.25\": 3,740 0.006-0.010; 8mm: 2,970 0.006-0.011; 0.375\": 2,500 0.007-0.012; 10mm: 2,380 0.008-0.012; 0.4375\": 2,140 0.008-0.012; 12mm: 1,980 0.008-0.012; 0.5\": 1,870 0.008-0.012; 14mm: 1,700 0.009-0.014; 0.625\": 1,500 0.010-0.014; 16mm: 1,500 0.010-0.014; 18mm: 1,320 0.011-0.015; 0.75\": 1,250 0.012-0.015; 20mm: 1,190 0.012-0.016 | Page notes: Note: 1. The indicated speeds and feeds are for drilling with water-soluble oil or MQL.                     4. These conditions are for drilling depth under 8 times the drill diameter. 2. Suitable cutting fluid is water-soluble high density oil (less than 20 times dilution).            5. 1D-2D step feeding may be required for drilling high hardened steels and 3. When using non-water-soluble oil or water-soluble oil (over 20 times dilution),"
+      "notes": "Printed RPM and feed per diameter: 2mm: 12,700 0.002-0.004; 3mm: 8,470 0.002-0.005; 0.125\": 8,000 0.003-0.005; 4mm: 6,350 0.003-0.006; 0.1875\": 5,330 0.004-0.007; 6mm: 4,230 0.005-0.009; 0.25\": 4,000 0.006-0.009; 8mm: 3,170 0.006-0.011; 0.375\": 2,670 0.008-0.012; 10mm: 2,540 0.008-0.012; 0.4375\": 2,290 0.008-0.012; 12mm: 2,120 0.008-0.012; 0.5\": 2,000 0.008-0.012; 14mm: 1,810 0.009-0.014; 0.625\": 1,600 0.010-0.014; 16mm: 1,600 0.010-0.014; 18mm: 1,410 0.011-0.015; 0.75\": 1,330 0.012-0.015; 20mm: 1,270 0.012-0.016 | Page notes: Note: 1. The indicated speeds and feeds are for drilling with water-soluble oil or MQL.                     4. These conditions are for drilling depth under 8 times the drill diameter. 2. Suitable cutting fluid is water-soluble high density oil (less than 20 times dilution).            5. 1D-2D step feeding may be required for drilling high hardened steels and 3. When using non-water-soluble oil or water-soluble oil (over 20 times dilution),"
      },
      "iso": "K"
     },
@@ -1159,7 +1158,6 @@
      },
      "table": "General Drilling Operations 2, column 2",
      "status": "derived",
-     "review": "OSG p.306 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -1218,7 +1216,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=306",
       "page": "306 (PDF p.306)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 2mm: 11,890 0.002-0.004; 3mm: 7,920 0.002-0.005; 0.125\": 7,490 0.003-0.005; 4mm: 5,940 0.003-0.006; 0.1875\": 4,990 0.004-0.007; 6mm: 3,960 0.005-0.009; 0.25\": 3,740 0.006-0.010; 8mm: 2,970 0.006-0.011; 0.375\": 2,500 0.007-0.012; 10mm: 2,380 0.008-0.012; 0.4375\": 2,140 0.008-0.012; 12mm: 1,980 0.008-0.012; 0.5\": 1,870 0.008-0.012; 14mm: 1,700 0.009-0.014; 0.625\": 1,500 0.010-0.014; 16mm: 1,500 0.010-0.014; 18mm: 1,320 0.011-0.015; 0.75\": 1,250 0.012-0.015; 20mm: 1,190 0.012-0.016 | Page notes: Note: 1. The indicated speeds and feeds are for drilling with water-soluble oil or MQL.                     4. These conditions are for drilling depth under 8 times the drill diameter. 2. Suitable cutting fluid is water-soluble high density oil (less than 20 times dilution).            5. 1D-2D step feeding may be required for drilling high hardened steels and 3. When using non-water-soluble oil or water-soluble oil (over 20 times dilution),",
+      "notes": "Printed RPM and feed per diameter: 2mm: 12,700 0.002-0.004; 3mm: 8,470 0.002-0.005; 0.125\": 8,000 0.003-0.005; 4mm: 6,350 0.003-0.006; 0.1875\": 5,330 0.004-0.007; 6mm: 4,230 0.005-0.009; 0.25\": 4,000 0.006-0.009; 8mm: 3,170 0.006-0.011; 0.375\": 2,670 0.008-0.012; 10mm: 2,540 0.008-0.012; 0.4375\": 2,290 0.008-0.012; 12mm: 2,120 0.008-0.012; 0.5\": 2,000 0.008-0.012; 14mm: 1,810 0.009-0.014; 0.625\": 1,600 0.010-0.014; 16mm: 1,600 0.010-0.014; 18mm: 1,410 0.011-0.015; 0.75\": 1,330 0.012-0.015; 20mm: 1,270 0.012-0.016 | Page notes: Note: 1. The indicated speeds and feeds are for drilling with water-soluble oil or MQL.                     4. These conditions are for drilling depth under 8 times the drill diameter. 2. Suitable cutting fluid is water-soluble high density oil (less than 20 times dilution).            5. 1D-2D step feeding may be required for drilling high hardened steels and 3. When using non-water-soluble oil or water-soluble oil (over 20 times dilution),",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "K"
@@ -4784,7 +4782,55 @@
      },
      "table": "General Drilling Operations 1, column 2",
      "status": "derived",
-     "review": "OSG p.314 columns under review",
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "byDiameter": {
+       "0.0276": {
+        "min": 0.0006,
+        "max": 0.0011
+       },
+       "0.0394": {
+        "min": 0.0008,
+        "max": 0.0016
+       },
+       "0.0591": {
+        "min": 0.0012,
+        "max": 0.0024
+       },
+       "0.0787": {
+        "min": 0.0016,
+        "max": 0.0031
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "OSG USA",
+      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
+      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
+      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=314",
+      "page": "314 (PDF p.314)",
+      "retrieved": "2026-10-23",
+      "notes": "Printed RPM and feed per diameter: 0.7mm: 18,200 0.0006-0.0011; 1mm: 12,700 0.0008-0.0016; 1.5mm: 8,500 0.0012-0.0024; 2mm: 6,400 0.0016-0.0031",
+      "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
+     },
+     "iso": "P",
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "General Drilling Operations \u00b7 Alloy Steels 4140, 4130"
+    },
+    {
+     "label": "General Drilling Operations \u00b7 300 Series Austenitic Stainless Steels",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 65,
+      "max": 195
+     },
+     "table": "General Drilling Operations 1, column 3",
+     "status": "derived",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -4818,23 +4864,18 @@
       "notes": "Printed RPM and feed per diameter: 0.7mm: 13,600 0.0003-0.0008; 1mm: 9,500 0.0004-0.0012; 1.5mm: 6,400 0.0006-0.0018; 2mm: 4,800 0.0008-0.0024",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
-     "iso": "P",
-     "materials": [
-      "p-alloy"
-     ],
-     "sourceGroup": "General Drilling Operations \u00b7 Alloy Steels 4140, 4130"
+     "iso": "M"
     },
     {
-     "label": "General Drilling Operations \u00b7 300 Series Austenitic Stainless Steels",
+     "label": "General Drilling Operations \u00b7 400 Series Ferritic Stainless Steels Martensitic Stainless Steels",
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "min": 65,
-      "max": 195
+      "min": 80,
+      "max": 145
      },
-     "table": "General Drilling Operations 1, column 3",
+     "table": "General Drilling Operations 1, column 4",
      "status": "derived",
-     "review": "OSG p.314 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -4866,52 +4907,6 @@
       "page": "314 (PDF p.314)",
       "retrieved": "2026-10-23",
       "notes": "Printed RPM and feed per diameter: 0.7mm: 15,900 0.0003-0.0008; 1mm: 11,100 0.0004-0.0012; 1.5mm: 7,400 0.0006-0.0018; 2mm: 5,600 0.0008-0.0024",
-      "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
-     },
-     "iso": "M"
-    },
-    {
-     "label": "General Drilling Operations \u00b7 400 Series Ferritic Stainless Steels Martensitic Stainless Steels",
-     "coolant": null,
-     "sfm": {
-      "unit": "ft/min",
-      "min": 80,
-      "max": 145
-     },
-     "table": "General Drilling Operations 1, column 4",
-     "status": "derived",
-     "review": "OSG p.314 columns under review",
-     "feed": {
-      "kind": "ipr",
-      "unit": "in",
-      "byDiameter": {
-       "0.0276": {
-        "min": 0.0004,
-        "max": 0.0007
-       },
-       "0.0394": {
-        "min": 0.0006,
-        "max": 0.001
-       },
-       "0.0591": {
-        "min": 0.001,
-        "max": 0.0015
-       },
-       "0.0787": {
-        "min": 0.0012,
-        "max": 0.002
-       }
-      }
-     },
-     "source": {
-      "kind": "catalog",
-      "manufacturer": "OSG USA",
-      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
-      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
-      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=314",
-      "page": "314 (PDF p.314)",
-      "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 0.7mm: 22,700 0.0004-0.0007; 1mm: 15,900 0.0006-0.001; 1.5mm: 10,600 0.001-0.0015; 2mm: 8,000 0.0012-0.002",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "M",
@@ -5020,7 +5015,6 @@
      },
      "table": "General Drilling Operations 2, column 2",
      "status": "derived",
-     "review": "OSG p.314 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5032,6 +5026,51 @@
        "0.0394": {
         "min": 0.0008,
         "max": 0.0016
+       },
+       "0.0591": {
+        "min": 0.0012,
+        "max": 0.0024
+       },
+       "0.0787": {
+        "min": 0.0016,
+        "max": 0.0031
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "OSG USA",
+      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
+      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
+      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=314",
+      "page": "314 (PDF p.314)",
+      "retrieved": "2026-10-23",
+      "notes": "Printed RPM and feed per diameter: 0.7mm: 18,200 0.0006-0.0011; 1mm: 12,700 0.0008-0.0016; 1.5mm: 8,500 0.0012-0.0024; 2mm: 6,400 0.0016-0.0031 | Page notes: Note: 1. This cutting condition chart is based on the usage of water-soluble coolant and           5. For accurate mounting, acceptable deflection of the body cylindrical part at the shank",
+      "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
+     },
+     "iso": "K"
+    },
+    {
+     "label": "General Drilling Operations \u00b7 Aluminum Alloy 5025,7075",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 65,
+      "max": 195
+     },
+     "table": "General Drilling Operations 2, column 3",
+     "status": "derived",
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "byDiameter": {
+       "0.0276": {
+        "min": 0.0003,
+        "max": 0.0008
+       },
+       "0.0394": {
+        "min": 0.0004,
+        "max": 0.0012
        },
        "0.0591": {
         "min": 0.0006,
@@ -5051,22 +5090,21 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=314",
       "page": "314 (PDF p.314)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 0.7mm: 18,200 0.0006-0.0011; 1mm: 12,700 0.0008-0.0016; 1.5mm: 8,500 0.0006-0.0018; 2mm: 6,400 0.0008-0.0024 | Page notes: Note: 1. This cutting condition chart is based on the usage of water-soluble coolant and           5. For accurate mounting, acceptable deflection of the body cylindrical part at the shank",
+      "notes": "Printed RPM and feed per diameter: 0.7mm: 18,200 0.0003-0.0008; 1mm: 12,700 0.0004-0.0012; 1.5mm: 8,500 0.0006-0.0018; 2mm: 6,400 0.0008-0.0024 | Page notes: Note: 1. This cutting condition chart is based on the usage of water-soluble coolant and           5. For accurate mounting, acceptable deflection of the body cylindrical part at the shank",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
-     "iso": "K"
+     "iso": "N"
     },
     {
-     "label": "General Drilling Operations \u00b7 Aluminum Alloy 5025,7075",
+     "label": "General Drilling Operations \u00b7 Cast Aluminum",
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
       "min": 65,
       "max": 195
      },
-     "table": "General Drilling Operations 2, column 3",
+     "table": "General Drilling Operations 2, column 4",
      "status": "derived",
-     "review": "OSG p.314 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5103,16 +5141,15 @@
      "iso": "N"
     },
     {
-     "label": "General Drilling Operations \u00b7 Cast Aluminum",
+     "label": "General Drilling Operations \u00b7 Special Alloy Steels, Hardened Steels \u00b7 26-30 HRC",
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "min": 65,
-      "max": 195
+      "min": 100,
+      "max": 130
      },
-     "table": "General Drilling Operations 2, column 4",
+     "table": "General Drilling Operations 2, column 5",
      "status": "derived",
-     "review": "OSG p.314 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5146,52 +5183,6 @@
       "notes": "Printed RPM and feed per diameter: 0.7mm: 15,900 0.0006-0.0011; 1mm: 11,100 0.0008-0.0016; 1.5mm: 7,400 0.0012-0.0024; 2mm: 5,600 0.0016-0.0031 | Page notes: Note: 1. This cutting condition chart is based on the usage of water-soluble coolant and           5. For accurate mounting, acceptable deflection of the body cylindrical part at the shank",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
-     "iso": "N"
-    },
-    {
-     "label": "General Drilling Operations \u00b7 Special Alloy Steels, Hardened Steels \u00b7 26-30 HRC",
-     "coolant": null,
-     "sfm": {
-      "unit": "ft/min",
-      "min": 100,
-      "max": 130
-     },
-     "table": "General Drilling Operations 2, column 5",
-     "status": "derived",
-     "review": "OSG p.314 columns under review",
-     "feed": {
-      "kind": "ipr",
-      "unit": "in",
-      "byDiameter": {
-       "0.0276": {
-        "min": 0.0006,
-        "max": 0.0011
-       },
-       "0.0394": {
-        "min": 0.0008,
-        "max": 0.0016
-       },
-       "0.0591": {
-        "min": 0.0012,
-        "max": 0.0024
-       },
-       "0.0787": {
-        "min": 0.0016,
-        "max": 0.0031
-       }
-      }
-     },
-     "source": {
-      "kind": "catalog",
-      "manufacturer": "OSG USA",
-      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
-      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
-      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=314",
-      "page": "314 (PDF p.314)",
-      "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 0.7mm: 11,500 0.0006-0.0011; 1mm: 8,000 0.0008-0.0016; 1.5mm: 5,300 0.0012-0.0024; 2mm: 4,000 0.0016-0.0031 | Page notes: Note: 1. This cutting condition chart is based on the usage of water-soluble coolant and           5. For accurate mounting, acceptable deflection of the body cylindrical part at the shank",
-      "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
-     },
      "iso": "P"
     },
     {
@@ -5204,7 +5195,6 @@
      },
      "table": "General Drilling Operations 2, column 5",
      "status": "derived",
-     "review": "OSG p.314 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5235,7 +5225,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=314",
       "page": "314 (PDF p.314)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 0.7mm: 11,500 0.0006-0.0011; 1mm: 8,000 0.0008-0.0016; 1.5mm: 5,300 0.0012-0.0024; 2mm: 4,000 0.0016-0.0031 | Page notes: Note: 1. This cutting condition chart is based on the usage of water-soluble coolant and           5. For accurate mounting, acceptable deflection of the body cylindrical part at the shank",
+      "notes": "Printed RPM and feed per diameter: 0.7mm: 15,900 0.0006-0.0011; 1mm: 11,100 0.0008-0.0016; 1.5mm: 7,400 0.0012-0.0024; 2mm: 5,600 0.0016-0.0031 | Page notes: Note: 1. This cutting condition chart is based on the usage of water-soluble coolant and           5. For accurate mounting, acceptable deflection of the body cylindrical part at the shank",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "H"
@@ -5299,7 +5289,51 @@
      },
      "table": "General Drilling Operations 1, column 2",
      "status": "derived",
-     "review": "OSG p.315 columns under review",
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "byDiameter": {
+       "0.0394": {
+        "min": 0.0008,
+        "max": 0.0016
+       },
+       "0.0591": {
+        "min": 0.0012,
+        "max": 0.0024
+       },
+       "0.0787": {
+        "min": 0.0016,
+        "max": 0.0031
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "OSG USA",
+      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
+      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
+      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=315",
+      "page": "315 (PDF p.315)",
+      "retrieved": "2026-10-23",
+      "notes": "Printed RPM and feed per diameter: 1mm: 12,700 0.0008-0.0016; 1.5mm: 8,500 0.0012-0.0024; 2mm: 6,400 0.0016-0.0031",
+      "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
+     },
+     "iso": "P",
+     "materials": [
+      "p-alloy"
+     ],
+     "sourceGroup": "General Drilling Operations \u00b7 Alloy Steels 4140, 4130"
+    },
+    {
+     "label": "General Drilling Operations \u00b7 300 Series Austenitic Stainless Steels",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 65,
+      "max": 195
+     },
+     "table": "General Drilling Operations 1, column 3",
+     "status": "derived",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5329,23 +5363,18 @@
       "notes": "Printed RPM and feed per diameter: 1mm: 9,500 0.0004-0.0012; 1.5mm: 6,400 0.0006-0.0018; 2mm: 4,800 0.0008-0.0024",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
-     "iso": "P",
-     "materials": [
-      "p-alloy"
-     ],
-     "sourceGroup": "General Drilling Operations \u00b7 Alloy Steels 4140, 4130"
+     "iso": "M"
     },
     {
-     "label": "General Drilling Operations \u00b7 300 Series Austenitic Stainless Steels",
+     "label": "General Drilling Operations \u00b7 400 Series Ferritic Stainless Steels Martensitic Stainless Steels",
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "min": 65,
-      "max": 195
+      "min": 80,
+      "max": 145
      },
-     "table": "General Drilling Operations 1, column 3",
+     "table": "General Drilling Operations 1, column 4",
      "status": "derived",
-     "review": "OSG p.315 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5373,48 +5402,6 @@
       "page": "315 (PDF p.315)",
       "retrieved": "2026-10-23",
       "notes": "Printed RPM and feed per diameter: 1mm: 11,100 0.0004-0.0012; 1.5mm: 7,400 0.0006-0.0018; 2mm: 5,600 0.0008-0.0024",
-      "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
-     },
-     "iso": "M"
-    },
-    {
-     "label": "General Drilling Operations \u00b7 400 Series Ferritic Stainless Steels Martensitic Stainless Steels",
-     "coolant": null,
-     "sfm": {
-      "unit": "ft/min",
-      "min": 80,
-      "max": 145
-     },
-     "table": "General Drilling Operations 1, column 4",
-     "status": "derived",
-     "review": "OSG p.315 columns under review",
-     "feed": {
-      "kind": "ipr",
-      "unit": "in",
-      "byDiameter": {
-       "0.0394": {
-        "min": 0.0002,
-        "max": 0.0008
-       },
-       "0.0591": {
-        "min": 0.0003,
-        "max": 0.0012
-       },
-       "0.0787": {
-        "min": 0.0004,
-        "max": 0.0016
-       }
-      }
-     },
-     "source": {
-      "kind": "catalog",
-      "manufacturer": "OSG USA",
-      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
-      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
-      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=315",
-      "page": "315 (PDF p.315)",
-      "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 3,200 0.0002-0.0008; 1.5mm: 2,100 0.0003-0.0012; 2mm: 1,600 0.0004-0.0016",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "M",
@@ -5474,7 +5461,47 @@
      },
      "table": "General Drilling Operations 2, column 2",
      "status": "derived",
-     "review": "OSG p.315 columns under review",
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "byDiameter": {
+       "0.0394": {
+        "min": 0.0008,
+        "max": 0.0016
+       },
+       "0.0591": {
+        "min": 0.0012,
+        "max": 0.0024
+       },
+       "0.0787": {
+        "min": 0.0016,
+        "max": 0.0031
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "OSG USA",
+      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
+      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
+      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=315",
+      "page": "315 (PDF p.315)",
+      "retrieved": "2026-10-23",
+      "notes": "Printed RPM and feed per diameter: 1mm: 12,700 0.0008-0.0016; 1.5mm: 8,500 0.0012-0.0024; 2mm: 6,400 0.0016-0.0031 | Page notes: Note: 1. This cutting condition chart is based on the usage of water-soluble coolant and                6. For work materials with poor chip evacuation, please 2. Please use quality water-soluble coolant with a dilution factor of approximately               7. For holes deeper than 12D, please use a 2D type drill to prepare a",
+      "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
+     },
+     "iso": "K"
+    },
+    {
+     "label": "General Drilling Operations \u00b7 Aluminum Alloy 5025,7075",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 65,
+      "max": 195
+     },
+     "table": "General Drilling Operations 2, column 3",
+     "status": "derived",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5504,19 +5531,18 @@
       "notes": "Printed RPM and feed per diameter: 1mm: 12,700 0.0004-0.0012; 1.5mm: 8,500 0.0006-0.0018; 2mm: 6,400 0.0008-0.0024 | Page notes: Note: 1. This cutting condition chart is based on the usage of water-soluble coolant and                6. For work materials with poor chip evacuation, please 2. Please use quality water-soluble coolant with a dilution factor of approximately               7. For holes deeper than 12D, please use a 2D type drill to prepare a",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
-     "iso": "K"
+     "iso": "N"
     },
     {
-     "label": "General Drilling Operations \u00b7 Aluminum Alloy 5025,7075",
+     "label": "General Drilling Operations \u00b7 Cast Aluminum",
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "min": 65,
-      "max": 195
+      "min": 100,
+      "max": 230
      },
-     "table": "General Drilling Operations 2, column 3",
+     "table": "General Drilling Operations 2, column 4",
      "status": "derived",
-     "review": "OSG p.315 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5549,16 +5575,15 @@
      "iso": "N"
     },
     {
-     "label": "General Drilling Operations \u00b7 Cast Aluminum",
+     "label": "General Drilling Operations \u00b7 Special Alloy Steels, Hardened Steels \u00b7 26-30 HRC",
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
       "min": 100,
-      "max": 230
+      "max": 130
      },
-     "table": "General Drilling Operations 2, column 4",
+     "table": "General Drilling Operations 2, column 5",
      "status": "derived",
-     "review": "OSG p.315 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5585,41 +5610,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=315",
       "page": "315 (PDF p.315)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 11,100 0.0008-0.0016; 1.5mm: 5,300 0.0012-0.0024; 2mm: 4,000 0.0016-0.0031 | Page notes: Note: 1. This cutting condition chart is based on the usage of water-soluble coolant and                6. For work materials with poor chip evacuation, please 2. Please use quality water-soluble coolant with a dilution factor of approximately               7. For holes deeper than 12D, please use a 2D type drill to prepare a",
-      "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
-     },
-     "iso": "N"
-    },
-    {
-     "label": "General Drilling Operations \u00b7 Special Alloy Steels, Hardened Steels \u00b7 26-30 HRC",
-     "coolant": null,
-     "sfm": {
-      "unit": "ft/min",
-      "min": 100,
-      "max": 130
-     },
-     "table": "General Drilling Operations 2, column 5",
-     "status": "derived",
-     "review": "OSG p.315 columns under review",
-     "feed": {
-      "kind": "ipr",
-      "unit": "in",
-      "byDiameter": {
-       "0.0394": {
-        "min": 0.0008,
-        "max": 0.0016
-       }
-      }
-     },
-     "source": {
-      "kind": "catalog",
-      "manufacturer": "OSG USA",
-      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
-      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
-      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=315",
-      "page": "315 (PDF p.315)",
-      "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 8,000 0.0008-0.0016 | Page notes: Note: 1. This cutting condition chart is based on the usage of water-soluble coolant and                6. For work materials with poor chip evacuation, please 2. Please use quality water-soluble coolant with a dilution factor of approximately               7. For holes deeper than 12D, please use a 2D type drill to prepare a",
+      "notes": "Printed RPM and feed per diameter: 1mm: 11,100 0.0008-0.0016; 1.5mm: 7,400 0.0012-0.0024; 2mm: 5,600 0.0016-0.0031 | Page notes: Note: 1. This cutting condition chart is based on the usage of water-soluble coolant and                6. For work materials with poor chip evacuation, please 2. Please use quality water-soluble coolant with a dilution factor of approximately               7. For holes deeper than 12D, please use a 2D type drill to prepare a",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "P"
@@ -5634,7 +5625,6 @@
      },
      "table": "General Drilling Operations 2, column 5",
      "status": "derived",
-     "review": "OSG p.315 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -5642,6 +5632,14 @@
        "0.0394": {
         "min": 0.0008,
         "max": 0.0016
+       },
+       "0.0591": {
+        "min": 0.0012,
+        "max": 0.0024
+       },
+       "0.0787": {
+        "min": 0.0016,
+        "max": 0.0031
        }
       }
      },
@@ -5653,7 +5651,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=315",
       "page": "315 (PDF p.315)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 8,000 0.0008-0.0016 | Page notes: Note: 1. This cutting condition chart is based on the usage of water-soluble coolant and                6. For work materials with poor chip evacuation, please 2. Please use quality water-soluble coolant with a dilution factor of approximately               7. For holes deeper than 12D, please use a 2D type drill to prepare a",
+      "notes": "Printed RPM and feed per diameter: 1mm: 11,100 0.0008-0.0016; 1.5mm: 7,400 0.0012-0.0024; 2mm: 5,600 0.0016-0.0031 | Page notes: Note: 1. This cutting condition chart is based on the usage of water-soluble coolant and                6. For work materials with poor chip evacuation, please 2. Please use quality water-soluble coolant with a dilution factor of approximately               7. For holes deeper than 12D, please use a 2D type drill to prepare a",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "H"
@@ -6488,27 +6486,26 @@
       "min": 156,
       "max": 265
      },
-     "table": "General Drilling Operations 2, column 3",
+     "table": "General Drilling Operations 2, column 2",
      "status": "verified",
-     "review": "OSG p.316 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
       "byDiameter": {
        "0.125": {
-        "min": 0.002,
+        "min": 0.003,
         "max": 0.005
        },
        "0.1875": {
-        "min": 0.003,
-        "max": 0.006
+        "min": 0.004,
+        "max": 0.007
        },
        "0.25": {
-        "min": 0.005,
+        "min": 0.006,
         "max": 0.009
        },
        "0.375": {
-        "min": 0.007,
+        "min": 0.008,
         "max": 0.012
        },
        "0.4375": {
@@ -6537,7 +6534,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=316",
       "page": "316 (PDF p.316)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 2mm: 9,460 0.002-0.004; 3mm: 6,310 0.002-0.005; 0.125\": 5,960 0.002-0.005; 4mm: 4,730 0.003-0.006; 0.1875\": 3,980 0.003-0.006; 6mm: 3,150 0.005-0.009; 0.25\": 2,980 0.005-0.009; 8mm: 2,360 0.006-0.011; 0.375\": 1,990 0.007-0.012; 10mm: 1,890 0.008-0.012; 0.4375\": 1,700 0.008-0.012; 12mm: 1,580 0.008-0.012; 0.5\": 1,490 0.008-0.012; 14mm: 1,350 0.009-0.014; 0.625\": 1,190 0.010-0.014; 16mm: 1,190 0.010-0.014; 18mm: 1,050 0.011-0.015; 0.75\": 990 0.012-0.016; 20mm: 940 0.012-0.016 | Page notes: Note: 1. The indicated speeds and feeds are for drilling with water-soluble oil.                           4. These conditions are for drilling depth under 3 times the drill diameter."
+      "notes": "Printed RPM and feed per diameter: 2mm: 10,190 0.002-0.004; 3mm: 6,790 0.002-0.005; 0.125\": 6,420 0.003-0.005; 4mm: 5,100 0.003-0.006; 0.1875\": 4,280 0.004-0.007; 6mm: 3,400 0.005-0.009; 0.25\": 3,210 0.006-0.009; 8mm: 2,550 0.006-0.011; 0.375\": 2,140 0.008-0.012; 10mm: 2,040 0.008-0.012; 0.4375\": 1,830 0.008-0.012; 12mm: 1,700 0.008-0.012; 0.5\": 1,600 0.008-0.012; 14mm: 1,460 0.009-0.014; 0.625\": 1,280 0.010-0.014; 16mm: 1,280 0.010-0.014; 18mm: 1,130 0.011-0.015; 0.75\": 1,070 0.012-0.016; 20mm: 1,020 0.012-0.016 | Page notes: Note: 1. The indicated speeds and feeds are for drilling with water-soluble oil.                           4. These conditions are for drilling depth under 3 times the drill diameter."
      },
      "iso": "K"
     },
@@ -6549,9 +6546,8 @@
       "min": 156,
       "max": 265
      },
-     "table": "General Drilling Operations 2, column 3",
+     "table": "General Drilling Operations 2, column 2",
      "status": "derived",
-     "review": "OSG p.316 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -6610,7 +6606,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=316",
       "page": "316 (PDF p.316)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 2mm: 9,460 0.002-0.004; 3mm: 6,310 0.002-0.005; 0.125\": 5,960 0.002-0.005; 4mm: 4,730 0.003-0.006; 0.1875\": 3,980 0.003-0.006; 6mm: 3,150 0.005-0.009; 0.25\": 2,980 0.005-0.009; 8mm: 2,360 0.006-0.011; 0.375\": 1,990 0.007-0.012; 10mm: 1,890 0.008-0.012; 0.4375\": 1,700 0.008-0.012; 12mm: 1,580 0.008-0.012; 0.5\": 1,490 0.008-0.012; 14mm: 1,350 0.009-0.014; 0.625\": 1,190 0.010-0.014; 16mm: 1,190 0.010-0.014; 18mm: 1,050 0.011-0.015; 0.75\": 990 0.012-0.016; 20mm: 940 0.012-0.016 | Page notes: Note: 1. The indicated speeds and feeds are for drilling with water-soluble oil.                           4. These conditions are for drilling depth under 3 times the drill diameter.",
+      "notes": "Printed RPM and feed per diameter: 2mm: 10,190 0.002-0.004; 3mm: 6,790 0.002-0.005; 0.125\": 6,420 0.003-0.005; 4mm: 5,100 0.003-0.006; 0.1875\": 4,280 0.004-0.007; 6mm: 3,400 0.005-0.009; 0.25\": 3,210 0.006-0.009; 8mm: 2,550 0.006-0.011; 0.375\": 2,140 0.008-0.012; 10mm: 2,040 0.008-0.012; 0.4375\": 1,830 0.008-0.012; 12mm: 1,700 0.008-0.012; 0.5\": 1,600 0.008-0.012; 14mm: 1,460 0.009-0.014; 0.625\": 1,280 0.010-0.014; 16mm: 1,280 0.010-0.014; 18mm: 1,130 0.011-0.015; 0.75\": 1,070 0.012-0.016; 20mm: 1,020 0.012-0.016 | Page notes: Note: 1. The indicated speeds and feeds are for drilling with water-soluble oil.                           4. These conditions are for drilling depth under 3 times the drill diameter.",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "K"
@@ -6623,9 +6619,8 @@
       "min": 100,
       "max": 160
      },
-     "table": "General Drilling Operations 2, column 6",
+     "table": "General Drilling Operations 2, column 4",
      "status": "verified",
-     "review": "OSG p.316 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -6636,31 +6631,31 @@
        },
        "0.1875": {
         "min": 0.003,
-        "max": 0.004
+        "max": 0.005
        },
        "0.25": {
-        "min": 0.004,
-        "max": 0.006
+        "min": 0.005,
+        "max": 0.007
        },
        "0.375": {
-        "min": 0.006,
-        "max": 0.008
-       },
-       "0.4375": {
-        "min": 0.007,
+        "min": 0.008,
         "max": 0.009
        },
-       "0.5": {
-        "min": 0.008,
-        "max": 0.01
-       },
-       "0.625": {
+       "0.4375": {
         "min": 0.009,
+        "max": 0.011
+       },
+       "0.5": {
+        "min": 0.01,
         "max": 0.012
        },
-       "0.75": {
-        "min": 0.011,
+       "0.625": {
+        "min": 0.012,
         "max": 0.015
+       },
+       "0.75": {
+        "min": 0.015,
+        "max": 0.019
        }
       }
      },
@@ -6672,7 +6667,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=316",
       "page": "316 (PDF p.316)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 2mm: 3,890 0.001-0.002; 3mm: 2,590 0.002-0.002; 0.125\": 2,450 0.002-0.003; 4mm: 1,940 0.002-0.003; 0.1875\": 1,630 0.003-0.004; 6mm: 1,290 0.004-0.005; 0.25\": 1,220 0.004-0.006; 8mm: 970 0.005-0.007; 0.375\": 820 0.006-0.008; 10mm: 780 0.007-0.009; 0.4375\": 700 0.007-0.009; 12mm: 650 0.007-0.009; 0.5\": 610 0.008-0.010; 14mm: 550 0.008-0.011; 0.625\": 490 0.009-0.012; 16mm: 490 0.009-0.012; 18mm: 430 0.010-0.014; 0.75\": 410 0.011-0.015; 20mm: 390 0.012-0.016 | Page notes: Note: 1. The indicated speeds and feeds are for drilling with water-soluble oil.                           4. These conditions are for drilling depth under 3 times the drill diameter."
+      "notes": "Printed RPM and feed per diameter: 2mm: 6,310 0.002-0.003; 3mm: 4,210 0.002-0.003; 0.125\": 3,980 0.002-0.003; 4mm: 3,160 0.003-0.004; 0.1875\": 2,650 0.003-0.005; 6mm: 2,100 0.005-0.006; 0.25\": 1,990 0.005-0.007; 8mm: 1,580 0.006-0.008; 0.375\": 1,320 0.008-0.009; 10mm: 1,260 0.008-0.010; 0.4375\": 1,140 0.009-0.011; 12mm: 1,050 0.009-0.012; 0.5\": 990 0.010-0.012; 14mm: 900 0.011-0.014; 0.625\": 790 0.012-0.015; 16mm: 790 0.012-0.015; 18mm: 700 0.014-0.018; 0.75\": 660 0.015-0.019; 20mm: 630 0.016-0.020 | Page notes: Note: 1. The indicated speeds and feeds are for drilling with water-soluble oil.                           4. These conditions are for drilling depth under 3 times the drill diameter."
      },
      "iso": "P"
     },
@@ -6684,9 +6679,8 @@
       "min": 100,
       "max": 160
      },
-     "table": "General Drilling Operations 2, column 6",
+     "table": "General Drilling Operations 2, column 4",
      "status": "verified",
-     "review": "OSG p.316 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -6697,31 +6691,31 @@
        },
        "0.1875": {
         "min": 0.003,
-        "max": 0.004
+        "max": 0.005
        },
        "0.25": {
-        "min": 0.004,
-        "max": 0.006
+        "min": 0.005,
+        "max": 0.007
        },
        "0.375": {
-        "min": 0.006,
-        "max": 0.008
-       },
-       "0.4375": {
-        "min": 0.007,
+        "min": 0.008,
         "max": 0.009
        },
-       "0.5": {
-        "min": 0.008,
-        "max": 0.01
-       },
-       "0.625": {
+       "0.4375": {
         "min": 0.009,
+        "max": 0.011
+       },
+       "0.5": {
+        "min": 0.01,
         "max": 0.012
        },
-       "0.75": {
-        "min": 0.011,
+       "0.625": {
+        "min": 0.012,
         "max": 0.015
+       },
+       "0.75": {
+        "min": 0.015,
+        "max": 0.019
        }
       }
      },
@@ -6733,7 +6727,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=316",
       "page": "316 (PDF p.316)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 2mm: 3,890 0.001-0.002; 3mm: 2,590 0.002-0.002; 0.125\": 2,450 0.002-0.003; 4mm: 1,940 0.002-0.003; 0.1875\": 1,630 0.003-0.004; 6mm: 1,290 0.004-0.005; 0.25\": 1,220 0.004-0.006; 8mm: 970 0.005-0.007; 0.375\": 820 0.006-0.008; 10mm: 780 0.007-0.009; 0.4375\": 700 0.007-0.009; 12mm: 650 0.007-0.009; 0.5\": 610 0.008-0.010; 14mm: 550 0.008-0.011; 0.625\": 490 0.009-0.012; 16mm: 490 0.009-0.012; 18mm: 430 0.010-0.014; 0.75\": 410 0.011-0.015; 20mm: 390 0.012-0.016 | Page notes: Note: 1. The indicated speeds and feeds are for drilling with water-soluble oil.                           4. These conditions are for drilling depth under 3 times the drill diameter."
+      "notes": "Printed RPM and feed per diameter: 2mm: 6,310 0.002-0.003; 3mm: 4,210 0.002-0.003; 0.125\": 3,980 0.002-0.003; 4mm: 3,160 0.003-0.004; 0.1875\": 2,650 0.003-0.005; 6mm: 2,100 0.005-0.006; 0.25\": 1,990 0.005-0.007; 8mm: 1,580 0.006-0.008; 0.375\": 1,320 0.008-0.009; 10mm: 1,260 0.008-0.010; 0.4375\": 1,140 0.009-0.011; 12mm: 1,050 0.009-0.012; 0.5\": 990 0.010-0.012; 14mm: 900 0.011-0.014; 0.625\": 790 0.012-0.015; 16mm: 790 0.012-0.015; 18mm: 700 0.014-0.018; 0.75\": 660 0.015-0.019; 20mm: 630 0.016-0.020 | Page notes: Note: 1. The indicated speeds and feeds are for drilling with water-soluble oil.                           4. These conditions are for drilling depth under 3 times the drill diameter."
      },
      "iso": "H"
     },
@@ -6745,56 +6739,55 @@
       "min": 100,
       "max": 160
      },
-     "table": "General Drilling Operations 2, column 6",
+     "table": "General Drilling Operations 2, column 4",
      "status": "derived",
-     "review": "OSG p.316 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
       "byDiameter": {
        "0.0787": {
-        "min": 0.001,
-        "max": 0.002
-       },
-       "0.1181": {
-        "min": 0.002,
-        "max": 0.002
-       },
-       "0.1575": {
         "min": 0.002,
         "max": 0.003
        },
+       "0.1181": {
+        "min": 0.002,
+        "max": 0.003
+       },
+       "0.1575": {
+        "min": 0.003,
+        "max": 0.004
+       },
        "0.2362": {
-        "min": 0.004,
-        "max": 0.005
+        "min": 0.005,
+        "max": 0.006
        },
        "0.3150": {
-        "min": 0.005,
-        "max": 0.007
+        "min": 0.006,
+        "max": 0.008
        },
        "0.3937": {
-        "min": 0.007,
-        "max": 0.009
+        "min": 0.008,
+        "max": 0.01
        },
        "0.4724": {
-        "min": 0.007,
-        "max": 0.009
-       },
-       "0.5512": {
-        "min": 0.008,
-        "max": 0.011
-       },
-       "0.6299": {
         "min": 0.009,
         "max": 0.012
        },
-       "0.7087": {
-        "min": 0.01,
+       "0.5512": {
+        "min": 0.011,
         "max": 0.014
        },
-       "0.7874": {
+       "0.6299": {
         "min": 0.012,
-        "max": 0.016
+        "max": 0.015
+       },
+       "0.7087": {
+        "min": 0.014,
+        "max": 0.018
+       },
+       "0.7874": {
+        "min": 0.016,
+        "max": 0.02
        }
       }
      },
@@ -6806,7 +6799,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=316",
       "page": "316 (PDF p.316)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 2mm: 3,890 0.001-0.002; 3mm: 2,590 0.002-0.002; 0.125\": 2,450 0.002-0.003; 4mm: 1,940 0.002-0.003; 0.1875\": 1,630 0.003-0.004; 6mm: 1,290 0.004-0.005; 0.25\": 1,220 0.004-0.006; 8mm: 970 0.005-0.007; 0.375\": 820 0.006-0.008; 10mm: 780 0.007-0.009; 0.4375\": 700 0.007-0.009; 12mm: 650 0.007-0.009; 0.5\": 610 0.008-0.010; 14mm: 550 0.008-0.011; 0.625\": 490 0.009-0.012; 16mm: 490 0.009-0.012; 18mm: 430 0.010-0.014; 0.75\": 410 0.011-0.015; 20mm: 390 0.012-0.016 | Page notes: Note: 1. The indicated speeds and feeds are for drilling with water-soluble oil.                           4. These conditions are for drilling depth under 3 times the drill diameter.",
+      "notes": "Printed RPM and feed per diameter: 2mm: 6,310 0.002-0.003; 3mm: 4,210 0.002-0.003; 0.125\": 3,980 0.002-0.003; 4mm: 3,160 0.003-0.004; 0.1875\": 2,650 0.003-0.005; 6mm: 2,100 0.005-0.006; 0.25\": 1,990 0.005-0.007; 8mm: 1,580 0.006-0.008; 0.375\": 1,320 0.008-0.009; 10mm: 1,260 0.008-0.010; 0.4375\": 1,140 0.009-0.011; 12mm: 1,050 0.009-0.012; 0.5\": 990 0.010-0.012; 14mm: 900 0.011-0.014; 0.625\": 790 0.012-0.015; 16mm: 790 0.012-0.015; 18mm: 700 0.014-0.018; 0.75\": 660 0.015-0.019; 20mm: 630 0.016-0.020 | Page notes: Note: 1. The indicated speeds and feeds are for drilling with water-soluble oil.                           4. These conditions are for drilling depth under 3 times the drill diameter.",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "P"
@@ -6819,56 +6812,55 @@
       "min": 100,
       "max": 160
      },
-     "table": "General Drilling Operations 2, column 6",
+     "table": "General Drilling Operations 2, column 4",
      "status": "derived",
-     "review": "OSG p.316 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
       "byDiameter": {
        "0.0787": {
-        "min": 0.001,
-        "max": 0.002
-       },
-       "0.1181": {
-        "min": 0.002,
-        "max": 0.002
-       },
-       "0.1575": {
         "min": 0.002,
         "max": 0.003
        },
+       "0.1181": {
+        "min": 0.002,
+        "max": 0.003
+       },
+       "0.1575": {
+        "min": 0.003,
+        "max": 0.004
+       },
        "0.2362": {
-        "min": 0.004,
-        "max": 0.005
+        "min": 0.005,
+        "max": 0.006
        },
        "0.3150": {
-        "min": 0.005,
-        "max": 0.007
+        "min": 0.006,
+        "max": 0.008
        },
        "0.3937": {
-        "min": 0.007,
-        "max": 0.009
+        "min": 0.008,
+        "max": 0.01
        },
        "0.4724": {
-        "min": 0.007,
-        "max": 0.009
-       },
-       "0.5512": {
-        "min": 0.008,
-        "max": 0.011
-       },
-       "0.6299": {
         "min": 0.009,
         "max": 0.012
        },
-       "0.7087": {
-        "min": 0.01,
+       "0.5512": {
+        "min": 0.011,
         "max": 0.014
        },
-       "0.7874": {
+       "0.6299": {
         "min": 0.012,
-        "max": 0.016
+        "max": 0.015
+       },
+       "0.7087": {
+        "min": 0.014,
+        "max": 0.018
+       },
+       "0.7874": {
+        "min": 0.016,
+        "max": 0.02
        }
       }
      },
@@ -6880,7 +6872,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=316",
       "page": "316 (PDF p.316)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 2mm: 3,890 0.001-0.002; 3mm: 2,590 0.002-0.002; 0.125\": 2,450 0.002-0.003; 4mm: 1,940 0.002-0.003; 0.1875\": 1,630 0.003-0.004; 6mm: 1,290 0.004-0.005; 0.25\": 1,220 0.004-0.006; 8mm: 970 0.005-0.007; 0.375\": 820 0.006-0.008; 10mm: 780 0.007-0.009; 0.4375\": 700 0.007-0.009; 12mm: 650 0.007-0.009; 0.5\": 610 0.008-0.010; 14mm: 550 0.008-0.011; 0.625\": 490 0.009-0.012; 16mm: 490 0.009-0.012; 18mm: 430 0.010-0.014; 0.75\": 410 0.011-0.015; 20mm: 390 0.012-0.016 | Page notes: Note: 1. The indicated speeds and feeds are for drilling with water-soluble oil.                           4. These conditions are for drilling depth under 3 times the drill diameter.",
+      "notes": "Printed RPM and feed per diameter: 2mm: 6,310 0.002-0.003; 3mm: 4,210 0.002-0.003; 0.125\": 3,980 0.002-0.003; 4mm: 3,160 0.003-0.004; 0.1875\": 2,650 0.003-0.005; 6mm: 2,100 0.005-0.006; 0.25\": 1,990 0.005-0.007; 8mm: 1,580 0.006-0.008; 0.375\": 1,320 0.008-0.009; 10mm: 1,260 0.008-0.010; 0.4375\": 1,140 0.009-0.011; 12mm: 1,050 0.009-0.012; 0.5\": 990 0.010-0.012; 14mm: 900 0.011-0.014; 0.625\": 790 0.012-0.015; 16mm: 790 0.012-0.015; 18mm: 700 0.014-0.018; 0.75\": 660 0.015-0.019; 20mm: 630 0.016-0.020 | Page notes: Note: 1. The indicated speeds and feeds are for drilling with water-soluble oil.                           4. These conditions are for drilling depth under 3 times the drill diameter.",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "H"
@@ -7293,10 +7285,10 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "min": 165,
-      "max": 260
+      "min": 200,
+      "max": 400
      },
-     "table": "General Drilling Operations 1, column 5",
+     "table": "General Drilling Operations 1, column 4",
      "status": "verified",
      "feed": {
       "kind": "ipr",
@@ -7344,7 +7336,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=317",
       "page": "317 (PDF p.317)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 3mm: 8,570 0.002 - 0.004; 0.125\": 8,100 0.002 - 0.004; 4mm: 6,430 0.002 - 0.005; 0.1875\": 5,400 0.002 - 0.006; 6mm: 4,280 0.002 - 0.007; 0.25\": 4,050 0.003 - 0.008; 8mm: 3,210 0.003 - 0.009; 0.375\": 2,700 0.004 - 0.011; 10mm: 2,570 0.004 - 0.012; 0.4375\": 2,310 0.004 - 0.013; 12mm: 2,140 0.005 - 0.014; 0.5\": 2,020 0.005 - 0.015; 14mm: 1,840 0.006 - 0.017; 0.625\": 1,620 0.006 - 0.019; 16mm: 1,610 0.006 - 0.019; 18mm: 1,430 0.007 - 0.021; 0.75\": 1,350 0.008 - 0.023; 20mm: 1,280 0.008 - 0.024 | Page notes: Note:"
+      "notes": "Printed RPM and feed per diameter: 3mm: 10,650 0.002-0.004; 0.125\": 10,080 0.002-0.004; 4mm: 8,000 0.002-0.005; 0.1875\": 6,720 0.002-0.006; 6mm: 5,300 0.002-0.007; 0.25\": 5,040 0.003-0.008; 8mm: 4,000 0.003-0.009; 0.375\": 3,360 0.004-0.011; 10mm: 3,200 0.004-0.012; 0.4375\": 2,880 0.004-0.013; 12mm: 2,650 0.005-0.014; 0.5\": 2,520 0.005-0.015; 14mm: 2,290 0.006-0.017; 0.625\": 2,010 0.006-0.019; 16mm: 2,000 0.006-0.019; 18mm: 1,775 0.007-0.021; 0.75\": 1,680 0.008-0.023; 20mm: 1,600 0.008-0.024 | Page notes: Note:"
      },
      "iso": "K"
     },
@@ -7353,10 +7345,10 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "min": 165,
-      "max": 260
+      "min": 200,
+      "max": 400
      },
-     "table": "General Drilling Operations 1, column 5",
+     "table": "General Drilling Operations 1, column 4",
      "status": "derived",
      "feed": {
       "kind": "ipr",
@@ -7412,7 +7404,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=317",
       "page": "317 (PDF p.317)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 3mm: 8,570 0.002 - 0.004; 0.125\": 8,100 0.002 - 0.004; 4mm: 6,430 0.002 - 0.005; 0.1875\": 5,400 0.002 - 0.006; 6mm: 4,280 0.002 - 0.007; 0.25\": 4,050 0.003 - 0.008; 8mm: 3,210 0.003 - 0.009; 0.375\": 2,700 0.004 - 0.011; 10mm: 2,570 0.004 - 0.012; 0.4375\": 2,310 0.004 - 0.013; 12mm: 2,140 0.005 - 0.014; 0.5\": 2,020 0.005 - 0.015; 14mm: 1,840 0.006 - 0.017; 0.625\": 1,620 0.006 - 0.019; 16mm: 1,610 0.006 - 0.019; 18mm: 1,430 0.007 - 0.021; 0.75\": 1,350 0.008 - 0.023; 20mm: 1,280 0.008 - 0.024 | Page notes: Note:",
+      "notes": "Printed RPM and feed per diameter: 3mm: 10,650 0.002-0.004; 0.125\": 10,080 0.002-0.004; 4mm: 8,000 0.002-0.005; 0.1875\": 6,720 0.002-0.006; 6mm: 5,300 0.002-0.007; 0.25\": 5,040 0.003-0.008; 8mm: 4,000 0.003-0.009; 0.375\": 3,360 0.004-0.011; 10mm: 3,200 0.004-0.012; 0.4375\": 2,880 0.004-0.013; 12mm: 2,650 0.005-0.014; 0.5\": 2,520 0.005-0.015; 14mm: 2,290 0.006-0.017; 0.625\": 2,010 0.006-0.019; 16mm: 2,000 0.006-0.019; 18mm: 1,775 0.007-0.021; 0.75\": 1,680 0.008-0.023; 20mm: 1,600 0.008-0.024 | Page notes: Note:",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "K"
@@ -7422,10 +7414,10 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "min": 265,
-      "max": 650
+      "min": 165,
+      "max": 260
      },
-     "table": "General Drilling Operations 1, column 6",
+     "table": "General Drilling Operations 1, column 5",
      "status": "verified",
      "feed": {
       "kind": "ipr",
@@ -7473,7 +7465,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=317",
       "page": "317 (PDF p.317)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 3mm: 17,000 0.002 - 0.004; 0.125\": 16,040 0.002 - 0.004; 4mm: 12,730 0.002 - 0.005; 0.1875\": 10,690 0.002 - 0.006; 6mm: 8,490 0.002 - 0.007; 0.25\": 8,020 0.003 - 0.008; 8mm: 6,370 0.003 - 0.009; 0.375\": 5,350 0.004 - 0.011; 10mm: 5,100 0.004 - 0.012; 0.4375\": 4,580 0.004 - 0.013; 12mm: 4,240 0.005 - 0.014; 0.5\": 4,010 0.005 - 0.015; 14mm: 3,640 0.006 - 0.017; 0.625\": 3,210 0.006 - 0.019; 16mm: 3,180 0.006 - 0.019; 18mm: 2,830 0.007 - 0.021; 0.75\": 2,670 0.008 - 0.023; 20mm: 2,550 0.008 - 0.024 | Page notes: Note:"
+      "notes": "Printed RPM and feed per diameter: 3mm: 8,570 0.002-0.004; 0.125\": 8,100 0.002-0.004; 4mm: 6,430 0.002-0.005; 0.1875\": 5,400 0.002-0.006; 6mm: 4,280 0.002-0.007; 0.25\": 4,050 0.003-0.008; 8mm: 3,210 0.003-0.009; 0.375\": 2,700 0.004-0.011; 10mm: 2,570 0.004-0.012; 0.4375\": 2,310 0.004-0.013; 12mm: 2,140 0.005-0.014; 0.5\": 2,020 0.005-0.015; 14mm: 1,840 0.006-0.017; 0.625\": 1,620 0.006-0.019; 16mm: 1,610 0.006-0.019; 18mm: 1,430 0.007-0.021; 0.75\": 1,350 0.008-0.023; 20mm: 1,280 0.008-0.024 | Page notes: Note:"
      },
      "iso": "K"
     },
@@ -7482,10 +7474,10 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "min": 265,
-      "max": 650
+      "min": 165,
+      "max": 260
      },
-     "table": "General Drilling Operations 1, column 6",
+     "table": "General Drilling Operations 1, column 5",
      "status": "derived",
      "feed": {
       "kind": "ipr",
@@ -7541,7 +7533,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=317",
       "page": "317 (PDF p.317)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 3mm: 17,000 0.002 - 0.004; 0.125\": 16,040 0.002 - 0.004; 4mm: 12,730 0.002 - 0.005; 0.1875\": 10,690 0.002 - 0.006; 6mm: 8,490 0.002 - 0.007; 0.25\": 8,020 0.003 - 0.008; 8mm: 6,370 0.003 - 0.009; 0.375\": 5,350 0.004 - 0.011; 10mm: 5,100 0.004 - 0.012; 0.4375\": 4,580 0.004 - 0.013; 12mm: 4,240 0.005 - 0.014; 0.5\": 4,010 0.005 - 0.015; 14mm: 3,640 0.006 - 0.017; 0.625\": 3,210 0.006 - 0.019; 16mm: 3,180 0.006 - 0.019; 18mm: 2,830 0.007 - 0.021; 0.75\": 2,670 0.008 - 0.023; 20mm: 2,550 0.008 - 0.024 | Page notes: Note:",
+      "notes": "Printed RPM and feed per diameter: 3mm: 8,570 0.002-0.004; 0.125\": 8,100 0.002-0.004; 4mm: 6,430 0.002-0.005; 0.1875\": 5,400 0.002-0.006; 6mm: 4,280 0.002-0.007; 0.25\": 4,050 0.003-0.008; 8mm: 3,210 0.003-0.009; 0.375\": 2,700 0.004-0.011; 10mm: 2,570 0.004-0.012; 0.4375\": 2,310 0.004-0.013; 12mm: 2,140 0.005-0.014; 0.5\": 2,020 0.005-0.015; 14mm: 1,840 0.006-0.017; 0.625\": 1,620 0.006-0.019; 16mm: 1,610 0.006-0.019; 18mm: 1,430 0.007-0.021; 0.75\": 1,350 0.008-0.023; 20mm: 1,280 0.008-0.024 | Page notes: Note:",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "K"
@@ -8240,7 +8232,6 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "verified",
-     "review": "OSG p.318 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -8303,7 +8294,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=318",
       "page": "318 (PDF p.318)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 0.2mm: 25,000 0.00004 - 0.00024; 0.015625\": 25,000 0.00004 - 0.00024; 0.5mm: 25,000 0.00012 - 0.0006; 0.03125\": 20,100 0.00012 - 0.0006; 1mm: 15,900 0.0002 - 0.0012; 0.046875\": 14,200 0.0002 - 0.0012; 1.5mm: 11,500 0.0003 - 0.0018; 0.0625\": 10,700 0.0003 - 0.0018; 2mm: 10,310 0.0016 - 0.002; 3mm: 9,700     0.002 - 0.004; 0.125\": 9,170     0.002 - 0.004; 4mm: 7,280     0.003 - 0.005; 0.1875\": 6,110     0.003 - 0.005; 6mm: 4,850     0.005 - 0.007; 0.25\": 4,580     0.005 - 0.007; 8mm: 3,640     0.006 - 0.009; 0.375\": 3,060     0.006 - 0.009; 10mm: 2,910     0.008 - 0.012; 0.4375\": 2,620     0.008 - 0.012; 12mm: 2,430     0.009 - 0.014; 0.5\": 2,290     0.009 - 0.014; 14mm: 2,080     0.011 - 0.017; 0.625\": 1,830     0.013 - 0.019; 16mm: 1,820     0.013 - 0.019; 18mm: 1,620     0.014 - 0.021; 0.75\": 1,530     0.016 - 0.024; 20mm: 1,450     0.016 - 0.024 | Page notes: Note: 1. The speeds and feeds in the table above apply when drilling on a flat surface with water-soluble coolant.                             \u03b2 2. When using non-water soluble oil or water-emulsifiable (over 20 times dilution), reduce cutting speed by 30%. 3. Use a rigid and precise machine and holder. 4. Please minimize tool overhang as much as possible during machining."
+      "notes": "Printed RPM and feed per diameter: 0.2mm: 25,000 0.00004-0.00024; 0.015625\": 25,000 0.00004-0.00024; 0.5mm: 25,000 0.00012-0.0006; 0.03125\": 25,000 0.00012-0.0006; 1mm: 22,500 0.0002-0.0012; 0.046875\": 21,400 0.0002-0.0012; 1.5mm: 17,000 0.0003-0.0018; 0.0625\": 16,000 0.0003-0.0018; 2mm: 14,550 0.0016-0.002; 3mm: 9,700 0.002-0.004; 0.125\": 9,170 0.002-0.004; 4mm: 7,280 0.003-0.005; 0.1875\": 6,110 0.003-0.005; 6mm: 4,850 0.005-0.007; 0.25\": 4,580 0.005-0.007; 8mm: 3,640 0.006-0.009; 0.375\": 3,060 0.006-0.009; 10mm: 2,910 0.008-0.012; 0.4375\": 2,620 0.008-0.012; 12mm: 2,430 0.009-0.014; 0.5\": 2,290 0.009-0.014; 14mm: 2,080 0.011-0.017; 0.625\": 1,830 0.013-0.019; 16mm: 1,820 0.013-0.019; 18mm: 1,620 0.014-0.021; 0.75\": 1,530 0.016-0.024; 20mm: 1,450 0.016-0.024 | Page notes: Note: 1. The speeds and feeds in the table above apply when drilling on a flat surface with water-soluble coolant.                             \u03b2 2. When using non-water soluble oil or water-emulsifiable (over 20 times dilution), reduce cutting speed by 30%. 3. Use a rigid and precise machine and holder. 4. Please minimize tool overhang as much as possible during machining."
      },
      "iso": "K"
     },
@@ -8317,7 +8308,6 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "derived",
-     "review": "OSG p.318 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -8392,7 +8382,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=318",
       "page": "318 (PDF p.318)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 0.2mm: 25,000 0.00004 - 0.00024; 0.015625\": 25,000 0.00004 - 0.00024; 0.5mm: 25,000 0.00012 - 0.0006; 0.03125\": 20,100 0.00012 - 0.0006; 1mm: 15,900 0.0002 - 0.0012; 0.046875\": 14,200 0.0002 - 0.0012; 1.5mm: 11,500 0.0003 - 0.0018; 0.0625\": 10,700 0.0003 - 0.0018; 2mm: 10,310 0.0016 - 0.002; 3mm: 9,700     0.002 - 0.004; 0.125\": 9,170     0.002 - 0.004; 4mm: 7,280     0.003 - 0.005; 0.1875\": 6,110     0.003 - 0.005; 6mm: 4,850     0.005 - 0.007; 0.25\": 4,580     0.005 - 0.007; 8mm: 3,640     0.006 - 0.009; 0.375\": 3,060     0.006 - 0.009; 10mm: 2,910     0.008 - 0.012; 0.4375\": 2,620     0.008 - 0.012; 12mm: 2,430     0.009 - 0.014; 0.5\": 2,290     0.009 - 0.014; 14mm: 2,080     0.011 - 0.017; 0.625\": 1,830     0.013 - 0.019; 16mm: 1,820     0.013 - 0.019; 18mm: 1,620     0.014 - 0.021; 0.75\": 1,530     0.016 - 0.024; 20mm: 1,450     0.016 - 0.024 | Page notes: Note: 1. The speeds and feeds in the table above apply when drilling on a flat surface with water-soluble coolant.                             \u03b2 2. When using non-water soluble oil or water-emulsifiable (over 20 times dilution), reduce cutting speed by 30%. 3. Use a rigid and precise machine and holder. 4. Please minimize tool overhang as much as possible during machining.",
+      "notes": "Printed RPM and feed per diameter: 0.2mm: 25,000 0.00004-0.00024; 0.015625\": 25,000 0.00004-0.00024; 0.5mm: 25,000 0.00012-0.0006; 0.03125\": 25,000 0.00012-0.0006; 1mm: 22,500 0.0002-0.0012; 0.046875\": 21,400 0.0002-0.0012; 1.5mm: 17,000 0.0003-0.0018; 0.0625\": 16,000 0.0003-0.0018; 2mm: 14,550 0.0016-0.002; 3mm: 9,700 0.002-0.004; 0.125\": 9,170 0.002-0.004; 4mm: 7,280 0.003-0.005; 0.1875\": 6,110 0.003-0.005; 6mm: 4,850 0.005-0.007; 0.25\": 4,580 0.005-0.007; 8mm: 3,640 0.006-0.009; 0.375\": 3,060 0.006-0.009; 10mm: 2,910 0.008-0.012; 0.4375\": 2,620 0.008-0.012; 12mm: 2,430 0.009-0.014; 0.5\": 2,290 0.009-0.014; 14mm: 2,080 0.011-0.017; 0.625\": 1,830 0.013-0.019; 16mm: 1,820 0.013-0.019; 18mm: 1,620 0.014-0.021; 0.75\": 1,530 0.016-0.024; 20mm: 1,450 0.016-0.024 | Page notes: Note: 1. The speeds and feeds in the table above apply when drilling on a flat surface with water-soluble coolant.                             \u03b2 2. When using non-water soluble oil or water-emulsifiable (over 20 times dilution), reduce cutting speed by 30%. 3. Use a rigid and precise machine and holder. 4. Please minimize tool overhang as much as possible during machining.",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "K"
@@ -10098,7 +10088,6 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "verified",
-     "review": "OSG p.320 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -10145,7 +10134,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=320",
       "page": "320 (PDF p.320)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 2mm: 14,550 0.0016 - 0.002; 3mm: 6,870 0.002 - 0.004; 0.125\": 6,500 0.002 - 0.004; 4mm: 5,150 0.003 - 0.005; 0.1875\": 4,330 0.003 - 0.005; 6mm: 3,440 0.005 - 0.007; 0.25\": 3,250 0.005 - 0.007; 8mm: 2,580 0.006 - 0.009; 0.375\": 2,160 0.006 - 0.009; 10mm: 2,060 0.008 - 0.012; 0.4375\": 1,860 0.008 - 0.012; 12mm: 1,720 0.009 - 0.014; 0.5\": 1,620 0.009 - 0.014; 14mm: 1,470 0.011 - 0.017; 0.625\": 1,300 0.013 - 0.019; 16mm: 1,290 0.013 - 0.019; 18mm: 1,150 0.014 - 0.021; 0.75\": 1,090 0.016 - 0.024; 20mm: 1,030 0.016 - 0.024"
+      "notes": "Printed RPM and feed per diameter: 2mm: 14,550 0.0016-0.002; 3mm: 9,700 0.002-0.004; 0.125\": 9,170 0.002-0.004; 4mm: 7,280 0.003-0.005; 0.1875\": 6,110 0.003-0.005; 6mm: 4,850 0.005-0.007; 0.25\": 4,580 0.005-0.007; 8mm: 3,640 0.006-0.009; 0.375\": 3,060 0.006-0.009; 10mm: 2,910 0.008-0.012; 0.4375\": 2,620 0.008-0.012; 12mm: 2,430 0.009-0.014; 0.5\": 2,290 0.009-0.014; 14mm: 2,080 0.011-0.017; 0.625\": 1,830 0.013-0.019; 16mm: 1,820 0.013-0.019; 18mm: 1,620 0.014-0.021; 0.75\": 1,530 0.016-0.024; 20mm: 1,450 0.016-0.024"
      },
      "iso": "K"
     },
@@ -10159,7 +10148,6 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "derived",
-     "review": "OSG p.320 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -10218,7 +10206,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=320",
       "page": "320 (PDF p.320)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 2mm: 14,550 0.0016 - 0.002; 3mm: 6,870 0.002 - 0.004; 0.125\": 6,500 0.002 - 0.004; 4mm: 5,150 0.003 - 0.005; 0.1875\": 4,330 0.003 - 0.005; 6mm: 3,440 0.005 - 0.007; 0.25\": 3,250 0.005 - 0.007; 8mm: 2,580 0.006 - 0.009; 0.375\": 2,160 0.006 - 0.009; 10mm: 2,060 0.008 - 0.012; 0.4375\": 1,860 0.008 - 0.012; 12mm: 1,720 0.009 - 0.014; 0.5\": 1,620 0.009 - 0.014; 14mm: 1,470 0.011 - 0.017; 0.625\": 1,300 0.013 - 0.019; 16mm: 1,290 0.013 - 0.019; 18mm: 1,150 0.014 - 0.021; 0.75\": 1,090 0.016 - 0.024; 20mm: 1,030 0.016 - 0.024",
+      "notes": "Printed RPM and feed per diameter: 2mm: 14,550 0.0016-0.002; 3mm: 9,700 0.002-0.004; 0.125\": 9,170 0.002-0.004; 4mm: 7,280 0.003-0.005; 0.1875\": 6,110 0.003-0.005; 6mm: 4,850 0.005-0.007; 0.25\": 4,580 0.005-0.007; 8mm: 3,640 0.006-0.009; 0.375\": 3,060 0.006-0.009; 10mm: 2,910 0.008-0.012; 0.4375\": 2,620 0.008-0.012; 12mm: 2,430 0.009-0.014; 0.5\": 2,290 0.009-0.014; 14mm: 2,080 0.011-0.017; 0.625\": 1,830 0.013-0.019; 16mm: 1,820 0.013-0.019; 18mm: 1,620 0.014-0.021; 0.75\": 1,530 0.016-0.024; 20mm: 1,450 0.016-0.024",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "K"
@@ -10233,41 +10221,40 @@
      },
      "table": "General Drilling Operations 1, column 5",
      "status": "verified",
-     "review": "OSG p.320 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
       "byDiameter": {
        "0.125": {
-        "min": 0.001,
+        "min": 0.002,
         "max": 0.004
        },
        "0.1875": {
-        "min": 0.001,
+        "min": 0.003,
         "max": 0.005
        },
        "0.25": {
-        "min": 0.001,
+        "min": 0.005,
         "max": 0.007
        },
        "0.375": {
-        "min": 0.002,
+        "min": 0.006,
         "max": 0.009
        },
        "0.4375": {
-        "min": 0.002,
+        "min": 0.008,
         "max": 0.012
        },
        "0.5": {
-        "min": 0.002,
+        "min": 0.009,
         "max": 0.014
        },
        "0.625": {
-        "min": 0.003,
+        "min": 0.013,
         "max": 0.019
        },
        "0.75": {
-        "min": 0.004,
+        "min": 0.016,
         "max": 0.024
        }
       }
@@ -10280,7 +10267,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=320",
       "page": "320 (PDF p.320)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 2mm: 10,310 0.0016 - 0.002; 3mm: 14,800 0.001 - 0.004; 0.125\": 13,980 0.001 - 0.004; 4mm: 11,100 0.001 - 0.005; 0.1875\": 9,320 0.001 - 0.005; 6mm: 7,400 0.001 - 0.007; 0.25\": 6,990 0.001 - 0.007; 8mm: 5,550 0.002 - 0.009; 0.375\": 4,660 0.002 - 0.009; 10mm: 4,440 0.002 - 0.012; 0.4375\": 3,990 0.002 - 0.012; 12mm: 3,700 0.002 - 0.014; 0.5\": 3,500 0.002 - 0.014; 14mm: 3,170 0.003 - 0.017; 0.625\": 2,800 0.003 - 0.019; 16mm: 2,790 0.003 - 0.019; 18mm: 2,470 0.004 - 0.021; 0.75\": 2,330 0.004 - 0.024; 20mm: 2,250 0.004 - 0.024"
+      "notes": "Printed RPM and feed per diameter: 2mm: 10,310 0.0016-0.002; 3mm: 6,870 0.002-0.004; 0.125\": 6,500 0.002-0.004; 4mm: 5,150 0.003-0.005; 0.1875\": 4,330 0.003-0.005; 6mm: 3,440 0.005-0.007; 0.25\": 3,250 0.005-0.007; 8mm: 2,580 0.006-0.009; 0.375\": 2,160 0.006-0.009; 10mm: 2,060 0.008-0.012; 0.4375\": 1,860 0.008-0.012; 12mm: 1,720 0.009-0.014; 0.5\": 1,620 0.009-0.014; 14mm: 1,470 0.011-0.017; 0.625\": 1,300 0.013-0.019; 16mm: 1,290 0.013-0.019; 18mm: 1,150 0.014-0.021; 0.75\": 1,090 0.016-0.024; 20mm: 1,030 0.016-0.024"
      },
      "iso": "K"
     },
@@ -10294,7 +10281,6 @@
      },
      "table": "General Drilling Operations 1, column 5",
      "status": "derived",
-     "review": "OSG p.320 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -10304,43 +10290,43 @@
         "max": 0.002
        },
        "0.1181": {
-        "min": 0.001,
+        "min": 0.002,
         "max": 0.004
        },
        "0.1575": {
-        "min": 0.001,
+        "min": 0.003,
         "max": 0.005
        },
        "0.2362": {
-        "min": 0.001,
+        "min": 0.005,
         "max": 0.007
        },
        "0.3150": {
-        "min": 0.002,
+        "min": 0.006,
         "max": 0.009
        },
        "0.3937": {
-        "min": 0.002,
+        "min": 0.008,
         "max": 0.012
        },
        "0.4724": {
-        "min": 0.002,
+        "min": 0.009,
         "max": 0.014
        },
        "0.5512": {
-        "min": 0.003,
+        "min": 0.011,
         "max": 0.017
        },
        "0.6299": {
-        "min": 0.003,
+        "min": 0.013,
         "max": 0.019
        },
        "0.7087": {
-        "min": 0.004,
+        "min": 0.014,
         "max": 0.021
        },
        "0.7874": {
-        "min": 0.004,
+        "min": 0.016,
         "max": 0.024
        }
       }
@@ -10353,7 +10339,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=320",
       "page": "320 (PDF p.320)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 2mm: 10,310 0.0016 - 0.002; 3mm: 14,800 0.001 - 0.004; 0.125\": 13,980 0.001 - 0.004; 4mm: 11,100 0.001 - 0.005; 0.1875\": 9,320 0.001 - 0.005; 6mm: 7,400 0.001 - 0.007; 0.25\": 6,990 0.001 - 0.007; 8mm: 5,550 0.002 - 0.009; 0.375\": 4,660 0.002 - 0.009; 10mm: 4,440 0.002 - 0.012; 0.4375\": 3,990 0.002 - 0.012; 12mm: 3,700 0.002 - 0.014; 0.5\": 3,500 0.002 - 0.014; 14mm: 3,170 0.003 - 0.017; 0.625\": 2,800 0.003 - 0.019; 16mm: 2,790 0.003 - 0.019; 18mm: 2,470 0.004 - 0.021; 0.75\": 2,330 0.004 - 0.024; 20mm: 2,250 0.004 - 0.024",
+      "notes": "Printed RPM and feed per diameter: 2mm: 10,310 0.0016-0.002; 3mm: 6,870 0.002-0.004; 0.125\": 6,500 0.002-0.004; 4mm: 5,150 0.003-0.005; 0.1875\": 4,330 0.003-0.005; 6mm: 3,440 0.005-0.007; 0.25\": 3,250 0.005-0.007; 8mm: 2,580 0.006-0.009; 0.375\": 2,160 0.006-0.009; 10mm: 2,060 0.008-0.012; 0.4375\": 1,860 0.008-0.012; 12mm: 1,720 0.009-0.014; 0.5\": 1,620 0.009-0.014; 14mm: 1,470 0.011-0.017; 0.625\": 1,300 0.013-0.019; 16mm: 1,290 0.013-0.019; 18mm: 1,150 0.014-0.021; 0.75\": 1,090 0.016-0.024; 20mm: 1,030 0.016-0.024",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "K"
@@ -20535,6 +20521,159 @@
      "sfm": {
       "unit": "ft/min",
       "min": 80,
+      "max": 120
+     },
+     "table": "General Drilling Operations 1, column 2",
+     "status": "verified",
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "byDiameter": {
+       "0.046875": {
+        "min": 0.002,
+        "max": 0.003
+       },
+       "0.09375": {
+        "min": 0.003,
+        "max": 0.005
+       },
+       "0.125": {
+        "min": 0.003,
+        "max": 0.005
+       },
+       "0.1875": {
+        "min": 0.005,
+        "max": 0.007
+       },
+       "0.25": {
+        "min": 0.005,
+        "max": 0.008
+       },
+       "0.375": {
+        "min": 0.008,
+        "max": 0.011
+       },
+       "0.4375": {
+        "min": 0.009,
+        "max": 0.012
+       },
+       "0.5": {
+        "min": 0.01,
+        "max": 0.014
+       },
+       "0.625": {
+        "min": 0.012,
+        "max": 0.016
+       },
+       "0.75": {
+        "min": 0.015,
+        "max": 0.019
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "OSG USA",
+      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
+      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
+      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=342",
+      "page": "342 (PDF p.342)",
+      "retrieved": "2026-10-23",
+      "notes": "Printed RPM and feed per diameter: 0.5mm: 19,410 0.001-0.002; 0.046875\": 8,150 0.002-0.003; 2mm: 4,850 0.002-0.004; 0.09375\": 4,070 0.003-0.005; 3mm: 3,230 0.003-0.005; 0.125\": 3,060 0.003-0.005; 4mm: 2,430 0.004-0.006; 0.1875\": 2,040 0.005-0.007; 6mm: 1,620 0.005-0.007; 0.25\": 1,530 0.005-0.008; 8mm: 1,210 0.006-0.009; 0.375\": 1,020 0.008-0.011; 10mm: 970 0.008-0.011; 0.4375\": 870 0.009-0.012; 12mm: 810 0.009-0.013; 0.5\": 760 0.010-0.014; 14mm: 690 0.011-0.014; 0.625\": 610 0.012-0.016; 16mm: 610 0.012-0.016; 18mm: 540 0.014-0.018; 0.75\": 510 0.015-0.019; 20mm: 490 0.016-0.020 | Page notes: 1. The indicated speeds and feeds are when water soluble oil is used. 2. Suitable cutting fluid is water-emulsifiable, high density oil (less than 20 times dilution). 3. When using non-water soluble oil or water-emulsifiable oil (over 20 times dilution), reduce drilling speed by 20%."
+     },
+     "iso": "P",
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "General Drilling Operations \u00b7 Carbon Steels 1045, 1050"
+    },
+    {
+     "label": "General Drilling Operations \u00b7 Carbon Steels 1045, 1050",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 80,
+      "max": 120
+     },
+     "table": "General Drilling Operations 1, column 2",
+     "status": "derived",
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "byDiameter": {
+       "0.0197": {
+        "min": 0.001,
+        "max": 0.002
+       },
+       "0.0787": {
+        "min": 0.002,
+        "max": 0.004
+       },
+       "0.1181": {
+        "min": 0.003,
+        "max": 0.005
+       },
+       "0.1575": {
+        "min": 0.004,
+        "max": 0.006
+       },
+       "0.2362": {
+        "min": 0.005,
+        "max": 0.007
+       },
+       "0.3150": {
+        "min": 0.006,
+        "max": 0.009
+       },
+       "0.3937": {
+        "min": 0.008,
+        "max": 0.011
+       },
+       "0.4724": {
+        "min": 0.009,
+        "max": 0.013
+       },
+       "0.5512": {
+        "min": 0.011,
+        "max": 0.014
+       },
+       "0.6299": {
+        "min": 0.012,
+        "max": 0.016
+       },
+       "0.7087": {
+        "min": 0.014,
+        "max": 0.018
+       },
+       "0.7874": {
+        "min": 0.016,
+        "max": 0.02
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "OSG USA",
+      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
+      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
+      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=342",
+      "page": "342 (PDF p.342)",
+      "retrieved": "2026-10-23",
+      "notes": "Printed RPM and feed per diameter: 0.5mm: 19,410 0.001-0.002; 0.046875\": 8,150 0.002-0.003; 2mm: 4,850 0.002-0.004; 0.09375\": 4,070 0.003-0.005; 3mm: 3,230 0.003-0.005; 0.125\": 3,060 0.003-0.005; 4mm: 2,430 0.004-0.006; 0.1875\": 2,040 0.005-0.007; 6mm: 1,620 0.005-0.007; 0.25\": 1,530 0.005-0.008; 8mm: 1,210 0.006-0.009; 0.375\": 1,020 0.008-0.011; 10mm: 970 0.008-0.011; 0.4375\": 870 0.009-0.012; 12mm: 810 0.009-0.013; 0.5\": 760 0.010-0.014; 14mm: 690 0.011-0.014; 0.625\": 610 0.012-0.016; 16mm: 610 0.012-0.016; 18mm: 540 0.014-0.018; 0.75\": 510 0.015-0.019; 20mm: 490 0.016-0.020 | Page notes: 1. The indicated speeds and feeds are when water soluble oil is used. 2. Suitable cutting fluid is water-emulsifiable, high density oil (less than 20 times dilution). 3. When using non-water soluble oil or water-emulsifiable oil (over 20 times dilution), reduce drilling speed by 20%.",
+      "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
+     },
+     "iso": "P",
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "General Drilling Operations \u00b7 Carbon Steels 1045, 1050"
+    },
+    {
+     "label": "General Drilling Operations \u00b7 Alloy Steels 4140, 4330",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 80,
       "max": 100
      },
      "table": "General Drilling Operations 1, column 3",
@@ -20597,12 +20736,12 @@
      },
      "iso": "P",
      "materials": [
-      "p-mild"
+      "p-alloy"
      ],
-     "sourceGroup": "General Drilling Operations \u00b7 Carbon Steels 1045, 1050"
+     "sourceGroup": "General Drilling Operations \u00b7 Alloy Steels 4140, 4330"
     },
     {
-     "label": "General Drilling Operations \u00b7 Carbon Steels 1045, 1050",
+     "label": "General Drilling Operations \u00b7 Alloy Steels 4140, 4330",
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
@@ -20678,12 +20817,12 @@
      },
      "iso": "P",
      "materials": [
-      "p-mild"
+      "p-alloy"
      ],
-     "sourceGroup": "General Drilling Operations \u00b7 Carbon Steels 1045, 1050"
+     "sourceGroup": "General Drilling Operations \u00b7 Alloy Steels 4140, 4330"
     },
     {
-     "label": "General Drilling Operations \u00b7 Alloy Steels 4140, 4330",
+     "label": "General Drilling Operations \u00b7 Tool Steels D2, H13",
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
@@ -20748,14 +20887,10 @@
       "retrieved": "2026-10-23",
       "notes": "Printed RPM and feed per diameter: 0.5mm: 7,760 0.001-0.002; 0.046875\": 3,260 0.002-0.003; 2mm: 1,940 0.002-0.004; 0.09375\": 1,630 0.003-0.005; 3mm: 1,290 0.003-0.005; 0.125\": 1,220 0.003-0.005; 4mm: 970 0.004-0.006; 0.1875\": 810 0.005-0.007; 6mm: 650 0.005-0.007; 0.25\": 610 0.005-0.008; 8mm: 490 0.006-0.009; 0.375\": 410 0.008-0.011; 10mm: 390 0.008-0.011; 0.4375\": 350 0.009-0.012; 12mm: 320 0.009-0.013; 0.5\": 310 0.010-0.014; 14mm: 280 0.011-0.014; 0.625\": 240 0.012-0.016; 16mm: 240 0.012-0.016; 18mm: 220 0.014-0.018; 0.75\": 200 0.015-0.019; 20mm: 190 0.016-0.020 | Page notes: 1. The indicated speeds and feeds are when water soluble oil is used. 2. Suitable cutting fluid is water-emulsifiable, high density oil (less than 20 times dilution). 3. When using non-water soluble oil or water-emulsifiable oil (over 20 times dilution), reduce drilling speed by 20%."
      },
-     "iso": "P",
-     "materials": [
-      "p-alloy"
-     ],
-     "sourceGroup": "General Drilling Operations \u00b7 Alloy Steels 4140, 4330"
+     "iso": "P"
     },
     {
-     "label": "General Drilling Operations \u00b7 Alloy Steels 4140, 4330",
+     "label": "General Drilling Operations \u00b7 Tool Steels D2, H13",
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
@@ -20829,14 +20964,10 @@
       "notes": "Printed RPM and feed per diameter: 0.5mm: 7,760 0.001-0.002; 0.046875\": 3,260 0.002-0.003; 2mm: 1,940 0.002-0.004; 0.09375\": 1,630 0.003-0.005; 3mm: 1,290 0.003-0.005; 0.125\": 1,220 0.003-0.005; 4mm: 970 0.004-0.006; 0.1875\": 810 0.005-0.007; 6mm: 650 0.005-0.007; 0.25\": 610 0.005-0.008; 8mm: 490 0.006-0.009; 0.375\": 410 0.008-0.011; 10mm: 390 0.008-0.011; 0.4375\": 350 0.009-0.012; 12mm: 320 0.009-0.013; 0.5\": 310 0.010-0.014; 14mm: 280 0.011-0.014; 0.625\": 240 0.012-0.016; 16mm: 240 0.012-0.016; 18mm: 220 0.014-0.018; 0.75\": 200 0.015-0.019; 20mm: 190 0.016-0.020 | Page notes: 1. The indicated speeds and feeds are when water soluble oil is used. 2. Suitable cutting fluid is water-emulsifiable, high density oil (less than 20 times dilution). 3. When using non-water soluble oil or water-emulsifiable oil (over 20 times dilution), reduce drilling speed by 20%.",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
-     "iso": "P",
-     "materials": [
-      "p-alloy"
-     ],
-     "sourceGroup": "General Drilling Operations \u00b7 Alloy Steels 4140, 4330"
+     "iso": "P"
     },
     {
-     "label": "General Drilling Operations \u00b7 Tool Steels D2, H13",
+     "label": "General Drilling Operations \u00b7 400SS, 17-4PH",
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
@@ -20845,7 +20976,6 @@
      },
      "table": "General Drilling Operations 1, column 5",
      "status": "verified",
-     "review": "OSG p.342 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -20875,20 +21005,20 @@
         "max": 0.009
        },
        "0.4375": {
-        "min": 0.011,
-        "max": 0.016
+        "min": 0.004,
+        "max": 0.011
        },
        "0.5": {
-        "min": 0.012,
-        "max": 0.017
+        "min": 0.005,
+        "max": 0.013
        },
        "0.625": {
-        "min": 0.016,
-        "max": 0.021
+        "min": 0.006,
+        "max": 0.016
        },
        "0.75": {
-        "min": 0.019,
-        "max": 0.026
+        "min": 0.007,
+        "max": 0.019
        }
       }
      },
@@ -20900,12 +21030,12 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=342",
       "page": "342 (PDF p.342)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 0.5mm: 9,700     0.001; 0.046875\": 4,070 0.001-0.002; 2mm: 2,430 0.001-0.002; 0.09375\": 2,040 0.001-0.003; 3mm: 1,620 0.001-0.003; 0.125\": 1,530 0.001-0.003; 4mm: 1,210 0.002-0.004; 0.1875\": 1,020 0.002-0.005; 6mm: 810 0.002-0.006; 0.25\": 760 0.002-0.006; 8mm: 610 0.003-0.008; 0.375\": 510 0.004-0.009; 10mm: 1,600 0.010-0.014; 0.4375\": 1,440 0.011-0.016; 12mm: 1,330 0.012-0.017; 0.5\": 1,260 0.012-0.017; 14mm: 1,140 0.014-0.019; 0.625\": 1,010 0.016-0.021; 16mm: 1,010 0.016-0.021; 18mm: 890 0.018-0.025; 0.75\": 840 0.019-0.026; 20mm: 800 0.020-0.027 | Page notes: 1. The indicated speeds and feeds are when water soluble oil is used. 2. Suitable cutting fluid is water-emulsifiable, high density oil (less than 20 times dilution). 3. When using non-water soluble oil or water-emulsifiable oil (over 20 times dilution), reduce drilling speed by 20%."
+      "notes": "Printed RPM and feed per diameter: 0.5mm: 9,700 0.001; 0.046875\": 4,070 0.001-0.002; 2mm: 2,430 0.001-0.002; 0.09375\": 2,040 0.001-0.003; 3mm: 1,620 0.001-0.003; 0.125\": 1,530 0.001-0.003; 4mm: 1,210 0.002-0.004; 0.1875\": 1,020 0.002-0.005; 6mm: 810 0.002-0.006; 0.25\": 760 0.002-0.006; 8mm: 610 0.003-0.008; 0.375\": 510 0.004-0.009; 10mm: 490 0.004-0.010; 0.4375\": 440 0.004-0.011; 12mm: 400 0.005-0.012; 0.5\": 380 0.005-0.013; 14mm: 350 0.005-0.014; 0.625\": 310 0.006-0.016; 16mm: 310 0.006-0.016; 18mm: 270 0.007-0.018; 0.75\": 250 0.007-0.019; 20mm: 240 0.008-0.020 | Page notes: 1. The indicated speeds and feeds are when water soluble oil is used. 2. Suitable cutting fluid is water-emulsifiable, high density oil (less than 20 times dilution). 3. When using non-water soluble oil or water-emulsifiable oil (over 20 times dilution), reduce drilling speed by 20%."
      },
-     "iso": "P"
+     "iso": "M"
     },
     {
-     "label": "General Drilling Operations \u00b7 Tool Steels D2, H13",
+     "label": "General Drilling Operations \u00b7 400SS, 17-4PH",
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
@@ -20914,7 +21044,6 @@
      },
      "table": "General Drilling Operations 1, column 5",
      "status": "derived",
-     "review": "OSG p.342 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -20941,133 +21070,28 @@
         "max": 0.008
        },
        "0.3937": {
-        "min": 0.01,
-        "max": 0.014
+        "min": 0.004,
+        "max": 0.01
        },
        "0.4724": {
-        "min": 0.012,
-        "max": 0.017
+        "min": 0.005,
+        "max": 0.012
        },
        "0.5512": {
-        "min": 0.014,
-        "max": 0.019
+        "min": 0.005,
+        "max": 0.014
        },
        "0.6299": {
-        "min": 0.016,
-        "max": 0.021
+        "min": 0.006,
+        "max": 0.016
        },
        "0.7087": {
-        "min": 0.018,
-        "max": 0.025
+        "min": 0.007,
+        "max": 0.018
        },
        "0.7874": {
-        "min": 0.02,
-        "max": 0.027
-       }
-      }
-     },
-     "source": {
-      "kind": "catalog",
-      "manufacturer": "OSG USA",
-      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
-      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
-      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=342",
-      "page": "342 (PDF p.342)",
-      "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 0.5mm: 9,700     0.001; 0.046875\": 4,070 0.001-0.002; 2mm: 2,430 0.001-0.002; 0.09375\": 2,040 0.001-0.003; 3mm: 1,620 0.001-0.003; 0.125\": 1,530 0.001-0.003; 4mm: 1,210 0.002-0.004; 0.1875\": 1,020 0.002-0.005; 6mm: 810 0.002-0.006; 0.25\": 760 0.002-0.006; 8mm: 610 0.003-0.008; 0.375\": 510 0.004-0.009; 10mm: 1,600 0.010-0.014; 0.4375\": 1,440 0.011-0.016; 12mm: 1,330 0.012-0.017; 0.5\": 1,260 0.012-0.017; 14mm: 1,140 0.014-0.019; 0.625\": 1,010 0.016-0.021; 16mm: 1,010 0.016-0.021; 18mm: 890 0.018-0.025; 0.75\": 840 0.019-0.026; 20mm: 800 0.020-0.027 | Page notes: 1. The indicated speeds and feeds are when water soluble oil is used. 2. Suitable cutting fluid is water-emulsifiable, high density oil (less than 20 times dilution). 3. When using non-water soluble oil or water-emulsifiable oil (over 20 times dilution), reduce drilling speed by 20%.",
-      "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
-     },
-     "iso": "P"
-    },
-    {
-     "label": "General Drilling Operations \u00b7 400SS, 17-4PH",
-     "coolant": null,
-     "sfm": {
-      "unit": "ft/min",
-      "min": 130,
-      "max": 200
-     },
-     "table": "General Drilling Operations 1, column 6",
-     "status": "verified",
-     "feed": {
-      "kind": "ipr",
-      "unit": "in",
-      "byDiameter": {
-       "0.046875": {
-        "min": 0.002,
-        "max": 0.003
-       },
-       "0.09375": {
-        "min": 0.003,
-        "max": 0.005
-       },
-       "0.125": {
-        "min": 0.004,
-        "max": 0.006
-       },
-       "0.1875": {
-        "min": 0.006,
-        "max": 0.008
-       },
-       "0.25": {
-        "min": 0.007,
-        "max": 0.01
-       },
-       "0.375": {
-        "min": 0.01,
-        "max": 0.013
-       }
-      }
-     },
-     "source": {
-      "kind": "catalog",
-      "manufacturer": "OSG USA",
-      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
-      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
-      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=342",
-      "page": "342 (PDF p.342)",
-      "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 0.5mm: 25,000 0.001-0.002; 0.046875\": 13,450 0.002-0.003; 2mm: 8,000 0.003-0.004; 0.09375\": 6,720 0.003-0.005; 3mm: 5,340 0.004-0.006; 0.125\": 5,040 0.004-0.006; 4mm: 4,000 0.005-0.007; 0.1875\": 3,360 0.006-0.008; 6mm: 2,670 0.007-0.010; 0.25\": 2,520 0.007-0.010; 8mm: 2,000 0.008-0.012; 0.375\": 1,680 0.010-0.013 | Page notes: 1. The indicated speeds and feeds are when water soluble oil is used. 2. Suitable cutting fluid is water-emulsifiable, high density oil (less than 20 times dilution). 3. When using non-water soluble oil or water-emulsifiable oil (over 20 times dilution), reduce drilling speed by 20%."
-     },
-     "iso": "M"
-    },
-    {
-     "label": "General Drilling Operations \u00b7 400SS, 17-4PH",
-     "coolant": null,
-     "sfm": {
-      "unit": "ft/min",
-      "min": 130,
-      "max": 200
-     },
-     "table": "General Drilling Operations 1, column 6",
-     "status": "derived",
-     "feed": {
-      "kind": "ipr",
-      "unit": "in",
-      "byDiameter": {
-       "0.0197": {
-        "min": 0.001,
-        "max": 0.002
-       },
-       "0.0787": {
-        "min": 0.003,
-        "max": 0.004
-       },
-       "0.1181": {
-        "min": 0.004,
-        "max": 0.006
-       },
-       "0.1575": {
-        "min": 0.005,
-        "max": 0.007
-       },
-       "0.2362": {
-        "min": 0.007,
-        "max": 0.01
-       },
-       "0.3150": {
         "min": 0.008,
-        "max": 0.012
+        "max": 0.02
        }
       }
      },
@@ -21079,7 +21103,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=342",
       "page": "342 (PDF p.342)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 0.5mm: 25,000 0.001-0.002; 0.046875\": 13,450 0.002-0.003; 2mm: 8,000 0.003-0.004; 0.09375\": 6,720 0.003-0.005; 3mm: 5,340 0.004-0.006; 0.125\": 5,040 0.004-0.006; 4mm: 4,000 0.005-0.007; 0.1875\": 3,360 0.006-0.008; 6mm: 2,670 0.007-0.010; 0.25\": 2,520 0.007-0.010; 8mm: 2,000 0.008-0.012; 0.375\": 1,680 0.010-0.013 | Page notes: 1. The indicated speeds and feeds are when water soluble oil is used. 2. Suitable cutting fluid is water-emulsifiable, high density oil (less than 20 times dilution). 3. When using non-water soluble oil or water-emulsifiable oil (over 20 times dilution), reduce drilling speed by 20%.",
+      "notes": "Printed RPM and feed per diameter: 0.5mm: 9,700 0.001; 0.046875\": 4,070 0.001-0.002; 2mm: 2,430 0.001-0.002; 0.09375\": 2,040 0.001-0.003; 3mm: 1,620 0.001-0.003; 0.125\": 1,530 0.001-0.003; 4mm: 1,210 0.002-0.004; 0.1875\": 1,020 0.002-0.005; 6mm: 810 0.002-0.006; 0.25\": 760 0.002-0.006; 8mm: 610 0.003-0.008; 0.375\": 510 0.004-0.009; 10mm: 490 0.004-0.010; 0.4375\": 440 0.004-0.011; 12mm: 400 0.005-0.012; 0.5\": 380 0.005-0.013; 14mm: 350 0.005-0.014; 0.625\": 310 0.006-0.016; 16mm: 310 0.006-0.016; 18mm: 270 0.007-0.018; 0.75\": 250 0.007-0.019; 20mm: 240 0.008-0.020 | Page notes: 1. The indicated speeds and feeds are when water soluble oil is used. 2. Suitable cutting fluid is water-emulsifiable, high density oil (less than 20 times dilution). 3. When using non-water soluble oil or water-emulsifiable oil (over 20 times dilution), reduce drilling speed by 20%.",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "M"
@@ -21597,7 +21621,7 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "verified",
-     "review": "OSG p.344 columns under review",
+     "review": "OSG p.344 prints 30-50 SFM for D2/H13, but its own RPM column works out to about 68 SFM (3300 RPM at 2 mm), so the speed basis is unclear",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -21644,7 +21668,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=344",
       "page": "344 (PDF p.344)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 2mm: 3300       0.003-0.004; 3mm: 2200       0.004-0.005; 0.125\": 2080       0.004-0.005; 4mm: 1650       0.004-0.006; 0.1875\": 1390       0.005-0.007; 6mm: 1100       0.006-0.008; 0.25\": 1040       0.006-0.008; 8mm: 820        0.007-0.010; 0.375\": 690        0.008-0.011; 10mm: 660        0.008-0.011; 0.4375\": 590        0.009-0.012; 12mm: 550        0.009-0.013; 0.5\": 520        0.010-0.014; 14mm: 470        0.010-0.015; 0.625\": 420        0.011-0.017; 16mm: 410        0.011-0.017; 18mm: 370        0.013-0.018; 0.75\": 350        0.013-0.019; 20mm: 330        0.014-0.020; 22mm: 300        0.015-0.022; 24mm: 270        0.016-0.024; 26mm: 250        0.017-0.026; 28mm: 240        0.019-0.027; 30mm: 220        0.020-0.029; 32mm: 210        0.021-0.031 | Page notes: 1. The indicated speeds and feeds are when water soluble oil is used. 2. With the exception of using milling chucks, pay careful attention to ensure that drill is rigidly clamped and keep deflection at a minimum. 3. In case of drilling depth: >4D, reduce drilling speed as below. 4. When using non-water soluble oil or water-emulsifiable oil (over 10 times dilution), reduce drilling speed by 20%. 5. Step process should be used when drilling depth of the hole exceeds 4 times drill diameter for vertical machines or 3 times drill diameter for"
+      "notes": "Printed RPM and feed per diameter: 2mm: 3300 0.003-0.004; 3mm: 2200 0.004-0.005; 0.125\": 2080 0.004-0.005; 4mm: 1650 0.004-0.006; 0.1875\": 1390 0.005-0.007; 6mm: 1100 0.006-0.008; 0.25\": 1040 0.006-0.008; 8mm: 820 0.007-0.010; 0.375\": 690 0.008-0.011; 10mm: 660 0.008-0.011; 0.4375\": 590 0.009-0.012; 12mm: 550 0.009-0.013; 0.5\": 520 0.010-0.014; 14mm: 470 0.010-0.015; 0.625\": 420 0.011-0.017; 16mm: 410 0.011-0.017; 18mm: 370 0.013-0.018; 0.75\": 350 0.013-0.019; 20mm: 330 0.014-0.020; 22mm: 300 0.015-0.022; 24mm: 270 0.016-0.024; 26mm: 250 0.017-0.026; 28mm: 240 0.019-0.027; 30mm: 220 0.020-0.029; 32mm: 210 0.021-0.031 | Page notes: 1. The indicated speeds and feeds are when water soluble oil is used. 2. With the exception of using milling chucks, pay careful attention to ensure that drill is rigidly clamped and keep deflection at a minimum. 3. In case of drilling depth: >4D, reduce drilling speed as below. 4. When using non-water soluble oil or water-emulsifiable oil (over 10 times dilution), reduce drilling speed by 20%. 5. Step process should be used when drilling depth of the hole exceeds 4 times drill diameter for vertical machines or 3 times drill diameter for"
      },
      "iso": "P"
     },
@@ -21658,7 +21682,7 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "derived",
-     "review": "OSG p.344 columns under review",
+     "review": "OSG p.344 prints 30-50 SFM for D2/H13, but its own RPM column works out to about 68 SFM (3300 RPM at 2 mm), so the speed basis is unclear",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -21741,7 +21765,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=344",
       "page": "344 (PDF p.344)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 2mm: 3300       0.003-0.004; 3mm: 2200       0.004-0.005; 0.125\": 2080       0.004-0.005; 4mm: 1650       0.004-0.006; 0.1875\": 1390       0.005-0.007; 6mm: 1100       0.006-0.008; 0.25\": 1040       0.006-0.008; 8mm: 820        0.007-0.010; 0.375\": 690        0.008-0.011; 10mm: 660        0.008-0.011; 0.4375\": 590        0.009-0.012; 12mm: 550        0.009-0.013; 0.5\": 520        0.010-0.014; 14mm: 470        0.010-0.015; 0.625\": 420        0.011-0.017; 16mm: 410        0.011-0.017; 18mm: 370        0.013-0.018; 0.75\": 350        0.013-0.019; 20mm: 330        0.014-0.020; 22mm: 300        0.015-0.022; 24mm: 270        0.016-0.024; 26mm: 250        0.017-0.026; 28mm: 240        0.019-0.027; 30mm: 220        0.020-0.029; 32mm: 210        0.021-0.031 | Page notes: 1. The indicated speeds and feeds are when water soluble oil is used. 2. With the exception of using milling chucks, pay careful attention to ensure that drill is rigidly clamped and keep deflection at a minimum. 3. In case of drilling depth: >4D, reduce drilling speed as below. 4. When using non-water soluble oil or water-emulsifiable oil (over 10 times dilution), reduce drilling speed by 20%. 5. Step process should be used when drilling depth of the hole exceeds 4 times drill diameter for vertical machines or 3 times drill diameter for",
+      "notes": "Printed RPM and feed per diameter: 2mm: 3300 0.003-0.004; 3mm: 2200 0.004-0.005; 0.125\": 2080 0.004-0.005; 4mm: 1650 0.004-0.006; 0.1875\": 1390 0.005-0.007; 6mm: 1100 0.006-0.008; 0.25\": 1040 0.006-0.008; 8mm: 820 0.007-0.010; 0.375\": 690 0.008-0.011; 10mm: 660 0.008-0.011; 0.4375\": 590 0.009-0.012; 12mm: 550 0.009-0.013; 0.5\": 520 0.010-0.014; 14mm: 470 0.010-0.015; 0.625\": 420 0.011-0.017; 16mm: 410 0.011-0.017; 18mm: 370 0.013-0.018; 0.75\": 350 0.013-0.019; 20mm: 330 0.014-0.020; 22mm: 300 0.015-0.022; 24mm: 270 0.016-0.024; 26mm: 250 0.017-0.026; 28mm: 240 0.019-0.027; 30mm: 220 0.020-0.029; 32mm: 210 0.021-0.031 | Page notes: 1. The indicated speeds and feeds are when water soluble oil is used. 2. With the exception of using milling chucks, pay careful attention to ensure that drill is rigidly clamped and keep deflection at a minimum. 3. In case of drilling depth: >4D, reduce drilling speed as below. 4. When using non-water soluble oil or water-emulsifiable oil (over 10 times dilution), reduce drilling speed by 20%. 5. Step process should be used when drilling depth of the hole exceeds 4 times drill diameter for vertical machines or 3 times drill diameter for",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "P"
@@ -23952,7 +23976,6 @@
      },
      "table": "General Drilling Operations 1, column 5",
      "status": "derived",
-     "review": "OSG p.349 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -23982,16 +24005,16 @@
         "max": 0.009
        },
        "0.3937": {
-        "min": 0.01,
-        "max": 0.014
+        "min": 0.008,
+        "max": 0.011
        },
        "0.4724": {
-        "min": 0.012,
-        "max": 0.017
+        "min": 0.009,
+        "max": 0.013
        },
        "0.5118": {
-        "min": 0.012,
-        "max": 0.017
+        "min": 0.01,
+        "max": 0.014
        }
       }
      },
@@ -24003,7 +24026,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=349",
       "page": "349 (PDF p.349)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 2mm: 2,910 0.002-0.004; 3mm: 1,940 0.004-0.005; 4mm: 1,460 0.004-0.006; 5mm: 1,160 0.005-0.007; 6mm: 970 0.005-0.007; 8mm: 730 0.006-0.009; 10mm: 1,120 0.010-0.014; 12mm: 950 0.012-0.017; 13mm: 880 0.012-0.017",
+      "notes": "Printed RPM and feed per diameter: 2mm: 2,910 0.002-0.004; 3mm: 1,940 0.004-0.005; 4mm: 1,460 0.004-0.006; 5mm: 1,160 0.005-0.007; 6mm: 970 0.005-0.007; 8mm: 730 0.006-0.009; 10mm: 580 0.008-0.011; 12mm: 490 0.009-0.013; 13mm: 450 0.010-0.014",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "P"
@@ -24018,7 +24041,6 @@
      },
      "table": "General Drilling Operations 1, column 5",
      "status": "derived",
-     "review": "OSG p.349 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -24048,16 +24070,16 @@
         "max": 0.009
        },
        "0.3937": {
-        "min": 0.01,
-        "max": 0.014
+        "min": 0.008,
+        "max": 0.011
        },
        "0.4724": {
-        "min": 0.012,
-        "max": 0.017
+        "min": 0.009,
+        "max": 0.013
        },
        "0.5118": {
-        "min": 0.012,
-        "max": 0.017
+        "min": 0.01,
+        "max": 0.014
        }
       }
      },
@@ -24069,7 +24091,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=349",
       "page": "349 (PDF p.349)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 2mm: 2,910 0.002-0.004; 3mm: 1,940 0.004-0.005; 4mm: 1,460 0.004-0.006; 5mm: 1,160 0.005-0.007; 6mm: 970 0.005-0.007; 8mm: 730 0.006-0.009; 10mm: 1,120 0.010-0.014; 12mm: 950 0.012-0.017; 13mm: 880 0.012-0.017",
+      "notes": "Printed RPM and feed per diameter: 2mm: 2,910 0.002-0.004; 3mm: 1,940 0.004-0.005; 4mm: 1,460 0.004-0.006; 5mm: 1,160 0.005-0.007; 6mm: 970 0.005-0.007; 8mm: 730 0.006-0.009; 10mm: 580 0.008-0.011; 12mm: 490 0.009-0.013; 13mm: 450 0.010-0.014",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "M"
@@ -24084,7 +24106,6 @@
      },
      "table": "General Drilling Operations 1, column 6",
      "status": "derived",
-     "review": "OSG p.349 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -24114,16 +24135,16 @@
         "max": 0.012
        },
        "0.3937": {
-        "min": 0.018,
-        "max": 0.025
+        "min": 0.01,
+        "max": 0.014
        },
        "0.4724": {
-        "min": 0.021,
-        "max": 0.03
+        "min": 0.012,
+        "max": 0.017
        },
        "0.5118": {
-        "min": 0.022,
-        "max": 0.031
+        "min": 0.012,
+        "max": 0.017
        }
       }
      },
@@ -24135,7 +24156,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=349",
       "page": "349 (PDF p.349)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 2mm: 4,920 0.003-0.004; 3mm: 3,850 0.004-0.006; 4mm: 2,900 0.005-0.007; 5mm: 2,260 0.006-0.009; 6mm: 1,900 0.007-0.010; 8mm: 1,400 0.008-0.012; 10mm: 3,150 0.018-0.025; 12mm: 2,650 0.021-0.030; 13mm: 2,450 0.022-0.031",
+      "notes": "Printed RPM and feed per diameter: 2mm: 4,920 0.003-0.004; 3mm: 3,850 0.004-0.006; 4mm: 2,900 0.005-0.007; 5mm: 2,260 0.006-0.009; 6mm: 1,900 0.007-0.010; 8mm: 1,400 0.008-0.012; 10mm: 1,120 0.010-0.014; 12mm: 950 0.012-0.017; 13mm: 880 0.012-0.017",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "K"
@@ -24335,6 +24356,135 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
+      "min": 80,
+      "max": 150
+     },
+     "table": "General Drilling Operations 1, column 2",
+     "status": "verified",
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "byDiameter": {
+       "0.0625": {
+        "min": 0.001,
+        "max": 0.003
+       },
+       "0.09375": {
+        "min": 0.003,
+        "max": 0.004
+       },
+       "0.125": {
+        "min": 0.004,
+        "max": 0.005
+       },
+       "0.1875": {
+        "min": 0.005,
+        "max": 0.007
+       },
+       "0.25": {
+        "min": 0.005,
+        "max": 0.008
+       },
+       "0.375": {
+        "min": 0.008,
+        "max": 0.011
+       },
+       "0.4375": {
+        "min": 0.009,
+        "max": 0.012
+       },
+       "0.5": {
+        "min": 0.01,
+        "max": 0.014
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "OSG USA",
+      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
+      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
+      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=350",
+      "page": "350 (PDF p.350)",
+      "retrieved": "2026-10-23",
+      "notes": "Printed RPM and feed per diameter: 1mm: 11,160 0.001-0.002; 0.0625\": 7,000 0.001-0.003; 2mm: 5,580 0.002-0.004; 0.09375\": 4,680 0.003-0.004; 3mm: 3,720 0.004-0.005; 0.125\": 3,500 0.004-0.005; 4mm: 2,790 0.004-0.006; 0.1875\": 2,340 0.005-0.007; 6mm: 1,860 0.005-0.008; 0.25\": 1,750 0.005-0.008; 8mm: 1,395 0.007-0.009; 0.375\": 1,170 0.008-0.011; 10mm: 1,115 0.008-0.011; 0.4375\": 1,000 0.009-0.012; 12mm: 930 0.009-0.013; 0.5\": 870 0.010-0.014 | Page notes: 1. The indicated speeds and feeds are for drilling with water soluble coolant. 2. The most suitable cutting fluid is water-emulsifiable high density oil (less than 10 times dilution) 3. When drilling cast surface (ie.not ground surface), reduce drilling speed by 20%. 4. For drilling depth>3D, reduce drilling speed (using the table below). 5. Step feeding is required for drilling depth>4D. 6. When using non-water soluble coolant or water-emulsifiable (over 10 times dilution), reduce the drilling speed by 20%."
+     },
+     "iso": "P",
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "General Drilling Operations \u00b7 Steels 1035, 1045"
+    },
+    {
+     "label": "General Drilling Operations \u00b7 Steels 1035, 1045",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 80,
+      "max": 150
+     },
+     "table": "General Drilling Operations 1, column 2",
+     "status": "derived",
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "byDiameter": {
+       "0.0394": {
+        "min": 0.001,
+        "max": 0.002
+       },
+       "0.0787": {
+        "min": 0.002,
+        "max": 0.004
+       },
+       "0.1181": {
+        "min": 0.004,
+        "max": 0.005
+       },
+       "0.1575": {
+        "min": 0.004,
+        "max": 0.006
+       },
+       "0.2362": {
+        "min": 0.005,
+        "max": 0.008
+       },
+       "0.3150": {
+        "min": 0.007,
+        "max": 0.009
+       },
+       "0.3937": {
+        "min": 0.008,
+        "max": 0.011
+       },
+       "0.4724": {
+        "min": 0.009,
+        "max": 0.013
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "OSG USA",
+      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
+      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
+      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=350",
+      "page": "350 (PDF p.350)",
+      "retrieved": "2026-10-23",
+      "notes": "Printed RPM and feed per diameter: 1mm: 11,160 0.001-0.002; 0.0625\": 7,000 0.001-0.003; 2mm: 5,580 0.002-0.004; 0.09375\": 4,680 0.003-0.004; 3mm: 3,720 0.004-0.005; 0.125\": 3,500 0.004-0.005; 4mm: 2,790 0.004-0.006; 0.1875\": 2,340 0.005-0.007; 6mm: 1,860 0.005-0.008; 0.25\": 1,750 0.005-0.008; 8mm: 1,395 0.007-0.009; 0.375\": 1,170 0.008-0.011; 10mm: 1,115 0.008-0.011; 0.4375\": 1,000 0.009-0.012; 12mm: 930 0.009-0.013; 0.5\": 870 0.010-0.014 | Page notes: 1. The indicated speeds and feeds are for drilling with water soluble coolant. 2. The most suitable cutting fluid is water-emulsifiable high density oil (less than 10 times dilution) 3. When drilling cast surface (ie.not ground surface), reduce drilling speed by 20%. 4. For drilling depth>3D, reduce drilling speed (using the table below). 5. Step feeding is required for drilling depth>4D. 6. When using non-water soluble coolant or water-emulsifiable (over 10 times dilution), reduce the drilling speed by 20%.",
+      "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
+     },
+     "iso": "P",
+     "materials": [
+      "p-mild"
+     ],
+     "sourceGroup": "General Drilling Operations \u00b7 Steels 1035, 1045"
+    },
+    {
+     "label": "General Drilling Operations \u00b7 Alloy Steels 4140, 4130",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
       "min": 60,
       "max": 125
      },
@@ -24390,12 +24540,12 @@
      },
      "iso": "P",
      "materials": [
-      "p-mild"
+      "p-alloy"
      ],
-     "sourceGroup": "General Drilling Operations \u00b7 Steels 1035, 1045"
+     "sourceGroup": "General Drilling Operations \u00b7 Alloy Steels 4140, 4130"
     },
     {
-     "label": "General Drilling Operations \u00b7 Steels 1035, 1045",
+     "label": "General Drilling Operations \u00b7 Alloy Steels 4140, 4130",
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
@@ -24455,12 +24605,12 @@
      },
      "iso": "P",
      "materials": [
-      "p-mild"
+      "p-alloy"
      ],
-     "sourceGroup": "General Drilling Operations \u00b7 Steels 1035, 1045"
+     "sourceGroup": "General Drilling Operations \u00b7 Alloy Steels 4140, 4130"
     },
     {
-     "label": "General Drilling Operations \u00b7 Alloy Steels 4140, 4130",
+     "label": "General Drilling Operations \u00b7 Tool Steels D2, H13",
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
@@ -24517,14 +24667,10 @@
       "retrieved": "2026-10-23",
       "notes": "Printed RPM and feed per diameter: 1mm: 5,820 0.001-0.002; 0.0625\": 3,650 0.001-0.003; 2mm: 2,910 0.002-0.004; 0.09375\": 2,440 0.003-0.004; 3mm: 1,940 0.004-0.005; 0.125\": 1,830 0.004-0.005; 4mm: 1,455 0.004-0.006; 0.1875\": 1,220 0.005-0.007; 6mm: 970 0.005-0.008; 0.25\": 910 0.005-0.008; 8mm: 725 0.007-0.009; 0.375\": 610 0.008-0.011; 10mm: 580 0.008-0.011; 0.4375\": 520 0.009-0.012; 12mm: 485 0.009-0.013; 0.5\": 450 0.010-0.014 | Page notes: 1. The indicated speeds and feeds are for drilling with water soluble coolant. 2. The most suitable cutting fluid is water-emulsifiable high density oil (less than 10 times dilution) 3. When drilling cast surface (ie.not ground surface), reduce drilling speed by 20%. 4. For drilling depth>3D, reduce drilling speed (using the table below). 5. Step feeding is required for drilling depth>4D. 6. When using non-water soluble coolant or water-emulsifiable (over 10 times dilution), reduce the drilling speed by 20%."
      },
-     "iso": "P",
-     "materials": [
-      "p-alloy"
-     ],
-     "sourceGroup": "General Drilling Operations \u00b7 Alloy Steels 4140, 4130"
+     "iso": "P"
     },
     {
-     "label": "General Drilling Operations \u00b7 Alloy Steels 4140, 4130",
+     "label": "General Drilling Operations \u00b7 Tool Steels D2, H13",
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
@@ -24582,133 +24728,6 @@
       "notes": "Printed RPM and feed per diameter: 1mm: 5,820 0.001-0.002; 0.0625\": 3,650 0.001-0.003; 2mm: 2,910 0.002-0.004; 0.09375\": 2,440 0.003-0.004; 3mm: 1,940 0.004-0.005; 0.125\": 1,830 0.004-0.005; 4mm: 1,455 0.004-0.006; 0.1875\": 1,220 0.005-0.007; 6mm: 970 0.005-0.008; 0.25\": 910 0.005-0.008; 8mm: 725 0.007-0.009; 0.375\": 610 0.008-0.011; 10mm: 580 0.008-0.011; 0.4375\": 520 0.009-0.012; 12mm: 485 0.009-0.013; 0.5\": 450 0.010-0.014 | Page notes: 1. The indicated speeds and feeds are for drilling with water soluble coolant. 2. The most suitable cutting fluid is water-emulsifiable high density oil (less than 10 times dilution) 3. When drilling cast surface (ie.not ground surface), reduce drilling speed by 20%. 4. For drilling depth>3D, reduce drilling speed (using the table below). 5. Step feeding is required for drilling depth>4D. 6. When using non-water soluble coolant or water-emulsifiable (over 10 times dilution), reduce the drilling speed by 20%.",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
-     "iso": "P",
-     "materials": [
-      "p-alloy"
-     ],
-     "sourceGroup": "General Drilling Operations \u00b7 Alloy Steels 4140, 4130"
-    },
-    {
-     "label": "General Drilling Operations \u00b7 Tool Steels D2, H13",
-     "coolant": null,
-     "sfm": {
-      "unit": "ft/min",
-      "min": 40,
-      "max": 50
-     },
-     "table": "General Drilling Operations 1, column 5",
-     "status": "verified",
-     "review": "OSG p.350 columns under review",
-     "feed": {
-      "kind": "ipr",
-      "unit": "in",
-      "byDiameter": {
-       "0.0625": {
-        "min": 0.0005,
-        "max": 0.001
-       },
-       "0.09375": {
-        "min": 0.001,
-        "max": 0.002
-       },
-       "0.125": {
-        "min": 0.001,
-        "max": 0.003
-       },
-       "0.1875": {
-        "min": 0.002,
-        "max": 0.004
-       },
-       "0.25": {
-        "min": 0.003,
-        "max": 0.005
-       },
-       "0.375": {
-        "min": 0.004,
-        "max": 0.007
-       },
-       "0.4375": {
-        "min": 0.005,
-        "max": 0.009
-       },
-       "0.5": {
-        "min": 0.01,
-        "max": 0.014
-       }
-      }
-     },
-     "source": {
-      "kind": "catalog",
-      "manufacturer": "OSG USA",
-      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
-      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
-      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=350",
-      "page": "350 (PDF p.350)",
-      "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 4,360 0.0005-0.001; 0.0625\": 2,750 0.0005-0.001; 2mm: 2,180 0.001-0.002; 0.09375\": 1,830 0.001-0.002; 3mm: 1,450 0.001-0.003; 0.125\": 1,370 0.001-0.003; 4mm: 1,090 0.002-0.003; 0.1875\": 915 0.002-0.004; 6mm: 725 0.003-0.005; 0.25\": 685 0.003-0.005; 8mm: 545 0.003-0.006; 0.375\": 460 0.004-0.007; 10mm: 435 0.004-0.008; 0.4375\": 390 0.005-0.009; 12mm: 370 0.009-0.013; 0.5\": 350 0.010-0.014 | Page notes: 1. The indicated speeds and feeds are for drilling with water soluble coolant. 2. The most suitable cutting fluid is water-emulsifiable high density oil (less than 10 times dilution) 3. When drilling cast surface (ie.not ground surface), reduce drilling speed by 20%. 4. For drilling depth>3D, reduce drilling speed (using the table below). 5. Step feeding is required for drilling depth>4D. 6. When using non-water soluble coolant or water-emulsifiable (over 10 times dilution), reduce the drilling speed by 20%."
-     },
-     "iso": "P"
-    },
-    {
-     "label": "General Drilling Operations \u00b7 Tool Steels D2, H13",
-     "coolant": null,
-     "sfm": {
-      "unit": "ft/min",
-      "min": 40,
-      "max": 50
-     },
-     "table": "General Drilling Operations 1, column 5",
-     "status": "derived",
-     "review": "OSG p.350 columns under review",
-     "feed": {
-      "kind": "ipr",
-      "unit": "in",
-      "byDiameter": {
-       "0.0394": {
-        "min": 0.0005,
-        "max": 0.001
-       },
-       "0.0787": {
-        "min": 0.001,
-        "max": 0.002
-       },
-       "0.1181": {
-        "min": 0.001,
-        "max": 0.003
-       },
-       "0.1575": {
-        "min": 0.002,
-        "max": 0.003
-       },
-       "0.2362": {
-        "min": 0.003,
-        "max": 0.005
-       },
-       "0.3150": {
-        "min": 0.003,
-        "max": 0.006
-       },
-       "0.3937": {
-        "min": 0.004,
-        "max": 0.008
-       },
-       "0.4724": {
-        "min": 0.009,
-        "max": 0.013
-       }
-      }
-     },
-     "source": {
-      "kind": "catalog",
-      "manufacturer": "OSG USA",
-      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
-      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
-      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=350",
-      "page": "350 (PDF p.350)",
-      "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 4,360 0.0005-0.001; 0.0625\": 2,750 0.0005-0.001; 2mm: 2,180 0.001-0.002; 0.09375\": 1,830 0.001-0.002; 3mm: 1,450 0.001-0.003; 0.125\": 1,370 0.001-0.003; 4mm: 1,090 0.002-0.003; 0.1875\": 915 0.002-0.004; 6mm: 725 0.003-0.005; 0.25\": 685 0.003-0.005; 8mm: 545 0.003-0.006; 0.375\": 460 0.004-0.007; 10mm: 435 0.004-0.008; 0.4375\": 390 0.005-0.009; 12mm: 370 0.009-0.013; 0.5\": 350 0.010-0.014 | Page notes: 1. The indicated speeds and feeds are for drilling with water soluble coolant. 2. The most suitable cutting fluid is water-emulsifiable high density oil (less than 10 times dilution) 3. When drilling cast surface (ie.not ground surface), reduce drilling speed by 20%. 4. For drilling depth>3D, reduce drilling speed (using the table below). 5. Step feeding is required for drilling depth>4D. 6. When using non-water soluble coolant or water-emulsifiable (over 10 times dilution), reduce the drilling speed by 20%.",
-      "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
-     },
      "iso": "P"
     }
    ]
@@ -24729,7 +24748,6 @@
      },
      "table": "Work 1, column 3",
      "status": "verified",
-     "review": "OSG p.351 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -24747,8 +24765,8 @@
         "max": 0.003
        },
        "0.1875": {
-        "min": 0.006,
-        "max": 0.009
+        "min": 0.003,
+        "max": 0.004
        },
        "0.25": {
         "min": 0.004,
@@ -24759,8 +24777,8 @@
         "max": 0.007
        },
        "0.4375": {
-        "min": 0.01,
-        "max": 0.015
+        "min": 0.007,
+        "max": 0.009
        },
        "0.5": {
         "min": 0.008,
@@ -24776,7 +24794,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=351",
       "page": "351 (PDF p.351)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 4,550 0.0005-0.00114; 0.0625\": 2,870 0.0005-0.001; 2mm: 2,280 0.001-0.002; 0.09375\": 1,915 0.001-0.002; 3mm: 1,520 0.002-0.003; 0.125\": 1,435 0.002-0.003; 4mm: 1,140 0.002-0.003; 0.1875\": 3,100 0.006-0.009; 6mm: 760 0.004-0.005; 0.25\": 720 0.004-0.005; 8mm: 570 0.005-0.006; 0.375\": 480 0.006-0.007; 10mm: 455 0.006-0.008; 0.4375\": 1,330 0.010-0.015; 12mm: 380 0.007-0.009; 0.5\": 360 0.008-0.010"
+      "notes": "Printed RPM and feed per diameter: 1mm: 4,550 0.0005-0.001; 0.0625\": 2,870 0.0005-0.001; 2mm: 2,280 0.001-0.002; 0.09375\": 1,915 0.001-0.002; 3mm: 1,520 0.002-0.003; 0.125\": 1,435 0.002-0.003; 4mm: 1,140 0.002-0.003; 0.1875\": 960 0.003-0.004; 6mm: 760 0.004-0.005; 0.25\": 720 0.004-0.005; 8mm: 570 0.005-0.006; 0.375\": 480 0.006-0.007; 10mm: 455 0.006-0.008; 0.4375\": 410 0.007-0.009; 12mm: 380 0.007-0.009; 0.5\": 360 0.008-0.010"
      },
      "iso": "M"
     },
@@ -24790,14 +24808,13 @@
      },
      "table": "Work 1, column 3",
      "status": "derived",
-     "review": "OSG p.351 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
       "byDiameter": {
        "0.0394": {
         "min": 0.0005,
-        "max": 0.00114
+        "max": 0.001
        },
        "0.0787": {
         "min": 0.001,
@@ -24837,7 +24854,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=351",
       "page": "351 (PDF p.351)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 4,550 0.0005-0.00114; 0.0625\": 2,870 0.0005-0.001; 2mm: 2,280 0.001-0.002; 0.09375\": 1,915 0.001-0.002; 3mm: 1,520 0.002-0.003; 0.125\": 1,435 0.002-0.003; 4mm: 1,140 0.002-0.003; 0.1875\": 3,100 0.006-0.009; 6mm: 760 0.004-0.005; 0.25\": 720 0.004-0.005; 8mm: 570 0.005-0.006; 0.375\": 480 0.006-0.007; 10mm: 455 0.006-0.008; 0.4375\": 1,330 0.010-0.015; 12mm: 380 0.007-0.009; 0.5\": 360 0.008-0.010",
+      "notes": "Printed RPM and feed per diameter: 1mm: 4,550 0.0005-0.001; 0.0625\": 2,870 0.0005-0.001; 2mm: 2,280 0.001-0.002; 0.09375\": 1,915 0.001-0.002; 3mm: 1,520 0.002-0.003; 0.125\": 1,435 0.002-0.003; 4mm: 1,140 0.002-0.003; 0.1875\": 960 0.003-0.004; 6mm: 760 0.004-0.005; 0.25\": 720 0.004-0.005; 8mm: 570 0.005-0.006; 0.375\": 480 0.006-0.007; 10mm: 455 0.006-0.008; 0.4375\": 410 0.007-0.009; 12mm: 380 0.007-0.009; 0.5\": 360 0.008-0.010",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "M"
@@ -24852,7 +24869,6 @@
      },
      "table": "Work 1, column 4",
      "status": "verified",
-     "review": "OSG p.351 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -24870,8 +24886,8 @@
         "max": 0.006
        },
        "0.1875": {
-        "min": 0.004,
-        "max": 0.011
+        "min": 0.006,
+        "max": 0.009
        },
        "0.25": {
         "min": 0.008,
@@ -24882,8 +24898,8 @@
         "max": 0.013
        },
        "0.4375": {
-        "min": 0.009,
-        "max": 0.024
+        "min": 0.01,
+        "max": 0.015
        },
        "0.5": {
         "min": 0.011,
@@ -24899,7 +24915,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=351",
       "page": "351 (PDF p.351)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 780 0.001-0.002; 0.0625\": 9,310 0.002-0.003; 2mm: 7,390 0.003-0.004; 0.09375\": 6,210 0.003-0.004; 3mm: 4,930 0.004-0.006; 0.125\": 4,660 0.004-0.006; 4mm: 3,700 0.006-0.008; 0.1875\": 3,150 0.004-0.011; 6mm: 2,460 0.008-0.010; 0.25\": 2,330 0.008-0.010; 8mm: 1,850 0.008-0.012; 0.375\": 1,550 0.009-0.013; 10mm: 1,480 0.010-0.014; 0.4375\": 1,350 0.009-0.024; 12mm: 1,230 0.011-0.015; 0.5\": 1,160 0.011-0.015"
+      "notes": "Printed RPM and feed per diameter: 1mm: 14,780 0.001-0.002; 0.0625\": 9,310 0.002-0.003; 2mm: 7,390 0.003-0.004; 0.09375\": 6,210 0.003-0.004; 3mm: 4,930 0.004-0.006; 0.125\": 4,660 0.004-0.006; 4mm: 3,700 0.006-0.008; 0.1875\": 3,100 0.006-0.009; 6mm: 2,460 0.008-0.010; 0.25\": 2,330 0.008-0.010; 8mm: 1,850 0.008-0.012; 0.375\": 1,550 0.009-0.013; 10mm: 1,480 0.010-0.014; 0.4375\": 1,330 0.010-0.015; 12mm: 1,230 0.011-0.015; 0.5\": 1,160 0.011-0.015"
      },
      "iso": "K"
     },
@@ -24913,7 +24929,6 @@
      },
      "table": "Work 1, column 4",
      "status": "derived",
-     "review": "OSG p.351 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -24960,7 +24975,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=351",
       "page": "351 (PDF p.351)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 780 0.001-0.002; 0.0625\": 9,310 0.002-0.003; 2mm: 7,390 0.003-0.004; 0.09375\": 6,210 0.003-0.004; 3mm: 4,930 0.004-0.006; 0.125\": 4,660 0.004-0.006; 4mm: 3,700 0.006-0.008; 0.1875\": 3,150 0.004-0.011; 6mm: 2,460 0.008-0.010; 0.25\": 2,330 0.008-0.010; 8mm: 1,850 0.008-0.012; 0.375\": 1,550 0.009-0.013; 10mm: 1,480 0.010-0.014; 0.4375\": 1,350 0.009-0.024; 12mm: 1,230 0.011-0.015; 0.5\": 1,160 0.011-0.015",
+      "notes": "Printed RPM and feed per diameter: 1mm: 14,780 0.001-0.002; 0.0625\": 9,310 0.002-0.003; 2mm: 7,390 0.003-0.004; 0.09375\": 6,210 0.003-0.004; 3mm: 4,930 0.004-0.006; 0.125\": 4,660 0.004-0.006; 4mm: 3,700 0.006-0.008; 0.1875\": 3,100 0.006-0.009; 6mm: 2,460 0.008-0.010; 0.25\": 2,330 0.008-0.010; 8mm: 1,850 0.008-0.012; 0.375\": 1,550 0.009-0.013; 10mm: 1,480 0.010-0.014; 0.4375\": 1,330 0.010-0.015; 12mm: 1,230 0.011-0.015; 0.5\": 1,160 0.011-0.015",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "K"
@@ -24975,7 +24990,6 @@
      },
      "table": "Work 1, column 5",
      "status": "verified",
-     "review": "OSG p.351 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -25022,7 +25036,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=351",
       "page": "351 (PDF p.351)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 15,000 0.001-0.002; 0.0625\": 9,460 0.001-0.003; 2mm: 7,510 0.002-0.005; 0.09375\": 6,310 0.002-0.006; 3mm: 5,010 0.003-0.007; 0.125\": 4,730 0.003-0.007; 4mm: 3,760 0.003-0.009; 0.1875\": 5,400 0.004-0.011; 6mm: 2,500 0.005-0.014; 0.25\": 2,360 0.005-0.015; 8mm: 1,880 0.006-0.018; 0.375\": 1,580 0.007-0.021; 10mm: 1,500 0.008-0.022; 0.4375\": 2,310 0.009-0.024; 12mm: 1,250 0.009-0.026; 0.5\": 1,180 0.010-0.027"
+      "notes": "Printed RPM and feed per diameter: 1mm: 15,000 0.001-0.002; 0.0625\": 9,460 0.001-0.003; 2mm: 7,510 0.002-0.005; 0.09375\": 6,310 0.002-0.006; 3mm: 5,010 0.003-0.007; 0.125\": 4,730 0.003-0.007; 4mm: 3,760 0.003-0.009; 0.1875\": 3,150 0.004-0.011; 6mm: 2,500 0.005-0.014; 0.25\": 2,360 0.005-0.015; 8mm: 1,880 0.006-0.018; 0.375\": 1,580 0.007-0.021; 10mm: 1,500 0.008-0.022; 0.4375\": 1,350 0.009-0.024; 12mm: 1,250 0.009-0.026; 0.5\": 1,180 0.010-0.027"
      },
      "iso": "N"
     },
@@ -25036,7 +25050,6 @@
      },
      "table": "Work 1, column 5",
      "status": "derived",
-     "review": "OSG p.351 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -25083,7 +25096,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=351",
       "page": "351 (PDF p.351)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 15,000 0.001-0.002; 0.0625\": 9,460 0.001-0.003; 2mm: 7,510 0.002-0.005; 0.09375\": 6,310 0.002-0.006; 3mm: 5,010 0.003-0.007; 0.125\": 4,730 0.003-0.007; 4mm: 3,760 0.003-0.009; 0.1875\": 5,400 0.004-0.011; 6mm: 2,500 0.005-0.014; 0.25\": 2,360 0.005-0.015; 8mm: 1,880 0.006-0.018; 0.375\": 1,580 0.007-0.021; 10mm: 1,500 0.008-0.022; 0.4375\": 2,310 0.009-0.024; 12mm: 1,250 0.009-0.026; 0.5\": 1,180 0.010-0.027",
+      "notes": "Printed RPM and feed per diameter: 1mm: 15,000 0.001-0.002; 0.0625\": 9,460 0.001-0.003; 2mm: 7,510 0.002-0.005; 0.09375\": 6,310 0.002-0.006; 3mm: 5,010 0.003-0.007; 0.125\": 4,730 0.003-0.007; 4mm: 3,760 0.003-0.009; 0.1875\": 3,150 0.004-0.011; 6mm: 2,500 0.005-0.014; 0.25\": 2,360 0.005-0.015; 8mm: 1,880 0.006-0.018; 0.375\": 1,580 0.007-0.021; 10mm: 1,500 0.008-0.022; 0.4375\": 1,350 0.009-0.024; 12mm: 1,250 0.009-0.026; 0.5\": 1,180 0.010-0.027",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "N"
@@ -25098,7 +25111,6 @@
      },
      "table": "Work 1, column 6",
      "status": "verified",
-     "review": "OSG p.351 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -25117,23 +25129,23 @@
        },
        "0.1875": {
         "min": 0.004,
-        "max": 0.005
+        "max": 0.011
        },
        "0.25": {
         "min": 0.005,
-        "max": 0.006
+        "max": 0.015
        },
        "0.375": {
         "min": 0.007,
-        "max": 0.009
+        "max": 0.021
        },
        "0.4375": {
         "min": 0.009,
-        "max": 0.011
+        "max": 0.024
        },
        "0.5": {
         "min": 0.01,
-        "max": 0.013
+        "max": 0.027
        }
       }
      },
@@ -25145,7 +25157,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=351",
       "page": "351 (PDF p.351)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 25,000 0.001-0.002; 0.0625\": 16,180 0.001-0.003; 2mm: 12,840 0.002-0.005; 0.09375\": 10,790 0.002-0.006; 3mm: 8,560 0.003-0.007; 0.125\": 8,100 0.003-0.007; 4mm: 6,420 0.003-0.009; 0.1875\": 3,310 0.004-0.005; 6mm: 4,280 0.005-0.014; 0.25\": 2,480 0.005-0.006; 8mm: 3,210 0.006-0.018; 0.375\": 1,650 0.007-0.009; 10mm: 2,570 0.008-0.022; 0.4375\": 1,420 0.009-0.011; 12mm: 2,140 0.009-0.026; 0.5\": 1,240 0.010-0.013"
+      "notes": "Printed RPM and feed per diameter: 1mm: 25,000 0.001-0.002; 0.0625\": 16,180 0.001-0.003; 2mm: 12,840 0.002-0.005; 0.09375\": 10,790 0.002-0.006; 3mm: 8,560 0.003-0.007; 0.125\": 8,100 0.003-0.007; 4mm: 6,420 0.003-0.009; 0.1875\": 5,400 0.004-0.011; 6mm: 4,280 0.005-0.014; 0.25\": 4,050 0.005-0.015; 8mm: 3,210 0.006-0.018; 0.375\": 2,700 0.007-0.021; 10mm: 2,570 0.008-0.022; 0.4375\": 2,310 0.009-0.024; 12mm: 2,140 0.009-0.026; 0.5\": 2,020 0.010-0.027"
      },
      "iso": "N"
     },
@@ -25159,7 +25171,6 @@
      },
      "table": "Work 1, column 6",
      "status": "derived",
-     "review": "OSG p.351 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -25206,7 +25217,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=351",
       "page": "351 (PDF p.351)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 25,000 0.001-0.002; 0.0625\": 16,180 0.001-0.003; 2mm: 12,840 0.002-0.005; 0.09375\": 10,790 0.002-0.006; 3mm: 8,560 0.003-0.007; 0.125\": 8,100 0.003-0.007; 4mm: 6,420 0.003-0.009; 0.1875\": 3,310 0.004-0.005; 6mm: 4,280 0.005-0.014; 0.25\": 2,480 0.005-0.006; 8mm: 3,210 0.006-0.018; 0.375\": 1,650 0.007-0.009; 10mm: 2,570 0.008-0.022; 0.4375\": 1,420 0.009-0.011; 12mm: 2,140 0.009-0.026; 0.5\": 1,240 0.010-0.013",
+      "notes": "Printed RPM and feed per diameter: 1mm: 25,000 0.001-0.002; 0.0625\": 16,180 0.001-0.003; 2mm: 12,840 0.002-0.005; 0.09375\": 10,790 0.002-0.006; 3mm: 8,560 0.003-0.007; 0.125\": 8,100 0.003-0.007; 4mm: 6,420 0.003-0.009; 0.1875\": 5,400 0.004-0.011; 6mm: 4,280 0.005-0.014; 0.25\": 4,050 0.005-0.015; 8mm: 3,210 0.006-0.018; 0.375\": 2,700 0.007-0.021; 10mm: 2,570 0.008-0.022; 0.4375\": 2,310 0.009-0.024; 12mm: 2,140 0.009-0.026; 0.5\": 2,020 0.010-0.027",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "N"
@@ -27210,7 +27221,6 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "verified",
-     "review": "OSG p.353 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -27265,7 +27275,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=353",
       "page": "353 (PDF p.353)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 5,550 0.0005-0.001; 0.0625\": 3,600 0.0005-0.001; 2mm: 2,850 0.001-0.002; 0.09375\": 2,400 0.001-0.002; 3mm: 1,900 0.002-0.003; 0.125\": 1,800 0.002-0.003; 4mm: 1,450 0.002-0.003; 0.1875\": 1,200 0.003-0.004; 6mm: 950 0.004-0.005; 0.25\": 510 0.004-0.005; 8mm: 720 0.005-0.006; 0.375\": 340 0.006-0.007; 10mm: 570 0.006-0.008; 0.4375\": 300 0.006-0.009; 12mm: 480 0.007-0.009; 0.5\": 260 0.007-0.010; 14mm: 410 0.008-0.012; 0.625\": 200 0.009-0.012; 16mm: 355 0.009-0.013; 18mm: 320 0.010-0.014; 0.75\": 165 0.010-0.015; 20mm: 285 0.010-0.016; 22mm: 260 0.011-0.017; 24mm: 240 0.012-0.019; 26mm: 220 0.013-0.021; 28mm: 200 0.013-0.022; 30mm: 190 0.014-0.024; 32mm: 180 0.015-0.025"
+      "notes": "Printed RPM and feed per diameter: 1mm: 5,550 0.0005-0.001; 0.0625\": 3,600 0.0005-0.001; 2mm: 2,850 0.001-0.002; 0.09375\": 2,400 0.001-0.002; 3mm: 1,900 0.002-0.003; 0.125\": 1,800 0.002-0.003; 4mm: 1,450 0.002-0.003; 0.1875\": 1,200 0.003-0.004; 6mm: 950 0.004-0.005; 0.25\": 900 0.004-0.005; 8mm: 720 0.005-0.006; 0.375\": 600 0.006-0.007; 10mm: 570 0.006-0.008; 0.4375\": 520 0.006-0.009; 12mm: 480 0.007-0.009; 0.5\": 450 0.007-0.010; 14mm: 410 0.008-0.012; 0.625\": 360 0.009-0.012; 16mm: 355 0.009-0.013; 18mm: 320 0.010-0.014; 0.75\": 300 0.010-0.015; 20mm: 285 0.010-0.016; 22mm: 260 0.011-0.017; 24mm: 240 0.012-0.019; 26mm: 220 0.013-0.021; 28mm: 200 0.013-0.022; 30mm: 190 0.014-0.024; 32mm: 180 0.015-0.025"
      },
      "iso": "P"
     },
@@ -27279,7 +27289,6 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "verified",
-     "review": "OSG p.353 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -27334,7 +27343,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=353",
       "page": "353 (PDF p.353)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 5,550 0.0005-0.001; 0.0625\": 3,600 0.0005-0.001; 2mm: 2,850 0.001-0.002; 0.09375\": 2,400 0.001-0.002; 3mm: 1,900 0.002-0.003; 0.125\": 1,800 0.002-0.003; 4mm: 1,450 0.002-0.003; 0.1875\": 1,200 0.003-0.004; 6mm: 950 0.004-0.005; 0.25\": 510 0.004-0.005; 8mm: 720 0.005-0.006; 0.375\": 340 0.006-0.007; 10mm: 570 0.006-0.008; 0.4375\": 300 0.006-0.009; 12mm: 480 0.007-0.009; 0.5\": 260 0.007-0.010; 14mm: 410 0.008-0.012; 0.625\": 200 0.009-0.012; 16mm: 355 0.009-0.013; 18mm: 320 0.010-0.014; 0.75\": 165 0.010-0.015; 20mm: 285 0.010-0.016; 22mm: 260 0.011-0.017; 24mm: 240 0.012-0.019; 26mm: 220 0.013-0.021; 28mm: 200 0.013-0.022; 30mm: 190 0.014-0.024; 32mm: 180 0.015-0.025"
+      "notes": "Printed RPM and feed per diameter: 1mm: 5,550 0.0005-0.001; 0.0625\": 3,600 0.0005-0.001; 2mm: 2,850 0.001-0.002; 0.09375\": 2,400 0.001-0.002; 3mm: 1,900 0.002-0.003; 0.125\": 1,800 0.002-0.003; 4mm: 1,450 0.002-0.003; 0.1875\": 1,200 0.003-0.004; 6mm: 950 0.004-0.005; 0.25\": 900 0.004-0.005; 8mm: 720 0.005-0.006; 0.375\": 600 0.006-0.007; 10mm: 570 0.006-0.008; 0.4375\": 520 0.006-0.009; 12mm: 480 0.007-0.009; 0.5\": 450 0.007-0.010; 14mm: 410 0.008-0.012; 0.625\": 360 0.009-0.012; 16mm: 355 0.009-0.013; 18mm: 320 0.010-0.014; 0.75\": 300 0.010-0.015; 20mm: 285 0.010-0.016; 22mm: 260 0.011-0.017; 24mm: 240 0.012-0.019; 26mm: 220 0.013-0.021; 28mm: 200 0.013-0.022; 30mm: 190 0.014-0.024; 32mm: 180 0.015-0.025"
      },
      "iso": "M",
      "materials": [
@@ -27352,7 +27361,6 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "derived",
-     "review": "OSG p.353 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -27439,7 +27447,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=353",
       "page": "353 (PDF p.353)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 5,550 0.0005-0.001; 0.0625\": 3,600 0.0005-0.001; 2mm: 2,850 0.001-0.002; 0.09375\": 2,400 0.001-0.002; 3mm: 1,900 0.002-0.003; 0.125\": 1,800 0.002-0.003; 4mm: 1,450 0.002-0.003; 0.1875\": 1,200 0.003-0.004; 6mm: 950 0.004-0.005; 0.25\": 510 0.004-0.005; 8mm: 720 0.005-0.006; 0.375\": 340 0.006-0.007; 10mm: 570 0.006-0.008; 0.4375\": 300 0.006-0.009; 12mm: 480 0.007-0.009; 0.5\": 260 0.007-0.010; 14mm: 410 0.008-0.012; 0.625\": 200 0.009-0.012; 16mm: 355 0.009-0.013; 18mm: 320 0.010-0.014; 0.75\": 165 0.010-0.015; 20mm: 285 0.010-0.016; 22mm: 260 0.011-0.017; 24mm: 240 0.012-0.019; 26mm: 220 0.013-0.021; 28mm: 200 0.013-0.022; 30mm: 190 0.014-0.024; 32mm: 180 0.015-0.025",
+      "notes": "Printed RPM and feed per diameter: 1mm: 5,550 0.0005-0.001; 0.0625\": 3,600 0.0005-0.001; 2mm: 2,850 0.001-0.002; 0.09375\": 2,400 0.001-0.002; 3mm: 1,900 0.002-0.003; 0.125\": 1,800 0.002-0.003; 4mm: 1,450 0.002-0.003; 0.1875\": 1,200 0.003-0.004; 6mm: 950 0.004-0.005; 0.25\": 900 0.004-0.005; 8mm: 720 0.005-0.006; 0.375\": 600 0.006-0.007; 10mm: 570 0.006-0.008; 0.4375\": 520 0.006-0.009; 12mm: 480 0.007-0.009; 0.5\": 450 0.007-0.010; 14mm: 410 0.008-0.012; 0.625\": 360 0.009-0.012; 16mm: 355 0.009-0.013; 18mm: 320 0.010-0.014; 0.75\": 300 0.010-0.015; 20mm: 285 0.010-0.016; 22mm: 260 0.011-0.017; 24mm: 240 0.012-0.019; 26mm: 220 0.013-0.021; 28mm: 200 0.013-0.022; 30mm: 190 0.014-0.024; 32mm: 180 0.015-0.025",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "P"
@@ -27454,7 +27462,6 @@
      },
      "table": "General Drilling Operations 1, column 4",
      "status": "derived",
-     "review": "OSG p.353 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -27541,7 +27548,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=353",
       "page": "353 (PDF p.353)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 5,550 0.0005-0.001; 0.0625\": 3,600 0.0005-0.001; 2mm: 2,850 0.001-0.002; 0.09375\": 2,400 0.001-0.002; 3mm: 1,900 0.002-0.003; 0.125\": 1,800 0.002-0.003; 4mm: 1,450 0.002-0.003; 0.1875\": 1,200 0.003-0.004; 6mm: 950 0.004-0.005; 0.25\": 510 0.004-0.005; 8mm: 720 0.005-0.006; 0.375\": 340 0.006-0.007; 10mm: 570 0.006-0.008; 0.4375\": 300 0.006-0.009; 12mm: 480 0.007-0.009; 0.5\": 260 0.007-0.010; 14mm: 410 0.008-0.012; 0.625\": 200 0.009-0.012; 16mm: 355 0.009-0.013; 18mm: 320 0.010-0.014; 0.75\": 165 0.010-0.015; 20mm: 285 0.010-0.016; 22mm: 260 0.011-0.017; 24mm: 240 0.012-0.019; 26mm: 220 0.013-0.021; 28mm: 200 0.013-0.022; 30mm: 190 0.014-0.024; 32mm: 180 0.015-0.025",
+      "notes": "Printed RPM and feed per diameter: 1mm: 5,550 0.0005-0.001; 0.0625\": 3,600 0.0005-0.001; 2mm: 2,850 0.001-0.002; 0.09375\": 2,400 0.001-0.002; 3mm: 1,900 0.002-0.003; 0.125\": 1,800 0.002-0.003; 4mm: 1,450 0.002-0.003; 0.1875\": 1,200 0.003-0.004; 6mm: 950 0.004-0.005; 0.25\": 900 0.004-0.005; 8mm: 720 0.005-0.006; 0.375\": 600 0.006-0.007; 10mm: 570 0.006-0.008; 0.4375\": 520 0.006-0.009; 12mm: 480 0.007-0.009; 0.5\": 450 0.007-0.010; 14mm: 410 0.008-0.012; 0.625\": 360 0.009-0.012; 16mm: 355 0.009-0.013; 18mm: 320 0.010-0.014; 0.75\": 300 0.010-0.015; 20mm: 285 0.010-0.016; 22mm: 260 0.011-0.017; 24mm: 240 0.012-0.019; 26mm: 220 0.013-0.021; 28mm: 200 0.013-0.022; 30mm: 190 0.014-0.024; 32mm: 180 0.015-0.025",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "M",
@@ -27560,7 +27567,6 @@
      },
      "table": "General Drilling Operations 1, column 5",
      "status": "verified",
-     "review": "OSG p.353 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -27580,6 +27586,175 @@
        "0.1875": {
         "min": 0.003,
         "max": 0.004
+       },
+       "0.25": {
+        "min": 0.004,
+        "max": 0.005
+       },
+       "0.375": {
+        "min": 0.006,
+        "max": 0.007
+       },
+       "0.4375": {
+        "min": 0.006,
+        "max": 0.009
+       },
+       "0.5": {
+        "min": 0.007,
+        "max": 0.01
+       },
+       "0.625": {
+        "min": 0.009,
+        "max": 0.012
+       },
+       "0.75": {
+        "min": 0.01,
+        "max": 0.015
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "OSG USA",
+      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
+      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
+      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=353",
+      "page": "353 (PDF p.353)",
+      "retrieved": "2026-10-23",
+      "notes": "Printed RPM and feed per diameter: 1mm: 3,200 0.0005-0.001; 0.0625\": 2,000 0.0005-0.001; 2mm: 1,600 0.001-0.002; 0.09375\": 1,350 0.001-0.002; 3mm: 1,100 0.002-0.003; 0.125\": 1,000 0.002-0.003; 4mm: 800 0.002-0.003; 0.1875\": 680 0.003-0.004; 6mm: 550 0.004-0.005; 0.25\": 510 0.004-0.005; 8mm: 400 0.005-0.006; 0.375\": 340 0.006-0.007; 10mm: 320 0.006-0.008; 0.4375\": 300 0.006-0.009; 12mm: 280 0.007-0.009; 0.5\": 260 0.007-0.010; 14mm: 225 0.008-0.012; 0.625\": 200 0.009-0.012; 16mm: 200 0.009-0.013; 18mm: 175 0.010-0.014; 0.75\": 165 0.010-0.015; 20mm: 160 0.010-0.016; 22mm: 145 0.011-0.017; 24mm: 135 0.012-0.019; 26mm: 120 0.013-0.021; 28mm: 115 0.013-0.022; 30mm: 105 0.014-0.024; 32mm: 100 0.015-0.025"
+     },
+     "iso": "M"
+    },
+    {
+     "label": "General Drilling Operations \u00b7 15-5PH 17-4PH",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 25,
+      "max": 40
+     },
+     "table": "General Drilling Operations 1, column 5",
+     "status": "derived",
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "byDiameter": {
+       "0.0394": {
+        "min": 0.0005,
+        "max": 0.001
+       },
+       "0.0787": {
+        "min": 0.001,
+        "max": 0.002
+       },
+       "0.1181": {
+        "min": 0.002,
+        "max": 0.003
+       },
+       "0.1575": {
+        "min": 0.002,
+        "max": 0.003
+       },
+       "0.2362": {
+        "min": 0.004,
+        "max": 0.005
+       },
+       "0.3150": {
+        "min": 0.005,
+        "max": 0.006
+       },
+       "0.3937": {
+        "min": 0.006,
+        "max": 0.008
+       },
+       "0.4724": {
+        "min": 0.007,
+        "max": 0.009
+       },
+       "0.5512": {
+        "min": 0.008,
+        "max": 0.012
+       },
+       "0.6299": {
+        "min": 0.009,
+        "max": 0.013
+       },
+       "0.7087": {
+        "min": 0.01,
+        "max": 0.014
+       },
+       "0.7874": {
+        "min": 0.01,
+        "max": 0.016
+       },
+       "0.8661": {
+        "min": 0.011,
+        "max": 0.017
+       },
+       "0.9449": {
+        "min": 0.012,
+        "max": 0.019
+       },
+       "1.0236": {
+        "min": 0.013,
+        "max": 0.021
+       },
+       "1.1024": {
+        "min": 0.013,
+        "max": 0.022
+       },
+       "1.1811": {
+        "min": 0.014,
+        "max": 0.024
+       },
+       "1.2598": {
+        "min": 0.015,
+        "max": 0.025
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "OSG USA",
+      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
+      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
+      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=353",
+      "page": "353 (PDF p.353)",
+      "retrieved": "2026-10-23",
+      "notes": "Printed RPM and feed per diameter: 1mm: 3,200 0.0005-0.001; 0.0625\": 2,000 0.0005-0.001; 2mm: 1,600 0.001-0.002; 0.09375\": 1,350 0.001-0.002; 3mm: 1,100 0.002-0.003; 0.125\": 1,000 0.002-0.003; 4mm: 800 0.002-0.003; 0.1875\": 680 0.003-0.004; 6mm: 550 0.004-0.005; 0.25\": 510 0.004-0.005; 8mm: 400 0.005-0.006; 0.375\": 340 0.006-0.007; 10mm: 320 0.006-0.008; 0.4375\": 300 0.006-0.009; 12mm: 280 0.007-0.009; 0.5\": 260 0.007-0.010; 14mm: 225 0.008-0.012; 0.625\": 200 0.009-0.012; 16mm: 200 0.009-0.013; 18mm: 175 0.010-0.014; 0.75\": 165 0.010-0.015; 20mm: 160 0.010-0.016; 22mm: 145 0.011-0.017; 24mm: 135 0.012-0.019; 26mm: 120 0.013-0.021; 28mm: 115 0.013-0.022; 30mm: 105 0.014-0.024; 32mm: 100 0.015-0.025",
+      "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
+     },
+     "iso": "M"
+    },
+    {
+     "label": "General Drilling Operations \u00b7 Aluminum 5052, 7075",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 105,
+      "max": 205
+     },
+     "table": "General Drilling Operations 1, column 6",
+     "status": "verified",
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "byDiameter": {
+       "0.0625": {
+        "min": 0.001,
+        "max": 0.004
+       },
+       "0.09375": {
+        "min": 0.002,
+        "max": 0.006
+       },
+       "0.125": {
+        "min": 0.003,
+        "max": 0.007
+       },
+       "0.1875": {
+        "min": 0.004,
+        "max": 0.011
        },
        "0.25": {
         "min": 0.005,
@@ -27615,40 +27790,39 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=353",
       "page": "353 (PDF p.353)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 3,200 0.0005-0.001; 0.0625\": 2,000 0.0005-0.001; 2mm: 1,600 0.001-0.002; 0.09375\": 1,350 0.001-0.002; 3mm: 1,100 0.002-0.003; 0.125\": 1,000 0.002-0.003; 4mm: 800 0.002-0.003; 0.1875\": 680 0.003-0.004; 6mm: 2,500 0.005-0.014; 0.25\": 2,360 0.005-0.015; 8mm: 1,880 0.006-0.018; 0.375\": 1,580 0.007-0.021; 10mm: 1,500 0.008-0.022; 0.4375\": 1,350 0.008-0.024; 12mm: 1,250 0.009-0.026; 0.5\": 1,180 0.010-0.027; 14mm: 1,070 0.011-0.029; 0.625\": 950 0.012-0.032; 16mm: 940 0.012-0.033; 18mm: 835 0.013-0.037; 0.75\": 790 0.013-0.038; 20mm: 750 0.014-0.039; 22mm: 680 0.015-0.043; 24mm: 625 0.016-0.045; 26mm: 580 0.017-0.048; 28mm: 535 0.018-0.051; 30mm: 500 0.019-0.053; 32mm: 470 0.020-0.056"
+      "notes": "Printed RPM and feed per diameter: 1mm: 15,000 0.001-0.002; 0.0625\": 9,460 0.001-0.004; 2mm: 7,510 0.002-0.005; 0.09375\": 6,310 0.002-0.006; 3mm: 5,010 0.002-0.007; 0.125\": 4,730 0.003-0.007; 4mm: 3,760 0.003-0.009; 0.1875\": 3,150 0.004-0.011; 6mm: 2,500 0.005-0.014; 0.25\": 2,360 0.005-0.015; 8mm: 1,880 0.006-0.018; 0.375\": 1,580 0.007-0.021; 10mm: 1,500 0.008-0.022; 0.4375\": 1,350 0.008-0.024; 12mm: 1,250 0.009-0.026; 0.5\": 1,180 0.010-0.027; 14mm: 1,070 0.011-0.029; 0.625\": 950 0.012-0.032; 16mm: 940 0.012-0.033; 18mm: 835 0.013-0.037; 0.75\": 790 0.013-0.038; 20mm: 750 0.014-0.039; 22mm: 680 0.015-0.043; 24mm: 625 0.016-0.045; 26mm: 580 0.017-0.048; 28mm: 535 0.018-0.051; 30mm: 500 0.019-0.053; 32mm: 470 0.020-0.056"
      },
-     "iso": "M"
+     "iso": "N"
     },
     {
-     "label": "General Drilling Operations \u00b7 15-5PH 17-4PH",
+     "label": "General Drilling Operations \u00b7 Aluminum 5052, 7075",
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "min": 25,
-      "max": 40
+      "min": 105,
+      "max": 205
      },
-     "table": "General Drilling Operations 1, column 5",
+     "table": "General Drilling Operations 1, column 6",
      "status": "derived",
-     "review": "OSG p.353 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
       "byDiameter": {
        "0.0394": {
-        "min": 0.0005,
-        "max": 0.001
-       },
-       "0.0787": {
         "min": 0.001,
         "max": 0.002
        },
+       "0.0787": {
+        "min": 0.002,
+        "max": 0.005
+       },
        "0.1181": {
         "min": 0.002,
-        "max": 0.003
+        "max": 0.007
        },
        "0.1575": {
-        "min": 0.002,
-        "max": 0.003
+        "min": 0.003,
+        "max": 0.009
        },
        "0.2362": {
         "min": 0.005,
@@ -27716,28 +27890,27 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=353",
       "page": "353 (PDF p.353)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 3,200 0.0005-0.001; 0.0625\": 2,000 0.0005-0.001; 2mm: 1,600 0.001-0.002; 0.09375\": 1,350 0.001-0.002; 3mm: 1,100 0.002-0.003; 0.125\": 1,000 0.002-0.003; 4mm: 800 0.002-0.003; 0.1875\": 680 0.003-0.004; 6mm: 2,500 0.005-0.014; 0.25\": 2,360 0.005-0.015; 8mm: 1,880 0.006-0.018; 0.375\": 1,580 0.007-0.021; 10mm: 1,500 0.008-0.022; 0.4375\": 1,350 0.008-0.024; 12mm: 1,250 0.009-0.026; 0.5\": 1,180 0.010-0.027; 14mm: 1,070 0.011-0.029; 0.625\": 950 0.012-0.032; 16mm: 940 0.012-0.033; 18mm: 835 0.013-0.037; 0.75\": 790 0.013-0.038; 20mm: 750 0.014-0.039; 22mm: 680 0.015-0.043; 24mm: 625 0.016-0.045; 26mm: 580 0.017-0.048; 28mm: 535 0.018-0.051; 30mm: 500 0.019-0.053; 32mm: 470 0.020-0.056",
+      "notes": "Printed RPM and feed per diameter: 1mm: 15,000 0.001-0.002; 0.0625\": 9,460 0.001-0.004; 2mm: 7,510 0.002-0.005; 0.09375\": 6,310 0.002-0.006; 3mm: 5,010 0.002-0.007; 0.125\": 4,730 0.003-0.007; 4mm: 3,760 0.003-0.009; 0.1875\": 3,150 0.004-0.011; 6mm: 2,500 0.005-0.014; 0.25\": 2,360 0.005-0.015; 8mm: 1,880 0.006-0.018; 0.375\": 1,580 0.007-0.021; 10mm: 1,500 0.008-0.022; 0.4375\": 1,350 0.008-0.024; 12mm: 1,250 0.009-0.026; 0.5\": 1,180 0.010-0.027; 14mm: 1,070 0.011-0.029; 0.625\": 950 0.012-0.032; 16mm: 940 0.012-0.033; 18mm: 835 0.013-0.037; 0.75\": 790 0.013-0.038; 20mm: 750 0.014-0.039; 22mm: 680 0.015-0.043; 24mm: 625 0.016-0.045; 26mm: 580 0.017-0.048; 28mm: 535 0.018-0.051; 30mm: 500 0.019-0.053; 32mm: 470 0.020-0.056",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
-     "iso": "M"
+     "iso": "N"
     },
     {
-     "label": "General Drilling Operations \u00b7 Aluminum 5052, 7075",
+     "label": "General Drilling Operations \u00b7 Cast Aluminum",
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "min": 105,
-      "max": 205
+      "min": 205,
+      "max": 325
      },
-     "table": "General Drilling Operations 1, column 6",
+     "table": "General Drilling Operations 1, column 7",
      "status": "verified",
-     "review": "OSG p.353 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
       "byDiameter": {
        "0.0625": {
-        "min": 0.001,
+        "min": 0.002,
         "max": 0.004
        },
        "0.09375": {
@@ -27786,21 +27959,20 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=353",
       "page": "353 (PDF p.353)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 15,000 0.001-0.002; 0.0625\": 9,460 0.001-0.004; 2mm: 7,510 0.002-0.005; 0.09375\": 6,310 0.002-0.006; 3mm: 5,010 0.002-0.007; 0.125\": 4,730 0.003-0.007; 4mm: 3,760 0.003-0.009; 0.1875\": 3,150 0.004-0.011; 6mm: 4,280 0.005-0.014; 0.25\": 4,050 0.005-0.015; 8mm: 3,210 0.006-0.018; 0.375\": 2,700 0.007-0.021; 10mm: 2,570 0.008-0.022; 0.4375\": 2,310 0.008-0.024; 12mm: 2,140 0.009-0.026; 0.5\": 2,020 0.010-0.027; 14mm: 1,830 0.011-0.029; 0.625\": 1,620 0.012-0.032; 16mm: 1,600 0.012-0.033; 18mm: 1,420 0.013-0.037; 0.75\": 1,350 0.013-0.038; 20mm: 1,280 0.014-0.039; 22mm: 1,170 0.015-0.043; 24mm: 1,070 0.016-0.045; 26mm: 990 0.017-0.048; 28mm: 920 0.018-0.051; 30mm: 860 0.019-0.053; 32mm: 800 0.020-0.056"
+      "notes": "Printed RPM and feed per diameter: 1mm: 25,000 0.001-0.002; 0.0625\": 16,180 0.002-0.004; 2mm: 12,840 0.002-0.005; 0.09375\": 10,790 0.002-0.006; 3mm: 8,560 0.002-0.007; 0.125\": 8,090 0.003-0.007; 4mm: 6,420 0.003-0.009; 0.1875\": 5,390 0.004-0.011; 6mm: 4,280 0.005-0.014; 0.25\": 4,050 0.005-0.015; 8mm: 3,210 0.006-0.018; 0.375\": 2,700 0.007-0.021; 10mm: 2,570 0.008-0.022; 0.4375\": 2,310 0.008-0.024; 12mm: 2,140 0.009-0.026; 0.5\": 2,020 0.010-0.027; 14mm: 1,830 0.011-0.029; 0.625\": 1,620 0.012-0.032; 16mm: 1,600 0.012-0.033; 18mm: 1,420 0.013-0.037; 0.75\": 1,350 0.013-0.038; 20mm: 1,280 0.014-0.039; 22mm: 1,170 0.015-0.043; 24mm: 1,070 0.016-0.045; 26mm: 990 0.017-0.048; 28mm: 920 0.018-0.051; 30mm: 860 0.019-0.053; 32mm: 800 0.020-0.056"
      },
      "iso": "N"
     },
     {
-     "label": "General Drilling Operations \u00b7 Aluminum 5052, 7075",
+     "label": "General Drilling Operations \u00b7 Cast Aluminum",
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "min": 105,
-      "max": 205
+      "min": 205,
+      "max": 325
      },
-     "table": "General Drilling Operations 1, column 6",
+     "table": "General Drilling Operations 1, column 7",
      "status": "derived",
-     "review": "OSG p.353 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -27887,178 +28059,7 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=353",
       "page": "353 (PDF p.353)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 15,000 0.001-0.002; 0.0625\": 9,460 0.001-0.004; 2mm: 7,510 0.002-0.005; 0.09375\": 6,310 0.002-0.006; 3mm: 5,010 0.002-0.007; 0.125\": 4,730 0.003-0.007; 4mm: 3,760 0.003-0.009; 0.1875\": 3,150 0.004-0.011; 6mm: 4,280 0.005-0.014; 0.25\": 4,050 0.005-0.015; 8mm: 3,210 0.006-0.018; 0.375\": 2,700 0.007-0.021; 10mm: 2,570 0.008-0.022; 0.4375\": 2,310 0.008-0.024; 12mm: 2,140 0.009-0.026; 0.5\": 2,020 0.010-0.027; 14mm: 1,830 0.011-0.029; 0.625\": 1,620 0.012-0.032; 16mm: 1,600 0.012-0.033; 18mm: 1,420 0.013-0.037; 0.75\": 1,350 0.013-0.038; 20mm: 1,280 0.014-0.039; 22mm: 1,170 0.015-0.043; 24mm: 1,070 0.016-0.045; 26mm: 990 0.017-0.048; 28mm: 920 0.018-0.051; 30mm: 860 0.019-0.053; 32mm: 800 0.020-0.056",
-      "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
-     },
-     "iso": "N"
-    },
-    {
-     "label": "General Drilling Operations \u00b7 Cast Aluminum",
-     "coolant": null,
-     "sfm": {
-      "unit": "ft/min",
-      "min": 205,
-      "max": 325
-     },
-     "table": "General Drilling Operations 1, column 7",
-     "status": "verified",
-     "review": "OSG p.353 columns under review",
-     "feed": {
-      "kind": "ipr",
-      "unit": "in",
-      "byDiameter": {
-       "0.0625": {
-        "min": 0.002,
-        "max": 0.004
-       },
-       "0.09375": {
-        "min": 0.002,
-        "max": 0.006
-       },
-       "0.125": {
-        "min": 0.003,
-        "max": 0.007
-       },
-       "0.1875": {
-        "min": 0.004,
-        "max": 0.011
-       },
-       "0.25": {
-        "min": 0.005,
-        "max": 0.007
-       },
-       "0.375": {
-        "min": 0.007,
-        "max": 0.009
-       },
-       "0.4375": {
-        "min": 0.009,
-        "max": 0.011
-       },
-       "0.5": {
-        "min": 0.01,
-        "max": 0.012
-       },
-       "0.625": {
-        "min": 0.011,
-        "max": 0.014
-       },
-       "0.75": {
-        "min": 0.012,
-        "max": 0.016
-       }
-      }
-     },
-     "source": {
-      "kind": "catalog",
-      "manufacturer": "OSG USA",
-      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
-      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
-      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=353",
-      "page": "353 (PDF p.353)",
-      "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 25,000 0.001-0.002; 0.0625\": 16,180 0.002-0.004; 2mm: 12,840 0.002-0.005; 0.09375\": 10,790 0.002-0.006; 3mm: 8,560 0.002-0.007; 0.125\": 8,090 0.003-0.007; 4mm: 6,420 0.003-0.009; 0.1875\": 5,390 0.004-0.011; 6mm: 1,940 0.005-0.006; 0.25\": 1,830 0.005-0.007; 8mm: 1,450 0.006-0.008; 0.375\": 1,220 0.007-0.009; 10mm: 1,160 0.008-0.010; 0.4375\": 1,050 0.009-0.011; 12mm: 970 0.009-0.012; 0.5\": 920 0.010-0.012; 14mm: 830 0.010-0.013; 0.625\": 735 0.011-0.014; 16mm: 725 0.011-0.015; 18mm: 650 0.011-0.016; 0.75\": 610 0.012-0.016; 20mm: 580 0.012-0.017; 22mm: 530 0.013-0.019; 24mm: 480 0.013-0.021; 26mm: 450 0.013-0.022; 28mm: 410 0.014-0.023; 30mm: 390 0.014-0.025; 32mm: 360 0.015-0.026"
-     },
-     "iso": "N"
-    },
-    {
-     "label": "General Drilling Operations \u00b7 Cast Aluminum",
-     "coolant": null,
-     "sfm": {
-      "unit": "ft/min",
-      "min": 205,
-      "max": 325
-     },
-     "table": "General Drilling Operations 1, column 7",
-     "status": "derived",
-     "review": "OSG p.353 columns under review",
-     "feed": {
-      "kind": "ipr",
-      "unit": "in",
-      "byDiameter": {
-       "0.0394": {
-        "min": 0.001,
-        "max": 0.002
-       },
-       "0.0787": {
-        "min": 0.002,
-        "max": 0.005
-       },
-       "0.1181": {
-        "min": 0.002,
-        "max": 0.007
-       },
-       "0.1575": {
-        "min": 0.003,
-        "max": 0.009
-       },
-       "0.2362": {
-        "min": 0.005,
-        "max": 0.006
-       },
-       "0.3150": {
-        "min": 0.006,
-        "max": 0.008
-       },
-       "0.3937": {
-        "min": 0.008,
-        "max": 0.01
-       },
-       "0.4724": {
-        "min": 0.009,
-        "max": 0.012
-       },
-       "0.5512": {
-        "min": 0.01,
-        "max": 0.013
-       },
-       "0.6299": {
-        "min": 0.011,
-        "max": 0.015
-       },
-       "0.7087": {
-        "min": 0.011,
-        "max": 0.016
-       },
-       "0.7874": {
-        "min": 0.012,
-        "max": 0.017
-       },
-       "0.8661": {
-        "min": 0.013,
-        "max": 0.019
-       },
-       "0.9449": {
-        "min": 0.013,
-        "max": 0.021
-       },
-       "1.0236": {
-        "min": 0.013,
-        "max": 0.022
-       },
-       "1.1024": {
-        "min": 0.014,
-        "max": 0.023
-       },
-       "1.1811": {
-        "min": 0.014,
-        "max": 0.025
-       },
-       "1.2598": {
-        "min": 0.015,
-        "max": 0.026
-       }
-      }
-     },
-     "source": {
-      "kind": "catalog",
-      "manufacturer": "OSG USA",
-      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
-      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
-      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=353",
-      "page": "353 (PDF p.353)",
-      "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 1mm: 25,000 0.001-0.002; 0.0625\": 16,180 0.002-0.004; 2mm: 12,840 0.002-0.005; 0.09375\": 10,790 0.002-0.006; 3mm: 8,560 0.002-0.007; 0.125\": 8,090 0.003-0.007; 4mm: 6,420 0.003-0.009; 0.1875\": 5,390 0.004-0.011; 6mm: 1,940 0.005-0.006; 0.25\": 1,830 0.005-0.007; 8mm: 1,450 0.006-0.008; 0.375\": 1,220 0.007-0.009; 10mm: 1,160 0.008-0.010; 0.4375\": 1,050 0.009-0.011; 12mm: 970 0.009-0.012; 0.5\": 920 0.010-0.012; 14mm: 830 0.010-0.013; 0.625\": 735 0.011-0.014; 16mm: 725 0.011-0.015; 18mm: 650 0.011-0.016; 0.75\": 610 0.012-0.016; 20mm: 580 0.012-0.017; 22mm: 530 0.013-0.019; 24mm: 480 0.013-0.021; 26mm: 450 0.013-0.022; 28mm: 410 0.014-0.023; 30mm: 390 0.014-0.025; 32mm: 360 0.015-0.026",
+      "notes": "Printed RPM and feed per diameter: 1mm: 25,000 0.001-0.002; 0.0625\": 16,180 0.002-0.004; 2mm: 12,840 0.002-0.005; 0.09375\": 10,790 0.002-0.006; 3mm: 8,560 0.002-0.007; 0.125\": 8,090 0.003-0.007; 4mm: 6,420 0.003-0.009; 0.1875\": 5,390 0.004-0.011; 6mm: 4,280 0.005-0.014; 0.25\": 4,050 0.005-0.015; 8mm: 3,210 0.006-0.018; 0.375\": 2,700 0.007-0.021; 10mm: 2,570 0.008-0.022; 0.4375\": 2,310 0.008-0.024; 12mm: 2,140 0.009-0.026; 0.5\": 2,020 0.010-0.027; 14mm: 1,830 0.011-0.029; 0.625\": 1,620 0.012-0.032; 16mm: 1,600 0.012-0.033; 18mm: 1,420 0.013-0.037; 0.75\": 1,350 0.013-0.038; 20mm: 1,280 0.014-0.039; 22mm: 1,170 0.015-0.043; 24mm: 1,070 0.016-0.045; 26mm: 990 0.017-0.048; 28mm: 920 0.018-0.051; 30mm: 860 0.019-0.053; 32mm: 800 0.020-0.056",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "N"
@@ -28303,208 +28304,11 @@
      "coolant": null,
      "sfm": {
       "unit": "ft/min",
-      "min": 85,
-      "max": 105
+      "min": 25,
+      "max": 40
      },
-     "table": "General Drilling Operations 1, column 4",
+     "table": "General Drilling Operations 1, column 3",
      "status": "derived",
-     "feed": {
-      "kind": "ipr",
-      "unit": "in",
-      "byDiameter": {
-       "0.1181": {
-        "min": 0.001,
-        "max": 0.003
-       },
-       "0.1575": {
-        "min": 0.002,
-        "max": 0.005
-       },
-       "0.2362": {
-        "min": 0.002,
-        "max": 0.005
-       },
-       "0.3150": {
-        "min": 0.003,
-        "max": 0.006
-       },
-       "0.3937": {
-        "min": 0.004,
-        "max": 0.007
-       },
-       "0.4724": {
-        "min": 0.005,
-        "max": 0.008
-       },
-       "0.6299": {
-        "min": 0.006,
-        "max": 0.011
-       },
-       "0.7874": {
-        "min": 0.008,
-        "max": 0.013
-       },
-       "0.9843": {
-        "min": 0.01,
-        "max": 0.018
-       }
-      }
-     },
-     "source": {
-      "kind": "catalog",
-      "manufacturer": "OSG USA",
-      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
-      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
-      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=354",
-      "page": "354 (PDF p.354)",
-      "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 3mm: 3,100 0.001-0.003; 4mm: 2,400 0.002-0.005; 6mm: 1,600 0.002-0.005; 8mm: 1,200 0.003-0.006; 10mm: 950 0.004-0.007; 12mm: 800 0.005-0.008; 16mm: 600 0.006-0.011; 20mm: 480 0.008-0.013; 25mm: 380 0.010-0.018 | Page notes: 1. The indicated speeds and feeds are for drilling with water soluble oil. 2. When using non-water soluble oil, reduce the drilling speed by 20%.",
-      "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
-     },
-     "iso": "P"
-    },
-    {
-     "label": "General Drilling Operations \u00b7 Stainless Steels 300SS, 400SS, \u00b7 17-4PH",
-     "coolant": null,
-     "sfm": {
-      "unit": "ft/min",
-      "min": 85,
-      "max": 105
-     },
-     "table": "General Drilling Operations 1, column 4",
-     "status": "derived",
-     "feed": {
-      "kind": "ipr",
-      "unit": "in",
-      "byDiameter": {
-       "0.1181": {
-        "min": 0.001,
-        "max": 0.003
-       },
-       "0.1575": {
-        "min": 0.002,
-        "max": 0.005
-       },
-       "0.2362": {
-        "min": 0.002,
-        "max": 0.005
-       },
-       "0.3150": {
-        "min": 0.003,
-        "max": 0.006
-       },
-       "0.3937": {
-        "min": 0.004,
-        "max": 0.007
-       },
-       "0.4724": {
-        "min": 0.005,
-        "max": 0.008
-       },
-       "0.6299": {
-        "min": 0.006,
-        "max": 0.011
-       },
-       "0.7874": {
-        "min": 0.008,
-        "max": 0.013
-       },
-       "0.9843": {
-        "min": 0.01,
-        "max": 0.018
-       }
-      }
-     },
-     "source": {
-      "kind": "catalog",
-      "manufacturer": "OSG USA",
-      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
-      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
-      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=354",
-      "page": "354 (PDF p.354)",
-      "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 3mm: 3,100 0.001-0.003; 4mm: 2,400 0.002-0.005; 6mm: 1,600 0.002-0.005; 8mm: 1,200 0.003-0.006; 10mm: 950 0.004-0.007; 12mm: 800 0.005-0.008; 16mm: 600 0.006-0.011; 20mm: 480 0.008-0.013; 25mm: 380 0.010-0.018 | Page notes: 1. The indicated speeds and feeds are for drilling with water soluble oil. 2. When using non-water soluble oil, reduce the drilling speed by 20%.",
-      "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
-     },
-     "iso": "M"
-    },
-    {
-     "label": "General Drilling Operations \u00b7 Cast Iron",
-     "coolant": null,
-     "sfm": {
-      "unit": "ft/min",
-      "min": 165,
-      "max": 325
-     },
-     "table": "General Drilling Operations 1, column 5",
-     "status": "derived",
-     "review": "OSG p.354 columns under review",
-     "feed": {
-      "kind": "ipr",
-      "unit": "in",
-      "byDiameter": {
-       "0.1181": {
-        "min": 0.004,
-        "max": 0.009
-       },
-       "0.1575": {
-        "min": 0.005,
-        "max": 0.01
-       },
-       "0.2362": {
-        "min": 0.005,
-        "max": 0.011
-       },
-       "0.3150": {
-        "min": 0.007,
-        "max": 0.012
-       },
-       "0.3937": {
-        "min": 0.009,
-        "max": 0.014
-       },
-       "0.4724": {
-        "min": 0.01,
-        "max": 0.016
-       },
-       "0.6299": {
-        "min": 0.012,
-        "max": 0.019
-       },
-       "0.7874": {
-        "min": 0.016,
-        "max": 0.024
-       },
-       "0.9843": {
-        "min": 0.01,
-        "max": 0.018
-       }
-      }
-     },
-     "source": {
-      "kind": "catalog",
-      "manufacturer": "OSG USA",
-      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
-      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
-      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=354",
-      "page": "354 (PDF p.354)",
-      "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 3mm: 8,000 0.004-0.009; 4mm: 6,000 0.005-0.010; 6mm: 4,000 0.005-0.011; 8mm: 3,000 0.007-0.012; 10mm: 2,400 0.009-0.014; 12mm: 2,000 0.010-0.016; 16mm: 1,500 0.012-0.019; 20mm: 1,200 0.016-0.024; 25mm: 150 0.010-0.018 | Page notes: 1. The indicated speeds and feeds are for drilling with water soluble oil. 2. When using non-water soluble oil, reduce the drilling speed by 20%.",
-      "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
-     },
-     "iso": "K"
-    },
-    {
-     "label": "General Drilling Operations \u00b7 Cast Aluminum \u00b7 26-30 HRC",
-     "coolant": null,
-     "sfm": {
-      "unit": "ft/min",
-      "min": 30,
-      "max": 45
-     },
-     "table": "General Drilling Operations 1, column 6",
-     "status": "derived",
-     "review": "OSG p.354 columns under review",
      "feed": {
       "kind": "ipr",
       "unit": "in",
@@ -28555,7 +28359,202 @@
       "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=354",
       "page": "354 (PDF p.354)",
       "retrieved": "2026-10-23",
-      "notes": "Printed RPM and feed per diameter: 3mm: 1,220 0.001-0.003; 4mm: 910 0.002-0.004; 6mm: 610 0.002-0.005; 8mm: 450 0.003-0.006; 10mm: 360 0.004-0.007; 12mm: 270 0.005-0.008; 16mm: 200 0.006-0.011; 20mm: 160 0.008-0.013; 25mm: 130 0.010-0.018 | Page notes: 1. The indicated speeds and feeds are for drilling with water soluble oil. 2. When using non-water soluble oil, reduce the drilling speed by 20%.",
+      "notes": "Printed RPM and feed per diameter: 3mm: 1,060 0.001-0.003; 4mm: 800 0.002-0.004; 6mm: 530 0.002-0.005; 8mm: 400 0.003-0.006; 10mm: 320 0.004-0.007; 12mm: 270 0.005-0.008; 16mm: 200 0.006-0.011; 20mm: 160 0.008-0.013; 25mm: 130 0.010-0.018 | Page notes: 1. The indicated speeds and feeds are for drilling with water soluble oil. 2. When using non-water soluble oil, reduce the drilling speed by 20%.",
+      "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
+     },
+     "iso": "P"
+    },
+    {
+     "label": "General Drilling Operations \u00b7 Stainless Steels 300SS, 400SS, \u00b7 17-4PH",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 25,
+      "max": 40
+     },
+     "table": "General Drilling Operations 1, column 3",
+     "status": "derived",
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "byDiameter": {
+       "0.1181": {
+        "min": 0.001,
+        "max": 0.003
+       },
+       "0.1575": {
+        "min": 0.002,
+        "max": 0.004
+       },
+       "0.2362": {
+        "min": 0.002,
+        "max": 0.005
+       },
+       "0.3150": {
+        "min": 0.003,
+        "max": 0.006
+       },
+       "0.3937": {
+        "min": 0.004,
+        "max": 0.007
+       },
+       "0.4724": {
+        "min": 0.005,
+        "max": 0.008
+       },
+       "0.6299": {
+        "min": 0.006,
+        "max": 0.011
+       },
+       "0.7874": {
+        "min": 0.008,
+        "max": 0.013
+       },
+       "0.9843": {
+        "min": 0.01,
+        "max": 0.018
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "OSG USA",
+      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
+      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
+      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=354",
+      "page": "354 (PDF p.354)",
+      "retrieved": "2026-10-23",
+      "notes": "Printed RPM and feed per diameter: 3mm: 1,060 0.001-0.003; 4mm: 800 0.002-0.004; 6mm: 530 0.002-0.005; 8mm: 400 0.003-0.006; 10mm: 320 0.004-0.007; 12mm: 270 0.005-0.008; 16mm: 200 0.006-0.011; 20mm: 160 0.008-0.013; 25mm: 130 0.010-0.018 | Page notes: 1. The indicated speeds and feeds are for drilling with water soluble oil. 2. When using non-water soluble oil, reduce the drilling speed by 20%.",
+      "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
+     },
+     "iso": "M"
+    },
+    {
+     "label": "General Drilling Operations \u00b7 Cast Iron",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 85,
+      "max": 105
+     },
+     "table": "General Drilling Operations 1, column 4",
+     "status": "derived",
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "byDiameter": {
+       "0.1181": {
+        "min": 0.001,
+        "max": 0.003
+       },
+       "0.1575": {
+        "min": 0.002,
+        "max": 0.005
+       },
+       "0.2362": {
+        "min": 0.002,
+        "max": 0.005
+       },
+       "0.3150": {
+        "min": 0.003,
+        "max": 0.006
+       },
+       "0.3937": {
+        "min": 0.004,
+        "max": 0.007
+       },
+       "0.4724": {
+        "min": 0.005,
+        "max": 0.008
+       },
+       "0.6299": {
+        "min": 0.006,
+        "max": 0.011
+       },
+       "0.7874": {
+        "min": 0.008,
+        "max": 0.013
+       },
+       "0.9843": {
+        "min": 0.01,
+        "max": 0.018
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "OSG USA",
+      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
+      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
+      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=354",
+      "page": "354 (PDF p.354)",
+      "retrieved": "2026-10-23",
+      "notes": "Printed RPM and feed per diameter: 3mm: 3,100 0.001-0.003; 4mm: 2,400 0.002-0.005; 6mm: 1,600 0.002-0.005; 8mm: 1,200 0.003-0.006; 10mm: 950 0.004-0.007; 12mm: 800 0.005-0.008; 16mm: 600 0.006-0.011; 20mm: 480 0.008-0.013; 25mm: 380 0.010-0.018 | Page notes: 1. The indicated speeds and feeds are for drilling with water soluble oil. 2. When using non-water soluble oil, reduce the drilling speed by 20%.",
+      "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
+     },
+     "iso": "K"
+    },
+    {
+     "label": "General Drilling Operations \u00b7 Cast Aluminum",
+     "coolant": null,
+     "sfm": {
+      "unit": "ft/min",
+      "min": 165,
+      "max": 325
+     },
+     "table": "General Drilling Operations 1, column 5",
+     "status": "derived",
+     "feed": {
+      "kind": "ipr",
+      "unit": "in",
+      "byDiameter": {
+       "0.1181": {
+        "min": 0.004,
+        "max": 0.009
+       },
+       "0.1575": {
+        "min": 0.005,
+        "max": 0.01
+       },
+       "0.2362": {
+        "min": 0.005,
+        "max": 0.011
+       },
+       "0.3150": {
+        "min": 0.007,
+        "max": 0.012
+       },
+       "0.3937": {
+        "min": 0.009,
+        "max": 0.014
+       },
+       "0.4724": {
+        "min": 0.01,
+        "max": 0.016
+       },
+       "0.6299": {
+        "min": 0.012,
+        "max": 0.019
+       },
+       "0.7874": {
+        "min": 0.016,
+        "max": 0.024
+       },
+       "0.9843": {
+        "min": 0.02,
+        "max": 0.029
+       }
+      }
+     },
+     "source": {
+      "kind": "catalog",
+      "manufacturer": "OSG USA",
+      "catalog": "OSG Tooling Solutions Product Catalog (technical pages)",
+      "edition": "2024 catalog (PDF CreationDate 2024-01-02)",
+      "url": "https://osgtool.com/content/literature/8002024CA/ToolingSolutionsProductCatalogVol1.pdf#page=354",
+      "page": "354 (PDF p.354)",
+      "retrieved": "2026-10-23",
+      "notes": "Printed RPM and feed per diameter: 3mm: 8,000 0.004-0.009; 4mm: 6,000 0.005-0.010; 6mm: 4,000 0.005-0.011; 8mm: 3,000 0.007-0.012; 10mm: 2,400 0.009-0.014; 12mm: 2,000 0.010-0.016; 16mm: 1,500 0.012-0.019; 20mm: 1,200 0.016-0.024; 25mm: 960 0.020-0.029 | Page notes: 1. The indicated speeds and feeds are for drilling with water soluble oil. 2. When using non-water soluble oil, reduce the drilling speed by 20%.",
       "derivation": "feed values as printed; metric diameter keys converted to inches (mm/25.4) because the feed is printed in inches"
      },
      "iso": "N"
