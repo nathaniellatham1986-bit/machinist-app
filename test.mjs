@@ -897,7 +897,32 @@ console.log('estimate tests ok');
     assert.ok(h13c.fpt >= 0.002 && h13c.sfm <= 250, 'H13 hard carbide ' + h13c.sfm + ' ' + h13c.fpt);
     assert.match(h13.warn, /use carbide/);
     const hssMild = gq('mill', 'hss', 'p-mild', 0.5);
-    for (const id of ['4140-ann', '4140-ht']) { const q = gq('mill', 'hss', id, 0.5); assert.ok(q.sfm <= hssMild.sfm && q.capped, id + ' HSS ' + q.sfm); assert.match(q.text, /Capped at mild steel/); }
+    // HSS in 4140 never runs faster than HSS in mild steel (capped and labeled when the row prints more), and HT never faster than annealed.
+    { const qa = gq('mill', 'hss', '4140-ann', 0.5), qh = gq('mill', 'hss', '4140-ht', 0.5);
+      for (const q of [qa, qh]) { assert.ok(q.sfm <= hssMild.sfm, 'HSS 4140 ' + q.sfm); if (q.capped) assert.match(q.text, /Capped at mild steel/); assert.doesNotMatch(q.text, /Group number/); }
+      assert.ok(qh.sfm <= qa.sfm, `HSS 4140 HT ${qh.sfm} above annealed ${qa.sfm}`); }
+    // Generic capping still labels: a row printing above mild steel is capped (synthetic baseline).
+    { const cell = (mat, sfm) => ({ mode: 'mill', kind: 'End mill', sub: 'hss', coat: 'uncoated', iso: 'P', dia: 0.5, sfm, feed: 0.002, feedKind: 'fz', at: 0.5, brand: 'X', series: 'S', page: '9', mat, tier: 0 });
+      const q = genericQuote({ baseline: { cells: [cell('p-mild', 100), cell('4140-ann', 140)] }, mode: 'mill', kind: 'End mill', sub: 'hss', coat: 'uncoated', d: 0.5, z: 4, iso: 'P', mat: g('4140-ann') });
+      assert.equal(q.sfm, 100); assert.ok(q.capped); assert.match(q.text, /Capped at mild steel: 100 SFM .*4140 row prints 140/); }
+    // HSS picks never cite a carbide or cobalt/PM tool (ME: YG-1 ONLY ONE is coated PM60 cobalt HSS, p.2; GYG67 is a ball nose, p.17).
+    { const { substrateOf } = await import('./fallback.js'), bySeries = new Map();
+      for (const f of fs.readdirSync('data').filter(f => f.endsWith('.json') && !f.startsWith('_') && !['index.json', 'materials.json', 'threads.json'].includes(f))) { let dd; try { dd = JSON.parse(fs.readFileSync('data/' + f, 'utf8')); } catch { continue; } for (const t of dd.tools || []) if (t.mode === 'mill' || t.mode === 'drill') bySeries.set(`${t.mode}|${t.series}`, substrateOf(t)); }
+      const yg = JSON.parse(fs.readFileSync('data/yg-1-onlyone-pm60.json', 'utf8')).tools;
+      assert.ok(yg.every(t => substrateOf(t) === 'cobalt'), 'ONLY ONE PM60 is cobalt HSS'); assert.match(yg.find(t => /GYG67/.test(t.series)).series, /ball nose/);
+      for (const m of mats) for (const mode of ['mill', 'drill']) for (const d of [0.125, 0.25, 0.5]) {
+        const q = gq(mode, 'hss', m.id, d); if (q.warn || /row used/.test(q.text)) continue; // HSS-above-40-HRC carbide warning, or a labeled substitute
+        assert.equal(bySeries.get(`${mode}|${q.series}`), 'hss', `HSS ${mode} ${m.id} ${d} cites ${q.series}`); } }
+    // Drill feed column (ME): the column printed for the drill size, else the nearest printed column below it. Never a bigger column when a smaller one is printed.
+    { const d15 = gq('drill', 'hss', 'p-mild', 15 / 64);
+      assert.ok(d15.fpt <= 0.0045, '15/64 HSS mild ipr ' + d15.fpt); assert.match(d15.text, /Drill feed from the printed [\d.]+ in \([\d.]+ mm\) column/);
+      const cb = gq('drill', 'carbide', 'p-mild', 0.125); assert.match(cb.text, /Drill feed from the printed 0\.1(25|18) in/);
+      for (const m of mats) for (const sub of ['hss', 'cobalt', 'carbide']) for (const d of [0.1, 0.201, 15 / 64, 0.3, 0.45, 0.6]) {
+        const q = gq('drill', sub, m.id, d), at = q.text.match(/printed ([\d.]+) in \([\d.]+ mm\) column/);
+        if (!at) continue; assert.ok(+at[1] <= d * 1.01 + 0.0005 || /smallest size printed/.test(q.text), `drill ${sub} ${m.id} ${d} used the ${at[1]} column`); }
+      const base1 = { cells: [{ mode: 'drill', kind: 'Drill', sub: 'hss', coat: 'uncoated', iso: 'P', dia: 0.1875, sfm: 80, feed: 0.004, feedKind: 'ipr', at: 0.125, cols: [[0.0625, 0.0015], [0.125, 0.004], [0.25, 0.0065]], brand: 'G', series: 'S', page: '1', mat: 'p-mild', tier: 0 }] };
+      const one = dd => genericQuote({ baseline: base1, mode: 'drill', kind: 'Drill', sub: 'hss', coat: 'uncoated', d: dd, z: 2, iso: 'P', mat: g('p-mild') });
+      assert.equal(one(15 / 64).fpt, 0.004); assert.equal(one(0.25).fpt, 0.0065); assert.equal(one(0.249).fpt, 0.0065); assert.equal(one(0.05).fpt, 0.0015); }
     assert.equal(gq('mill', 'hss', 'plastic', 0.5).capped, false);
     for (const q of [s304, ht, h13c]) assert.match(q.text, /Speed: (low end of printed range [^;]+|as printed); chip load: (middle of printed range|as printed)/);
     // Dormer pages: each tool cites its PDF page (verified +1 fix), e.g. S212 on p.20, S221 on p.24.
