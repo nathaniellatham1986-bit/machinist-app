@@ -629,8 +629,8 @@ console.log('estimate tests ok');
       if (cover === '316') assert.ok(c.materials.includes('ss316') && !c.materials.includes('ss304'), f);
       else if (cover === 'both') assert.ok(c.materials.includes('ss304') && c.materials.includes('ss316'), f + ' ' + (c.sourceGroup || '').slice(0, 60));
       else assert.ok(c.materials.includes('ss304') && !c.materials.includes('ss316'), cover + ' ' + f); })); }
-  assert.equal(n, 139054);
-  assert.equal(h.digest('hex'), '82825b23e5603093739ca35b682ee0230066217f77a695b134517664b7c3f9a2'); // MS2MD derived rows split per printed size (generic-pick-fix)
+  assert.equal(n, 139741);
+  assert.equal(h.digest('hex'), 'b100f5c2730f284ef140522f66701e371287713a0eb8c50bf698e24430d5cc77'); // all ranged Mitsubishi derived rows split per printed size (maker-once)
   console.log('304/316 split tests pass'); }
 // Iscar CNMG 432-TF IC908 box label: ISO P range only. Midpoint of the printed range; no M/K/S/H/N numbers; TBD stub gone.
 { const { pick, matchMat } = await import('./calc.js');
@@ -933,6 +933,28 @@ console.log('estimate tests ok');
     { const md = JSON.parse(fs.readFileSync('data/mitsubishi-materials-mitsubishi-mill-solid-endmills.json', 'utf8')).tools.find(t => t.series === 'MS2MD');
       const r12 = md.conditions.find(c => c.status === 'derived' && /45-55HRC/.test(c.label) && c.feed.byDiameter['12']);
       assert.equal(r12.sfm.value, 143.3); assert.equal(Object.keys(r12.feed.byDiameter).length, 1); }
+    // Every ranged Mitsubishi DERIVED row is split per printed size (maker-once): one speed, at most one size each, still derived.
+    { const mm = JSON.parse(fs.readFileSync('data/mitsubishi-materials-mitsubishi-mill-solid-endmills.json', 'utf8')).tools, der = mm.flatMap(t => t.conditions.filter(c => c.status === 'derived').map(c => ({ t, c })));
+      assert.ok(der.length > 800 && der.every(({ c }) => c.sfm.min == null && c.sfm.value > 0 && Object.keys(c.feed?.byDiameter ?? {}).length <= 1 && / · DC .* · DERIVED/.test(c.label)), 'Mitsubishi derived rows not split');
+      const ls12 = der.find(({ t, c }) => t.series === 'MS2LS' && c.operation === 'Slotting' && c.feed?.byDiameter['12']);
+      assert.equal(ls12.c.sfm.value, 75.4); assert.equal(ls12.c.feed.byDiameter['12'], 0.05);
+      assert.ok(!base.cells.some(c => c.brand === 'Mitsubishi Materials' && /DERIVED/.test(c.row ?? c.label ?? '')), 'derived rows stay out of generic'); }
+    // Each maker counts once: its own middle row first, then the middle across makers. Two makers tie, so the heavier printed chip wins.
+    { const { makerMiddle } = await import('./fallback.js'), r = (brand, sfm, feed) => ({ brand, series: brand + sfm, sfm, feed });
+      assert.equal(makerMiddle([r('A', 100, 0.002), r('A', 105, 0.002), r('A', 110, 0.002), r('A', 95, 0.002), r('B', 200, 0.002), r('C', 300, 0.002)]).brand, 'B');
+      assert.equal(makerMiddle([r('Dormer', 197, 0.0011), r('Hertel', 250, 0.0035), r('Hertel', 600, 0.0085)]).sfm, 250); }
+    // Combo tools (drill/end mills, chamfer, countersink...) never feed the no-brand numbers.
+    assert.ok(!base.cells.some(c => /drill\s*\/\s*end\s*mill|drill[- ]?mill|chamfer|countersink|dovetail|keyseat|engrav/i.test(`${c.series} ${c.row ?? ''}`)), 'combo tool in baseline');
+    { const ti = gq('mill', 'carbide', 'ti64', 0.5, { coat: 'altin' });
+      assert.equal(ti.sfm, 160); assert.ok(Math.abs(ti.fpt - 0.0019) < 0.00005, 'Ti AlTiN ' + ti.fpt); assert.match(ti.text, /TitaNox/);
+      const al = gq('mill', 'hss', 'al6061', 0.5);
+      assert.equal(al.sfm, 250); assert.ok(Math.abs(al.fpt - 0.0035) < 0.00005, 'HSS 6061 ' + al.fpt); assert.match(al.text, /Hertel/); }
+    // 4340 (and 4140) heat treated never runs faster than annealed, HSS or carbide.
+    for (const sub of ['hss', 'carbide']) for (const a of ['4140', '4340']) { const qa = gq('mill', sub, a + '-ann', 0.5), qh = gq('mill', sub, a + '-ht', 0.5); assert.ok(qh.sfm <= qa.sfm, `${sub} ${a} HT ${qh.sfm} above annealed ${qa.sfm}`); }
+    // 1/8 carbide drill: Guhring 6489 p.1 prints no coolant type, so no through-coolant label is shown.
+    { const g6489 = JSON.parse(fs.readFileSync('data/guhring-drill-ipr-v2.json', 'utf8')).tools.find(t => /6489/.test(t.series));
+      assert.ok(g6489.conditions.every(c => c.coolant == null));
+      const cb = gq('drill', 'carbide', 'p-mild', 0.125); assert.match(cb.text, /6489/); assert.doesNotMatch(`${cb.text} ${cb.note} ${cb.caution ?? ''}`, /through-coolant/i); }
     let n = 0;
     for (const m of mats) for (const [mode, subs, ds] of [['mill', ['hss', 'cobalt', 'carbide'], [0.125, 0.5, 1]], ['drill', ['hss', 'cobalt', 'carbide'], [0.125, 0.5]], ['turn', ['carbide'], [1, 3]], ['tap', ['hss'], [0.25]]])
       for (const sub of subs) for (const d of ds) for (const coat of ['uncoated', 'altin']) {

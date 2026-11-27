@@ -231,6 +231,9 @@ export function resolveFeed({ tool, mat, iso, mode, cut = '', d, pool = [], base
 // match it (tier: see matTier). Numbers are the row's printed low end.
 const CELLS = new Map();
 const SPECIALTY = /micro|miniature|long.?reach|reduced.?neck|extra.?long|barrel|ball.?nose|deep.?hole|high.?feed|hi.?feed/i;
+// Combination and form tools (drill/end mills, chamfer, countersink, dovetail, keyseat, engraving) and chamfer/countersink rows stay out of no-brand numbers.
+const COMBO = /drill\s*\/\s*end\s*mill|drill[- ]?mill|chamfer|countersink|dovetail|keyseat|engrav/i;
+const COMBO_ROW = /chamfer|countersink/i;
 const SUPERHARD = /\bCBN\b|\bPCD\b|ceramic|cermet|diamond|SUMIBORON|SUMIDIA|\bBNC?\d/i;
 const HT_WORDS = /harden|heat.?treated|pre.?hard|quench|\btempered\b|Verg[uü]t/i;
 let MATS = [];
@@ -275,12 +278,20 @@ export function matTier(m, c) {
 }
 // One printed row per cell. Odd count: the middle row. Even count: the lower of the two middle rows. Not an average.
 // The one printed row closest to both the middle speed and the middle chip load of the matched rows (no blending).
-export function middleRow(rows) {
+// Each maker counts once: its own middle row stands for it, then the middle of those makers' rows is the pick. Still one real printed row.
+export function makerMiddle(rows) {
+  if (!rows?.length) return null;
+  const by = new Map(); for (const r of rows) { const k = String(r.brand || ''); (by.get(k) ?? by.set(k, []).get(k)).push(r); }
+  return middleRow([...by.values()].map(r => middleRow(r)), true);
+}
+export function middleRow(rows, heavyTie = false) {
   if (!rows?.length) return null;
   const med = xs => { const s = xs.slice().sort((a, b) => a - b), n = s.length; return n ? (n % 2 ? s[(n - 1) / 2] : (s[n / 2 - 1] + s[n / 2]) / 2) : null; };
   const ms = med(rows.map(x => x.sfm)), mf = med(rows.map(x => x.feed).filter(x => x > 0));
   const dist = x => Math.abs(x.sfm / ms - 1) + (mf && x.feed > 0 ? Math.abs(x.feed / mf - 1) : 0);
-  return rows.slice().sort((a, b) => dist(a) - dist(b) || a.sfm - b.sfm || (a.feed ?? 0) - (b.feed ?? 0) || String(a.brand).localeCompare(String(b.brand)) || String(a.series).localeCompare(String(b.series)))[0];
+  // Ties: the lower speed (one maker's own rows). Across makers (heavyTie, always tied with two makers) the heavier printed chip load wins, so the pick cuts instead of rubbing (ME).
+  const d = x => Math.round(dist(x) * 1e6);
+  return rows.slice().sort((a, b) => d(a) - d(b) || (heavyTie ? (b.feed ?? 0) - (a.feed ?? 0) : 0) || a.sfm - b.sfm || (a.feed ?? 0) - (b.feed ?? 0) || String(a.brand).localeCompare(String(b.brand)) || String(a.series).localeCompare(String(b.series)))[0];
 }
 export function medianRow(rows) {
   if (!rows?.length) return null;
@@ -301,11 +312,11 @@ function consider(cell, rowId) {
 }
 export function noteBaseline(t) {
   if (!t?.conditions) return;
-  if (SPECIALTY.test(`${t.series ?? ''} ${t.type ?? ''}`)) return;
+  if (SPECIALTY.test(`${t.series ?? ''} ${t.type ?? ''}`) || COMBO.test(`${t.series ?? ''} ${t.type ?? ''}`)) return;
   const sub = substrateOf(t), kind = kindOf(t), tap = t.mode === 'tap';
   for (const c of t.conditions) {
     if (!c?.sfm || (!c.feed && !tap) || c.status === 'shop-proven' || c.status === 'derived' || c.paired || c.iso === '*' || !c.source || !['catalog', 'label'].includes(c.source.kind)) continue;
-    if (!pageNum(c.source.page) || lightRow(c)) continue; // every baseline number cites a page; light-cut rows stay out
+    if (!pageNum(c.source.page) || lightRow(c) || COMBO_ROW.test(`${c.label ?? ''} ${c.operation ?? ''}`)) continue; // every baseline number cites a page; light-cut rows stay out
     const sfm = minNum(c.sfm, SPK(c.sfm.unit));
     const feed = tap ? null : packFeed(c.feed, midNum); // speed at the low end, chip load at the middle of the printed range
     const fk = c.feed?.unit ? toIn(1, c.feed.unit) : 1, fSpan = tap ? null : span(c.feed?.range, fk), sSpan = span(c.sfm, SPK(c.sfm.unit));
@@ -343,13 +354,13 @@ export function noteBaseline(t) {
 export function baselineDoc() {
   const cells = [...CELLS.values()].map(list => {
     const best = Math.min(...list.map(x => x.tier ?? 0)), rows = list.filter(x => (x.tier ?? 0) === best);
-    const row = middleRow(rows);
+    const row = makerMiddle(rows);
     if (!row) return null; const { rowId, ...cell } = row; return cell; }).filter(Boolean);
   const coats = [...new Set(cells.map(c => c.coat))].filter(c => c && c !== 'unspecified').sort();
   const kinds = {};
   for (const c of cells) (kinds[c.mode] ??= new Set()).add(c.kind);
   return {
-    note: 'GENERATED from published catalog rows by scripts/build-index.mjs. Each cell is the one printed row closest to the middle speed and middle chip load of its rows: speed at the low end of that printed range, chip load at the middle of it. Cells with "mat" hold only rows matched to that material (most specific rows only). Do not hand-edit.',
+    note: 'GENERATED from published catalog rows by scripts/build-index.mjs. Each cell is one printed row: each maker counts once (its own middle row), then the row closest to the middle speed and middle chip load of those: speed at the low end of that printed range, chip load at the middle of it. Cells with "mat" hold only rows matched to that material (most specific rows only). Do not hand-edit.',
     coats, kinds: Object.fromEntries([...Object.entries(kinds)].map(([m, s]) => [m, [...s].sort()])),
     cells,
   };
