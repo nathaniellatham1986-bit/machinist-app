@@ -468,7 +468,10 @@ export function genericQuote({ baseline, mode, kind, sub = 'hss', coat = 'uncoat
   }
   const matWord = { hss: 'HSS', cobalt: 'cobalt', carbide: 'carbide' }[useSub] || useSub;
   // Stainless: the chip load shown is the floor (ME, App Build): rubbing work-hardens it.
-  const note = c.iso === 'M' && mode !== 'tap' ? "Don't go lighter than this, rubbing work-hardens it." : '';
+  // HSS/cobalt end mill in steel on a printed chip load of .0010 or less (ME, App Build): say it's light; never a made-up number.
+  const lightChip = mode === 'mill' && (useSub === 'hss' || useSub === 'cobalt') && (c.iso === 'P' || c.iso === 'H') && fpt > 0 && fpt <= 0.0010 + 1e-9;
+  const note = c.iso === 'M' && mode !== 'tap' ? "Don't go lighter than this, rubbing work-hardens it."
+    : lightChip ? (c.fRange ? 'Light printed chip load. If it rubs or squeals, step up toward the top of the printed range.' : 'Light printed chip load; watch for rubbing.') : '';
   // Hardened steel from a hard-milling row (shallow printed depth or a hard-milling series): say so on the card.
   let hardNote = '';
   const lightAp = c.ap != null && c.ap <= 0.25 * (c.at || d); // printed depth a quarter of D or less
