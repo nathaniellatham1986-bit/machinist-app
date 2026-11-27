@@ -83,11 +83,11 @@ function feedAt(feed, d, nearest) {
   if (feed.range != null) return { v: feed.range, exact: true, at: d };
   if (feed.bands) { const b = feed.bands.find(([a, z]) => d >= a - 1e-4 && d <= z + 1e-4); if (b) return { v: b[2], exact: true, at: d }; }
   let near = null;
-  for (const [x, v] of feed.points ?? []) {
-    if (Math.abs(x - d) < 0.02) return { v, exact: true, at: x };
+  for (const [x, v] of feed.points ?? []) { // nearest printed size; within 0.02 in counts as that size
     const dist = Math.abs(x - d);
     if (!near || dist < near.dist) near = { v, at: x, dist, exact: false };
   }
+  if (near && near.dist < 0.02) return { v: near.v, exact: true, at: near.at };
   return nearest ? near : null;
 }
 export function packTool(t, key = '') {

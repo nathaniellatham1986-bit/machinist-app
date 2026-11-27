@@ -630,7 +630,7 @@ console.log('estimate tests ok');
       else if (cover === 'both') assert.ok(c.materials.includes('ss304') && c.materials.includes('ss316'), f + ' ' + (c.sourceGroup || '').slice(0, 60));
       else assert.ok(c.materials.includes('ss304') && !c.materials.includes('ss316'), cover + ' ' + f); })); }
   assert.equal(n, 139034);
-  assert.equal(h.digest('hex'), 'f758f2d225f5bc6d1672b666be9e9c8ebb3dfadfc33ebf491b4c669bb38e649a');
+  assert.equal(h.digest('hex'), 'e7bfb2d8c0c125841bf608873ac639b8aa6c01bbf196a726b7d03561cd78b699');
   console.log('304/316 split tests pass'); }
 // Iscar CNMG 432-TF IC908 box label: ISO P range only. Midpoint of the printed range; no M/K/S/H/N numbers; TBD stub gone.
 { const { pick, matchMat } = await import('./calc.js');
@@ -896,26 +896,34 @@ console.log('estimate tests ok');
   assert.equal(matchPart('6065', listed).series, 'Series 6065');
   assert.equal(matchPart('nope', listed), null);
   console.log('part number and metal-borrow tests pass'); }
-{ // OSG drill rows whose printed columns are shifted or unconfirmed (stage 1): flagged rows give no numbers anywhere, and the card says Check catalog
+{ // OSG drill rows re-paired to their printed columns (stage 2). Rows still under review give no numbers anywhere, and the card says Check catalog.
   const C = await import('./calc.js'), F = await import('./fallback.js');
-  const doc = J('./data/osg-drill-catalog-v2.json'), micro = doc.tools.find(t => t.conditions.some(c => /page=314/.test(c.source.url)));
-  const al = micro.conditions.find(c => /Aluminum Alloy 5025/.test(c.label)), s3 = micro.conditions.find(c => /300 Series Austenitic/.test(c.label));
-  assert.equal(al.review, 'OSG p.314 columns under review'); assert.equal(s3.review, 'OSG p.314 columns under review');
-  assert.ok(!micro.conditions.find(c => /Carbon Steels, Mild Steels/.test(c.label)).review); // column 1 matches the page: still usable
-  const held = C.holdReview(micro);
-  assert.equal(held.conditions.length, micro.conditions.length); // row positions unchanged
+  const doc = J('./data/osg-drill-catalog-v2.json'), onPage = p => doc.tools.find(t => t.conditions.some(c => new RegExp('page=' + p + '$').test(c.source.url)));
+  const row = (p, re) => onPage(p).conditions.filter(c => re.test(c.label)), first = c => c.source.notes.match(/: ([^;|]+)/)[1].trim();
+  // p.314 (ADO-MICRO): each material now holds its own printed column (it used to hold the next column's numbers)
+  const s3 = row(314, /300 Series Austenitic/)[0], al = row(314, /Aluminum Alloy 5025/)[0], a41 = row(314, /Alloy Steels 4140/)[0];
+  assert.equal(first(s3), '0.7mm: 13,600 0.0003-0.0008'); assert.deepEqual([s3.sfm.min, s3.sfm.max], [65, 195]); assert.deepEqual(s3.feed.byDiameter['0.0394'], { min: 0.0004, max: 0.0012 });
+  assert.equal(first(al), '0.7mm: 18,200 0.0003-0.0008'); assert.equal(first(a41), '0.7mm: 18,200 0.0006-0.0011');
+  assert.ok(!s3.review && !al.review && !a41.review);
+  // p.354 (EX-SPOT) and p.342 (VPH): stainless rows used to carry Cast Iron numbers (about 3x too fast); now the printed stainless column
+  const sp = row(354, /Stainless Steels 300SS/)[0]; assert.deepEqual([sp.sfm.min, sp.sfm.max], [25, 40]); assert.equal(first(sp), '3mm: 1,060 0.001-0.003');
+  const vph = row(342, /400SS, 17-4PH/)[0]; assert.deepEqual([vph.sfm.min, vph.sfm.max], [40, 60]); assert.equal(vph.feed.byDiameter['0.25'].max, 0.006);
+  const ci317 = row(317, /· Cast Iron$/)[0]; assert.deepEqual([ci317.sfm.min, ci317.sfm.max], [200, 400]); assert.equal(first(ci317), '3mm: 10,650 0.002-0.004');
+  // what is still held back: p.344 D2/H13 (OSG's own RPM column does not match its printed SFM)
+  const rv = doc.tools.flatMap(t => t.conditions).filter(c => c.review);
+  assert.equal(rv.length, 2); assert.ok(rv.every(c => /^OSG p\.344 /.test(c.review) && /Tool Steels D2, H13/.test(c.label)));
+  const vp = onPage(344), held = C.holdReview(vp);
+  assert.equal(held.conditions.length, vp.conditions.length); // row positions unchanged
   for (const c of held.conditions.filter(c => c.review)) { assert.equal(c.sfm, undefined); assert.equal(c.feed, undefined); assert.equal(c.printed, undefined); assert.ok(!C.rowUsable(held, c)); }
-  const mats = Object.fromEntries(IDX.materials.map(m => [m.id, m]));
-  assert.ok(held.conditions.some(c => c.review && C.matchMat(mats.ss304, c))); // the card's Check catalog line finds the 304 row
-  const only = { ...micro, conditions: micro.conditions.filter(c => c.review) };
-  assert.equal(F.packTool(C.holdReview(only)), null); assert.ok(F.packTool(only)); // no other-maker or baseline borrowing from a flagged row
+  const only = { ...vp, conditions: vp.conditions.filter(c => c.review) };
+  assert.equal(F.packTool(C.holdReview(only)), null); assert.ok(F.packTool(only)); // no other-maker or baseline borrowing from a held row
   F.resetBaseline(); F.noteBaseline(C.holdReview(only)); assert.equal(F.baselineDoc().cells.length, 0); F.resetBaseline();
-  const ent = IDX.files.find(f => f.file === 'osg-drill-catalog-v2.json').tools[doc.tools.indexOf(micro)];
-  assert.ok(!ent.fullIsos.includes('N')); // the index no longer claims printed aluminum data for ADO-MICRO p.314
+  const ent = IDX.files.find(f => f.file === 'osg-drill-catalog-v2.json').tools[doc.tools.indexOf(onPage(314))];
+  assert.ok(ent.fullIsos.includes('N') && ent.fullIsos.includes('M')); // ADO-MICRO p.314 prints aluminum and stainless again
   const appSrc = fs.readFileSync('app.js', 'utf8');
   assert.match(appSrc, /withPairs\(holdReview\(t\)\)/); assert.match(appSrc, /Check catalog: \$\{esc\(rv\.join/); assert.match(appSrc, /if \(!c\.review && okC\(c\)/);
-  const n = doc.tools.flatMap(t => t.conditions).filter(c => c.review).length; assert.ok(n >= 50, 'flagged rows ' + n);
-  console.log('OSG drill review-flag tests pass', n); }
+  assert.match(appSrc, /let best = null, gap = 0\.02/); // nearest printed size: 1 mm reads the 1 mm row, not the 0.7 mm row 0.012 in away
+  console.log('OSG drill re-pair tests pass', rv.length); }
 { const { execFileSync } = await import('node:child_process');
   const files = execFileSync('git', ['ls-files', '-z', '--', '*.js', '*.json', '*.html'], { encoding: 'utf8' }).split('\0').filter(Boolean);
   const marks = ['<'.repeat(7), '>'.repeat(7)];
