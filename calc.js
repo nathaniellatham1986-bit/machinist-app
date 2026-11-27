@@ -194,7 +194,8 @@ export const MAT_CLASS = [
   [/^ti64/, /Ti-?6Al|titanium alloy|\balloy|α.?β|alpha.?beta|grade 5/i, /pure titan|commercially pure|\bCP\b|unalloy|\bgrade [1-4]\b/i],
   [/^in718/, /nickel alloy|inconel|\b718\b|Ni.?based|super ?alloy/i, /titan|cobalt|pure nickel|nickel 20[01]/i],
   [/^ss400/, /ferrit|martensit|\b4[0-4]\d\b/i, /austenit|\b30\d|\b31\d|duplex/i],
-  [/^ss17-4/, /precipitation|17-?4|\bPH\b/i, /austenit|ferrit/i]];
+  [/^ss17-4/, /precipitation|17-?4|\bPH\b/i, /austenit|ferrit/i],
+  [/^al6061/, /wrought|\b6061\b|\b6xxx\b/i, /(?!)/]]; // 6061 is a wrought alloy: rows naming wrought aluminum are its class rows; nothing is rejected
 // HRB -> HB (standard table, DERIVED for matching only).
 const HRB_HB = [[60, 107], [70, 125], [75, 137], [80, 150], [85, 163], [90, 185], [95, 210], [100, 240]];
 const hrbToHb = b => { const T = HRB_HB; if (b <= T[0][0]) return T[0][1]; for (let i = 1; i < T.length; i++) if (b <= T[i][0]) { const [a, x] = T[i - 1], [c, y] = T[i]; return x + (y - x) * (b - a) / (c - a); } return T.at(-1)[1]; };

@@ -475,6 +475,8 @@ function run() { tapBox(); updateFindLink(); favMark();
   const gq = GENQ && GENQ.mode === mode && (isGen() || ((mode === 'mill' || mode === 'drill') && !$('tool').value)) ? GENQ : null;
   if (gq?.warn) w += `<div class="out"><span class="warn">${esc(gq.warn)}</span></div>`;
   if (gq?.caution) w += `<div class="out"><span class="amb">${esc(gq.caution)}</span></div>`;
+  if (gq?.hardNote) w += `<div class="out"><span class="amb">${esc(gq.hardNote)}</span></div>`;
+  if (gq?.note) w += `<div class="out"><span class="mut">${esc(gq.note)}</span></div>`; // gray
   const held = curTool();
   const rv = held && matSel() ? [...new Set((held.conditions || []).filter(c => c.review && isoOk(c)).map(c => c.review))] : []; // rows held back by holdReview
   if (rv.length) w += `<div class="warn">Check catalog: ${esc(rv.join('; '))}. The printed row for this material is held back until it is checked against the page, so the numbers below do not come from it.</div>`;
