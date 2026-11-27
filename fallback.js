@@ -254,6 +254,7 @@ export function lightRow(c) {
 }
 // A row printed for a diameter span in its label ("dia 1/4"-1/2"", "dia 1/8""). Inches. null when the label names none.
 const frac = x => { const [a, b] = x.split('/'); return b ? +a / +b : +a; };
+const bandBase = label => String(label ?? '').replace(/\s*[—–-]?\s*\bdia\.?\s*\d.*$/i, '');
 export function diaSpan(label) {
   const m = String(label ?? '').match(/\bdia\.?\s*(\d+(?:\/\d+)?(?:\.\d+)?)\s*(?:"|in)?(?:\s*(?:-|–|to)\s*(\d+(?:\/\d+)?(?:\.\d+)?)\s*(?:"|in)?)?/i);
   if (!m) return null; const a = frac(m[1]), b = m[2] ? frac(m[2]) : a; return a > 0 && b >= a ? [a, b] : null;
@@ -341,7 +342,9 @@ export function noteBaseline(t) {
     };
     if (feed.range != null) {
       const span = diaSpan(c.label), dias = (t.diameters_in?.length ? t.diameters_in : t.diameters_mm?.map(x => x / 25.4)) || [];
-      if (span) { const inSpan = DIA_BANDS.filter(x => x >= span[0] - 1e-6 && x <= span[1] + 1e-6); (inSpan.length ? inSpan : [(span[0] + span[1]) / 2]).forEach(x => add(x, feed.range)); }
+      // A size on the boundary of two printed size bands (Kodiak 1/4-1/2 and 1/2-1) takes the band that starts there, for every hardness (ME).
+      const nextBand = span && span[1] > span[0] && t.conditions.some(o => o !== c && bandBase(o.label) === bandBase(c.label) && Math.abs((diaSpan(o.label)?.[0] ?? -1) - span[1]) < 1e-6 && diaSpan(o.label)[1] > span[1]);
+      if (span) { const inSpan = DIA_BANDS.filter(x => x >= span[0] - 1e-6 && (nextBand ? x < span[1] - 1e-6 : x <= span[1] + 1e-6)); (inSpan.length ? inSpan : [(span[0] + span[1]) / 2]).forEach(x => add(x, feed.range)); }
       else if (dias.length) dias.forEach(x => add(x, feed.range));
       else add(0.5, feed.range);
     }
@@ -428,6 +431,7 @@ export function genericCell(base, q, mat) {
   return hit ? { c: hit.c, group: true } : null;
 }
 const fmt = (x, d) => d ? (+x).toFixed(d).replace(/^0(?=\.)/, '') : String(Math.round(x));
+const HT_PAIR = { '4140-ann': '4140-ht', '4140-ht': '4140-ann', '4340-ann': '4340-ht', '4340-ht': '4340-ann', 'p20-ann': 'p20-pre', 'p20-pre': 'p20-ann' };
 const HARD = m => !!m && (m.iso === 'H' || (m.hb && m.hb[0] >= 371)); // about 40 HRC and up
 const inchMm = x => `${x.toFixed(3)} in (${(x * 25.4).toFixed(1)} mm)`;
 // Generic / unknown tool: step-5 baseline only. "Not sure" is HSS. Coating unknown uses TiN, else uncoated.
@@ -468,10 +472,14 @@ export function genericQuote({ baseline, mode, kind, sub = 'hss', coat = 'uncoat
   }
   const matWord = { hss: 'HSS', cobalt: 'cobalt', carbide: 'carbide' }[useSub] || useSub;
   // Stainless: the chip load shown is the floor (ME, App Build): rubbing work-hardens it.
-  // HSS/cobalt end mill in steel on a printed chip load of .0010 or less (ME, App Build): say it's light; never a made-up number.
-  const lightChip = mode === 'mill' && (useSub === 'hss' || useSub === 'cobalt') && (c.iso === 'P' || c.iso === 'H') && fpt > 0 && fpt <= 0.0010 + 1e-9;
-  const note = c.iso === 'M' && mode !== 'tap' ? "Don't go lighter than this, rubbing work-hardens it."
+  // HSS/cobalt end mill 3/8 in and up in steel on a printed chip load of .0010 or less (ME, App Build): say it's light; never a made-up number.
+  const lightChip = mode === 'mill' && d >= 0.375 - 1e-9 && (useSub === 'hss' || useSub === 'cobalt') && (c.iso === 'P' || c.iso === 'H') && fpt > 0 && fpt <= 0.0010 + 1e-9;
+  let note = c.iso === 'M' && mode !== 'tap' ? "Don't go lighter than this, rubbing work-hardens it."
     : lightChip ? (c.fRange ? 'Light printed chip load. If it rubs or squeals, step up toward the top of the printed range.' : 'Light printed chip load; watch for rubbing.') : '';
+  // Annealed vs heat-treated picks from two makers' charts (ME): printed numbers kept, but say so on both cards.
+  const twin = HT_PAIR[mat?.id], other = twin && !hit.group ? genericCell(baseline, { ...q, subs: [c.sub || useSub] }, { ...mat, id: twin }) : null;
+  const mixNote = other && !other.group && other.c.brand !== c.brand ? "Annealed and heat-treated numbers come from different makers' charts." : '';
+  if (mixNote) note = note ? `${note} ${mixNote}` : mixNote;
   // Hardened steel from a hard-milling row (shallow printed depth or a hard-milling series): say so on the card.
   let hardNote = '';
   const lightAp = c.ap != null && c.ap <= 0.25 * (c.at || d); // printed depth a quarter of D or less

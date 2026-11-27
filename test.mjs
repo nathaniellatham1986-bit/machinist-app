@@ -890,7 +890,7 @@ console.log('estimate tests ok');
     assert.ok(Math.abs(s304.fpt - 0.0019) < 0.0002, '304 carbide 1/2 fpt ' + s304.fpt);
     assert.equal(s304.note, "Don't go lighter than this, rubbing work-hardens it.");
     assert.equal(gq('mill', 'carbide', 'ss316', 0.5).note, "Don't go lighter than this, rubbing work-hardens it.");
-    assert.equal(mild.note, ''); assert.equal(ht.note, '');
+    assert.equal(mild.note, ''); assert.equal(ht.note, "Annealed and heat-treated numbers come from different makers' charts.");
     assert.ok(ht.fpt >= 0.0015, '4140 HT fpt ' + ht.fpt);
     const h13c = gq('mill', 'carbide', 'h13-hard', 0.5);
     assert.doesNotMatch(`${h13c.series} ${h13c.text}`, /56B|ball|HSM|Fin\b|finish/i, 'H13 hard from a light-cut row: ' + h13c.text);
@@ -950,11 +950,25 @@ console.log('estimate tests ok');
       const al = gq('mill', 'hss', 'al6061', 0.5);
       assert.equal(al.sfm, 250); assert.ok(Math.abs(al.fpt - 0.0035) < 0.00005, 'HSS 6061 ' + al.fpt); assert.match(al.text, /Hertel/); }
     // 4340 (and 4140) heat treated never runs faster than annealed, HSS or carbide.
-    for (const sub of ['hss', 'carbide']) for (const a of ['4140', '4340']) { const qa = gq('mill', sub, a + '-ann', 0.5), qh = gq('mill', sub, a + '-ht', 0.5); assert.ok(qh.sfm <= qa.sfm, `${sub} ${a} HT ${qh.sfm} above annealed ${qa.sfm}`); }
+    // Same maker: HT never faster than annealed. Different makers' charts (printed numbers kept, ME): both cards must say so.
+    const MIX = "Annealed and heat-treated numbers come from different makers' charts.";
+    for (const sub of ['hss', 'carbide']) for (const a of ['4140', '4340']) { const qa = gq('mill', sub, a + '-ann', 0.5), qh = gq('mill', sub, a + '-ht', 0.5);
+      if (qa.brand === qh.brand) { assert.ok(qh.sfm <= qa.sfm, `${sub} ${a} HT ${qh.sfm} above annealed ${qa.sfm}`); assert.ok(!qa.note.includes(MIX) && !qh.note.includes(MIX)); }
+      else { assert.ok(qa.note.includes(MIX) && qh.note.includes(MIX), `${sub} ${a} different makers without the line`); } }
+    // Size-band boundary (ME): 1/2 in on Kodiak's 1/4-1/2 and 1/2-1 bands takes the 1/2-1 band at every hardness.
+    { const a = gq('mill', 'carbide', '4340-ann', 0.5), h = gq('mill', 'carbide', '4340-ht', 0.5);
+      assert.deepEqual([a.sfm, a.fpt, h.sfm, h.fpt], [225, 0.003, 125, 0.002]); assert.match(a.brand + h.brand, /^Kodiak.*Kodiak/);
+      assert.match(a.text, /middle of printed range \.0020–\.0040/); assert.match(h.text, /middle of printed range \.0010–\.0030/);
+      const q4 = gq('mill', 'carbide', '4140-ann', 0.5), h4 = gq('mill', 'carbide', '4140-ht', 0.5);
+      assert.equal(q4.note, MIX); assert.equal(h4.note, MIX); assert.notEqual(q4.brand, h4.brand);
+      const { diaSpan } = await import('./fallback.js'); assert.deepEqual(diaSpan('X (Rc under 32) — dia 1/2"-1"'), [0.5, 1]);
+      assert.ok(!base.cells.some(c => /^Kodiak/.test(c.brand) && c.dia === 0.5 && c.fRange && c.fRange[0] === 0.0008 && c.fRange[1] === 0.002), 'Kodiak 1/4-1/2 band used at 1/2'); }
     // Light printed chip load (ME): HSS/cobalt end mill in steel at .0010 ipt or less gets a gray note; range rows point to the top of the printed range. No new number.
     { const single = 'Light printed chip load; watch for rubbing.', ranged = 'Light printed chip load. If it rubs or squeals, step up toward the top of the printed range.';
       for (const id of ['4140-ann', '4140-ht', '4340-ann', '4340-ht']) { const q = gq('mill', 'hss', id, 0.5); assert.equal(q.note, single, id); assert.ok(q.fpt <= 0.001); assert.match(q.text, /Dormer/); }
-      assert.equal(gq('mill', 'hss', 'p-mild', 0.5).note, ''); assert.equal(gq('mill', 'carbide', '4140-ann', 0.5).note, '');
+      assert.equal(gq('mill', 'hss', 'p-mild', 0.5).note, ''); assert.doesNotMatch(gq('mill', 'carbide', '4140-ann', 0.5).note, /Light printed/);
+      for (const d of [0.125, 0.1875, 0.25]) assert.doesNotMatch(gq('mill', 'hss', '4140-ann', d).note, /Light printed/, 'light-chip note under 3/8 at ' + d); // 3/8 and up only (ME)
+      assert.match(gq('mill', 'hss', '4140-ann', 0.375).note, /Light printed/);
       assert.match(gq('mill', 'hss', 'ss304', 0.5).note, /rubbing work-hardens/);
       const cell = (feed, fRange) => ({ mode: 'mill', kind: 'End mill', sub: 'hss', coat: 'uncoated', iso: 'P', dia: 0.5, sfm: 80, feed, feedKind: 'fz', at: 0.5, ...(fRange ? { fRange } : {}), brand: 'X', series: 'S', page: '3', mat: '4140-ann', tier: 0 });
       const syn = (c) => genericQuote({ baseline: { cells: [c] }, mode: 'mill', kind: 'End mill', sub: 'hss', coat: 'uncoated', d: 0.5, z: 4, iso: 'P', mat: g('4140-ann') });
