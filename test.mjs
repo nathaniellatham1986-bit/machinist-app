@@ -951,6 +951,15 @@ console.log('estimate tests ok');
       assert.equal(al.sfm, 250); assert.ok(Math.abs(al.fpt - 0.0035) < 0.00005, 'HSS 6061 ' + al.fpt); assert.match(al.text, /Hertel/); }
     // 4340 (and 4140) heat treated never runs faster than annealed, HSS or carbide.
     for (const sub of ['hss', 'carbide']) for (const a of ['4140', '4340']) { const qa = gq('mill', sub, a + '-ann', 0.5), qh = gq('mill', sub, a + '-ht', 0.5); assert.ok(qh.sfm <= qa.sfm, `${sub} ${a} HT ${qh.sfm} above annealed ${qa.sfm}`); }
+    // Light printed chip load (ME): HSS/cobalt end mill in steel at .0010 ipt or less gets a gray note; range rows point to the top of the printed range. No new number.
+    { const single = 'Light printed chip load; watch for rubbing.', ranged = 'Light printed chip load. If it rubs or squeals, step up toward the top of the printed range.';
+      for (const id of ['4140-ann', '4140-ht', '4340-ann', '4340-ht']) { const q = gq('mill', 'hss', id, 0.5); assert.equal(q.note, single, id); assert.ok(q.fpt <= 0.001); assert.match(q.text, /Dormer/); }
+      assert.equal(gq('mill', 'hss', 'p-mild', 0.5).note, ''); assert.equal(gq('mill', 'carbide', '4140-ann', 0.5).note, '');
+      assert.match(gq('mill', 'hss', 'ss304', 0.5).note, /rubbing work-hardens/);
+      const cell = (feed, fRange) => ({ mode: 'mill', kind: 'End mill', sub: 'hss', coat: 'uncoated', iso: 'P', dia: 0.5, sfm: 80, feed, feedKind: 'fz', at: 0.5, ...(fRange ? { fRange } : {}), brand: 'X', series: 'S', page: '3', mat: '4140-ann', tier: 0 });
+      const syn = (c) => genericQuote({ baseline: { cells: [c] }, mode: 'mill', kind: 'End mill', sub: 'hss', coat: 'uncoated', d: 0.5, z: 4, iso: 'P', mat: g('4140-ann') });
+      const r = syn(cell(0.0008, [0.0006, 0.001])); assert.equal(r.note, ranged); assert.equal(r.fpt, 0.0008);
+      assert.equal(syn(cell(0.0008)).note, single); assert.equal(syn(cell(0.0015, [0.001, 0.002])).note, ''); }
     // 1/8 carbide drill: Guhring 6489 p.1 prints no coolant type, so no through-coolant label is shown.
     { const g6489 = JSON.parse(fs.readFileSync('data/guhring-drill-ipr-v2.json', 'utf8')).tools.find(t => /6489/.test(t.series));
       assert.ok(g6489.conditions.every(c => c.coolant == null));

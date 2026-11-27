@@ -1,4 +1,4 @@
-const C='fs-777d2c6ba1',F=['./','index.html','app.js','calc.js','estimate.js','fallback.js','recall.js','combo.js','manifest.json','data/index.json','data/threads.json','data/_baseline.json'];
+const C='fs-5472e470e0',F=['./','index.html','app.js','calc.js','estimate.js','fallback.js','recall.js','combo.js','manifest.json','data/index.json','data/threads.json','data/_baseline.json'];
 // Shell is precached; brand data files are cached on first use (lazy). Cache name is stamped by scripts/build-index.mjs.
 self.oninstall=e=>{self.skipWaiting();e.waitUntil(caches.open(C).then(c=>c.addAll(F)))};
 self.onactivate=e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==C).map(x=>caches.delete(x)))).then(()=>self.clients.claim()));
