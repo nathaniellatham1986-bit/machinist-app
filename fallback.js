@@ -4,6 +4,8 @@ import { pick, lowEnd, hrcToHb, matchMat, matBad, matPref, carbonBand, rowBits, 
 
 export const SLOT_FACTOR = 0.75; // shop rule from the engineer, not a manufacturer number
 export const DIA_BANDS = [0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 1, 1.5, 2, 3];
+// Drills also get the 3/16, 5/16 and 7/16 sizes, so a drill between 1/8 and 1/2 finds a printed column at or just below it.
+export const DRILL_BANDS = [0.125, 0.1875, 0.25, 0.3125, 0.375, 0.4375, 0.5, 0.625, 0.75, 1, 1.5, 2, 3];
 export const COAT_LABEL = { uncoated: 'Uncoated', unknown: 'Coated, type unknown', tin: 'TiN', ticn: 'TiCN', altin: 'TiAlN/AlTiN', zrn: 'ZrN', dlc: 'DLC/diamond' };
 const SPK = u => (u === 'm/min' ? 3.2808 : 1);
 const toIn = (v, u) => (u === 'mm' ? v / 25.4 : v);
@@ -12,7 +14,7 @@ const bandOf = d => DIA_BANDS.reduce((b, x) => Math.abs(x - d) < Math.abs(b - d)
 
 export function substrateOf(t) {
   const s = `${t?.series ?? ''} ${t?.type ?? ''} ${t?.notes ?? ''} ${t?.specs?.coating ?? ''} ${t?.coating ?? ''}`;
-  if (/cobalt|HSS-?Co|HSS-E/i.test(s)) return 'cobalt';
+  if (/cobalt|HSS-?Co|HSS[- ]Co\d|HSS-E/i.test(s)) return 'cobalt'; // "HSS Co8%" is cobalt HSS
   if (t?.specs?.substrate === 'carbide' || /carbide|\bVHM\b/i.test(s)) return 'carbide';
   if (t?.specs?.substrate === 'hss' || /\bHSS\b|high.?speed steel/i.test(s)) return 'hss';
   return 'unspecified';
@@ -289,7 +291,9 @@ function consider(cell, rowId) {
   const k = [cell.mode, cell.kind, cell.sub, cell.coat, cell.iso, cell.dia, cell.feedKind, cell.op ?? '', cell.mat ?? ''].join('|');
   const list = CELLS.get(k) ?? [];
   const prev = list.find(x => x.rowId === rowId);
-  if (!prev || Math.abs(cell.at - cell.dia) < Math.abs(prev.at - prev.dia)) {
+  // Drills: a row's printed column at or below the band beats a larger one (never feed a smaller drill from a bigger column).
+  const fit = x => (cell.mode === 'drill' && x.at > x.dia * 1.01 + 1e-9 ? 10 : 0) + Math.abs(x.at - x.dia);
+  if (!prev || fit(cell) < fit(prev)) {
     if (prev) list[list.indexOf(prev)] = { ...cell, rowId };
     else list.push({ ...cell, rowId });
     CELLS.set(k, list);
@@ -316,12 +320,13 @@ export function noteBaseline(t) {
     const rowId = `${cite.brand}|${cite.series}|${c.label || ''}|${c.iso}|${sfm}`;
     const put = cell => { consider(cell, rowId); for (const [mat, tier] of mats) consider({ ...cell, mat, tier }, rowId); };
     if (tap) { put({ mode: t.mode, kind, sub, coat, iso: c.iso, dia: 0.5, sfm, feed: null, feedKind: 'pitch', at: 0.5, ...extra, ...cite }); continue; }
-    const add = (dia, fpt) => {
+    // Drills keep every printed diameter column of the row, so the quote can use the column for the drill asked for.
+    const cols = t.mode === 'drill' && feed.points?.length > 1 ? feed.points.map(([x, v]) => [+x.toFixed(4), +v.toFixed(5)]).sort((p, q) => p[0] - q[0]) : null;
+    const add = (dia, fpt, band = bandOf(dia)) => {
       if (!(dia >= 1 / 16) || !(fpt > 0)) return; // under 1/16 in stays out of general cells
-      const band = bandOf(dia);
       if (Math.max(dia, band) / Math.min(dia, band) > 2) return; // same kind and substrate already; diameter within about 2x
       const ap = apIn(dia); if (ap != null && ap <= 0.1 * dia + 1e-9) return; // printed depth of cut 0.1xD or less: a light-cut row
-      put({ mode: t.mode, kind, sub, coat, iso: c.iso, dia: band, sfm, feed: fpt, feedKind: feed.kind, at: dia, ...(ap != null ? { ap: +ap.toFixed(4) } : {}), ...extra, ...cite });
+      put({ mode: t.mode, kind, sub, coat, iso: c.iso, dia: band, sfm, feed: fpt, feedKind: feed.kind, at: dia, ...(ap != null ? { ap: +ap.toFixed(4) } : {}), ...(cols ? { cols } : {}), ...extra, ...cite });
     };
     if (feed.range != null) {
       const span = diaSpan(c.label), dias = (t.diameters_in?.length ? t.diameters_in : t.diameters_mm?.map(x => x / 25.4)) || [];
@@ -329,7 +334,9 @@ export function noteBaseline(t) {
       else if (dias.length) dias.forEach(x => add(x, feed.range));
       else add(0.5, feed.range);
     }
-    for (const [dia, v] of feed.points ?? []) add(dia, v);
+    // Drill rows with printed columns: each drill size takes the column printed for it (within 1%), else the nearest printed column below it.
+    if (cols) for (const B of DRILL_BANDS) { const col = cols.find(([x]) => Math.abs(x - B) <= 0.01 * B) || cols.filter(([x]) => x < B).at(-1); if (col) add(col[0], col[1], B); }
+    else for (const [dia, v] of feed.points ?? []) add(dia, v);
     for (const [a, b, v] of feed.bands ?? []) add((a + b) / 2, v);
   }
 }
@@ -400,7 +407,8 @@ const COATED = c => !!c && c !== 'uncoated' && c !== 'unspecified';
 const coatPen = (cell, want) => cell === want ? 0 : cell === 'unspecified' ? 1 : want === 'uncoated' || cell === 'uncoated' ? 5 : 3;
 export function genericCell(base, q, mat) {
   const ok = c => c.mode === q.mode && c.kind === q.kind && c.feedKind === q.feedKind && q.subs.includes(c.sub || 'unspecified') && (q.mode !== 'turn' || c.op === 'Turn');
-  const score = c => Math.abs(c.dia - q.d) + coatPen(c.coat, q.coat) + q.subs.indexOf(c.sub || 'unspecified') * 10;
+  const diaPen = c => q.mode !== 'drill' ? Math.abs(c.dia - q.d) : c.dia <= q.d * 1.01 + 1e-9 ? q.d - c.dia : 2 + c.dia - q.d; // drills: nearest size at or below
+  const score = c => diaPen(c) + coatPen(c.coat, q.coat) + q.subs.indexOf(c.sub || 'unspecified') * 10;
   const best = list => list.reduce((b, c) => { const s = score(c); return !b || s < b.s - 1e-9 || (Math.abs(s - b.s) < 1e-9 && c.sfm < b.c.sfm) ? { c, s } : b; }, null);
   const cells = base?.cells || [];
   if (mat) { const hit = best(cells.filter(c => c.mat === mat.id && ok(c))); if (hit) return { c: hit.c, group: false }; }
@@ -432,7 +440,15 @@ export function genericQuote({ baseline, mode, kind, sub = 'hss', coat = 'uncoat
     carbide: [['cobalt', 'No carbide row printed; cobalt row used (slower than carbide)'], ['hss', 'No carbide row printed; HSS row used (slower than carbide)']] };
   if (mode === 'mill' || mode === 'drill') for (const [alt, note] of ALT[useSub] || []) { if (hit) break; hit = genericCell(baseline, { ...q, subs: [alt] }, mat); if (hit) subNote = note; }
   if (!hit) return null;
-  const c = hit.c, fpt = mode === 'tap' ? (pitch ?? null) : c.feed;
+  const c = hit.c;
+  let fpt = mode === 'tap' ? (pitch ?? null) : c.feed, at = c.at, colNote = '';
+  // Drills: feed from the printed column for this size (same size within 1%), else the nearest printed size below it.
+  if (mode === 'drill' && c.cols?.length) {
+    const same = c.cols.filter(([x]) => Math.abs(x - d) <= 0.01 * d + 0.0005).sort((p, q) => Math.abs(p[0] - d) - Math.abs(q[0] - d))[0];
+    const below = c.cols.filter(([x]) => x < d).at(-1), col = same || below || c.cols[0];
+    fpt = col[1]; at = col[0];
+    colNote = `feed from the printed ${inchMm(at)} column${same ? '' : below ? `, the nearest printed size below ${inchMm(d)}` : `, the smallest size printed (larger than ${inchMm(d)})`}`;
+  }
   let sfm = c.sfm, capNote = '';
   // HSS in 4140 never runs faster than HSS in mild steel: cap at the generic HSS mild-steel speed (derived, not printed for 4140).
   if ((mode === 'mill' || mode === 'drill') && useSub === 'hss' && /^4140/.test(mat?.id || '')) {
@@ -464,7 +480,8 @@ export function genericQuote({ baseline, mode, kind, sub = 'hss', coat = 'uncoat
   if (mode !== 'tap' && fpt) text += `; chip load: ${c.fRange ? `middle of printed range ${rng(c.fRange[0], c.fRange[1], 4)}` : 'as printed'}`;
   text += `. Source: ${c.brand} ${c.series}${pg ? ' p. ' + pg : ''}${c.row ? `, row “${c.row}”` : ''}.`;
   if (capNote) text += ' ' + capNote + '.';
-  if ((mode === 'mill' || mode === 'drill') && c.at > 0 && Math.abs(c.at - d) > 0.01) text += ` Printed for the ${inchMm(c.at)} size, used for ${inchMm(d)}.`;
+  if (colNote) text += ` Drill ${colNote}.`;
+  else if ((mode === 'mill' || mode === 'drill') && at > 0 && Math.abs(at - d) > 0.01) text += ` Printed for the ${inchMm(at)} size, used for ${inchMm(d)}.`;
   const runAe = ae != null ? ae : (mode === 'mill' ? 0.25 * d : d);
   let rpm = 0, ipm = 0, thin = null;
   if (mode === 'mill') { const o = compute({ sfm, d, fpt, z: z || 1, ae: runAe, ap: ap != null ? ap : d, stickout: 0, maxRpm, maxHp, iso }); rpm = o.rpm; ipm = o.ipm; thin = o.thin; }
