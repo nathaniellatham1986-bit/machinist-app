@@ -869,6 +869,31 @@ console.log('estimate tests ok');
   flag('HSS 1/2 end mill mild', mill.sfm, 60, 100);
   flag('HSS 1/4 drill aluminum', drillAl.sfm, 150, 300);
   console.log('baseline sanity', { mill: { sfm: mill.sfm, fpt: mill.fpt, rpm: +mill.rpm.toFixed(0), ipm: +mill.ipm.toFixed(2), from: mill.brand + ' ' + mill.series }, drillAl: { sfm: drillAl.sfm, fpt: drillAl.fpt, rpm: +drillAl.rpm.toFixed(0), ipm: +drillAl.ipm.toFixed(2), from: drillAl.brand + ' ' + drillAl.series } });
+  // Generic by material (ME test items 1-3): material rows first, hardness enforced, every pick gets a printed page.
+  { const mats = JSON.parse(fs.readFileSync('data/materials.json', 'utf8')).materials, g = id => mats.find(m => m.id === id);
+    const gq = (mode, sub, id, d, x = {}) => genericQuote({ baseline: base, mode, kind: { mill: 'End mill', drill: 'Drill', turn: 'Insert', tap: 'Tap' }[mode], sub, coat: 'uncoated', d, z: mode === 'mill' ? 4 : 2, iso: g(id).iso, mat: g(id), ...x });
+    const ht = gq('mill', 'carbide', '4140-ht', 0.5), mild = gq('mill', 'carbide', 'p-mild', 0.5);
+    assert.ok(ht.sfm < mild.sfm, `4140 HT carbide ${ht.sfm} should be below mild ${mild.sfm}`);
+    assert.doesNotMatch(ht.text, /Group number/);
+    const inc = gq('mill', 'hss', 'in718', 0.5);
+    assert.ok(inc.sfm <= 15 && /Hertel/.test(inc.brand), 'Inconel HSS ' + inc.sfm + ' ' + inc.brand); // Hertel HSS p.1 prints 7-8 / 12-15 SFM
+    const h13 = gq('mill', 'hss', 'h13-hard', 0.5);
+    assert.match(h13.warn, /No maker prints HSS above ~40 HRC/); assert.match(h13.text, /carbide/);
+    const t304 = gq('turn', 'carbide', 'ss304', 3, { ap: 0.04 }), tap = gq('tap', 'hss', 'p-mild', 0.25, { pitch: 0.05 });
+    assert.ok(t304.rpm > 0 && t304.fpt > 0 && t304.ipm > 0, 'turn 304 ' + JSON.stringify(t304));
+    assert.ok(tap.rpm > 0 && tap.fpt === 0.05 && tap.ipm > 0, 'tap 1/4-20 ' + JSON.stringify(tap));
+    assert.match(gq('drill', 'cobalt', 'ss304', 0.25).caution, /Coated-tool number/); // only coated cobalt rows printed for 304
+    const d15 = gq('drill', 'hss', 'p-mild', 15 / 64);
+    assert.doesNotMatch(d15.text, /alloy/i, 'mild-steel drill used an alloy row: ' + d15.text);
+    let n = 0;
+    for (const m of mats) for (const [mode, subs, ds] of [['mill', ['hss', 'cobalt', 'carbide'], [0.125, 0.5, 1]], ['drill', ['hss', 'cobalt', 'carbide'], [0.125, 0.5]], ['turn', ['carbide'], [1, 3]], ['tap', ['hss'], [0.25]]])
+      for (const sub of subs) for (const d of ds) for (const coat of ['uncoated', 'altin']) {
+        const q = gq(mode, sub, m.id, d, { coat, pitch: mode === 'tap' ? 0.05 : undefined }); n++;
+        assert.ok(q && q.sfm > 0 && q.rpm > 0 && q.ipm > 0, `no generic number: ${mode} ${sub} ${coat} ${m.id} ${d}`);
+        assert.match(q.text, / p\. \d+/, `generic without a page: ${mode} ${sub} ${m.id} ${d}: ${q.text}`);
+        if (q.caution) assert.equal(coat, 'uncoated');
+      }
+    console.log('generic by material pass', n, { ht: ht.sfm, mild: mild.sfm, inconelHSS: inc.sfm, turn304: [t304.sfm, t304.fpt], tap: [tap.sfm, tap.rpm.toFixed(0)] }); }
   const gTools = gdoc.tools.map((t, i) => ({ key: 'guhring-drill-ipr-v2.json#' + i, brand: t.brand, series: t.series, mode: t.mode }));
   const part = matchPart('205-18,260', gTools);
   assert.equal(part.brand, 'Guhring');

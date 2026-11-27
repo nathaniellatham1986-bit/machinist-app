@@ -133,7 +133,7 @@ function coatOptions() {
   s.value = [...s.options].some(o => o.value === cur) ? cur : 'uncoated';
 }
 function showGen(on) {
-  $('genBox').hidden = !(on || mode === 'mill' || mode === 'drill'); $('seriesL').hidden = on;
+  $('genBox').hidden = !((on && mode !== 'turn' && mode !== 'tap') || mode === 'mill' || mode === 'drill'); $('seriesL').hidden = on;
   if (on || mode === 'mill' || mode === 'drill') coatOptions();
   if (on) { $('tn').textContent = 'n/a'; if ($('gradeL')) $('gradeL').hidden = true; }
   if ($('zLbl')) { const show = ($('zLbl').dataset.show || '').split(' '); $('zLbl').hidden = mode === 'mill' ? false : !show.includes(mode); }
@@ -174,6 +174,7 @@ function fillBrand() { let cur = $('brand').value; $('brand').length = 0; $('bra
   [...ok].sort().forEach(b => { const n = brandNote(b); $('brand').add(new Option(n ? `${b} — ${n}` : b, b)); });
   if (m || $('iso').value) [...new Set(SUM.filter(t => t.mode === mode && !ok.has(t.brand)).map(t => t.brand))].sort().forEach(b => { const o = new Option(`${b} — no data for this material`, b); o.disabled = true; o.style.color = '#777'; $('brand').add(o); });
   if ((!cur || PATH() === 'gen') && (mode === 'mill' || mode === 'drill')) cur = GENERIC;
+  if (!cur && (mode === 'turn' || mode === 'tap')) cur = GENERIC;
   $('brand').value = [...$('brand').options].some(o => o.value === cur) ? cur : ''; return fillKind(); }
 function fillKind() { if (isGen()) { const cur = $('kind').value;
     const ks = (BASE.kinds?.[mode] || []).slice();
@@ -351,13 +352,15 @@ function setupSum() { const c = curTool()?.conditions[$('cond').value], P = $('p
   $('setupSum').textContent = '· ' + [sizes, !P.closest('label').hidden && mode !== 'drill' && mode !== 'tap' ? `Pass ${P.value || 'Any'}` : '', mode === 'mill' ? `Cut ${K.value || 'Any'}` : '', c ? c.label.slice(0, 60) : 'no condition'].filter(Boolean).join(' · '); }
 function loadedPacks(skip) { const out = []; for (const f of Object.keys(DOCS)) DOCS[f].tools.forEach((tool, i) => { const key = f + '#' + i; if (key !== skip) { const p = packTool(tool, key); if (p) out.push(p); } }); return out; }
 function asEst(fb, def) { const pg = String(fb.page || '').match(/\d+/)?.[0] || ''; return { def, min: null, max: null, est: { rung: 3, text: fb.text, url: fb.url, brand: fb.brand, series: fb.series, page: pg ? 'p.' + pg : '' }, basis: 'ESTIMATE' }; }
-function fillGeneric() {
+let GENQ = null; // last generic quote, for its red/yellow notes in run()
+function fillGeneric() { GENQ = null;
+  const th = mode === 'tap' ? threads.threads[$('thr').value] : null; if (th) { setIn('d', th.d_in); setIn('fpt', th.pitch_in); }
   const mat = matSel(), iso = mat?.iso || $('iso').value, d = inV('d');
-  if (!iso || !(d > 0)) { $('cards').innerHTML = `<div class="out"><span class="warn" style="font-size:28px">${!iso ? 'Pick the material you\'re cutting' : 'Enter a diameter'}</span></div>`; $('bar').innerHTML = `<small>${!iso ? 'Pick the material you\'re cutting' : 'Generic / Unknown'}</small>`; return; }
+  if (!iso || !(d > 0)) { $('src').innerHTML = ''; $('cards').innerHTML = `<div class="out"><span class="warn" style="font-size:28px">${!iso ? 'Pick the material you\'re cutting' : 'Enter a diameter'}</span></div>`; $('bar').innerHTML = `<small>${!iso ? 'Pick the material you\'re cutting' : 'Generic / Unknown'}</small>`; return; }
   if (mode === 'mill') readEng();
-  const q = genericQuote({ baseline: BASE, mode, kind: $('kind').value || 'End mill', sub: $('genMat').value === 'unsure' ? 'hss' : $('genMat').value, coat: $('genCoat').value, unsure: $('genMat').value === 'unsure', d, z: +$('z').value || (mode === 'drill' ? 2 : 4), iso, ae: mode === 'mill' ? frac.ae * d : undefined, ap: mode === 'mill' ? frac.ap * d : inV('apT'), maxRpm: inV('maxRpm'), maxHp: inV('maxHp') });
-  if (!q) { $('cards').innerHTML = '<div class="out"><span class="warn">No baseline is loaded for this selection.</span></div>'; $('bar').innerHTML = '<small>Generic / Unknown</small>'; return; }
-  SP = asEst(q, q.sfm); FD = q.fpt ? asEst(q, q.fpt) : null; defs = { sfm: q.sfm, fpt: q.fpt ?? null };
+  const q = genericQuote({ baseline: BASE, mode, kind: $('kind').value || 'End mill', sub: $('genMat').value === 'unsure' ? 'hss' : $('genMat').value, coat: $('genCoat').value, unsure: $('genMat').value === 'unsure', d, z: +$('z').value || (mode === 'drill' ? 2 : 4), iso, mat, pitch: th?.pitch_in, ae: mode === 'mill' ? frac.ae * d : undefined, ap: mode === 'mill' ? frac.ap * d : inV('apT'), maxRpm: inV('maxRpm'), maxHp: inV('maxHp') });
+  if (!q) { $('src').innerHTML = ''; $('cards').innerHTML = '<div class="out"><span class="warn">No baseline is loaded for this selection.</span></div>'; $('bar').innerHTML = '<small>Generic / Unknown</small>'; return; }
+  GENQ = { ...q, mode }; SP = asEst(q, q.sfm); FD = q.fpt ? asEst(q, q.fpt) : null; defs = { sfm: q.sfm, fpt: q.fpt ?? null };
   setIn('sfm', q.sfm); if (mode !== 'tap') setIn('fpt', q.fpt || '');
   $('src').innerHTML = `<span class="r3w">${esc(q.text)}</span>${q.url ? ` · <a style="color:#e2c4ff" href="${esc(q.url)}" target="_blank" rel="noopener">source</a>` : ''}`;
   run();
@@ -462,13 +465,16 @@ function tapBox() { const e = $('tdBox'); if (!e) return; e.hidden = mode !== 't
   const k = tapDrillInfo(curTool()?.conditions[$('cond').value]);
   e.innerHTML = `<span class="tdl">Drill</span><b class="tdv">${esc(String(k.val))}</b>${k.sub ? `<span class="tdm">${k.sub}</span>` : ''}<small class="tds${k.src === 'warn' ? ' warn' : ''}">${k.src === 'warn' ? 'Form tap: no mfr drill — not the 75% cutting drill' : k.src}</small>`; }
 function run() { tapBox(); updateFindLink(); favMark();
-  if (GP() && !(inV('d') > 0)) { $('cards').innerHTML = `<div class="out"><span class="warn">Enter the real stock diameter first — RPM for ${$('top').value.toLowerCase()} comes from it.</span></div>`; $('bar').innerHTML = '<small>Enter stock Ø</small>'; return; }
+  if (GP() && !(inV('d') > 0)) { $('src').innerHTML = ''; $('cards').innerHTML = `<div class="out"><span class="warn">Enter the real stock diameter first — RPM for ${$('top').value.toLowerCase()} comes from it.</span></div>`; $('bar').innerHTML = '<small>Enter stock Ø</small>'; return; }
   if (!curTool() && !isGen() && !(mode === 'mill' || mode === 'drill')) { const opt = $('tool').options[0]?.text ?? '', m = needMsg() ? needMsg() + ' to see speeds and feeds.' : (opt.includes('manufacturer data at Ø') ? 'Nothing printed at this diameter. Pick another size, or choose Generic / Unknown.' : /only, no (speed|feed) printed/.test(opt) ? opt.replace(/^Pick a tool — /, '') : `Pick a series, or choose Generic / Unknown.`);
-    $('cards').innerHTML = `<div class="out"><span class="warn">${m}</span></div>`; $('bar').innerHTML = `<small>${m}</small>`; return; } if (PART()) $('fD').value = '0'; if (mode === 'mill') readEng();
+    $('src').innerHTML = ''; $('cards').innerHTML = `<div class="out"><span class="warn">${m}</span></div>`; $('bar').innerHTML = `<small>${m}</small>`; return; } if (PART()) $('fD').value = '0'; if (mode === 'mill') readEng();
   if (ixTool()) return runIx();
   const v = inV, tag = k => mine(k) && $(k).value ? ' <span class="tag warn">YOUR VALUE, NOT MANUFACTURER</span>' : '';
   const c = curTool()?.conditions[$('cond').value];
   let w = '';
+  const gq = GENQ && GENQ.mode === mode && (isGen() || ((mode === 'mill' || mode === 'drill') && !$('tool').value)) ? GENQ : null;
+  if (gq?.warn) w += `<div class="out"><span class="warn">${esc(gq.warn)}</span></div>`;
+  if (gq?.caution) w += `<div class="out"><span class="amb">${esc(gq.caution)}</span></div>`;
   const held = curTool();
   const rv = held && matSel() ? [...new Set((held.conditions || []).filter(c => c.review && isoOk(c)).map(c => c.review))] : []; // rows held back by holdReview
   if (rv.length) w += `<div class="warn">Check catalog: ${esc(rv.join('; '))}. The printed row for this material is held back until it is checked against the page, so the numbers below do not come from it.</div>`;

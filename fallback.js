@@ -1,6 +1,6 @@
 // Feed fallback ladder and the step-5 baseline. Pure. Baseline cells are published catalog numbers
 // (lowest low end in the cell, feed from that same row). Nothing here is averaged or invented.
-import { pick, lowEnd, matchMat, matBad, cutOf, passOf, kindOf, brandName, compute, drill, turn } from './calc.js';
+import { pick, lowEnd, hrcToHb, matchMat, matBad, matPref, carbonBand, rowBits, hardnessBand, turnOpOf, cutOf, passOf, kindOf, brandName, compute, drill, turn } from './calc.js';
 
 export const SLOT_FACTOR = 0.75; // shop rule from the engineer, not a manufacturer number
 export const DIA_BANDS = [0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 1, 1.5, 2, 3];
@@ -69,12 +69,12 @@ export function thinNote({ brand, ae, d, fpt, th }) {
 }
 
 const lowNum = (spec, k) => { const p = lowEnd(pick(typeof spec === 'number' ? { value: spec } : spec, k)); return p?.def > 0 ? p.def : null; };
-function packFeed(f) {
+function packFeed(f, num = lowNum) {
   if (!f) return null;
   const k = toIn(1, f.unit), out = { kind: f.kind || 'fz' };
-  if (f.byDiameter) out.points = Object.entries(f.byDiameter).map(([dia, v]) => [+dia * k, lowNum(v, k)]).filter(x => x[1] > 0);
+  if (f.byDiameter) out.points = Object.entries(f.byDiameter).map(([dia, v]) => [+dia * k, num(v, k)]).filter(x => x[1] > 0);
   if (f.bands) out.bands = f.bands.map(([a, b, v]) => [a * k, b * k, v * k]).filter(x => x[2] > 0);
-  if (f.range) { const n = lowNum(f.range, k); if (n > 0) out.range = n; }
+  if (f.range) { const n = num(f.range, k); if (n > 0) out.range = n; }
   if (!out.points?.length && !out.bands?.length && out.range == null) return null;
   return out;
 }
@@ -224,17 +224,58 @@ export function resolveFeed({ tool, mat, iso, mode, cut = '', d, pool = [], base
 }
 
 // ---- step 5 baseline, built from catalog rows already in data/ ----
+// Cell shape: { mode, kind, sub, coat, iso, dia, feedKind, op?, mat?, tier?, hb?, sfm, feed, at, brand, series, page, url, catalog, row }.
+// No mat = ISO-group cell (median of every row in the group). mat = cell for one app material, built only from rows that
+// match it (tier: see matTier). Numbers are the row's printed low end.
 const CELLS = new Map();
-const SPECIALTY = /micro|deep.?hole|high.?feed|hi.?feed/i;
+const SPECIALTY = /micro|miniature|long.?reach|reduced.?neck|barrel|deep.?hole|high.?feed|hi.?feed/i;
+const SUPERHARD = /\bCBN\b|\bPCD\b|ceramic|cermet|diamond|SUMIBORON|SUMIDIA|\bBNC?\d/i;
+const HT_WORDS = /harden|heat.?treated|pre.?hard|quench|\btempered\b|Verg[uü]t/i;
+let MATS = [];
 export function resetBaseline() { CELLS.clear(); }
+export function setBaselineMaterials(list) { MATS = list || []; }
+// Low end of the printed range: the safe end of the maker's own numbers. A printed start is used only when no minimum is printed.
+const minNum = (spec, k) => { if (spec == null) return null; const v = typeof spec === 'number' ? spec : spec.min ?? spec.value ?? spec.start ?? spec.max; return v > 0 ? v * k : null; };
+// Rows printed for a light radial cut (finishing, HEM, ae/D under 25%) do not serve the default 25% stepover.
+export function lightRow(c) {
+  const s = `${c?.operation ?? ''} ${c?.label ?? ''}`;
+  if (/\bfinish/i.test(s) || cutOf(c) === 'HEM') return true;
+  const m = s.match(/a[er]\s*\/\s*Dc?\s*=\s*(\d*\.?\d+)/i) || s.match(/\ba[er]\s*=\s*(\d*\.?\d+)\s*[x×]?\s*D\b/i);
+  if (m && +m[1] < 0.25) return true;
+  const r = radialLimit(c); return !!r && r.maxFrac != null && r.maxFrac < 0.25;
+}
+// A row printed for a diameter span in its label ("dia 1/4"-1/2"", "dia 1/8""). Inches. null when the label names none.
+const frac = x => { const [a, b] = x.split('/'); return b ? +a / +b : +a; };
+export function diaSpan(label) {
+  const m = String(label ?? '').match(/\bdia\.?\s*(\d+(?:\/\d+)?(?:\.\d+)?)\s*(?:"|in)?(?:\s*(?:-|–|to)\s*(\d+(?:\/\d+)?(?:\.\d+)?)\s*(?:"|in)?)?/i);
+  if (!m) return null; const a = frac(m[1]), b = m[2] ? frac(m[2]) : a; return a > 0 && b >= a ? [a, b] : null;
+}
+// Printed hardness band in HB. Adds "Rc over 32" / "HRC under 32" wording, which hardnessBand does not read.
+const rowBand = s => { const b = hardnessBand(s); if (b) return b; const m = String(s).match(/\b(?:Rc|HRc|HRC)\s*(over|above|under|below)\s*(\d+)/i);
+  if (!m) return null; const hb = hrcToHb(+m[2]); return /over|above/i.test(m[1]) ? [hb, 9999] : [0, hb]; };
+// How well a printed row fits an app material, lower is better: 0-1 names the grade, 2-3 names its class, 4-5 matches only by
+// printed hardness (odd = hardness window broader than the pick). null = it does not serve this material.
+export function matTier(m, c) {
+  if (!m || !matchMat(m, c) || matBad(m, c)) return null;
+  const s = rowBits(c), band = rowBand(s);
+  if (m.hb && band && !(band[0] <= m.hb[1] && band[1] >= m.hb[0])) return null;
+  if (m.id === 'p-mild' && carbonBand(s) === 'med') return null; // 1045/1050 rows are not mild steel
+  if (m.hb && m.hb[0] >= 250 && !band && !HT_WORDS.test(s)) return null; // heat-treated pick: the row must print a hardness or say hardened
+  if (m.hb && m.hb[1] <= 240 && !band && HT_WORDS.test(s)) return null; // annealed pick: never a hardened row
+  // A heat-treated pick prefers rows printed for a window above annealed; an annealed pick prefers rows that stop near annealed.
+  const broad = !m.hb ? 0 : m.hb[0] >= 250 ? (band && band[0] >= 200 ? 0 : 1) : m.hb[1] <= 240 ? (band && band[1] <= 310 ? 0 : 1) : 0;
+  if (matchMat(m, c) === 'named') return broad;
+  if (matPref(m.id, c, m) === 0) return 2 + broad;
+  return m.hb && band ? 4 + broad : null;
+}
 // One printed row per cell. Odd count: the middle row. Even count: the lower of the two middle rows. Not an average.
 export function medianRow(rows) {
   if (!rows?.length) return null;
-  const s = rows.slice().sort((a, b) => a.sfm - b.sfm || a.feed - b.feed || String(a.brand).localeCompare(String(b.brand)) || String(a.series).localeCompare(String(b.series)));
+  const s = rows.slice().sort((a, b) => a.sfm - b.sfm || (a.feed ?? 0) - (b.feed ?? 0) || String(a.brand).localeCompare(String(b.brand)) || String(a.series).localeCompare(String(b.series)));
   return s[Math.floor((s.length - 1) / 2)];
 }
 function consider(cell, rowId) {
-  const k = [cell.mode, cell.kind, cell.sub, cell.coat, cell.iso, cell.dia, cell.feedKind].join('|');
+  const k = [cell.mode, cell.kind, cell.sub, cell.coat, cell.iso, cell.dia, cell.feedKind, cell.op ?? '', cell.mat ?? ''].join('|');
   const list = CELLS.get(k) ?? [];
   const prev = list.find(x => x.rowId === rowId);
   if (!prev || Math.abs(cell.at - cell.dia) < Math.abs(prev.at - prev.dia)) {
@@ -246,24 +287,31 @@ function consider(cell, rowId) {
 export function noteBaseline(t) {
   if (!t?.conditions) return;
   if (SPECIALTY.test(`${t.series ?? ''} ${t.type ?? ''}`)) return;
-  const sub = substrateOf(t), kind = kindOf(t);
+  const sub = substrateOf(t), kind = kindOf(t), tap = t.mode === 'tap';
   for (const c of t.conditions) {
-    if (!c?.sfm || !c.feed || c.status === 'shop-proven' || c.paired || c.iso === '*' || !c.source || !['catalog', 'label'].includes(c.source.kind)) continue;
-    if (!c.source.url && !c.source.page) continue;
-    const sfm = lowNum(c.sfm, SPK(c.sfm.unit)); // start value when the row prints one, otherwise the low end
-    const feed = packFeed(c.feed);
-    if (!(sfm > 0) || !feed) continue;
-    const coat = coatOf(t, c), cite = { brand: brandName(t.brand), series: t.series || '', page: c.source.page || '', url: c.source.url || '', catalog: c.source.catalog || '' };
+    if (!c?.sfm || (!c.feed && !tap) || c.status === 'shop-proven' || c.paired || c.iso === '*' || !c.source || !['catalog', 'label'].includes(c.source.kind)) continue;
+    if (!pageNum(c.source.page) || lightRow(c)) continue; // every baseline number cites a page; light-cut rows stay out
+    const sfm = minNum(c.sfm, SPK(c.sfm.unit));
+    const feed = tap ? null : packFeed(c.feed, minNum);
+    if (!(sfm > 0) || (!tap && !feed)) continue;
+    const coat = coatOf(t, c), cite = { brand: brandName(t.brand), series: t.series || '', page: c.source.page || '', url: c.source.url || '', catalog: c.source.catalog || '', row: String(c.sourceGroup || c.label || '').slice(0, 140) };
+    const hb = hardnessBand(rowBits(c)), extra = hb ? { hb: hb.map(Math.round) } : {};
+    if (t.mode === 'turn') extra.op = SUPERHARD.test(`${t.series ?? ''} ${t.type ?? ''} ${t.grade ?? ''} ${c.grade ?? ''} ${c.label ?? ''}`) ? 'Superhard' : turnOpOf(t, c);
+    // Same ISO group. Plastics (app group O) also take rows that name them under another group (ISCAR files "fiber plastics" under N).
+    const mats = MATS.map(m => [m.id, m.iso === c.iso ? matTier(m, c) : m.iso === 'O' && matchMat(m, c) === 'named' ? matTier(m, c) : null]).filter(([, k]) => k != null);
     const rowId = `${cite.brand}|${cite.series}|${c.label || ''}|${c.iso}|${sfm}`;
+    const put = cell => { consider(cell, rowId); for (const [mat, tier] of mats) consider({ ...cell, mat, tier }, rowId); };
+    if (tap) { put({ mode: t.mode, kind, sub, coat, iso: c.iso, dia: 0.5, sfm, feed: null, feedKind: 'pitch', at: 0.5, ...extra, ...cite }); continue; }
     const add = (dia, fpt) => {
       if (!(dia >= 1 / 16) || !(fpt > 0)) return; // under 1/16 in stays out of general cells
       const band = bandOf(dia);
       if (Math.max(dia, band) / Math.min(dia, band) > 2) return; // same kind and substrate already; diameter within about 2x
-      consider({ mode: t.mode, kind, sub, coat, iso: c.iso, dia: band, sfm, feed: fpt, feedKind: feed.kind, at: dia, ...cite }, rowId);
+      put({ mode: t.mode, kind, sub, coat, iso: c.iso, dia: band, sfm, feed: fpt, feedKind: feed.kind, at: dia, ...extra, ...cite });
     };
     if (feed.range != null) {
-      const dias = (t.diameters_in?.length ? t.diameters_in : t.diameters_mm?.map(x => x / 25.4)) || [];
-      if (dias.length) dias.forEach(x => add(x, feed.range));
+      const span = diaSpan(c.label), dias = (t.diameters_in?.length ? t.diameters_in : t.diameters_mm?.map(x => x / 25.4)) || [];
+      if (span) { const inSpan = DIA_BANDS.filter(x => x >= span[0] - 1e-6 && x <= span[1] + 1e-6); (inSpan.length ? inSpan : [(span[0] + span[1]) / 2]).forEach(x => add(x, feed.range)); }
+      else if (dias.length) dias.forEach(x => add(x, feed.range));
       else add(0.5, feed.range);
     }
     for (const [dia, v] of feed.points ?? []) add(dia, v);
@@ -271,18 +319,21 @@ export function noteBaseline(t) {
   }
 }
 export function baselineDoc() {
-  const cells = [...CELLS.values()].map(list => { const row = medianRow(list); if (!row) return null; const { rowId, ...cell } = row; return cell; }).filter(Boolean);
+  const cells = [...CELLS.values()].map(list => {
+    const best = Math.min(...list.map(x => x.tier ?? 0)), rows = list.filter(x => (x.tier ?? 0) === best);
+    const row = medianRow(rows);
+    if (!row) return null; const { rowId, ...cell } = row; return cell; }).filter(Boolean);
   const coats = [...new Set(cells.map(c => c.coat))].filter(c => c && c !== 'unspecified').sort();
   const kinds = {};
   for (const c of cells) (kinds[c.mode] ??= new Set()).add(c.kind);
   return {
-    note: 'GENERATED from published catalog rows by scripts/build-index.mjs. Each cell is the median printed row (lower of the two middle rows when the count is even), not an average. Do not hand-edit.',
+    note: 'GENERATED from published catalog rows by scripts/build-index.mjs. Each cell is the median printed row (lower of the two middle rows when the count is even), at the low end of its printed range, not an average. Cells with "mat" hold only rows matched to that material (most specific rows only). Do not hand-edit.',
     coats, kinds: Object.fromEntries([...Object.entries(kinds)].map(([m, s]) => [m, [...s].sort()])),
     cells,
   };
 }
 function cellScore(c, q, relax) {
-  if (c.mode !== q.mode) return null;
+  if (c.mat || c.mode !== q.mode) return null;
   if (q.feedKind && c.feedKind !== q.feedKind) return null;
   if (!relax) {
     if (c.kind !== q.kind || c.iso !== q.iso || c.coat !== q.coat) return null;
@@ -299,7 +350,7 @@ function cellScore(c, q, relax) {
 export function lookupSameMetal(base, q) {
   let best = null;
   for (const c of base?.cells || []) {
-    if (c.mode !== q.mode || c.kind !== q.kind || c.iso !== q.iso) continue;
+    if (c.mat || c.mode !== q.mode || c.kind !== q.kind || c.iso !== q.iso) continue;
     if (q.feedKind && c.feedKind !== q.feedKind) continue;
     if (!sameMetal(q.sub || 'unspecified', c.sub || 'unspecified')) continue;
     let score = Math.abs(c.dia - q.d);
@@ -326,13 +377,30 @@ export function lookupBaseline(base, q, relax = true) {
   return best;
 }
 export function hasTinRow(base, q) {
-  return !!(base?.cells || []).some(c => c.coat === 'tin' && c.mode === q.mode && c.kind === q.kind && c.iso === q.iso && c.feedKind === q.feedKind
+  return !!(base?.cells || []).some(c => !c.mat && c.coat === 'tin' && c.mode === q.mode && c.kind === q.kind && c.iso === q.iso && c.feedKind === q.feedKind
     && (c.sub === q.sub || c.sub === 'unspecified' || q.sub === 'unspecified'));
 }
+// Generic pick: the material's own cell first, then the ISO-group cell (labeled), never a row whose printed hardness misses the material's.
+const COATED = c => !!c && c !== 'uncoated' && c !== 'unspecified';
+const coatPen = (cell, want) => cell === want ? 0 : cell === 'unspecified' ? 1 : want === 'uncoated' || cell === 'uncoated' ? 5 : 3;
+export function genericCell(base, q, mat) {
+  const ok = c => c.mode === q.mode && c.kind === q.kind && c.feedKind === q.feedKind && q.subs.includes(c.sub || 'unspecified') && (q.mode !== 'turn' || c.op === 'Turn');
+  const score = c => Math.abs(c.dia - q.d) + coatPen(c.coat, q.coat) + q.subs.indexOf(c.sub || 'unspecified') * 10;
+  const best = list => list.reduce((b, c) => { const s = score(c); return !b || s < b.s - 1e-9 || (Math.abs(s - b.s) < 1e-9 && c.sfm < b.c.sfm) ? { c, s } : b; }, null);
+  const cells = base?.cells || [];
+  if (mat) { const hit = best(cells.filter(c => c.mat === mat.id && ok(c))); if (hit) return { c: hit.c, group: false }; }
+  const hbOk = c => !mat?.hb || !c.hb || (c.hb[0] <= mat.hb[1] && c.hb[1] >= mat.hb[0]);
+  const hit = best(cells.filter(c => !c.mat && c.iso === q.iso && ok(c) && hbOk(c)));
+  return hit ? { c: hit.c, group: true } : null;
+}
+const HARD = m => !!m && (m.iso === 'H' || (m.hb && m.hb[0] >= 371)); // about 40 HRC and up
+const inchMm = x => `${x.toFixed(3)} in (${(x * 25.4).toFixed(1)} mm)`;
 // Generic / unknown tool: step-5 baseline only. "Not sure" is HSS. Coating unknown uses TiN, else uncoated.
-export function genericQuote({ baseline, mode, kind, sub = 'hss', coat = 'uncoated', unsure = false, d, z = 4, iso, ae, ap, maxRpm = 0, maxHp = 0 }) {
-  const useSub = unsure ? 'hss' : (sub || 'hss');
-  const feedKind = mode === 'mill' ? 'fz' : 'ipr';
+export function genericQuote({ baseline, mode, kind, sub = 'hss', coat = 'uncoated', unsure = false, d, z = 4, iso, mat = null, ae, ap, pitch, maxRpm = 0, maxHp = 0 }) {
+  iso = mat?.iso || iso;
+  let useSub = mode === 'turn' ? 'carbide' : mode === 'tap' ? 'hss' : unsure ? 'hss' : (sub || 'hss'), warn = '', caution = '';
+  if ((mode === 'mill' || mode === 'drill') && HARD(mat) && (useSub === 'hss' || useSub === 'cobalt')) { warn = 'No maker prints HSS above ~40 HRC — use carbide. Numbers shown are for a carbide tool.'; useSub = 'carbide'; }
+  const feedKind = mode === 'mill' ? 'fz' : mode === 'tap' ? 'pitch' : 'ipr';
   let useCoat = coat === 'unknown' ? 'tin' : (coat || 'uncoated');
   let coatNote = '';
   if (coat === 'unknown') {
@@ -340,26 +408,37 @@ export function genericQuote({ baseline, mode, kind, sub = 'hss', coat = 'uncoat
     else { useCoat = 'uncoated'; coatNote = 'coating unknown, no TiN row for this combo, using uncoated numbers'; }
   }
   if (unsure && (coat === 'uncoated' || coat === '' || coat == null)) useCoat = 'uncoated';
-  const q = { mode, kind, sub: useSub, coat: useCoat, iso, d, feedKind };
-  let hit = lookupSameMetal(baseline, q);
+  const subs = mode === 'turn' ? ['carbide', 'unspecified'] : mode === 'tap' ? ['hss', 'cobalt', 'unspecified'] : [useSub];
+  const q = { mode, kind, iso, d, feedKind, coat: useCoat, subs };
+  let hit = genericCell(baseline, q, mat), subNote = '';
+  // No row for the picked tool material: use the next one that runs no faster (HSS <-> cobalt; carbide -> cobalt/HSS), labeled.
+  const ALT = { hss: [['cobalt', 'No plain HSS row printed; HSS-Co (cobalt) row used']], cobalt: [['hss', 'No cobalt row printed; plain HSS row used']],
+    carbide: [['cobalt', 'No carbide row printed; cobalt row used (slower than carbide)'], ['hss', 'No carbide row printed; HSS row used (slower than carbide)']] };
+  if (mode === 'mill' || mode === 'drill') for (const [alt, note] of ALT[useSub] || []) { if (hit) break; hit = genericCell(baseline, { ...q, subs: [alt] }, mat); if (hit) subNote = note; }
   if (!hit) return null;
-  let fpt = hit.c.feed, sfm = hit.c.sfm;
-  const matWord = useSub === 'hss' ? 'HSS' : useSub;
+  const c = hit.c, sfm = c.sfm, fpt = mode === 'tap' ? (pitch ?? null) : c.feed;
+  const matWord = { hss: 'HSS', cobalt: 'cobalt', carbide: 'carbide' }[useSub] || useSub;
+  if (useCoat === 'uncoated' && COATED(c.coat)) caution = `Coated-tool number. Uncoated ${matWord} needs a slower speed.`;
   let text;
-  if (unsure && useCoat === 'uncoated' && !coatNote) text = 'Generic HSS uncoated (tool material unknown)';
+  if (unsure && useCoat === 'uncoated' && !coatNote && !warn) text = 'Generic HSS uncoated (tool material unknown)';
   else if (mode === 'mill') text = `Generic ${matWord} ${z}-fl baseline`;
+  else if (mode === 'turn') text = 'Generic carbide insert, turning baseline';
+  else if (mode === 'tap') text = 'Generic tap baseline';
   else text = `Generic ${matWord} baseline`;
   if (coatNote) text += '. ' + coatNote;
-  const pg = pageNum(hit.c.page);
-  const derived = hit.derived?.length ? ` Derived from the nearest sourced cell (${hit.derived.join(', ')}).` : '';
-  text += `. Source: ${hit.c.brand} ${hit.c.series}${pg ? ' p. ' + pg : ''}.${derived}`;
+  const short = String(mat?.name || '').replace(/\s*\(.*$/, '');
+  text += '. ' + (hit.group ? `Group number (ISO ${iso})${short ? `, not ${short}-specific` : ''}` : c.tier >= 4 ? `Matched by printed hardness, not a ${short} row` : `${short} row`);
+  if (subNote) text += '. ' + subNote;
+  const pg = pageNum(c.page);
+  text += `. Low end of printed range. Source: ${c.brand} ${c.series}${pg ? ' p. ' + pg : ''}${c.row ? `, row “${c.row}”` : ''}.`;
+  if ((mode === 'mill' || mode === 'drill') && c.at > 0 && Math.abs(c.at - d) > 0.01) text += ` Printed for the ${inchMm(c.at)} size, used for ${inchMm(d)}.`;
   const runAe = ae != null ? ae : (mode === 'mill' ? 0.25 * d : d);
   let rpm = 0, ipm = 0, thin = null;
   if (mode === 'mill') { const o = compute({ sfm, d, fpt, z: z || 1, ae: runAe, ap: ap != null ? ap : d, stickout: 0, maxRpm, maxHp, iso }); rpm = o.rpm; ipm = o.ipm; thin = o.thin; }
   else if (mode === 'turn') { const o = turn({ sfm, d, ipr: fpt, ap: ap != null ? ap : 0.04, maxRpm }); rpm = o.rpm; ipm = o.ipm; }
-  else { const o = drill({ sfm, d, ipr: fpt, maxRpm }); rpm = o.rpm; ipm = o.ipm; }
+  else { const o = drill({ sfm, d, ipr: fpt ?? 0, maxRpm }); rpm = o.rpm; ipm = o.ipm; }
   return {
-    step: 5, estimate: true, sfm, fpt, feedKind, rpm, ipm, thin, text, coatUsed: useCoat, coatNote, unsure,
-    url: hit.c.url, page: hit.c.page, brand: hit.c.brand, series: hit.c.series, catalog: hit.c.catalog, derived: hit.derived || [],
+    step: 5, estimate: true, sfm, fpt, feedKind, rpm, ipm, thin, text, warn, caution, group: hit.group, coatUsed: useCoat, coatNote, unsure,
+    url: c.url, page: c.page, brand: c.brand, series: c.series, catalog: c.catalog, derived: [],
   };
 }

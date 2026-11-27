@@ -1,7 +1,7 @@
 // Regenerate data/index.json from every brand file in data/, and stamp sw.js with a content-hash cache name.
 // Never edit data/index.json by hand. Usage: node scripts/build-index.mjs
 import { shared303, sizeRange, brandName, seriesGrade, coolModes, passOf, drillSpans, turnOpOf, rowUsable, matRowOk, withPairs, holdReview } from '../calc.js';
-import { resetBaseline, noteBaseline, baselineDoc, substrateOf } from '../fallback.js';
+import { resetBaseline, setBaselineMaterials, noteBaseline, baselineDoc, substrateOf } from '../fallback.js';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -14,7 +14,7 @@ const MATERIAL_GROUPS = Object.entries(JSON.parse(fs.readFileSync(path.join(data
 const COOLANTS = ['flood', 'air', 'dry'];
 const SHELL = ['./', 'index.html', 'app.js', 'calc.js', 'estimate.js', 'fallback.js', 'recall.js', 'combo.js', 'manifest.json', 'data/index.json', 'data/threads.json', 'data/_baseline.json'];
 
-resetBaseline();
+resetBaseline(); setBaselineMaterials(MATERIALS);
 const files = fs.readdirSync(dataDir).filter(f => f.endsWith('.json') && !NON_BRAND.has(f) && !f.startsWith('_')).sort();
 const hash = crypto.createHash('sha256');
 const out = []; const errors = [];
