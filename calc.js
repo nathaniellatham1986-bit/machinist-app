@@ -105,14 +105,15 @@ export function matchMat(m, c) {
 // Picker aliases only. Choosing one sets an existing material id. matchMat does not read this, so no speed or feed changes.
 // 'table' = a loaded maker table prints that grade in this material's group. 'standard' = well-known class membership, labeled as such.
 export const GRADE_ALIASES = [
-  ['1020', 'p-mild'], ['1045', 'p-mild'], ['1050', 'p-mild'], ['12L14', 'p-mild'], ['1215', 'p-mild'],
+  ['1020', 'p-mild'], ['12L14', 'p-mild'], ['1215', 'p-mild'],
+  ['1030', 'p-med'], ['1035', 'p-med'], ['1040', 'p-med'], ['1045', 'p-med'], ['1050', 'p-med'], ['1055', 'p-med'],
   ['304L', 'ss304'], ['316L', 'ss316'], ['321', 'ss304'], // 321 has no printed row of its own, so it stays on 304. The picker note says it is not a 321 number.
   ['410', 'ss400'], ['416', 'ss400'],
   ['13-8', 'ss17-4ph'], ['15-5', 'ss17-4ph'],
   ['2024', 'al6061'], ['6063', 'al6061'], ['7075', 'al6061'],
   ['4130', 'p-alloy'], ['4330', 'p-alloy'], ['8620', 'p-alloy'],
   ['A2', 'h13-ann'], ['A2', 'p20-ann'], ['A2', 'p20-pre'],
-  ['D2', 'h13-ann'], ['D2', 'p20-ann'], ['D2', 'p20-pre'],
+  ['D2', 'd2-ann'], ['D2', 'd2-hard'],
 ].map(([grade, id]) => ({ grade, id, how: 'table' })).concat([
   { grade: '4142', id: '4140-ann', how: 'standard' },
   { grade: '4142', id: '4140-ht', how: 'standard' },
@@ -188,8 +189,10 @@ const STEEL_OTHER = 'stainless|cast iron|alumin|titan|nickel';
 export const MAT_CLASS = [
   [/^(p-alloy|4140|4340)/, /\b4xxx\b|\b4[13]xx\b|alloy|\b4[13]\d\d\b|CrMo|CrNiMo|\bSCM|\bSNCM/i, new RegExp(`non.?alloy|unalloy|free.?(machin|cut)|\\bmild\\b|carbon steel|tool steel|die steel|mou?ld steel|${STEEL_OTHER}`, 'i'), /heat.?treat|quench|temper|Verg[uü]t/i],
   [/^(p20|h13)/, /tool steel|die steel|mou?ld|\bP20\b|\bH13\b|1\.23\d\d|SKD/i, new RegExp(`carbon steel|\\bmild\\b|non.?alloy|unalloy|free.?(machin|cut)|structural|${STEEL_OTHER}`, 'i')],
+  [/^d2/, /\bD2\b|1\.2379|SKD ?11|X153CrMoV12|high[- ]chrom|D2\s*[-–]\s*D7|12\s*%\s*Cr/i, new RegExp(`carbon steel|\\bmild\\b|non.?alloy|unalloy|free.?(machin|cut)|structural|tool steel|die steel|mou?ld|\\bH13\\b|\\bP20\\b|\\bA2\\b|${STEEL_OTHER}`, 'i')],
   // Preference for 1030/1040/1045/1050 and "medium carbon" is carbonBand() in matPref, not this regex.
   // The 10xx token stays so matBad's strip-and-retest does not newly reject a row whose only class token is a grade number in an insert code.
+  [/^p-med/, /medium[- ]carbon|med\.?\s*carbon|\b10(?:30|35|40|45|50|55)\b|\b10L50\b|\bS45C\b|\bCk45\b|\bC45\b/i, new RegExp(`tool steel|die steel|mou?ld|\\bmild\\b|low.?carbon|${STEEL_OTHER}`, 'i')],
   [/^p-mild/, /\bmild\b|low.?carbon|non.?alloy|unalloy|carbon steel|structural|\b10[1-4]\d\b|A36/i, new RegExp(`tool steel|die steel|mou?ld|hardened|${STEEL_OTHER}`, 'i')],
   [/^ti64/, /Ti-?6Al|titanium alloy|\balloy|α.?β|alpha.?beta|grade 5/i, /pure titan|commercially pure|\bCP\b|unalloy|\bgrade [1-4]\b/i],
   [/^in718/, /nickel alloy|inconel|\b718\b|Ni.?based|super ?alloy/i, /titan|cobalt|pure nickel|nickel 20[01]/i],
@@ -242,6 +245,8 @@ export const matPref = (id, c, m = { id }) => { const s = [c.label, c.sourceGrou
   if (id === 'ss304' || id === 'ss316') return AUST.test(s) && !NONAUST.test(s) ? 0 : NONAUST.test(s) ? 2 : 1;
   if (matBad(m, c)) return 2;
   if (id === 'p-mild' && carbonBand(s) === 'low') return 0;
+  if (id === 'p-med' && carbonBand(s) === 'low') return 2;
+  if (id === 'p-med' && (carbonBand(s) === 'med' || /\b10(?:30|35|40|45|50|55)\b|medium[- ]carbon/i.test(s))) return 0;
   if (ALLOY_IDS.test(id ?? '') && NONALLOY.test(s) && !ALLOY.test(s.replace(new RegExp(NONALLOY.source, 'gi'), ''))) return 1; const k = MAT_CLASS.find(([r]) => r.test(id ?? '')); return k && k[1].test(s) ? 0 : 1; };
 // When this material is mild steel and the candidate rows include one the maker printed for low-carbon / 1018 / A36 / ≤0.25% C, drop medium- and high-carbon rows. If none of those low-carbon rows are in the set, the medium/high row stays and the card warns.
 export const dropMedWhenLow = (rows, id) => {

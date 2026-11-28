@@ -269,10 +269,14 @@ export function matTier(m, c) {
   const s = rowBits(c), band = rowBand(s);
   if (m.hb && band && !(band[0] <= m.hb[1] && band[1] >= m.hb[0])) return null;
   if (m.id === 'p-mild' && carbonBand(s) === 'med') return null; // 1045/1050 rows are not mild steel
+  if (m.id === 'p-med' && carbonBand(s) === 'low' && !/\b10(?:30|35|40|45|50|55)\b|medium[- ]carbon/i.test(s)) return null; // pure low-carbon rows are not medium carbon
+  // D2 never takes an H13/P20 or generic tool-steel row; no named D2/high-chrome line means the ISO-group fallback later.
+  if (/^d2-/.test(m.id) && matchMat(m, c) !== 'named') return null;
   if (m.hb && m.hb[0] >= 250 && !band && !HT_WORDS.test(s)) return null; // heat-treated pick: the row must print a hardness or say hardened
   if (m.hb && m.hb[1] <= 240 && !band && HT_WORDS.test(s)) return null; // annealed pick: never a hardened row
   // A heat-treated pick prefers rows printed for a closed window above annealed (an open "over Rc 32" is broad); an annealed pick prefers rows that stop near annealed.
   const broad = !m.hb ? 0 : m.hb[0] >= 250 ? (band && band[0] >= 200 && band[1] <= 1000 ? 0 : 1) : m.hb[1] <= 240 ? (band && band[1] <= 310 ? 0 : 1) : 0;
+  if (m.id === 'p-med' && carbonBand(s) === 'low') return 2 + broad; // mixed 1018+1045 row: behind a dedicated medium-carbon line
   if (matchMat(m, c) === 'named') return broad;
   if (matPref(m.id, c, m) === 0) return 2 + broad;
   return m.hb && band ? 4 + broad : null;
@@ -427,11 +431,12 @@ export function genericCell(base, q, mat) {
   const cells = base?.cells || [];
   if (mat) { const hit = best(cells.filter(c => c.mat === mat.id && ok(c))); if (hit) return { c: hit.c, group: false }; }
   const hbOk = c => !mat?.hb || !c.hb || (c.hb[0] <= mat.hb[1] && c.hb[1] >= mat.hb[0]);
-  const hit = best(cells.filter(c => !c.mat && c.iso === q.iso && ok(c) && hbOk(c)));
+  const groupCells = cells.filter(c => !c.mat && c.iso === q.iso && ok(c));
+  const hit = best(groupCells.filter(hbOk)) || best(groupCells);
   return hit ? { c: hit.c, group: true } : null;
 }
 const fmt = (x, d) => d ? (+x).toFixed(d).replace(/^0(?=\.)/, '') : String(Math.round(x));
-const HT_PAIR = { '4140-ann': '4140-ht', '4140-ht': '4140-ann', '4340-ann': '4340-ht', '4340-ht': '4340-ann', 'p20-ann': 'p20-pre', 'p20-pre': 'p20-ann' };
+const HT_PAIR = { '4140-ann': '4140-ht', '4140-ht': '4140-ann', '4340-ann': '4340-ht', '4340-ht': '4340-ann', 'p20-ann': 'p20-pre', 'p20-pre': 'p20-ann', 'd2-ann': 'd2-hard', 'd2-hard': 'd2-ann' };
 const HARD = m => !!m && (m.iso === 'H' || (m.hb && m.hb[0] >= 371)); // about 40 HRC and up
 const inchMm = x => `${x.toFixed(3)} in (${(x * 25.4).toFixed(1)} mm)`;
 // Generic / unknown tool: step-5 baseline only. "Not sure" is HSS. Coating unknown uses TiN, else uncoated.
