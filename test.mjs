@@ -579,14 +579,18 @@ console.log('estimate tests ok');
   const mats = JSON.parse(fs.readFileSync('data/materials.json', 'utf8')).materials, ids = new Set(mats.map(m => m.id));
   for (const g of GRADE_ALIASES) { assert.ok(ids.has(g.id), g.grade); assert.ok(g.how === 'table' || g.how === 'standard'); }
   const one = (grade, id, how) => assert.ok(GRADE_ALIASES.some(g => g.grade === grade && g.id === id && g.how === how), grade + ' ' + id);
-  one('1045', 'p-mild', 'table'); one('7075', 'al6061', 'table'); one('A2', 'h13-ann', 'table'); one('D2', 'p20-pre', 'table'); one('304L', 'ss304', 'table'); one('316L', 'ss316', 'table'); one('321', 'ss304', 'table'); one('4130', 'p-alloy', 'table');
+  one('1045', 'p-med', 'table'); one('1050', 'p-med', 'table'); one('1030', 'p-med', 'table');
+  one('7075', 'al6061', 'table'); one('A2', 'h13-ann', 'table'); one('D2', 'd2-ann', 'table'); one('D2', 'd2-hard', 'table');
+  one('304L', 'ss304', 'table'); one('316L', 'ss316', 'table'); one('321', 'ss304', 'table'); one('4130', 'p-alloy', 'table');
   one('4142', '4140-ann', 'standard'); one('4142', '4140-ht', 'standard');
+  assert.ok(!GRADE_ALIASES.some(g => (g.grade === '1045' || g.grade === '1050') && g.id === 'p-mild'));
+  assert.ok(!GRADE_ALIASES.some(g => g.grade === 'D2' && /^(h13|p20)/.test(g.id)));
   assert.ok(!GRADE_ALIASES.some(g => (g.grade === 'A2' || g.grade === 'D2') && g.id === 'h13-hard'));
-  for (const [g, id] of [['1018', 'p-mild'], ['4140', '4140-ann'], ['316', 'ss316'], ['304', 'ss304'], ['6061', 'al6061'], ['H13', 'h13-ann']]) assert.match(mats.find(m => m.id === id).name, new RegExp(g));
+  for (const [g, id] of [['1018', 'p-mild'], ['1045', 'p-med'], ['D2', 'd2-ann'], ['4140', '4140-ann'], ['316', 'ss316'], ['304', 'ss304'], ['6061', 'al6061'], ['H13', 'h13-ann']]) assert.match(mats.find(m => m.id === id).name, new RegExp(g));
   assert.doesNotMatch(mats.find(m => m.id === 'ss304').name, /316/);
   const mild = mats.find(m => m.id === 'p-mild');
   assert.equal(matchMat(mild, { label: 'Non-alloy steel (1018, A36, 1045)', iso: 'P', materials: ['p-mild'], sourceGroup: 'Non-alloy steel (1018, A36, 1045)' }), 'named');
-  assert.ok(!mats.some(m => /4142|7075|\b1045\b/.test(`${m.name} ${m.named || ''}`)));
+  assert.ok(!mats.some(m => /4142|7075/.test(`${m.name} ${m.named || ''}`)));
   console.log('grade alias tests pass'); }
 // Item 12: 304 and 316 are separate grades. A 304-only row does not feed 316. A lumped row feeds both and keeps the maker's wording. Speeds and feeds are unchanged.
 { const { matchMat, resolveMatId, rpm } = await import('./calc.js');
@@ -770,6 +774,9 @@ console.log('estimate tests ok');
   assert.match(html, /<summary>What color is it\?<\/summary>/); for (const k of ['tin', 'zrn', 'ticn', 'altin', 'dlc', 'uncoated']) assert.match(html, new RegExp(`class="cg" data-coat="${k}"`)); // one tappable line per coating
   // guide folded behind a tap
   assert.match(html, /data-path="gen">Generic tool</); assert.match(html, /data-path="label">Known tool</);
+  assert.match(appSrc, /ESTIMATE · source/); // short tag on each generic card
+  assert.match(appSrc, /id="srcOnce"/); // full source sentence once, under the cards
+  assert.match(appSrc, /\$\('setup'\)\.hidden/); // hide manufacturer-condition setup on the generic path
   assert.doesNotMatch(html + appSrc, /Advanced/i); assert.doesNotMatch(appSrc, /\$\('mat'\)\.value = 'p-mild'/); // material never defaulted (fresh pick every open)
   assert.doesNotMatch(appSrc, /\$\('pn'\)\.focus\(\)/); // Known tool must not jump past Material
   assert.doesNotMatch(appSrc, /CALCULATED:/);
@@ -978,6 +985,42 @@ console.log('estimate tests ok');
     { const g6489 = JSON.parse(fs.readFileSync('data/guhring-drill-ipr-v2.json', 'utf8')).tools.find(t => /6489/.test(t.series));
       assert.ok(g6489.conditions.every(c => c.coolant == null));
       const cb = gq('drill', 'carbide', 'p-mild', 0.125); assert.match(cb.text, /6489/); assert.doesNotMatch(`${cb.text} ${cb.note} ${cb.caution ?? ''}`, /through-coolant/i); }
+    // Medium-carbon (1045/1050) and D2 are their own materials. D2 never falls back to an H13/P20-only row.
+    { const { matchMat, matBad, matPref, carbonBand, GRADE_ALIASES } = await import('./calc.js');
+      const { matTier } = await import('./fallback.js');
+      const med = g('p-med'), d2a = g('d2-ann'), d2h = g('d2-hard');
+      assert.ok(med && d2a && d2h);
+      assert.equal(d2a.iso, 'P'); assert.equal(d2h.iso, 'H');
+      const hertelMed = { label: 'Steel: AISI 1030-1055 Rc 32, 102,000 psi, 275-325 BHN · Slot Milling', iso: 'P', sourceGroup: 'Steel: AISI 1030-1055 Rc 32, 102,000 psi, 275-325 BHN', source: { manufacturer: 'Hertel' } };
+      const osgMed = { label: 'General Drilling Operations · Steels 1035, 1045', iso: 'P', sourceGroup: 'Steels 1035, 1045', source: { manufacturer: 'OSG' } };
+      const low = { label: 'Steel: Soft Carbon Steel, 1029, Also Leaded · Slot Milling', iso: 'P', sourceGroup: 'Steel: Soft Carbon Steel, 1029, Also Leaded', materials: ['p-mild'], source: { manufacturer: 'Hertel' } };
+      const hertelD2 = { label: 'Tool Steels: D2-D7 Annealed, 200-250 BHN · Slot Milling', iso: 'P', sourceGroup: 'Tool Steels: D2-D7 Annealed, 200-250 BHN', source: { manufacturer: 'Hertel' } };
+      const h13Only = { label: 'Tool Steels: H13 annealed, 175-225 BHN', iso: 'P', sourceGroup: 'Tool Steels: H13 annealed, 175-225 BHN', source: { manufacturer: 'Hertel' } };
+      const p20Only = { label: 'Tool Steel (A2, H13, L6, P20, S7) 21 - 36 HRC - Rgh', iso: 'P', sourceGroup: 'Tool Steel (A2, H13, L6, P20, S7) 21 - 36 HRC', source: { manufacturer: 'Helical' } };
+      assert.equal(matchMat(med, hertelMed), 'named'); assert.equal(matchMat(med, osgMed), 'named');
+      assert.equal(carbonBand(hertelMed.label), 'med'); assert.ok(matTier(med, hertelMed) != null && matTier(med, hertelMed) < 2);
+      assert.equal(matTier(med, low), null); assert.ok(!matchMat(med, low) || matTier(g('p-mild'), hertelMed) == null);
+      assert.equal(matchMat(d2a, hertelD2), 'named'); assert.ok(matTier(d2a, hertelD2) != null);
+      assert.ok(matBad(d2a, h13Only) || matchMat(d2a, h13Only) !== 'named'); assert.equal(matTier(d2a, h13Only), null);
+      assert.ok(matBad(d2a, p20Only) || matchMat(d2a, p20Only) !== 'named'); assert.equal(matTier(d2a, p20Only), null);
+      const q1045h = gq('mill', 'hss', 'p-med', 0.5), q1045c = gq('mill', 'carbide', 'p-med', 0.5);
+      const qD2h = gq('mill', 'hss', 'd2-ann', 0.5), qD2c = gq('mill', 'carbide', 'd2-ann', 0.5);
+      for (const [n, q] of [['1045 HSS', q1045h], ['1045 carbide', q1045c], ['D2 HSS', qD2h], ['D2 carbide', qD2c]]) {
+        assert.ok(q && q.sfm > 0 && q.fpt > 0, n + ' missing'); assert.match(q.text, / p\. \d+/, n + ' ' + q.text); assert.doesNotMatch(q.text, /Group number/, n + ' used ISO-group fallback: ' + q.text);
+      }
+      assert.match(q1045h.text, /1030|1035|1040|1045|1050|1055|medium[- ]carbon/i, '1045 HSS not a medium-carbon row: ' + q1045h.text);
+      assert.match(qD2h.text, /D2|1\.2379|SKD ?11|high[- ]chrom/i, 'D2 HSS not a D2 row: ' + qD2h.text);
+      assert.match(qD2c.text, /D2|1\.2379|SKD ?11|high[- ]chrom/i, 'D2 carbide not a D2 row: ' + qD2c.text);
+      const qD2hard = gq('mill', 'hss', 'd2-hard', 0.5);
+      assert.match(qD2hard.warn, /No maker prints HSS above ~40 HRC/);
+      // No D2 row: labeled ISO-group fallback, not an H13/P20 material cell.
+      { const isoCell = { mode: 'mill', kind: 'End mill', sub: 'hss', coat: 'uncoated', iso: 'P', dia: 0.5, sfm: 80, feed: 0.002, feedKind: 'fz', brand: 'X', series: 'Y', page: '9', row: 'Steel' };
+        const h13Cell = { ...isoCell, mat: 'h13-ann', sfm: 50, brand: 'H13Maker', series: 'H13Only', page: '3', row: 'H13 annealed', tier: 0 };
+        const q = genericQuote({ baseline: { cells: [isoCell, h13Cell] }, mode: 'mill', kind: 'End mill', sub: 'hss', coat: 'uncoated', d: 0.5, z: 4, iso: 'P', mat: d2a });
+        assert.ok(q && q.group, 'D2 with no D2 row should use the ISO-group fallback');
+        assert.match(q.text, /Group number \(ISO P\)/);
+        assert.doesNotMatch(q.text, /H13Maker|H13Only/); }
+    }
     let n = 0;
     for (const m of mats) for (const [mode, subs, ds] of [['mill', ['hss', 'cobalt', 'carbide'], [0.125, 0.5, 1]], ['drill', ['hss', 'cobalt', 'carbide'], [0.125, 0.5]], ['turn', ['carbide'], [1, 3]], ['tap', ['hss'], [0.25]]])
       for (const sub of subs) for (const d of ds) for (const coat of ['uncoated', 'altin']) {

@@ -7,6 +7,12 @@
    "name": "Steel, low carbon / mild (A36, 1018)"
   },
   {
+   "id": "p-med",
+   "iso": "P",
+   "name": "Steel, medium carbon (1030–1055, 1045, 1050)",
+   "named": "\\b10(?:30|35|40|45|50|55)\\b|\\b10L50\\b|\\bS45C\\b|\\bCk45\\b|\\bC45\\b|medium[- ]carbon|med\\.?\\s*carbon|meduim\\s*carbon"
+  },
+  {
    "id": "p-alloy",
    "iso": "P",
    "name": "Steel, alloy (4140, 4340)"
@@ -123,6 +129,26 @@
    "hb": [
     0,
     235
+   ]
+  },
+  {
+   "id": "d2-ann",
+   "iso": "P",
+   "name": "D2 · annealed",
+   "named": "\\bD2\\b|1\\.2379|SKD ?11|X153CrMoV12|high[- ]chrom|D2\\s*[-–]\\s*D7|12\\s*%\\s*Cr",
+   "hb": [
+    0,
+    250
+   ]
+  },
+  {
+   "id": "d2-hard",
+   "iso": "H",
+   "name": "D2 · hardened (≈ 50–62 HRC)",
+   "named": "\\bD2\\b|1\\.2379|SKD ?11|X153CrMoV12|high[- ]chrom|D2\\s*[-–]\\s*D7|12\\s*%\\s*Cr",
+   "hb": [
+    451,
+    690
    ]
   },
   {

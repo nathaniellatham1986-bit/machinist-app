@@ -151,7 +151,8 @@ function pathUI() { const mm = mode === 'mill' || mode === 'drill', p = PATH(), 
   if (mm && !gen && !(isGen() && GENBACK)) $('genBox').hidden = true;
   // Label fields sit above the results on Mill/Drill; other tabs keep them in the tool section.
   const box = mm ? $('lblBox') : null; ['pnL', 'bkRow', 'seriesL'].forEach(k => box ? box.append($(k)) : $('thrL').before($(k)));
-  $('refS').textContent = mm ? 'More options' : 'Brand and exact tool'; if (!mm) $('refine').open = true; }
+  $('refS').textContent = mm ? 'More options' : 'Brand and exact tool'; if (!mm) $('refine').open = true;
+  $('setup').hidden = gen || isGen() || (mm && !$('tool').value); }
 function seriesDesc(t) {
   const sub = { hss: 'HSS', cobalt: 'cobalt', carbide: 'carbide' }[t.sub] || '';
   const bits = [sub, t.coatName || '', t.type || kindOf(t)].filter(Boolean).join(' ');
@@ -354,6 +355,7 @@ function loadedPacks(skip) { const out = []; for (const f of Object.keys(DOCS)) 
 function asEst(fb, def) { const pg = String(fb.page || '').match(/\d+/)?.[0] || ''; return { def, min: null, max: null, est: { rung: 3, text: fb.text, url: fb.url, brand: fb.brand, series: fb.series, page: pg ? 'p.' + pg : '' }, basis: 'ESTIMATE' }; }
 let GENQ = null; // last generic quote, for its red/yellow notes in run()
 function fillGeneric() { GENQ = null;
+  $('setup').hidden = true;
   const th = mode === 'tap' ? threads.threads[$('thr').value] : null; if (th) { setIn('d', th.d_in); setIn('fpt', th.pitch_in); }
   const mat = matSel(), iso = mat?.iso || $('iso').value, d = inV('d');
   if (!iso || !(d > 0)) { $('src').innerHTML = ''; $('cards').innerHTML = `<div class="out"><span class="warn" style="font-size:28px">${!iso ? 'Pick the material you\'re cutting' : 'Enter a diameter'}</span></div>`; $('bar').innerHTML = `<small>${!iso ? 'Pick the material you\'re cutting' : 'Generic / Unknown'}</small>`; return; }
@@ -362,11 +364,13 @@ function fillGeneric() { GENQ = null;
   if (!q) { $('src').innerHTML = ''; $('cards').innerHTML = '<div class="out"><span class="warn">No baseline is loaded for this selection.</span></div>'; $('bar').innerHTML = '<small>Generic / Unknown</small>'; return; }
   GENQ = { ...q, mode }; SP = asEst(q, q.sfm); FD = q.fpt ? asEst(q, q.fpt) : null; defs = { sfm: q.sfm, fpt: q.fpt ?? null };
   setIn('sfm', q.sfm); if (mode !== 'tap') setIn('fpt', q.fpt || '');
-  $('src').innerHTML = `<span class="r3w">${esc(q.text)}</span>${q.url ? ` · <a style="color:#e2c4ff" href="${esc(q.url)}" target="_blank" rel="noopener">source</a>` : ''}`;
+  $('src').innerHTML = '';
   run();
 }
 function fill() { setupSum();
-  if (isGen() || ((mode === 'mill' || mode === 'drill') && !$('tool').value)) return fillGeneric();
+  const mm = mode === 'mill' || mode === 'drill';
+  $('setup').hidden = isGen() || (mm && !$('tool').value);
+  if (isGen() || (mm && !$('tool').value)) return fillGeneric();
   const t = curTool(), c = t?.conditions[$('cond').value];
   fillDia(c);
   if (mode === 'tap') { const th = threads.threads[$('thr').value]; setIn('d', th.d_in); setIn('fpt', th.pitch_in); }
@@ -498,8 +502,9 @@ function run() { tapBox(); updateFindLink(); favMark();
   const LV = curLive(); const BAR = []; const card = (k, val, b, cls = '', ov, rl) => `<div class="card ${cls}"${ov ? ` data-ov="${ov}"` : ''}><div class="k">${k}${ov ? ' <span class="tap">✎ tap to change</span>' : ''}</div><div class="v">${val}</div><div class="b">${b}</div>${ov && (cls === 'mine' || cls === 'adj') ? '<button class="sm rst" data-reset="' + ov + '">' + (rl ?? 'Reset to manufacturer') + '</button>' : ''}</div>`;
   const boreFz = mode === 'bore' && c?.feed?.kind === 'fz', fk = (mode === 'mill' ? 'Chip load' : mode === 'tap' ? 'Pitch' : TH() ? 'Feed = pitch' : 'Feed') + ` (${UL()}/${mode === 'mill' || boreFz ? 'tooth' : 'rev'})`, SPL = metric ? 'm/min' : 'SFM', FPL = metric ? 'Feed mm/min' : 'Feed IPM';
   let cards = '';
-  const tl = toolLifeOf(c), sfmSt = ovc('sfm').state, sfmB = SP?.est && sfmSt === 'r3' ? r3Html(SP.est) : SP?.est && sfmSt === 'est' ? estHtml(SP.est, 0, x => uSp(x) + (metric ? ' m/min' : ' SFM')) : sfmSt !== 'mfr' && v('sfm') ? ovHtml(ovc('sfm')) : SP ? `${src} · ${SP.basis}${SP.min != null ? ` · range ${fmt(SP, 0)}` : ''}${tl ? ` · <b>at ${tl} min tool life</b> (source)` : ''}` : '';
-  const fSt = ovc('fpt').state, fB = mode === 'tap' || TH() ? (TH() && !v('fpt') ? 'enter TPI or pitch' : 'DERIVED from thread pitch (feed/rev = pitch = 1/TPI) — fixed by geometry, not missing data') : false ? '' : mode === 'tap' ? 'DERIVED from thread pitch (feed/rev = pitch) — fixed by geometry, not missing data' : FD?.est && fSt === 'r3' ? r3Html(FD.est) : FD?.est && fSt === 'est' ? estHtml(FD.est, 4, x => uFeed(x) + ' ' + UL() + (mode === 'mill' ? '/t' : '/rev')) : fSt !== 'mfr' && v('fpt') ? ovHtml(ovc('fpt')) : FD ? `${fsrc} · ${FD.basis}${FD.min != null ? ` · range ${fmt(FD, 4)}` : ''}` : '';
+  const r3Tag = '<span class="r3w">ESTIMATE · source</span>';
+  const tl = toolLifeOf(c), sfmSt = ovc('sfm').state, sfmB = SP?.est && sfmSt === 'r3' ? r3Tag : SP?.est && sfmSt === 'est' ? estHtml(SP.est, 0, x => uSp(x) + (metric ? ' m/min' : ' SFM')) : sfmSt !== 'mfr' && v('sfm') ? ovHtml(ovc('sfm')) : SP ? `${src} · ${SP.basis}${SP.min != null ? ` · range ${fmt(SP, 0)}` : ''}${tl ? ` · <b>at ${tl} min tool life</b> (source)` : ''}` : '';
+  const fSt = ovc('fpt').state, fB = mode === 'tap' || TH() ? (TH() && !v('fpt') ? 'enter TPI or pitch' : 'DERIVED from thread pitch (feed/rev = pitch = 1/TPI) — fixed by geometry, not missing data') : false ? '' : mode === 'tap' ? 'DERIVED from thread pitch (feed/rev = pitch) — fixed by geometry, not missing data' : FD?.est && fSt === 'r3' ? r3Tag : FD?.est && fSt === 'est' ? estHtml(FD.est, 4, x => uFeed(x) + ' ' + UL() + (mode === 'mill' ? '/t' : '/rev')) : fSt !== 'mfr' && v('fpt') ? ovHtml(ovc('fpt')) : FD ? `${fsrc} · ${FD.basis}${FD.min != null ? ` · range ${fmt(FD, 4)}` : ''}` : '';
   const usesR3 = !!(SP?.est?.rung === 3 || FD?.est?.rung === 3);
   const PR = mode === 'mill' || mode === 'drill' || mode === 'bore' ? printedAt(c, v('d')) : null;
   let half = '';
@@ -561,7 +566,7 @@ function run() { tapBox(); updateFindLink(); favMark();
   const usesEst = !!(SP?.est || FD?.est), haveNums = v('sfm') > 0 && (mode === 'tap' || TH() || v('fpt') > 0), miss = !haveNums;
   const coolN = mode === 'drill' && c && !c.status?.startsWith('shop') && !(t?.conditions ?? []).some(x => x.coolant) ? `<div class="out">Coolant: this catalog gives one speed and feed for all coolants, so changing Coolant does not change these numbers.</div>` : '';
   const faceN = mode === 'turn' && $('top').value === 'Face' && c ? `<div class="out">Face: catalogs print turning data for this insert; using its Turn row.</div>` : '';
-  $('cards').innerHTML = w + (PASSNOTE ? `<div class="out"><span class="warn">${PASSNOTE}</span></div>` : '') + faceN + coolN + (miss ? `<div class="out"><span class="warn">${TH() && c && !threadPitchIn(+$('tpi').value, $('pitchU').value) ? 'Enter TPI (or pitch) to get feed and RPM.' : OUTROW ? 'This size is outside the printed row.' : half || 'Enter a diameter to estimate RPM and feed.'}</span>${chips.length ? '<br>Nearest options from this tool with data:<div class="chips">' + chipHtml(chips.slice(0, 3)) + (chips.length > 3 ? `</div><details class="morechips"><summary>more (${chips.length - 3})</summary><div class="chips">${chipHtml(chips.slice(3))}</div></details><div>` : '') + '</div>' : ''}</div>` : '') + `<div class="cards">${cards}</div>` + CALCN; CALCN = '';
+  $('cards').innerHTML = w + (PASSNOTE ? `<div class="out"><span class="warn">${PASSNOTE}</span></div>` : '') + faceN + coolN + (miss ? `<div class="out"><span class="warn">${TH() && c && !threadPitchIn(+$('tpi').value, $('pitchU').value) ? 'Enter TPI (or pitch) to get feed and RPM.' : OUTROW ? 'This size is outside the printed row.' : half || 'Enter a diameter to estimate RPM and feed.'}</span>${chips.length ? '<br>Nearest options from this tool with data:<div class="chips">' + chipHtml(chips.slice(0, 3)) + (chips.length > 3 ? `</div><details class="morechips"><summary>more (${chips.length - 3})</summary><div class="chips">${chipHtml(chips.slice(3))}</div></details><div>` : '') + '</div>' : ''}</div>` : '') + `<div class="cards">${cards}</div>` + (gq?.text ? `<div class="out" id="srcOnce"><span class="r3w">${esc(gq.text)}</span>${gq.url ? ` · <a style="color:#e2c4ff" href="${esc(gq.url)}" target="_blank" rel="noopener">source</a>` : ''}</div>` : usesR3 && (SP?.est?.text || FD?.est?.text) ? `<div class="out" id="srcOnce">${r3Html(SP?.est || FD.est)}</div>` : '') + CALCN; CALCN = '';
   if (mode === 'turn' && $('top').value === 'Face' && !c) { // no facing record: point to Turn, invent nothing
     $('cards').innerHTML = `<div class="out"><span class="warn">Catalogs don't print facing separately. Use the Turn numbers for the same insert.</span><br><button id="faceTurn" class="chip">Switch Operation to Turn</button></div>`;
     $('faceTurn').onclick = () => { $('top').value = 'Turn'; fillBrand(); }; }
